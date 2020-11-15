@@ -1,6 +1,19 @@
-import { example } from './data.js';
-// import data from './data/lol/lol.js';
-import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+// import { example } from './data.js';
+// // import data from './data/lol/lol.js';
+// import data from './data/pokemon/pokemon.js';
+import rickAndMorty from './data/rickandmorty/rickandmorty.js';
 
-console.log(example, data);
+
+const allData = rickAndMorty.results;
+//const data = allData.results
+
+const data = allData[1];
+
+// const teste=document.getElementById("root").value;
+// content.innerHTML = data;
+// teste.appendChild(content);
+// //const teste = document.getElementByIdsa
+console.log(data)
+ 
+//document.getElementById("root").innerHTML = 
+//document.write(data);

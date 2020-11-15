@@ -1,4 +1,4 @@
-export default {
+const rickAndMorty = {
   "info": {
       "count": 493,
       "pages": 25,
@@ -11163,3 +11163,5 @@ export default {
       }
   ]
 };
+//exportando a variavel rickAndMorty
+export default rickAndMorty
