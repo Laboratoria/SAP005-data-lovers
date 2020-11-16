@@ -1,0 +1,63 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box
+}
+body{
+    background-color:#000;
+}
+.conteiner{
+    display: flex;
+    justify-content: center;
+    margin-top: 50vh;
+}
+.ballmotion-opening{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 20rem;
+    border-radius: 340px;
+    border-color: #000;
+    box-shadow: 1px 1px 20px #44434400, 0px 0px 10px #4b4444, 0px 0px 20px #181518;
+    border-style: solid;
+    border-width: thick;
+    background: linear-gradient(to bottom , #ffffff,rgb(251, 245, 245),rgba(248, 248, 248, 0.5));
+    animation: bounce 3s linear infinite;
+}
+@keyframes bounce{
+    0%{
+        bottom:180px;
+    }
+    50%{
+        bottom: 80px;
+    }
+    100%{
+        bottom: 380px;
+    }
+}
+.ballmotion-opening::before{
+    content:" ";
+    width: 300px;
+    height: 150px;
+    box-sizing: border-box;
+    background: linear-gradient(to top, rgba(216, 33, 33, 0.966), #eb1010, rgb(250, 109, 121));
+    border-radius: 250px 250px 0 0;
+    border-bottom: #000;
+    border-bottom-style:solid ;
+    border-width: thick;
+}
+#btn-acess{
+    font-family: Bungee,cursive;
+    font-size: 30px;
+    text-shadow: -3px 5px 4px #b3b0b3e3;
+    letter-spacing: 2px;
+    border-radius: 50px;
+    border-style: solid;
+    border-width: thick;
+    border-color: #000;
+    width: 90px;
+    height: 80px ;
+    position: relative;
+    left: 100px;
+    bottom: 40px;
+}
