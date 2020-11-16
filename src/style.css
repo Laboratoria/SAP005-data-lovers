@@ -1,0 +1,10 @@
+img{
+    /* background-image: url(IMG/floresta.jpg); */
+    opacity:0.5;
+    -moz-opacity: 0.5;
+    margin-left: -48px;
+    margin-top: -82px;
+    margin-bottom: -100px;
+    height: 100vh;
+    width: 100vw;  
+}
