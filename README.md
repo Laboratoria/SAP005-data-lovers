@@ -57,7 +57,7 @@ construir a interface que o ajude a interagir e entender melhor os dados.
 Este são os dados que propomos:
 
 * [Pokémon](src/data/pokemon/pokemon.json): Neste conjunto você encontrará uma
-  lista com os 151 Pokémon da região de Kanto, com suas respectivas estatísticas
+  lista com os 251 Pokémon da região de Kanto e Johto, com suas respectivas estatísticas
   utilizadas no jogo [Pokémon GO](http://pokemongolive.com).
   - [Pesquisa com jogadores de Pokémon Go](src/data/pokemon/README.pt-BR.md)
 
