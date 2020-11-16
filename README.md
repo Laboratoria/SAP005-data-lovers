@@ -89,5 +89,5 @@ As resoluções propostas:
 
 # Autoras
 
-* Alessandra Alves Silva| [Github - Alessandra](https://github.com/ale-alves)
-* Larissa Alborghette Almeida | [Github - Larissa](https://github.com/laris28)
+* Alessandra Alves | [Github - Alessandra](https://github.com/ale-alves)
+* Larissa Alborghette | [Github - Larissa](https://github.com/laris28)
