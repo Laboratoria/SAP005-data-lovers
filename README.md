@@ -23,7 +23,7 @@ Nas entrevistas, utilizamos post-it e selecionamos dois usuários que pudessem r
 ## História do Usuário (1) 
 
 ![História do usuário 1](src/img/imgs.readme/post-it1.jpg)
-#### Figura1: História do Usuário 1 
+##### Figura1: História do Usuário 1 
 
 ## Critérios de Aceitação - Usuário 1 
 
@@ -36,7 +36,7 @@ Nas entrevistas, utilizamos post-it e selecionamos dois usuários que pudessem r
 ## História do Usuário (2)
 
 ![História do usuário 2](src/img/imgs.readme/post-it2.jpg)
-#### Figura2: História do Usuário 2 
+##### Figura2: História do Usuário 2 
 
 ## Critérios de Aceitação - Usuário 2 
 
@@ -55,23 +55,23 @@ Definido de acordo com as necessidades pontuadas pelos usuários, sendo assim, f
 Pensando nas necessidades que surgiram nas entrevistas, foi criado protótipos de baixa fidelidade, para no qual pudesse fazer modificações e melhorias com facilidade. 
 
 ![Protótipo - home](src/img/imgs.readme/prototipo_home.jpg) 
-#### Figura3: Esse protótipo representa a página principal do site denominada como Home. 
+##### Figura3: Esse protótipo representa a página principal do site denominada como Home. 
 
 ![Protótipo - filter](src/img/imgs.readme/prototipo_filter.jpg)
-#### Figura4: Parte da busca e filtragem, do próprio home. 
+##### Figura4: Parte da busca e filtragem, do próprio home. 
 
 ![Protótipo - Sobre](src/img/imgs.readme/prototipo_sobre.jpg)
-#### Figura5: Protótipo do link - Sobre. 
+##### Figura5: Protótipo do link - Sobre. 
 
 ## Protótipo de alta fidelidade 
 
 Criação do protótipo de alta fidelidade, com o objetivo de visualizar melhor todos os detalhes para página web, otimizando as ideias do produto e com intenção de grandes melhorias futura.
 
 ![Protótipo de Alta Fidelidade - Home](src/img/imgs.readme/canva_home.jpg)
-#### Figura6: Ideia de protótipo de alta fidelidade na parte do Home.
+##### Figura6: Ideia de protótipo de alta fidelidade na parte do Home.
 
 ![Protótipo de Alta Fidelidade - Sobre](src/img/imgs.readme/canva_sobre.jpg)
-#### Figura7: Ideia de protótipo de alta fidelidade para o link - Sobre. 
+##### Figura7: Ideia de protótipo de alta fidelidade para o link - Sobre. 
 
 # Teste de Usuabilidade
 
@@ -82,12 +82,12 @@ As resoluções propostas:
 * Carrossel: Retirado, pois o usuário quer a princípio algo mais objetivo. De entrar na página e já localizar o que quer.
 
 ![Teste Usuabilidade 1 - Home](src/img/imgs.readme/home.teste1.jpg)
-#### Figura8: 1º teste de Usualibilidade - Home
+##### Figura8: 1º teste de Usualibilidade - Home
 
 ![Teste Usuabilidade 1 - Sobre](src/img/imgs.readme/sobre.teste1.jpg)
-#### Figura9: 1º teste de Usuabilidade - Sobre
+##### Figura9: 1º teste de Usuabilidade - Sobre
 
 # Autoras
 
-Alessandra Alves Silva| [Github - Alessandra](https://github.com/ale-alves)
-Larissa Alborghette Almeida | [Github - Larissa](https://github.com/laris28)
+* Alessandra Alves Silva| [Github - Alessandra](https://github.com/ale-alves)
+* Larissa Alborghette Almeida | [Github - Larissa](https://github.com/laris28)
