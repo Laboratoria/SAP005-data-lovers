@@ -12,6 +12,7 @@
     "start": "serve src/",
     "deploy": "gh-pages -d src"
   },
+  "type":"module",
   "dependencies": {
     "@babel/core": "^7.6.2",
     "@babel/plugin-transform-modules-commonjs": "^7.6.0",

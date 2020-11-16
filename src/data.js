@@ -11,7 +11,7 @@ const filter = {
     })
     console.log(image)
   },
-
+  
   filter(){
     const orderName = data.pokemon.map(item => {
       
