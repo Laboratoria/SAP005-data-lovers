@@ -1,0 +1,95 @@
+body{
+    background: url("./img/fundo-universe.jpg");
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+
+}
+#title-mobile {
+    display: none;
+}
+
+/* Menu e botões */
+
+#navigation-area {
+    background-color: rgba(57, 59, 75, 0.192);
+}
+#navigation-area-mobile {
+    display: none;
+}  
+
+#navigation-area ul{
+    display: flex;
+    justify-content: space-between;
+
+    list-style: none;
+}
+
+.buttons-config {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    
+    text-overflow: clip;
+    overflow: hidden;
+
+    padding: 7px;
+    width: 26%;
+    border-radius: 10px;
+
+    background-color: rgba(48, 55, 75, 0.541);
+
+    cursor: pointer;
+}
+
+
+
+
+/* Formatação Mobile */
+@media only screen and (max-device-width: 400px){
+    #title{
+        display: none;
+    }
+
+    #title-mobile{
+        display: flex;
+        justify-content: center;
+    }
+
+
+    /* Menu e botões Mobile */
+
+    #navigation-area {
+        display: none;
+    }
+
+    #navigation-area-mobile {
+        display: flex;
+        justify-content: space-between;
+    
+        background-color: rgba(57, 59, 75, 0.192);
+    }
+    #navigation-area-mobile ul{
+        
+        list-style: none;
+    }
+
+    .buttons-config-mobile {
+        color: white;
+        text-align: center;
+        font-size: 10px;
+        
+        text-overflow: clip;
+        overflow: hidden;
+    
+        padding: 7px;
+        width: 26%;
+        border-radius: 10px;
+    
+        background-color: rgba(48, 55, 75, 0.541);
+    
+        cursor: pointer;
+    }
+}
