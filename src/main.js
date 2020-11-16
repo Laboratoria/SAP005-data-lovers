@@ -4,16 +4,24 @@
 import rickAndMorty from './data/rickandmorty/rickandmorty.js';
 
 
-const allData = rickAndMorty.results;
+   // let nomes = ["Diego", "Gabriel", "Lucas"];const allData = rickAndMorty.results;
+   // let lista = document.querySelector('#lista');
+   const allData = rickAndMorty.results; 
+  const data = allData[1];
+   
+
+ 
+ //const allData = rickAndMorty.results;
 //const data = allData.results
 
-const data = allData[1];
+//const data = allData[1];
 
 // const teste=document.getElementById("root").value;
 // content.innerHTML = data;
 // teste.appendChild(content);
 // //const teste = document.getElementByIdsa
-console.log(data)
+//console.log(data)
  
 //document.getElementById("root").innerHTML = 
 //document.write(data);
+
