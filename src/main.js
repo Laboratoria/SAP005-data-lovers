@@ -1,6 +1,12 @@
-import { example } from './data.js';
-// import data from './data/lol/lol.js';
-import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+//import data from './data/pokemon/pokemon.js';
 
-console.log(example, data);
+const pokemon = {
+      "num": "001",
+      "name": "bulbasaur",
+      "generation": {
+        "num": "generation i",
+        "name": "kanto"
+      }
+    }
+
+console.log(pokemon.name);
