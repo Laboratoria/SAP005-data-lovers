@@ -6,6 +6,7 @@ import rickAndMorty from './data/rickandmorty/rickandmorty.js';
 
 //const { default: rickAndMorty } = require("./data/rickandmorty/rickandmorty");
 
+<<<<<<< HEAD
    // let nomes = ["Diego", "Gabriel", "Lucas"];const allData = rickAndMorty.results;
    // let lista = document.querySelector('#lista');
   //const allData = rickAndMorty.results; 
@@ -39,6 +40,23 @@ for(let data of allData){
 //document.querySelector('#print').innerHTML = allData;
 
 //}
+=======
+//
+const allData = rickAndMorty.results;
+
+//for(let data of allData){
+
+// console.log('specie: '+ data.specie);
+// console.log('status: '+ data.status);
+// console.log('genero: '+ data.gender);
+// console.log('image: '+ data.image); 
+// console.log("-------------------------");
+// document.getElementById("root").appendChild(data.name);
+
+//}
+
+
+>>>>>>> 1fe0f9b9740161f79aa3273411a4ff70286b6d06
 //var citricos = allData.slice(1, 3);
 //document.getElementById("root").innerHTML = citricos;
 
@@ -53,6 +71,22 @@ for(let data of allData){
 //}
 
 
+<<<<<<< HEAD
+=======
+//const data = allData.results
+
+//const data = allData[1];
+//data = document.getElementById("root").value;
+
+// let nomes = ["Diego", "Gabriel", "Lucas"];const allData = rickAndMorty.results;
+// let lista = document.querySelector('#lista');
+// const allData = rickAndMorty.results; 
+//const data = allData[1];
+
+
+
+//const allData = rickAndMorty.results;
+>>>>>>> 1fe0f9b9740161f79aa3273411a4ff70286b6d06
 //const data = allData.results
 
 //const data = allData[1];
@@ -63,7 +97,39 @@ for(let data of allData){
 // teste.appendChild(content);
 // //const teste = document.getElementByIdsa
 //console.log(data)
- 
+
+//document.getElementById("root").innerHTML = 
+//document.write(data);
+
+//const data = allData.map(item =>'' item.name  + item.status  + item.species  + item.gender + `<img src="${item.image}" />`)
+//MAP
+
+// para pegar os dados do rickandmorty.js
+// <b>Genus:</b> ${item.gender} <br><b> Status:</b> ${item.status} <br> <b>Species:</b> ${item.species}
+/////let data = allData.map(item =>  `<div id="card"><p><img src="${item.image}" /><h4> Name: ${item.name} <br> Genus: ${item.gender} <br> Status: ${item.status} <br> Species: ${item.species}</h4></p></div>`)
+let data = allData.map(item => `<div class="card"><img src="${item.image}" alt="Avatar" style="width:100%" /> <h1> <b>${item.name}</b></h1></div>`)
+document.getElementById("root").innerHTML = data;
+
+
+
+
+//console.log(vetor)
+//const splitar =
+    //function splitString(stringToSplit, separator) {
+       // var arrayOfStrings = stringToSplit.split(separator);
+
+
+
+        //document.getElementById("root").innerHTML = vetor;
+
+
+//const {name,status,species} = (".src/data/rickandmorty/rickandmorty.json")
+
+//console.log(`name: ${name}, o status é ${status}, ele é da espécie ${species}`)
+//rickAndMorty.forEach(function(allData){
+  //  console.log(dados);
+//});
+
 //document.getElementById("root").innerHTML = 
 //document.write(data);
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
     margin: 0;
     padding: 0;  /* CSS Reset */
@@ -82,3 +83,16 @@ body {
  }
  **/
  
+=======
+.card {
+    box-shadow: 0 4px 4px 0 rgb(255, 22, 236);
+    transition: 0.4s;
+    width: 30%;
+    border-radius: 5px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(255, 23, 224, 0.938);
+    border-radius: 5px;
+}
+>>>>>>> 1fe0f9b9740161f79aa3273411a4ff70286b6d06
