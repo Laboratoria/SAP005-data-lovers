@@ -1,4 +1,25 @@
-# Data Lovers
+# Data Lovers POKÉMON
+
+Pokémon GO é um game grátis de realidade aumentada para Android e iPhone (iOS), 
+que permite ao jogador viver uma aventura real, usando o mapa do mundo onde vivemos, 
+para caçar e capturar Pokémon ao longo do caminho.
+
+Com o objetivo de auxiliar os usuários do Pokémon Go, em suas missões de reides,
+desenvolvemos o POKÉMON HELP. O site possuí dados dos principais Pokémons da região
+Kanto, apresentando suas principais características como força, tipo  e eficiência
+em batalhas. 
+
+Para o desenvolvimento do projeto, realizamos pesquisas com os usuários do jogo,
+coletando as principais necessidades de dados para auxiliar em um maior desempenho
+e agilidade nas missões do jogo.
+
+
+
+
+
+
+
+
 
 ## Índice
 
