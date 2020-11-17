@@ -1,0 +1,107 @@
+/*reset*/
+*{
+    margin:0;
+    padding:0; 
+    font-size: 100%; 
+    box-sizing: border-box;
+}
+    
+ul{
+    list-style: none;
+}
+
+.menu a{
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.9;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
+.menu{
+    background-color:rgb(36, 139, 36);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:20px 50px;
+    opacity: 80%;
+    
+}
+
+.netflix{
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.9;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+.rodape{
+    background-color:rgb(36, 139, 36);
+    top: 0;
+    left: 0;
+    justify-content:center;
+    align-items: center;
+    padding:10px 25px;
+    display: flex;
+    height:30px;
+    text-align: right;
+}
+.rodape a{
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.9;
+    color: white;
+    font-weight:lighter;
+    font-size: 18px;
+    justify-content: center;
+}
+
+.rodape img{
+    width: 5%;
+    height: 5%;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: inline;
+    justify-content: center;
+}
+@media(max-width:700px){
+    header {flex-direction: column;}
+    header img{margin-bottom:15px;}
+}
+
+li{
+    display: inline-block;
+    margin: 0 15px;
+    
+}
+
+.hero{
+    background-image:url("img/RickMorty.jpg");
+    background-size: cover;
+    min-height: 100vh;
+    justify-content: center;
+    color: white;
+    display:flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    text-align: left;
+    
+}
+
+
+
+.hero h1{
+    font-size:3.2rem;
+    margin-bottom:15px;
+}
+
+
+
