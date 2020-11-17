@@ -27,11 +27,17 @@ Nas entrevistas, utilizamos post-it e selecionamos dois usuários que pudessem r
 
 ## Critérios de Aceitação - Usuário 1 
 
+* Ao acessar o site o usuário já poderá visualizar todos os Pokémons na aba "Home";
+
 * O usuário pode interagir com a interface para obter todas as informações de cada pokémon; 
 
-* O usuário pode clicar em "Buscar por" onde receberá opções para filtrar e assim receber uma listagem apenas com seu interesse; 
+* O usuário pode clicar no campo "Buscar por" onde receberá opções para filtrar e assim receber uma listagem apenas com seu interesse; 
 
-* O usuário recebe as informações que lhe é necessária através filtragem. 
+* O usuário deve selecionar apenas uma das opçôes de filtro que lhe é oferecida;
+
+* Ao selecionar uma opção, o usuário recebe as informações que lhe é necessária através da filtragem;
+
+* O usuário poderá clicar nos cards para ver as informações mais detalhadamente. 
 
 ## História do Usuário (2)
 
@@ -40,9 +46,11 @@ Nas entrevistas, utilizamos post-it e selecionamos dois usuários que pudessem r
 
 ## Critérios de Aceitação - Usuário 2 
 
- * O usuário pode interagir com a interface para obter todas as informações de cada pokémon; 
+* Ao acessar o site o usuário já poderá visualizar todos os Pokémons raros na página inicial ("Home");
 
- * O usuário pode clicar em "Buscar por" onde terá a opção de buscar o Pokémon do seu interesse. 
+* O usuário pode interagir com a interface para obter todas as informações de cada pokémon raro; 
+ 
+* O usuário pode clicar nos cards para ver as informações mais detalhadamente.
 
 # Definição de Produto 
 
@@ -57,35 +65,36 @@ Pensando nas necessidades que surgiram nas entrevistas, foi criado protótipos d
 ![Protótipo - home](src/img/imgs.readme/prototipo_home.jpg) 
 ##### Figura3: Esse protótipo representa a página principal do site denominada como Home. 
 
-![Protótipo - filter](src/img/imgs.readme/prototipo_filter.jpg)
-##### Figura4: Parte da busca e filtragem, do próprio home. 
-
 ![Protótipo - Sobre](src/img/imgs.readme/prototipo_sobre.jpg)
-##### Figura5: Protótipo do link - Sobre. 
+##### Figura4: Protótipo do link - Sobre. 
 
 ## Protótipo de alta fidelidade 
 
 Criação do protótipo de alta fidelidade, com o objetivo de visualizar melhor todos os detalhes para página web, otimizando as ideias do produto e com intenção de grandes melhorias futura.
 
 ![Protótipo de Alta Fidelidade - Home](src/img/imgs.readme/canva_home.jpg)
-##### Figura6: Ideia de protótipo de alta fidelidade na parte do Home.
+##### Figura5: Ideia de protótipo de alta fidelidade na parte do Home.
 
 ![Protótipo de Alta Fidelidade - Sobre](src/img/imgs.readme/canva_sobre.jpg)
-##### Figura7: Ideia de protótipo de alta fidelidade para o link - Sobre. 
+##### Figura6: Ideia de protótipo de alta fidelidade para o link - Sobre. 
 
 # Teste de Usuabilidade
 
 Durante o processo de desenvolvimento deste produto os usuários pontuaram algumas modificações para a melhoria da interação com a interface. Optaram por um site mais prático e fácil de usar, para que consigam receber seus resultados de pesquisa com mais facilidade.
 As resoluções propostas:
 
-* Menu: Retirado para não se tornar algo repetitivo, já que consta na barra de navegação os links. Onde é mais prático e visível para o usuário acessar.
-* Carrossel: Retirado, pois o usuário quer a princípio algo mais objetivo. De entrar na página e já localizar o que quer.
+* Menu: Retirado, para não se tornar algo repetitivo, já que consta na barra de navegação os links. Onde é mais prático e visível para o usuário acessar;
+* Carrossel: Retirado, pois o usuário quer a princípio algo mais objetivo. De entrar na página e já localizar o que quer;
+* Cores: Alteração das cores, deixando mais claras de fundo;
+* Logos: Alteração de logos para melhor visualização e aprovação do usuário, e acréscimo de redes de sociais;
+* Campo para ordenar os dados de pesquisa: Acrescentado, para melhor experiência do usuário;
+* Cards raros: Ficará na página home, os usuários terão eles de fácil acesso, sem precisar filtrar.
 
 ![Teste Usuabilidade 1 - Home](src/img/imgs.readme/home.teste1.jpg)
-##### Figura8: 1º teste de Usualibilidade - Home
+##### Figura7: 1º teste de Usualibilidade - Home
 
 ![Teste Usuabilidade 1 - Sobre](src/img/imgs.readme/sobre.teste1.jpg)
-##### Figura9: 1º teste de Usuabilidade - Sobre
+##### Figura8: 1º teste de Usuabilidade - Sobre
 
 # Autoras
 
