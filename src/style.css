@@ -44,6 +44,21 @@ body{
     cursor: pointer;
 }
 
+/* Menu de personagens */
+#characters-options{
+    display: flex;
+    justify-content: space-between;
+
+    background-color: rgba(0, 0, 0, 0.575);
+    padding: 10px;
+    border-radius: 20px;
+}
+.characters-pictures {
+    border-radius: 50%;
+
+    width: 80px;
+    height: 80px;
+}
 
 
 
@@ -67,7 +82,7 @@ body{
 
     #navigation-area-mobile {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
     
         background-color: rgba(57, 59, 75, 0.192);
     }
@@ -79,17 +94,15 @@ body{
     .buttons-config-mobile {
         color: white;
         text-align: center;
-        font-size: 10px;
+        font-size: 20px;
         
-        text-overflow: clip;
-        overflow: hidden;
-    
         padding: 7px;
         width: 26%;
         border-radius: 10px;
     
-        background-color: rgba(48, 55, 75, 0.541);
+        background-color: rgba(48, 55, 75, 0.788);
     
         cursor: pointer;
     }
 }
+
