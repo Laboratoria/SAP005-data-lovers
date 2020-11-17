@@ -6,6 +6,41 @@ import rickAndMorty from './data/rickandmorty/rickandmorty.js';
 
 //const { default: rickAndMorty } = require("./data/rickandmorty/rickandmorty");
 
+<<<<<<< HEAD
+   // let nomes = ["Diego", "Gabriel", "Lucas"];const allData = rickAndMorty.results;
+   // let lista = document.querySelector('#lista');
+  //const allData = rickAndMorty.results; 
+  //const data = allData[1];
+   
+  // Objeto de objetos
+
+ 
+ const allData = rickAndMorty.results;
+const data = allData.results
+
+//const data = allData[1];
+//
+//const allData = rickAndMorty.results;
+
+for(let data of allData){
+
+    console.log('specie: '+ data.specie);
+  console.log('status: '+ data.status);
+    console.log('genero: '+ data.gender);
+   // console.log('image: '+ data.image);
+    console.log("-------------------------");
+   //document.querySelector('#print').innerHTML = allData;
+ //  // document.getElementById("root").appendChild(data.name);
+    
+}
+
+
+//function teste (){
+//const allData = document.querySelector ('#root').value;
+//document.querySelector('#print').innerHTML = allData;
+
+//}
+=======
 //
 const allData = rickAndMorty.results;
 
@@ -21,6 +56,7 @@ const allData = rickAndMorty.results;
 //}
 
 
+>>>>>>> 1fe0f9b9740161f79aa3273411a4ff70286b6d06
 //var citricos = allData.slice(1, 3);
 //document.getElementById("root").innerHTML = citricos;
 
@@ -35,6 +71,8 @@ const allData = rickAndMorty.results;
 //}
 
 
+<<<<<<< HEAD
+=======
 //const data = allData.results
 
 //const data = allData[1];
@@ -48,9 +86,12 @@ const allData = rickAndMorty.results;
 
 
 //const allData = rickAndMorty.results;
+>>>>>>> 1fe0f9b9740161f79aa3273411a4ff70286b6d06
 //const data = allData.results
 
 //const data = allData[1];
+//data = document.getElementById("root").value;
+
 
 // content.innerHTML = data;
 // teste.appendChild(content);
@@ -92,3 +133,32 @@ document.getElementById("root").innerHTML = data;
 //document.getElementById("root").innerHTML = 
 //document.write(data);
 
+
+//document.getElementById("root").innerHTML = 
+//document.write(data);
+
+
+//MAP
+//const vetor = allData.map(item => item.name  + item.status  + item.species  + item.gender)
+ //document.getElementById("root").innerHTML = vetor;
+
+
+
+
+
+//console.log(vetor)
+//const splitar =
+    //function splitString(stringToSplit, separator) {
+       // var arrayOfStrings = stringToSplit.split(separator);
+
+
+
+        //document.getElementById("root").innerHTML = vetor;
+
+
+//const {name,status,species} = (".src/data/rickandmorty/rickandmorty.json")
+
+//console.log(`name: ${name}, o status é ${status}, ele é da espécie ${species}`)
+//rickAndMorty.forEach(function(allData){
+  //  console.log(dados);
+//});
