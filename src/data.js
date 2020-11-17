@@ -1,4 +1,3 @@
-
 import data from "./data/pokemon/pokemon.js"
 
 const filter = {
@@ -9,7 +8,11 @@ const filter = {
         img: img.img
       }
     })
-    console.log(image)
+    const imageCard = image.map( imgCard =>{
+      return imgCard.img;
+    })  
+    return imageCard
+
   },
   
   filter(){
@@ -33,12 +36,9 @@ const filter = {
     
   },
 }
+ filter.photo();
 
-
-
-filter.photo();
-
-
+export default filter;
 
 
 
