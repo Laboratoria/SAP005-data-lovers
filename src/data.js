@@ -7,11 +7,8 @@ const filter = {
         name: img.name,
         img: img.img
       }
-    })
-    const imageCard = image.map( imgCard =>{
-      return imgCard.img;
-    })  
-    return imageCard
+    })    
+    return image
 
   },
   
