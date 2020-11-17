@@ -22,7 +22,7 @@ body{
 
 #navigation-area ul{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 
     list-style: none;
 }
@@ -35,6 +35,7 @@ body{
     text-overflow: clip;
     overflow: hidden;
 
+    margin: 10px;
     padding: 7px;
     width: 26%;
     border-radius: 10px;
@@ -43,9 +44,16 @@ body{
 
     cursor: pointer;
 }
+.buttons-config:hover {
+    background-color: rgba(69, 81, 114, 0.541);
+}
 
-/* Menu de personagens */
-#characters-options{
+
+/* Menu  */
+
+.all-menu{
+    visibility: hidden;
+
     display: flex;
     justify-content: space-between;
 
@@ -53,7 +61,7 @@ body{
     padding: 10px;
     border-radius: 20px;
 }
-.characters-pictures {
+.menu-pictures {
     border-radius: 50%;
 
     width: 80px;
@@ -72,6 +80,7 @@ body{
         display: flex;
         justify-content: center;
     }
+
 
 
     /* Menu e botões Mobile */
@@ -103,6 +112,26 @@ body{
         background-color: rgba(48, 55, 75, 0.788);
     
         cursor: pointer;
+    }
+    .buttons-config-mobile:hover {
+        background-color: rgba(69, 81, 114, 0.541);
+    }
+
+    .all-menu{
+        visibility: hidden;
+    
+        display: flex;
+        justify-content: space-between;
+    
+        background-color: rgba(0, 0, 0, 0.575);
+        padding: 10px;
+        border-radius: 20px;
+    }
+    .menu-pictures {
+        border-radius: 50%;
+    
+        width: 40px;
+        height: 40px;
     }
 }
 
