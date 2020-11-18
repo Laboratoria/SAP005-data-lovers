@@ -30,8 +30,20 @@ const filter = {
          
           return 0;
     });    
-    
+      return order;
   },
+
+  weaknesses() {
+    const weaknesses = data.pokemon.map(pokemon => {
+        return {
+            name: pokemon.name,
+            img: pokemon.img,
+            weaknesses: pokemon.weaknesses
+        }
+    })
+    return weaknesses
+  }
+
 }
  filter.photo();
 
