@@ -19,7 +19,7 @@ ul{
     font-size: 25px;
 }
 .menu{
-    background-color:rgb(36, 139, 36);
+    background-color:#AD42FC;
     width: 100%;
     position: absolute;
     top: 0;
@@ -32,18 +32,9 @@ ul{
     
 }
 
-.netflix{
-    text-decoration: none;
-    cursor: pointer;
-    opacity: 0.9;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-
-}
 
 .rodape{
-    background-color:rgb(36, 139, 36);
+    background-color:#AD42FC;
     top: 0;
     left: 0;
     justify-content:center;
@@ -52,6 +43,7 @@ ul{
     display: flex;
     height:30px;
     text-align: right;
+    position: relative;
 }
 .rodape a{
     text-decoration: none;
@@ -72,7 +64,6 @@ ul{
     justify-content: center;
     margin-top:4px;
 }
-
 @media(max-width:700px){
     header {flex-direction: column;}
     header img{margin-bottom:15px;}
@@ -85,7 +76,7 @@ li{
 }
 
 .hero{
-    background-image:url("img/RickMorty.jpg");
+    background-image:url("img/teste2.jpg");
     background-size: cover;
     min-height: 100vh;
     justify-content: center;
@@ -104,6 +95,3 @@ li{
     font-size:3.2rem;
     margin-bottom:15px;
 }
-
-
-
