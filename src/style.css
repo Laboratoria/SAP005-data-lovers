@@ -1,0 +1,65 @@
+html{
+    background-color: rgb(53, 50, 50);
+    margin: 0%;
+    padding: 0%;
+}
+
+.indice {
+    background-color: rgb(139, 195, 221);
+    margin: 3%;
+    padding: 6.em;
+    border: 2px solid black;
+    font-family: 'Segoe UI';
+}
+
+ .introduction {
+    background-color: rgb(225, 225, 76);
+    margin: 3%;
+    padding: 5.em;
+    border: 2px solid black;
+    font-family: 'Segoe UI';
+
+}
+
+ul {
+    background-color: black;
+    color : #fff;
+    padding-left: 0px;
+    padding: 15px;
+    font-family: Arial;
+}
+
+li {
+    display: inline-flex;
+}
+
+li:hover { 
+    background-color:  rgb(225, 225, 76);
+    color: #000;
+    cursor: pointer
+}
+
+
+/*ul{
+    background-color: #eee;
+    width: 200px;
+    list-style-type: none;
+    padding-left: 0px;
+    font-family: Arial;
+}
+
+li { 
+    padding: 10px 0px 10px 15px;
+
+ }
+ li:first-child {
+    color: #fff;
+    background-color:  rgb(225, 225, 76);
+}
+
+
+ li:hover {
+ background-color: #ddd;
+ cursor: pointer;
+ }
+

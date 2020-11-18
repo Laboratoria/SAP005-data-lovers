@@ -8,12 +8,52 @@
       <img src="img/rickandmorty2.png" alt="Rick an Morty">
       <figcaption>Rick and Morty</figcaption>
     </figure>
-    <p>Rick and Morty é uma série de animação adulta de comédia e ficção científica criada pelo norte-americano Justin Roiland e Dan Harmon. 
+    <main class="indice"> 
+    <p><strong>Rick and Morty é uma série de animação adulta de comédia e ficção científica criada pelo norte-americano Justin Roiland e Dan Harmon. 
       A origem da série foi uma paródia animada em curta-metragem do filme De Volta Para o Futuro criada por Roiland para o festival de cinema Channel 101.
       A Adult Swim abordou Harmon a respeito de ideias para um programa de televisão, então ele e Roiland desenvolveram o programa com base no curta,
-      substituindo os personagens de Doc com Rick e Marty com Morty.</p>
-      <p><strong> Nessa página poderá encontrar informações sobre os personagens da série. Basta selecionar seu nome, as informações desejadas e clicar no botão "pesquisar"</strong><p>
-  </head>
+      substituindo os personagens de Doc com Rick e Marty com Morty.</strong></p>
+      </main>    
+      <main class="introduction">
+        <p><strong>Nessa página poderá encontrar informações sobre os personagens da série. Basta selecionar seu nome, as informações desejadas e clicar no botão "pesquisar"</strong></p>
+      </main>
+        <ul>
+          <li>Personagens</li>
+          <li>Principais</li>
+          <li>Recorrentes</li>
+        
+        </ul>
+        
+        <select class="Personagens" id= "Personagens-caracteristiscas">
+        <option value="nune" selected>Personagens</option>
+        <option value="PersongensPrincipais">Principais</option>
+        <option value="PersonagensRecorrentes">Recorrentes</option>
+      </select>
+    
+
+      <select class="Caracteristiscas" id= "Caracteristiscas-quantadidade">
+        <option value="nune" selected>Caracteristiscas</option>
+        <option value="Humanos">Humanos</option>
+        <option value="Não Humanos">Não Humanos</option>
+        <option value="Mortos">Mortos</option>
+      
+      </select>
+
+      <select class="Temporadas" id= "Temporadas-quantidade">
+        <option value="nune" selected>Temporadas</option>
+        <option value="1ª Temporada ">1ª Temporada</option>
+        <option value="2ª Temporada">2ª Temporada</option>
+        <option value="3ª Temporada ">3ª Temporada</option>
+        <option value="4ª Temporada">4ª Temporada</option>
+      </select>
+
+     //Section para declarar o Flexcontainer com divs dos cards
+     <section class= "flex-container">
+      <div class= "cards"></div>
+      </section>
+    
+    
+    </head>
   <body>
     <div id="root"></div>
     <script src="main.js" type="module"></script>
