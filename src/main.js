@@ -1,6 +1,6 @@
 import { example } from './data.js';
 
- import data from './data/rickandmorty/rickandmorty.js';
+import data from './data/rickandmorty/rickandmorty.js';
 
 console.log(example, data);
 
@@ -29,6 +29,17 @@ function showWorlds(){
     charactersMenu.style.visibility = "hidden"
 }
 
-for(let i in data){
-    console.log(data[i].results)
-}
+
+const rickPic = document.getElementById("rick-picture");
+rickPic.addEventListener("click", showInfo);
+
+function showInfo() {
+    const name = data.results[0].name;
+    const status = data.results[0].status;
+    const species = data.results[0].species;
+    const type = data.results[0].type;
+    const gender = data.results[0].gender;
+    const origin = data.results[0].origin.name;
+    const location = data.results[0].location.name;
+    document.getElementById("card-info").innerHTML = `Name: ${name} <br>Status: ${status} <br>Species: ${species} <br>Type: ${type} <br>Gender: ${gender} <br>Origin: ${origin} <br>Location: ${location}`;
+};
