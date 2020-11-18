@@ -32,6 +32,16 @@ const filter = {
     });    
       return order;
   },
+  type(){
+    const element = data.pokemon.map(typeElement =>{
+      return{
+        name:typeElement.name,
+        img:typeElement.img,
+        type:typeElement.type
+      }
+    })
+    return element
+  },
 
   weaknesses() {
     const weaknesses = data.pokemon.map(pokemon => {
