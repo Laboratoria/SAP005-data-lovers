@@ -6,7 +6,6 @@ import rickAndMorty from './data/rickandmorty/rickandmorty.js';
 
 //const { default: rickAndMorty } = require("./data/rickandmorty/rickandmorty");
 
-<<<<<<< HEAD
    // let nomes = ["Diego", "Gabriel", "Lucas"];const allData = rickAndMorty.results;
    // let lista = document.querySelector('#lista');
   //const allData = rickAndMorty.results; 
@@ -15,24 +14,24 @@ import rickAndMorty from './data/rickandmorty/rickandmorty.js';
   // Objeto de objetos
 
  
- const allData = rickAndMorty.results;
-const data = allData.results
+const allData = rickAndMorty.results;
+//const data = allData.results
 
 //const data = allData[1];
 //
 //const allData = rickAndMorty.results;
 
-for(let data of allData){
+//for(let data of allData){
 
-    console.log('specie: '+ data.specie);
-  console.log('status: '+ data.status);
-    console.log('genero: '+ data.gender);
+ //   console.log('specie: '+ data.specie);
+//  console.log('status: '+ data.status);
+  //  console.log('genero: '+ data.gender);
    // console.log('image: '+ data.image);
-    console.log("-------------------------");
+   // console.log("-------------------------");
    //document.querySelector('#print').innerHTML = allData;
  //  // document.getElementById("root").appendChild(data.name);
     
-}
+
 
 
 //function teste (){
@@ -40,9 +39,8 @@ for(let data of allData){
 //document.querySelector('#print').innerHTML = allData;
 
 //}
-=======
 //
-const allData = rickAndMorty.results;
+//const allData = rickAndMorty.results;
 
 //for(let data of allData){
 
@@ -56,7 +54,6 @@ const allData = rickAndMorty.results;
 //}
 
 
->>>>>>> 1fe0f9b9740161f79aa3273411a4ff70286b6d06
 //var citricos = allData.slice(1, 3);
 //document.getElementById("root").innerHTML = citricos;
 
@@ -71,8 +68,6 @@ const allData = rickAndMorty.results;
 //}
 
 
-<<<<<<< HEAD
-=======
 //const data = allData.results
 
 //const data = allData[1];
@@ -86,7 +81,6 @@ const allData = rickAndMorty.results;
 
 
 //const allData = rickAndMorty.results;
->>>>>>> 1fe0f9b9740161f79aa3273411a4ff70286b6d06
 //const data = allData.results
 
 //const data = allData[1];
@@ -106,11 +100,14 @@ const allData = rickAndMorty.results;
 
 // para pegar os dados do rickandmorty.js
 // <b>Genus:</b> ${item.gender} <br><b> Status:</b> ${item.status} <br> <b>Species:</b> ${item.species}
-/////let data = allData.map(item =>  `<div id="card"><p><img src="${item.image}" /><h4> Name: ${item.name} <br> Genus: ${item.gender} <br> Status: ${item.status} <br> Species: ${item.species}</h4></p></div>`)
-let data = allData.map(item => `<div class="card"><img src="${item.image}" alt="Avatar" style="width:100%" /> <h1> <b>${item.name}</b></h1></div>`)
-document.getElementById("root").innerHTML = data;
+//let data = allData.map(item =>  `<div id="card"><p><img src="${item.image}" /><h4> Name: ${item.name} <br> Genus: ${item.gender} <br> Status: ${item.status} <br> Species: ${item.species}</h4></p></div>`)
 
-
+//front-card
+let data = allData.map(item => `<div class="fcard"><img src=${item.image} alt="Avatar" class="img-card" />  <b class="name">${item.name}  </b></div>`)
+document.getElementById("fcard").innerHTML = data;
+//back-card
+let bdata = allData.map(item => `<div class="bcard">  <h4><p> <br> Genus: ${item.gender} <br> Status: ${item.status} <br> Species: ${item.species}</h4></p></div>`)
+document.getElementById("bcard").innerHTML = bdata;
 
 
 //console.log(vetor)
