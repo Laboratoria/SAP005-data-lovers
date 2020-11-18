@@ -6,7 +6,39 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header class="cover">
+      <img src= "/img/Pokebola.png"  class="Pokebola.png">
+    </header>
+
+  <main>
+    <section class="buttons">
+    <select name="select-option" id= "select-option" class="option">
+     <option selected disabled >SELECIONE A ORDEM</option> 
+     <option value="WATER">ÁGUA</option>
+     <option value="DRAGON">DRAGÃO</option>
+     <option value="ELECTRIC">ELÉTRICO</option>
+     <option value="FAIRY">FADA</option>
+     <option value="FIRE">FOGO</option>
+     <option value="ICE">GELO</option>
+     <option value="BUG">INSETO</option>
+     <option value="FIGHTER">LUTADOR</option>
+     <option value="METALLIC">METÁLICO</option>
+     <option value="NORMAL">NORMAL</option>
+     <option value="NIGHT">NOTURNO</option>
+     <option value="PSYCHIC">PSÍQUICO</option>
+     <option value="PLANT">PLANTA</option>
+     <option value="EARTH">TERRA</option>
+     <option value="POISONOUS">VENENOSO</option>
+     <option value="FLYING">VOADOR</option>
+    </select>
+    
+    <label><input type="text-area" id="pokémon-filter" placeholder="DIGITE O NOME DO POKÉMON" class="pokémon-filter"></label>
+    </section>
+
+
+  </main>  
     <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>
+
 </html>

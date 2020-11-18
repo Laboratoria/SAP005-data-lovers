@@ -1,0 +1,26 @@
+.cover {
+    text-align: center;
+    
+}
+
+.buttons {
+    height: 60px;
+    width: 100%;
+    position: relative;
+    padding-left: 5%;
+    text-align: center;
+}
+
+.option, .pokémon-filter {
+    height: 40px;
+    width: 20%;
+    position: relative;
+    text-align: center;
+    border: 1px solid;
+    background-color: #fff;
+    border-color: rgb(70, 71, 71);
+    border-radius: 5px;
+    font-family:  Arial, sans-serif;
+    color: black;
+}
+
