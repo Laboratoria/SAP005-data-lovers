@@ -11,9 +11,10 @@
     <nav class ="menu">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="personagem.html">Personagens</a></li>
+          <li><a id="personagem" href="personagem.html">Personagens</a></li>
         </ul>
     </nav>
+ src/add-cards
     
     <main class="hero">
         <section class="personagem">
@@ -62,6 +63,56 @@
           </abbr>
         </section>
     </main>
+
+    <section>
+        <label for="filter-species">
+        <select  id="filter-species" class="filter-species">
+            <option value="species" select>Espécies</option>
+            <option value="animal">Animal</option>
+            <option value="humano">Humano</option>
+            <option value="humanoid">Humanoid</option>
+            <option value="robot">Robo</option>
+            <option value="alien">Alien</option>
+        </select>
+        </label>
+    </section>
+    <section>
+        <label for="filter-status">
+            <select id="filter-status" class="filter-status">
+                <option value="status" select>Status</option>
+                <option value="Vivo">Vivo</option>
+                <option value="Morto">Morto</option>
+                <option value="unknown">Desconhecido</option>
+            </select>
+            </label>
+        </section>
+    <section>
+            <label for="filter-gender">
+                <select  id="filter-gender" class="filter-gender">
+                    <option value="gender" select>Gênero</option>
+                    <option value="male">Masculino</option>
+                    <option value="female">Feminino</option>
+                </select>
+                </label>
+    </section>
+    <section>
+        <label for="filter-order">
+            <select id="filter-order" class="filter-order">
+                <option value="order" select>Ordem</option>
+                <option value="az">A - Z</option>
+                <option value="za">Z - A</option>
+            </select>
+            </label>
+</section>
+
+
+    
+    <aside class=hero>
+        <h3>CARDS PERSONAGENS</h3>
+
+        
+      </aside>
+ master
     <footer class="rodape">
         <ul>
         <img src="img/github.png" alt="Logo Github">
