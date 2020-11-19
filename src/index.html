@@ -8,72 +8,91 @@
 </head>
 
 <body>
-  <header>
-  </header>
-  
-  <section>
-  </section>
-  <div id="root"></div>
 
   <header>
     <div class="logo">
       <img src="img\logo-nome.png">
     </div>
 
-    <div class="menu">
-      <nav>
-        <ul>
-          <li>Home</li>
-          <li>Personagens</li>
-          <li>Saiba mais</li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <section class="synopsis">
-    <main>
-      <h1>Rick and Morty</h1>
-      <iframe src=" https://giphy.com/embed/jQDozgWeDXUoQZ1htF" width="100%" frameBorder="0" class="giphy-embed"></iframe>
-      <a href="https://giphy.com/gifs/rickandmorty-season-3-adult-swim-rick-and-morty-jQDozgWeDXUoQZ1htF"></a>
-      <p>Rick Sanchez é um cientista genial e alcoólatra que foi morar com a família de sua filha Beth, uma cirurgiã
-        cardíaca de equinos. Ele divide seu tempo entre desenvolver projetos altamente tecnológicos em seu laboratório
-        (garagem da casa de Beth) e levar seu neto de 14 anos Morty em aventuras perigosas e surreais pelo Multiverso.
-        Combinados com tensões preexistentes dentro da família, esses eventos causam ao sensível Morty muito angústia em
-        casa e na escola.</p>
-    </main>
-  </section>
-  <section>
-    <h1></h1>
-    <div class="filter">
+    <div class="search">
       <form class="filter-button" action="">
         <input id="search" type="text" placeholder="Insira o nome do personagem">
         <button>&#128269;</button>
       </form>
     </div>
-    <div class>
-      <div class="filter-containers">
-        <button class="" id="filter">Filtro &#128269;</button>
-        <select name="" id="">
-          <option value="">De A a Z</option>
-          <option value="">De Z a A</option>
-        </select>
-        <ul id="card">
+
+    <div class="menu">
+      <nav>
+        <ul>
+          <li>
+            <p id="home">Home</p>
+          </li>
+          <li>
+            <p id="characters">Personagens</p>
+          </li>
+          <li id="more">Saiba mais</li>
         </ul>
-      </div>
+      </nav>
     </div>
+  </header>
 
-    <div></div>
+  <div id="first-page" class="page-active">
+    <main>
+      <section class="synopsis">
+      
+        <h1>Rick and Morty</h1>
+        <iframe src=" https://giphy.com/embed/jQDozgWeDXUoQZ1htF" width="100%" frameBorder="0" class="giphy-embed"></iframe>
+        <a href="https://giphy.com/gifs/rickandmorty-season-3-adult-swim-rick-and-morty-jQDozgWeDXUoQZ1htF"></a>
+        <p>Rick Sanchez é um cientista genial e alcoólatra que foi morar com a família de sua filha Beth, uma cirurgiã
+          cardíaca de equinos. Ele divide seu tempo entre desenvolver projetos altamente tecnológicos em seu laboratório
+          (garagem da casa de Beth) e levar seu neto de 14 anos Morty em aventuras perigosas e surreais pelo Multiverso.
+          Combinados com tensões preexistentes dentro da família, esses eventos causam ao sensível Morty muito angústia em
+          casa e na escola.</p>
+    
+      </section>
 
-  </section>
+      <section class="main-characters">
+        <ul id="main-characters-list"></ul>
+      </section>
+    </main>
+  </div>
+  
+  <div id="characters-page" class="page-disabled">
+    <main>
+      <section class="filter">
+        <div class="filter">
+            <button class="" id="filter">Filtro &#128269;</button>
+        </div>
+        </section>
 
- 
+        <section class="sort-data">
+          <p id="sort-data-title">Ordenar por:</p>
+          <select name="sort-data" id="sort-by-alphabetic-order">
+            <option id="empty"></option>
+            <option id="alphabetic-order">De A a Z</option>
+            <option id="alphabetic-order-reverse">De Z a A</option>
+          </select>
+        </section>
+
+        <section id="paginate">
+        <p id="textItems"></p>
+        <ul id="list"></ul>
+        <div class="pagination">
+          <button class="first">&#171;</button>
+          <button class="prev">&lt;</button>
+          <div class="numbers"></div>
+          <button class="next">&gt;</button>
+          <button class="last">&#187;</button>
+        </div>
+        </section>
+    </main>
+  </div>
+
   <footer>
-    -Nome das colaboradoras
+    <p></p>
   </footer>
 
   <script src="main.js" type="module"></script>
-  <script src="data.js" type="module"></script>
 </body>
 
 </html>
