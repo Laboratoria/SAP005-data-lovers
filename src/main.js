@@ -106,8 +106,8 @@ const allData = rickAndMorty.results;
 let data = allData.map(item => `<div class="fcard"><img src=${item.image} alt="Avatar" class="img-card" />  <b class="name">${item.name}  </b></div>`)
 document.getElementById("fcard").innerHTML = data;
 //back-card
-let bdata = allData.map(item => `<div class="bcard">  <h4><p> <br> Genus: ${item.gender} <br> Status: ${item.status} <br> Species: ${item.species}</h4></p></div>`)
-document.getElementById("bcard").innerHTML = bdata;
+let bData = allData.map(item => `<div class="bcard">  <h4><p> <br> Name: ${item.name} Genus: ${item.gender} <br> Status: ${item.status} <br> Species: ${item.species}</h4></p></div>`)
+document.getElementById("bcard").innerHTML = bData;
 
 
 //console.log(vetor)
