@@ -15,7 +15,7 @@ body{
   
 .flex-container{
     display: flex;
-    flex-direction: wrap;
+    flex-direction: column;
     /*flex-wrap: wrap; /* quebrar linha se apertar/diminuir tela */
     width: 50%;
     margin: auto;
