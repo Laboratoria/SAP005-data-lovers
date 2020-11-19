@@ -32,6 +32,7 @@ ul{
     
 }
 
+ src/add-cards
 .filter-order{
     position: absolute;;
     height: 30px;
@@ -73,6 +74,7 @@ ul{
     margin-left: 90%;
 }
 
+ master
 .rodape{
     background-color:#AD42FC;
     top: 0;
@@ -115,19 +117,43 @@ li{
     
 }
 
-.hero{
+{
     background-image:url("img/teste2.jpg");
     background-size: cover;
     min-height: 100vh;
     justify-content: center;
     color: white;
-    display:flex;
+    display:flexbox;
     justify-content: center;
     align-items: left;
-    flex-direction: column;
+    flex-direction: ;
     text-align: left;
     
 }
+.hero{
+    display:flex;
+    background-image: url("img/teste2.jpg");
+    background-size: cover;
+    min-height: 100vh;
+    color: white;
+    justify-content: space-evenly;
+    justify-self: center;
+    align-content: center;
+    flex-direction: row;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.personagem{
+    background-color:lightseagreen;
+    width: 20vw; 
+    height: 20vw;
+    margin: 40px;
+    padding: 20px;
+    margin-top: 80px;
+    flex: 0 1 25%;
+}
+
+ src/add-cards
 
 
 
@@ -136,3 +162,4 @@ li{
     margin-bottom:15px;
 }
 
+ master
