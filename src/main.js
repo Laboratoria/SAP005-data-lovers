@@ -16,6 +16,9 @@ for(let result of data.results){
 function showInfo(cards){
     let showCharactersInfo = document.getElementById("cards");
     let charactersList = document.createElement("li");
+    let img = new Image(250, 250);
+    img.src =cards.image;
+    charactersList.appendChild(img);
     for(let [key,value] of Object.entries(cards)){
         if (key === "name"){
             let p = document.createElement("p");
@@ -38,6 +41,7 @@ function showInfo(cards){
             charactersList.appendChild(p);
             p.id = "gender"
         }
+        
     }
     showCharactersInfo.appendChild(charactersList);
 }
