@@ -84,14 +84,14 @@ selectType.addEventListener('change', (event) => {
 
 
 const weaknesses = filter.weaknesses()
-const selectElement = document.querySelector('.fraquezas');
+const selectElementWeaknesses = document.querySelector('.weaknesses');
 let elementoSelecionado = "";
 
-selectElement.addEventListener('change', (event) => {
+selectElementWeaknesses.addEventListener('change', (event) => {
      elementoSelecionado = event.target.value;
     document.getElementById('cards').innerHTML = "";
 
-    if ("" === event.target.value) {
+    if ("" === elementoSelecionado) {
         showAllPokemons()
     } else {
         weaknesses.forEach(pokemon => {
@@ -106,4 +106,29 @@ selectElement.addEventListener('change', (event) => {
             });
         });
     }
-})
+});
+
+const resistant = filter.resistant()
+const selectElementResistant = document.querySelector('.resistant');
+let elementoSelecionadoResistant = "";
+
+selectElementResistant.addEventListener('change', (event) => {
+    elementoSelecionadoResistant = event.target.value;
+    document.getElementById('cards').innerHTML = "";
+
+    if ("" === elementoSelecionadoResistant) {
+        showAllPokemons()
+    } else {
+        resistant.forEach(pokemon => {
+            let resistantList = pokemon.resistant;
+
+            resistantList.forEach(resistantItem => {
+                if (resistantItem === elementoSelecionadoResistant) {
+                    const image = document.createElement("img");
+                    image.src = pokemon.img
+                    document.getElementById('cards').appendChild(image);
+                }
+            });
+        });
+    }
+});

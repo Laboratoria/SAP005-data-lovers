@@ -20,6 +20,7 @@ const filter = {
         img: item.img
       }
     })
+
     const order = orderName.sort(function (pokemon1, pokemon2){
       if (pokemon1.name > pokemon2.name) {
             return 1;
@@ -52,7 +53,18 @@ const filter = {
         }
     })
     return weaknesses
-  }
+  },
+
+  resistant() {
+    const resistant = data.pokemon.map(pokemon => {
+        return {
+            name: pokemon.name,
+            img: pokemon.img,
+            resistant: pokemon.resistant
+        }
+    })
+    return resistant
+  },
 
 }
  filter.photo();
