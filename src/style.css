@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.sidebar{
+    position: relative;
+    left: 0%;
+    width: 10%;
+    height: 100%;
+    background: rosybrown;
+}
+  
+.flex-container{
+    display: flex;
+    flex-direction: wrap;
+    /*flex-wrap: wrap; /* quebrar linha se apertar/diminuir tela */
+    width: 50%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.card {
+    width: 0%;
+    margin: 0%;
+    padding: 0%;
+    
+}
