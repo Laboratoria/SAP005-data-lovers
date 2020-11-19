@@ -69,7 +69,9 @@ body{
 }
 
 .cards {
+    display: flex;
     color: white;
+    background-color: rgb(25, 25, 26);
 }
 
 
