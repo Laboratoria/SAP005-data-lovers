@@ -1,23 +1,51 @@
-// import { example } from './data.js';
-// import data from './data/lol/lol.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+import { instantSearch } from './data.js'
+import data from './data/pokemon/pokemon.js'
 
-import data from './data/pokemon/pokemon.js';
-console.log(data);
+const inputSearch = document.querySelector('#input-search')
+const selectFilterType = document.querySelector('#select-filter-by-type')
+const selectFilterResistant = document.querySelector('#select-filter-by-resistant')
+const selectFilterWeaknesses = document.querySelector('#select-filter-by-weaknesses')
+const selectSort = document.querySelector('#select-sort')
+const btnClean = document.querySelector('#btn-clean')
 
-var id = 0;
-var j = "";
-var p = 251;
-populatePoke();
-function populatePoke() {
-    for (id; id < p; id++) {
-        let nameCard = document.querySelector("[class=main-card]");
-        nameCard.innerHTML += `<div id="card" class="moldura left">`+
-        
-        `<div class="left"><h3 class="pokefront"><img src="${data.pokemon[id].img}" class="pokeimg" alt="${data.pokemon[id].name}" />`+
-        ` ${data.pokemon[id].num} <br> ${data.pokemon[id].name} </h3>`+
-        `<h6 class="pokeback"> Region: ${data.pokemon[id].generation.name} <br /> Type: ${data.pokemon[id].type} <br /> Resistant: ${data.pokemon[id].resistant} <br> Height: ${data.pokemon[id].size.height} <br> Weight: ${data.pokemon[id].size.weight} <br> Rarity: ${data.pokemon[id]["pokemon-rarity"]} <br> Weaknesses: ${data.pokemon[id].weaknesses} <br> Base Attack: ${data.pokemon[id].stats["base-attack"]} <br> Base Defense: ${data.pokemon[id].stats["base-defense"]} <br> Base Stamina: ${data.pokemon[id].stats["base-stamina"]} <br> Max Cp: ${data.pokemon[id].stats["max-cp"]} <br> Max Hp: ${data.pokemon[id].stats["max-hp"]}</h6>`+
+showingCards(data.pokemon)
 
-        `</div>`;       
+function showingCards(pokemonCards) {
+
+    let showCards = document.querySelector('#main-cards')
+    let cards = ""
+    showCards.innerHTML = ""
+
+    for (let pokemon of pokemonCards) {
+        cards +=
+
+            `<div class="frame-left">
+                <div class="left">
+                <div class = "card-front"><img src = ${pokemon.img} class = "img" alt = ${pokemon.name}/> 
+                    <p> N°: ${pokemon.num}</p> 
+                    <p> Nome: ${pokemon.name} </p> 
+                </div>
+                <div class="card-back"> 
+                    <p> Type: ${pokemon.type}</p>
+                    <p> Height: ${pokemon.size.height}
+                    <p> Weight: ${pokemon.size.weight}</p>
+                    <p> Resistant: ${pokemon.resistant}</p>
+                    <p> Weaknesses: ${pokemon.weaknesses}</p>
+                    <p> Base Attack: ${pokemon.stats["base-attack"]}</p>
+                    <p> Base Defense: ${pokemon.stats["base-defense"]}</p>
+                    <p> Base Stamina: ${pokemon.stats["base-stamina"]}</p>
+                    <p> Max Cp: ${pokemon.stats["max-cp"]}</p>
+                    <p> Max Hp: ${pokemon.stats["max-hp"]}</p>
+                    <p> Rarity: ${pokemon["pokemon-rarity"]}</p>
+                    <p> Region: ${pokemon.generation.name}</p>
+                    </div>
+            </div>`
     }
+    showCards.innerHTML = cards;
 }
+
+inputSearch.addEventListener('keyup', () => {
+    const searchName = inputSearch.value
+    const pokemons = instantSearch(searchName, data.pokemon)
+    showingCards(pokemons)
+})

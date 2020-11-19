@@ -1,3 +1,7 @@
+.card {
+    background-color: #769dcc80;
+}
+
 * {
     padding: 0px;
     margin: 0px;
@@ -13,7 +17,43 @@
 }
 
 .chk:checked~nav {
-    transform: translateX(350px);
+    transform: translateX(349px);
+}
+
+label span {
+    position: absolute;
+    display: block;
+    height: 5px;
+    width: 100%;
+    border-radius: 30px;
+    background: #003A70;
+    transition: 0.25s ease-in-out;
+}
+
+label span:nth-child(1) {
+    top: 8px;
+}
+
+label span:nth-child(2) {
+    top: 16px;
+}
+
+label span:nth-child(3) {
+    top: 24px;
+}
+
+.chk:checked+label span:nth-child(1) {
+    transform: rotate(-45deg);
+    top: 16px;
+}
+
+.chk:checked+label span:nth-child(2) {
+    opacity: 0;
+}
+
+.chk:checked+label span:nth-child(3) {
+    transform: rotate(45deg);
+    top: 16px;
 }
 
 .label-aside-menu {
@@ -23,8 +63,8 @@
 }
 
 .aside-menu {
-    background-color: rgba(16, 16, 16, .5);
-    width: 350px;
+    background-color: #769dcce0;
+    width: 200px;
     height: 100%;
     left: -350px;
     position: absolute;
@@ -38,13 +78,13 @@
     text-decoration: none;
     color: white;
     position: absolute;
-    top: 50px;
-    width: 100%;
+    top: 35px;
+    width: 95%;
     font-size: 15px;
 }
 
 .menu-list:hover {
-    background-color: pink;
+    background-color: #94C5FF;
     color: black;
 }
 
@@ -53,6 +93,7 @@
     padding: 20px 5px;
     color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .header-title {
@@ -66,37 +107,57 @@
 }
 
 .select-itens {
-    margin-left: 20%;
-    margin-right: 20%;
+    padding: 10px;
     display: flex;
     justify-content: space-around;
     overflow: hidden;
     font-weight: bold;
+    background-color: rgb(252, 222, 101);
+    padding: 0.5em;
 }
 
 .input-search {
-    padding: .2em;
-    border-radius: 5%;
+    margin-left: 50px;
+    border-radius: 10px;
+    width: 350px;
+    padding: .5em;
+    background-color: #faefbdc5;
+    border: #E3BD4D;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 .btn-search {
-    padding: .2em;
-    border-radius: 5%;
+    border-radius: 10px;
+    width: 50px;
+    padding: .5em;
+    background-color: #faefbdc5;
+    border: #E3BD4D;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 .select-filter {
-    padding: .5em;
-    border-radius: 5%;
+    padding: 0.5em;
+    border-radius: 10px;
+    background-color: #faefbdc5;
+    border: #E3BD4D;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 .select-sort {
-    padding: .2em;
-    border-radius: 5%;
+    padding: .5em;
+    border-radius: 10px;
+    background-color: #faefbdc5;
+    border: #E3BD4D;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 .btn-clean {
-    padding: .2em;
-    border-radius: 5%;
+    margin-right: 50px;
+    padding: .5em;
+    width: 80px;
+    border-radius: 10px;
+    background-color: #faefbdc5;
+    border: #E3BD4D
 }
 
 /* Tratamento dos cards */
