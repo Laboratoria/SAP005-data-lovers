@@ -4,49 +4,57 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8">
-    <link rel="icon" href="./data/rickandmorty/images/Rick.png" />
-    <!--<link rel="icon" type="imagem/png" href="Rick.png" />-->
-    <title>Rick and Morty</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="#" />
+    <link rel="icon" href="./data/rickandmorty/images/Goodstuff-No-Nonsense-Free-Space-Rick.ico" />
+  <title>Rick and Morty</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="#" />
+
+</head>
+
+<body>
+  <header>
+
     <div class="img-teste">
-     <img src="./data/rickandmorty/images/morty.gif" border="0" />
-     <!--<img src="./data/rickandmorty/images/rick.gif" border="0" />-->
-     <!--<img src="./data/rickandmorty/images/RAM_LOGO_FINAL.jpg" border="0" />-->
+      <img src="./data/rickandmorty/images/morty.gif" border="0" />
+      <!--<img src="./data/rickandmorty/images/rick.gif" border="0" />-->
+      <!--<img src="./data/rickandmorty/images/RAM_LOGO_FINAL.jpg" border="0" />-->
     </div>
-  </head>
-  <main>
-    <body>
-      teste 1 teste 2 teste 3
-      <div id="root">
-        <div id="print"></div>
-        <div class="container"></div>
+  </header>
+  <nav>
+    <div class="cont">
 
-        <ul>
-          <li><a class="active" href="#home">Sobre</a></li>
-          <li><a href="#news">Personagens</a></li>
-          <li><a href="#contact">Saiba mais</a></li>
-        </ul>
-      </div>
+      <ul>
+        <li><a href="#home">Sobre</a></li>
+        <li><a href="#news">Personagens</a></li>
+        <li><a href="#contact">Saiba mais</a></li>
+      </ul>
+    </div>
 
-      <script src="main.js" type="module"></script>
-    </body>
-  </main>
-  <body>
-    <header>
-
-  <div class="card"><div class="container"></div></div>
-    <form action="">
-    <div id="root">
+    <form action=" " method="submit" class="pesquisa">
+    <!--<label for="busca">Buscar</label>-->
+      <input type="search" placeholder="Pesquise seu personagem favorito" value = "" >
+      <button type="submit"><img src="./data/rickandmorty/images/search-512.webp"width="23px" padding="23px"></button>
     </form>
-    </div>
-    </header>
-    <section>
+   
+  </nav>
+  <div class="container">
+    <article class="card">
+      <div class="flip">
+        <section class="front-card"></section>
+        <div class="fcard" id="fcard"></div>
+       
+        </section>
+        <section class="back-card">
+          <div class="bcard" id="bcard"></div>
+        </section>
+      </div>
+    </article>
+  </div>
 
-    </section>
-    <footer>
-     
-    </footer>
-    <script src="main.js" type="module"></script>
-  </body>
+  <footer>
+
+  </footer>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>

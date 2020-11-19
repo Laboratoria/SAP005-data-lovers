@@ -14,10 +14,10 @@ import rickAndMorty from './data/rickandmorty/rickandmorty.js';
   // Objeto de objetos
 
  
- //const allData = rickAndMorty.results;
-const data = allData.results
-let data = allData.map(item => `<div class="card"><img src="${item.image}" alt="Avatar" style="width:100%" /> <h1> <b>${item.name}</b></h1></div>`)
-document.getElementById("root").innerHTML = data;
+ const allData = rickAndMorty.results;
+//const data = allData.results
+//let data = allData.map(item => `<div class="fcard"><img src="${item.image}" alt="Avatar" class="img-card"/> style="width:100%" /> <h1> <b>${item.name}</b></h1></div>`)
+//document.getElementById("root").innerHTML = data;
 
 //const data = allData[1];
 //
@@ -102,8 +102,11 @@ document.getElementById("root").innerHTML = data;
 
 // para pegar os dados do rickandmorty.js
 // <b>Genus:</b> ${item.gender} <br><b> Status:</b> ${item.status} <br> <b>Species:</b> ${item.species}
-/////let data = allData.map(item =>  `<div id="card"><p><img src="${item.image}" /><h4> Name: ${item.name} <br> Genus: ${item.gender} <br> Status: ${item.status} <br> Species: ${item.species}</h4></p></div>`)
+let data = allData.map(item => `<div class="fcard"><img src=${item.image} alt="Avatar" class="img-card" /> <b class="name">${item.name} </b></div>`) 
+document.getElementById("fcard").innerHTML = data; 
 
+let bData = allData.map(item =>  `<div class="bcard"><p><h4> <br> Genus: ${item.gender} <br> Status: ${item.status} <br> Species: ${item.species}</h4></p></div>`)
+document.getElementById("bcard").innerHTML = bData; 
 
 
 
