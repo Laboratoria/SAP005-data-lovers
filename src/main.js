@@ -3,6 +3,7 @@
 //import data from './data/pokemon/pokemon.js';
 import data from './data/rickandmorty/rickandmorty.js';
 //import charactersInfo from './data.js';
+
 //show all characters (basic) info on HTML
 //show filter result: gender (import the array from data.js)
 //show filter result: status dead/alive characters (import the array from data.js)
