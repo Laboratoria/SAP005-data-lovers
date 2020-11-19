@@ -145,8 +145,11 @@ h3.pokefront, h6.pokeback {
 }
 
 img.pokeimg{
-    min-width: 100%;
+    min-width: 90%;
     height: 160px;
+
+    /* border: 1px solid #ddd;
+    border-radius: 5px; */
 }
 
 h3.pokefront{
