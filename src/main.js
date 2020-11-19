@@ -45,7 +45,8 @@ function showingCards(pokemonCards) {
 }
 
 inputSearch.addEventListener('keyup', () => {
-    const searchName = inputSearch.value
-    const pokemons = instantSearch(searchName, data.pokemon)
-    showingCards(pokemons)
-})
+        const searchName = inputSearch.value
+        const pokemons = instantSearch(searchName, data.pokemon)
+        showingCards(pokemons)
+    })
+    //oi
