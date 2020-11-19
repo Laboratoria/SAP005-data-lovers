@@ -1,5 +1,5 @@
 body{
-    background: url("./img/fundo-universe.jpg");
+    background: url("./img/fundo-universe-purple.jpg");
 }
 
 #title {
@@ -7,18 +7,12 @@ body{
     justify-content: center;
 
 }
-#title-mobile {
-    display: none;
-}
 
 /* Menu e botões */
 
 #navigation-area {
     background-color: rgba(57, 59, 75, 0.192);
 }
-#navigation-area-mobile {
-    display: none;
-}  
 
 #navigation-area ul{
     display: flex;
@@ -48,7 +42,6 @@ body{
     background-color: rgba(69, 81, 114, 0.541);
 }
 
-
 /* Menu  */
 
 .all-menu{
@@ -68,20 +61,48 @@ body{
     height: 80px;
 }
 
+
+/* Card de Informações do Personagem */
+
 .cards {
     display: flex;
+    visibility: hidden;
+
+    font-size: 35px;
+    margin: 10px;
+
+    border-radius: 20px;
     color: white;
     background-color: rgb(25, 25, 26);
+}
+#character-info {
+    padding: 20px;
+}
+
+
+/* Mobile desativado no desktop */
+
+#title-mobile {
+    display: none;
+}
+#navigation-area-mobile {
+    display: none;
+}  
+#characters-options-mobile {
+    display: none;
+}
+#card-info-mobile {
+    display: none;
 }
 
 
 
-/* Formatação Mobile */
-@media only screen and (max-device-width: 400px){
-    #title{
-        display: none;
-    }
 
+
+/* ----- Formatação Mobile --------- */
+
+@media only screen and (max-device-width: 400px){
+   
     #title-mobile{
         display: flex;
         justify-content: center;
@@ -91,53 +112,79 @@ body{
 
     /* Menu e botões Mobile */
 
-    #navigation-area {
+        #navigation-area-mobile {
+        display: flex;
+        justify-content: center;
+
+      /*  border-radius: 10%;    
+        background-color: rgba(25, 28, 48, 0.616); */
+    }
+    #button-charac {
+        width: 70%;
+
+        border:none;
+        border-radius: 10%;
+        padding: 3%;
+
+        background-color: rgba(10, 10, 36, 0.644);
+        color: white;
+        font-size: 30px;
+
+        outline: rgba(10, 10, 36, 0.644);
+        transition: 1s;
+    }
+    #button-charac:hover {
+        background-color:  rgba(56, 25, 88, 0.918);
+    }
+
+    #characters-options-mobile{
+        visibility: hidden;
+        display: flex;
+        justify-content: space-between;
+    }
+    .all-menu-mobile{
+    
+        background-color: rgba(0, 0, 0, 0.575);
+        border-radius: 20px;
+    }
+    .menu-pictures-mobile {
+        
+        margin-top: 2%;
+        border-radius: 50%;
+        width: 20%;
+        height: 20%;
+    }
+
+    #card-info-mobile {
+        visibility: hidden;
+        display: flex;
+
+        margin-top: 10%;
+        background-color: rgba(6, 6, 22, 0.89);
+        color: white;
+    }
+    #character-img-mobile {
+        width: 40%;
+        height: 40%;
+    }
+    #character-info-mobile {
+        padding: 2%;
+    }
+
+    /* Desktop desabilitado no Mobile */
+    #title{
         display: none;
     }
 
-    #navigation-area-mobile {
-        display: flex;
-        justify-content: center;
-    
-        background-color: rgba(57, 59, 75, 0.192);
+    #navigation-area {
+        display: none;
     }
-    #navigation-area-mobile ul{
-        
-        list-style: none;
+    #characters-options {
+        display: none;
     }
-
-    .buttons-config-mobile {
-        color: white;
-        text-align: center;
-        font-size: 20px;
-        
-        padding: 7px;
-        width: 26%;
-        border-radius: 10px;
-    
-        background-color: rgba(48, 55, 75, 0.788);
-    
-        cursor: pointer;
-    }
-    .buttons-config-mobile:hover {
-        background-color: rgba(69, 81, 114, 0.541);
+    #card-info {
+        display: none;
     }
 
-    .all-menu{
-        visibility: hidden;
-    
-        display: flex;
-        justify-content: space-between;
-    
-        background-color: rgba(0, 0, 0, 0.575);
-        padding: 10px;
-        border-radius: 20px;
-    }
-    .menu-pictures {
-        border-radius: 50%;
-    
-        width: 40px;
-        height: 40px;
-    }
 }
 
