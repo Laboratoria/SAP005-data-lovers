@@ -5,31 +5,21 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Rick and Morty</title>
    <link rel="stylesheet" href="style.css">
-   <link rel="icon"  href="./img/rick-head.png">
+   <link rel="icon"  href="./img/meeseeks (1).png">
 </head>
 
 <body>
+   <!-- DESKTOP VERSION -->
    <div id="div-mother">
       <div id="title">
          <img id="logo-rickandmorty" src="./img/rick-and-morty-min.png" alt="">      
       </div>
-      <div id="title-mobile">
-         <img src="./img/rick-and-morty-mobile.png" alt="">
-      </div>
+      
    
       <nav id="navigation-area">
          <ul>
             <a id="characters-button" class="buttons-config"> <li> Personagens </li> </a>
             <!-- <a id="episodes-button" class="buttons-config"> <li> Episódios </li> </a> AGUARDANDO-->
-            <a id="worlds-button" class="buttons-config"> <li> Mundos </li> </a>
-         </ul>
-      </nav>
-
-      <nav id="navigation-area-mobile">
-         <ul>
-            <a id="characters-button" class="buttons-config-mobile"> <li> Personagens </li> </a>
-            <!-- <a id="episodes-button" class="buttons-config-mobile"> <li> Episódios </li> </a> AGUARDANDO-->
-            <a id="worlds-button" class="buttons-config-mobile"> <li> Mundos </li> </a>
          </ul>
       </nav>
      
@@ -49,15 +39,39 @@
          <img id="character-img" src="" alt="">
          <div id="character-info"></div>
       </div>
+
       
-      <div id="worlds-options" class="all-menu">
-         <img id="earth-c-137-picture" class="menu-pictures" src="./img/worlds-pics/earth-c-137.jpg" alt="Terra C-137 foto">
-         <img id="gaia-picture" class="menu-pictures" src="./img/worlds-pics/gaia.png" alt="Planeta Gaia foto">
-         <img id="gazorpazorp-picture" class="menu-pictures" src="./img/worlds-pics/gazorpazorp.png" alt="Planeta Gazorpazorp foto">
-         <img id="purge-planet-picture" class="menu-pictures" src="./img/worlds-pics/Purge_Planet.jpg" alt="Planeta do expurgo foto">
-         <img id="snake-planet-picture" class="menu-pictures" src="./img/worlds-pics/Snake_Planet.png" alt="Planeta Cobra foto">
-         <img id="alphabetrium-planet-picture" class="menu-pictures" src="./img/worlds-pics/alphabetrium.png" alt="Planeta Alphabetrium foto">
-      </div>
+      
+<!-- MOBILE VERSION -->
+         <div id="div-mother-mobile">
+            
+            <div id="title-mobile">
+               <img src="./img/rick-and-morty-mobile.png" alt="">
+            </div>
+
+            <nav id="navigation-area-mobile">
+              <button id="button-charac"> Personagens </button>
+            </nav>
+
+            <div id="characters-options-mobile" class="all-menu-mobile">
+               
+               <img id="rick-picture-mobile" class="menu-pictures-mobile" src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/1.jpeg" alt="Rick Sanchez foto">
+               <img id="morty-picture-mobile" class="menu-pictures-mobile" src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/2.jpeg" alt="Morty Smith foto">
+               <img id="summer-picture-mobile" class="menu-pictures-mobile" src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/3.jpeg" alt="Summer Smith foto">
+               <img id="beth-picture-mobile" class="menu-pictures-mobile" src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/4.jpeg" alt="Beth Smith foto">
+               <img id="jerry-picture-mobile" class="menu-pictures-mobile" src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/5.jpeg" alt="Jerry Smith foto">
+               <img id="abadango-picture-mobile" class="menu-pictures-mobile" src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/6.jpeg" alt="Abadango foto">
+               <img id="abradolf-picture-mobile" class="menu-pictures-mobile" src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/7.jpeg" alt="Abradolf foto">
+               <img id="adjudicator-rick-picture-mobile" class="menu-pictures-mobile" src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/8.jpeg" alt="Adjudicator Rick">
+               <img id="agency-director-picture-mobile" class="menu-pictures-mobile" src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/9.jpeg" alt="Agency Director">
+            </div>
+
+            <div id="card-info-mobile" class="cards-mobile">
+               <img id="character-img-mobile" src="" alt="">
+               <div id="character-info-mobile"></div>
+            </div>
+
+         </div>
    </div>
 
    <script src="./main.js" type="module"></script>
