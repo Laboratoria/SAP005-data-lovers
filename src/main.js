@@ -1,4 +1,4 @@
-import { sortData } from './data.js';
+import { sortData, search } from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 
 function changePage(){
@@ -6,18 +6,49 @@ function changePage(){
     const menuCharactersPage = document.querySelector('#characters');
     const home = document.querySelector('#first-page');
     const charactersPage = document.querySelector('#characters-page');
-
+    const chooseAlphabeticOrder = document.getElementById("sort-by-alphabetic-order");
+    const searchButton = document.getElementById("search-button");
+    const searchText = document.getElementById("search");
+    
     menuCharactersPage.addEventListener('click', () => {
-        pageDefinitions.page = 1
+        pageDefinitions.page = 1;
+        searchText.value = "";
+        searchDefinitions.searchText = searchText.value;
+        searchDefinitions.searchOrder = "empty";
         home.classList.remove('page-active');
         home.classList.add('page-disabled');
         charactersPage.classList.remove('page-disabled');
         charactersPage.classList.add('page-active');
-        update.charactersPage();
+        update.charactersPage(searchDefinitions.searchText);
+        buttonsControls.createListeners();
+    })
+
+    searchButton.addEventListener("click", (event) => {
+        if(home.classList.contains("page-active")){
+            home.classList.remove('page-active');
+            home.classList.add('page-disabled');
+            charactersPage.classList.remove('page-disabled');
+            charactersPage.classList.add('page-active');
+        }
+        event.preventDefault();
+        pageDefinitions.page = 1;
+        searchDefinitions.searchOrder = "empty";
+        searchDefinitions.searchText = searchText.value
+        update.charactersPage(searchDefinitions.searchText);
+        buttonsControls.createListeners();
+    });
+
+    chooseAlphabeticOrder.addEventListener('change', (event) => {
+        pageDefinitions.page = 1;
+        searchDefinitions.searchText = searchText.value;
+        searchDefinitions.searchOrder = event.target.value;
+        update.charactersPage(searchDefinitions.searchText, searchDefinitions.searchOrder);
         buttonsControls.createListeners();
     })
 
     menuHome.addEventListener('click', () => {
+        searchText.value = "";
+        searchDefinitions.searchText = searchText.value;
         home.classList.remove('page-disabled');
         home.classList.add('page-active');
         charactersPage.classList.remove('page-active');
@@ -30,6 +61,11 @@ const pageDefinitions = {
     perPage: 9,
     totalPage: 0,
     totalItems: 0,
+}
+
+const searchDefinitions = {
+    searchText: "",
+    searchOrder: "empty",
 }
 
 function firstPagePrintCard(card) {
@@ -155,7 +191,7 @@ const buttonsNumbers = {
         button.addEventListener('click', (event) => {
             const page = event.target.innerText;
             buttonsControls.goTo(page);
-            update.charactersPage();
+            update.charactersPage(searchDefinitions.searchText, searchDefinitions.searchOrder);
             buttonsNumbers.update();
         })
         
@@ -188,19 +224,19 @@ const buttonsControls = {
     createListeners() {
         document.querySelector('.first').addEventListener('click', () => {
             buttonsControls.goTo(1);
-            update.charactersPage();
+            update.charactersPage(searchDefinitions.searchText, searchDefinitions.searchOrder);
         })
         document.querySelector('.last').addEventListener('click', () => {
             buttonsControls.goTo(pageDefinitions.totalPage);
-            update.charactersPage();
+            update.charactersPage(searchDefinitions.searchText, searchDefinitions.searchOrder);
         })
         document.querySelector('.next').addEventListener('click', () => {
             buttonsControls.next();
-            update.charactersPage();
+            update.charactersPage(searchDefinitions.searchText, searchDefinitions.searchOrder);
         })
         document.querySelector('.prev').addEventListener('click', () => {
             buttonsControls.prev();
-            update.charactersPage();
+            update.charactersPage(searchDefinitions.searchText, searchDefinitions.searchOrder);
         })
     }
 }
@@ -226,17 +262,17 @@ const update = {
             firstPagePrintCard(eachFirstPageItem)
         }
     },
-    charactersPage() {
-        document.getElementById("list").innerHTML = "";
+    paginateResults(data) {
+        document.getElementById("list").innerHTML = ""; 
         let paging = pageDefinitions.page - 1;
         let start = paging * pageDefinitions.perPage;
         let end = start + pageDefinitions.perPage;
-        const paginatedItems = data.results.slice(start, end)
+        const dataSlice = data.slice(start, end)
         
-        pageDefinitions.totalItems = data.results.length
+        pageDefinitions.totalItems = data.length
         pageDefinitions.totalPage = Math.ceil(pageDefinitions.totalItems/pageDefinitions.perPage)
-    
-        for(let eachItem of paginatedItems){
+
+        for(let eachItem of dataSlice){
             charactersPagePrintCard(eachItem);
         }
     
@@ -244,7 +280,16 @@ const update = {
         buttonsNumbers.update();
         createItemsIndex()
     },
-    
+    charactersPage(searchText, sortOrder = "empty") {
+        let dataForPaginate = data.results.slice();
+        if(searchText){
+            dataForPaginate = search(dataForPaginate, "name", searchText);
+        }
+        if(sortOrder !== "empty"){
+            sortData(dataForPaginate, "name", sortOrder);
+        }
+        update.paginateResults(dataForPaginate);
+    },
 }
 
 function init() {
