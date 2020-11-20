@@ -110,7 +110,7 @@ a:hover {opacity: 1;}
     text-align: center;
 }
 
-.pokemon {
+.card {
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
@@ -119,21 +119,20 @@ flex: 1;
 text-align: center;
 }
 
-.div-child {
-  display: inline-block;
-  padding: 13px;
-  width: 200px;
-  height: 300px;
+.img-pokemon {
+
+  padding: 150px;
+  width: 40px;
+  height: 50px;
   margin: 3px;
   font-family: Arial;
   color: black;
   font-size: 10px;
-  letter-spacing: 3px;
   background-color: cornflowerblue;
 }
 
 @media {
-  .pokemon {
+  .card {
     display: flex;
   }
   .div-child {
