@@ -5,15 +5,18 @@ showAllPokemons()
 
 function showAllPokemons() {
     img.forEach(pokemon => {
+        const text = document.createElement('p');
         const image = document.createElement("img");
         image.src = pokemon.img
-        document.getElementById('cards').appendChild(image);
-        // const text = document.createElement('p');
-        // text.innerHTML = pokemon.name   
-        // document.getElementById('cards').appendChild(text); 
+        text.innerHTML = pokemon.name  
+        document.getElementById('cards').appendChild(text);
+        text.appendChild(image);   
 
     });
 }
+
+const name = filter.filter()
+
 
 const nameOrder = filter.filter()
 const nameFilter = document.querySelector('.orderName');
@@ -28,12 +31,12 @@ nameFilter.addEventListener('change',(event)=>{
         showAllPokemons()
     } else if(select === 'az'){
         nameOrder.forEach(pokemon => {
+            const text = document.createElement('p');
             const image = document.createElement("img");
             image.src = pokemon.img
-            document.getElementById('cards').appendChild(image);
-            // const text = document.createElement('p');
-            // text.innerHTML = pokemon.name   
-            // document.getElementById('cards').appendChild(text); 
+            text.innerHTML = pokemon.name  
+            document.getElementById('cards').appendChild(text);
+            text.appendChild(image);   
     
         });
 
@@ -41,12 +44,12 @@ nameFilter.addEventListener('change',(event)=>{
         let newArray = filter.filter()
         newArray.reverse()
         newArray.forEach(pokemon => {
-            const image = document.createElement("img");
-            image.src = pokemon.img
-            document.getElementById('cards').appendChild(image);
-            // const text = document.createElement('p');
-            // text.innerHTML = pokemon.name   
-            // document.getElementById('cards').appendChild(text); 
+            const text = document.createElement('p');
+        const image = document.createElement("img");
+        image.src = pokemon.img
+        text.innerHTML = pokemon.name  
+        document.getElementById('cards').appendChild(text);
+        text.appendChild(image);   
     
         });
 
@@ -64,7 +67,7 @@ selectType.addEventListener('change', (event) => {
      console.log(choiseType)
     document.getElementById('cards').innerHTML = "";
 
-    if ("" === event.target.value) {
+    if ("" === choiseType) {
         showAllPokemons()
     } else {
         typeElement.forEach(pokemonType => {
@@ -72,9 +75,12 @@ selectType.addEventListener('change', (event) => {
 
             typeList.forEach(pokemon => {
                 if (pokemon === choiseType) {
+                    const text = document.createElement('p');
                     const image = document.createElement("img");
                     image.src = pokemonType.img
-                    document.getElementById('cards').appendChild(image);
+                    text.innerHTML = pokemonType.name  
+                    document.getElementById('cards').appendChild(text);
+                    text.appendChild(image);   
                 }
             });
         });
@@ -99,9 +105,12 @@ selectElementWeaknesses.addEventListener('change', (event) => {
 
             weaknessesList.forEach(weaknessesItem => {
                 if (weaknessesItem === elementoSelecionado) {
+                    const text = document.createElement('p');
                     const image = document.createElement("img");
                     image.src = pokemon.img
-                    document.getElementById('cards').appendChild(image);
+                    text.innerHTML = pokemon.name  
+                    document.getElementById('cards').appendChild(text);
+                    text.appendChild(image);   
                 }
             });
         });
@@ -124,9 +133,12 @@ selectElementResistant.addEventListener('change', (event) => {
 
             resistantList.forEach(resistantItem => {
                 if (resistantItem === elementoSelecionadoResistant) {
+                    const text = document.createElement('p');
                     const image = document.createElement("img");
                     image.src = pokemon.img
-                    document.getElementById('cards').appendChild(image);
+                    text.innerHTML = pokemon.name  
+                    document.getElementById('cards').appendChild(text);
+                    text.appendChild(image);   
                 }
             });
         });
