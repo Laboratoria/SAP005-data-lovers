@@ -15,9 +15,9 @@
     </div>
 
     <div class="search">
-      <form class="filter-button" action="">
+      <form class="search-form">
         <input id="search" type="text" placeholder="Insira o nome do personagem">
-        <button>&#128269;</button>
+        <button id="search-button">&#128269;</button>
       </form>
     </div>
 
@@ -52,6 +52,7 @@
       </section>
 
       <section class="main-characters">
+        <p id="main-characters-title">Personagens Principais</p>
         <ul id="main-characters-list"></ul>
       </section>
     </main>
@@ -68,9 +69,9 @@
         <section class="sort-data">
           <p id="sort-data-title">Ordenar por:</p>
           <select name="sort-data" id="sort-by-alphabetic-order">
-            <option id="empty"></option>
-            <option id="alphabetic-order">De A a Z</option>
-            <option id="alphabetic-order-reverse">De Z a A</option>
+            <option value="empty"></option>
+            <option value="asc">De A a Z</option>
+            <option value="desc">De Z a A</option>
           </select>
         </section>
 

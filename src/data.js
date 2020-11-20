@@ -1,11 +1,28 @@
-// estas funciones son de ejemplo
+export const sortData = (data, sortBy, sortOrder) => {
+  const innerSort = (a,b) => {
+    const varA = a[sortBy];
+    const varB = b[sortBy];
 
+    let comparison = 0;
+    if(varA>varB){
+      comparison = 1;
+    } else if(varA<varB){
+      comparison = -1;
+    }
 
-
-export const example = () => {
-  return 'example';
+    return (sortOrder === "desc") ? (comparison * -1) : comparison
+  };
+  data.sort(innerSort);
 };
 
-export const anotherExample = () => {
-  return 'OMG';
+export const search = (data, searchBy, searchText) => {
+  const searchInData = (item) => {
+    if(item[searchBy].includes(searchText)) {
+      return true;
+    }else {
+      return false;
+    }
+  };
+
+  return data.filter(searchInData);
 };
