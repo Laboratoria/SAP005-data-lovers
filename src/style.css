@@ -1,8 +1,79 @@
-body,html{
-    height: 100%;
-    margin: 0;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*Tags*/
+
+body {
+  font-family: "Noto Sans", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 14pt;
+}
+
+ul {
+  display: flex;
+  text-align: center;
+}
+
+li {
+  position: relative;
+  float: left;
+  padding: 20px;
+  height: 30px;
+  width:100%;
+  vertical-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+li:hover {
+  /*border:solid 1px #fff;*/
+  background-color: rgb(175, 169, 169) !important;
+  cursor:pointer;
+}
+
+@media (max-width:960px){
+  body{
+      display: block;
   }
-  
-  .bg {
-    background: url(https://img.ibxk.com.br/2016/07/19/19183755227514.jpg?w=1120&h=420&mode=crop&scale=bot);
-  }
+}
+
+nav {
+  top:0;
+  right:0;
+  width:100%
+}
+
+/*Classes*/
+
+.menu {
+  list-style: none;
+}
+
+.imagem-topo {
+  width:100%;
+}
+.conteudo p{
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(74, 179, 71);
+  color: #fff;
+}
+
+
+/*IDs*/
+
+#lendarios{
+  background-color: #5CB8FF;  
+}
+
+#comuns {
+  background-color: #ff6600;
+}
+#pokedex {
+  background-color: #ffe00f;
+}
