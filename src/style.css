@@ -56,7 +56,7 @@ header nav a.ativo{
     min-height: 40.62em;
     color: #474747;
     background: linear-gradient(rgba(227, 236, 217, 0.5) 0%, 
-    rgba(233, 187, 88, 0.5) 100%) ,url("img/fundo.gif");
+    rgba(231, 205, 149, 0.5) 100%) ,url("img/fundo.png");
     background-position: center center;
     background-size: cover;
     margin-bottom: 3.12em;
@@ -64,7 +64,7 @@ header nav a.ativo{
     align-items:end;
 } 
 
-.título{
+.titulo{
     font-weight: 600;
     font-size: 3.12em;
     margin-bottom: 0.4em;
@@ -85,13 +85,15 @@ header nav a.ativo{
     align-items: end;
 }
 
-.container-title-control .h3{
-    color: black;
-    font-size: 30px;
-}
+.titulo-carrossel{
+    font-weight: 600;
+    font-size: 2em;
+    margin-bottom: 0.4em;
+    color: #474747;
+    }
 
 .indicadores button{
-    background: black;
+    background: grey;
     height: 3px;
     width: 10px;
     cursor: pointer;
@@ -101,7 +103,7 @@ header nav a.ativo{
 
 .indicadores button:hover,
 .indicadores button.activo{
-    background: red;
+    background: orange;
 }
 
 /*container principal e flechas*/
@@ -118,13 +120,13 @@ header nav a.ativo{
 .flecha-esquerda,.flecha-direita{
     position: absolute;
     border: none;
-    background: rgba(0,0,0,0.1);
+    background: rgba(245, 242, 242, 0.3);
     font-size: 40px;
     height: 50%;
     top: calc(50% - 25%);
     line-height: 40px;
     width: 50px;
-    color: black;
+    color: grey;
     cursor: pointer;
     z-index: 500;
     transition: .2s ease all;
@@ -132,7 +134,7 @@ header nav a.ativo{
 
 .flecha-esquerda:hover,
 .flecha-direita:hover{
-    background: rgba(0,0,0, .5);
+    background: rgba(245, 242, 242, 0.5);
 }
 
 .flecha-esquerda{
@@ -157,7 +159,7 @@ header nav a.ativo{
 }
 
 .pokemon{
-    min-width: 20%;
+    min-width: 15%;
     transition: .3s ease all;
 }
 
@@ -195,10 +197,10 @@ header nav a.ativo{
         overflow: visible;
     }
 
-    .container-carrossel{
+    .carrossel{
         display: grid;
-        grid-template-columns: repeat(3, ifr);
-        gap: 20px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
     }
 
     .indicadores, 
