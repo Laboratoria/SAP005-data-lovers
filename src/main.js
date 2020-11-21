@@ -1,8 +1,8 @@
 import pokemon from './data/pokemon/pokemon.js';
 import data from './data/pokemon/pokemon.js';
 
-const hamburguer =document.querySelector(".hamburguer");
-hamburguer.addEventListener("click", function(){
+const hamburguer =document.getElementById("menu-hamburguer");
+hamburguer.addEventListener("click", () => {
     document.getElementById("root").classList.toggle("show-menu");
 })
 
