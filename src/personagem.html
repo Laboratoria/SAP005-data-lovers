@@ -1,128 +1,124 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Personagens</title>
-    <link rel="stylesheet" href="style-personagens.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
-  </head>
-  <body>
-    <nav class ="menu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a id="personagem" href="personagem.html">Personagens</a></li>
-        </ul>
-    </nav>
- src/add-cards
-    
-    <main class="hero">
-        <section class="personagem">
-          <abbr class="frente">
-            <p>nome</p>
-          <img>foto do personagem</img>
-          </abbr>
-          <abbr class="tras">
-            <p>informações</p>
-          </abbr>
-        </section>
-        <section class="personagem">
-          <abbr class="frente">
-            <p>nome</p>
-          <img>foto do personagem</img>
-          </abbr>
-          <abbr class="tras">
-            <p>informações</p>
-          </abbr>
-        </section>
-        <section class="personagem">
-          <abbr class="frente">
-            <p>nome</p>
-          <img>foto do personagem</img>
-          </abbr>
-          <abbr class="tras">
-            <p>informações</p>
-          </abbr>
-        </section>
-        <section class="personagem">
-          <abbr class="frente">
-            <p>nome</p>
-          <img>foto do personagem</img>
-          </abbr>
-          <abbr class="tras">
-            <p>informações</p>
-          </abbr>
-        </section>
-        <section class="personagem">
-          <abbr class="frente">
-            <p>nome</p>
-          <img>foto do personagem</img>
-          </abbr>
-          <abbr class="tras">
-            <p>informações</p>
-          </abbr>
-        </section>
-    </main>
 
-    <section>
-        <label for="filter-species">
-        <select  id="filter-species" class="filter-species">
-            <option value="species" select>Espécies</option>
-            <option value="animal">Animal</option>
-            <option value="humano">Humano</option>
-            <option value="humanoid">Humanoid</option>
-            <option value="robot">Robo</option>
-            <option value="alien">Alien</option>
-        </select>
-        </label>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personagens</title>
+  <link rel="stylesheet" href="style-personagens.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+</head>
+
+<body>
+  <nav class="menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a id="personagem" href="personagem.html">Personagens</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <label for="filter-species">
+      <select id="filter-species" class="filter-species">
+        <option value="species" select>Espécies</option>
+        <option value="animal">Animal</option>
+        <option value="humano">Humano</option>
+        <option value="humanoid">Humanoid</option>
+        <option value="robot">Robo</option>
+        <option value="alien">Alien</option>
+      </select>
+    </label>
+  </section>
+  <section>
+    <label for="filter-status">
+      <select id="filter-status" class="filter-status">
+        <option value="status" select>Status</option>
+        <option value="Vivo">Vivo</option>
+        <option value="Morto">Morto</option>
+        <option value="unknown">Desconhecido</option>
+      </select>
+    </label>
+  </section>
+  <section>
+    <label for="filter-gender">
+      <select id="filter-gender" class="filter-gender">
+        <option value="gender" select>Gênero</option>
+        <option value="male">Masculino</option>
+        <option value="female">Feminino</option>
+      </select>
+    </label>
+  </section>
+  <section>
+    <label for="filter-order">
+      <select id="filter-order" class="filter-order">
+        <option value="order" select>Ordem</option>
+        <option value="relevance">Relevância</option>
+        <option value="az">A - Z</option>
+        <option value="za">Z - A</option>
+      </select>
+    </label>
+  </section>
+
+  <main class="hero" id="hero">
+    <!--
+   <section class="personagem">
+      <abbr class="frente">
+        <p>nome</p>
+        <img>foto do personagem</img>
+      </abbr>
+      <abbr class="tras">
+        <p>informações</p>
+      </abbr>
     </section>
-    <section>
-        <label for="filter-status">
-            <select id="filter-status" class="filter-status">
-                <option value="status" select>Status</option>
-                <option value="Vivo">Vivo</option>
-                <option value="Morto">Morto</option>
-                <option value="unknown">Desconhecido</option>
-            </select>
-            </label>
-        </section>
-    <section>
-            <label for="filter-gender">
-                <select  id="filter-gender" class="filter-gender">
-                    <option value="gender" select>Gênero</option>
-                    <option value="male">Masculino</option>
-                    <option value="female">Feminino</option>
-                </select>
-                </label>
+
+   <section class="personagem">
+      <abbr class="frente">
+        <p>nome</p>
+        <img>foto do personagem</img>
+      </abbr>
+      <abbr class="tras">
+        <p>informações</p>
+      </abbr>
     </section>
-    <section>
-        <label for="filter-order">
-            <select id="filter-order" class="filter-order">
-                <option value="order" select>Ordem</option>
-                <option value="az">A - Z</option>
-                <option value="za">Z - A</option>
-            </select>
-            </label>
-</section>
+    <section class="personagem">
+      <abbr class="frente">
+        <p>nome</p>
+        <img>foto do personagem</img>
+      </abbr>
+      <abbr class="tras">
+        <p>informações</p>
+      </abbr>
+    </section>
+    <section class="personagem">
+      <abbr class="frente">
+        <p>nome</p>
+        <img>foto do personagem</img>
+      </abbr>
+      <abbr class="tras">
+        <p>informações</p>
+      </abbr>
+    </section>
+    <section class="personagem">
+      <abbr class="frente">
+        <p>nome</p>
+        <img>foto do personagem</img>
+      </abbr>
+      <abbr class="tras">
+        <p>informações</p>
+      </abbr>
+    </section>
+    -->
+  </main>
 
+  <footer class="rodape">
+    <ul>
+      <img src="img/github.png" alt="Logo Github">
+      <li><a href="https://github.com/BiancaSherika" target="_blank">Bianca Sherika</a></li>
+      <li><a href="https://github.com/julianaads" target="_blank">Juliana Souza</a></li>
+    </ul>
+  </footer>
 
-    
-    <aside class=hero>
-        <h3>CARDS PERSONAGENS</h3>
+  <script src="main.js" type="module"></script>
+</body>
 
-        
-      </aside>
- master
-    <footer class="rodape">
-        <ul>
-        <img src="img/github.png" alt="Logo Github">
-        <li><a href="https://github.com/BiancaSherika" target="_blank">Bianca Sherika</a></li>
-        <li><a href="https://github.com/julianaads" target="_blank">Juliana Souza</a></li>
-      </ul>
-    </footer>
-
-
-    
-    <script src="main.js" type="module"></script>
-  </body>
 </html>

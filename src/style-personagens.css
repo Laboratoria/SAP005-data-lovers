@@ -1,4 +1,3 @@
-/*reset*/
 *{
     margin:0;
     padding:0; 
@@ -32,7 +31,6 @@ ul{
     
 }
 
- src/add-cards
 .filter-order{
     position: absolute;;
     height: 30px;
@@ -74,7 +72,6 @@ ul{
     margin-left: 90%;
 }
 
- master
 .rodape{
     background-color:#AD42FC;
     top: 0;
@@ -117,19 +114,6 @@ li{
     
 }
 
-{
-    background-image:url("img/teste2.jpg");
-    background-size: cover;
-    min-height: 100vh;
-    justify-content: center;
-    color: white;
-    display:flexbox;
-    justify-content: center;
-    align-items: left;
-    flex-direction: ;
-    text-align: left;
-    
-}
 .hero{
     display:flex;
     background-image: url("img/teste2.jpg");
@@ -142,6 +126,7 @@ li{
     flex-direction: row;
     text-align: center;
     flex-wrap: wrap;
+    padding-top: 100px;
 }
 .personagem{
     background-color:lightseagreen;
@@ -149,17 +134,5 @@ li{
     height: 20vw;
     margin: 40px;
     padding: 20px;
-    margin-top: 80px;
     flex: 0 1 25%;
 }
-
- src/add-cards
-
-
-
-.hero h1{
-    font-size:3.2rem;
-    margin-bottom:15px;
-}
-
- master
