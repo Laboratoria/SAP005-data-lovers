@@ -12,7 +12,7 @@
 
 <body>
   <div class="container" id="root">
-    <div class="hamburguer">
+    <div class="hamburguer" id="menu-hamburguer">
       <div class="line" id="line1"></div>
       <div class="line" id="line2"></div>
       <div class="line" id="line3"></div>
@@ -21,21 +21,16 @@
     <aside class="sidebar">
       <nav>
         <ul class="menu">
-          <li class="menu-item"><a href="#" class="menulink">Home</a></li>
-          <li class="menu-item"><a href="#" class="menulink">Sobre</a></li>
-          <li class="menu-item"><a href="#" class="menulink">Pokémons</a></li>
+          <li class="menu-item"><a href="#title1" class="menulink">Saiba mais</a></li>
+          <li class="menu-item"><a href="#title2" class="menulink">Pokémons</a></li>
           <li class="menu-item"><a href="#" class="menulink">Comparação</a></li>
           <li class="menu-item"><a href="#" class="menulink">Cadastro</a></li>
         </ul>
-        <div class="social-media">
-          <a href="#"><i class="git"></i></a>
-          <a href="#"><i class="git"></i></a>
-        </div>
       </nav>
     </aside>
     <header>
       <div class="img-wrapper">
-        <img src="sky.jpg" alt="">
+        <img src="sky.jpeg" alt="">
       </div>
       <div class="pokeball-body">
         <div class="pokeball-top"></div>
@@ -46,31 +41,88 @@
       </div>
     </header>
     <main>
-      <section class="about">
-        <article>
-          <h2>sobre pokémon</h2>
-          <p>Pokem ipsum dolor sit amet Exeggutor Kecleon Wing Attack Doduo Red Unown. Sunt in culpa Drilbur Calcium
-            Hoenn
-            Shieldon Wynaut Charizard. Growl Venonat Scolipede Espeon Charizard Barboach Hidden Machine. Duis aute
-            irure
-            dolor in reprehenderit in voluptate they're comfy and easy to wear Onix what kind of Pokemon are you Fog
-            Badge
-            Ampharos Noctowl. Pewter City Marill Slakoth Bronzong Rattata Treecko Cottonee.</p>
-        </article>
+      <section class="tabs" id="title1">
+        <ul>
+          <li>
+            <input type="radio" id="tabAbout" name="inputTabs" class="radio-tab" checked>
+            <label for="tabAbout" class="tab-label">Sobre</label>
+            <div class="about">
+              <article>
+                Pokémon são criaturas de todas as formas e tamanhos que convivem
+                com os humanos na natureza.<br> Na grande maioria, os Pokémon não falam,
+                exceto para proferir seus nomes. Os Pokémon são criados e comandados
+                por seus donos (os chamados "Treinadores").<br> No decorrer das aventuras,
+                os Pokémon crescem e ganham experiência, podendo até mesmo evoluir
+                para Pokémon mais fortes.<br> Alguns Pokémon, como Pikachu, Piplup e Charizard,
+                possuem papéis de destaque na série de videogames, no jogo Estampas Ilustradas
+                e nos programas de TV, mas eles são apenas algumas das quase 500 criaturas
+                que habitam o universo dos Pokémon.
+              </article>
+            </div>
+          </li>
+          <li>
+            <input type="radio" id="tabAnimation" name="inputTabs" class="radio-tab" checked>
+            <label for="tabAnimation" class="tab-label">Animação</label>
+            <div class="about">
+              <article>
+                A série animada do Pokémon é quase tão antiga quanto o surgimento do videogame
+                do Pokémon. A série acompanha as aventuras de um jovem e audacioso Treinador
+                chamado Ash Ketchum e seu companheiro Pokémon Pikachu em suas viagens pelo mundo
+                dos Pokémon, onde visitam destinos exóticos, conhecem um monte de pessoas
+                e Pokémon interessantes, também participam de inúmeras aventuras empolgantes. <br> 
+                No caminho, eles aprendem sobre trabalho em equipe, compaixão, amizade e honestidade
+                à medida que Ash esforça-se para se tornar um Mestre Pokémon.<br> Agora 
+                em sua vigésima temporada, a série é um dos programas infantis mais populares
+                de todos os tempos e deu origem a uma sequência de 12 filmes animados que também
+                acompanham as aventuras de Ash Ketchum e seus amigos, mas envolvem interesses
+                muito maiores – muitas vezes lidando com as lendas do mundo dos Pokémon.<br> Cada filme
+                apresenta grandes mistérios e enredos cativantes, e enfrentar o desafio é com seus
+                jovens heróis!
+              </article>
+            </div>
+          </li>
+          <li>
+            <input type="radio" id="tabGame" name="inputTabs" class="radio-tab" checked>
+            <label for="tabGame" class="tab-label">Videogame</label>
+            <div class="about">
+              <article>
+                Os primeiros videogames do Pokémon foram lançados para o Nintendo Game Boy em 1998.
+                Desde então, a popularidade dos Pokémon não para de crescer. <br> Os jogos do Pokémon
+                foram lançados até então exclusivamente para os sistemas Nintendo, inclusive o
+                Nintendo DS™, o Nintendo GameCube™ e o console Wii™. Na maioria dos jogos, o
+                participante assume o papel de um jovem Treinador cuja jornada envolve viajar de
+                cidade em cidade capturando e treinando Pokémon e combatendo as equipes de Pokémon de
+                outros Treinadores em uma disputa para se tornar o Campeão da Liga de Pokémon. <br> Outro
+                objetivo é capturar e catalogar todos os muitos Pokémon no mundo do jogo. Todos os Pokémon
+                possuem um ou dois tipos de elementos intrínsecos que refletem suas forças ou fraquezas.
+                Por exemplo, os Pokémon do tipo Água possuem uma vantagem natural sobre os Pokémon do
+                tipo Fogo que, por sua vez, possuem vantagem sobre os Pokémon do tipo Grama, e assim por
+                diante. <br> Apesar do aspecto de batalhas dos jogos, eles evitam violência explícita.
+                Um Pokémon jamais morre durante um jogo. Os Treinadores são convidados a participar de
+                muitas atividades secundárias durante o jogo, incluindo concursos de talentos e beleza,
+                torneios e pescaria (para Pokémon, é claro!).Os jogadores podem combater e trocar Pokémon
+                com outros jogadores, o que faz com que as crianças aprendam os méritos de compartilhar
+                e ter espírito esportivo. Com os sistemas de videogame mais novos, como o Nintendo DS e o
+                console Wii, eles podem até mesmo jogar e trocar Pokémon via Nintendo Wi-Fi Contention®
+                com outros Treinadores em qualquer lugar do mundo.
+              </article>
+            </div>
+          </li>
+        </ul>
       </section>
       <section class="carousel-pokemons">
-        <h2>Pókemons</h2>
-        <!---imagens do catalogo--->
+        <h2 id="title2">Pókemons</h2>
+        <imagens do catalogo--->
       </section>
       <!--<section>
         <h2>Filtro</h2>
-      </section>
+      </section>-->
     </main>
-    <footer>
+    <!--<footer>
       <h2>Cadastro</h2>
     </footer>-->
   </div>
 </body>
-<script type="module"src="main.js"></script>
+<script type="module" src="main.js"></script>
 
 </html>
