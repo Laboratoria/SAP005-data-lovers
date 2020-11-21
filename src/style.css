@@ -1,0 +1,209 @@
+:root{
+    --branco: #ffffff;
+    --fundo: #f5f5f5;
+}
+
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--fundo);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+header{    
+    padding: 8px 0;
+    background-color: var(--fundo);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-position: center center;
+}
+
+.logo-tipo{
+    width: 150px;
+}
+
+header nav a{
+    color: #919191 ;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+header nav a:hover,
+header nav a.ativo{
+    color: #474747;
+}
+
+/*Tela Principal*/
+.tela-principal{
+    font-size: 16px;
+    min-height: 40.62em;
+    color: #474747;
+    background: linear-gradient(rgba(227, 236, 217, 0.5) 0%, 
+    rgba(233, 187, 88, 0.5) 100%) ,url("img/fundo.gif");
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items:end;
+} 
+
+.título{
+    font-weight: 600;
+    font-size: 3.12em;
+    margin-bottom: 0.4em;
+}
+
+.descricao{
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.75em;
+    max-width: 50%;
+    margin-bottom: 1.25em;
+}
+
+/*container de titulo e controles*/
+.container-title-control{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.container-title-control .h3{
+    color: black;
+    font-size: 30px;
+}
+
+.indicadores button{
+    background: black;
+    height: 3px;
+    width: 10px;
+    cursor: pointer;
+    border: none;
+    margin-right: 2px;
+}
+
+.indicadores button:hover,
+.indicadores button.activo{
+    background: red;
+}
+
+/*container principal e flechas*/
+.pokemons-recomendados{
+    margin-bottom: 70px;
+}
+
+.container-principal{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.flecha-esquerda,.flecha-direita{
+    position: absolute;
+    border: none;
+    background: rgba(0,0,0,0.1);
+    font-size: 40px;
+    height: 50%;
+    top: calc(50% - 25%);
+    line-height: 40px;
+    width: 50px;
+    color: black;
+    cursor: pointer;
+    z-index: 500;
+    transition: .2s ease all;
+}
+
+.flecha-esquerda:hover,
+.flecha-direita:hover{
+    background: rgba(0,0,0, .5);
+}
+
+.flecha-esquerda{
+    left: 0;
+}
+
+.flecha-direita{
+    right: 0;
+}
+
+/*carrossel*/
+.container-carrossel{
+    width: 100%;  
+    padding: 20px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.carrossel{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.pokemon{
+    min-width: 20%;
+    transition: .3s ease all;
+}
+
+.pokemon.hover{
+    transform: scale(1.2);
+    transform-origin: center;
+}
+
+.pokemon img{
+    width: 100%;
+    vertical-align: top;
+}
+
+/*Midia*/
+@media screen and (max-width: 800px){
+    .logo-tipo{
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+
+    .container{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tela-principal{
+        font-size: 14px;
+    }
+
+    .descrições{
+        max-width: 100%;
+    } 
+
+    .container-carrossel{
+        overflow: visible;
+    }
+
+    .container-carrossel{
+        display: grid;
+        grid-template-columns: repeat(3, ifr);
+        gap: 20px;
+    }
+
+    .indicadores, 
+    .flecha-esquerda,
+    .flecha-direita{
+        display: none;
+    }
+}

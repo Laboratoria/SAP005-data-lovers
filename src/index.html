@@ -1,12 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js " lang="pt-br"></html>
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="description" content="Cards de Pokemons">
+    <meta name="language" content="pt-br" />
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f0608e6e80.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css"/>
+    <title>PokeInfos</title>
   </head>
   <body>
-    <div id="root"></div>
+    <header>
+      <div class="container">
+        <a ref=""><img class="logo-tipo" src="img/logo.png" alt="logo" /></a>
+        <nav>
+          <a href="#" class="ativo">Início</a>
+          <a href="#">Estatísticas</a>
+          <a href="#">Sobre</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="tela-principal">
+        <div class="container">
+          <h3 class="título">PokeInfos</h3>
+          <p class="descricao">
+            *****ESCREVER ALGO******
+          </p>
+        </div>
+      </div>
+      <div class="pokemons-recomendados container">
+        <div class="container-title-control">
+          <h3>Pokemóns de Kanto</h3>
+          <div class="indicadores">
+          </div>
+        </div>
+        <div class="container-principal">
+          <button role="button" id="flecha-esquerda" class="flecha-esquerda"><i class="fas fa-chevron-left"></i></button>
+          
+          <div class="container-carrossel">
+            <div class="carrossel">
+              <div class="pokemon">
+              <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/001.png" alt="bulbasaur"></a>
+              </div>
+              <div class="pokemon">
+              <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/002.png" alt="ivysaur"></a>
+              </div>
+              <div class="pokemon">
+              <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/003.png" alt="venusaur"></a>
+              </div>
+              <div class="pokemon">
+              <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/004.png" alt="charmander"></a>
+              </div>
+              <div class="pokemon">
+              <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/005.png" alt="charmeleon"></a>
+              </div>
+              <div class="pokemon">
+              <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/006.png" alt="charizard"></a>
+              </div>
+              <div class="pokemon">
+              <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/007.png" alt="squirtle"></a>
+              </div>
+          </div>
+          
+          <button role="button" id="flecha-direita" class="flecha-direita"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </main>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     <script src="main.js" type="module"></script>
   </body>
 </html>
