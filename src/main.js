@@ -1,4 +1,4 @@
-import { instantSearch } from './data.js'
+import { instantSearch, selectPokemonType, selectPokemonResistant, selectPokemonWeaknesses } from './data.js'
 import data from './data/pokemon/pokemon.js'
 
 const inputSearch = document.querySelector('#input-search')
@@ -17,8 +17,15 @@ function showingCards(pokemonCards) {
     showCards.innerHTML = ""
 
     for (let pokemon of pokemonCards) {
-        cards +=
 
+
+        /*let evolutions = ""
+        if (pokemon.evolution["next-evolution"] != undefined && pokemon.evolution["next-evolution"] != null) {
+            for (let evolution of pokemon.evolution["next-evolution"]) {
+                evolutions += `<span> ${evolution.name} </span>`
+            }
+        }*/
+        cards +=
             `<div class="frame-left">
                 <div class="left">
                 <div class = "card-front"><img src = ${pokemon.img} class = "img" alt = ${pokemon.name}/> 
@@ -45,8 +52,25 @@ function showingCards(pokemonCards) {
 }
 
 inputSearch.addEventListener('keyup', () => {
-        const searchName = inputSearch.value
-        const pokemons = instantSearch(searchName, data.pokemon)
-        showingCards(pokemons)
-    })
-    //oi
+    const searchName = inputSearch.value
+    const pokemons = instantSearch(searchName, data.pokemon)
+    showingCards(pokemons)
+})
+
+selectFilterType.addEventListener('change', () => {
+    const selectType = selectFilterType.value
+    const pokemonType = selectPokemonType(selectType, data.pokemon)
+    showingCards(pokemonType)
+})
+
+selectFilterResistant.addEventListener('change', () => {
+    const selectResistant = selectFilterResistant.value
+    const pokemonResistant = selectPokemonResistant(selectResistant, data.pokemon)
+    showingCards(pokemonResistant)
+})
+
+selectFilterWeaknesses.addEventListener('change', () => {
+    const selectWeaknesses = selectFilterWeaknesses.value
+    const pokemonWeaknesses = selectPokemonWeaknesses(selectWeaknesses, data.pokemon)
+    showingCards(pokemonWeaknesses)
+})

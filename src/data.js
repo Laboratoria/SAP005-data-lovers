@@ -2,4 +2,14 @@ export const instantSearch = (searchName, dataJson) => {
     return dataJson.filter(object => object.name.startsWith(searchName))
 }
 
-//oi
+export const selectPokemonType = (selectType, dataJson) => {
+    return dataJson.filter(pokemon => pokemon.type == selectType)
+}
+
+export const selectPokemonResistant = (selectResistant, dataJson) => {
+    return dataJson.filter(pokemon => pokemon.type == selectResistant)
+}
+
+export const selectPokemonWeaknesses = (selectWeaknesses, dataJson) => {
+    return dataJson.filter(pokemon => pokemon.type == selectWeaknesses)
+}
