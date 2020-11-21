@@ -11,11 +11,17 @@ function chamarLista(dados) {
     document.getElementById("hero").innerHTML +=
       ` 
      <section class="personagem">
-      <abbr class="frente">
-        <p>${item.name}</p>
+      <div class="frente">
+        <p>${item.name.toUpperCase()}</p>
         <img src="${item.image}">
-        <p>${item.gender}</p>
-      </abbr>
+        <p>${item.gender.toUpperCase()}</p>
+      </div>
+      <div class="tras">
+      <p>${item.name}</p>
+      <p>${item.status}</p>
+      <p>${item.species}</p>
+      <p>${item.gender}</p>
+    </div>
     </section>
       `
   }
@@ -23,6 +29,8 @@ function chamarLista(dados) {
 
 chamarLista(listaCompleta);
 
+
+document.getElementById("filter-gender").addEventListener("click",teste);
 
 
 // const especiesFilter = document.getElementById("especie");

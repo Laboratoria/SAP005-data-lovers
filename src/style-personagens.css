@@ -131,8 +131,14 @@ li{
 .personagem{
     background-color:lightseagreen;
     width: 20vw; 
-    height: 20vw;
+    height: 32vw;
     margin: 40px;
     padding: 20px;
     flex: 0 1 25%;
+    perspective: 1000px;
+    
 }
+
+
+
+
