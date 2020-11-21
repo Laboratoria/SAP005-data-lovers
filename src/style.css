@@ -64,18 +64,26 @@ body{
 
 /* Card de Informações do Personagem */
 
-.cards {
-    display: flex;
-    visibility: hidden;
-
-    font-size: 35px;
+/* Da antiga class .cards, precisei apagar display e visibility, e
+separei em -front e -back pra vc identificar. De resto, só dupliquei. */
+.card-front {
+    font-size: 20px;
     margin: 10px;
 
     border-radius: 20px;
     color: white;
     background-color: rgb(25, 25, 26);
 }
-#character-info {
+.card-back {
+    font-size: 20px;
+    margin: 10px;
+
+    border-radius: 20px;
+    color: white;
+    background-color: rgb(25, 25, 26);
+}
+/* esse id não existe mais */
+#character-info { 
     padding: 20px;
 }
 
