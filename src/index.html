@@ -10,13 +10,12 @@
     <div id="root"></div>
    
     <header>
-      <h1>Título desta Página</h1>
       <img src= "img/pokemon-logo-1.jpg" alt="some text" width=300 height=200>
     </header>
 
     <aside>
-      <h2>Tipos de Pokémons</h2>
         <div class="sidebar">
+          <h2>Tipos de Pokémons</h2>
           <nav>
             <ul>
               <li><a href="# ">&#9776; Aço</a></li>
@@ -43,59 +42,56 @@
     </aside>
 
     <main>
+      <article>
+        <section>
+
+          <div class= "flex-container">
+
+            <div class="flex1">
+              <select id="cboPokemon">
+                <option value="inicio">Ordenar por</option>
+                <option value="fraco">Ordenar por Mais Fraco</option>
+                <option value="elemento">Ordenar por Elemento</option>
+                <option value="maisForte">Ordenar por Mais Forte</option>
+                <option value="raridade">Ordenar por Raridade</option>
+                <option value="anterior"> Ordemar</option>              
+              </select>
+            </div>
+
+
+            <div id="bg">  </div>
+
+
+            <div class="flex2">
+              <div id="divBusca">
+                <input type="text" id="txtBusca" placeholder="Buscar..."/>
+                <img src="img/lupa.jpg" id="btnBusca" alt="Buscar"/>
+            </div>
+
+            <div class="flex3">
+              <div id= "card">
+                <p>Pokemon X</p>
+                <img class= "imagem-pokemon" src="imagens/nome imagem" />
+              </div>
       
-      <section class="filtro-de-pesquisa">
-        <select id="cboPokemon">
-            <option value="inicio">Ordenar por</option>
-            <option value="fraco">Ordenar por Mais Fraco</option>
-            <option value="elemento">Ordenar por Elemento</option>
-            <option value="maisForte">Ordenar por Mais Forte</option>
-            <option value="raridade">Ordenar por Raridade</option>
-            <option value="anterior"> Ordemar</option>
-         </select>
+              <div id= "card">
+                <p>Pokemon X</p>
+                <img class= "imagem-pokemon" src="imagens/nome imagem" />
+              </div>
+
+              <div id= "card">
+                <p>Pokemon X</p>
+                <img class= "imagem-pokemon" src="imagens/nome imagem" />
+              </div>
+
+            </div>
+           
+          </div>
+                      
+        </section>
+  
+      </article>
       
-       <div id="bg">  </div>
-        
-      </section>
-        
-      
-      <section>
-        <div id="divBusca">
-            <input type="text" id="txtBusca" placeholder="Buscar..."/>
-            <img src="img/lupa.jpg" id="btnBusca" alt="Buscar"/>
-        </div>
-      
-      </section>
-        
-     
-      <section class= "flex-container">
-        <div class= "card">
-          <p>Pokemon X</p>
-          <img class= "imagem-pokemon" src="imagens/nome imagem" />
-        </div>
-
-        <div class= "card">
-          <p>Pokemon X</p>
-          <img class= "imagem-pokemon" src="imagens/nome imagem" />
-        </div>
-
-        <div class= "card">
-          <p>Pokemon X</p>
-          <img class= "imagem-pokemon" src="imagens/nome imagem" />
-        </div>
-
-        <div class= "card">
-          <p>Pokemon X</p>
-          <img class= "imagem-pokemon" src="imagens/nome imagem" />
-        </div>
-
-        <div class= "card">
-          <p>Pokemon X</p>
-          <img class= "imagem-pokemon" src="imagens/nome imagem" />
-        </div>
-
-      </section>
-
     </main>
        
     <footer>
