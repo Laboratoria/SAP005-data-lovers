@@ -1,0 +1,25 @@
+/* FONTES */
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700;800&display=swap');
+
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* STYLING GERAL */
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font-family: 'Inter', sans-serif;
+}
