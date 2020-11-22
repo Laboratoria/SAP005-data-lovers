@@ -25,7 +25,8 @@ body{
     color: white;
     text-align: center;
     font-size: 30px;
-    
+    font-family: 'Anton', sans-serif;
+
     text-overflow: clip;
     overflow: hidden;
 
@@ -62,46 +63,103 @@ body{
 }
 
 
-/* Card de Informações do Personagem */
+/* Card de Informações dos Personagens */
 
-/* Da antiga class .cards, precisei apagar display e visibility, e
-separei em -front e -back pra vc identificar. De resto, só dupliquei. */
+#get-cards {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-left: 1%;
+    width: 100%;
+}
+.all-cards {
+    margin: 2%;
+    width: 200px;
+    height: 200px;
+    perspective: 1000px; /* perspectiva 3D */
+}
+.card-info {
+    position: relative;
+    height: 100%;   /* 100% da altura do cartão */
+    transition: transform .4s;  /*Tempo de duração do giro*/
+    transform-style: preserve-3d; /* Garante que a transformação preserve o efeito 3D */
+}
+.all-cards:hover .card-info {
+    transform: rotateY(180deg); /* Passando o mouse sobre cartao, o filho dela (container) girará 180 graus no eixo y(eixo vertical) */
+}
 .card-front {
-    font-size: 20px;
+    position: absolute;
+    width: 100%;
+    backface-visibility: hidden; /* Garante que a parte de trás não aparecerá */
+    z-index: 1;
+
+    font-size: 10px;
     margin: 10px;
 
-    border-radius: 20px;
     color: white;
-    background-color: rgb(25, 25, 26);
+    background-color: rgba(25, 25, 26, 0.301);
 }
 .card-back {
-    font-size: 20px;
-    margin: 10px;
+    position: absolute;
+    width: 100%;
+    backface-visibility: hidden; /* Garante que a parte de trás não aparecerá */
+    z-index: 1;
+    transform: rotateY(180deg);
 
-    border-radius: 20px;
+    font-size: 25px;
+    font-family: 'VT323', monospace;
+    
+    border-radius: 8%;
+    padding: 9%;
     color: white;
-    background-color: rgb(25, 25, 26);
+    background-color: rgb(35, 36, 36);
 }
+.card-back ul {
+    list-style: none;
+
+    border-radius: 6%;
+    border: 1px solid rgb(63, 63, 63);
+    padding: 3%;
+}
+
+.front-pic{
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+}
+.back-pic{
+    width: 100%;
+    border-radius: 10%;
+    border: 2px solid rgb(77, 211, 211);
+}
+.back-pic ul {
+    list-style: none;
+    padding: 2px;
+    border: 1px solid rgb(75, 74, 74);
+}
+
 /* esse id não existe mais */
 #character-info { 
     padding: 20px;
 }
 
 
+
 /* Mobile desativado no desktop */
 
+#div-mother-mobile {
+    display: none;
+}
 #title-mobile {
     display: none;
 }
 #navigation-area-mobile {
     display: none;
 }  
-#characters-options-mobile {
+.cards-container-mobile {
     display: none;
 }
-#card-info-mobile {
-    display: none;
-}
+
 
 
 
@@ -111,6 +169,10 @@ separei em -front e -back pra vc identificar. De resto, só dupliquei. */
 
 @media only screen and (max-device-width: 400px){
    
+    #div-mother-mobile {
+        display: inline;
+    }
+
     #title-mobile{
         display: flex;
         justify-content: center;
@@ -124,10 +186,8 @@ separei em -front e -back pra vc identificar. De resto, só dupliquei. */
         display: flex;
         justify-content: center;
 
-      /*  border-radius: 10%;    
-        background-color: rgba(25, 28, 48, 0.616); */
     }
-    #button-charac {
+    #button-charac-mobile {
         width: 70%;
 
         border:none;
@@ -141,43 +201,99 @@ separei em -front e -back pra vc identificar. De resto, só dupliquei. */
         outline: rgba(10, 10, 36, 0.644);
         transition: 1s;
     }
-    #button-charac:hover {
+    #button-charac-mobile:hover {
         background-color:  rgba(56, 25, 88, 0.918);
     }
 
-    #characters-options-mobile{
-        visibility: hidden;
+    /* Card de Informações dos Personagens */
+
+    .cards-container-mobile {
         display: flex;
-        justify-content: space-between;
     }
-    .all-menu-mobile{
+
+    #get-cards-mobile {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-left: 1%;
+    width: 100%;
+     }
+
+    .all-cards-mobile {
+    margin: 15%;
+    width: 150px;
+    height: 150px;
+
+    perspective: 1000px; /* perspectiva 3D */
+     }
+
+    .card-info-mobile {
+    position: relative;
+    height: 100%;   /* 100% da altura do cartão */
+    transition: transform .4s;  /*Tempo de duração do giro*/
+    transform-style: preserve-3d; /* Garante que a transformação preserve o efeito 3D */
+     }
+
+    .all-cards-mobile:hover .card-info-mobile {
+    transform: rotateY(180deg); /* Passando o mouse sobre cartao, o filho dela (container) girará 180 graus no eixo y(eixo vertical) */
+      }
+
+    .card-front-mobile {
+    position: absolute;
+    width: 100%;
+    backface-visibility: hidden; /* Garante que a parte de trás não aparecerá */
+    z-index: 1;
+
+    font-size: 8px;
+    margin: 10px;
+
+    color: white;
+    background-color: rgba(25, 25, 26, 0.301);
+      }
+
+
+    .card-back-mobile {
+    position: absolute;
+    width: 100%;
+    backface-visibility: hidden; /* Garante que a parte de trás não aparecerá */
+    z-index: 1;
+    transform: rotateY(180deg);
+
+    font-size: 15px;
+    font-family: 'VT323', monospace;
     
-        background-color: rgba(0, 0, 0, 0.575);
-        border-radius: 20px;
+    border-radius: 8%;
+    padding: 9%;
+    color: white;
+    background-color: rgb(35, 36, 36);
+     }
+
+
+    .card-back-mobile ul {
+    list-style: none;
+
+    border-radius: 6%;
+    border: 1px solid rgb(63, 63, 63);
+    padding: 3%;
+     }
+
+    .front-pic-mobile {
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
     }
-    .menu-pictures-mobile {
-        
-        margin-top: 2%;
-        border-radius: 50%;
-        width: 20%;
-        height: 20%;
+    .back-pic-mobile {
+    width: 100%;
+    border-radius: 10%;
+    border: 2px solid rgb(77, 211, 211);
+     }
+    .back-pic-mobile ul {
+    list-style: none;
+    padding: 2px;
+    border: 1px solid rgb(75, 74, 74);
     }
 
-    #card-info-mobile {
-        visibility: hidden;
-        display: flex;
-
-        margin-top: 10%;
-        background-color: rgba(6, 6, 22, 0.89);
-        color: white;
-    }
-    #character-img-mobile {
-        width: 40%;
-        height: 40%;
-    }
-    #character-info-mobile {
-        padding: 2%;
-    }
+  
 
     /* Desktop desabilitado no Mobile */
     #title{
@@ -185,9 +301,6 @@ separei em -front e -back pra vc identificar. De resto, só dupliquei. */
     }
 
     #navigation-area {
-        display: none;
-    }
-    #characters-options {
         display: none;
     }
     #card-info {
