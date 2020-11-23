@@ -66,7 +66,30 @@ const filter = {
     return resistant
   },
 
+  pokedexFilter() {
+    const pokedex = data.pokemon.map(pokemon => {
+        return {
+            name: pokemon.name,
+            img: pokemon.img,
+            num: pokemon.num
+        } 
+        console.log(pokedex)
+    })
+    const orderNum = pokedex.sort(function (num1 ,num2 ){
+      if (pokedex.num > pokedex.num) {
+            return 1;
+          }
+          if (num1.num < num2.num) {
+            return -1;
+          }
+         
+          return 0;
+    });    
+      return orderNum
+  }
+
 }
+
  filter.photo();
 
 export default filter;

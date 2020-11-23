@@ -9,7 +9,7 @@ html,body{
 
 
 .body{    
-    background-image:linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.45)), url('img/background.jpg');
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0)), url('img/background.jpg');
     background-repeat: no-repeat;
     background-size: cover; 
     background-attachment: fixed; 
@@ -108,7 +108,9 @@ input:focus{
 
 .cards{
     display:flex;
-    justify-content: space-around;
+    justify-content: row;
+    flex-wrap: wrap;
+    margin-top:110px;
 }
 
 

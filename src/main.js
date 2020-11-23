@@ -38,7 +38,7 @@ button.addEventListener('click', (e)=>{
               
         })
     }else{
-        alert('POKENOM NÃO ENCONTRADO')
+        alert('POKEMON NÃO ENCONTRADO')
     }
 
 });
@@ -83,6 +83,45 @@ nameFilter.addEventListener('change',(event)=>{
 
     }
     
+})
+
+const pokedex = filter.pokedexFilter()
+const selectElementPokedex = document.querySelector('.order');
+let elementoSelecionadoPokedex = "";
+
+selectElementPokedex.addEventListener('change', (event) => {
+    elementoSelecionadoPokedex = event.target.value;
+    document.getElementById('cards').innerHTML = "";
+
+    if (elementoSelecionadoPokedex === "") {
+        showAllPokemons()
+
+    } else if(elementoSelecionadoPokedex === '1a251'){
+        pokedex.forEach(pokemon => {
+            const text = document.createElement('p');
+            const image = document.createElement("img");
+            image.src = pokemon.img
+            text.innerHTML = pokemon.name  
+            document.getElementById('cards').appendChild(text);
+            text.appendChild(image);   
+    
+        });
+
+    }else{
+        let newArray = filter.pokedexFilter()
+        newArray.reverse()
+        newArray.forEach(pokemon => {
+        const text = document.createElement('p');
+        const image = document.createElement("img");
+        image.src = pokemon.img
+        text.innerHTML = pokemon.name  
+        document.getElementById('cards').appendChild(text);
+        text.appendChild(image);   
+    
+    });
+
+}
+
 })
 
 
