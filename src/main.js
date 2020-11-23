@@ -4,17 +4,18 @@ import { example } from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 
 
-const listaCompleta = data.results;
+const dataBase = data.results;
 
-function chamarLista(dados) {
-  for (let item of dados) {
-    document.getElementById("hero").innerHTML +=
+
+function printCharacters(dados) {
+    let cards
+    for ( let item of dados) {
+    cards +=
       ` 
-     <section class="personagem">
+     <article class="personagem">
       <div class="frente">
         <p>${item.name.toUpperCase()}</p>
         <img src="${item.image}">
-        <p>${item.gender.toUpperCase()}</p>
       </div>
       <div class="tras">
       <p>${item.name}</p>
@@ -22,69 +23,102 @@ function chamarLista(dados) {
       <p>${item.species}</p>
       <p>${item.gender}</p>
     </div>
-    </section>
+    </article>
       `
   }
-};
+  document.getElementById("hero").innerHTML = cards
+}; printCharacters(dataBase); 
 
-chamarLista(listaCompleta); 
-
-const filtroGenero = data.results
-.filter(genero => genero.gender === "male")
-.map(g => g.gender)
-console.log(filtroGenero);
-
+const filterMale = dataBase.filter(dataBase => dataBase.gender === "Male");
+const filterFemale = dataBase.filter(dataBase => dataBase.gender === "Female");
+const filterUnknownGender = dataBase.filter(dataBase => dataBase.gender === "unknown");
 
 const filterSelect = document.querySelector('.filter-gender');
 filterSelect.addEventListener('click', filterGender)
 
 function filterGender(){
     if(filterSelect.value === "male") {
-        console.log(filtroGenero)
+     printCharacters(filterMale)         
     }else if(filterSelect.value === "female"){
-        console.log("vc selecionou mulher")
+     printCharacters(filterFemale)
+    }else if(filterSelect.value === "unknown"){
+     printCharacters(filterUnknownGender)
     }else{
-        console.log()
+     printCharacters(dataBase)
     }
+    preventDefault();
 }
+
+const filterAlive = dataBase.filter(dataBase => dataBase.status === "Alive");
+const filterDead = dataBase.filter(dataBase => dataBase.status === "Dead");
+const filterUnknownStatus = dataBase.filter(dataBase => dataBase.status === "unknown");
 
 const filterSelectStatus = document.querySelector('.filter-status');
 filterSelectStatus.addEventListener('click', filterStatus)
 
 function filterStatus(){
     if(filterSelectStatus.value === "vivo") {
-        console.log("vc está vivo")
+     printCharacters(filterAlive) 
     }else if(filterSelectStatus.value === "morto"){
-        console.log("vc selecionou morto?!")
+     printCharacters(filterDead) 
     }else if(filterSelectStatus.value === "unknown"){
-        console.log("Seria vc um ET?????")
+     printCharacters(filterUnknownStatus) 
     }else{
-        console.log()
+     printCharacters(dataBase) 
     }
+    preventDefault();
 }
+
+
+const filterAnimal = dataBase.filter(dataBase => dataBase.species === "Animal");
+const filterHuman = dataBase.filter(dataBase => dataBase.species === "Human");
+const filterHumanoid = dataBase.filter(dataBase => dataBase.species === "Humanoid");
+const filterRobot = dataBase.filter(dataBase => dataBase.species === "Robot");
+const filterAlien = dataBase.filter(dataBase => dataBase.species === "Alien");
+const filterPoopybutthole = dataBase.filter(dataBase => dataBase.species === "Poopybutthole");
+const filterMytholog = dataBase.filter(dataBase => dataBase.species === "Mytholog");
+const filterVampire = dataBase.filter(dataBase => dataBase.species === "Vampire");
+const filterCronenberg = dataBase.filter(dataBase => dataBase.species === "Cronenberg");
+const filterDisease = dataBase.filter(dataBase => dataBase.species === "Disease");
+const filterParasite = dataBase.filter(dataBase => dataBase.species === "Parasite");
+const filterUnknownSpecies = dataBase.filter(dataBase => dataBase.species === "unknown");
 
 const filterSelectSpecies = document.querySelector('.filter-species');
 filterSelectSpecies.addEventListener('click', filterSpecies)
 
 function filterSpecies(){
     if(filterSelectSpecies.value === "animal") {
-        console.log("Oi Animal")
-    }else if(filterSelectSpecies.value === "humano"){
-        console.log("HUmano? pensei q era anjo")
+     printCharacters(filterAnimal) 
+    }else if(filterSelectSpecies.value === "human"){
+     printCharacters(filterHuman) 
     }else if(filterSelectSpecies.value === "humanoid"){
-        console.log("o futuro é você")
+     printCharacters(filterHumanoid) 
     }else if(filterSelectSpecies.value === "robot"){
-        console.log("R2-D2?!")
+     printCharacters(filterRobot) 
     }else if(filterSelectSpecies.value === "alien"){
-        console.log("vc é de varginha e eu de Parelheiros")
+     printCharacters(filterAlien) 
+    }else if(filterSelectSpecies.value === "poopybutthole"){
+     printCharacters(filterPoopybutthole) 
+    }else if(filterSelectSpecies.value === "mytholog"){
+     printCharacters(filterMytholog) 
+    }else if(filterSelectSpecies.value === "vampire"){
+     printCharacters(filterVampire) 
+    }else if(filterSelectSpecies.value === "cronenberg"){
+     printCharacters(filterCronenberg) 
+    }else if(filterSelectSpecies.value === "doença"){ 
+     printCharacters(filterDisease) 
+    }else if(filterSelectSpecies.value === "parasite"){
+     printCharacters(filterParasite) 
+    }else if(filterSelectSpecies.value === "desconhecido"){
+     printCharacters(filterUnknownSpecies) 
     }else{
-        console.log()
+     printCharacters(dataBase)
     }
+    preventDefault();
 }
 
 const filterSelectOrder = document.querySelector('.filter-order');
 filterSelectOrder.addEventListener('click', filterOrder)
-
 
 function filterOrder(){
     if(filterSelectOrder.value === "az") {
@@ -97,9 +131,5 @@ function filterOrder(){
         console.log()
     }
 }
-
-
-
-
 
 console.log(example, data);
