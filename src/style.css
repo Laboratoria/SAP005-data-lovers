@@ -162,11 +162,11 @@ label span:nth-child(3) {
 
 /* Tratamento dos cards */
 
-.respiro{
+.space{
     max-width: 100%;
     height: 50px;
 }
-.main-card{
+.main-cards{
     margin: 0 auto;
     width: 980px;
     /* height: 200px; */
@@ -177,28 +177,29 @@ label span:nth-child(3) {
 .left {
     float: left;
     margin-left: 0 auto;
-    
 }
-.moldura  {
+
+.frame {
     position: relative;
     width: 215px;
     height: 250px;
     text-align: left;
-    transition: transform 0.9s;
+    transition: transform 0.6s;
+    cursor: pointer;
     transform-style: preserve-3d;
     margin: 10px;
     box-shadow:  0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
-.moldura:hover, .moldura left{
+.frame:hover{
     background-color: #e9c46a;
     transform: rotateY(180deg);
     z-index: 10;
 }
 
 
-h3.pokefront, h6.pokeback {
-    position: absolute;
+.card-front, .card-back {
+    position: relative;
     width: 215px;
     height: 250px;
     -webkit-backface-visibility: hidden;
@@ -213,7 +214,7 @@ img.pokeimg{
     border-radius: 5px; */
 }
 
-h3.pokefront{
+.card-front{
     position: absolute;
     width: 215px;
     height: 250px;
@@ -222,7 +223,7 @@ h3.pokefront{
     text-align: center;
 }
 
-h6.pokeback{
+.card-back{
     position: absolute;
     width: 215px;
     height: 250px;
@@ -230,6 +231,7 @@ h6.pokeback{
     background-color: #e76f51;
     color: white;
     transform: rotateY(180deg);
+    padding: 5px;
 }
 
 
