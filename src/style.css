@@ -43,25 +43,19 @@ body{
     background-color: rgba(69, 81, 114, 0.541);
 }
 
-/* Menu  */
-
-.all-menu{
-    visibility: hidden;
-
+/* Filtro */
+#choose-box {
     display: flex;
-    justify-content: space-between;
-
-    background-color: rgba(0, 0, 0, 0.575);
-    padding: 10px;
-    border-radius: 20px;
+    justify-content: center;
 }
-.menu-pictures {
-    border-radius: 50%;
-
-    width: 80px;
-    height: 80px;
+form input[type=radio]:checked {
+    background-color: rgb(48, 3, 48);
 }
 
+.choose-options {
+    
+    color: white;
+}
 
 /* Card de Informações dos Personagens */
 
@@ -76,8 +70,15 @@ body{
     margin: 2%;
     width: 200px;
     height: 200px;
+
     perspective: 1000px; /* perspectiva 3D */
 }
+.all-cards:hover {
+    margin: 3%;
+    height: 570px;
+    width: 270px;
+}
+
 .card-info {
     position: relative;
     height: 100%;   /* 100% da altura do cartão */
@@ -87,6 +88,8 @@ body{
 .all-cards:hover .card-info {
     transform: rotateY(180deg); /* Passando o mouse sobre cartao, o filho dela (container) girará 180 graus no eixo y(eixo vertical) */
 }
+
+
 .card-front {
     position: absolute;
     width: 100%;
@@ -103,7 +106,7 @@ body{
     position: absolute;
     width: 100%;
     backface-visibility: hidden; /* Garante que a parte de trás não aparecerá */
-    z-index: 1;
+    z-index: 100;
     transform: rotateY(180deg);
 
     font-size: 25px;
@@ -137,12 +140,6 @@ body{
     padding: 2px;
     border: 1px solid rgb(75, 74, 74);
 }
-
-/* esse id não existe mais */
-#character-info { 
-    padding: 20px;
-}
-
 
 
 /* Mobile desativado no desktop */
@@ -195,6 +192,8 @@ body{
         padding: 3%;
 
         background-color: rgba(10, 10, 36, 0.644);
+
+        font-family: 'Anton', sans-serif;
         color: white;
         font-size: 30px;
 
@@ -220,13 +219,16 @@ body{
      }
 
     .all-cards-mobile {
-    margin: 15%;
+    margin: 12%;
     width: 150px;
     height: 150px;
 
     perspective: 1000px; /* perspectiva 3D */
      }
-
+    
+    .all-cards-mobile:hover {
+     height: 320px;
+    }
     .card-info-mobile {
     position: relative;
     height: 100%;   /* 100% da altura do cartão */

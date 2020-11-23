@@ -6,6 +6,12 @@ console.log(example, data);
 
 /* -------------MENU E BOTÕES DESKTOP VERSION------------ */ 
 
+/* Lendo o filtro */
+
+
+
+/* Mostrando personagens */
+
 const charactersButton = document.getElementById("characters-button")
 charactersButton.addEventListener("click", showCharacters)
 
