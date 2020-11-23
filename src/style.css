@@ -1,33 +1,27 @@
-/*.cover {
-    text-align: center;
-    
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	box-sizing: border-box;
+	font-family: "Open Sans", sans-serif;
+	font-weight: bolder;
 }
 
-.order {
-    height: 60px;
-    width: 100%;
-    position: relative;
-    padding-left: 5%;
-    text-align: center;
+nav,
+ul {
+	list-style: none;
 }
 
-.option, .pokémon-filter {
-    height: 40px;
-    width: 20%;
-    position: relative;
-    text-align: center;
-    border: 1px solid;
-    background-color: #fff;
-    border-color: rgb(70, 71, 71);
-    border-radius: 5px;
-    font-family:  Arial, sans-serif;
-    color: black;
-}*/
+a,
+button {
+	text-decoration: none;
+	cursor: pointer;
+	opacity: 0.9;
+}
 
-* {margin: 0; padding: 0; font-size: 100%; box-sizing: border-box; font-family: Arial, "Open Sans", sans-serif;}
-nav, ul {list-style: none;}
-a, button {text-decoration: none; cursor: pointer; opacity: 0.9;}
-a:hover {opacity: 1;}
+a:hover {
+	opacity: 1;
+}
 
 /*HEADER*/
 .cover {width: 100%;  display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background-color:yellow; flex-direction: row;}
@@ -59,4 +53,40 @@ a:hover {opacity: 1;}
 @media (max-width: 656px) {
     .footer {flex-direction: column-reverse; width: 100%; bottom: 0; position: absolute; padding: 1rem; margin-top: 10px;}
     .footer p {text-align: center;}
+}
+
+.card {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	flex: 1;
+	text-align: center;
+}
+
+.main {
+	padding: 150px;
+	width: 40px;
+	height: 50px;
+	margin: 3px;
+	font-family: Arial;
+	color: black;
+	font-size: 10px;
+}
+.name {
+	font-size: 20px;
+}
+
+@media {
+	.card {
+		display: flex;
+	}
+	.div-child {
+		display: inline;
+	}
+	.img-pokemon {
+		text-align: center;
+		width: 40%;
+		height: 20%;
+	}
 }
