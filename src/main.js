@@ -51,4 +51,21 @@ function printData(file) {
     }
 }
 printData(characters);
+
+let selectOrder = document.getElementById("order").addEventListener('change', alphabeticOrder);
+function alphabeticOrder () {
+  if (selectOrder.value === "A-Z") {
+  characters.sort(function(a, b) {
+      if (a.name.toUpperCase() < b.name.toUpperCase()) return -1;
+      if (a.name.toUpperCase() > b.name.toUpperCase()) return 1;
+      return 0;}
+  );
+  } else {
+    characters.sort(function(a, b) {
+      if (a.name.toUpperCase() > b.name.toUpperCase()) return -1;
+      if (a.name.toUpperCase() < b.name.toUpperCase()) return 1;
+      return 0;}
+    );
+    };  
+};
 //console.log(example, data);
