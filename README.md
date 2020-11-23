@@ -1,5 +1,7 @@
 # Data Lovers
 
+Temos que apagar tudo para escrever o nosso readme :sunflower:
+
 ## Índice
 
 * [1. Preâmbulo](#1-preâmbulo)
