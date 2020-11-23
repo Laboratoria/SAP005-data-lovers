@@ -17,6 +17,34 @@ function showAllPokemons() {
 
 const name = filter.filter()
 
+const button = document.querySelector('#btn')
+
+button.addEventListener('click', (e)=>{
+    e.preventDefault()
+    const search = document.querySelector('#txtSearch')
+    let searchOption =  search.value
+    document.getElementById('cards').innerHTML= "";
+ 
+    if("" !== searchOption){
+        name.forEach(pokemon => {
+            if(searchOption == pokemon.name ){
+                const text = document.createElement('p');
+                const image = document.createElement("img");
+                image.src = pokemon.img
+                text.innerHTML = pokemon.name  
+                document.getElementById('cards').appendChild(text);
+                text.appendChild(image); 
+            }            
+              
+        })
+    }else{
+        alert('POKENOM NÃO ENCONTRADO')
+    }
+
+});
+
+
+
 
 const nameOrder = filter.filter()
 const nameFilter = document.querySelector('.orderName');
