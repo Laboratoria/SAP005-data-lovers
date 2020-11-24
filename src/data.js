@@ -1,4 +1,12 @@
-export const filterData = (data, condicao) => {
-  let arrayOfPokemons = [];
-  data.pokemon.forEach((pokemon) => condicao(pokemon));
-}
+export const filterType = () => { }
+
+// for each
+//filter
+
+
+
+
+
+//ordenação
+//filtro
+//search
