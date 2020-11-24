@@ -1,7 +1,6 @@
 import { example } from './data.js';
 import data from './data/pokemon/pokemon.js';
 //console.log(example, data);
-
 let input = document.getElementById("txtBusca");
 
 function cardUnitario() {
@@ -30,10 +29,12 @@ document.getElementById('btn-search-pokemon').addEventListener("click", cardUnit
 
 //Code para Campo de Todos os Campos:
 
+let resultadoDisplay = document.getElementById("all-cards");
+
 function cardAll() {
     const copiaDB = data.pokemon;
     for (let indice of copiaDB) {
-        document.getElementById("all-cards").innerHTML += `<div class="mostrar">
+        resultadoDisplay.innerHTML += `<div class="mostrar">
     <img src="${indice.img}">
     <h1>${indice.name.toUpperCase()}<h1>
     <p>${indice.num}</p> 
@@ -45,5 +46,36 @@ function cardAll() {
 
 document.getElementById('btn-generation-pokemon').addEventListener("click", cardAll)
 
-document.getElementById('btn-cresc-pokemon').addEventListener("click",)
-document.getElementById('btn-decresc-pokemon').addEventListener("click",)
+function teste() {
+    document.getElementById("all-cards").innerHTML = "";
+    const copiaDB = data.pokemon;
+    copiaDB.sort(function (a, b) { return a.name > b.name })
+    for (let indice of copiaDB) {
+        document.getElementById("all-cards").innerHTML += `<div class="mostrar">
+    <img src="${indice.img}">
+    <h1>${indice.name.toUpperCase()}<h1>
+    <p>${indice.num}</p> 
+    <p>${indice.about}</p> 
+    <p>${indice.type.toString().replace(",", ", ")}</p>
+    <p>${indice.resistant.toString().replace(",", ", ")}</p></div>`
+    }
+};
+
+document.getElementById('btn-cresc-pokemon').addEventListener("click", teste)
+
+function teste1() {
+    document.getElementById("all-cards").innerHTML = "";
+    const copiaDB = data.pokemon;
+    copiaDB.sort(function (a, b) { return a.name < b.name })
+    for (let indice of copiaDB) {
+        document.getElementById("all-cards").innerHTML += `<div class="mostrar">
+    <img src="${indice.img}">
+    <h1>${indice.name.toUpperCase()}<h1>
+    <p>${indice.num}</p> 
+    <p>${indice.about}</p> 
+    <p>${indice.type.toString().replace(",", ", ")}</p>
+    <p>${indice.resistant.toString().replace(",", ", ")}</p></div>`
+    }
+};
+
+document.getElementById('btn-decresc-pokemon').addEventListener("click", teste1)
