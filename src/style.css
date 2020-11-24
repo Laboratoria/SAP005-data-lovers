@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    background-color: #9FDB95;
+}
+
+header {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+main {
+    margin-bottom: 10vh;
+}
+
+.tituloSite {
+    font-size: 5em;
+}
+
+.filtros {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 0.5em 0 0.5em;
+}
+
+.filtrosFilhos {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-size: 2.5em;
+    text-align: left;
+    margin-top: 0.5em;
+}
+
+.input {
+    height: 3em;
+    width: 45vw;
+    border: solid 2px #5CCDAA;
+    background-color: #ffffff;
+    border-radius: 25px;
+    padding: 0 0.2em;
+    color: #5CCDAA;
+    font-size: 2.5em;
+}
+
+option{
+    font-size: 0.5em;
+}
+/* início pra configurar o placeholder do input */
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #5CCDAA;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #5CCDAA;
+    opacity: 1;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #5CCDAA;
+    opacity: 1;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #5CCDAA;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #5CCDAA;
+}
+
+/* final pra configurar o placeholder do input */
+
+button {
+    height: 3em;
+    width: 45vw;
+    border: none;
+    background-color: #44696C;
+    border-radius: 25px;
+    padding: 0 0.2em;
+    color: #ffffff;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+button:active {
+    background-color: #fff;
+}
+
+.pokemons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.card {
+    margin: 1em;
+    text-align: center;
+    border: solid 0.1em #44696C;
+    border-radius: 25px;
+    width: 30vw;
+    padding: 1em;
+}
+
+.pokemon-name {
+    font-size: 1.5em;
+}
+
+.pokemon-num {
+    font-size: 1.5em;
+}
+
+.pokemon-img {
+    width: 8em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.pokemon-region,
+.pokemon-type {
+    font-size: 1.5em;
+}
+
+.footer {
+    background-color: #44696C;
+    bottom: 0;
+    left: 0;
+    height: 8vh;
+    position: fixed;
+    width: 100vw;
+    line-height: 8vh;
+    color: #ffffff;
+    font-size: 2em;
+}
