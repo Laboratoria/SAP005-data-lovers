@@ -1,12 +1,64 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Rick & Morty Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="./img/icon-tab"/>
+</head>
+<body>
+  <header>
+    <section id="logo">
+      <img src="./img/logo.png" width="80px" height="80px">
+      <img src="./img/logo-name.png" width="270px" height="115px">
+    </section>
+    <!--  <nav>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Characters</a></li>
+        colocar as imagens da logo
+      </ul>
+    </nav> -->
+  </header>    
+    <main>
+      <section class="filters">
+        <select class="select" id="order" label="Order">
+          <option value="az">A-Z</option>
+          <option value="za">Z-A</option>
+        </select>
+        <select class="select" id="status" label="Status">
+          <option value="az">Alive</option>
+          <option value="za">Dead</option>
+          <option value="za">Unknown</option>
+        </select>
+        <select class="select" id="species" label="Species">
+          <option value="human">Human</option>
+          <option value="humanoid">Humanoid</option>
+          <option value="alien">Alien</option>
+          <option value="robot">Robot</option>
+          <option value="animal">Animal</option>
+          <option value="mytholog">Mytholog</option>
+          <option value="poopybutthole">Poopybutthole</option>
+          <option value="unknownSpecies">Unknown</option>
+        </select>        
+        <select class="select" id="gender" label="Gender">
+          <option value="female">Female</option>
+          <option value="male">Male</option>
+          <option value="unknownGender">Unknown</option>
+        </select>              
+      </section>
+      <section id="results">
+        <!-- cálculo agregado -->
+        </section>
+      <section class="cardArea" id="cardArea">
+      </section>
+    </main>
+  <footer>Developed by <a href="https://github.com/beatrizpenalva" target="blank" title="GITHUB PROFILE">
+      @beatrizpenalva</a> | <a href="https://github.com/Fernandapy" target="blank" title="GITHUB PROFILE">
+      @fernandapy </a>
+  </footer>
+  <div id="root"></div>
+  <script src="main.js" type="module"></script>
+</body>
 </html>
