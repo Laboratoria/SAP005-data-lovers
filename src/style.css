@@ -72,8 +72,8 @@ label{
     padding-bottom: 1.5vh;
 }
 .card{
-    width: 279px;
-    height: 330px;
+    width: 265px;
+    height: 305px;
     margin-top: 2.5vh;
     margin-bottom: 2.5vh;
     transition: transform 0.8s;
@@ -90,13 +90,13 @@ label{
     backface-visibility: hidden;
 }
 .cardFront{
-    padding: 4vh;
+    padding: 2vh;
     border-radius: 35px;
     background: #304B72;
     box-shadow: 12px 5px 10px rgba(48, 75, 114, 0.39);
 }
 .cardBack{
-    padding: 4vh;
+    padding: 2vh;
     border-radius: 35px;
     background: #304B72;
     box-shadow: 12px 5px 10px rgba(48, 75, 114, 0.39);
