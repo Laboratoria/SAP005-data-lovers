@@ -58,6 +58,12 @@ function statusFilter() {
   const getStatus = document.querySelector('#status').value;
   const filteredStatus = characters.filter((item) => item.status === getStatus);
   printData(filteredStatus);
+  const percentage = Math.floor((filteredStatus.length * 100) / characters.length);
+  const category = getStatus.toLowerCase();
+  const results = document.createElement("p");
+  const content = document.createTextNode(`${percentage}% of the characters are ${category}`);
+  results.appendChild(content);
+  const rick = document.body.appendChild(results);
 };
 document.querySelector('#species').addEventListener('change', speciesFilter);
 function speciesFilter() {
