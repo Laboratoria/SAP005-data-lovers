@@ -12,12 +12,11 @@ showingCards(data.pokemon)
 
 function showingCards(pokemonCards) {
 
-    let showCards = document.querySelector('#main-cards')
-    let cards = ""
-    showCards.innerHTML = ""
+    let showCards = document.querySelector('#main-cards');
+    let cards = "";
+    showCards.innerHTML = "";
 
     for (let pokemon of pokemonCards) {
-
 
         /*let evolutions = ""
         if (pokemon.evolution["next-evolution"] != undefined && pokemon.evolution["next-evolution"] != null) {
@@ -31,10 +30,12 @@ function showingCards(pokemonCards) {
                 <div class = "card-front"><img src = ${pokemon.img} class = "img" alt = ${pokemon.name}/> 
                     <p> N°: ${pokemon.num}</p> 
                     <p> Nome: ${pokemon.name} </p> 
+
                 </div>
+                
                 <div class="card-back"> 
                     <p> Type: ${pokemon.type}</p>
-                    <p> Height: ${pokemon.size.height}
+                    <p> Height: ${pokemon.size.height}</p>
                     <p> Weight: ${pokemon.size.weight}</p>
                     <p> Resistant: ${pokemon.resistant}</p>
                     <p> Weaknesses: ${pokemon.weaknesses}</p>
@@ -46,15 +47,20 @@ function showingCards(pokemonCards) {
                     <p> Rarity: ${pokemon["pokemon-rarity"]}</p>
                     <p> Region: ${pokemon.generation.name}</p>
                     </div>
+                    
             </div>`
+
+
     }
     showCards.innerHTML = cards;
+
 }
 
 inputSearch.addEventListener('keyup', () => {
     const searchName = inputSearch.value
     const pokemons = instantSearch(searchName, data.pokemon)
     showingCards(pokemons)
+
 })
 
 selectFilterType.addEventListener('change', () => {
