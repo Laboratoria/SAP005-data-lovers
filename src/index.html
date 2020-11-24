@@ -9,7 +9,7 @@
   <body>
     <div id="root"></div>
    
-    <header>
+    <header class="title">
       <img src= "img/pokemon-logo-1.jpg" alt="some text" width=300 height=200>
     </header>
 
@@ -41,64 +41,38 @@
         </div>
     </aside>
 
-    <main>
-      <article>
-        <section>
+    <main class="flex-container">
 
-          <div class= "flex-container">
-
-            <div class="flex1">
-              <select id="cboPokemon">
-                <option value="inicio">Ordenar por</option>
-                <option value="fraco">Ordenar por Mais Fraco</option>
-                <option value="elemento">Ordenar por Elemento</option>
-                <option value="maisForte">Ordenar por Mais Forte</option>
-                <option value="raridade">Ordenar por Raridade</option>
-                <option value="anterior"> Ordemar</option>              
-              </select>
-            </div>
-
-
-            <div id="bg">  </div>
-
-
-            <div class="flex2">
-              <div id="divBusca">
-                <input type="text" id="txtBusca" placeholder="Buscar..."/>
-                <img src="img/lupa.jpg" id="btnBusca" alt="Buscar"/>
-            </div>
-
-            <div class="flex3">
-              <div id= "card">
-                <p>Pokemon X</p>
-                <img class= "imagem-pokemon" src="imagens/nome imagem" />
-              </div>
-      
-              <div id= "card">
-                <p>Pokemon X</p>
-                <img class= "imagem-pokemon" src="imagens/nome imagem" />
-              </div>
-
-              <div id= "card">
-                <p>Pokemon X</p>
-                <img class= "imagem-pokemon" src="imagens/nome imagem" />
-              </div>
-
-            </div>
-           
-          </div>
-                      
-        </section>
+      <section>
+        <select id="cboPokemon">
+          <option value="inicio">Ordenar por</option>
+          <option value="fraco">Ordenar por Mais Fraco</option>
+          <option value="elemento">Ordenar por Elemento</option>
+          <option value="maisForte">Ordenar por Mais Forte</option>
+          <option value="raridade">Ordenar por Raridade</option>
+          <option value="anterior"> Ordenar</option>              
+        </select>
   
-      </article>
-      
+        <div id="bg">  
+
+      </section>
+
+      <section>
+        <div id="divBusca">
+          <input type="text" id="txtBusca" placeholder="Buscar..."/>
+          <img src="img/lupa.jpg" id="btnBusca" alt="Buscar"/>
+        </div>
+      </section>
+
+      <section class="cards" id=mostrarCards></section>
+
     </main>
        
     <footer>
       <ul class="rodape"> <strong>Desenvolvido por</strong>
-        <li><a href="https://github.com/gabrielasilva1991" target="_blank"><strong>Gabriela Silva</strong></a></li>
-        <li><a href="https://github.com/apretamayara" target="_blank"><strong>Mayara Oliveira</strong></a></li>
-        <li><a href="https://www.laboratoria.la/" target="_blank"><strong>Laboratória</strong></a></li>
+        <a href="https://github.com/gabrielasilva1991" target="_blank"><strong>Gabriela Silva</strong></a>
+        <a href="https://github.com/apretamayara" target="_blank"><strong>Mayara Oliveira</strong></a> 
+        <a href="https://www.laboratoria.la/" target="_blank"><strong>Laboratória</strong></a>
       </ul>
     </footer>
 

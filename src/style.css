@@ -8,17 +8,57 @@ body{
     background-color: #eceafae3;  
 }
 
-/* .campo-login{
-    position: absolute;
-    left: 70%;
-    top: 5%;
-    border-width: 2px 5px 3px 6px; 
-    border-style:solid;
-    border-radius: 10px 20px;
-    border-color: black;
-    background-color: rgb(180, 87, 87);
-    color: red;
-    padding: 20px; */
+.sidebar nav{
+    display:flex;
+    justify-content: left;
+}
+.sidebar{
+    margin: 0px;
+    padding: 0px;
+    float: left; /*alinhou itens de busca no canto central*/
+    /*background: rosybrown;*/
+    list-style: none; 
+    width: 15%;
+} 
+
+.sidebar h2{
+    margin: 5px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar ul li{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar a:link{
+    background: #dba8a8;
+    color: #666;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 6px;
+    display: block;
+}
+
+.sidebar a:hover{
+    background: #E5F0FF;
+    color: #039;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 75%; /* 100% centraliza mais precisa subir e side bar já ocupa 20% */
+}
+
+#cboPokemon{
+    margin: auto;
 }
 
 
@@ -46,39 +86,23 @@ body{
     width:260px;
 }
 
-
-
-.sidebar{
-    display: inline-block;
-    margin: 10px 0px;
-    padding: 10px;
-    background: rosybrown;
-    list-style: none; 
-    width: 20%;
-    
-} 
-
- 
-.flex-container{
+.cards{
+    width: 60vw;
+    padding: 30px;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-end;
-    align-items: flex-start;
-    width: 75%; /* 100% centraliza mais precisa subir e side bar já ocupa 20% */
+    flex-direction: row;
+    margin: 30px;
 
 }
 
-
-.flex1{
-    padding: 30px;
-}
-
-.flex2{
-    padding: 30px;
-}
-
-.flex3{
-    padding: 30px;
-    flex-direction: 
+.rodape{
+    text-align: center;
+    position: fixed;
+    flex-direction: row;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 100%;
+    font-weight: bolder;
 }
