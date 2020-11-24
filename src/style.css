@@ -73,7 +73,7 @@ button {
 
 .introduction-text {
   margin-bottom: 1rem;
-  /* padding-right: 1rem; */
+  margin-right: 0;
   color: #fff;
   text-transform: uppercase;
   font-weight: bold;
