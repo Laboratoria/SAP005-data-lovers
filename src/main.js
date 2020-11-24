@@ -46,7 +46,6 @@ function filterGender(){
     }else{
      printCharacters(dataBase)
     }
-    preventDefault();
 }
 
 const filterAlive = dataBase.filter(dataBase => dataBase.status === "Alive");
@@ -66,7 +65,6 @@ function filterStatus(){
     }else{
      printCharacters(dataBase) 
     }
-    preventDefault();
 }
 
 
@@ -114,21 +112,34 @@ function filterSpecies(){
     }else{
      printCharacters(dataBase)
     }
-    preventDefault();
+    
 }
 
 const filterSelectOrder = document.querySelector('.filter-order');
 filterSelectOrder.addEventListener('click', filterOrder)
 
+
+
+
+
 function filterOrder(){
     if(filterSelectOrder.value === "az") {
-        console.log("Crescente igual a lua")
+        const orderAz = dataBase.sort(function(a,b) {
+            return a.name < b.name ? -1 : a.name > b.name ? 1 : 0;
+        });
+        printCharacters(orderAz)
     }else if(filterSelectOrder.value === "za"){
-        console.log("ZazAzAZaZaZa")
+        const orderZa = dataBase.reverse(function(a,b) {
+            return b.name > a.name ? 1 : b.name < a.name ?  1 : 0;
+          });
+        printCharacters(orderZa)
     }else if(filterSelectOrder.value === "relevance"){
-        console.log("Super importante vc")
+        const orderRelevence = dataBase.sort(function(a,b) {
+            return a.id < b.id ? -1 : a.id > b.id ? 1 : 0;
+        });
+        printCharacters(orderRelevence )
     }else{
-        console.log()
+        printCharacters(dataBase)
     }
 }
 
