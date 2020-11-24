@@ -58,7 +58,7 @@ label{
     justify-content: space-between;
     padding-left: 50px;
     padding-right: 50px;
-    background-color: greenyellow;
+    background-color: rgb(255, 47, 175);
 }
 .cardArea{
     background: #EEF3F3;
@@ -72,7 +72,7 @@ label{
     padding-bottom: 1.5vh;
 }
 .card{
-    width: 265px;
+    width: 260px;
     height: 305px;
     margin-top: 2.5vh;
     margin-bottom: 2.5vh;
