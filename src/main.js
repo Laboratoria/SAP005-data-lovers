@@ -10,7 +10,7 @@ function pokebola() {
     document.getElementById("pokedex").innerHTML += `
     <li class="card-poke">
         <img class="card-image" src="${card.img}" alt="${card.img}/>
-        <h2 class="card-title">${card.num}. ${card.generation.name}</h2>
+        <h2 class="card-title">${card.name}. ${card.generation.name}</h2>
         <p class="card-subtitle">Type: ${card.type.toString().replace(","," ")}</p>
     </li>`
   }

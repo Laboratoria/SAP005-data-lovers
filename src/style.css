@@ -133,6 +133,24 @@ header {
   transform: translate(-50%, -50%);
 }
 
+.pokeball-motion{
+  position: relative;
+  animation: bounce 3s linear infinite;
+}
+@keyframes bounce {
+  0%{
+    bottom: 50px;
+  }
+  50%{
+    bottom: 20px;
+  }
+  55%{
+    bottom: 25px;
+  }
+  100%{
+    bottom: 50px;
+  }
+}
 .pokeball-top {
   width: 300px;
   height: 150px;
@@ -309,26 +327,56 @@ main {
   position: absolute;
 }
 
-/*.about h2{
-    display: flex;
-    justify-content: center;
+.carousel-pokemon{
+  position: relative;
+  bottom: 100px;
+  width: 100vw;
+  height: 100vh;
 }
-.about p{
-    position: absolute;
-    left: 50px;
-    top:  50px;
-    margin-top: 50px;
-    font-family: monospace;
-    font-size: 20px;
-    text-align: left;
-    width: 60vw;
-    height: 30%;
+
+#title2{
+  display: flex;
+  justify-content: center;
+  margin: 1% auto;
+  width: 80%;
+  height: 100%;
 }
-.carousel-pokemons{
-    display: flex;
-    justify-content: center;
+
+.box-pokemons{
+  position: relative;
+  bottom: 650px;
+  width: 50%;
+  height: 40%;
+  transform: translate(50%,50%);
+  overflow: hidden;
 }
-.carousel-pokemons h2{
-    position: absolute;
-    bottom:150px;
+
+#pokedex{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.card-poke{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 40px;
+}
+
+.card-image{
+  width: 35vh;
+  height: 50%;
+  filter: drop-shadow(8px 8px 5px #000);
+}
+
+/*.pokebase-card-title{
+}
+.card-subtitle{
+}*/
+
+.forward .return{
+  background-color: aqua;
+  z-index: 200px;
 }
