@@ -2,8 +2,7 @@
 // import data from './data/lol/lol.js';
 //import data from './data/pokemon/pokemon.js';
 import data from './data/rickandmorty/rickandmorty.js';
-//import charactersInfo from './data.js';
-
+import { orderAZ} from './data.js';
 //show all characters (basic) info on HTML
 //show filter result: gender (import the array from data.js)
 //show filter result: status dead/alive characters (import the array from data.js)
@@ -41,8 +40,19 @@ function showInfo(cards){
             p.appendChild(document.createTextNode(value));
             charactersList.appendChild(p);
             p.id = "gender"
+        }else if (key === "origin"){
+            let p = document.createElement("p");
+            p.appendChild(document.createTextNode("Origem: " +value.name));
+            charactersList.appendChild(p);
+            p.id = "origin";
+        }else if (key === "location"){
+            let p = document.createElement("p");
+            p.appendChild(document.createTextNode("Última localização: " +value.name));
+            charactersList.appendChild(p);
+            p.id + "location"
         }
         
     }
     showCharactersInfo.appendChild(charactersList);
 }
+const select = document.querySelector("")
