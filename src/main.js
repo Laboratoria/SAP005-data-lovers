@@ -18,9 +18,6 @@ function pokebola() {
 
 pokebola(data.pokemon);
 
-//const ul = document.getElementById("pokedex")
-//ul.innerHTML = pokebola.bola(data)
-
 
 
 //import { example } from './data.js';
