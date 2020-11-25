@@ -1,148 +1,120 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body {
-    text-align: center;
-    background-color: #9FDB95;
+    margin: auto;
+    padding: 0;
+    max-width: 67%;
+    background-color: #5CCDAA;
 }
 
-header {
-    margin-top: 2em;
-    margin-bottom: 2em;
-    text-align: center;
+header{
+    padding-top: 30px;
+    margin-top: 0;
+    background-color: rgba(8, 39, 141, 0.384);
+    border-radius: 30px;
+
 }
 
-main {
-    margin-bottom: 10vh;
-}
-
-.tituloSite {
-    font-size: 5em;
-}
-
-.filtros {
-    width: 100vw;
+.menu {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0 0.5em 0 0.5em;
+    list-style: none;
+    text-align: center;
 }
 
-.filtrosFilhos {
-    display: flex;
-    flex-direction: column;
+.menu ul {
+    padding: 10px;
 }
 
-.label {
-    font-size: 2.5em;
+.menu li{
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.menu li a{
+    color: blanchedalmond;
+}
+
+.imagemcabecalho {
+    width: 550px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.divimagem {
+    text-align: center;
+}
+
+.borda {
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.fieldset-borda {
+    border: 8px solid #1f3466;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.623);
+}
+  
+.legenda-borda {
     text-align: left;
-    margin-top: 0.5em;
+    width: auto;
+    padding: 0 10px;
 }
 
 .input {
-    height: 3em;
-    width: 45vw;
+    height: 50px;
+    width: 150px;
     border: solid 2px #5CCDAA;
     background-color: #ffffff;
     border-radius: 25px;
     padding: 0 0.2em;
     color: #5CCDAA;
-    font-size: 2.5em;
+    font-size: 20px;
 }
 
-option{
-    font-size: 0.5em;
-}
-/* início pra configurar o placeholder do input */
-
-::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color: #5CCDAA;
-}
-
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color: #5CCDAA;
-    opacity: 1;
+.botao {
+    border: solid 2px #1100ff;
+    background-color: #0212f062;
+    border-radius: 20px;
+    padding: 10px;
+    color: #000000;
+    font-size: 10px;
 }
 
-::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color: #5CCDAA;
-    opacity: 1;
-}
-
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #5CCDAA;
-}
-
-::-ms-input-placeholder { /* Microsoft Edge */
-    color: #5CCDAA;
-}
-
-/* final pra configurar o placeholder do input */
-
-button {
-    height: 3em;
-    width: 45vw;
-    border: none;
-    background-color: #44696C;
-    border-radius: 25px;
-    padding: 0 0.2em;
-    color: #ffffff;
-    font-size: 2.5em;
-    text-align: center;
-}
-
-button:active {
-    background-color: #fff;
-}
-
-.pokemons {
+.pokemons{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    max-width: 1000px;
-    margin: 0 auto;
+    justify-content: space-between;
+    padding: 30px;
 }
 
 .card {
-    margin: 1em;
+    width: 130px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background: rgb(248, 248, 255);
+    padding: 15px;
     text-align: center;
-    border: solid 0.1em #44696C;
-    border-radius: 25px;
-    width: 30vw;
-    padding: 1em;
+    margin: 20px 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
 }
 
-.pokemon-name {
-    font-size: 1.5em;
+.filtrosFilhos{
+    text-align: center;
 }
 
-.pokemon-num {
-    font-size: 1.5em;
+footer{
+    padding: 0;
+    text-align: center;
 }
 
-.pokemon-img {
-    width: 8em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
-
-.pokemon-region,
-.pokemon-type {
-    font-size: 1.5em;
-}
-
-.footer {
-    background-color: #44696C;
-    bottom: 0;
-    left: 0;
-    height: 8vh;
-    position: fixed;
-    width: 100vw;
-    line-height: 8vh;
-    color: #ffffff;
-    font-size: 2em;
+h2{
+    font-size: 15px;
 }

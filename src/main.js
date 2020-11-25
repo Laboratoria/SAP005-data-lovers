@@ -1,4 +1,4 @@
-import { selectType, calcType } from './data.js';
+import { selectType, calcType, buscarNome, buscarNum } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 const listaPokemons = data.pokemon;
@@ -7,17 +7,31 @@ function pokemons(lista) {
     for (let item of lista) {
         document.body.querySelector(".pokemons").innerHTML += `
                 <div class="card">
-                    <h2 class="pokemon-name">${item.name.toUpperCase()}</h2>
-                    <h2 class="pokemon-num">${item.num}</h2>
-                    <img src="${item.img}" alt="${item.name}" class="pokemon-img">
-                    <p class="pokemon-region">Região: ${item.generation.name}.</p>
-                    <p class="pokemon-type">Tipo:<br>${item.type.toString().replace(",",", ")}.</p>
+                    ${item.name.toUpperCase()} <br>
+                    ${item.num} <br>
+                    <img src="${item.img}"> <br>
+                    <b>Região: </b> ${item.generation.name} <br>
+                    <b>Tipo: </b>${item.type.toString().replace(",", ", ")}
                 </div>
         `
     }
 };
 
 pokemons(listaPokemons);
+
+document.getElementById("nomePokemon").oninput = () => {
+    const nomePokemons = document.getElementById("nomePokemon").value;
+    const pesquisaNome = buscarNome(data.pokemon, nomePokemons);
+    pokemons(pesquisaNome);
+    limparNome();
+};
+
+document.getElementById("numPokemon").oninput = () => {
+    const numPokemons = document.getElementById("numPokemon").value;
+    const pesquisaNum = buscarNum(data.pokemon, numPokemons);
+    pokemons(pesquisaNum);
+    limparNum();
+};
 
 document.getElementById("filterType").onchange = () => {
     const cards = document.getElementById("pokemons");
