@@ -13,7 +13,6 @@ header{
     display: flex;
     align-items: center;
     margin-left: 2vh;
-    resize: 50%;
     padding: 3vh;
 }
 .filters{
@@ -52,14 +51,21 @@ label{
     align-content: center;
 }
 .results{
+    width: 587px;
     height: 6vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding-left: 50px;
     padding-right: 50px;
-    background-color: rgb(255, 47, 175);
-}
+    background: rgba(250, 240, 116, 0.61);
+    position: absolute;
+    font-size: 14px;
+    line-height: 1em;
+    text-align: center;
+    color: #10145F;
+    border-radius: 35px;
+    }
 .cardArea{
     background: #EEF3F3;
     display: flex;
