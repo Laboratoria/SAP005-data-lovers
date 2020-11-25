@@ -1,4 +1,4 @@
-import { example } from './data.js';
+import { crescente, decrescente } from './data.js';
 import data from './data/pokemon/pokemon.js';
 //console.log(example, data);
 let input = document.getElementById("txtBusca");
@@ -14,7 +14,7 @@ function cardUnitario() {
     <p>${arrayDB[arrayN].about}</p> 
     <p>${arrayDB[arrayN].type.toString().replace(",", ", ")}</p>
     <p>${arrayDB[arrayN].resistant.toString().replace(",", ", ")}</p></div>`
-    document.getElementById("item-card-one").innerHTML = resultado;
+    document.getElementById("card-one").innerHTML = resultado;
     return resultado;
 };
 
@@ -27,55 +27,43 @@ input.addEventListener("keyup", function (event) {
 
 document.getElementById('btn-search-pokemon').addEventListener("click", cardUnitario);
 
-//Code para Campo de Todos os Campos:
+//Code com Manipulação para Todos os Cards:
 
-let resultadoDisplay = document.getElementById("item-all-cards");
+function padraoAllCards (array){
+for (let indice of array) 
+{document.getElementById("all-cards").innerHTML += `<div class="mostrar">
+<img src="${indice.img}">
+<h1>${indice.name.toUpperCase()}<h1>
+<p>${indice.num}</p> 
+<p>${indice.about}</p> 
+<p>${indice.type.toString().replace(",", ", ")}</p>
+<p>${indice.resistant.toString().replace(",", ", ")}</p></div>`};
+}
 
 function cardAll() {
+    document.getElementById("all-cards").innerHTML = "";
     const copiaDB = data.pokemon;
-    for (let indice of copiaDB) {
-        resultadoDisplay.innerHTML += `<div class="mostrar">
-    <img src="${indice.img}">
-    <h1>${indice.name.toUpperCase()}<h1>
-    <p>${indice.num}</p> 
-    <p>${indice.about}</p> 
-    <p>${indice.type.toString().replace(",", ", ")}</p>
-    <p>${indice.resistant.toString().replace(",", ", ")}</p></div>`
-    }
+    return padraoAllCards (copiaDB)
 };
 
-document.getElementById('btn-generation-pokemon').addEventListener("click", cardAll)
-
-function teste() {
-    document.getElementById("item-all-cards").innerHTML = "";
+function ordCrescente() {
+    document.getElementById("all-cards").innerHTML = "";
     const copiaDB = data.pokemon;
-    copiaDB.sort(function (a, b) { return a.name > b.name })
-    for (let indice of copiaDB) {
-        document.getElementById("item-all-cards").innerHTML += `<div class="mostrar">
-    <img src="${indice.img}">
-    <h1>${indice.name.toUpperCase()}<h1>
-    <p>${indice.num}</p> 
-    <p>${indice.about}</p> 
-    <p>${indice.type.toString().replace(",", ", ")}</p>
-    <p>${indice.resistant.toString().replace(",", ", ")}</p></div>`
-    }
+    const ordenaCres = crescente(copiaDB);
+    return padraoAllCards (ordenaCres)
 };
 
-document.getElementById('btn-cresc-pokemon').addEventListener("click", teste)
-
-function teste1() {
-    document.getElementById("item-all-cards").innerHTML = "";
+function ordDecrescente() {
+    document.getElementById("all-cards").innerHTML = "";
     const copiaDB = data.pokemon;
-    copiaDB.sort(function (a, b) { return a.name < b.name })
-    for (let indice of copiaDB) {
-        document.getElementById("item-all-cards").innerHTML += `<div class="mostrar">
-    <img src="${indice.img}">
-    <h1>${indice.name.toUpperCase()}<h1>
-    <p>${indice.num}</p> 
-    <p>${indice.about}</p> 
-    <p>${indice.type.toString().replace(",", ", ")}</p>
-    <p>${indice.resistant.toString().replace(",", ", ")}</p></div>`
-    }
+    const ordenaDec = decrescente(copiaDB);
+    return padraoAllCards (ordenaDec)
 };
 
-document.getElementById('btn-decresc-pokemon').addEventListener("click", teste1)
+//Botões
+
+document.getElementById('btn-generation-pokemon').addEventListener("click", cardAll) //Todos os cards sem tratamento
+
+document.getElementById('btn-cresc-pokemon').addEventListener("click", ordCrescente) //Todos os cards com Ordenação Crescente
+
+document.getElementById('btn-decresc-pokemon').addEventListener("click", ordDecrescente) //Todos os cards com Ordenação Decrescente
