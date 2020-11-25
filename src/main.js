@@ -13,7 +13,7 @@ function cardUnitario() {
     <p>${arrayDB[arrayN].about}</p> 
     <p>${arrayDB[arrayN].type.toString().replace(",", ", ")}</p>
     <p>${arrayDB[arrayN].resistant.toString().replace(",", ", ")}</p></div>`
-    document.getElementById("card-one").innerHTML = resultado;
+    document.getElementById("item-card-one").innerHTML = resultado;
     return resultado;
 };
 
