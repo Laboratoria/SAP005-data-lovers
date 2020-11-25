@@ -1,7 +1,6 @@
 //import example from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 const characters = data.results;
-
 const episodesList = [
   {
     "name": "Pilot",
@@ -128,19 +127,16 @@ const episodesList = [
     "episode": "S03E10",
   },
 ];
-
 //Trocar A-Z e Z-A por relevância na série (número de episódios em que apareceu)
 
-function testing (rick) {
+function switchEpisode (rick) {
   for (let item of rick) {
-      if (item.episode[0] === 'https://rickandmortyapi.com/api/episode/1') {
-        console.log(episodesList[0].name);
-      } else {
-        console.log('banana');
-      };
+    let beth = (item.episode[0]).substr(40, 39);
+    const episodeIndex = beth -1;
+    console.log(episodesList[episodeIndex].name);
     };  
 };
-testing(characters);
+switchEpisode(characters);
 
 function printData(file) {
   document.body.querySelector("#cardArea").innerHTML = "";
