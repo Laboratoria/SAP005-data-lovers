@@ -31,22 +31,22 @@ function showingCards(pokemonCards) {
             `<div class="frame left">
                 <div class="left">
                 <h3 class = "card-front"><img src = ${pokemon.img} class = "img" alt = ${pokemon.name}</h3> 
-                    <p> N°: ${pokemon.num}</p>
-                    <p> Nome: ${pokemon.name}</p>
-                    <p> Type: ${pokemon.type}</p>
-                    <p> Rarity: ${pokemon["pokemon-rarity"]}</p>                    
+                    <p>N°:${pokemon.num}</p>
+                    <p>Nome:${pokemon.name}</p>
+                    <p>Type:${pokemon.type}</p>
+                    <p>Rarity:${pokemon["pokemon-rarity"]}</p>                    
                 </div>
                 <div class="card-back">
-                    <p> Height: ${pokemon.size.height}</p>
-                    <p> Weight: ${pokemon.size.weight}</p>
-                    <p> Resistant: ${pokemon.resistant}</p>
-                    <p> Weaknesses: ${pokemon.weaknesses}</p>
-                    <p> Base Attack: ${pokemon.stats["base-attack"]}</p>
-                    <p> Base Defense: ${pokemon.stats["base-defense"]}</p>
-                    <p> Base Stamina: ${pokemon.stats["base-stamina"]}</p>
-                    <p> Max Cp: ${pokemon.stats["max-cp"]}</p>
-                    <p> Max Hp: ${pokemon.stats["max-hp"]}</p>
-                    <p> Evolution: ${evolutions}<p>
+                    <p>Height:${pokemon.size.height}</p>
+                    <p>Weight: ${pokemon.size.weight}</p>
+                    <p>Resistant:${pokemon.resistant}</p>
+                    <p>Weaknesses:${pokemon.weaknesses}</p>
+                    <p>Base Attack:${pokemon.stats["base-attack"]}</p>
+                    <p>Base Defense:${pokemon.stats["base-defense"]}</p>
+                    <p>Base Stamina:${pokemon.stats["base-stamina"]}</p>
+                    <p>Max Cp:${pokemon.stats["max-cp"]}</p>
+                    <p>Max Hp:${pokemon.stats["max-hp"]}</p>
+                    <p>Evolution:${evolutions}<p>
                     </div>
             </div>`
     }
