@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <title>PokéGuide</title>
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -30,7 +30,7 @@
     </div>
 
     <header>
-        <h1 class="header-title">Pokémon</h1>
+        <h1 class="header-title"></h1>
     </header>
 
     <div class="select-itens">
@@ -39,9 +39,8 @@
             <button class="btn-search" type="submit"><i class="fa fa-search"></i></button>
         </div>
         <div>
-            <label class="label-filter" for="filter-by-type">Type:</label>
             <select class="select-filter" id="select-filter-by-type" name="filter-by-type">
-                <option disabled selected value>Select</option>
+                <option class="disabled-selected" disabled selected value>Type</option>
                 <option value="bug">Bug</option>
                 <option value="dark">Dark</option>
                 <option value="steel">Dragon</option>
@@ -62,9 +61,8 @@
             </select>
         </div>
         <div>
-            <label class="label-filter" for="filter-by-resistant">Resistant:</label>
             <select class="select-filter" id="select-filter-by-resistant" name="filter-by-resistant">
-                <option disabled selected value>Select</option>
+                <option class="disabled-selected" disabled selected value>Resistant</option>
                 <option value="bug">Bug</option>
                 <option value="dark">Dark</option>
                 <option value="steel">Dragon</option>
@@ -85,9 +83,8 @@
             </select>
         </div>
         <div>
-            <label class="label-filter" for="filter-by-weaknesses">Weaknesses:</label>
             <select class="select-filter" id="select-filter-by-weaknesses" name="filter-by-weaknesses">
-                <option disabled selected value>Select</option>
+                <option class="disabled-selected" disabled selected value>Weaknesses</option>
                 <option value="bug">Bug</option>
                 <option value="dark">Dark</option>
                 <option value="steel">Dragon</option>
@@ -108,13 +105,31 @@
             </select>
         </div>
         <div>
-            <label class="label-sort" id="label-sort" for="sort">Sort:</label>
+            <select class="select-filter" id="select-filter-by-generation" name="filter-by-generation">
+                <option class="disabled-selected" disabled selected value>Generation</option>
+                <option value="kanto">Kanto</option>
+                <option value="johto">Johto</option>
+            </select>
+        </div>
+        <div>
             <select class="select-sort" id="select-sort" name="sort">
+<<<<<<< HEAD
                 <option disabled selected value>Select</option>
                 <option value="a_z" >A-Z</option>
+=======
+                <option class="disabled-selected" disabled selected value>Sort</option>
+                <option value="a_z">A-Z</option>
+>>>>>>> b2e17c212dc64eab3c22bef46ef87d99dbbf46e1
                 <option value="z_a">Z-A</option>
-                <option value="">1 à 251</option>
-                <option value="">251 à 1</option>
+                <option value="1_251">1 à 251</option>
+                <option value="251_1">251 à 1</option>
+        </select>
+        </div>
+        <div>
+            <select class="select-sort" id="select-sort-cp" name="sort-cp">
+                <option class="disabled-selected" disabled selected value>CP</option>
+                <option value="maior_menor">Maior-Menor</option>
+                <option value="menor_maior">Menor-Maior</option>
         </select>
         </div>
         <div>
@@ -123,11 +138,10 @@
     </div>
 
     <div class="space"></div>
-    
+
     <div class="main-cards" id="main-cards">
-        
-        <!-- <div class="frame-left"></div>
-        <div class="card-back"></div> -->
+        <div class="frame-left"></div>
+        <div class="card-back"></div>
     </div>
     </div>
     <!-- <footer class="footer">

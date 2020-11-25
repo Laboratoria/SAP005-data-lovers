@@ -5,25 +5,28 @@ const inputSearch = document.querySelector('#input-search')
 const selectFilterType = document.querySelector('#select-filter-by-type')
 const selectFilterResistant = document.querySelector('#select-filter-by-resistant')
 const selectFilterWeaknesses = document.querySelector('#select-filter-by-weaknesses')
+const selectFilterGeneration = document.querySelector('#select-filter-by-generation')
+const selectSortCp = document.querySelector('#select-sort-cp')
 const selectSort = document.querySelector('#select-sort')
 const btnClean = document.querySelector('#btn-clean')
 
 showingCards(data.pokemon)
 
 function showingCards(pokemonCards) {
-
-    let showCards = document.querySelector('#main-cards');
-    let cards = "";
-    showCards.innerHTML = "";
+    let showCards = document.querySelector('#main-cards')
+    let cards = ""
+    showCards.innerHTML = ""
 
     for (let pokemon of pokemonCards) {
-
-        /*let evolutions = ""
+        let evolutions = ""
         if (pokemon.evolution["next-evolution"] != undefined && pokemon.evolution["next-evolution"] != null) {
             for (let evolution of pokemon.evolution["next-evolution"]) {
-                evolutions += `<span> ${evolution.name} </span>`
+                evolutions += `<span>${evolution.name}</span>`
             }
-        }*/
+        } else {
+            evolutions = "Don't have"
+        }
+
         cards +=
         `<div class="frame left">
                 
