@@ -1,5 +1,3 @@
-// import {applySearchType, applySearchName, resultCalcType} from './data.js';
-
 import data from './data/pokemon/pokemon.js';
 for (let pokemon of data.pokemon) {
   const img = document.createElement('img');
@@ -33,18 +31,4 @@ for (let pokemon of data.pokemon) {
   document.getElementById('root').appendChild(card);
 }
 
-// { document.getElementById("select-type").onchange = () => {
-//     const filterType = document.getElementById("select-type").value;
-//     const listType = (applySearchType(pokemon, filterType));
-//     const filterCalcType = (resultCalcType(pokemon.length, filterType.length).toFixed(2));
-//      allList(listType);
-// }
 
-//  document.getElementById("filter-name").onkeyup = () => {
-//      const filterName = document.getElementById("filter-name").value;
-//      const newList = (applySearchName(pokemon, filterName))
-//      allList(newList);
-// } 
-
-
-// console.log(card, data);
