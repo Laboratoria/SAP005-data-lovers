@@ -34,37 +34,17 @@ header .container {
     justify-content: space-between;
     align-items: center;
     background-position: center center;
-    max-width: 1200px;/*
-    margin: 0 auto;
-    padding: 0 20px;*/
-    
+    max-width: 1200px;
 }
 
 .logo-tipo {
     width: 200px;
 }
 
-/*header .hamburguer:after {
-content: "";
-}
-
-header .menu {
-list-style: none;
-display: flex;
-align-items: center;
-}
-
-header .menu li {
-margin-left: 10px;
-}*/
-
 header .menu a {
 color: #919191 ;
 text-decoration: none;
-margin-right: 20px;/*
-padding: 10px 15px; 
-display: block;
-transition: 0.10s ease;*/
+margin-right: 20px;
 }
 
 header .menu a:hover,
@@ -221,7 +201,7 @@ color: #474747;
         max-width: 100%;
     } 
     
-    /*.container-carrossel {
+    .container-carrossel {
         overflow: visible;
     }
 
@@ -235,5 +215,5 @@ color: #474747;
     .flecha-esquerda,
     .flecha-direita {
         display: none;
-    }*/
+    }
 }
