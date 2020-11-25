@@ -13,3 +13,7 @@ export const selectPokemonResistant = (selectResistant, dataJson) => {
 export const selectPokemonWeaknesses = (selectWeaknesses, dataJson) => {
     return dataJson.filter(pokemon => pokemon.type == selectWeaknesses)
 }
+
+export const orderPokemonName = (orderName, dataJson) => {
+    return dataJson.filter(pokemon => pokemon.name == orderName)
+}

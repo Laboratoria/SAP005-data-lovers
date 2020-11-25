@@ -1,4 +1,4 @@
-import { instantSearch, selectPokemonType, selectPokemonResistant, selectPokemonWeaknesses } from './data.js'
+import { instantSearch, selectPokemonType, selectPokemonResistant, selectPokemonWeaknesses, orderPokemonName } from './data.js'
 import data from './data/pokemon/pokemon.js'
 
 const inputSearch = document.querySelector('#input-search')
@@ -25,30 +25,28 @@ function showingCards(pokemonCards) {
             }
         }*/
         cards +=
-            `<div class="frame-left">
-                <div class="left">
-                <div class = "card-front"><img src = ${pokemon.img} class = "img" alt = ${pokemon.name}/> 
-                    <p> N°: ${pokemon.num}</p> 
-                    <p> Nome: ${pokemon.name} </p> 
-
-                </div>
+        `<div class="frame left">
                 
-                <div class="card-back"> 
-                    <p> Type: ${pokemon.type}</p>
-                    <p> Height: ${pokemon.size.height}</p>
-                    <p> Weight: ${pokemon.size.weight}</p>
-                    <p> Resistant: ${pokemon.resistant}</p>
-                    <p> Weaknesses: ${pokemon.weaknesses}</p>
-                    <p> Base Attack: ${pokemon.stats["base-attack"]}</p>
-                    <p> Base Defense: ${pokemon.stats["base-defense"]}</p>
-                    <p> Base Stamina: ${pokemon.stats["base-stamina"]}</p>
-                    <p> Max Cp: ${pokemon.stats["max-cp"]}</p>
-                    <p> Max Hp: ${pokemon.stats["max-hp"]}</p>
-                    <p> Rarity: ${pokemon["pokemon-rarity"]}</p>
-                    <p> Region: ${pokemon.generation.name}</p>
-                    </div>
-                    
-            </div>`
+        <div class="left"><h3 class = "card-front"><img src = ${pokemon.img} class = "img" alt = ${pokemon}</h3>
+        <p>N°: ${pokemon.num} <br> Nome: ${pokemon.name} </p>
+        </div>
+        
+        <div class="card-back"> 
+            <p> Type: ${pokemon.type}</p>
+            <p> Height: ${pokemon.size.height}</p>
+            <p> Weight: ${pokemon.size.weight}</p>
+            <p> Resistant: ${pokemon.resistant}</p>
+            <p> Weaknesses: ${pokemon.weaknesses}</p>
+            <p> Base Attack: ${pokemon.stats["base-attack"]}</p>
+            <p> Base Defense: ${pokemon.stats["base-defense"]}</p>
+            <p> Base Stamina: ${pokemon.stats["base-stamina"]}</p>
+            <p> Max Cp: ${pokemon.stats["max-cp"]}</p>
+            <p> Max Hp: ${pokemon.stats["max-hp"]}</p>
+            <p> Rarity: ${pokemon["pokemon-rarity"]}</p>
+            <p> Region: ${pokemon.generation.name}</p>
+            </div>
+            
+    </div>`
 
 
     }
@@ -80,3 +78,4 @@ selectFilterWeaknesses.addEventListener('change', () => {
     const pokemonWeaknesses = selectPokemonWeaknesses(selectWeaknesses, data.pokemon)
     showingCards(pokemonWeaknesses)
 })
+
