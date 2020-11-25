@@ -8,5 +8,6 @@ export const filterType = () => { }
 
 
 //ordenação
-//filtro
+//filtro raridade
+//filtro por ordem alfabética
 //search

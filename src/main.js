@@ -1,4 +1,5 @@
 import { filterType } from './data.js';
+filterType
 
 import data from './data/pokemon/pokemon.js';
 
@@ -21,23 +22,35 @@ const getPoke = (data) => {
     container.innerHTML = '';
     for (let poke of data) {
         const img = poke.img,
-            id = poke.id,
             num = poke.num,
             name = poke.name,
-            type = poke.type;
-        cardInfo(img, num, name, type, id);
+            type = poke.type,
+            weaknesses = poke.weaknesses;
+
+        cardInfo(img, num, name, type, weaknesses);
     } // loop para trazer os elementos
 };
 
-const cardInfo = (img, num, name, type, id) => {
+const cardInfo = (img, num, name, type, weaknesses) => {
     container.innerHTML += `
-                        
-                          <div class="card-lista" id=${id}>
+                         
+                          <div class="flip-card">
+                          <div class="card1">
+                          <div class="flip-card-front">
                           <p class="card-info-poke"><img class="img" src=${img} alt="${name}"/></p>
                           <p class="card-info-poke"> ${num}</p> 
                           <p class="card-info-poke">${name}</p>
                           <p class="card-info-poke">${type}</p>
-                          </div>`;
-};
+                          </div>
+                          <div class="flip-card-back">
+                          <p class="card-info-poke"> ${num}</p> 
+                          <p class="card-info-poke">${name}</p>
+                          <p class="card-info-poke">${type}</p>
+                          <p class="card-info-poke">${weaknesses}</p>
+                          </div>
+                          </div>
+                          </div>
+                          
+`}
 // a tag li é usado para representar um item que faz parte de uma lista - coloca icone
 // a tag ul representa uma lista de itens 
