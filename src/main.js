@@ -1,87 +1,8 @@
 //import example from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 const characters = data.results;
-function printData(file) {
-  document.body.querySelector("#cardArea").innerHTML = "";
-  for (let item of file) {
-    document.body.querySelector("#cardArea").innerHTML += `
-      <div class="testing">
-        <div class="card">
-          <div class="cardFront">  
-            <div class="image" style="background-image: url(${item.image})"></div>
-            <div class="text">
-                <h3 class="name">${item.name}</h3>
-                <h4 class="subtitle"> First time seen: </h4>
-                <p class="data" id="episode">${item.episode[0]}</p>
-            </div>
-          </div>
-          <div class="cardBack">
-            <div class="textBack">
-              <h3 class="name">${item.name}</h3>
-              <br><h4 class="subtitle"> Species: </h4>
-              <p class="data" id="species">${item.species}</p></br>
-              <br><h4 class="subtitle"> Gender: </h4>
-              <p class="data" id="gender">${item.gender}</p></br>
-              <br><h4 class="subtitle"> Origin: </h4>
-              <p class="data" id="origin">${item.origin.name}</p></br>
-              <br><h4 class="subtitle"> Location: </h4>
-              <p class="data" id="location">${item.location.name}</p></br>
-              <br><h4 class="subtitle"> Status: </h4>
-              <p class="data" id="status">${item.status}</p></br>
-            </div>  
-          </div>        
-        </div>
-      </div> `
-  }
-}
-printData(characters);
-document.querySelector('#order').addEventListener('change', alphabeticOrder);
-function alphabeticOrder() {
-  const selectOrder = document.querySelector('#order').value;
-  if (selectOrder === "az") {
-    characters.sort(function (a, b) {
-      if (a.name.toUpperCase() < b.name.toUpperCase()) return -1;
-      if (a.name.toUpperCase() > b.name.toUpperCase()) return 1;
-      return 0;
-    })
-  } else {
-    characters.sort(function (a, b) {
-      if (a.name.toUpperCase() > b.name.toUpperCase()) return -1;
-      if (a.name.toUpperCase() < b.name.toUpperCase()) return 1;
-      return 0;
-    })
-  };
-  printData(characters);
-};
-document.querySelector('#status').addEventListener('change', statusFilter);
-function statusFilter() {
-  const getStatus = document.querySelector('#status').value;
-  const filteredStatus = characters.filter((item) => item.status === getStatus);
-  printData(filteredStatus);
-  const percentage = Math.floor((filteredStatus.length * 100) / characters.length);
-  const category = getStatus.toLowerCase();
-  const results = document.createElement("p");
-  const content = document.createTextNode(`${percentage}% of the characters are ${category}`);
-  results.appendChild(content);
-  const rick = document.body.appendChild(results);
-};
-document.querySelector('#species').addEventListener('change', speciesFilter);
-function speciesFilter() {
-  const getSpecies = document.querySelector('#species').value;
-  const filteredSpecies = characters.filter((item) => item.species === getSpecies);
-  printData(filteredSpecies);
-};
-document.querySelector('#gender').addEventListener('change', genderFilter);
-function genderFilter() {
-  const getGender = document.querySelector('#gender').value;
-  const filteredGender = characters.filter((item) => item.gender === getGender);
-  printData(filteredGender);
-};
 
-//dúvida: se eu quisesse filtrar cruzando mais de uma opção? check-box? 
-// como eu faria para resolver o conflito entre o value unknown?
-
-/* const episodesList = [
+const episodesList = [
   {
     "name": "Pilot",
     "episode": "S01E01"
@@ -207,9 +128,108 @@ function genderFilter() {
     "episode": "S03E10",
   },
 ];
-*/
-/*for (let item of characters) {
-  if (item.status === morty) {
-    rick.push(item);}
+
+//Trocar A-Z e Z-A por relevância na série (número de episódios em que apareceu)
+
+function testing (rick) {
+  for (let item of rick) {
+      if (item.episode[0] === 'https://rickandmortyapi.com/api/episode/1') {
+        console.log(episodesList[0].name);
+      } else {
+        console.log('banana');
+      };
+    };  
 };
-*/
+testing(characters);
+
+function printData(file) {
+  document.body.querySelector("#cardArea").innerHTML = "";
+  for (let item of file) {
+    document.body.querySelector("#cardArea").innerHTML += `
+      <div class="testing">
+        <div class="card">
+          <div class="cardFront">  
+            <div class="image" style="background-image: url(${item.image})"></div>
+            <div class="text">
+                <h3 class="name">${item.name}</h3>
+                <h4 class="subtitle"> First time seen: </h4>
+                <p class="data" id="episode">${item.episode[0]}</p>
+            </div>
+          </div>
+          <div class="cardBack">
+            <div class="textBack">
+              <h3 class="name">${item.name}</h3>
+              <br><h4 class="subtitle"> Species: </h4>
+              <p class="data" id="species">${item.species}</p></br>
+              <br><h4 class="subtitle"> Gender: </h4>
+              <p class="data" id="gender">${item.gender}</p></br>
+              <br><h4 class="subtitle"> Origin: </h4>
+              <p class="data" id="origin">${item.origin.name}</p></br>
+              <br><h4 class="subtitle"> Location: </h4>
+              <p class="data" id="location">${item.location.name}</p></br>
+              <br><h4 class="subtitle"> Status: </h4>
+              <p class="data" id="status">${item.status}</p></br>
+            </div>  
+          </div>        
+        </div>
+      </div> `
+  }
+}
+printData(characters);
+document.querySelector('#order').addEventListener('change', alphabeticOrder);
+function alphabeticOrder() {
+  const selectOrder = document.querySelector('#order').value;
+  if (selectOrder === "az") {
+    characters.sort(function (a, b) {
+      if (a.name.toUpperCase() < b.name.toUpperCase()) return -1;
+      if (a.name.toUpperCase() > b.name.toUpperCase()) return 1;
+      return 0;
+    })
+  } else {
+    characters.sort(function (a, b) {
+      if (a.name.toUpperCase() > b.name.toUpperCase()) return -1;
+      if (a.name.toUpperCase() < b.name.toUpperCase()) return 1;
+      return 0;
+    })
+  };
+  printData(characters);
+};
+document.querySelector('#status').addEventListener('change', statusFilter);
+function statusFilter() {
+  document.querySelector('.results').innerHTML = "";
+  const getStatus = document.querySelector('#status').value;
+  const filteredStatus = characters.filter((item) => item.status === getStatus);
+  printData(filteredStatus);
+  const percentage = Math.round((filteredStatus.length * 100) / characters.length);
+  const category = getStatus.toLowerCase();
+  const results = document.createElement("p");
+  const content = document.createTextNode(`${percentage}% of the characters are ${category}`);
+  results.appendChild(content);
+  document.querySelector('.results').appendChild(results);
+};
+document.querySelector('#species').addEventListener('change', speciesFilter);
+function speciesFilter() {
+  document.querySelector('.results').innerHTML = "";
+  const getSpecies = document.querySelector('#species').value;
+  const filteredSpecies = characters.filter((item) => item.species === getSpecies);
+  printData(filteredSpecies);
+  const percentage = Math.round((filteredSpecies.length * 100) / characters.length);
+  const category = getSpecies.toLowerCase();
+  const results = document.createElement("p");
+  const content = document.createTextNode(`${percentage}% of the characters are ${category}`);
+  results.appendChild(content);
+  document.querySelector('.results').appendChild(results);
+};
+document.querySelector('#gender').addEventListener('change', genderFilter);
+function genderFilter() {
+  document.querySelector('.results').innerHTML = "";
+  const getGender = document.querySelector('#gender').value;
+  const filteredGender = characters.filter((item) => item.gender === getGender);
+  printData(filteredGender);
+  const percentage = Math.round((filteredGender.length * 100) / characters.length);
+  const category = getGender.toLowerCase();
+  const results = document.createElement("p");
+  const content = document.createTextNode(`${percentage}% of the characters are ${category}`);
+  results.appendChild(content);
+  document.querySelector('.results').appendChild(results);
+};
