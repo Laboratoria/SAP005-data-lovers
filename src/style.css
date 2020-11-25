@@ -8,7 +8,7 @@
 }
 
 nav,
-ul {
+ol {
 	list-style: none;
 }
 
@@ -120,19 +120,25 @@ a:hover {
 	color: black;
 	text-align: center;
 }
-.main {
-	padding: 150px;
-	width: 40px;
-	height: 50px;
-	margin: 3px;
-}
-.card {
+#root {
 	display: flex;
-	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
-	flex: 1;
+	width: 80vw;
+	height: 70vh;
+	margin: auto;
+}
+.card {
+	width: 10vw;
+	margin: 5px;
+	padding: 5px;
+	border: 1px solid silver;
+	border-radius: 10px;
+}
+.card-body {
 	text-align: center;
+	justify-content: flex-start;
+	flex-direction: row;
 }
 
 .name {
@@ -154,18 +160,4 @@ a:hover {
 	color: rgb(70, 27, 228);
 	font-size: 15px;
 	text-align: center;
-}
-
-@media {
-	.card {
-		display: flex;
-	}
-	.div-child {
-		display: inline;
-	}
-	.img-pokemon {
-		text-align: center;
-		width: 40%;
-		height: 20%;
-	}
 }
