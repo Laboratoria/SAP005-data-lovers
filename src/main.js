@@ -1,5 +1,4 @@
-// import {applySearchType, applySearchName, resultCalcType} from './data.js';
-
+import { example } from './data.js';
 import data from './data/pokemon/pokemon.js';
 for (let pokemon of data.pokemon) {
   const img = document.createElement('img');
