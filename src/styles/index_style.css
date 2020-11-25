@@ -252,6 +252,7 @@ img{
 }
 
 .item-instruction-show-poke #btn-generation-pokemon{
+    cursor: pointer;
     margin-top: 0.3em;
     box-sizing: border-box;
     background-color: blue;
@@ -296,6 +297,7 @@ img{
 }
 
 #btn-cresc-pokemon{
+    cursor: pointer;
     margin-left: 0.5em;
     margin-right: 0.5em;
     margin-top: 0.3em;
@@ -318,6 +320,7 @@ img{
 }
 
 #btn-decresc-pokemon{
+    cursor: pointer;
     margin-top: 0.3em;
     box-sizing: border-box;
     background-color: blue;
@@ -361,6 +364,7 @@ img{
 }
 
 .item-filter #filter-type{
+    cursor: pointer;
     padding: 8px;
     margin-left: .7em;
     font-size: 1em;
@@ -372,7 +376,8 @@ img{
 }
 
 .item-filter #filter-weakness{
-  
+
+    cursor: pointer;
     padding: 8px;
     margin-left: .7em;
     font-size: 1em;
