@@ -207,6 +207,13 @@ function genderFilter() {
   statisticData(filterGender, getGender);
   printData(filterGender);
 };
+document.getElementById("enter").addEventListener("click", searchLocation);
+function searchLocation(){
+  const getLocation = document.getElementById("search").value;
+  const filterLocation = characters.filter((item) => item.location.name === getLocation);
+  statisticData(filterLocation, getLocation);
+  printData(filterLocation);
+};
 function statisticData(data, condition) {
   document.getElementById("results").innerHTML = "";
   const percentage = Math.round((data.length * 100) / characters.length);
@@ -215,10 +222,3 @@ function statisticData(data, condition) {
   results.appendChild(content);
   document.getElementById("results").appendChild(results);
 };
-document.getElementById("form").addEventListener("submit", searchLocation);
-function searchLocation(){
-  const getLocation = document.getElementById("search").value;
-  const filterLocation = characters.filter((item) => item.location.name[0] === getLocation);
-  printData(filterLocation).preventDefault();
-};
-//testing
