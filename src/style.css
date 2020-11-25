@@ -119,6 +119,7 @@ a:hover {
 	color: black;
 	text-align: center;
 }
+
 @media (max-width: 656px) {
 	.footer {
 		flex-direction: column-reverse;
@@ -133,6 +134,7 @@ a:hover {
 	}
 }
 /*CARDS */
+
 
 #root {
 	display: flex;
