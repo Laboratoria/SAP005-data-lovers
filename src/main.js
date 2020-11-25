@@ -3,6 +3,7 @@ import filter from './data.js';
 const img = filter.photo()
 showAllPokemons()
 
+
 function showAllPokemons() {
     img.forEach(pokemon => {
         const text = document.createElement('p');
@@ -26,19 +27,32 @@ button.addEventListener('click', (e)=>{
     document.getElementById('cards').innerHTML= "";
  
     if("" !== searchOption){
-        name.forEach(pokemon => {
-            if(searchOption == pokemon.name ){
-                const text = document.createElement('p');
-                const image = document.createElement("img");
-                image.src = pokemon.img
-                text.innerHTML = pokemon.name  
-                document.getElementById('cards').appendChild(text);
-                text.appendChild(image); 
-            }            
-              
-        })
+       const found = name.find(pokemon => pokemon.name == searchOption)
+       if(found !== undefined){
+            const text = document.createElement('p');
+            const image = document.createElement("img");
+            image.src = found.img
+            text.innerHTML = found.name  
+            document.getElementById('cards').appendChild(text);
+            text.appendChild(image); 
+        }else{
+            const textNotFound = document.createElement('p');
+            const imageNotFound = document.createElement("img");
+            const btn = document.createElement("button");
+            imageNotFound.src = "./img/nao-encontrado.png"           
+            textNotFound.innerHTML = "Ops... Esse pokémon não foi encontrado!"  
+            document.getElementById('cards').appendChild(textNotFound);
+            textNotFound.appendChild(imageNotFound);
+            textNotFound.appendChild(btn);
+
+            imageNotFound.classList.add('imageNotFound');
+            textNotFound.classList.add('textNotFound');
+        }
+        
+    
+    
     }else{
-        alert('POKEMON NÃO ENCONTRADO')
+        showAllPokemons()
     }
 
 });
@@ -52,7 +66,6 @@ let select = "";
 
 nameFilter.addEventListener('change',(event)=>{
     select = event.target.value;
-    console.log(select)
     document.getElementById('cards').innerHTML= "";
 
     if ("" === event.target.value) {
