@@ -1,4 +1,4 @@
-import { instantSearch, selectPokemonType, selectPokemonResistant, selectPokemonWeaknesses } from './data.js'
+import { instantSearch, selectPokemonType, selectPokemonResistant, selectPokemonWeaknesses, selectPokemonGeneration } from './data.js'
 import data from './data/pokemon/pokemon.js'
 
 const inputSearch = document.querySelector('#input-search')
@@ -23,7 +23,10 @@ function showingCards(pokemonCards) {
             for (let evolution of pokemon.evolution["next-evolution"]) {
                 evolutions += `<span>${evolution.name}</span>`
             }
+        } else {
+            evolutions = "Don't have"
         }
+
         cards +=
             `<div class="frame left">
                 <div class="left">
@@ -76,8 +79,8 @@ selectFilterWeaknesses.addEventListener('change', () => {
     showingCards(pokemonWeaknesses)
 })
 
-/*selectFilterGeneration.addEventListener('change', () => {
+selectFilterGeneration.addEventListener('change', () => {
     const selectGeneration = selectFilterGeneration.value
     const pokemonGeneration = selectPokemonGeneration(selectGeneration, data.pokemon)
     showingCards(pokemonGeneration)
-})*/
+})
