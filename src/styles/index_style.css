@@ -12,15 +12,26 @@ body{
     font-family: 'Exo', sans-serif;
 }
 
+/* border box para que os conteudos fiquem dentro de um box, ex, p, h1, etc */
+*{
+    box-sizing: border-box;
+}
+
+/* display block (descer junto com o browser) e max widht, diminui de acordo com o display */
+img{
+    display: block;
+    max-width: 100%;
+}
+
 /* ------------------------HEADER-------------------------------------------- */
 
 
 /* background do header */
-.menu-bg{
+.header-bg{
     background:#F5F5F5;
 }
 
-.menu{
+.container-header{
     max-width: 960px;
     margin: 0 auto;
     padding: 15px 0;
@@ -37,37 +48,28 @@ body{
 }
 
 /* remover o estiulo de lista, com pontos na frente */
-.menu-nav ul{
+.item-menu-nav ul{
     display: flex;
     list-style: none;
     flex-wrap: wrap;
 }
 
-.menu-nav a{
+.item-menu-nav a{
+    padding: 10px;
     text-transform: uppercase;
     text-decoration: none;
     color:#313131;
     display: block;
-    padding: 10px;
     transition: all .3s ease-in-out;
     -webkit-transition: all .3s ease-in-out;
 }
 
-.menu-nav a:hover{
+.item-menu-nav a:hover{
     color:#3168B0;
     border-bottom: .5px dotted #3168B0;
     padding: 10px 15px;
 }
 
-/* border pox para que os conteudos fiquem dentro de um box, ex, p, h1, etc */
-*{
-    box-sizing: border-box;
-}
-/* display block (descer junto com o browser) e max widht, diminui de acordo com o display */
-img{
-    display: block;
-    max-width: 100%;
-}
 
 /* ------------------------INTRO DO SITE-------------------------------------------- */
 
@@ -77,9 +79,8 @@ img{
 
 }
 
-
 /* nome-site */
-.pokelovers{
+.site-name{
     color:white;
     font-size:3em;
     line-height: 1;
@@ -90,19 +91,19 @@ img{
 
 /* sobre */
 
-.about{
+.container-about{
     border-top:2px solid #b6b6b6;
     border-bottom:2px solid #b6b6b6;
     max-width: 960px;
     margin: 0 auto;
     padding: 60px 0;
-    flex-direction: row;
-    justify-content: space-between;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;    
 }
 
-.about-info{
+.item-about-info{
     flex:2 1 300px;
     margin:0 10px;
     align-content: center;
@@ -112,20 +113,20 @@ img{
     flex-grow: 1;
 }
 
-.about-info h1{
+.item-about-info h1{
     font-size:3em;
     line-height: 1;
     color: white;
     padding-bottom: .5em;
 }
 
-.about-info p{
+.item-about-info p{
     font-size:1em;
     line-height: 1.5;
     color:white;
 }
 
-.img-about{
+.item-img-about{
     flex: 2 1 160px;
 }
 
@@ -143,29 +144,24 @@ img{
 
 }
 
-.search{
+.container-search{
     background-color:rgb(70, 70, 70);
     max-width: 960px;
     margin: 0 auto;
     padding-bottom: 1em;
+    border-radius: 1em;
     display: flex;
     flex-wrap: wrap;
-    border-radius: 1em;
 
 }
 
-.instruction-text{
+.item-instruction-search{
+    margin: 0 10px;
+    align-content: center;
     padding-top: 2em;
     color:white;
     flex: 2 1 300px;
-    margin: 0 10px;
-    align-content: center;
     flex-grow: 1;
-}
-.instruction-search{
-    flex:2 1 300px;
-    margin:0 10px;
-
 }
 
 #txtBusca{
@@ -196,7 +192,7 @@ img{
     scale: .5px;
 }
 
-#card-one{
+#item-card-one{
     background: #EE6B2F;
     border-radius: 1em;
     width: 19em;
@@ -228,29 +224,30 @@ img{
     align-self: center;
     display: inline;
 }
-    
-.show-all-pokemons{
+
+/* -----------    CONTAINER INSTRUÇÕES MOSTRAR TODOS OS POKEMONS ------------------ */
+
+.container-show-all-pokemons{
     border-top: 2px solid #b6b6b6;
     max-width: 960px;
     margin: 0 auto;
     padding: 60px 0px 0px 0px;
-    flex-direction: row;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     align-items: flex-end;
-
 }
 
-.show h1{
+.item-instruction-show-poke h1{
     text-align: center;
 }
 
-.show{
+.item-instruction-show-poke{
     margin-right: 1em;
 }
 
-#btn-generation-pokemon{
+.item-instruction-show-poke #btn-generation-pokemon{
     margin-top: 0.3em;
     box-sizing: border-box;
     background-color: blue;
@@ -264,34 +261,39 @@ img{
     transition: all 0.3s ease-in-out 0s;
 }
 
-#btn-generation-pokemon:hover{
+.item-instruction-show-poke #btn-generation-pokemon:hover{
     background-color: rgb(135, 135, 231);
     scale: .5px;
 }
 
 
-.ordenar{
+/* ----------------------------CONTAINER DE ORDENAR------------------------------- */
+
+
+.container-sort{
     
     max-width: 960px;
     margin: 0 auto;
     padding: 60px 0;
+    display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
 }
 
-.btn-order{
+.item-sort h1{
     font-size: 2em;
     line-height: 1;
     max-width: 960px;
-    padding-bottom: 28px;
+    margin: 0 auto;
     padding-left: 10px;
-    
+    margin-right: 10px;
 }
 
 #btn-cresc-pokemon{
+    margin-left: 0.5em;
+    margin-right: 0.5em;
     margin-top: 0.3em;
     box-sizing: border-box;
     background-color: blue;
@@ -304,6 +306,8 @@ img{
     font-weight: 700;
     transition: all 0.3s ease-in-out 0s;
 }
+
+
 #btn-cresc-pokemon:hover{
     background-color: rgb(135, 135, 231);
     scale: .5px;
@@ -328,18 +332,44 @@ img{
     scale: .5px;
 }
 
-.ordenar-text h1{
-    font-size: 2em;
-    line-height: 1;
+/*----------------------------- CONTAINER FILTRAR POR TIPO E FRAQUEZA -----------------*/
+
+.container-filter{
     max-width: 960px;
     margin: 0 auto;
-    padding-bottom: 28px;
-    padding-left: 10px;
-    margin-right: 2px;
+    padding-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
+.item-filter h1{
+    font-size: 2em;
+    max-width: 960px;
+    padding-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 1px;
+}
 
-.show-all-cards{
+.item-filter #filter{
+    border:none;
+    padding: 8px;
+    margin-left: .7em;
+    font-size: 1em;
+    border-radius: .5em;
+    text-transform: uppercase;
+    background: blue;
+    font-family: 'Exo', sans-serif;
+    font-size: 13pt;
+    font-weight: 700;
+    color: white;
+}
+
+/* --------------------------------CONTAINER ONDE SÃO MOSTRADOS TODOS OS CARDS------------ */
+
+.container-show-all-cards{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -353,6 +383,7 @@ img{
     overflow-y: scroll; 
 
 }
+
 .mostrar{
     text-align: center;
     background: #EE6B2F;
@@ -385,11 +416,14 @@ img{
     display: inline;
 }
 
-#all-cards{
+#item-all-cards{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
+
+
+/* -------------------------------------FOOTER---------------------------------------------------- */
 
 footer{
     margin-top: 4em;

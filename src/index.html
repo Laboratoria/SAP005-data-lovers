@@ -4,19 +4,19 @@
     <title>Pokelovers</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="styles/index_style.css">
 </head>
 
 <body>
 
-    <header class=menu-bg>
-        <div class="menu">
-            <div class="menu-logo">
+    <header class=header-bg>
+        <div class="container-header">
+            <div class="item-logo">
                 <a href="#" id="logo">
                     <img src="img/pokemon-logo.png" alt="logo do site" id="logo">
                 </a>
                 </div>
-            <nav class="menu-nav">
+            <nav class="item-menu-nav">
                 <ul>
                     <li><a href="#">Sobre</a></li>
                     <li><a href="#">Localizar Pokemons</a></li>
@@ -28,54 +28,68 @@
 
 
     <section class="bg-top-container">
-        <h1 class="pokelovers">Pokelovers</h1>
-        <section class="about">
-            <div class=about-info>
+        <h1 class="site-name">Pokelovers</h1>
+        <section class="container-about">
+            <div class=item-about-info>
                 <h1>Sobre o Pokelovers</h1>
                 <p>Lorem ipsum per ad etiam taciti dictumst bibendum non cubilia dapibus, primis tincidunt leo consequat ultrices nec a viverra imperdiet felis pharetra, tristique non nulla etiam nisi hac habitasse consectetur enim. egestas quisque aenean sem nam ultricies euismod class vivamus hac, auctor quis porttitor lacinia dapibus mattis at et curae, pulvinar enim aliquam venenatis per auctor fringilla consectetur. id senectus condimentum ultrices pharetra ultricies mi ornare litora interdum, sem magna etiam interdum egestas interdum sed lacus curabitur suspendisse, taciti et nisi sociosqu sed amet sem nisi. arcu mattis lobortis enim magna litora dui imperdiet malesuada nisl, eget ultrices urna auctor per curabitur aenean inceptos tincidunt, commodo gravida ut lobortis risus id placerat eros.  </p>
             </div>
-            <div class="img-about">
+            <div class="item-img-about">
                  <img src="img/pokemon.png">
             </div>
         </section>
     </section>
 
     <h1 class="search-pokemon"> Procurar Pokemon!</h1>
-    <section class="search">
-        <div class=instruction-search>
+    <section class="container-search">
+        <div class=item-instruction-search>
             <h1 class="instruction-text"> Digite o número do Pokemon e saiba todas as informações sobre ele!</h1>
                     <input type="text" id="txtBusca"/>
                     <button id="btn-search-pokemon">Buscar</button>
                 </div>
             </div>
-            <div id="card-one"> </div>
+            <div id="item-card-one"> </div>
         </div>
     </section>
 
 
-    <section class="show-all-pokemons">
-        <div class=show>
+    <section class="container-show-all-pokemons">
+        <div class="item-instruction-show-poke">
             <h1>Clique no botão e confira a lista completa de Pokemons!</h1>
         </div>
-        <div>
+        <div class="item-instruction-show-poke">
             <button id="btn-generation-pokemon">Gerar lista completa</button>
         </div>
     </section>
 
-    <section class="ordenar">
-        <div class="ordenar-text">
+    <section class="container-sort">
+        <div class="item-sort">
             <h1>Ordenar Pokemons por:</h1>
         </div>
-        <div class="btn-order">
+        <div class="item-sort">
             <button id="btn-cresc-pokemon">Crescente</button>
         </div>
-        <div class="btn-order">
+        <div class="item-sort">
             <button id="btn-decresc-pokemon">Decrescente</butto>
         </div>
-
     </section>
-    <section class="show-all-cards">
-        <div id="all-cards"> </div>
+
+    <section class="container-filter">
+        <div class="item-filter">
+            <h1>Filtrar Pokemons por:</h1>
+        </div>
+        <div class="item-filter">
+            <select id="filter">
+                <option value="type">Tipo</option>
+                <option value="weakness">Fraqueza</option>
+              </select>
+        </div>
+    </section>
+
+
+
+    <section class="container-show-all-cards">
+        <div id="item-all-cards"> </div>
     </section>
 
     <footer class="footer">

@@ -14,7 +14,7 @@ function cardUnitario() {
     <p>${arrayDB[arrayN].about}</p> 
     <p>${arrayDB[arrayN].type.toString().replace(",", ", ")}</p>
     <p>${arrayDB[arrayN].resistant.toString().replace(",", ", ")}</p></div>`
-    document.getElementById("card-one").innerHTML = resultado;
+    document.getElementById("item-card-one").innerHTML = resultado;
     return resultado;
 };
 
@@ -29,7 +29,7 @@ document.getElementById('btn-search-pokemon').addEventListener("click", cardUnit
 
 //Code para Campo de Todos os Campos:
 
-let resultadoDisplay = document.getElementById("all-cards");
+let resultadoDisplay = document.getElementById("item-all-cards");
 
 function cardAll() {
     const copiaDB = data.pokemon;
@@ -47,11 +47,11 @@ function cardAll() {
 document.getElementById('btn-generation-pokemon').addEventListener("click", cardAll)
 
 function teste() {
-    document.getElementById("all-cards").innerHTML = "";
+    document.getElementById("item-all-cards").innerHTML = "";
     const copiaDB = data.pokemon;
     copiaDB.sort(function (a, b) { return a.name > b.name })
     for (let indice of copiaDB) {
-        document.getElementById("all-cards").innerHTML += `<div class="mostrar">
+        document.getElementById("item-all-cards").innerHTML += `<div class="mostrar">
     <img src="${indice.img}">
     <h1>${indice.name.toUpperCase()}<h1>
     <p>${indice.num}</p> 
@@ -64,11 +64,11 @@ function teste() {
 document.getElementById('btn-cresc-pokemon').addEventListener("click", teste)
 
 function teste1() {
-    document.getElementById("all-cards").innerHTML = "";
+    document.getElementById("item-all-cards").innerHTML = "";
     const copiaDB = data.pokemon;
     copiaDB.sort(function (a, b) { return a.name < b.name })
     for (let indice of copiaDB) {
-        document.getElementById("all-cards").innerHTML += `<div class="mostrar">
+        document.getElementById("item-all-cards").innerHTML += `<div class="mostrar">
     <img src="${indice.img}">
     <h1>${indice.name.toUpperCase()}<h1>
     <p>${indice.num}</p> 
