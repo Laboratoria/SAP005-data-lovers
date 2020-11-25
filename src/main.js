@@ -7,11 +7,19 @@ function pokemons(lista) {
     for (let item of lista) {
         document.body.querySelector(".pokemons").innerHTML += `
                 <div class="card">
-                    ${item.name.toUpperCase()} <br>
-                    ${item.num} <br>
-                    <img src="${item.img}"> <br>
-                    <b>Região: </b> ${item.generation.name} <br>
-                    <b>Tipo: </b>${item.type.toString().replace(",", ", ")}
+                    <div class="flip">
+                        <div class="front-card">
+                            ${item.name.toUpperCase()} <br>
+                            ${item.num} <br>
+                            <img src="${item.img}"> <br>
+                            <b>Região: </b> ${item.generation.name} <br>
+                            <b>Tipo: </b>${item.type.toString().replace(",", ", ")}
+                        </div>
+                        
+                        <div class="back-card">
+                            ${item.about}
+                        </div>
+                    </div>
                 </div>
         `
     }
