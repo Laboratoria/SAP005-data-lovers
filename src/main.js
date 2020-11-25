@@ -141,6 +141,7 @@ function printData() {
                 <h3 class="name">${item.name}</h3>
                 <h4 class="subtitle"> First time seen: </h4>
                   <p class="data" id="episode">${episodesList[episodeIndex].name}</p>
+                  <p class="data" id="episode">${episodesList[episodeIndex].episode}</p>
             </div>
           </div>
           <div class="cardBack">
