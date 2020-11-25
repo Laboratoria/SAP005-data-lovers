@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Rick & Morty Dashboard</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="shortcut icon" href="./img/icon-tab.png/"/>
+  <link rel="shortcut icon" href="./img/icon-tab.png/" />
 </head>
+
 <body>
   <header>
     <section id="logo">
@@ -20,37 +22,41 @@
         colocar as imagens da logo
       </ul>
     </nav> -->
-  </header>    
-    <main>
-      <section class="filters">
-        <select class="select" id="order" label="Order">
-          <option value="az">A-Z</option>
-          <option value="za">Z-A</option>
-        </select>
-        <select class="select" id="status" label="Status">
-          <option value="Alive">Alive</option>
-          <option value="Dead">Dead</option>
-          <option value="Unknown">Unknown</option>
-        </select>
-        <select class="select" id="species" label="Species">
-          <option value="Human">Human</option>
-          <option value="Humanoid">Humanoid</option>
-          <option value="Alien">Alien</option>
-          <option value="Robot">Robot</option>
-          <option value="Animal">Animal</option>
-          <option value="Mytholog">Mytholog</option>
-          <option value="Poopybutthole">Poopybutthole</option>
-          <option value="Unknown">Unknown</option>
-        </select>        
-        <select class="select" id="gender" label="Gender">
-          <option value="Female">Female</option>
-          <option value="Male">Male</option>
-          <option value="Unknown">Unknown</option>
-        </select>              
-      </section>
-      <section class="results"></section>
-      <section class="cardArea" id="cardArea"></section>
-    </main>
+  </header>
+  <main>
+    <section class="filters">
+      <select class="select" id="order" label="Order">
+        <option value="az">A-Z</option>
+        <option value="za">Z-A</option>
+      </select>
+      <select class="select" id="status" label="Status">
+        <option value="Alive">Alive</option>
+        <option value="Dead">Dead</option>
+        <option value="Unknown">Unknown</option>
+      </select>
+      <select class="select" id="species" label="Species">
+        <option value="Human">Human</option>
+        <option value="Humanoid">Humanoid</option>
+        <option value="Alien">Alien</option>
+        <option value="Robot">Robot</option>
+        <option value="Animal">Animal</option>
+        <option value="Mytholog">Mytholog</option>
+        <option value="Poopybutthole">Poopybutthole</option>
+        <option value="Unknown">Unknown</option>
+      </select>
+      <select class="select" id="gender" label="Gender">
+        <option value="Female">Female</option>
+        <option value="Male">Male</option>
+        <option value="Unknown">Unknown</option>
+      </select>
+      <form id="form" class="search">
+        <input type="search" id="search" placeholder="Search by name"></input>
+        <button type="submit"></button>
+      </form>
+    </section>
+    <section class="results" id="results"></section>
+    <section class="cardArea" id="cardArea"></section>
+  </main>
   <footer>Developed by <a href="https://github.com/beatrizpenalva" target="blank" title="GITHUB PROFILE">
       @beatrizpenalva</a> | <a href="https://github.com/Fernandapy" target="blank" title="GITHUB PROFILE">
       @fernandapy </a>
@@ -58,4 +64,5 @@
   <div id="root"></div>
   <script src="main.js" type="module"></script>
 </body>
+
 </html>

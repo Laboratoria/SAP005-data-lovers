@@ -1,87 +1,7 @@
 //import example from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 const characters = data.results;
-function printData(file) {
-  document.body.querySelector("#cardArea").innerHTML = "";
-  for (let item of file) {
-    document.body.querySelector("#cardArea").innerHTML += `
-      <div class="testing">
-        <div class="card">
-          <div class="cardFront">  
-            <div class="image" style="background-image: url(${item.image})"></div>
-            <div class="text">
-                <h3 class="name">${item.name}</h3>
-                <h4 class="subtitle"> First time seen: </h4>
-                <p class="data" id="episode">${item.episode[0]}</p>
-            </div>
-          </div>
-          <div class="cardBack">
-            <div class="textBack">
-              <h3 class="name">${item.name}</h3>
-              <br><h4 class="subtitle"> Species: </h4>
-              <p class="data" id="species">${item.species}</p></br>
-              <br><h4 class="subtitle"> Gender: </h4>
-              <p class="data" id="gender">${item.gender}</p></br>
-              <br><h4 class="subtitle"> Origin: </h4>
-              <p class="data" id="origin">${item.origin.name}</p></br>
-              <br><h4 class="subtitle"> Location: </h4>
-              <p class="data" id="location">${item.location.name}</p></br>
-              <br><h4 class="subtitle"> Status: </h4>
-              <p class="data" id="status">${item.status}</p></br>
-            </div>  
-          </div>        
-        </div>
-      </div> `
-  }
-}
-printData(characters);
-document.querySelector('#order').addEventListener('change', alphabeticOrder);
-function alphabeticOrder() {
-  const selectOrder = document.querySelector('#order').value;
-  if (selectOrder === "az") {
-    characters.sort(function (a, b) {
-      if (a.name.toUpperCase() < b.name.toUpperCase()) return -1;
-      if (a.name.toUpperCase() > b.name.toUpperCase()) return 1;
-      return 0;
-    })
-  } else {
-    characters.sort(function (a, b) {
-      if (a.name.toUpperCase() > b.name.toUpperCase()) return -1;
-      if (a.name.toUpperCase() < b.name.toUpperCase()) return 1;
-      return 0;
-    })
-  };
-  printData(characters);
-};
-document.querySelector('#status').addEventListener('change', statusFilter);
-function statusFilter() {
-  const getStatus = document.querySelector('#status').value;
-  const filteredStatus = characters.filter((item) => item.status === getStatus);
-  printData(filteredStatus);
-  const percentage = Math.floor((filteredStatus.length * 100) / characters.length);
-  const category = getStatus.toLowerCase();
-  const results = document.createElement("p");
-  const content = document.createTextNode(`${percentage}% of the characters are ${category}`);
-  results.appendChild(content);
-  const rick = document.body.appendChild(results);
-};
-document.querySelector('#species').addEventListener('change', speciesFilter);
-function speciesFilter() {
-  const getSpecies = document.querySelector('#species').value;
-  const filteredSpecies = characters.filter((item) => item.species === getSpecies);
-  printData(filteredSpecies);
-};
-document.querySelector('#gender').addEventListener('change', genderFilter);
-function genderFilter() {
-  const getGender = document.querySelector('#gender').value;
-  const filteredGender = characters.filter((item) => item.gender === getGender);
-  printData(filteredGender);
-};
-
-//dúvida: se eu quisesse filtrar cruzando mais de uma opção? check-box? 
-// como eu faria para resolver o conflito entre o value unknown?
-
-/* const episodesList = [
+const episodesList = [
   {
     "name": "Pilot",
     "episode": "S01E01"
@@ -207,9 +127,97 @@ function genderFilter() {
     "episode": "S03E10",
   },
 ];
-*/
-/*for (let item of characters) {
-  if (item.status === morty) {
-    rick.push(item);}
+function printData(data) {
+  document.getElementById("cardArea").innerHTML = "";
+  for (let item of data) {
+    let beth = (item.episode[0]).substr(40, 39);
+    const episodeIndex = beth - 1;
+    document.getElementById("cardArea").innerHTML += `
+      <div class="testing">
+        <div class="card">
+          <div class="cardFront">  
+            <div class="image" style="background-image: url(${item.image})"></div>
+            <div class="text">
+                <h3 class="name">${item.name}</h3>
+                <h4 class="subtitle"> First time seen: </h4>
+                  <p class="data" id="episode">${episodesList[episodeIndex].name}</p>
+                  <p class="data" id="episode">${episodesList[episodeIndex].episode}</p>
+            </div>
+          </div>
+          <div class="cardBack">
+            <div class="textBack">
+              <h3 class="name">${item.name}</h3>
+              <br><h4 class="subtitle"> Species: </h4>
+              <p class="data" id="species">${item.species}</p></br>
+              <br><h4 class="subtitle"> Gender: </h4>
+              <p class="data" id="gender">${item.gender}</p></br>
+              <br><h4 class="subtitle"> Origin: </h4>
+              <p class="data" id="origin">${item.origin.name}</p></br>
+              <br><h4 class="subtitle"> Location: </h4>
+              <p class="data" id="location">${item.location.name}</p></br>
+              <br><h4 class="subtitle"> Status: </h4>
+              <p class="data" id="status">${item.status}</p></br>
+            </div>  
+          </div>        
+        </div>
+      </div>`
+  }
+}
+printData(characters);
+document.getElementById("order").addEventListener("change", alphabeticOrder);
+function alphabeticOrder() {
+  const selectOrder = document.getElementById("order").value;
+  /*for (let item of characters) {
+    let charactersRelevance = [];
+    charactersRelevance = (item.episode.length);
+    };*/
+  if (selectOrder === "az") {
+    characters.sort(function (a, b) {
+      if (a.name.toUpperCase() < b.name.toUpperCase()) return -1;
+      if (a.name.toUpperCase() > b.name.toUpperCase()) return 1;
+      return 0;
+    })
+  } else {
+    characters.sort(function (a, b) {
+      if (a.name.toUpperCase() > b.name.toUpperCase()) return -1;
+      if (a.name.toUpperCase() < b.name.toUpperCase()) return 1;
+      return 0;
+    })
+  };
+  printData(characters);
 };
-*/
+document.getElementById("status").addEventListener("change", statusFilter);
+function statusFilter() {
+  const getStatus = document.getElementById("status").value;
+  const filterStatus = characters.filter((item) => item.status === getStatus);
+  statisticData(filterStatus, getStatus);
+  printData(filterStatus);
+};
+document.getElementById("species").addEventListener("change", speciesFilter);
+function speciesFilter() {
+  const getSpecies = document.getElementById("species").value;
+  const filterSpecies = characters.filter((item) => item.species === getSpecies);
+  statisticData(filterSpecies, getSpecies);
+  printData(filterSpecies);
+};
+document.getElementById("gender").addEventListener("change", genderFilter);
+function genderFilter() {
+  const getGender = document.getElementById("gender").value;
+  const filterGender = characters.filter((item) => item.gender === getGender);
+  statisticData(filterGender, getGender);
+  printData(filterGender);
+};
+function statisticData(data, condition) {
+  document.getElementById("results").innerHTML = "";
+  const percentage = Math.round((data.length * 100) / characters.length);
+  const results = document.createElement("p");
+  const content = document.createTextNode(`${percentage}% of the characters are ${condition.toLowerCase()}`);
+  results.appendChild(content);
+  document.getElementById("results").appendChild(results);
+};
+document.getElementById("form").addEventListener("submit", searchLocation);
+function searchLocation(){
+  const getLocation = document.getElementById("search").value;
+  const filterLocation = characters.filter((item) => item.location.name[0] === getLocation);
+  printData(filterLocation).preventDefault();
+};
