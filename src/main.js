@@ -183,42 +183,31 @@ function alphabeticOrder() {
   };
   printData(characters);
 };
-document.querySelector('#status').addEventListener('change', statusFilter);
-function statusFilter() {
+function filterCharacters(filterOption, filterFunction ) {
   document.querySelector('.results').innerHTML = "";
-  const getStatus = document.querySelector('#status').value;
-  const filteredStatus = characters.filter((item) => item.status === getStatus);
-  printData(filteredStatus);
-  const percentage = Math.round((filteredStatus.length * 100) / characters.length);
-  const category = getStatus.toLowerCase();
+  const percentage = Math.round((filterFunction.length * 100) / characters.length);
+  const category = filterOption.toLowerCase();
   const results = document.createElement("p");
   const content = document.createTextNode(`${percentage}% of the characters are ${category}`);
   results.appendChild(content);
   document.querySelector('.results').appendChild(results);
+  printData(filterFunction);
+};
+document.querySelector('#status').addEventListener('change', statusFilter);
+function statusFilter () {
+  const getStatus = document.querySelector('#status').value;
+  const filteredStatus = characters.filter((item) => item.status === getStatus);
+  filterCharacters (getStatus, filteredStatus);
 };
 document.querySelector('#species').addEventListener('change', speciesFilter);
 function speciesFilter() {
-  document.querySelector('.results').innerHTML = "";
   const getSpecies = document.querySelector('#species').value;
   const filteredSpecies = characters.filter((item) => item.species === getSpecies);
-  printData(filteredSpecies);
-  const percentage = Math.round((filteredSpecies.length * 100) / characters.length);
-  const category = getSpecies.toLowerCase();
-  const results = document.createElement("p");
-  const content = document.createTextNode(`${percentage}% of the characters are ${category}`);
-  results.appendChild(content);
-  document.querySelector('.results').appendChild(results);
+  filterCharacters (getSpecies, filteredSpecies);
 };
 document.querySelector('#gender').addEventListener('change', genderFilter);
 function genderFilter() {
-  document.querySelector('.results').innerHTML = "";
   const getGender = document.querySelector('#gender').value;
   const filteredGender = characters.filter((item) => item.gender === getGender);
-  printData(filteredGender);
-  const percentage = Math.round((filteredGender.length * 100) / characters.length);
-  const category = getGender.toLowerCase();
-  const results = document.createElement("p");
-  const content = document.createTextNode(`${percentage}% of the characters are ${category}`);
-  results.appendChild(content);
-  document.querySelector('.results').appendChild(results);
+  filterCharacters (getGender, filteredGender);
 };
