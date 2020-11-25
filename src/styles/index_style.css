@@ -344,27 +344,40 @@ img{
     flex-wrap: wrap;
     align-items: center;
 }
-
-.item-filter h1{
-    font-size: 2em;
-    max-width: 960px;
-    padding-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 1px;
+.item-filter{
+    flex:1;
 }
 
-.item-filter #filter{
-    border:none;
+.item-filter h1{
+    font-size: 1em;
+    max-width: 960px;
+    padding-left: 45px;
+    margin-right: 10px;
+    margin-bottom: 21px;
+}
+
+.item-filter #filter-type{
     padding: 8px;
     margin-left: .7em;
     font-size: 1em;
     border-radius: .5em;
     text-transform: uppercase;
-    background: blue;
     font-family: 'Exo', sans-serif;
     font-size: 13pt;
     font-weight: 700;
-    color: white;
+}
+
+.item-filter #filter-weakness{
+  
+    padding: 8px;
+    margin-left: .7em;
+    font-size: 1em;
+    border-radius: .5em;
+    text-transform: uppercase;
+    font-family: 'Exo', sans-serif;
+    font-size: 13pt;
+    font-weight: 700;
+
 }
 
 /* --------------------------------CONTAINER ONDE SÃO MOSTRADOS TODOS OS CARDS------------ */
