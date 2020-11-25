@@ -127,20 +127,11 @@ const episodesList = [
     "episode": "S03E10",
   },
 ];
-//Trocar A-Z e Z-A por relevância na série (número de episódios em que apareceu)
-
-function switchEpisode (rick) {
-  for (let item of rick) {
-    let beth = (item.episode[0]).substr(40, 39);
-    const episodeIndex = beth -1;
-    console.log(episodesList[episodeIndex].name);
-    };  
-};
-switchEpisode(characters);
-
-function printData(file) {
+function printData() {
   document.body.querySelector("#cardArea").innerHTML = "";
-  for (let item of file) {
+  for (let item of characters) {
+    let beth = (item.episode[0]).substr(40, 39);
+    const episodeIndex = beth - 1;
     document.body.querySelector("#cardArea").innerHTML += `
       <div class="testing">
         <div class="card">
@@ -149,7 +140,7 @@ function printData(file) {
             <div class="text">
                 <h3 class="name">${item.name}</h3>
                 <h4 class="subtitle"> First time seen: </h4>
-                <p class="data" id="episode">${item.episode[0]}</p>
+                  <p class="data" id="episode">${episodesList[episodeIndex].name}</p>
             </div>
           </div>
           <div class="cardBack">
@@ -168,11 +159,12 @@ function printData(file) {
             </div>  
           </div>        
         </div>
-      </div> `
+      </div>`
   }
 }
-printData(characters);
+printData();
 document.querySelector('#order').addEventListener('change', alphabeticOrder);
+//Trocar A-Z e Z-A por relevância na série (número de episódios em que apareceu)
 function alphabeticOrder() {
   const selectOrder = document.querySelector('#order').value;
   if (selectOrder === "az") {
