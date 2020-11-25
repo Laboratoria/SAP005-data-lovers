@@ -1,0 +1,99 @@
+/* FONTES */
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700;800&display=swap');
+
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* STYLING GERAL */
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font-family: 'Inter', sans-serif;
+  border: 0;
+}
+
+/* LANDING-PAGE */
+.header-bar {
+  position: absolute;
+  top: 0;
+  height: 7rem;
+  width: 100%;
+  background-color: #038C73;
+  clip-path: polygon(0 0, 100% 0, 100% 23%, 0 100%);
+  z-index: 1;
+}
+
+.title {
+  position: absolute;
+  top: 1.5rem;
+  left: 1rem;
+  z-index: 1;
+  font-family: 'Bungee', cursive;
+  font-size: 16vw;
+  line-height: 16vw;
+  text-align: left;
+  color: #fff;
+  text-shadow: rgba(255, 255, 255, 0.1) -1px -1px 1px, rgba(0, 0, 0, 0.5) 1px 1px 1px;
+}
+
+.landing-page-img {
+  width: 100%;
+  max-width: 200%;
+  height: auto;
+  transform: scaleX(-1);
+}
+
+.parallelogram {
+  padding: 1.2rem 1rem;
+  position: relative;
+  bottom: 6.3rem;
+  height: 10rem;
+  width: 100%;
+  transform: skew(0, -14deg);
+  background-color: #038C73;
+  text-align: right;
+}
+
+.introduction-text {
+  margin-bottom: 1rem;
+  margin-right: 0;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: right;
+  text-shadow: rgba(255, 255, 255, 0.1) -1px -1px 1px, rgba(0, 0, 0, 0.5) 1px 1px 1px;
+}
+
+#call-to-action-btn {
+  transform: skew(0, 14deg);
+  margin: 0.7rem 0;
+  padding: 0.6rem 1.2rem;
+  border: solid 2px #fff;
+  border-radius: 3rem;
+  background-color: #D92534;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+
+#call-to-action-btn:hover {
+  background-color: #073673;
+}
