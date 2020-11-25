@@ -125,41 +125,52 @@ label span:nth-child(3) {
     width: 350px;
     padding: .5em;
     background-color: rgba(224, 205, 128, 0.932);
-    border: rgb(243, 231, 185);
     font-family: 'M PLUS Rounded 1c', sans-serif;
+    border: 2px solid rgb(252, 204, 11);
 }
 
 .btn-search {
+    background-color: rgba(250, 224, 119, 0.932);
+    color: gray;
+    width: 40%;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
     border-radius: 10px;
     width: 50px;
     padding: .5em;
-    background-color: rgba(224, 205, 128, 0.932);
-    border: rgb(247, 233, 178);
     font-family: 'M PLUS Rounded 1c', sans-serif;
+    border: 2px solid rgb(252, 204, 11);
 }
 
 .select-filter {
     padding: 0.5em;
     border-radius: 10px;
     background-color: rgba(224, 205, 128, 0.932);
-    border: rgb(247, 233, 178);
     font-family: 'M PLUS Rounded 1c', sans-serif;
+    border: 2px solid rgb(252, 204, 11);
 }
 
 .select-sort {
     padding: .5em;
     border-radius: 10px;
     background-color: rgba(224, 205, 128, 0.932);
-    border: rgb(247, 233, 178);
     font-family: 'M PLUS Rounded 1c', sans-serif;
+    border: 2px solid rgb(252, 204, 11);
 }
 
 .btn-clean {
-    margin-right: 50px;
-    padding: .7em;
+    background-color: rgba(250, 224, 119, 0.932);
+    color: black;
+    width: 40%;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
     border-radius: 10px;
-    background-color: rgba(224, 205, 128, 0.932);
-    border: rgb(247, 233, 178);
+    width: 50px;
+    padding: .3em;
+    border: 2px solid rgb(252, 204, 11);
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 

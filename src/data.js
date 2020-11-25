@@ -7,11 +7,11 @@ export const selectPokemonType = (selectType, dataJson) => {
 }
 
 export const selectPokemonResistant = (selectResistant, dataJson) => {
-    return dataJson.filter(pokemon => pokemon.resistant == selectResistant)
+    return dataJson.filter(pokemon => pokemon.resistant.includes(selectResistant))
 }
 
 export const selectPokemonWeaknesses = (selectWeaknesses, dataJson) => {
-    return dataJson.filter(pokemon => pokemon.weaknesses == selectWeaknesses)
+    return dataJson.filter(pokemon => pokemon.weaknesses.includes(selectWeaknesses))
 }
 
 export const selectPokemonGeneration = (selectGeneration, dataJson) => {
