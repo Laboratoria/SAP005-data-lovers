@@ -18,12 +18,12 @@ function showingCards(pokemonCards) {
     showCards.innerHTML = ""
 
     for (let pokemon of pokemonCards) {
-        /*let evolutions = ""
+        let evolutions = ""
         if (pokemon.evolution["next-evolution"] != undefined && pokemon.evolution["next-evolution"] != null) {
             for (let evolution of pokemon.evolution["next-evolution"]) {
-                evolutions += `<span> ${evolution.name} </span>`
+                evolutions += `<span>${evolution.name}</span>`
             }
-        }*/
+        }
         cards +=
             `<div class="frame left">
                 <div class="left">
@@ -43,6 +43,7 @@ function showingCards(pokemonCards) {
                     <p> Base Stamina: ${pokemon.stats["base-stamina"]}</p>
                     <p> Max Cp: ${pokemon.stats["max-cp"]}</p>
                     <p> Max Hp: ${pokemon.stats["max-hp"]}</p>
+                    <p> Evolution: ${evolutions}<p>
                     </div>
             </div>`
     }
