@@ -221,3 +221,4 @@ function searchLocation(){
   const filterLocation = characters.filter((item) => item.location.name[0] === getLocation);
   printData(filterLocation).preventDefault();
 };
+//testing
