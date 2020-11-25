@@ -39,24 +39,24 @@ pokecards+= `<div class="mostrar">
 <p>${indice.type.toString().replace(",", ", ")}</p>
 <p>${indice.resistant.toString().replace(",", ", ")}</p></div>`
 }
-document.getElementById("all-cards").innerHTML = pokecards
+document.getElementById("item-all-cards").innerHTML = pokecards
 }
 
 function cardAll() {
-    document.getElementById("all-cards").innerHTML = "";
+    document.getElementById("item-all-cards").innerHTML = "";
     const copiaDB = data.pokemon;
     return padraoAllCards(copiaDB)
 };
 
 function ordCrescente() {
-    document.getElementById("all-cards").innerHTML = "";
+    document.getElementById("item-all-cards").innerHTML = "";
     const copiaDB = data.pokemon;
     const ordenaCres = crescente(copiaDB);
     return padraoAllCards(ordenaCres)
 };
 
 function ordDecrescente() {
-    document.getElementById("all-cards").innerHTML = "";
+    document.getElementById("item-all-cards").innerHTML = "";
     const copiaDB = data.pokemon;
     const ordenaDec = decrescente(copiaDB);
     return padraoAllCards(ordenaDec)
