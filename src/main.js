@@ -127,12 +127,12 @@ const episodesList = [
     "episode": "S03E10",
   },
 ];
-function printData() {
-  document.body.querySelector("#cardArea").innerHTML = "";
-  for (let item of characters) {
+function printData(data) {
+  document.getElementById("cardArea").innerHTML = "";
+  for (let item of data) {
     let beth = (item.episode[0]).substr(40, 39);
     const episodeIndex = beth - 1;
-    document.body.querySelector("#cardArea").innerHTML += `
+    document.getElementById("cardArea").innerHTML += `
       <div class="testing">
         <div class="card">
           <div class="cardFront">  
@@ -163,11 +163,14 @@ function printData() {
       </div>`
   }
 }
-printData();
-document.querySelector('#order').addEventListener('change', alphabeticOrder);
-//Trocar A-Z e Z-A por relevância na série (número de episódios em que apareceu)
+printData(characters);
+document.getElementById("order").addEventListener("change", alphabeticOrder);
 function alphabeticOrder() {
-  const selectOrder = document.querySelector('#order').value;
+  const selectOrder = document.getElementById("order").value;
+  /*for (let item of characters) {
+    let charactersRelevance = [];
+    charactersRelevance = (item.episode.length);
+    };*/
   if (selectOrder === "az") {
     characters.sort(function (a, b) {
       if (a.name.toUpperCase() < b.name.toUpperCase()) return -1;
@@ -183,31 +186,38 @@ function alphabeticOrder() {
   };
   printData(characters);
 };
-function filterCharacters(filterOption, filterFunction ) {
-  document.querySelector('.results').innerHTML = "";
-  const percentage = Math.round((filterFunction.length * 100) / characters.length);
-  const category = filterOption.toLowerCase();
-  const results = document.createElement("p");
-  const content = document.createTextNode(`${percentage}% of the characters are ${category}`);
-  results.appendChild(content);
-  document.querySelector('.results').appendChild(results);
-  printData(filterFunction);
+document.getElementById("status").addEventListener("change", statusFilter);
+function statusFilter() {
+  const getStatus = document.getElementById("status").value;
+  const filterStatus = characters.filter((item) => item.status === getStatus);
+  statisticData(filterStatus, getStatus);
+  printData(filterStatus);
 };
-document.querySelector('#status').addEventListener('change', statusFilter);
-function statusFilter () {
-  const getStatus = document.querySelector('#status').value;
-  const filteredStatus = characters.filter((item) => item.status === getStatus);
-  filterCharacters (getStatus, filteredStatus);
-};
-document.querySelector('#species').addEventListener('change', speciesFilter);
+document.getElementById("species").addEventListener("change", speciesFilter);
 function speciesFilter() {
-  const getSpecies = document.querySelector('#species').value;
-  const filteredSpecies = characters.filter((item) => item.species === getSpecies);
-  filterCharacters (getSpecies, filteredSpecies);
+  const getSpecies = document.getElementById("species").value;
+  const filterSpecies = characters.filter((item) => item.species === getSpecies);
+  statisticData(filterSpecies, getSpecies);
+  printData(filterSpecies);
 };
-document.querySelector('#gender').addEventListener('change', genderFilter);
+document.getElementById("gender").addEventListener("change", genderFilter);
 function genderFilter() {
-  const getGender = document.querySelector('#gender').value;
-  const filteredGender = characters.filter((item) => item.gender === getGender);
-  filterCharacters (getGender, filteredGender);
+  const getGender = document.getElementById("gender").value;
+  const filterGender = characters.filter((item) => item.gender === getGender);
+  statisticData(filterGender, getGender);
+  printData(filterGender);
+};
+function statisticData(data, condition) {
+  document.getElementById("results").innerHTML = "";
+  const percentage = Math.round((data.length * 100) / characters.length);
+  const results = document.createElement("p");
+  const content = document.createTextNode(`${percentage}% of the characters are ${condition.toLowerCase()}`);
+  results.appendChild(content);
+  document.getElementById("results").appendChild(results);
+};
+document.getElementById("form").addEventListener("submit", searchLocation);
+function searchLocation(){
+  const getLocation = document.getElementById("search").value;
+  const filterLocation = characters.filter((item) => item.location.name[0] === getLocation);
+  printData(filterLocation).preventDefault();
 };
