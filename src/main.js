@@ -1,40 +1,42 @@
-import { instantSearch, selectPokemonType, selectPokemonResistant, selectPokemonWeaknesses } from './data.js'
+import { instantSearch, selectPokemonType, selectPokemonResistant, selectPokemonWeaknesses, selectPokemonGeneration } from './data.js'
 import data from './data/pokemon/pokemon.js'
 
 const inputSearch = document.querySelector('#input-search')
 const selectFilterType = document.querySelector('#select-filter-by-type')
 const selectFilterResistant = document.querySelector('#select-filter-by-resistant')
 const selectFilterWeaknesses = document.querySelector('#select-filter-by-weaknesses')
+const selectFilterGeneration = document.querySelector('#select-filter-by-generation')
+const selectSortCp = document.querySelector('#select-sort-cp')
 const selectSort = document.querySelector('#select-sort')
 const btnClean = document.querySelector('#btn-clean')
 
 showingCards(data.pokemon)
 
 function showingCards(pokemonCards) {
-
-    let showCards = document.querySelector('#main-cards');
-    let cards = "";
-    showCards.innerHTML = "";
+    let showCards = document.querySelector('#main-cards')
+    let cards = ""
+    showCards.innerHTML = ""
 
     for (let pokemon of pokemonCards) {
-
-        /*let evolutions = ""
+        let evolutions = ""
         if (pokemon.evolution["next-evolution"] != undefined && pokemon.evolution["next-evolution"] != null) {
             for (let evolution of pokemon.evolution["next-evolution"]) {
-                evolutions += `<span> ${evolution.name} </span>`
+                evolutions += `<span>${evolution.name}</span>`
             }
-        }*/
-        cards +=
-            `<div class="frame-left">
-                <div class="left">
-                <div class = "card-front"><img src = ${pokemon.img} class = "img" alt = ${pokemon.name}/> 
-                    <p> N°: ${pokemon.num}</p> 
-                    <p> Nome: ${pokemon.name} </p> 
+        } else {
+            evolutions = "Don't have"
+        }
 
-                </div>
-                
-                <div class="card-back"> 
+        cards +=
+            `<div class="frame left">
+                <div class="left">
+                <h3 class = "card-front"><img src = ${pokemon.img} class = "img" alt = ${pokemon.name}</h3> 
+                    <p> N°: ${pokemon.num}</p>
+                    <p> Nome: ${pokemon.name}</p>
                     <p> Type: ${pokemon.type}</p>
+                    <p> Rarity: ${pokemon["pokemon-rarity"]}</p>                    
+                </div>
+                <div class="card-back">
                     <p> Height: ${pokemon.size.height}</p>
                     <p> Weight: ${pokemon.size.weight}</p>
                     <p> Resistant: ${pokemon.resistant}</p>
@@ -44,13 +46,9 @@ function showingCards(pokemonCards) {
                     <p> Base Stamina: ${pokemon.stats["base-stamina"]}</p>
                     <p> Max Cp: ${pokemon.stats["max-cp"]}</p>
                     <p> Max Hp: ${pokemon.stats["max-hp"]}</p>
-                    <p> Rarity: ${pokemon["pokemon-rarity"]}</p>
-                    <p> Region: ${pokemon.generation.name}</p>
+                    <p> Evolution: ${evolutions}<p>
                     </div>
-                    
             </div>`
-
-
     }
     showCards.innerHTML = cards;
 
@@ -79,4 +77,10 @@ selectFilterWeaknesses.addEventListener('change', () => {
     const selectWeaknesses = selectFilterWeaknesses.value
     const pokemonWeaknesses = selectPokemonWeaknesses(selectWeaknesses, data.pokemon)
     showingCards(pokemonWeaknesses)
+})
+
+selectFilterGeneration.addEventListener('change', () => {
+    const selectGeneration = selectFilterGeneration.value
+    const pokemonGeneration = selectPokemonGeneration(selectGeneration, data.pokemon)
+    showingCards(pokemonGeneration)
 })
