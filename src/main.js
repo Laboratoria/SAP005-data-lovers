@@ -1,6 +1,5 @@
 import { crescente, decrescente } from './data.js';
 import data from './data/pokemon/pokemon.js';
-//console.log(example, data);
 let input = document.getElementById("txtBusca");
 
 function cardUnitario() {
@@ -29,35 +28,38 @@ document.getElementById('btn-search-pokemon').addEventListener("click", cardUnit
 
 //Code com Manipulação para Todos os Cards:
 
-function padraoAllCards (array){
-for (let indice of array) 
-{document.getElementById("all-cards").innerHTML += `<div class="mostrar">
+function padraoAllCards(array) {
+let pokecards ="";
+for (let indice of array) {
+pokecards+= `<div class="mostrar">
 <img src="${indice.img}">
 <h1>${indice.name.toUpperCase()}<h1>
 <p>${indice.num}</p> 
 <p>${indice.about}</p> 
 <p>${indice.type.toString().replace(",", ", ")}</p>
-<p>${indice.resistant.toString().replace(",", ", ")}</p></div>`};
+<p>${indice.resistant.toString().replace(",", ", ")}</p></div>`
+}
+document.getElementById("item-all-cards").innerHTML = pokecards
 }
 
 function cardAll() {
-    document.getElementById("all-cards").innerHTML = "";
+    document.getElementById("item-all-cards").innerHTML = "";
     const copiaDB = data.pokemon;
-    return padraoAllCards (copiaDB)
+    return padraoAllCards(copiaDB)
 };
 
 function ordCrescente() {
-    document.getElementById("all-cards").innerHTML = "";
+    document.getElementById("item-all-cards").innerHTML = "";
     const copiaDB = data.pokemon;
     const ordenaCres = crescente(copiaDB);
-    return padraoAllCards (ordenaCres)
+    return padraoAllCards(ordenaCres)
 };
 
 function ordDecrescente() {
-    document.getElementById("all-cards").innerHTML = "";
+    document.getElementById("item-all-cards").innerHTML = "";
     const copiaDB = data.pokemon;
     const ordenaDec = decrescente(copiaDB);
-    return padraoAllCards (ordenaDec)
+    return padraoAllCards(ordenaDec)
 };
 
 //Botões
