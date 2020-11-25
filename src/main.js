@@ -6,7 +6,7 @@ import data from './data/rickandmorty/rickandmorty.js';
 const dataBase = data.results;
 
 function printCharacters(dados) {
-    let cards
+    let cards = "";
     for ( let item of dados) {
     cards +=
       ` 
