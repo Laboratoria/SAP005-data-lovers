@@ -3,7 +3,7 @@
 	padding: 0;
 	font-size: 100%;
 	box-sizing: border-box;
-	font-family: Arial, "Open Sans", sans-serif;
+	font-family: "Open Sans", sans-serif;
 	font-weight: bolder;
 }
 
@@ -31,48 +31,48 @@ a:hover {
 	align-items: center;
 	padding: 20px 50px;
 	background-color: yellow;
-	direction: row;
+	flex-direction: row;
 }
-
 .pokebola {
 	width: 60px;
 	margin: 0 10px;
 }
-
 .navbar {
 	display: flex;
 	align-items: center;
 }
-
-.pokemon-filter {
+.filter-name {
 	width: 300px;
-	border-radius: 6px;
+	border-radius: 5px;
 	height: 40px;
 	text-align: center;
 	margin: 0 15px;
 }
-
 .link-menu {
 	color: black;
 }
 .menu {
 	margin: 0 15px;
 }
-
 .navbar:first-child {
 	margin-left: 0;
 }
-
 .navbar:last-child {
 	margin-right: 0;
 }
-@media (max-width: 350px) {
+@media (max-width: 656px) {
 	.cover {
 		flex-direction: column;
-		background-color: blue;
 	}
-	.pokemon-filter {
-		width: 100px;
+	.navbar {
+		flex-direction: column;
+	}
+	.menu {
+		margin-bottom: 5px;
+	}
+	.filter-name {
+		width: 150px;
+		font-size: 9px;
 	}
 	.pokebola {
 		margin-bottom: 15px;
@@ -86,21 +86,21 @@ a:hover {
 	margin: 10px 50px;
 	height: 60px;
 }
-
 .option {
 	width: 300px;
 	border-radius: 5px;
-	height: 40px;
+	height: 30px;
 	border: 1px solid;
 	background-color: #fff;
 	border-color: rgb(70, 71, 71);
-	text-align: center;
 }
-
-@media (max-width: 300px) {
+@media (max-width: 656px) {
 	.order {
-		flex-direction: row;
-		align-items: center;
+		flex-direction: column;
+	}
+	.option {
+		width: 150px;
+		font-size: 10px;
 	}
 }
 /*FOOTER*/
@@ -112,14 +112,30 @@ a:hover {
 	padding: 50px 0;
 	align-items: center;
 	bottom: 0;
-	position: absolute;
 	padding: 1rem;
+	margin-top: 10px;
 }
-
 .footer p {
 	color: black;
 	text-align: center;
 }
+
+@media (max-width: 656px) {
+	.footer {
+		flex-direction: column-reverse;
+		width: 100%;
+		bottom: 0;
+		position: absolute;
+		padding: 1rem;
+		margin-top: 10px;
+	}
+	.footer p {
+		text-align: center;
+	}
+}
+/*CARDS */
+
+
 #root {
 	display: flex;
 	flex-wrap: wrap;
