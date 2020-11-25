@@ -82,3 +82,20 @@ selectFilterWeaknesses.addEventListener('change', () => {
     showingCards(pokemonWeaknesses)
 })
 
+
+selectSort.addEventListener('change', () => {
+    const orderName = selectSort.value
+    const orderPoke = data.pokemon
+    orderPoke.sort(function(a, b) {
+        const keyA = a.name,
+              keyB = b.name
+        // Compare the 2 dates
+        if (keyA < keyB) return -1
+        if (keyA > keyB) return 1
+        return 0
+      })
+      
+      showingCards(orderPoke)
+
+})
+
