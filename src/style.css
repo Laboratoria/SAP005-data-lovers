@@ -1,7 +1,3 @@
-.card {
-    background-color: #769dcc80;
-}
-
 * {
     padding: 0px;
     margin: 0px;
@@ -10,7 +6,11 @@
 .body {
     font-family: 'M PLUS Rounded 1c', sans-serif;
     size: 100%;
+    background-color: #c2daf8d0;
 }
+
+
+/* Animação icone menu lateral */
 
 .chk {
     display: none;
@@ -97,14 +97,17 @@ label span:nth-child(3) {
 }
 
 .header-title {
-    font-size: 25px;
-    text-align: center;
-    min-width: 300px;
-    max-width: 100%;
-    padding: 30px;
-    text-align: center;
-    margin-bottom: 2%;
+    margin-bottom: 3%;
+    margin-left: 33.3%;
+    margin-right: 33.3%;
+    background-image: url(Logo.png);
+    height: 140px;
+    background-repeat: no-repeat;
+    width: auto;
 }
+
+
+/* Menu principal */
 
 .select-itens {
     padding: 10px;
@@ -112,7 +115,7 @@ label span:nth-child(3) {
     justify-content: space-around;
     overflow: hidden;
     font-weight: bold;
-    background-color: rgb(252, 222, 101);
+    background-color: rgb(243, 231, 185);
     padding: 0.5em;
 }
 
@@ -121,8 +124,8 @@ label span:nth-child(3) {
     border-radius: 10px;
     width: 350px;
     padding: .5em;
-    background-color: #faefbdc5;
-    border: #E3BD4D;
+    background-color: rgba(224, 205, 128, 0.932);
+    border: rgb(243, 231, 185);
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
@@ -130,35 +133,36 @@ label span:nth-child(3) {
     border-radius: 10px;
     width: 50px;
     padding: .5em;
-    background-color: #faefbdc5;
-    border: #E3BD4D;
+    background-color: rgba(224, 205, 128, 0.932);
+    border: rgb(247, 233, 178);
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 .select-filter {
     padding: 0.5em;
     border-radius: 10px;
-    background-color: #faefbdc5;
-    border: #E3BD4D;
+    background-color: rgba(224, 205, 128, 0.932);
+    border: rgb(247, 233, 178);
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 .select-sort {
     padding: .5em;
     border-radius: 10px;
-    background-color: #faefbdc5;
-    border: #E3BD4D;
+    background-color: rgba(224, 205, 128, 0.932);
+    border: rgb(247, 233, 178);
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 .btn-clean {
     margin-right: 50px;
-    padding: .5em;
-    width: 80px;
+    padding: .7em;
     border-radius: 10px;
-    background-color: #faefbdc5;
-    border: #E3BD4D
+    background-color: rgba(224, 205, 128, 0.932);
+    border: rgb(247, 233, 178);
 }
+
+
 /* Tratamento dos cards*/
 
 .space {
@@ -166,69 +170,68 @@ label span:nth-child(3) {
     height: 50px;
 }
 
-.main-card {
+.main-cards {
     margin: 0 auto;
     width: 980px;
     font-size: 12px;
     background-color: transparent;
-    perspective: 1000px;
 }
-
 
 .left {
     float: left;
     margin-left: 0 auto;
 }
 
-
 .frame {
     position: relative;
-    width: 215px;
-    height: 250px;
-    transition: transform 0.6s;
+    width: 230px;
+    height: 265px;
+    transition: transform 0.99s;
     cursor: pointer;
     transform-style: preserve-3d;
-    margin: 10px;
+    margin: 5px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-
-.frame:hover{
-    background-color: #e9c46a;
+.frame:hover {
+    background-color: rgb(243, 231, 185);
     transform: rotateY(180deg);
     z-index: 10;
 }
 
-.card-front, .card-back {
+.card-front,
+.card-back {
     position: relative;
-    width: 215px;
-    height: 250px;
+    width: 230px;
+    height: 265px;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    border-radius: 10px;
 }
 
-.img{
-    min-width: 50%;
-    height: 150px;
-    width: auto;
-}
-
-.card-front{
+.card-front {
     position: absolute;
-    width: 215px;
-    height: 250px;
+    background-color: #faefbd3a;
+    width: 230px;
+    height: 265px;
     text-align: center;
+    font-size: 16px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
-.card-back{
+.card-back {
     position: absolute;
-    width: 215px;
-    height: 250px;
-    background-color: #e76f51;
+    width: 230px;
+    height: 265px;
+    background-color: #e9c46a;
     color: white;
     transform: rotateY(180deg);
-    padding: 5px;
+    font-size: 14px;
+    text-align: justify;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
+
 
 /* tratamento do footer */
 

@@ -13,3 +13,7 @@ export const selectPokemonResistant = (selectResistant, dataJson) => {
 export const selectPokemonWeaknesses = (selectWeaknesses, dataJson) => {
     return dataJson.filter(pokemon => pokemon.weaknesses == selectWeaknesses)
 }
+
+/*export const selectPokemonGeneration = (selectGeneration, dataJson) => {
+    return dataJson.filter(pokemon => pokemon.generation === selectGeneration)
+}*/
