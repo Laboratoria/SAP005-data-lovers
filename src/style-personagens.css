@@ -41,6 +41,15 @@ ul{
     margin-right:55%;
 }
 
+.calculation{
+    position: absolute;
+    height: 30px;
+	bottom: 82%;
+    right: 20px;
+    display: flex;
+    margin-right:15%;
+}
+
 .filter-species{
     position: absolute;
     height: 30px;
