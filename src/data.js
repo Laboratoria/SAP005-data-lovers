@@ -6,7 +6,12 @@ const filter = {
       return {
         name: img.name,
         img: img.img,
-        num:img.num
+        num:img.num,
+        height: img.size.height,
+        weight: img.size.weight,
+        type:img.type,
+        weaknesses: img.weaknesses,
+        egg: img.egg
       }
     })    
     return image

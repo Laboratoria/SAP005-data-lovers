@@ -21,10 +21,21 @@ const dados = {
         const textNum = document.createElement('p');
         textNum.classList.add('pokedexNum')
         const image = document.createElement("img");
+        const type = document.createElement('p');
+        const ovos = document.createElement('p');
+        const altura = document.createElement("p");
+        const peso = document.createElement ("p");
+        const fraqueza = document.createElement ("p");
+        type.classList.add('tipoPokemon')
         image.src = pokemon.img
         text.innerHTML = pokemon.name.toUpperCase();
         textNum.innerHTML = pokemon.num
-         
+        altura.innerHTML = `Altura: ${pokemon.height}`
+        peso.innerHTML = `Peso: ${pokemon.weight}`
+        ovos.innerHTML = `Ovo: ${pokemon.egg}`
+        type.innerHTML = `Tipo: ${pokemon.type}`
+        fraqueza.innerHTML = `Fraqueza: ${pokemon.weaknesses}`
+        
         document.getElementById("cards").appendChild(flipCard);
         flipCard.appendChild(flipCardInner);       
         flipCardInner.appendChild(flipCardFront);
@@ -32,9 +43,15 @@ const dados = {
         flipCardFront.appendChild(text);
         text.appendChild(textNum);
         text.appendChild(image);
+
+        flipCardBack.appendChild(type);
+        flipCardBack.appendChild(altura);
+        flipCardBack.appendChild(peso);
+        flipCardBack.appendChild(fraqueza);
+        flipCardBack.appendChild (ovos);
+      
     } 
 }
-
 
 const img = filter.photo()
 

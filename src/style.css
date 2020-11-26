@@ -175,6 +175,7 @@ input:focus{
     text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
+    
     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
     
 }
@@ -192,11 +193,13 @@ input:focus{
     backface-visibility: hidden;
     border-radius: 9%;
     border: 2px solid white;
+    filter: drop-shadow(0 0 0.45rem rgb(210, 233, 10));
 }
 
 .flip-card-front {
     background-color: #D6D6D6;
     color: black;
+    font-family: sans-serif;
     
 }
 
@@ -204,6 +207,10 @@ input:focus{
     background-color: #021032;
     color: white;
     transform: rotateY(180deg);
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 40px;
+   
 }
 
 .namePokemon{
