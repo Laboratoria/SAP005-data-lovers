@@ -97,3 +97,7 @@ button {
 #call-to-action-btn:hover {
   background-color: #073673;
 }
+
+.first-uppercase {
+  text-transform: capitalize;
+}
