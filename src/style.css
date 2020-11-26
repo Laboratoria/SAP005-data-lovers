@@ -314,11 +314,12 @@ main {
   height: 100%;
   width: 100%;
   left: 0;
+  overflow: auto;
 }
 
 .about article {
   margin-top: 1%;
-  text-align: center;
+  text-align: justify;
   font-size: 1.5rem;
 }
 
@@ -328,6 +329,10 @@ main {
 }
 
 .carousel-pokemon{
+  background-image: url(images/bgpokemon2.png);
+  background-size: cover;
+  border-top: solid 5px rgb(173, 21, 21);
+  margin-top: 2rem;
   position: relative;
   bottom: 100px;
   width: 100vw;
@@ -343,40 +348,78 @@ main {
 }
 
 .box-pokemons{
-  position: relative;
-  bottom: 650px;
-  width: 50%;
-  height: 40%;
+  position: absolute;
+  top: 350px;
   transform: translate(50%,50%);
+  width: 50vw;
+  height: 30%;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  border-radius: 16px;
+  background-color:transparent;
   overflow: hidden;
+  overflow-x: auto;
+  scroll-snap-align: start;
+}
+
+.box-pokemons::-webkit-scrollbar{
+  opacity: 1;
+}
+
+.box-pokemons::-webkit-scrollbar-button{
+    display: none;
+}
+
+.box-pokemons::-webkit-scrollbar-thumb{
+  background-color: #bacfb1;
+  border-radius: 50px;
+  height: 50px;
+  width: 20px;
 }
 
 #pokedex{
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center;
+  justify-content: start;
 }
 
 .card-poke{
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  border-radius: 40px;
-}
+  border-radius: 40px;}
 
 .card-image{
-  width: 35vh;
-  height: 50%;
-  filter: drop-shadow(8px 8px 5px #000);
+  filter: drop-shadow( 5px 5px 2px rgb(56, 55, 55));
 }
 
-/*.pokebase-card-title{
-}
-.card-subtitle{
-}*/
 
-/*.forward .return{
-  background-color: aqua;
-  z-index: 200px;
-}*/
+.card-name{
+  position: relative;
+  top: 20px;
+  text-transform: uppercase;
+  transform: translateX(50%);
+  width: 50px;
+  font-size: 16px;
+  font-weight: 10px;
+}
+
+.card-generet{
+  position: relative;
+  top: 50px;
+  right: 50px;
+  text-transform: uppercase;
+  transform: translateX(50%);
+  width: 50px;
+  font-size: 16px;
+  font-weight: 10px;
+}
+
+.card-type{
+  position: relative;
+  top: 80px;
+  right: 100px;
+  text-transform: uppercase;
+  transform: translateX(50%);
+  width: 50px;
+  font-size: 16px;
+  font-weight: 10px;
+}
+

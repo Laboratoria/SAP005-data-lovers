@@ -6,23 +6,16 @@ hamburguer.addEventListener("click", () => {
 })
 
 function pokebola() {
+  let auxPoke= "";
   for (let card of data.pokemon) {
-    document.getElementById("pokedex").innerHTML += `
+    auxPoke += `
     <li class="card-poke">
-        <img class="card-image" src="${card.img}" alt="${card.img}/>
-        <h2 class="card-title">${card.name}. ${card.generation.name}</h2>
-        <p class="card-subtitle">Type: ${card.type.toString().replace(","," ")}</p>
+        <img class="card-image" src="${card.img}" alt="${card.name}"/>
+        <h2 class="card-name">Nome:${card.name}</h2>
+        <h3 class="card-generet">Geração:${card.generation.name}</h3>
+        <h4 class="card-type">Tipo:${card.type.toString().replace(","," ")}</h4>
     </li>`
   }
+  document.getElementById("pokedex").innerHTML = auxPoke
 }
-
 pokebola(data.pokemon);
-
-
-
-//import { example } from './data.js';
-// import data from './data/lol/lol.js';
-//import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
-
-//console.log(data.pokemon[0].name);
