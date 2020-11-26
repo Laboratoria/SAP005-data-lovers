@@ -36,8 +36,8 @@ pokecards+= `<div class="mostrar">
 <h1>${indice.name.toUpperCase()}<h1>
 <p>${indice.num}</p> 
 <p>${indice.about}</p> 
-<p>${indice.type.toString().replace(",", ", ")}</p>
-<p>${indice.resistant.toString().replace(",", ", ")}</p></div>`
+<p> <strong>Tipo:</strong> ${indice.type.join(' / ')}</p>
+<p> <strong>Resistente:</strong> ${indice.resistant.join(' / ')}</p></div>`
 }
 document.getElementById("item-all-cards").innerHTML = pokecards
 }
