@@ -142,19 +142,28 @@ li{
     padding-top: 100px;
 }
 .personagem{
-    background-color:lightseagreen;
-    /*width: 20vw; */
+    background-image: linear-gradient(to bottom, rgb(139, 57, 139), #4B0082);
+    width: 15vw;
     height: 32vw;
-    margin: 40px;
-    padding: 20px;
+    margin: 4% 1%;
+    padding: 5%;
     flex: 0 1 25%;
     perspective: 1000px;
     width: 100%;
     float: left;
     padding: 3% 4%;
+    border: 2px inset
     
 }
+@media(max-width:700px){
+    .personagem {flex-direction: column;}
+    .personagem img{margin-bottom:15px;}
+}
 
-
-
-
+.calculation{
+    font-size: 105%;
+    text-align:left;
+    font-weight:bolder;
+    margin-left: 30%;
+    margin-right: 10%;
+}

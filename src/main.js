@@ -10,16 +10,15 @@ function printCharacters(dados) {
     for ( let item of dados) {
     cards +=
       ` 
-     <article class="personagem">
+     <article id="teste" class="personagem">
       <div class="frente">
-        <p>${item.name.toUpperCase()}</p>
-        <img src="${item.image}">
+        <p class "card-name">${item.name.toUpperCase()}</p>
+        <img src="${item.image}" class="card-img">
       </div>
       <div class="tras">
-      <p>${item.name}</p>
-      <p>${item.status}</p>
-      <p>${item.species}</p>
-      <p>${item.gender}</p>
+      <p class="card-tras">${item.status}</p>
+      <p class="card-tras">${item.species}</p>
+      <p "card-tras">${item.gender}</p>
     </div>
     </article>
       `
@@ -44,6 +43,7 @@ function filterStatus(){
     const filterStatus = dataBase.filter(dataBase => dataBase.status === filterSelectStatus.value)
     printCharacters(filterStatus)
     document.getElementById("calculation").innerHTML = "Existe " + filterStatus.length + " personagens neste status e representa " + parseFloat((filterStatus.length*100)/(dataBase.length)).toFixed(2) + "% do total de personagens"
+    
 };
 
 const filterSelectSpecies = document.querySelector('.filter-species');

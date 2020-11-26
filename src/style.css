@@ -37,9 +37,23 @@ ul{
     text-decoration: none;
     cursor: pointer;
     opacity: 0.9;
-    color: white;
+    color:black;
     font-weight: bold;
     font-size: 20px;
+    float:inline-end
+
+}
+
+.netflix img{
+    width: 5%;
+    height: 5%;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: inline;
+    justify-content: center;
+    margin-top:4px;
+    border-radius: 10%;
+
 
 }
 
@@ -91,8 +105,8 @@ li{
     
 }
 
-.hero{
-    background-image:url("img/RickMorty.jpg");
+/*.content{
+     background-image:url("img/RickMorty.jpg");
     height: 100%;
     background-repeat: no-repeat;
     background-position:center;
@@ -109,8 +123,7 @@ li{
     float: left;
     padding: 3% 4%;
     
-}
-
+}*/
 
 
 .hero h1{
@@ -118,5 +131,24 @@ li{
     margin-bottom:15px;
 }
 
+.trailer{    
+    display:flex;
+    width: 350px;
+    float: right;
+    padding: 15px;
+    margin-top: 10%;
+    
+}
 
+.iframe{
+    width: 100%;
+}
 
+.about{
+    float:right;
+    margin-top:10%;
+    width: 350px;
+
+   
+
+}
