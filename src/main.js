@@ -1,6 +1,8 @@
 import filter from './data.js';
 function clear(){
     document.getElementById('cards').innerHTML= ""; 
+    document.getElementById('calculation').innerHTML= "";
+
     return
 }
 const dados = {
@@ -36,6 +38,8 @@ const dados = {
         type.innerHTML = `Tipo: ${pokemon.type}`
         fraqueza.innerHTML = `Fraqueza: ${pokemon.weaknesses}`
         
+        textNum.innerHTML = pokemon.num        
+         
         document.getElementById("cards").appendChild(flipCard);
         flipCard.appendChild(flipCardInner);       
         flipCardInner.appendChild(flipCardFront);
@@ -159,9 +163,12 @@ const typeElement = filter.type()
 const selectType = document.querySelector('.filterType');
 let choiseType = "";
 
+
 selectType.addEventListener('change', (event) => {
+    let sum = 0;
+    let counter = 0
+    let average = 0
      choiseType = event.target.value;
-     console.log(choiseType)
      clear();
 
     if ("" === choiseType) {
@@ -172,10 +179,19 @@ selectType.addEventListener('change', (event) => {
 
             typeList.forEach(pokemonType => {
                 if (pokemonType === choiseType) {
+                    sum += pokemon.stats
+                    counter += 1
+                    average = Math.floor(sum / counter)       
+                    
                     dados.show(pokemon);
                 }
             });
         });
+
+        const messageType = document.createElement('p');
+        messageType.classList.add('typePokemon')
+        messageType.innerHTML = "A média de ataque dos Pokémons do tipo escolhido é de " + average
+        document.getElementById("calculation").appendChild(messageType);
     }
 })
 

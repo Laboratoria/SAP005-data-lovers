@@ -46,10 +46,11 @@ const filter = {
         name:typeElement.name,
         img:typeElement.img,
         type:typeElement.type,
-        num:typeElement.num
+        num:typeElement.num,
+        stats:parseInt(typeElement.stats['base-attack'])
       }
     })
-    return element
+        return element
   },
 
   weaknesses() {
