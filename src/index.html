@@ -3,57 +3,66 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <header>
-    <div class="logo">
-      <img src="img\logo-nome.png">
-    </div>
+  <header class="header">
+    <div class="header-container">
+      <section class="logo">
+        <button id="logo-image-button"><img id="logo-image" src="img\logo-nome.png"></button>
+      </section>
 
-    <div class="search">
-      <form class="search-form">
-        <input id="search" type="text" placeholder="Insira o nome do personagem">
-        <button id="search-button">&#128269;</button>
-      </form>
-    </div>
+      <section class="search">
+        <form class="search-form">
+          <input id="search" type="text" placeholder="Insira o nome do personagem">
+          <button id="search-button">&#128269;</button>
+        </form>
+      </section>
 
-    <div class="menu">
-      <nav>
-        <ul>
-          <li>
-            <p id="home">Home</p>
-          </li>
-          <li>
-            <p id="characters">Personagens</p>
-          </li>
-          <li id="more">Saiba mais</li>
-        </ul>
-      </nav>
-    </div>
+      <section class="menu">
+        <nav>
+          <button id="hamburguer">
+            <i><img class="bars-menu" src="img\Hamburger_icon.png"></i>
+          </button>
+          <ul class="menu-container" id="menu-container">
+            <li class="menu-items" >
+              <p id="home">Home</p>
+            </li>
+            <li class="menu-items">
+              <p id="characters">Personagens</p>
+            </li>
+            <li class="menu-items">
+              <p id="more">Saiba mais</p>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </div> 
   </header>
 
   <div id="first-page" class="page-active">
     <main>
       <section class="synopsis">
-      
-        <h1>Rick and Morty</h1>
-        <iframe src=" https://giphy.com/embed/jQDozgWeDXUoQZ1htF" width="100%" frameBorder="0" class="giphy-embed"></iframe>
-        <a href="https://giphy.com/gifs/rickandmorty-season-3-adult-swim-rick-and-morty-jQDozgWeDXUoQZ1htF"></a>
-        <p>Rick Sanchez é um cientista genial e alcoólatra que foi morar com a família de sua filha Beth, uma cirurgiã
-          cardíaca de equinos. Ele divide seu tempo entre desenvolver projetos altamente tecnológicos em seu laboratório
-          (garagem da casa de Beth) e levar seu neto de 14 anos Morty em aventuras perigosas e surreais pelo Multiverso.
-          Combinados com tensões preexistentes dentro da família, esses eventos causam ao sensível Morty muito angústia em
-          casa e na escola.</p>
-    
+        <div class="synopsis-image">
+          <img src="https://media4.giphy.com/media/l41lI4bYmcsPJX9Go/giphy.gif" class="giphy">
+        </div>
+        <div class="synopsis-text">
+          <h1>Rick and Morty</h1>
+          <p>Rick Sanchez é um cientista genial e alcoólatra que foi morar com a família de sua filha Beth, uma cirurgiã
+            cardíaca de equinos. Ele divide seu tempo entre desenvolver projetos altamente tecnológicos em seu laboratório
+            (garagem da casa de Beth) e levar seu neto de 14 anos Morty em aventuras perigosas e surreais pelo Multiverso.
+            Combinados com tensões preexistentes dentro da família, esses eventos causam ao sensível Morty muito angústia em
+            casa e na escola.</p>
+        </div>
       </section>
 
       <section class="main-characters">
         <p id="main-characters-title">Personagens Principais</p>
-        <ul id="main-characters-list"></ul>
+        <ul id="main-characters-list" class="characters-list"></ul>
       </section>
     </main>
   </div>
@@ -61,31 +70,59 @@
   <div id="characters-page" class="page-disabled">
     <main>
       <section class="filter">
-        <div class="filter">
-            <button class="" id="filter">Filtro &#128269;</button>
+        <button class="filter-title" id="filter-button">Filtros</button>
+        <!-- <select  class="filter" name="select">
+          <option value="select-options"></option>
+          <option value="human">Human</option>
+          <option value="alien">Alien</option>
+          <option value="unknown">Unknown</option>
+          <option value="alive">Alive</option>
+          <option value="dead">Dead</option>
+          <option value="unknown-status">Unknown</option>
+          <option value="female">Female</option>
+          <option value="male">Male</option>
+          <option value="genderless">Genderless</option>
+          <option value="unknown-gender">Unknown</option>
+          <button id="option-button">&#128269;</button>
+        </select> -->
+        <div class="filter-options" id="filter-options">
+          <p>Species:</p>
+          <label><input type="checkbox" name="filter-option" value="human">Human</label>
+          <label><input type="checkbox" name="filter-option" value="alien">Alien</label>
+          <label><input type="checkbox" name="filter-option" value="unknown">Unknown</label>
+          <p>Status:</p>
+          <label><input type="checkbox" name="filter-option" value="alive">Alive</label>
+          <label><input type="checkbox" name="filter-option" value="dead">Dead</label>
+          <label><input type="checkbox" name="filter-option" value="unknown-status">Unknown</label>
+          <p>Gender:</p>
+          <label><input type="checkbox" name="filter-option" value="female">Female</label>
+          <label><input type="checkbox" name="filter-option" value="male">Male</label>
+          <label><input type="checkbox" name="filter-option" value="genderless">Genderless</label>
+          <label><input type="checkbox" name="filter-option" value="unknown-gender">Unknown</label>
+          <button id="filter-options-button">&#128269;</button>
         </div>
-        </section>
+      </section>
 
-        <section class="sort-data">
-          <p id="sort-data-title">Ordenar por:</p>
-          <select name="sort-data" id="sort-by-alphabetic-order">
-            <option value="empty"></option>
-            <option value="asc">De A a Z</option>
-            <option value="desc">De Z a A</option>
-          </select>
-        </section>
+      <section class="sort-data">
+        <p id="sort-data-title">Ordenar por:</p>
+        <select name="sort-data" id="sort-by-alphabetic-order">
+          <option value="empty" id="empty"></option>
+          <option value="asc">De A a Z</option>
+          <option value="desc">De Z a A</option>
+        </select>
+      </section>
 
-        <section id="paginate">
-        <p id="textItems"></p>
-        <ul id="list"></ul>
-        <div class="pagination">
-          <button class="first">&#171;</button>
-          <button class="prev">&lt;</button>
-          <div class="numbers"></div>
-          <button class="next">&gt;</button>
-          <button class="last">&#187;</button>
-        </div>
-        </section>
+      <section id="paginate">
+      <p id="textItems"></p>
+      <ul id="list" class="characters-list"></ul>
+      <div class="pagination">
+        <button class="first">&#171;</button>
+        <button class="prev">&lt;</button>
+        <div class="numbers"></div>
+        <button class="next">&gt;</button>
+        <button class="last">&#187;</button>
+      </div>
+      </section>
     </main>
   </div>
 
