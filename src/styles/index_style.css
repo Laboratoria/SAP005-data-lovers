@@ -77,6 +77,7 @@ img{
 
 .bg-top-container{
     background:blue;
+    background-attachment: fixed;
 } 
 
 
@@ -134,7 +135,7 @@ img{
 /* ------------------------LOCALIZAR POKEMON------------------------------------------- */
 
 .middle-bg{
-    background: #ffd2bd;
+    padding-bottom: 4em;
 }
 
 .search-pokemon{
@@ -149,13 +150,15 @@ img{
 }
 
 .container-search{
-    background-color:rgb(70, 70, 70);
+    background-image: url("../img/bg-top.jpg");
+    background-color: rgb(70, 70, 70);
     max-width: 960px;
     margin: 0 auto;
     padding-bottom: 1em;
     border-radius: 1em;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 
 }
 
@@ -197,14 +200,12 @@ img{
 }
 
 #item-card-one{
-    background: #EE6B2F;
+    text-align: center;
+    background: #f14c00;
     border-radius: 1em;
-    width: 19em;
+    width: 17em;
     height: 26em;
-    margin-bottom: 2em;
-    margin-left: 4em;
-    margin-right: 4em;
-    margin-top: 4em;
+    margin: 17px;
 }
 
 #item-card1 h1{
@@ -216,10 +217,12 @@ img{
 
 #item-card1 p{
     text-align: center;
+    font-weight: 300;
     font-size: 11pt;
     margin-left: 1em;
     margin-right: 1em;
     color:white;
+    padding: 7px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -424,6 +427,10 @@ img{
 }
 
 .mostrar p {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom:10px;
+    font-weight: 300;
     text-align: center;
     font-size: 11pt;
     margin-left: 1em;
