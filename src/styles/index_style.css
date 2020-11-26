@@ -151,9 +151,9 @@ img{
 
 .container-search{
     background-image: url("../img/bg-top.jpg");
-    background-color: rgb(70, 70, 70);
     max-width: 960px;
     margin: 0 auto;
+    padding-top: 4em;
     padding-bottom: 1em;
     border-radius: 1em;
     display: flex;
@@ -163,9 +163,10 @@ img{
 }
 
 .item-instruction-search{
+    background:rgb(75, 75, 75);
     margin: 0 10px;
     align-content: center;
-    padding-top: 2em;
+    padding:1em;
     color:white;
     flex: 2 1 300px;
     flex-grow: 1;
@@ -201,15 +202,15 @@ img{
 
 #item-card-one{
     text-align: center;
-    background: #f14c00;
-    border-radius: 1em;
+    background-image: linear-gradient(#358AFA, white);
     width: 17em;
     height: 26em;
     margin: 17px;
+    border: solid 6px  rgb(212, 212, 14);
 }
 
 #item-card1 h1{
-    color: white;
+    color: rgb(34, 34, 34);
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -221,7 +222,7 @@ img{
     font-size: 11pt;
     margin-left: 1em;
     margin-right: 1em;
-    color:white;
+    color: rgb(34, 34, 34);
     padding: 7px;
     margin-left: auto;
     margin-right: auto;
@@ -234,46 +235,68 @@ img{
 
 /* -----------    CONTAINER INSTRUÇÕES MOSTRAR TODOS OS POKEMONS ------------------ */
 
-.container-show-all-pokemons{
+
+.container-filter{
     border-top: 2px solid #b6b6b6;
     max-width: 960px;
     margin: 0 auto;
-    padding: 60px 0px 0px 0px;
-    justify-content: center;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    align-items: flex-end;
+    align-items:center;
+    padding: 60px 0px 36px 0px;
 }
 
-.item-instruction-show-poke h1{
-    text-align: center;
+
+
+.item-filter h1{
+    font-size: 1em;
+    max-width: 960px;
+    padding-left: 45px;
+    margin-right: 10px;
+    margin-bottom: 21px;
 }
 
-.item-instruction-show-poke{
-    margin-right: 1em;
+#item-btn-generation-pokemon{
+    flex:3;
 }
 
-.item-instruction-show-poke #btn-generation-pokemon{
+#btn-generation-pokemon{
     cursor: pointer;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
     margin-top: 0.3em;
     box-sizing: border-box;
     background-color: blue;
     border: none;
     border-radius: 16px;
     color: white;
-    padding: 1em;
+    padding: 12px;
     font-family: Exo, sans-serif;
-    font-size: 1em;
+    font-size: 13pt;
     font-weight: 700;
     transition: all 0.3s ease-in-out 0s;
 }
 
-.item-instruction-show-poke #btn-generation-pokemon:hover{
+#btn-filter-type{
+    cursor: pointer;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-top: 0.3em;
+    box-sizing: border-box;
+    background-color: blue;
+    border: none;
+    border-radius: 16px;
+    color: white;
+    padding: 12px;
+    font-family: Exo, sans-serif;
+    font-size: 13pt;
+    font-weight: 700;
+    transition: all 0.3s ease-in-out 0s;
+}
+#btn-filter-type:hover{
     background-color: rgb(135, 135, 231);
     scale: .5px;
 }
-
 
 /* ----------------------------CONTAINER DE ORDENAR------------------------------- */
 
@@ -301,17 +324,17 @@ img{
 
 #btn-cresc-pokemon{
     cursor: pointer;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
+    margin-left: 19px;
+    margin-right: 0;
     margin-top: 0.3em;
     box-sizing: border-box;
     background-color: blue;
     border: none;
     border-radius: 16px;
     color: white;
-    padding: 12px;
+    padding: 9px;
     font-family: Exo, sans-serif;
-    font-size: 13pt;
+    font-size: 9pt;
     font-weight: 700;
     transition: all 0.3s ease-in-out 0s;
 }
@@ -324,15 +347,17 @@ img{
 
 #btn-decresc-pokemon{
     cursor: pointer;
+    margin-left: 19px;
+    margin-right: 0;
     margin-top: 0.3em;
     box-sizing: border-box;
     background-color: blue;
     border: none;
     border-radius: 16px;
     color: white;
-    padding: 12px;
+    padding: 9px;
     font-family: Exo, sans-serif;
-    font-size: 13pt;
+    font-size: 9pt;
     font-weight: 700;
     transition: all 0.3s ease-in-out 0s;
 }
@@ -342,55 +367,6 @@ img{
     scale: .5px;
 }
 
-/*----------------------------- CONTAINER FILTRAR POR TIPO E FRAQUEZA -----------------*/
-
-.container-filter{
-    max-width: 960px;
-    margin: 0 auto;
-    padding-bottom: 25px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    align-items: center;
-}
-.item-filter{
-    flex:1;
-}
-
-.item-filter h1{
-    font-size: 1em;
-    max-width: 960px;
-    padding-left: 45px;
-    margin-right: 10px;
-    margin-bottom: 21px;
-}
-
-.item-filter #filter-type{
-    cursor: pointer;
-    padding: 8px;
-    margin-left: .7em;
-    font-size: 1em;
-    border-radius: .5em;
-    text-transform: uppercase;
-    font-family: 'Exo', sans-serif;
-    font-size: 13pt;
-    font-weight: 700;
-}
-
-.item-filter #filter-weakness{
-
-    cursor: pointer;
-    padding: 8px;
-    margin-left: .7em;
-    font-size: 1em;
-    border-radius: .5em;
-    text-transform: uppercase;
-    font-family: 'Exo', sans-serif;
-    font-size: 13pt;
-    font-weight: 700;
-
-}
 
 /* --------------------------------CONTAINER ONDE SÃO MOSTRADOS TODOS OS CARDS------------ */
 
@@ -398,7 +374,7 @@ img{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background: #ffb491;
+    background: gray;
     border-top:2px solid #b6b6b6;
     max-width: 960px;
     margin: 0 auto;
@@ -411,16 +387,17 @@ img{
 
 .mostrar{
     text-align: center;
-    background: #EE6B2F;
-    border-radius: 1em;
+    background-image: linear-gradient(#358AFA, white);
     width: 17em;
     height: 26em;
     margin: 17px;
+    border: solid 6px rgb(212, 212, 14);
+
 
 }
 
 .mostrar h1{
-    color: white;
+    color: rgb(34, 34, 34);
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -435,7 +412,7 @@ img{
     font-size: 11pt;
     margin-left: 1em;
     margin-right: 1em;
-    color: white;
+    color: rgb(34, 34, 34);
     margin-left: auto;
     margin-right: auto;
 }
