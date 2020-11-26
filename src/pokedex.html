@@ -2,23 +2,36 @@
 <html lang="pt-br">
   <head>
     <meta charset="utf-8">
-    <title>Pokédex</title>
+    <title>Pokédex Informações</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="cover">
       <img src="./img/Pokebola.png" class="pokebola">
       <nav class="navbar">
-        <li class="menu"><a class="link-menu" href="#">HOME</a></li>        
-        <input type="text-area" id="pokemon-filter" placeholder="DIGITE O NOME DO POKÉMON" class="pokemon-filter">
+        <li class="menu"><a class="link-menu" href="http://localhost:5000">POKÉDEX</a></li>
       </nav>
     </header>
-    
+    <div class="pokedex">
+      <p class="name-pokemon"></p>
+      <div class="pokedex-pokemon">
+        <img class="pokedex-pokemon-img">
+      </div>
+      <div class="pokedex-pokemon-about">
+        <ol class="pokedex-list">
+          <li class="pokedex-list-about"></li>
+          <li class="pokedex-list-type"></li>
+          <li class="pokedex-list-weaknesses"></li>
+          <li class="pokedex-list-resistant"></li>
+        </ol>
+      </div>
+    </div>
+    <section></section>
   </body>
   <footer class="footer">
-    <p>Todos os direitos reservados</p>
+    <p></p>
   </footer>
-  <script src="main.js" type="module"></script>
+  <script src="pokedex.js" type="module"></script>
 </body>
 
 </html>
