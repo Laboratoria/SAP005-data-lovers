@@ -1,3 +1,106 @@
-#root{
+html{
+  background-image: url(555.png);
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
 
+#root{
+  color:#f2f5f1;
+  text-shadow: #03eaac 5px 5px 25px;
+
+  text-align: center;
+  font-size: 200px;
+  'Helvetica Neue', sans-serif;
+  letter-spacing: 1px;
+  margin: 0px;
+  padding: 20px 20px 0px;
+}
+
+#subtitle{
+  color: #f2f5f1;
+  text-shadow: #03eaac 0px 1px 10px;
+  background-color: black;
+  text-align: center;
+  font-size: 12px;
+  font-family: Arial;
+  letter-spacing: 10px;
+  margin: 0px;
+  padding: 20px 20px;
+}
+
+ul{
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+button{
+  background-color:#000000;
+  color:#f5edea;
+  font-family: Arial;
+  font-size: 15px;
+  border-radius: 30px;
+  padding: 8px 80px;
+  text-align:center;
+  border-style: groove;
+
+}
+
+form{
+  display: flex;
+  justify-content: center;
+}
+
+input{
+  background-color: rgb(0, 0, 0);
+  color: rgb(250, 243, 243);
+  border-style:groove;
+  border-radius: 50px;
+  font-family: arial;
+  font-size: 15px;
+  width: 45%;
+  padding: 2px 5px;
+  text-align: center;
+
+
+}
+
+
+
+
+
+
+#sara, #juliane{
+  display:inline;
+}
+
+a{
+  color: #FFF;
+  text-decoration: none;
+}
+
+a:link{
+  text-decoration: underline;
+}
+
+.footer{
+  color: white;
+  background-color: #000000;
+  border-style: groove;
+  border-color: rgb(89, 85, 85);
+  padding: 2px 2px;
+  display: block;
+  text-align: center;
+  font-family: Arial;
+  font-size: 10px;
+  letter-spacing: 2px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
