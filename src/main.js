@@ -1,12 +1,10 @@
 import filter from './data.js';
-
-const img = filter.photo()
-showAllPokemons()
-function showAllPokemons() {
-    
-    //  showPokemons.innerHTML = "";
-
-    img.forEach(pokemon => {
+function clear(){
+    document.getElementById('cards').innerHTML= ""; 
+    return
+}
+const dados = {
+    show(pokemon){
         const flipCard = document.createElement('div')
         flipCard.classList.add("flip-card") 
         const flipCardInner = document.createElement('div')
@@ -24,7 +22,7 @@ function showAllPokemons() {
         textNum.classList.add('pokedexNum')
         const image = document.createElement("img");
         image.src = pokemon.img
-        text.innerHTML = pokemon.name.toUpperCase()
+        text.innerHTML = pokemon.name.toUpperCase();
         textNum.innerHTML = pokemon.num
          
         document.getElementById("cards").appendChild(flipCard);
@@ -33,59 +31,41 @@ function showAllPokemons() {
         flipCardInner.appendChild(flipCardBack);     
         flipCardFront.appendChild(text);
         text.appendChild(textNum);
-        text.appendChild(image);   
-
-
-    });
+        text.appendChild(image);
+    } 
 }
 
 
-// function showAllPokemons() {
-//     img.forEach(pokemon => {
-//         const flipCard = document.createElement('div') 
-//         flipCard.classList.add("flip-card") 
-//         const flipCardFrontInner = document.createElement('div')
-//         flipCardFrontInner.classList.add("flip-card-inner")
+const img = filter.photo()
 
-//         const flipCardFront = document.createElement('div')
-//         flipCardFront.classList.add("flip-card-front")
+function showAllPokemons() { 
+    img.forEach(pokemon => {
+        dados.show(pokemon);
+    });
+} showAllPokemons();
 
-//         const flipCardBack = document.createElement('div')
-//         flipCardBack.classList.add("flip-card-back")
 
-//         const text = document.createElement('p');
-//         const image = document.createElement("img");
-//         image.src = pokemon.img
-//         text.innerHTML = pokemon.name  
-//         showPokemons.appendChild(flipCard);
-//         flipCard.appendChild(flipCardInner);       
-//         flipCardInner.appendChild(flipCardFront);
-//         flipCardInner.appendChild(flipCardBack);     
-//         flipCardFront.appendChild(text);
-//         text.appendChild(image);   
 
-//     });
-// }
+const allPokemon = document.getElementById('btnAll')
+
+allPokemon.addEventListener("click", ()=>{
+    clear(); 
+    return showAllPokemons();
+})
+
 
 const name = filter.filter()
-
 const button = document.querySelector('#btn')
 
 button.addEventListener('click', (e)=>{
     e.preventDefault()
     const search = document.querySelector('#txtSearch')
     let searchOption =  search.value
-    document.getElementById('cards').innerHTML= "";
- 
+    clear(); 
     if("" !== searchOption){
-       const found = name.find(pokemon => pokemon.name == searchOption)
-       if(found !== undefined){
-            const text = document.createElement('p');
-            const image = document.createElement("img");
-            image.src = found.img
-            text.innerHTML = found.name  
-            document.getElementById('cards').appendChild(text);
-            text.appendChild(image); 
+    const pokemon = name.find(item => item.name == searchOption)
+    if(pokemon !== undefined){
+            dados.show(pokemon); 
         }else{
             const textNotFound = document.createElement('p');
             const imageNotFound = document.createElement("img");
@@ -98,14 +78,10 @@ button.addEventListener('click', (e)=>{
 
             imageNotFound.classList.add('imageNotFound');
             textNotFound.classList.add('textNotFound');
-        }
-        
-    
-    
+        }    
     }else{
         showAllPokemons()
     }
-
 });
 
 
@@ -117,37 +93,25 @@ let select = "";
 
 nameFilter.addEventListener('change',(event)=>{
     select = event.target.value;
-    document.getElementById('cards').innerHTML= "";
-
+    clear();
     if ("" === event.target.value) {
         showAllPokemons()
     } else if(select === 'az'){
         nameOrder.forEach(pokemon => {
-            const text = document.createElement('p');
-            const image = document.createElement("img");
-            image.src = pokemon.img
-            text.innerHTML = pokemon.name  
-            document.getElementById('cards').appendChild(text);
-            text.appendChild(image);   
-    
+            dados.show(pokemon);    
         });
 
     }else{
         let newArray = filter.filter()
         newArray.reverse()
         newArray.forEach(pokemon => {
-            const text = document.createElement('p');
-        const image = document.createElement("img");
-        image.src = pokemon.img
-        text.innerHTML = pokemon.name  
-        document.getElementById('cards').appendChild(text);
-        text.appendChild(image);   
+            dados.show(pokemon);  
     
         });
 
-    }
-    
+    }    
 })
+
 
 const pokedex = filter.pokedexFilter()
 const selectElementPokedex = document.querySelector('.order');
@@ -155,35 +119,22 @@ let elementoSelecionadoPokedex = "";
 
 selectElementPokedex.addEventListener('change', (event) => {
     elementoSelecionadoPokedex = event.target.value;
-    document.getElementById('cards').innerHTML = "";
-
+    clear();
     if (elementoSelecionadoPokedex === "") {
         showAllPokemons()
 
     } else if(elementoSelecionadoPokedex === '1a251'){
         pokedex.forEach(pokemon => {
-            const text = document.createElement('p');
-            const image = document.createElement("img");
-            image.src = pokemon.img
-            text.innerHTML = pokemon.name  
-            document.getElementById('cards').appendChild(text);
-            text.appendChild(image);   
+            dados.show(pokemon); 
     
         });
-    }else{
+    }else{  
         let newArray = filter.pokedexFilter()
         newArray.reverse()
         newArray.forEach(pokemon => {
-        const text = document.createElement('p');
-        const image = document.createElement("img");
-        image.src = pokemon.img
-        text.innerHTML = pokemon.name  
-        document.getElementById('cards').appendChild(text);
-        text.appendChild(image);   
-    });
-
-}
-
+            dados.show(pokemon);  
+        });
+    }
 })
 
 
@@ -194,23 +145,17 @@ let choiseType = "";
 selectType.addEventListener('change', (event) => {
      choiseType = event.target.value;
      console.log(choiseType)
-    document.getElementById('cards').innerHTML = "";
+     clear();
 
     if ("" === choiseType) {
         showAllPokemons()
-    } else {
-        typeElement.forEach(pokemonType => {
-            let typeList = pokemonType.type;
+    }else{
+        typeElement.forEach( pokemon => {
+            let typeList = pokemon.type;
 
-            typeList.forEach(pokemon => {
-                if (pokemon === choiseType) {
-
-                    const text = document.createElement('p');
-                    const image = document.createElement("img");
-                    image.src = pokemonType.img
-                    text.innerHTML = pokemonType.name  
-                    document.getElementById('cards').appendChild(text);
-                    text.appendChild(image);   
+            typeList.forEach(pokemonType => {
+                if (pokemonType === choiseType) {
+                    dados.show(pokemon);
                 }
             });
         });
@@ -225,22 +170,17 @@ let elementoSelecionado = "";
 
 selectElementWeaknesses.addEventListener('change', (event) => {
      elementoSelecionado = event.target.value;
-    document.getElementById('cards').innerHTML = "";
+     clear();
 
     if ("" === elementoSelecionado) {
         showAllPokemons()
-    } else {
+    }else{
         weaknesses.forEach(pokemon => {
             let weaknessesList = pokemon.weaknesses;
 
             weaknessesList.forEach(weaknessesItem => {
                 if (weaknessesItem === elementoSelecionado) {
-                    const text = document.createElement('p');
-                    const image = document.createElement("img");
-                    image.src = pokemon.img
-                    text.innerHTML = pokemon.name  
-                    document.getElementById('cards').appendChild(text);
-                    text.appendChild(image);   
+                    dados.show(pokemon);  
                 }
             });
         });
@@ -253,7 +193,7 @@ let elementoSelecionadoResistant = "";
 
 selectElementResistant.addEventListener('change', (event) => {
     elementoSelecionadoResistant = event.target.value;
-    document.getElementById('cards').innerHTML = "";
+    clear();
 
     if ("" === elementoSelecionadoResistant) {
         showAllPokemons()
@@ -263,12 +203,7 @@ selectElementResistant.addEventListener('change', (event) => {
 
             resistantList.forEach(resistantItem => {
                 if (resistantItem === elementoSelecionadoResistant) {
-                    const text = document.createElement('p');
-                    const image = document.createElement("img");
-                    image.src = pokemon.img
-                    text.innerHTML = pokemon.name  
-                    document.getElementById('cards').appendChild(text);
-                    text.appendChild(image);   
+                    dados.show(pokemon);  
                 }
             });
         });
