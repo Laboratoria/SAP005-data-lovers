@@ -19,10 +19,6 @@ button {
 	opacity: 0.9;
 }
 
-a:hover {
-	opacity: 1;
-}
-
 /*HEADER*/
 .cover {
 	width: 100%;
@@ -104,7 +100,7 @@ a:hover {
 	}
 }
 /*FOOTER*/
-.footer {
+/*.footer {
 	display: flex;
 	flex-direction: column;
 	background-color: yellow;
@@ -132,7 +128,7 @@ a:hover {
 	.footer p {
 		text-align: center;
 	}
-}
+}*/
 /*CARDS */
 
 
@@ -177,3 +173,42 @@ a:hover {
 	font-size: 15px;
 	text-align: center;
 }
+
+.poke-info{
+	border: 1px solid silver;
+	border-radius: 10px;
+	width: 70px;
+	height: 15px;
+	font-size: 10px;
+	background-color: blue;
+}
+
+.name-pokemon{
+	font-size: 30px;
+	text-transform: capitalize;
+	text-align: center;
+	flex-direction: column;
+}
+
+.pokedex-pokemon{
+	display: flex;
+	width: 10vw;
+	margin: 5px;
+	padding: 5px;
+	border: 1px solid silver;
+	border-radius: 10px;
+	justify-content: center;
+}
+
+.pokedex-pokemon-about{
+	display: flex;
+	border: 1px solid silver;
+	border-radius: 10px;
+	width: 80vw;
+}
+
+.pokedex-list{
+	font-size: 15px;
+}
+
+
