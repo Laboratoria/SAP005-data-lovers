@@ -5,7 +5,31 @@
 
 body{
     font-family: 'Open Sans', sans-serif;
-    background-color: #eceafae3;  
+    /*background-color: #eceafae3;  */
+    background-image: url("img/fundo4.jpg");
+    /*background-attachment: fixed;*/
+    background-repeat: repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;      
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+#logo{
+    width: 42%;
+    height: 42%;
+    /* position: relative;
+    margin-left: auto;
+    margin-right: auto; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 .sidebar nav{
@@ -19,6 +43,7 @@ body{
     /*background: rosybrown;*/
     list-style: none; 
     width: 15%;
+    color: white;
 } 
 
 .sidebar h2{
@@ -65,7 +90,7 @@ body{
 #bg{
   width: 400px;
   height: 300px;
-  background-image: url(Pokeball.jpg);
+  
 }
 
 #divBusca{
@@ -87,13 +112,18 @@ body{
 }
 
 .cards{
-    width: 60vw;
+    width: 70vw;
     padding: 30px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     margin: 30px;
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1000px;
+    margin:0 auto;
+    box-shadow: 0 4px 8px 0 rgb(250, 248, 248);
 }
 
 .rodape{
