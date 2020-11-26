@@ -13,12 +13,12 @@ for (const [i, pokemon] of data.pokemon.entries()) {
   orderedList.classList.add('list-body');
   
   let listInfo1 = document.createElement('li');
-  listInfo1.classList.add('name');
-  listInfo1.innerHTML = pokemon.name;
+  listInfo1.classList.add('num');
+  listInfo1.innerHTML = pokemon.num;
 
   let listInfo2 = document.createElement('li');
-  listInfo2.classList.add('num');
-  listInfo2.innerHTML = pokemon.num;
+  listInfo2.classList.add('name');
+  listInfo2.innerHTML = pokemon.name;
 
   let listInfo3 = document.createElement('li');
   listInfo3.classList.add('type');

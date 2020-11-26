@@ -25,7 +25,7 @@ button {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 20px 50px;
+	height: 10vh;
 	background-color: yellow;
 	flex-direction: row;
 }
@@ -99,35 +99,6 @@ button {
 		font-size: 10px;
 	}
 }
-/*FOOTER*/
-/*.footer {
-	display: flex;
-	flex-direction: column;
-	background-color: yellow;
-	width: 100%;
-	padding: 50px 0;
-	align-items: center;
-	bottom: 0;
-	padding: 1rem;
-	margin-top: 10px;
-}
-.footer p {
-	color: black;
-	text-align: center;
-}
-@media (max-width: 656px) {
-	.footer {
-		flex-direction: column-reverse;
-		width: 100%;
-		bottom: 0;
-		position: absolute;
-		padding: 1rem;
-		margin-top: 10px;
-	}
-	.footer p {
-		text-align: center;
-	}
-}*/
 /*CARDS */
 
 #root {
@@ -139,37 +110,69 @@ button {
 	margin: auto;
 }
 .card {
-	width: 10vw;
-	margin: 5px;
-	padding: 5px;
+	width: 12vw;
+	margin: 8px;
+	padding: 6px;
 	border: 1px solid silver;
 	border-radius: 10px;
+	text-align: center;
+	filter: drop-shadow(0 0 0.45rem rgb(124, 117, 119));
 }
 .card-body {
 	text-align: center;
+	text-transform: capitalize;
 	justify-content: flex-start;
 	flex-direction: row;
 }
 
 .name {
 	font-family: Arial;
-	color: black;
+	color: rgb(192, 10, 10);
 	font-size: 20px;
 	text-align: center;
 }
 
 .num {
 	font-family: Arial;
-	color: rgb(214, 7, 7);
+	color: rgb(0, 0, 0);
 	font-size: 15px;
 	text-align: center;
 }
 
 .type {
 	font-family: Arial;
-	color: rgb(70, 27, 228);
+	color: rgb(0, 0, 0);
 	font-size: 15px;
 	text-align: center;
+}
+
+/*FOOTER*/
+.footer {
+	display: flex;
+	flex-direction: column;
+	background-color: yellow;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+.footer p {
+	color: black;
+	text-align: center;
+	font-size: 0, 3 vw;
+}
+@media (max-width: 656px) {
+	.footer {
+		flex-direction: column-reverse;
+		width: 100%;
+		bottom: 0;
+		position: relative;
+		padding: 1rem;
+		margin-top: 10px;
+	}
+	.footer p {
+		text-align: center;
+	}
 }
 
 .poke-info{
@@ -208,5 +211,3 @@ button {
 .pokedex-list{
 	font-size: 15px;
 }
-
-
