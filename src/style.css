@@ -1,24 +1,69 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+
+
 body{
     font-family: 'Open Sans', sans-serif;
+    background-color: #eceafae3;  
 }
 
-.campo-login{
-    position: absolute;
-    left: 70%;
-    top: 5%;
-    border-width: 2px 5px 3px 6px; 
-    border-style:solid;
-    border-radius: 10px 20px;
-    border-color: black;
-    background-color: rgb(180, 87, 87);
-    color: red;
-    padding: 20px;
+.sidebar nav{
+    display:flex;
+    justify-content: left;
 }
+.sidebar{
+    margin: 0px;
+    padding: 0px;
+    float: left; /*alinhou itens de busca no canto central*/
+    /*background: rosybrown;*/
+    list-style: none; 
+    width: 15%;
+} 
+
+.sidebar h2{
+    margin: 5px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar ul li{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar a:link{
+    background: #dba8a8;
+    color: #666;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 6px;
+    display: block;
+}
+
+.sidebar a:hover{
+    background: #E5F0FF;
+    color: #039;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 75%; /* 100% centraliza mais precisa subir e side bar já ocupa 20% */
+}
+
+#cboPokemon{
+    margin: auto;
+}
+
+
 #bg{
-   width: 400px;
+  width: 400px;
   height: 300px;
   background-image: url(Pokeball.jpg);
 }
@@ -28,9 +73,9 @@ body{
     border:solid 1px;
     border-radius:15px;
     width:300px;
-  }
+}
   
-  #txtBusca{
+#txtBusca{
     float:left;
     background-color:transparent;
     padding-left:5px;
@@ -39,30 +84,25 @@ body{
     border:none;
     height:32px;
     width:260px;
-  }
-
-.sidebar{
-    position: relative;
-    left: 0%;
-    width: 10%;
-    height: 100%;
-    background: rosybrown;
 }
-  
-.flex-container{
+
+.cards{
+    width: 60vw;
+    padding: 30px;
     display: flex;
-    flex-direction: wrap;
-    /*flex-wrap: wrap; /* quebrar linha se apertar/diminuir tela */
-    width: 50%;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 30px;
+
 }
 
-.card {
-    width: 0%;
-    margin: 0%;
-    padding: 0%;
-    
+.rodape{
+    text-align: center;
+    position: fixed;
+    flex-direction: row;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 100%;
+    font-weight: bolder;
 }

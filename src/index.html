@@ -9,17 +9,15 @@
   <body>
     <div id="root"></div>
    
-    <header>
-      <h1>Título desta Página</h1>
+    <header class="title">
       <img src= "img/pokemon-logo-1.jpg" alt="some text" width=300 height=200>
     </header>
 
     <aside>
-      <h2>Tipos de Pokémons</h2>
         <div class="sidebar">
+          <h2>Tipos de Pokémons</h2>
           <nav>
-            <ul>
-              <li><a href="# ">&#9776; Aço</a></li>
+            <ul>              
               <li><a href="# ">&#9776; Água</a></li>
               <li><a href="# ">&#9776; Dragão</a></li>
               <li><a href="# ">&#9776; Elétrico</a></li>
@@ -28,7 +26,8 @@
               <li><a href="# ">&#9776; Fogo</a></li>
               <li><a href="# ">&#9776; Gelo</a></li>
               <li><a href="# ">&#9776; Inseto</a></li>
-              <li><a href="# ">&#9776; Lutador</a></li>           
+              <li><a href="# ">&#9776; Lutador</a></li>  
+              <li><a href="# ">&#9776; Metálico</a></li>
               <li><a href="# ">&#9776; Normal</a></li>
               <li><a href="# ">&#9776; Noturno</a></li>
               <li><a href="# ">&#9776; Pedra</a></li> 
@@ -42,67 +41,40 @@
         </div>
     </aside>
 
-    <main>
-      
-      <section class="filtro-de-pesquisa">
+    <main class="flex-container">
+
+      <section>
         <select id="cboPokemon">
-            <option value="inicio">Ordenar por</option>
-            <option value="fraco">Ordenar por Mais Fraco</option>
-            <option value="elemento">Ordenar por Elemento</option>
-            <option value="maisForte">Ordenar por Mais Forte</option>
-            <option value="raridade">Ordenar por Raridade</option>
-            <option value="anterior"> Ordemar</option>
-         </select>
-      
-       <div id="bg">  </div>
-        
+          <option value="inicio">Ordenar por</option>
+          <option value="fraco">Ordenar por Mais Fraco</option>
+          <option value="elemento">Ordenar por Elemento</option>
+          <option value="maisForte">Ordenar por Mais Forte</option>
+          <option value="raridade">Ordenar por Raridade</option>
+          <option value="anterior"> Ordenar</option>              
+        </select>
+  
+        <div id="bg">  
+
       </section>
-        
-      
+
       <section>
         <div id="divBusca">
-            <input type="text" id="txtBusca" placeholder="Buscar..."/>
-            <img src="img/lupa.jpg" id="btnBusca" alt="Buscar"/>
+          <input type="text" id="txtBusca" placeholder="Buscar..."/>
+          <img src="img/lupa.jpg" id="btnBusca" alt="Buscar"/>
         </div>
-      
       </section>
-        
-     
-      <section class= "flex-container">
-        <div class= "card">
-          <p>Pokemon X</p>
-          <img class= "imagem-pokemon" src="imagens/nome imagem" />
-        </div>
 
-        <div class= "card">
-          <p>Pokemon X</p>
-          <img class= "imagem-pokemon" src="imagens/nome imagem" />
-        </div>
-
-        <div class= "card">
-          <p>Pokemon X</p>
-          <img class= "imagem-pokemon" src="imagens/nome imagem" />
-        </div>
-
-        <div class= "card">
-          <p>Pokemon X</p>
-          <img class= "imagem-pokemon" src="imagens/nome imagem" />
-        </div>
-
-        <div class= "card">
-          <p>Pokemon X</p>
-          <img class= "imagem-pokemon" src="imagens/nome imagem" />
-        </div>
-
+      <section>
+        <div class="cards" id=mostrarCards></div>      
       </section>
 
     </main>
        
     <footer>
       <ul class="rodape"> <strong>Desenvolvido por</strong>
-        <li><a href="https://github.com/gabrielasilva1991" target="_blank"><strong>Gabriela Silva</strong></a></li>
-        <li><a href="https://github.com/apretamayara" target="_blank"><strong>Mayara Oliveira</strong></a></li>
-        <li><a href="https://www.laboratoria.la/" target="_blank"><strong>Laboratória</strong></a></li>
+        <a href="https://github.com/gabrielasilva1991" target="_blank"><strong>Gabriela Silva</strong></a>
+        <a href="https://github.com/apretamayara" target="_blank"><strong>Mayara Oliveira</strong></a> 
+        <a href="https://www.laboratoria.la/" target="_blank"><strong>Laboratória</strong></a>
       </ul>
     </footer>
 
