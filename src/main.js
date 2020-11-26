@@ -2,19 +2,70 @@ import filter from './data.js';
 
 const img = filter.photo()
 showAllPokemons()
-
-
 function showAllPokemons() {
+    
+    //  showPokemons.innerHTML = "";
+
     img.forEach(pokemon => {
+        const flipCard = document.createElement('div')
+        flipCard.classList.add("flip-card") 
+        const flipCardInner = document.createElement('div')
+        flipCardInner.classList.add("flip-card-inner")
+
+        const flipCardFront = document.createElement('div')
+        flipCardFront.classList.add("flip-card-front")
+
+        const flipCardBack = document.createElement('div')
+        flipCardBack.classList.add("flip-card-back")
+
         const text = document.createElement('p');
+        text.classList.add('namePokemon')
+        const textNum = document.createElement('p');
+        textNum.classList.add('pokedexNum')
         const image = document.createElement("img");
         image.src = pokemon.img
-        text.innerHTML = pokemon.name  
-        document.getElementById('cards').appendChild(text);
+        text.innerHTML = pokemon.name.toUpperCase()
+        textNum.innerHTML = pokemon.num
+         
+        document.getElementById("cards").appendChild(flipCard);
+        flipCard.appendChild(flipCardInner);       
+        flipCardInner.appendChild(flipCardFront);
+        flipCardInner.appendChild(flipCardBack);     
+        flipCardFront.appendChild(text);
+        text.appendChild(textNum);
         text.appendChild(image);   
+
 
     });
 }
+
+
+// function showAllPokemons() {
+//     img.forEach(pokemon => {
+//         const flipCard = document.createElement('div') 
+//         flipCard.classList.add("flip-card") 
+//         const flipCardFrontInner = document.createElement('div')
+//         flipCardFrontInner.classList.add("flip-card-inner")
+
+//         const flipCardFront = document.createElement('div')
+//         flipCardFront.classList.add("flip-card-front")
+
+//         const flipCardBack = document.createElement('div')
+//         flipCardBack.classList.add("flip-card-back")
+
+//         const text = document.createElement('p');
+//         const image = document.createElement("img");
+//         image.src = pokemon.img
+//         text.innerHTML = pokemon.name  
+//         showPokemons.appendChild(flipCard);
+//         flipCard.appendChild(flipCardInner);       
+//         flipCardInner.appendChild(flipCardFront);
+//         flipCardInner.appendChild(flipCardBack);     
+//         flipCardFront.appendChild(text);
+//         text.appendChild(image);   
+
+//     });
+// }
 
 const name = filter.filter()
 
@@ -119,7 +170,6 @@ selectElementPokedex.addEventListener('change', (event) => {
             text.appendChild(image);   
     
         });
-
     }else{
         let newArray = filter.pokedexFilter()
         newArray.reverse()
@@ -130,7 +180,6 @@ selectElementPokedex.addEventListener('change', (event) => {
         text.innerHTML = pokemon.name  
         document.getElementById('cards').appendChild(text);
         text.appendChild(image);   
-    
     });
 
 }
@@ -155,6 +204,7 @@ selectType.addEventListener('change', (event) => {
 
             typeList.forEach(pokemon => {
                 if (pokemon === choiseType) {
+
                     const text = document.createElement('p');
                     const image = document.createElement("img");
                     image.src = pokemonType.img

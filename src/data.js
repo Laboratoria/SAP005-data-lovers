@@ -5,7 +5,8 @@ const filter = {
     const image = data.pokemon.map(img =>{
       return {
         name: img.name,
-        img: img.img
+        img: img.img,
+        num:img.num
       }
     })    
     return image
@@ -31,7 +32,7 @@ const filter = {
          
           return 0;
     });    
-      return order;
+    return order;
   },
   type(){
     const element = data.pokemon.map(typeElement =>{
