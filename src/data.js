@@ -12,6 +12,7 @@ export const decrescente = (array) => {
   });
 };
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+export const filtro = (array, valor) => {
+let retornoArray = array.filter((item) =>  item.type == valor);
+return retornoArray
+}
