@@ -11,8 +11,8 @@ function cardUnitario() {
     <h1>${arrayDB[arrayN].name.toUpperCase()}<h1>
     <p>${arrayDB[arrayN].num}</p> 
     <p>${arrayDB[arrayN].about}</p> 
-    <p>${arrayDB[arrayN].type.toString().replace(",", ", ")}</p>
-    <p>${arrayDB[arrayN].resistant.toString().replace(",", ", ")}</p></div>`
+    <p> <strong>Tipo:</strong> ${arrayDB[arrayN].type.join(' / ')}</p>
+    <p> <strong>Resistente:</strong>  ${arrayDB[arrayN].resistant.join(' / ')}</p></div>`
     document.getElementById("item-card-one").innerHTML = resultado;
     return resultado;
 };
