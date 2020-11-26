@@ -1,11 +1,11 @@
-.body {
+/* .body {
   background-image: url(IMG/floresta.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin: 0;
   font-family: 'Barlow Semi Condensed', sans-serif;
-}
+} */
 .select{
   contain: layout;
 }
@@ -98,6 +98,13 @@
   
   .container{
     float:left;
+    background-image: url(IMG/floresta.jpg);
+    opacity: 0.5;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: 'Barlow Semi Condensed', sans-serif;
   }
 
 #container-card-poke{
