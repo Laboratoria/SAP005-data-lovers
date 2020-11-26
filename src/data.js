@@ -17,12 +17,16 @@ export const sortData = (data, sortBy, sortOrder) => {
 
 export const search = (data, searchBy, searchText) => {
   const searchInData = (item) => {
-    if(item[searchBy].includes(searchText)) {
-      return true;
-    }else {
-      return false;
-    }
+    return item[searchBy].toUpperCase().includes(searchText.toUpperCase())
   };
 
   return data.filter(searchInData);
+};
+
+export const filter = (data, filterBy, filterName) => {
+  const filterData = (item) => {
+      return item[filterBy].toUpperCase() === filterName.toUpperCase()
+  };
+
+  return data.filter(filterData);
 };
