@@ -1,5 +1,5 @@
-import { filterType } from './data.js';
-filterType
+import { filterFunction } from './data.js';
+
 
 import data from './data/pokemon/pokemon.js';
 
@@ -21,17 +21,27 @@ function carregar(p) {
 const getPoke = (data) => {
     container.innerHTML = '';
     for (let poke of data) {
-        const img = poke.img,
+        let img = poke.img,
             num = poke.num,
             name = poke.name,
             type = poke.type,
-            weaknesses = poke.weaknesses;
+            weaknesses = poke.weaknesses,
+            evolution = "";
+        if (typeof (poke.evolution["next-evolution"]) != "undefined") {
+            let arrayEvolution = poke.evolution["next-evolution"];
+            for (let evolutionPokes of arrayEvolution) {
+                evolution += evolutionPokes.name + ",";
+            }
+            console.log(evolution);
+        } else {
+            evolution = "Já alcançou evolução máxima";
+        }
 
-        cardInfo(img, num, name, type, weaknesses);
+        cardInfo(img, num, name, type, weaknesses, evolution);
     } // loop para trazer os elementos
 };
 
-const cardInfo = (img, num, name, type, weaknesses) => {
+const cardInfo = (img, num, name, type, weaknesses, evolution) => {
     container.innerHTML += `
                          
                           <div class="flip-card">
@@ -47,10 +57,18 @@ const cardInfo = (img, num, name, type, weaknesses) => {
                           <p class="card-info-poke">${name}</p>
                           <p class="card-info-poke">${type}</p>
                           <p class="card-info-poke">${weaknesses}</p>
+                          <p class="card-info-poke">${evolution}</p>
                           </div>
                           </div>
                           </div>
                           
 `}
-// a tag li é usado para representar um item que faz parte de uma lista - coloca icone
-// a tag ul representa uma lista de itens 
+
+/* const filterType = (condition) => {
+    let resultFilterType = [];
+    let selectedCondition = condition.target.value;
+    resultFilterType.push(filterBy(pokemons, "type", selectedType));
+    if (selectedCondition == document.getElementById('selecao.value'))
+     */
+
+console.log(filterFunction(pokemons, "fire", select.target.value));
