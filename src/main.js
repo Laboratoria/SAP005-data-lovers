@@ -1,4 +1,4 @@
-import { crescente, decrescente } from './data.js';
+import { crescente, decrescente, filtro } from './data.js';
 import data from './data/pokemon/pokemon.js';
 let input = document.getElementById("txtBusca");
 
@@ -62,6 +62,15 @@ function ordDecrescente() {
     return padraoAllCards(ordenaDec)
 };
 
+function buscarnoArray() {
+    //document.getElementById("item-all-cards").innerHTML = ""
+    let teste2 = document.getElementById("filter-type").value;
+    console.log(teste2)
+    const copiaDB = data.pokemon;
+    const teste = filtro(copiaDB,teste2);
+    return padraoAllCards(teste)
+};
+
 //Botões
 
 document.getElementById('btn-generation-pokemon').addEventListener("click", cardAll) //Todos os cards sem tratamento
@@ -69,3 +78,5 @@ document.getElementById('btn-generation-pokemon').addEventListener("click", card
 document.getElementById('btn-cresc-pokemon').addEventListener("click", ordCrescente) //Todos os cards com Ordenação Crescente
 
 document.getElementById('btn-decresc-pokemon').addEventListener("click", ordDecrescente) //Todos os cards com Ordenação Decrescente
+
+document.getElementById('btn-filter-type').addEventListener("click", buscarnoArray) //Todos os cards com Ordenação Decrescente
