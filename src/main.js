@@ -1,6 +1,5 @@
-
 import data from './data/pokemon/pokemon.js';
-for (let pokemon of data.pokemon) {
+for (const [i, pokemon] of data.pokemon.entries()) {
   const img = document.createElement('img');
   img.src = pokemon.img;
  
@@ -24,12 +23,22 @@ for (let pokemon of data.pokemon) {
   let listInfo3 = document.createElement('li');
   listInfo3.classList.add('type');
   listInfo3.innerHTML = pokemon.type;
-  
+
+  const button = document.createElement('button');
+  button.classList.add('poke-info');
+  button.innerHTML = 'Poke Info';
+  button.addEventListener('click', function (){
+    goToPokedex(i);
+  })
+
   card.appendChild(img);
   card.appendChild(cardBody);
   cardBody.appendChild(orderedList);
+  cardBody.appendChild(button);
   orderedList.appendChild(listInfo1).appendChild(listInfo2).appendChild(listInfo3);
   document.getElementById('root').appendChild(card);
 }
 
-
+function goToPokedex(index) {
+  window.location.href = "/pokedex?pokeId=" + index;
+}
