@@ -18,7 +18,8 @@ const filter = {
       
       return {
         name: item.name,
-        img: item.img
+        img: item.img,
+        num:item.num
       }
     })
 
@@ -39,7 +40,8 @@ const filter = {
       return{
         name:typeElement.name,
         img:typeElement.img,
-        type:typeElement.type
+        type:typeElement.type,
+        num:typeElement.num
       }
     })
     return element
@@ -50,7 +52,8 @@ const filter = {
         return {
             name: pokemon.name,
             img: pokemon.img,
-            weaknesses: pokemon.weaknesses
+            weaknesses: pokemon.weaknesses,
+            num:pokemon.num
         }
     })
     return weaknesses
@@ -61,7 +64,8 @@ const filter = {
         return {
             name: pokemon.name,
             img: pokemon.img,
-            resistant: pokemon.resistant
+            resistant: pokemon.resistant,
+            num:pokemon.num
         }
     })
     return resistant
