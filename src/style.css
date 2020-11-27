@@ -175,23 +175,26 @@ button {
 	}
 }
 
-.poke-info{
+.poke-info {
 	border: 1px solid silver;
 	border-radius: 10px;
-	width: 70px;
-	height: 15px;
-	font-size: 10px;
-	background-color: blue;
+	width: 90px;
+	height: 25px;
+	font-size: 12px;
+	font-family: Arial;
+	color: rgb(25, 60, 175);
+	background-color: rgb(255, 255, 255);
 }
 
-.name-pokemon{
+.name-pokemon {
 	font-size: 30px;
+	font-family: Arial;
 	text-transform: capitalize;
 	text-align: center;
 	flex-direction: column;
 }
 
-.pokedex-pokemon{
+.pokedex-pokemon {
 	display: flex;
 	width: 10vw;
 	margin: 5px;
@@ -201,13 +204,14 @@ button {
 	justify-content: center;
 }
 
-.pokedex-pokemon-about{
+.pokedex-pokemon-about {
 	display: flex;
 	border: 1px solid silver;
 	border-radius: 10px;
 	width: 80vw;
 }
 
-.pokedex-list{
+.pokedex-list {
 	font-size: 15px;
+	font-family: Arial;
 }
