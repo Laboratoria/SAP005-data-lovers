@@ -23,7 +23,7 @@
         <ul class="menu">
           <li class="menu-item"><a href="#title1" class="menulink">Saiba mais</a></li>
           <li class="menu-item"><a href="#title2" class="menulink">Pokémons</a></li>
-          <li class="menu-item"><a href="#" class="menulink">Comparação</a></li>
+          <li class="menu-item"><a href="#title3" class="menulink">Comparação</a></li>
           <li class="menu-item"><a href="#" class="menulink">Cadastro</a></li>
         </ul>
       </nav>
@@ -112,14 +112,31 @@
           </li>
         </ul>
       </section>
-      <section class="carousel-pokemon">
+      <section class="carousel-pokemon" id="title3">
         <h2 id="title2">Pókemons</h2>
+        <form class="box-filter">
+          <input type="text"  name="namePokemon" id="textInput" value="Nome do Pokemon"/>
+          <p>tipo</p>
+          <select id=typeInput>
+          <option >nenhum</option>
+          <option value="fire">fogo</option>
+          <option value="eelectry">eletrico</option>
+          <option value="fly">ar</option>
+         </select>
+         <p>ordenar</p>
+         <select id="orderInput">
+          <option value="0-251">0-251</option>
+          <option value="A-Z">A-Z</option>
+          <option value="Z-A">Z-A</option>
+         </select>
+         <button type="submit" class="box input" id="filtro"> filtrar </button>
+        </form>
+        <p>quantos pokemons tem de cada tipo </p>
         <div class="box-pokemons"data-motion="right">
-          <h1>Lista Pokedex</h1>
-          <ul id="pokedex"></ul>
+          <ul id="pokedex" class="pokedex"></ul>
         </div>
       </div>
-      </section>-->
+      </section>
       <!--<section>
         <h2>Filtro</h2>
       </section>-->
