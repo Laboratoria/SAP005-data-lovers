@@ -1,10 +1,10 @@
 import data from './data/pokemon/pokemon.js';
 import {filterData} from './data.js';
 
-const search= document.getElementById('filter-name');
+const search = document.getElementById('filter-name');
 search.addEventListener('keyup', function(){
-  let pokemons= filterData(data.pokemon, search.value.toLowerCase() );
-  document.getElementById('root').innerHTML="";
+  let pokemons= filterData(data.pokemon, {name: search.value.toLowerCase()} );
+  document.getElementById('root').innerHTML = "";
   load(pokemons);
 })
 
@@ -54,6 +54,7 @@ for (const [i, pokemon] of data.entries()) {
 function goToPokedex(index) {
   window.location.href = "/pokedex?pokeId=" + index;
 }
+
 
 
 
