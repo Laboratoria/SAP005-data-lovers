@@ -1,9 +1,14 @@
-// estas funciones son de ejemplo
+const pokemon = {
+  pesquisaPokemon(data, nomePokemon) {
+    console.log(nomePokemon)
+   let listaPokemon = data.pokemon
+   console.log(listaPokemon)
+   let busca = listaPokemon.find(i => i.name == nomePokemon)
+   console.log(busca)
+   return (busca)
 
-export const example = () => {
-  return 'example';
-};
+ }
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+}
+
+export default pokemon

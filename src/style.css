@@ -17,8 +17,6 @@ ul {
 }
 
 li {
-  position: relative;
-  float: left;
   padding: 20px;
   height: 30px;
   width:100%;
@@ -57,23 +55,24 @@ nav {
 .imagem-topo {
   width:100%;
 }
-.conteudo p{
+.descricao {
   text-align: center;
   padding: 10px;
   background-color: rgb(74, 179, 71);
   color: #fff;
 }
 
-
-/*IDs*/
-
-#lendarios{
+.lendarios{
   background-color: #5CB8FF;  
 }
 
-#comuns {
+.comuns {
   background-color: #ff6600;
 }
-#pokedex {
+.pokedex {
   background-color: #ffe00f;
 }
+
+
+/*IDs*/
+
