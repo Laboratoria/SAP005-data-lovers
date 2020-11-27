@@ -268,13 +268,13 @@ header {
 
 main {
   position: absolute;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 }
 
 .tabs {
   width: 80vw;
-  height: 100%;
+  height: 80%;
   margin: 1% auto;
   position: relative;
   display: flex;
@@ -286,6 +286,9 @@ main {
   cursor: pointer;
   text-transform: uppercase;
   margin: auto 15px auto;
+}
+.tabs ul{
+  height: 10%;
 }
 
 .tabs ul ul {
@@ -311,7 +314,7 @@ main {
   margin-top: 2rem;
   display: none;
   position: absolute;
-  height: 100%;
+  height: 80%;
   width: 100%;
   left: 0;
   overflow: auto;
@@ -321,6 +324,7 @@ main {
   margin-top: 1%;
   text-align: justify;
   font-size: 1.5rem;
+  height: 100%;
 }
 
 .radio-tab:checked~.about {
@@ -331,29 +335,36 @@ main {
 .carousel-pokemon{
   background-image: url(images/bgpokemon2.png);
   background-size: cover;
-  border-top: solid 5px rgb(173, 21, 21);
-  margin-top: 2rem;
   position: relative;
-  bottom: 100px;
-  width: 100vw;
-  height: 100vh;
-}
-
-#title2{
-  display: flex;
-  justify-content: center;
-  margin: 1% auto;
-  width: 80%;
+  width: 100%;
   height: 100%;
 }
 
+.carousel-pokemon h2 {
+  display: flex;
+  justify-content: center;
+  margin: 1% auto;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.box-filter{
+  display: flex;
+  justify-content: center;
+
+}
+
+.carousel-pokemon p{
+  display: flex;
+  justify-content: center;
+  margin-top: 1%;
+}
+
 .box-pokemons{
-  position: absolute;
-  top: 350px;
-  transform: translate(50%,50%);
-  width: 50vw;
-  height: 30%;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  transform: translate(10%,10%);
+  width: 85%;
+  height: 50%;
+  box-shadow: 0 10px 20px rgba(228, 221, 221, 0.19), 0 6px 6px rgba(0,0,0,0.23);
   border-radius: 16px;
   background-color:transparent;
   overflow: hidden;
@@ -376,50 +387,24 @@ main {
   width: 20px;
 }
 
-#pokedex{
+.pokedex{
   display: flex;
   justify-content: start;
 }
 
 .card-poke{
-  display: flex;
+  display: inline-block;
   justify-content: center;
-  border-radius: 40px;}
-
+  background-color: rgba(0,0,0,0.19);
+  border-radius: 16px;
+  width: 230px;
+  padding: 25px;
+  text-align: center;
+  margin: 10px;
+  font-size: 16px;
+  font-weight: 10px;
+  text-transform: uppercase;
+}
 .card-image{
   filter: drop-shadow( 5px 5px 2px rgb(56, 55, 55));
 }
-
-
-.card-name{
-  position: relative;
-  top: 20px;
-  text-transform: uppercase;
-  transform: translateX(50%);
-  width: 50px;
-  font-size: 16px;
-  font-weight: 10px;
-}
-
-.card-generet{
-  position: relative;
-  top: 50px;
-  right: 50px;
-  text-transform: uppercase;
-  transform: translateX(50%);
-  width: 50px;
-  font-size: 16px;
-  font-weight: 10px;
-}
-
-.card-type{
-  position: relative;
-  top: 80px;
-  right: 100px;
-  text-transform: uppercase;
-  transform: translateX(50%);
-  width: 50px;
-  font-size: 16px;
-  font-weight: 10px;
-}
-
