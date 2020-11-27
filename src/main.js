@@ -1,8 +1,18 @@
 import data from './data/pokemon/pokemon.js';
-for (const [i, pokemon] of data.pokemon.entries()) {
+import {filterData} from './data.js';
+
+const search= document.getElementById('filter-name');
+search.addEventListener('keyup', function(){
+  let pokemons= filterData(data.pokemon, search.value.toLowerCase() );
+  document.getElementById('root').innerHTML="";
+  load(pokemons);
+})
+
+function load(data){
+for (const [i, pokemon] of data.entries()) {
   const img = document.createElement('img');
   img.src = pokemon.img;
- 
+  
   let cardBody = document.createElement('div');
   cardBody.classList.add('card-body');
   
@@ -24,6 +34,7 @@ for (const [i, pokemon] of data.pokemon.entries()) {
   listInfo3.classList.add('type');
   listInfo3.innerHTML = pokemon.type;
 
+
   const button = document.createElement('button');
   button.classList.add('poke-info');
   button.innerHTML = 'Poke Info';
@@ -38,7 +49,13 @@ for (const [i, pokemon] of data.pokemon.entries()) {
   orderedList.appendChild(listInfo1).appendChild(listInfo2).appendChild(listInfo3);
   document.getElementById('root').appendChild(card);
 }
-
+}
+ load(data.pokemon);
 function goToPokedex(index) {
   window.location.href = "/pokedex?pokeId=" + index;
 }
+
+
+
+ 
+
