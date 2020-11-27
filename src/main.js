@@ -22,15 +22,15 @@ function showInfo(cards){
     charactersList.appendChild(img);
     for(let [key,value] of Object.entries(cards)){
         if (key === "name"){
-            let p = document.createElement("p");
+            let p = document.createElement("p"); 
             p.appendChild(document.createTextNode(value));
             charactersList.appendChild(p);
-            p.id = "name";
+            p.id = "name"; 
         } else if (key === "status"){
             let p = document.createElement("p")
             p.appendChild(document.createTextNode("Status: " + value));
             charactersList.appendChild(p);
-            p.id = "status"
+            p.id = "status" 
         } else if (key === "species"){
             let p = document.createElement("p");
             p.appendChild(document.createTextNode(value));
