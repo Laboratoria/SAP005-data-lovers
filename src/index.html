@@ -5,7 +5,7 @@
     <title>Rick and Morty</title>
     <link rel="stylesheet" href="style.css" />
     <figure>
-      <img src="img/rickandmorty2.png" alt="Rick an Morty">
+      <img src="img/rickandmorty2.png" alt="Rick an Morty" class="img">
       <figcaption>Rick and Morty</figcaption>
     </figure>
     <main class="indice"> 
@@ -17,29 +17,22 @@
       <main class="introduction">
         <p><strong>Nessa página poderá encontrar informações sobre os personagens da série. Basta selecionar seu nome, as informações desejadas e clicar no botão "pesquisar"</strong></p>
       </main>
-        <ul>
-          <li>Personagens</li>
-          <li>Principais</li>
-          <li>Recorrentes</li>
-        
-        </ul>
-        
-        <select class="Personagens" id= "Personagens-caracteristiscas">
+      <form class="form">
+        <select class="Personagens" id="Personagens-caracteristiscas">
         <option value="nune" selected>Personagens</option>
         <option value="PersongensPrincipais">Principais</option>
-        <option value="PersonagensRecorrentes">Recorrentes</option>
+        <option value="PersonagensRecorrentes">Recorrentes</option> 
       </select>
     
 
-      <select class="Caracteristiscas" id= "Caracteristiscas-quantadidade">
-        <option value="nune" selected>Caracteristiscas</option>
-        <option value="Humanos">Humanos</option>
-        <option value="Não Humanos">Não Humanos</option>
+      <select class="Caracteristicas" id="Caracteristicas-quantadidade">
+        <option value="nune" selected>Espécies</option>
+        <option value="Vivo">Vivo</option>
         <option value="Mortos">Mortos</option>
       
       </select>
 
-      <select class="Temporadas" id= "Temporadas-quantidade">
+      <select class="Temporadas" id="Temporadas-quantidade">
         <option value="nune" selected>Temporadas</option>
         <option value="1ª Temporada ">1ª Temporada</option>
         <option value="2ª Temporada">2ª Temporada</option>
@@ -47,16 +40,19 @@
         <option value="4ª Temporada">4ª Temporada</option>
       </select>
 
-     //Section para declarar o Flexcontainer com divs dos cards
-     <section class= "flex-container">
-      <div class= "cards"></div>
-      </section>
-    
+    </select>
+    <select class="sort" id="sort-characters">
+      <option value="nune" selected>Ordenar</option>
+      <option value="sortAZ">A/Z</option>
+      <option value="sortZA">Z/A</option>
+    </select>
+  </form> 
     
     </head>
   <body>
-
-    <ul id="cards"></ul>
+    <section class="flex-container">
+    <ul id="cards" class="cards"></ul> 
+     </section>
 
     <div id="root"></div>
     <script src="main.js" type="module"></script>
