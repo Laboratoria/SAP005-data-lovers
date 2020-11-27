@@ -1,6 +1,5 @@
 import { sortData, search, filter } from "./data.js";
 import data from "./data/rickandmorty/rickandmorty.js";
-import dataEpisodes from "./data/rickandmorty/rickandmorty-episodes.js";
 
 const html = {
     menuHomeButton: document.getElementById("home"),
@@ -54,7 +53,7 @@ const checkedFilters = (filterCategory) => {
         if(filterCategory[i].checked){
             filterValues.push(filterCategory[i].value);
         }
-    }
+    };
     return filterValues;
 };
 
@@ -336,7 +335,7 @@ const update = {
         let end = start + pageDefinitions.perPage;
         const dataSlice = data.slice(start, end)
         
-        pageDefinitions.totalItems = data.length;
+        pageDefinitions.totalItems = data.length
         pageDefinitions.totalPage = Math.ceil(pageDefinitions.totalItems/pageDefinitions.perPage)
 
         for(let eachItem of dataSlice){
@@ -399,22 +398,3 @@ function init() {
 
 init();
 changePage();
-
-const episodes = {
-    episodesCharacter() {
-        const totalEpisodes = parseInt(dataEpisodes.info.count);
-        const charactersForTotalEpisodes = data.results; 
-        
-        let resultsEpisodes;
-        for (let i=0; i <= data.results.length; i++) {
-            let resultsCharacter = data.results[i];
-            
-            if(resultsCharacter){
-            resultsEpisodes = Math.round((100*resultsCharacter.episode.length)/totalEpisodes) + "%";
-            console.log(resultsEpisodes);    
-            }
-        }
-    }
-}
-
-episodes.episodesCharacter();
