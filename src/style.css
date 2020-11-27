@@ -248,7 +248,7 @@ transform: translateX(202px);
 } 
 @viewport {
     width: 800px;
-    
+    zoom: 1;
   }
 
   @media screen and (max-width: 600px){
