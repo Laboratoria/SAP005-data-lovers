@@ -1,21 +1,13 @@
-//import { example } from './data.js';
-// import data from './data/lol/lol.js';
-//import data from './data/pokemon/pokemon.js';
 import data from './data/rickandmorty/rickandmorty.js';
-import { orderAZ} from './data.js';
+import {elements, filterAllInfo} from './data.js';
 //show all characters (basic) info on HTML
-//show filter result: gender (import the array from data.js)
-//show filter result: status dead/alive characters (import the array from data.js)
-//show filter result: names (alphabetic order, ascending order, descending order) (import the array from data.js)
-//show filter result: kind (import the array from data.js)
-//show filter result: place of origin (import the array from data.js)
-//console.log(example, data);
+let showCharactersInfo = document.getElementById("cards");
 for(let result of data.results){
     showInfo(result);
 }
+
 function showInfo(cards){
-    let showCharactersInfo = document.getElementById("cards");
-    let charactersList = document.createElement("li");
+    let charactersList = document.createElement("li"); 
     let img = new Image(250, 250);
     img.src =cards.image;
     charactersList.appendChild(img);
@@ -50,9 +42,23 @@ function showInfo(cards){
             p.appendChild(document.createTextNode("Última localização: " +value.name));
             charactersList.appendChild(p);
             p.id + "location"
-        }
-        
+        } 
     }
+    console.log(cards);
     showCharactersInfo.appendChild(charactersList);
 }
-const select = document.querySelector("")
+//create an event listener for the select button
+const select = document.getElementById("Caracteristiscas-quantadidade");
+select.addEventListener("change",teste);
+//create a function for each filte
+//ps: change the function's "test" name
+function teste(){
+    showCharactersInfo.innerHTML = "";
+    if(select.value === "Mortos"){
+        console.log(select.value);
+        const dead = filterAllInfo("status", "Dead");
+        dead.map(item =>  showInfo(item));
+        //return showInfo(filterAllInfo( "status", "Dead"));
+    }
+}
+console.log(showInfo);
