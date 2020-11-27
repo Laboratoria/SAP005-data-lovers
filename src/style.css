@@ -59,7 +59,7 @@ html{
    border-style: inset;
    font-family: 'Segoe UI';
   /* background-color: white*/
-   ;
+   
 }
 
 .Caracteristicas{
@@ -85,6 +85,28 @@ html{
     font-family: 'Segoe UI';
    /* background-color: ;*/
 }
+.Gêneros {
+    width: 115px;
+    height: 35px;
+    border-style: inset;
+    font-family: 'Segoe UI';
+    /* background-color */
+}
+.Especies{
+    width: 115px;
+    height: 35px;
+    border-style: inset;
+    font-family: 'Segoe UI';
+    /* background-color */
+    }
 
+    .Curiosidades{
+        width: 115px;
+        height: 35px;
+        border-style: inset;
+        font-family: 'Segoe UI';
+        /* background-color */
+        }
+    curiosidades.html{
 
-
+    }

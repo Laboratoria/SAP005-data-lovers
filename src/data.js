@@ -1,9 +1,8 @@
-// estas funciones son de ejemplo
 import data from './data/rickandmorty/rickandmorty.js';
 export const elements = data.results
 export const info = (vector) => {
   return vector.map(function (item){
-    return [item.name, item.gender, item.gender, item.status, item.species]
+    return [item.name, item.gender, item.status, item.species]
   })
 };
 export const filterAllInfo = (data, value) => {
@@ -17,10 +16,10 @@ export const filterAllInfo = (data, value) => {
   return arrayFilters
 }
 export const orderAZ = (item) => {
-  return info(item).sort();
+  return info(item.name).sort();
 };
 export const orderZA = (item) => {
-  return orderAZ(item).reverse();
+  return orderAZ(item.name).reverse();
 }
 export const status = (list) => {
   const data = list.map(function(item){
@@ -36,5 +35,36 @@ export const status = (list) => {
   }, {});
   return [["Alive", charactersNames.Alive],
   ["Dead", charactersNames.Dead], 
-  ["Unknow", charactersNames.unknow]]
+  ["unknown", charactersNames.unknow]]
+}
+export const gender = (list) => {
+  const data = list.map(function(item){
+    return item.gender
+  })
+  const charactersNames = data.reduce(function(names, name){
+    if (name in names){
+      names[name]++;
+    }else{
+      names[name] = 1;
+    }
+    return names;
+  }, {});
+  return [["Female", charactersNames.Female],
+  ["Male", charactersNames.Male],
+  ["unknown", charactersNames.unknown]]
+}
+export const species = (list) => {
+  const data = list.map(function(item){
+    return item.species
+  })
+  const charactersNames = data.reduce(function(names, name){
+    if (name in names){
+      names[name]++;
+    }else{
+      names[name] = 1;
+    }return names;
+  },{});
+  return [["Human", charactersNames.Human],
+  ["Humanoid", charactersNames.Humanoid],
+  ["Alien", charactersNames.Alien]["Cronenberg", charactersNames.Cronenberg]]
 }

@@ -8,48 +8,71 @@
       <img src="img/rickandmorty2.png" alt="Rick an Morty" class="img">
       <figcaption>Rick and Morty</figcaption>
     </figure>
-    <main class="indice"> 
-    <p><strong>Rick and Morty é uma série de animação adulta de comédia e ficção científica criada pelo norte-americano Justin Roiland e Dan Harmon. 
-      A origem da série foi uma paródia animada em curta-metragem do filme De Volta Para o Futuro criada por Roiland para o festival de cinema Channel 101.
-      A Adult Swim abordou Harmon a respeito de ideias para um programa de televisão, então ele e Roiland desenvolveram o programa com base no curta,
-      substituindo os personagens de Doc com Rick e Marty com Morty.</strong></p>
-      </main>    
-      <main class="introduction">
-        <p><strong>Nessa página poderá encontrar informações sobre os personagens da série. Basta selecionar seu nome, as informações desejadas e clicar no botão "pesquisar"</strong></p>
-      </main>
-      <form class="form">
-        <select class="Personagens" id="Personagens-caracteristiscas">
-        <option value="nune" selected>Personagens</option>
-        <option value="PersongensPrincipais">Principais</option>
-        <option value="PersonagensRecorrentes">Recorrentes</option> 
-      </select>
-    
-
-      <select class="Caracteristicas" id="Caracteristicas-quantadidade">
-        <option value="nune" selected>Espécies</option>
-        <option value="Vivo">Vivo</option>
-        <option value="Mortos">Mortos</option>
-      
-      </select>
-
-      <select class="Temporadas" id="Temporadas-quantidade">
-        <option value="nune" selected>Temporadas</option>
-        <option value="1ª Temporada ">1ª Temporada</option>
-        <option value="2ª Temporada">2ª Temporada</option>
-        <option value="3ª Temporada ">3ª Temporada</option>
-        <option value="4ª Temporada">4ª Temporada</option>
-      </select>
-
-    </select>
-    <select class="sort" id="sort-characters">
-      <option value="nune" selected>Ordenar</option>
-      <option value="sortAZ">A/Z</option>
-      <option value="sortZA">Z/A</option>
-    </select>
-  </form> 
-    
-    </head>
+     </head>
   <body>
+    <main class="indice"> 
+      <p><strong>Rick and Morty é uma série de animação adulta de comédia e ficção científica criada pelo norte-americano Justin Roiland e Dan Harmon. 
+        A origem da série foi uma paródia animada em curta-metragem do filme De Volta Para o Futuro criada por Roiland para o festival de cinema Channel 101.
+        A Adult Swim abordou Harmon a respeito de ideias para um programa de televisão, então ele e Roiland desenvolveram o programa com base no curta,
+        substituindo os personagens de Doc com Rick e Marty com Morty.</strong></p>
+        </main>    
+        <main class="introduction">
+          <p><strong>Nessa página poderá encontrar informações sobre os personagens da série. Basta selecionar seu nome, as informações desejadas e clicar no botão "pesquisar"</strong></p>
+        </main>
+        <form class="form">
+          <select class="Curiosidades" id="Curiosidades-caracteristiscas">
+            <option value="nune" selected>Curiosidades</option>
+            <option value="Trailler">Trailler</option>
+          </select>
+  
+          <select class="Personagens" id="Personagens-caracteristiscas">
+          <option value="nune" selected>Personagens</option>
+          <option value="PersongensPrincipais">Principais</option>
+          <option value="PersonagensRecorrentes">Recorrentes</option> 
+        </select>
+      
+        <select class="Gêneros" id="Gêneros-quantidade">
+          <option value="nune" selected>Gêneros</option>
+          <option value="Femininos">Femininos</option>
+          <option value="Masculinos">Masculinos</option>
+          <option value="Sem-gênero">Desconhecido</option>
+        </select>
+  
+        <select class="Caracteristicas" id="Caracteristicas-quantidade">
+          <option value="nune" selected>Estados</option>
+          <option value="Vivos">Vivos</option>
+          <option value="Mortos">Mortos</option>
+          <option value="Desconhecidos">Desconhecidos</option>
+        </select>
+  
+        <select class="Especies" id="Especies-quantidade">
+          <option value="nune" selected>Especíes</option>
+          <option value="Humanos">Humanos</option>
+          <option value="Humanoids">Humanoids</option>
+          <option value="Aliens">Aliens</option>
+          <option value="Animais">Animais</option>
+          <option value="Cronenberg">Cronenbergs</option>
+          <option value="Robot">Robots</option>
+        </select>
+  
+  
+        <select class="Temporadas" id="Temporadas-quantidade">
+          <option value="nune" selected>Temporadas</option>
+          <option value="1ª Temporada ">1ª Temporada</option>
+          <option value="2ª Temporada">2ª Temporada</option>
+          <option value="3ª Temporada ">3ª Temporada</option>
+          <option value="4ª Temporada">4ª Temporada</option>
+        </select>
+  
+      </select>
+      <select class="sort" id="sort-characters">
+        <option value="nune" selected>Ordenar</option>
+        <option value="sortAZ">A/Z</option>
+        <option value="sortZA">Z/A</option>
+      </select>
+    </form> 
+      
+     
     <section class="flex-container">
     <ul id="cards" class="cards"></ul> 
      </section>
