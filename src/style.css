@@ -118,25 +118,9 @@ transform: translateX(202px);
 
 }
 
-/* input:focus{
-    border: none;
-    box-shadow: 0 0 0 0;
-    outline: 0;
-} */
-
-
 .search img{
     width: 20px;     
 }
-
-
-.cards{
-    display:flex;
-    justify-content: row;
-    flex-wrap: wrap;
-    margin-top:70px;
-}
-
 
 .textNotFound{
     font-family: 'Courier New', Courier, monospace;
@@ -156,7 +140,12 @@ transform: translateX(202px);
 }
 
 .cards{
+    display:flex;
+    justify-content: row;
+    flex-wrap: wrap;
+    margin-top:70px;
     margin-left: 16.5%;
+    
 }
  .flip-card {
     background-color: transparent;
@@ -187,9 +176,7 @@ transform: translateX(202px);
     height: 100%;
     text-align: center;
     transition: transform 0.6s;
-    transform-style: preserve-3d;
-    
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+    transform-style: preserve-3d;    
     
 }
 
@@ -259,3 +246,51 @@ transform: translateX(202px);
 .messageType p {
     margin-left: 3%;
 } 
+@viewport {
+    width: 800px;
+    
+  }
+
+  @media screen and (max-width: 600px){
+   
+    .cards{
+        display:flex;
+        justify-content: row;
+        flex-wrap: wrap;
+    }
+    .flip-card{
+        width: 200px;
+        height: 300px;
+        margin-left: 15%;
+        
+    }
+    .imgPokemon{
+        margin-top: 100px;
+        width: 300px;
+        height: 100px;
+        margin-left: 0;
+        max-width: 100%:
+    }
+
+    .barra-menu{
+        width: 120px;
+        background-color: red;
+    }
+    select{
+        width: 120px;
+    }
+    .search{
+        margin-left: 0;
+        margin-left: 22%;
+        margin-bottom: 0;
+    }
+    .logo{
+        margin-left: 0;
+        margin-left: 20%;
+    }
+
+    .imageNotFound{
+        width: 400px;
+        margin-left: 0;
+    }
+}
