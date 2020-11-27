@@ -24,7 +24,12 @@ const filter = {
       return {
         name: item.name,
         img: item.img,
-        num:item.num
+        num:item.num,
+        height: item.size.height,
+        weight: item.size.weight,
+        type:item.type,
+        weaknesses: item.weaknesses,
+        egg: item.egg
       }
     })
 
@@ -47,6 +52,11 @@ const filter = {
         img:typeElement.img,
         type:typeElement.type,
         num:typeElement.num,
+        height: typeElement.size.height,
+        weight: typeElement.size.weight,
+        type:typeElement.type,
+        weaknesses: typeElement.weaknesses,
+        egg: typeElement.egg,
         stats:parseInt(typeElement.stats['base-attack'])
       }
     })
@@ -59,7 +69,13 @@ const filter = {
             name: pokemon.name,
             img: pokemon.img,
             weaknesses: pokemon.weaknesses,
-            num:pokemon.num
+            num:pokemon.num,
+            height: pokemon.size.height,
+            weight: pokemon.size.weight,
+            type:pokemon.type,
+            weaknesses: pokemon.weaknesses,
+            egg: pokemon.egg
+            
         }
     })
     return weaknesses
@@ -71,7 +87,12 @@ const filter = {
             name: pokemon.name,
             img: pokemon.img,
             resistant: pokemon.resistant,
-            num:pokemon.num
+            num:pokemon.num,
+            height: pokemon.size.height,
+            weight: pokemon.size.weight,
+            type:pokemon.type,
+            weaknesses: pokemon.weaknesses,
+            egg: pokemon.egg
         }
     })
     return resistant
@@ -82,7 +103,12 @@ const filter = {
         return {
             name: pokemon.name,
             img: pokemon.img,
-            num: pokemon.num
+            num: pokemon.num,
+            height: pokemon.size.height,
+            weight: pokemon.size.weight,
+            type:pokemon.type,
+            weaknesses: pokemon.weaknesses,
+            egg: pokemon.egg,
         } 
         console.log(pokedex)
     })
