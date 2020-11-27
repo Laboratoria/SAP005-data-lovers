@@ -1,35 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Battle Win</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <div id="root">
-    <div class="landing-page-bg">
-      <header>
-        <div class="header-bar"></div>
-        <h1 class="title">Battle Win</h1>
-      </header>
-      <section>
-        <figure class="img-container">
-          <img class="landing-page-img" src="img/pikachu-charizard-battle.png"
-            alt="Uma ilustração mostrando Pikachu e Charizard no meio de uma batalha.">
-        </figure>
-        <div class="call-to-action-container">
-          <p class="introduction-text">Aumente suas chances de ganhar as batalhas!</p>
+
+    <!-- LANDING PAGE -->
+    <header>
+      <div class="header-bar"></div>
+      <h1 class="title">Battle Win</h1>
+    </header>
+
+    <section>
+      <img class="landing-page-img" src="img/battle.png"
+        alt="Uma ilustração mostrando vários pokémons no meio de uma batalha.">
+      <div class="parallelogram">
+        <p class="introduction-text">Aumente suas chances de ganhar as batalhas!</p>
+        <a href="#">
           <button id="call-to-action-btn">Clique aqui</button>
-          <a href="#">
-            <button id="call-to-action-btn">Clique aqui</button>
-          </a>
+        </a>
+      </div>
+    </section>
+
+    <!-- SEARCH POKÉMON -->
+
+    <section>
+      <img class="search-pokemon" src="">
+      <p>Escreva o nome do Pokémon desejado</p>
+      <input class="input" type="text" id="name-pokemon-input" placeholder="Nome do Pokémon">
+      <button id="search-pokemon-btn">Buscar Pokémon</button>
+    </section>
+
+    <section>
+      <div class="card" id="container">
+        <div class="son-card" id="content">
+          <p id="img-pokemon" src=""></p>   
+          <p id="name-poke"></p>
+          <p id="type-pokemon"></p>
+          <p id="resistant-pokemon"></p>
+          <p id="weaknesses-pokemon"></p>
         </div>
-      </section>
-    </div>
+      </div> 
+    </section> 
 
 
+    
   </div>
   <script src="main.js" type="module"></script>
 </body>
+
 </html>

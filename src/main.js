@@ -1,32 +1,25 @@
-//import { pokemonName } from './data.js';
+import { bringRivalPokemon } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
+const pokemons = data.pokemon;
+const namePokemonInput = document.getElementById("name-pokemon-input")
+const pokemonImg = document.getElementById("img-pokemon");
+const pokemonName = document.getElementById("name-poke");
+const pokemonType = document.getElementById("type-pokemon");
+const pokemonResistante = document.getElementById("resistant-pokemon");
+const pokemonWeaknesses = document.getElementById("weaknesses-pokemon");
 const searchPokemon = document.getElementById("search-pokemon-btn");
 
 searchPokemon.addEventListener("click", searchRival)
 
 function searchRival(event) {
   event.preventDefault();
-  const bringInformation = document.getElementById("name-pokemon").value;
-  console.log(bringInformation)
-}
-
-/*const  pokemon = 
-for (pokemon of pokemons) {
-    console.log(pokemon.name);
-}*/
+  const bringPokemon = bringRivalPokemon(pokemons, namePokemonInput);
 
 
-/*const div = document.querySelector("#card");
-
-for (let infoPokemon of data.pokemon) {
-    let card = ""
-    Nome: ${infoPokemon.name}
-    <img src="${infoPokemon.img}"></img>
-    Tipo: ${infoPokemon.type}
-    Resistencia: ${infoPokemon.resistant}
-    Fraqueza: ${infoPokemon.weaknesses}
-    div.insertAdjacentHTML("afterbegin", card);
-
-    console.log(infoPokemon);
-}
+pokemonImg.innerHTML = `<img src="${bringPokemon.image}"></img>`
+pokemonName.innerHTML = `Nome <span class="first-uppercase">${bringPokemon.name}</span>`
+pokemonType.innerHTML = `Tipo: ${bringPokemon.type}`
+pokemonResistante.innerHTML = `Resistencias: ${bringPokemon.resistant}`
+pokemonWeaknesses = `Faquezas: ${bringPokemon.weaknesses}`
+});
