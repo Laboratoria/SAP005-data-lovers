@@ -86,14 +86,3 @@ selectFilterGeneration.addEventListener('change', () => {
     const pokemonGeneration = selectPokemonGeneration(selectGeneration, data.pokemon)
     showingCards(pokemonGeneration)
 })
-
-
-data.pokemon.sort((a, b) => {
-    const keyA = a.name
-    const keyB = b.name;
-    if (keyA < keyB) return -1;
-    if (keyA > keyB) return 1;
-    return 0;
-
-});
-console.log(data.pokemon);
