@@ -15,5 +15,5 @@ export const selectPokemonWeaknesses = (selectWeaknesses, dataJson) => {
 }
 
 export const selectPokemonGeneration = (selectGeneration, dataJson) => {
-    return dataJson.filter(pokemon => pokemon.generation.name === selectGeneration)
+    return dataJson.filter(pokemon => pokemon.generation.name == selectGeneration)
 }

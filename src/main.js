@@ -82,7 +82,8 @@ selectFilterWeaknesses.addEventListener('change', () => {
 })
 
 selectFilterGeneration.addEventListener('change', () => {
-    const selectGeneration = selectFilterGeneration.value
-    const pokemonGeneration = selectPokemonGeneration(selectGeneration, data.pokemon)
-    showingCards(pokemonGeneration)
-})
+        const selectGeneration = selectFilterGeneration.value
+        const pokemonGeneration = selectPokemonGeneration(selectGeneration, data.pokemon)
+        showingCards(pokemonGeneration)
+    })
+    //oi
