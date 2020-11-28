@@ -5,9 +5,9 @@
 
 .body {
     font-family: 'M PLUS Rounded 1c', sans-serif;
-    background-color: #c2daf891;
+    size: 100%;
+    background-color: #8fbcffd0;
 }
-
 
 /* Animação icone menu lateral */
 
@@ -95,8 +95,12 @@ label span:nth-child(3) {
     font-weight: bold;
 }
 
+
 .header-title {
-    margin-bottom: 1%;
+
+    padding: 0px;
+    float: center;
+    margin-bottom: 3%;
     margin-left: 33.3%;
     margin-right: 33.3%;
     height: 350px;
@@ -122,6 +126,7 @@ label span:nth-child(3) {
     font-weight: bold;
     background-color: rgb(243, 231, 185);
     padding: 0.5em;
+    /* background: url("data/assets/teste003.png") ; */
 }
 
 .input-search {
@@ -151,6 +156,14 @@ label span:nth-child(3) {
     background-color: rgba(224, 205, 128, 0.932);
     font-family: 'M PLUS Rounded 1c', sans-serif;
     border: 2px solid rgb(252, 204, 11);
+}
+
+.select-number {
+    padding: .5em;
+    border-radius: 10px;
+    background-color: rgba(224, 205, 128, 0.932);
+    border: rgb(247, 233, 178);
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 .btn-clean {
@@ -202,6 +215,7 @@ label span:nth-child(3) {
     cursor: pointer;
     transform-style: preserve-3d;
     margin: 10px;
+
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
@@ -210,8 +224,8 @@ label span:nth-child(3) {
     transform: rotateY(180deg);
 }
 
-.card-front,
-.card-back {
+
+.card-front, .card-back {
     position: relative;
     width: 260px;
     height: 295px;
@@ -220,7 +234,14 @@ label span:nth-child(3) {
     border-radius: 10px;
 }
 
-.card-front {
+.img{
+    min-width: 50%;
+    height: 150px;
+    width: auto;
+}
+
+
+.card-front{
     position: absolute;
     background-color: #faefbd3a;
     width: 260px;
@@ -240,8 +261,110 @@ label span:nth-child(3) {
     font-size: 15px;
     text-align: justify;
     font-family: 'M PLUS Rounded 1c', sans-serif;
+
+/*Tratamento do history and curiosities*/
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+}
+  
+.caption span.border {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+}
+  
+.h3 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #111;
 }
 
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    position: relative;
+    opacity: 0.65;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+} 
+
+.bgimg-1 {
+    background-image: url("data/assets/first.jpg");
+    /* min-height: 100%; */
+    height: 450px;
+}
+  
+.bgimg-2 {
+    background-image: url("data/assets/second.jpg");
+    min-height: 400px;
+}
+  
+.bgimg-3 {
+    background-image: url("data/assets/third.jpg");
+    min-height: 400px;
+}
+
+
+/* scrollbar */
+
+/* ::-webkit-scrollbar {
+    width: 20px;
+}
+  
+  
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 5px;
+}
+   
+  
+::-webkit-scrollbar-thumb {
+    background: rgb(248, 129, 218); 
+    border-radius: 15px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #6e55f7; 
+}  */
+  
+
+
+/* Responsive */
+  @media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+      background-attachment: scroll;
+    }
+
+    .main-cards {
+        width: 500px;
+    }
+
+    .card-front, .card-back, .frame, .left{
+        width: 190px;
+        height: 220px;
+        font-size: 11px;
+    }
+
+    .select-itens {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .input-search, .btn-search, .select-filter, .select-sort, .select-number, btn-clean{
+        width:  auto;
+        height: auto;
+    }
+
+
+}
 
 /* tratamento do footer */
 
