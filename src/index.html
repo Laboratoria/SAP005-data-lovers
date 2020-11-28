@@ -30,7 +30,7 @@
     </aside>
     <header>
       <div class="img-wrapper">
-        <img src="images/sky.jpeg" alt="">
+        <img src="images/sky6.jpg" alt="">
       </div>
       <div class="pokeball-body">
         <div class="pokeball-motion">
@@ -116,12 +116,13 @@
         <h2 id="title2">Pókemons</h2>
         <form class="box-filter">
           <input type="text"  name="namePokemon" id="textInput" value="Nome do Pokemon"/>
+          <button type="send" class="box input" id="searchInput"> pesquisar </button>
           <p>tipo</p>
           <select id=typeInput>
-          <option >nenhum</option>
+          <option value="todos">todos</option>
           <option value="fire">fogo</option>
-          <option value="eelectry">eletrico</option>
-          <option value="fly">ar</option>
+          <option value="poison">poison</option>
+          <option value="water">água</option>
          </select>
          <p>ordenar</p>
          <select id="orderInput">
@@ -129,9 +130,10 @@
           <option value="A-Z">A-Z</option>
           <option value="Z-A">Z-A</option>
          </select>
-         <button type="submit" class="box input" id="filtro"> filtrar </button>
         </form>
-        <p>quantos pokemons tem de cada tipo </p>
+        <div>
+          <p>porcentagem</p>
+        </div>
         <div class="box-pokemons"data-motion="right">
           <ul id="pokedex" class="pokedex"></ul>
         </div>

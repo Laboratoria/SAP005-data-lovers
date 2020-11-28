@@ -115,14 +115,14 @@ header {
 .img-wrapper {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 00.8);
+  /*background-color: rgba(0, 0, 00.8);*/
 }
 
 .img-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.5;
+  /*opacity: 0.5;*/
 
 }
 
@@ -267,6 +267,8 @@ header {
 }
 
 main {
+  background-image: url(images/skyblue.jpg);
+  background-size: cover;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -274,11 +276,12 @@ main {
 
 .tabs {
   width: 80vw;
-  height: 80%;
-  margin: 1% auto;
+  height: 100vh;
+  margin: 0 auto 0 auto;
   position: relative;
   display: flex;
   justify-content: center;
+  
 }
 
 .tabs label {
@@ -286,8 +289,10 @@ main {
   cursor: pointer;
   text-transform: uppercase;
   margin: auto 15px auto;
+  
 }
 .tabs ul{
+  margin-top: 1%;
   height: 10%;
 }
 
@@ -322,7 +327,7 @@ main {
 
 .about article {
   margin-top: 1%;
-  text-align: justify;
+  text-align: center;
   font-size: 1.5rem;
   height: 100%;
 }
@@ -333,17 +338,18 @@ main {
 }
 
 .carousel-pokemon{
-  background-image: url(images/bgpokemon2.png);
+  background-image: url(images/bgpokemon2.png) ;
   background-size: cover;
   position: relative;
   width: 100%;
   height: 100%;
+  
 }
 
 .carousel-pokemon h2 {
   display: flex;
   justify-content: center;
-  margin: 1% auto;
+  margin: 0 auto 1% auto ;
   text-transform: uppercase;
   font-size: 1.5rem;
 }
@@ -351,7 +357,6 @@ main {
 .box-filter{
   display: flex;
   justify-content: center;
-
 }
 
 .carousel-pokemon p{
@@ -361,10 +366,11 @@ main {
 }
 
 .box-pokemons{
+  border-top: solid 5px rgb(173, 21, 21);
   transform: translate(10%,10%);
   width: 85%;
   height: 50%;
-  box-shadow: 0 10px 20px rgba(228, 221, 221, 0.19), 0 6px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 10px 20px rgba(101, 161, 163, 0.096), 0 6px 6px rgba(0,0,0,0.23);
   border-radius: 16px;
   background-color:transparent;
   overflow: hidden;
@@ -381,7 +387,7 @@ main {
 }
 
 .box-pokemons::-webkit-scrollbar-thumb{
-  background-color: #bacfb1;
+  background-color: rgb(173, 21, 21);
   border-radius: 50px;
   height: 50px;
   width: 20px;
