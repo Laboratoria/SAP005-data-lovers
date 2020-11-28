@@ -6,7 +6,7 @@
 .body {
     font-family: 'M PLUS Rounded 1c', sans-serif;
     size: 100%;
-    background-color: #c2daf8d0;
+    background-color: #8fbcffd0;
 }
 
 
@@ -96,7 +96,10 @@ label span:nth-child(3) {
     font-weight: bold;
 }
 
+
 .header-title {
+    padding: 0px;
+    float: center;
     margin-bottom: 3%;
     margin-left: 33.3%;
     margin-right: 33.3%;
@@ -117,6 +120,7 @@ label span:nth-child(3) {
     font-weight: bold;
     background-color: rgb(243, 231, 185);
     padding: 0.5em;
+    /* background: url("data/assets/teste003.png") ; */
 }
 
 .input-search {
@@ -154,6 +158,14 @@ label span:nth-child(3) {
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
+.select-number {
+    padding: .5em;
+    border-radius: 10px;
+    background-color: rgba(224, 205, 128, 0.932);
+    border: rgb(247, 233, 178);
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
 .btn-clean {
     margin-right: 50px;
     padding: .7em;
@@ -174,7 +186,6 @@ label span:nth-child(3) {
     width: 980px;
     font-size: 12px;
     background-color: transparent;
-    /* perspective: 1000px; */
 }
 
 .left {
@@ -233,8 +244,116 @@ label span:nth-child(3) {
     background-color: #e9c46a;
     color: white;
     transform: rotateY(180deg);
-    /* padding: 5px; */
 }
+
+/*Tratamento do history and curiosities*/
+
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+}
+  
+.caption span.border {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+}
+  
+.h3 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #111;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    position: relative;
+    opacity: 0.65;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+} 
+
+.bgimg-1 {
+    background-image: url("data/assets/first.jpg");
+    /* min-height: 100%; */
+    height: 450px;
+}
+  
+.bgimg-2 {
+    background-image: url("data/assets/second.jpg");
+    min-height: 400px;
+}
+  
+.bgimg-3 {
+    background-image: url("data/assets/third.jpg");
+    min-height: 400px;
+}
+
+
+/* scrollbar */
+
+/* ::-webkit-scrollbar {
+    width: 20px;
+}
+  
+  
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 5px;
+}
+   
+  
+::-webkit-scrollbar-thumb {
+    background: rgb(248, 129, 218); 
+    border-radius: 15px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #6e55f7; 
+}  */
+  
+
+
+/* Responsive */
+  @media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+      background-attachment: scroll;
+    }
+
+    .main-cards {
+        width: 500px;
+    }
+
+    .card-front, .card-back, .frame, .left{
+        width: 190px;
+        height: 220px;
+        font-size: 11px;
+    }
+
+    .select-itens {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .input-search, .btn-search, .select-filter, .select-sort, .select-number, btn-clean{
+        width:  auto;
+        height: auto;
+    }
+
+
+}
+
+   
+
+
 /* tratamento do footer */
 
 .footer {
