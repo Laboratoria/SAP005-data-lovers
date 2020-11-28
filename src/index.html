@@ -14,31 +14,59 @@
 
     </head>
 
-    <nav>
-      <ul>
-        <li><button>EPISÓDIOS</button></li>
-        <li><button>ESPÉCIES</button></li>
-        <li><button>DIMENSÕES</button></li>
-      </ul>
-    </nav>
+    <form>
+      <label for="characters"></label>
+      <input
+      type="select"
+      id="personagens"
+      name="characters"
+      placeholder="PERSONAGENS"
+      min="1"
+      max="493"
+      />
+      <datalist id="charactersList">
+        <option id="characters"></option>
+      </datalist>
+      <button id="botaoPersonagem">pesquisar</button>
+    </form>
 
     <form>
-      <label for="character"></label>
+      <label for="episodes"></label>
       <input
-      type="text"
-      id="character"
-      name="character"
-      placeholder="PROCURAR UM PERSONAGEM"
+      type="number"
+      min="1"
+      max="31"
+      id="episodes"
+      name="episodes"
+      placeholder="EPISÓDIOS"
       />
+    </form>
 
+    <form>
+      <label for="species"></label>
+      <input
+      type="select"
+      id="species"
+      name="species"
+      placeholder="ESPÉCIES"
+      />
+    </form>
+
+    <form>
+      <label for="dimensions"></label>
+      <input
+      type="list"
+      id="dimensions"
+      name="dimensions"
+      placeholder="DIMENSÕES"
+      />
     </form>
 
 
 
-    <main>
-      <p class="card1">
 
-      </p>
+    <main>
+      <p id="card1"></p>
 
     </main>
 

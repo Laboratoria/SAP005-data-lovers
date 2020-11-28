@@ -31,46 +31,29 @@ html{
   padding: 20px 20px;
 }
 
-ul{
-  color: white;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-}
-
-button{
-  background-color:#000000;
-  color:#f5edea;
-  font-family: Arial;
-  font-size: 15px;
-  border-radius: 30px;
-  padding: 8px 80px;
-  text-align:center;
-  border-style: groove;
-
-}
-
 form{
   display: flex;
   justify-content: center;
 }
 
 input{
-  background-color: rgb(0, 0, 0);
-  color: rgb(250, 243, 243);
+  background-color: black;
+  color: white;
   border-style:groove;
   border-radius: 50px;
   font-family: arial;
   font-size: 15px;
-  width: 45%;
-  padding: 2px 5px;
+  width: 20%;
+  padding: 10px 10px;
   text-align: center;
 
 
 }
 
-
+#card1{
+  background-color: black;
+  color: white;
+}
 
 
 
