@@ -9,9 +9,11 @@ const selectFilterGeneration = document.querySelector('#select-filter-by-generat
 const selectSortCp = document.querySelector('#select-sort-cp')
 const selectSort = document.querySelector('#select-sort')
 const selectNumber = document.querySelector('#select-number')
-const btnClean = document.querySelector('#btn-clean')
 
 showingCards(data.pokemon);
+
+showingCards(data.pokemon)
+    //showingCards(data.pokemon.sort((poke1, poke2) => poke1.name.localeCompare(poke2.name)))
 
 function showingCards(pokemonCards) {
     let showCards = document.querySelector('#main-cards')
@@ -20,7 +22,7 @@ function showingCards(pokemonCards) {
 
     for (let pokemon of pokemonCards) {
         let evolutions = ""
-        if (pokemon.evolution["next-evolution"] != undefined && pokemon.evolution["next-evolution"] != null) {
+        if (!!pokemon.evolution["next-evolution"]) {
             for (let evolution of pokemon.evolution["next-evolution"]) {
                 evolutions += `<span>${evolution.name}</span>`
             }
@@ -29,29 +31,27 @@ function showingCards(pokemonCards) {
         }
 
         cards +=
-        `<div class="frame left">
-                
-        <div class="left"><h3 class = "card-front"><img src = ${pokemon.img} class = "img" alt = ${pokemon}</h3>
-        <p>N°: ${pokemon.num} <br> Nome: ${pokemon.name} </p>
-        </div>
-        
-        <div class="card-back"> 
-            <p> Type: ${pokemon.type}</p>
-            <p> Height: ${pokemon.size.height}</p>
-            <p> Weight: ${pokemon.size.weight}</p>
-            <p> Resistant: ${pokemon.resistant}</p>
-            <p> Weaknesses: ${pokemon.weaknesses}</p>
-            <p> Base Attack: ${pokemon.stats["base-attack"]}</p>
-            <p> Base Defense: ${pokemon.stats["base-defense"]}</p>
-            <p> Base Stamina: ${pokemon.stats["base-stamina"]}</p>
-            <p> Max Cp: ${pokemon.stats["max-cp"]}</p>
-            <p> Max Hp: ${pokemon.stats["max-hp"]}</p>
-            <p> Rarity: ${pokemon["pokemon-rarity"]}</p>
-            <p> Region: ${pokemon.generation.name}</p>
-            </div>
-            
-    </div>`
-
+            `<div class="frame left">
+                <div class="left">
+                <h3 class = "card-front"><img src = ${pokemon.img} class = "img" alt = ${pokemon.name}</h3> 
+                    <p>N°: ${pokemon.num}</p>
+                    <p>Nome: ${pokemon.name}</p>
+                    <p>Type: ${pokemon.type}</p>
+                    <p>Rarity: ${pokemon["pokemon-rarity"]}</p>
+                    <p>Evolution: ${evolutions}<p>                 
+                </div>
+                <div class="card-back">
+                    <p>Height: ${pokemon.size.height}</p>
+                    <p>Weight: ${pokemon.size.weight}</p>
+                    <p>Resistant: ${pokemon.resistant}</p>
+                    <p>Weaknesses: ${pokemon.weaknesses}</p>
+                    <p>Base Attack: ${pokemon.stats["base-attack"]}</p>
+                    <p>Base Defense: ${pokemon.stats["base-defense"]}</p>
+                    <p>Base Stamina: ${pokemon.stats["base-stamina"]}</p>
+                    <p>Max Cp: ${pokemon.stats["max-cp"]}</p>
+                    <p>Max Hp: ${pokemon.stats["max-hp"]}</p>
+                </div>
+            </div>`
 
     }
     showCards.innerHTML = cards;
@@ -59,10 +59,11 @@ function showingCards(pokemonCards) {
 }
 
 inputSearch.addEventListener('keyup', () => {
-    const searchName = inputSearch.value;
-    const pokemons = instantSearch(searchName, data.pokemon);
-    showingCards(pokemons);
-
+    const searchName = inputSearch.value
+    const pokemons = instantSearch(searchName, data.pokemon)
+    const selectType = selectFilterType.value
+    const pokemonType = selectPokemonType(selectType, pokemons)
+    showingCards(pokemonType)
 });
 
 selectFilterType.addEventListener('change', () => {
