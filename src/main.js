@@ -1,33 +1,15 @@
 import data from './data/pokemon/pokemon.js';
 
-const dataPokemon = data.pokemon
+const dataPokemon = data.pokemon;
 
 const hamburguer = document.getElementById("menu-hamburguer");
 hamburguer.addEventListener("click", () => {
   document.getElementById("root").classList.toggle("show-menu");
 })
 
-const inputfilter = document.getElementById("filtro");
-inputfilter.addEventListener("click", formFilter);
-
-function formFilter(event){
-  event.preventDefault()
-
-  const searchName = document.getElementById("textInput").value;
-  const namePokemon = searchName.toLowerCase();
-
-  const typePokemon = document.getElementById("typeInput").value;
-
-  const orderPokemon =document.getElementById("orderInput").value;
-
-  console.log(namePokemon)
-  console.log(typePokemon)
-  console.log(orderPokemon)
-}
-
-function pokebola() {
-  let auxPoke= "";
-  for (let card of dataPokemon) {
+function pokebola(list) {
+  let auxPoke = "";
+  for (let card of list) {
     auxPoke += `
     <li class="card-poke">
         <img class="card-image" src="${card.img}" alt="${card.name}"/>
@@ -40,30 +22,50 @@ function pokebola() {
 }
 pokebola(dataPokemon);
 
-/*filtros estão aqui... funcionam mas precisa fazer os filtros pegar o dados q a  formFilter imprime*/
-/*acho que precia criar uma função pra cada filtro, to pensando não sei como fazer ainda kkkk*/
+const sendFilterSearch = document.getElementById("searchInput");
+sendFilterSearch.addEventListener("click", formFilterName);
 
-const filterTypes= dataPokemon.filter(item => item.type.includes("water"));
+function formFilterName(event) {
+  event.preventDefault()
 
-const filterAlphabetAZ= dataPokemon.sort(function (a, b) {
-  return (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0);
-});
+  const searchName = document.getElementById("textInput").value;
+  const namePokemon = searchName.toLowerCase();
+  const filterName = dataPokemon.filter(item => item.name.includes(namePokemon));
+  pokebola(filterName)
 
+};
+const inputFilterType = document.getElementById("typeInput");
+inputFilterType.addEventListener("click", formFilterType);
 
-const filterAlphabetZA= dataPokemon.sort(function (a, b) {
-  return (a.name < b.name) ? 1 : ((b.name < a.name) ? -1 : 0);
-});
+function formFilterType(event) {
+  event.preventDefault()
 
-//adicionar um if para função de ordenção apenas ser ignorada pq assim se mantem a oredem numerica dos pokemons 
-
-const filterName = (query) => {
-  return dataPokemon.filter(el => el.name.toLowerCase().indexOf(query.toLowerCase()) > -1);
+  const typePokemon = document.getElementById("typeInput").value;
+  if(typePokemon == "todos"){
+    pokebola(dataPokemon)
+  }else {
+  const filterTypes = dataPokemon.filter(item => item.type.includes(typePokemon));
+  pokebola(filterTypes)}
+ 
 };
 
+const orderFilter = document.getElementById("orderInput");
+orderFilter.addEventListener("click", formFilterOrder);
 
-console.log(filterName('sq'))
-console.log(filterTypes);
+function formFilterOrder(event) {
+  event.preventDefault()
 
+  const orderPokemon = document.getElementById("orderInput").value;
 
-
-
+  //const filterAlphabetAZ = dataPokemon.sort(function (a, b) {
+   // if (orderPokemon == "A-Z") {
+     // (a.name > b.name) ? 1: ((b.name > a.name) ? -1 : 0);
+     // pokebola(filterAlphabetAZ)
+   // } else if (orderPokemon == "Z-A") {
+    //  (a.name < b.name) ? 1: ((b.name < a.name) ? -1 : 0);
+   //   pokebola(filterAlphabetAZ)
+   // }
+    
+ // });
+  
+};
