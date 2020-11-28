@@ -79,11 +79,16 @@ selectFilterResistant.addEventListener('change', () => {
 });
 
 selectFilterWeaknesses.addEventListener('change', () => {
-    const selectWeaknesses = selectFilterWeaknesses.value;
-    const pokemonWeaknesses = selectPokemonWeaknesses(selectWeaknesses, data.pokemon);
-    showingCards(pokemonWeaknesses);
-});
+    const selectWeaknesses = selectFilterWeaknesses.value
+    const pokemonWeaknesses = selectPokemonWeaknesses(selectWeaknesses, data.pokemon)
+    showingCards(pokemonWeaknesses)
+})
 
+selectFilterGeneration.addEventListener('change', () => {
+        const selectGeneration = selectFilterGeneration.value
+        const pokemonGeneration = selectPokemonGeneration(selectGeneration, data.pokemon)
+        showingCards(pokemonGeneration)
+})
 
 selectSort.addEventListener('change', () => {
     const orderName = selectSort.value;

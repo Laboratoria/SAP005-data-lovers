@@ -14,7 +14,10 @@ export const selectPokemonWeaknesses = (selectWeaknesses, dataJson) => {
     return dataJson.filter(pokemon => pokemon.weaknesses.includes(selectWeaknesses))
 }
 
-export const orderPokemonName = (orderName, dataJson) =>{
+export const selectPokemonGeneration = (selectGeneration, dataJson) => {
+    return dataJson.filter(pokemon => pokemon.generation.name == selectGeneration)
+
+  export const orderPokemonName = (orderName, dataJson) =>{
     return dataJson.sort(function(a, b) {
          const keyA = a.name,
                keyB = b.name
