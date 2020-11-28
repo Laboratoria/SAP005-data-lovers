@@ -13,6 +13,11 @@ export const decrescente = (array) => {
 };
 
 export const filtro = (array, valor) => {
-let retornoArray = array.filter((item) =>  item.type == valor);
+let retornoArray = array.filter((item) =>  item.type.includes(valor));
 return retornoArray
+}
+
+export const buscar = (array, valor) => {
+  let retornoArray = array.find((item) =>  item.num === valor.toLowerCase());
+  return retornoArray
 }

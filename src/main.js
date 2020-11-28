@@ -1,32 +1,22 @@
-import { crescente, decrescente, filtro } from './data.js';
+import { crescente, decrescente, filtro, buscar } from './data.js';
 import data from './data/pokemon/pokemon.js';
-let input = document.getElementById("txtBusca");
+const copiaDB = data.pokemon;
 
-function cardUnitario() {
-    let textoBusca = Number(document.getElementById('txtBusca').value);
-    const arrayN = (textoBusca - 1);
-    const arrayDB = data.pokemon;
-    const resultado = `<div id="item-card1">
-    <img src="${arrayDB[arrayN].img}">
-    <h1>${arrayDB[arrayN].name.toUpperCase()}<h1>
-    <p>${arrayDB[arrayN].num}</p> 
-    <p>${arrayDB[arrayN].about}</p> 
-    <p> <strong>Tipo:</strong> ${arrayDB[arrayN].type.join(' / ')}</p>
-    <p> <strong>Resistente:</strong>  ${arrayDB[arrayN].resistant.join(' / ')}</p></div>`
-    document.getElementById("item-card-one").innerHTML = resultado;
-    return resultado;
-};
+function clearCards (){
+    document.getElementById("item-all-cards").innerHTML = ""
+}
 
-input.addEventListener("keyup", function (event) {
-    if (event.keyCode === 13) {
-        event.preventDefault();
-        document.getElementById('btn-search-pokemon').addEventListener("click", cardUnitario());
-    }
-});
-
-document.getElementById('btn-search-pokemon').addEventListener("click", cardUnitario);
-
-//Code com Manipulação para Todos os Cards:
+function padraoOneCard(array) {
+    let pokecard = "";
+    pokecard += `<div id="item-card1">
+    <img src="${array.img}">
+    <h1>${array.name.toUpperCase()}<h1>
+    <p>${array.num}</p> 
+    <p>${array.about}</p> 
+    <p> <strong>Tipo:</strong> ${array.type.join(' / ')}</p>
+    <p> <strong>Resistente:</strong> ${array.resistant.join(' / ')}</p></div>`
+    return document.getElementById("item-card-one").innerHTML = pokecard
+}
 
 function padraoAllCards(array) {
 let pokecards ="";
@@ -42,41 +32,53 @@ pokecards+= `<div class="mostrar">
 document.getElementById("item-all-cards").innerHTML = pokecards
 }
 
+function cardOne() {
+    document.getElementById("item-card-one").innerHTML = "";
+    let textoBusca = document.getElementById('txtBusca').value;
+    const busca = buscar(copiaDB, textoBusca);
+    return padraoOneCard(busca)
+};
+
 function cardAll() {
-    document.getElementById("item-all-cards").innerHTML = "";
-    const copiaDB = data.pokemon;
+    clearCards();
     return padraoAllCards(copiaDB)
 };
 
 function ordCrescente() {
-    document.getElementById("item-all-cards").innerHTML = "";
-    const copiaDB = data.pokemon;
+    clearCards();
     const ordenaCres = crescente(copiaDB);
     return padraoAllCards(ordenaCres)
 };
 
 function ordDecrescente() {
-    document.getElementById("item-all-cards").innerHTML = "";
-    const copiaDB = data.pokemon;
+    clearCards();
     const ordenaDec = decrescente(copiaDB);
     return padraoAllCards(ordenaDec)
 };
 
 function buscarnoArray() {
-    //document.getElementById("item-all-cards").innerHTML = ""
+    clearCards();
     let teste2 = document.getElementById("filter-type").value;
-    console.log(teste2)
-    const copiaDB = data.pokemon;
     const teste = filtro(copiaDB,teste2);
     return padraoAllCards(teste)
 };
 
 //Botões
 
-document.getElementById('btn-generation-pokemon').addEventListener("click", cardAll) //Todos os cards sem tratamento
+document.getElementById('btn-generation-pokemon').addEventListener("click", cardAll)
 
 document.getElementById('btn-cresc-pokemon').addEventListener("click", ordCrescente) //Todos os cards com Ordenação Crescente
 
 document.getElementById('btn-decresc-pokemon').addEventListener("click", ordDecrescente) //Todos os cards com Ordenação Decrescente
 
 document.getElementById('btn-filter-type').addEventListener("click", buscarnoArray) //Todos os cards com Ordenação Decrescente
+
+document.getElementById('btn-search-pokemon').addEventListener("click", cardOne);
+
+let input = document.getElementById("txtBusca");
+input.addEventListener("keyup", function (event) {
+    if  (event.key === 'Enter') {
+        event.preventDefault();
+        cardOne()
+    }
+});
