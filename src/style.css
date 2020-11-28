@@ -5,8 +5,7 @@
 
 .body {
     font-family: 'M PLUS Rounded 1c', sans-serif;
-    size: 100%;
-    background-color: #c2daf8d0;
+    background-color: #c2daf891;
 }
 
 
@@ -63,7 +62,7 @@ label span:nth-child(3) {
 }
 
 .aside-menu {
-    background-color: #769dcce0;
+    background-color: #769dcc93;
     width: 200px;
     height: 100%;
     left: -350px;
@@ -97,13 +96,19 @@ label span:nth-child(3) {
 }
 
 .header-title {
-    margin-bottom: 3%;
+    margin-bottom: 1%;
     margin-left: 33.3%;
     margin-right: 33.3%;
-    background-image: url(Logo.png);
-    height: 140px;
+    height: 350px;
     background-repeat: no-repeat;
     width: auto;
+}
+
+.logo {
+    padding: 10%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -120,6 +125,7 @@ label span:nth-child(3) {
 }
 
 .input-search {
+    outline: transparent;
     margin-left: 50px;
     border-radius: 10px;
     width: 350px;
@@ -129,21 +135,8 @@ label span:nth-child(3) {
     border: 2px solid rgb(252, 204, 11);
 }
 
-.btn-search {
-    background-color: rgba(250, 224, 119, 0.932);
-    color: gray;
-    width: 40%;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 10px;
-    width: 50px;
-    padding: .5em;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    border: 2px solid rgb(252, 204, 11);
-}
-
 .select-filter {
+    outline: transparent;
     padding: 0.5em;
     border-radius: 10px;
     background-color: rgba(224, 205, 128, 0.932);
@@ -152,6 +145,7 @@ label span:nth-child(3) {
 }
 
 .select-sort {
+    outline: transparent;
     padding: .5em;
     border-radius: 10px;
     background-color: rgba(224, 205, 128, 0.932);
@@ -160,6 +154,7 @@ label span:nth-child(3) {
 }
 
 .btn-clean {
+    outline: transparent;
     background-color: rgba(250, 224, 119, 0.932);
     color: black;
     width: 40%;
@@ -176,15 +171,21 @@ label span:nth-child(3) {
 
 /* Tratamento dos cards*/
 
+.img {
+    filter: drop-shadow(0 0 0.15rem gray);
+}
+
 .space {
     max-width: 100%;
     height: 50px;
 }
 
 .main-cards {
-    margin: 0 auto;
-    width: 980px;
-    font-size: 12px;
+    margin-left: 13%;
+    display: inline-block;
+    justify-content: space-between;
+    width: 80%;
+    font-size: 15px;
     background-color: transparent;
 }
 
@@ -195,27 +196,25 @@ label span:nth-child(3) {
 
 .frame {
     position: relative;
-    width: 230px;
-    height: 265px;
+    width: 260px;
+    height: 295px;
     transition: transform 0.6s;
     cursor: pointer;
     transform-style: preserve-3d;
-    margin: 5px;
+    margin: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .frame:hover {
-    background-color: rgb(243, 231, 185);
     transform: rotateY(180deg);
-    z-index: 10;
 }
 
 .card-front,
 .card-back {
     position: relative;
-    width: 230px;
-    height: 265px;
+    width: 260px;
+    height: 295px;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 10px;
@@ -224,8 +223,8 @@ label span:nth-child(3) {
 .card-front {
     position: absolute;
     background-color: #faefbd3a;
-    width: 230px;
-    height: 265px;
+    width: 260px;
+    height: 295px;
     text-align: center;
     font-size: 16px;
     font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -233,12 +232,12 @@ label span:nth-child(3) {
 
 .card-back {
     position: absolute;
-    width: 230px;
-    height: 265px;
-    background-color: #e9c46a;
-    color: white;
+    width: 260px;
+    height: 295px;
+    background-color: #6198db;
+    color: black;
     transform: rotateY(180deg);
-    font-size: 14px;
+    font-size: 15px;
     text-align: justify;
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
@@ -247,14 +246,15 @@ label span:nth-child(3) {
 /* tratamento do footer */
 
 .footer {
-    display: flex;
-    position: relative;
-    justify-content: stretch;
-    align-items: flex-end;
+    background-color: rgb(39, 126, 167);
+    color: white;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
     font-size: 17px;
 }
 
 .link-footer {
-    text-decoration: none;
-    color: black;
+    color: white;
 }
