@@ -1,0 +1,150 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+<style>
+ @import url(tiny.css) (min-width:300px);
+ @import url(small.css) (min-width:600px);
+ @import url(big.css) (min-width:900px);
+</style>
+@media screen and (max-width: 300px) {
+ /* estilos */
+}
+@media screen and (max-width: 600px) {
+/* Estilos */
+}
+
+
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    /*background-color: #eceafae3;  */
+    background-image: url("img/fundo4.jpg");
+    /*background-attachment: fixed;*/
+    background-repeat: repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;      
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+#logo{
+    width: 42%;
+    height: 42%;
+    /* position: relative;
+    margin-left: auto;
+    margin-right: auto; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.sidebar nav{
+    display:flex;
+    justify-content: left;
+}
+.sidebar{
+    margin: 0px;
+    padding: 0px;
+    float: left; /*alinhou itens de busca no canto central*/
+    /*background: rosybrown;*/
+    list-style: none; 
+    width: 15%;
+    color: white;
+} 
+
+.sidebar h2{
+    margin: 5px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar ul li{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar a:link{
+    background: #dba8a8;
+    color: #666;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 6px;
+    display: block;
+}
+
+.sidebar a:hover{
+    background: #E5F0FF;
+    color: #039;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 75%; /* 100% centraliza mais precisa subir e side bar já ocupa 20% */
+}
+
+#cboPokemon{
+    margin: auto;
+}
+
+
+#bg{
+  width: 400px;
+  height: 300px;
+  
+}
+
+#divBusca{
+    background-color:#2F4F4F;
+    border:solid 1px;
+    border-radius:15px;
+    width:300px;
+}
+  
+#txtBusca{
+    float:left;
+    background-color:transparent;
+    padding-left:5px;
+    font-style:italic;
+    font-size:18px;
+    border:none;
+    height:32px;
+    width:260px;
+}
+
+.cards{
+    width: 70vw;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1000px;
+    margin:0 auto;
+    box-shadow: 0 4px 8px 0 rgb(250, 248, 248);
+}
+
+.rodape{
+    text-align: center;
+    position: fixed;
+    flex-direction: row;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 100%;
+    font-weight: bolder;
+}
