@@ -23,25 +23,29 @@ const getPoke = (data) => {
     for (let poke of data) {
         let img = poke.img,
             num = poke.num,
+            rarity = poke["pokemon-rarity"],
             name = poke.name,
             type = poke.type,
             weaknesses = poke.weaknesses,
-            evolution = "";
+            evolution = "",
+            cp = poke.stats["max-cp"],
+            hp = poke.stats["max-hp"];
+
         if (typeof (poke.evolution["next-evolution"]) != "undefined") {
             let arrayEvolution = poke.evolution["next-evolution"];
             for (let evolutionPokes of arrayEvolution) {
                 evolution += evolutionPokes.name + ",";
             }
             console.log(evolution);
+
         } else {
             evolution = "Já alcançou evolução máxima";
         }
-
-        cardInfo(img, num, name, type, weaknesses, evolution);
+        cardInfo(img, num, name, type, weaknesses, evolution, rarity, cp, hp);
     } // loop para trazer os elementos
 };
 
-const cardInfo = (img, num, name, type, weaknesses, evolution) => {
+const cardInfo = (img, num, name, type, weaknesses, evolution, rarity, cp, hp) => {
     container.innerHTML += `
                          
                           <div class="flip-card">
@@ -53,17 +57,16 @@ const cardInfo = (img, num, name, type, weaknesses, evolution) => {
                           <p class="card-info-poke">${type}</p>
                           </div>
                           <div class="flip-card-back">
-                          <p class="card-info-poke"> ${num}</p> 
-                          <p class="card-info-poke">${name}</p>
-                          <p class="card-info-poke">${type}</p>
                           <p class="card-info-poke">${weaknesses}</p>
                           <p class="card-info-poke">${evolution}</p>
+                          <p class="card-info-poke">${rarity}</p>
+                          <p class="card-info-poke">${cp}</p>
+                          <p class="card-info-poke">${hp}</p>
                           </div>
                           </div>
                           </div>
                           
 `}
-
 /* const filterType = (condition) => {
     let resultFilterType = [];
     let selectedCondition = condition.target.value;
@@ -71,4 +74,4 @@ const cardInfo = (img, num, name, type, weaknesses, evolution) => {
     if (selectedCondition == document.getElementById('selecao.value'))
      */
 
-console.log(filterFunction(pokemons, "fire", select.target.value));
+/* console.log(filterFunction(pokemons, "fire", select.target.value)); */
