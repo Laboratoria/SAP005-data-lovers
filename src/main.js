@@ -8,16 +8,19 @@ const searchButton = document.getElementById("search-btn");
 const getSearchInput = document.getElementById("search-input");
 const pokemonTable = document.getElementById("pokemon-table");
 
+
 // BUSCA DO POKÉMON RIVAL
 searchButton.addEventListener("click", event => {
   event.preventDefault();
   const rivalPokemon = filterRivalPokemon(pokemons, getSearchInput)
 
-  // TABELA
+  // CARD DO POKÉMON RIVAL
   pokemonTable.innerHTML = `
     Nome: ${rivalPokemon.name} <br>
-    Tipo: ${rivalPokemon.type}
+    Fraqueza: ${rivalPokemon.weaknesses}
   `
 
-});
+  // TABELA DE POKÉMONS VANTAJOSOS
+  
 
+});
