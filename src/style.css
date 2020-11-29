@@ -11,21 +11,17 @@ body {
   font-size: 14pt;
 }
 
-ul {
-  display: flex;
-  text-align: center;
-}
-
 li {
-  padding: 20px;
-  height: 30px;
-  width:100%;
-  vertical-align: center;
+  display: inline-block;
 }
 
 a {
+  text-align: center;
   text-decoration: none;
   color: #fff;
+  padding: 20px;
+  height: 30px;
+  vertical-align: center;
 }
 
 li:hover {
@@ -41,8 +37,6 @@ li:hover {
 }
 
 nav {
-  top:0;
-  right:0;
   width:100%
 }
 
@@ -75,4 +69,8 @@ nav {
 
 
 /*IDs*/
-
+#ob-menu{
+  width:100%;
+  margin:0px;
+  padding:0px;
+}
