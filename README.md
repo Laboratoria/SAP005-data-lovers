@@ -30,6 +30,69 @@ That said, this Dashboard was made to help fans to get information about people 
 
 ![Persona](./src/img/personas.png)
 
+**User stories**
+
+User story 1
+"As a user, I want a search input so I can search a character by its name"
+
+Acceptance criteria
+- User can see all the cartoon cards on the main page
+- User can flip the card to get more information about the character
+- User can access the developer's repositories
+- User can access the app by mobile with a responsive design
+
+Definition of done
+- Code is refactored
+- Code is formatted according to the style guide
+- Code is reviewed
+- The code is on the repository
+
+User story 2
+"As a user, I want to order the cartoon cards so I can see them in in alphabetic order"
+
+Acceptance criteria
+- User can see all the cartoon cards on the main page
+- User can choose if he/she wants to order the characters in alphabetic order or the other way around
+
+Definition of done
+- Code has and passes in needed tests
+- Code is refactored
+- Code is formatted according to the style guide
+- Code is reviewed
+- The code is on the repository
+- User story was tested with, at least, 5 users, and the needed improvements identified in the usability test was incorporated
+
+User story 3
+"As a user, I want to filter the characters by a specific aspect so I can see all the characters that share this same aspect"
+
+Acceptance criteria
+- User can choose if he/she wants to order the characters in alphabetic order or the other way around
+- User can see the characters list according to the filter criteria applied
+- User gets statistical information about how many characters share this same aspect on the cartoon universe
+
+Definition of done
+- Code has and passes in needed tests
+- Code is refactored
+- Code is formatted according to the style guide
+- Code is reviewed
+- The code is on the repository
+- User story was tested with, at least, 5 users, and the needed improvements identified in the usability test was incorporated
+
+User story 4
+"As a user, I want a search input so I can search a character by its name"
+
+Acceptance criteria
+- User can choose if he/she wants to order the characters in alphabetic order or the other way around
+- User can see the character card filtered by the name typed on the search input.
+
+Definition of done
+- Code has and passes in needed tests
+- Code is refactored
+- Code is formatted according to the style guide
+- Code is reviewed
+- The code is on the repository
+- User story was tested with, at least, 5 users, and the needed improvements identified in the usability test was incorporated
+
 ## User Interface
 *"Sometimes science is more art than science."*
 
