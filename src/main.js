@@ -128,11 +128,11 @@ const episodesList = [
   },
 ];
 function printData(data) {
-  document.getElementById("cardArea").innerHTML = "";
+  let printDataBase = "";
   for (let item of data) {
-    let beth = (item.episode[0]).substr(40, 39);
-    const episodeIndex = beth - 1;
-    document.getElementById("cardArea").innerHTML += `
+    let firstEpisode = (item.episode[0]).substr(40, 39);
+    const episodeIndex = firstEpisode - 1;
+    printDataBase += `
       <div class="testing">
         <div class="card">
           <div class="cardFront">  
@@ -162,6 +162,7 @@ function printData(data) {
         </div>
       </div>`
   }
+  document.getElementById("cardArea").innerHTML = printDataBase;
 }
 printData(characters);
 document.getElementById("order").addEventListener("change", alphabeticOrder);
@@ -209,9 +210,9 @@ function genderFilter() {
 };
 document.getElementById("enter").addEventListener("click", searchLocation);
 function searchLocation(){
-  const getLocation = document.getElementById("search").value;
-  const filterLocation = characters.filter((item) => item.location.name === getLocation);
-  statisticData(filterLocation, getLocation);
+  const getLocation = document.getElementById("search").value.toUpperCase();
+  const filterLocation = characters.filter((item) => ((item.location.name).toUpperCase()).includes(`${getLocation}`));
+  console.log(filterLocation);
   printData(filterLocation);
 };
 function statisticData(data, condition) {
@@ -222,3 +223,4 @@ function statisticData(data, condition) {
   results.appendChild(content);
   document.getElementById("results").appendChild(results);
 };
+// .oniput () // promise // fetch // em, rem // filtro por temporada
