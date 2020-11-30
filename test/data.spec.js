@@ -1,5 +1,6 @@
 import { example, anotherExample } from '../src/data.js';
 
+const test = 
 
 describe('example', () => {
   it('is a function', () => {
