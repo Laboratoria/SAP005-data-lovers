@@ -133,24 +133,29 @@ header {
   transform: translate(-50%, -50%);
 }
 
-.pokeball-motion{
+.pokeball-motion {
   position: relative;
   animation: bounce 3s linear infinite;
 }
+
 @keyframes bounce {
-  0%{
+  0% {
     bottom: 50px;
   }
-  50%{
+
+  50% {
     bottom: 20px;
   }
-  55%{
+
+  55% {
     bottom: 25px;
   }
-  100%{
+
+  100% {
     bottom: 50px;
   }
 }
+
 .pokeball-top {
   width: 300px;
   height: 150px;
@@ -281,17 +286,18 @@ main {
   position: relative;
   display: flex;
   justify-content: center;
-  
+
 }
 
 .tabs label {
-  font-size: 1.5rem;
+  font-size: 2rem;
   cursor: pointer;
   text-transform: uppercase;
   margin: auto 15px auto;
-  
+
 }
-.tabs ul{
+
+.tabs ul {
   margin-top: 1%;
   height: 10%;
 }
@@ -337,73 +343,114 @@ main {
   position: absolute;
 }
 
-.carousel-pokemon{
-  background-image: url(images/bgpokemon2.png) ;
+.carousel-pokemon {
+  background-image: url(images/bgpokemon2.png);
   background-size: cover;
   position: relative;
   width: 100%;
   height: 100%;
-  
+
 }
 
 .carousel-pokemon h2 {
   display: flex;
   justify-content: center;
-  margin: 0 auto 1% auto ;
+  margin: 0 auto 1% auto;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.box-filter {
+  width: 80%;
+  margin: 0 auto 0 auto;
+  display: flex;
+  justify-content: center;
+  /*background-color: rgba(8, 24, 24, 0.596);*/
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  flex-wrap: wrap;
+}
+
+.searchInput {
+  border-radius: 16px;
+  padding: 0.5%;
+  background-color: transparent;
+  border-style: inset;
+  font-size: 1.5rem;
+
+}
+
+.box-filter button {
+  border-radius: 16px;
+  margin: 2% 10% 0 0;
+  text-transform: uppercase;
+  background-color: rgba(80, 143, 51, 0.342);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 1%;
+
+}
+
+.box-filter select {
+  border-radius: 16px;
+  margin: 2% 10% 0 1%;
+  text-transform: uppercase;
+  background-color: rgba(80, 146, 71, 0.342);
+  display: inline-block;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 1%;
+}
+
+.calculusFilter {
+  display: flex;
+  justify-content: center;
+  margin: 5% auto 0 auto;
   text-transform: uppercase;
   font-size: 1.5rem;
+  width: 50%;
 }
 
-.box-filter{
-  display: flex;
-  justify-content: center;
-}
-
-.carousel-pokemon p{
-  display: flex;
-  justify-content: center;
-  margin-top: 1%;
-}
-
-.box-pokemons{
+.box-pokemons {
   border-top: solid 5px rgb(173, 21, 21);
-  transform: translate(10%,10%);
+  transform: translate(10%, 10%);
   width: 85%;
   height: 50%;
-  box-shadow: 0 10px 20px rgba(101, 161, 163, 0.096), 0 6px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 10px 20px rgba(101, 161, 163, 0.096);
   border-radius: 16px;
-  background-color:transparent;
+  background-color: transparent;
   overflow: hidden;
   overflow-x: auto;
   scroll-snap-align: start;
 }
 
-.box-pokemons::-webkit-scrollbar{
+.box-pokemons::-webkit-scrollbar {
   opacity: 1;
 }
 
-.box-pokemons::-webkit-scrollbar-button{
-    display: none;
+.box-pokemons::-webkit-scrollbar-button {
+  display: none;
 }
 
-.box-pokemons::-webkit-scrollbar-thumb{
+.box-pokemons::-webkit-scrollbar-thumb {
   background-color: rgb(173, 21, 21);
   border-radius: 50px;
   height: 50px;
   width: 20px;
 }
 
-.pokedex{
+.pokedex {
   display: flex;
   justify-content: start;
 }
 
-.card-poke{
+.card-poke {
   display: inline-block;
   justify-content: center;
-  background-color: rgba(0,0,0,0.19);
+  background-color: rgba(0, 0, 0, 0.19);
   border-radius: 16px;
   width: 230px;
+  height: 50%;
   padding: 25px;
   text-align: center;
   margin: 10px;
@@ -411,6 +458,14 @@ main {
   font-weight: 10px;
   text-transform: uppercase;
 }
-.card-image{
-  filter: drop-shadow( 5px 5px 2px rgb(56, 55, 55));
+
+.card-image {
+  filter: drop-shadow(5px 5px 2px rgb(56, 55, 55));
+}
+
+/*.comparation {
+  background-image: url(images/vulcan.jpg);
+  height: 100%;
+  width: 100%;
+  background-size: cover;
 }
