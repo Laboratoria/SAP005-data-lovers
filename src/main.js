@@ -12,13 +12,12 @@ function printCharacters(dados) {
       ` 
      <article id="teste" class="personagem">
       <div class="frente">
-        <p class "card-name">${item.name.toUpperCase()}</p>
+        <p class="card-name">${item.name.toUpperCase()}</p>
         <img src="${item.image}" class="card-img">
-      </div>
-      <div class="tras">
-      <p class="card-tras">${item.status}</p>
-      <p class="card-tras">${item.species}</p>
-      <p "card-tras">${item.gender}</p>
+      <p class="card-tras">${item.status.toUpperCase()}</p>
+      <p class="card-tras">${item.species.toUpperCase()}</p>
+      <p class="card-tras">${item.gender.toUpperCase()}</p>
+      <p class="card-tras">${item.location.name.toUpperCase()}</p>
     </div>
     </article>
       `
