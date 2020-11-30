@@ -5,7 +5,7 @@ const copyDB = data.pokemon;
 // Limpa a DIV que irá receber todos os CARDS (Todos, Filtrados ou Ordenados) 
 function clearCards() {
     document.getElementById("item-all-cards").innerHTML = ""
-};
+}
 
 /*                            Funções para Templates de Cards                            */
 function templateOneCard(array) {
@@ -18,7 +18,7 @@ function templateOneCard(array) {
 <p> <strong>Tipo:</strong> ${array.type.join(' / ')}</p>
 <p> <strong>Resistente:</strong> ${array.resistant.join(' / ')}</p></div>`
     return document.getElementById("item-card-one").innerHTML = pokecard
-};
+}
 
 
 function templateAllCards(array) {
@@ -42,7 +42,7 @@ function cardOne() {
     let txtSearch = document.getElementById('txtBusca').value;
     const resultSearch = searchFind(copyDB, txtSearch);
     return templateOneCard(resultSearch)
-};
+}
 
 // Botão e Event para enter localizados na section class="middle-bg" do html.
 document.getElementById('btn-search-pokemon').addEventListener("click", cardOne);
@@ -53,13 +53,13 @@ input.addEventListener("keyup", function (event) {
         event.preventDefault();
         cardOne()
     }
-});
+})
 
 //Responsável por carregar em Cards todo o Objeto Data / Array Pokemon.
 function cardAll() {
     clearCards();
     return templateAllCards(copyDB)
-};
+}
 
 document.getElementById('btn-generation-pokemon').addEventListener("click", cardAll);
 
@@ -68,16 +68,16 @@ function sortByABC() {
     clearCards();
     const callSort = crescent(copyDB);
     return templateAllCards(callSort)
-};
+}
 
-document.getElementById('btn-cresc-pokemon').addEventListener("click", sortByABC);
+document.getElementById('btn-cresc-pokemon').addEventListener("click", sortByABC)
 
 //Responsável por Ordenar Decrescente:
 function sortByZYX() {
     clearCards();
     const callSort = decrescent(copyDB);
     return templateAllCards(callSort)
-};
+}
 
 document.getElementById('btn-decresc-pokemon').addEventListener("click", sortByZYX);
 
@@ -87,6 +87,6 @@ function filterByType() {
     let filterTypeSelect = document.getElementById("filter-type").value;
     const callFilter = searchFilter(copyDB, filterTypeSelect);
     return templateAllCards(callFilter)
-};
+}
 
-document.getElementById('btn-filter-type').addEventListener("click", filterByType);
+document.getElementById('btn-filter-type').addEventListener("click", filterByType)
