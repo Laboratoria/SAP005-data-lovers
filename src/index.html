@@ -11,14 +11,14 @@
   <!-- <img class="imagem-floresta" src="IMG/floresta.jpg" alt=”floresta”> -->
   <div class="container">
     <h1 class="Titulo">PokeLovers </h1>
-    <select name="select">
-      <option selected disabled>Selecione o tipo</option>
-      <option class="Todos">Todos</option>
+    <label for="tipos">Selecione o tipo</label>
+    <select name="tipos" id="allType" class="allTypes">
+      <option selected class="Todos">Todos</option>
       <option class="typePokemons" value="Grass">Grass</option>
       <option class="typePokemons" value="Poison">Poison</option>
       <option class="typePokemons" value="Fire">Fire</option>
       <option class="typePokemons" value="Ice">Ice</option>
-      <option class="typePokemons" value="Flying">Flayng</option>
+      <option class="typePokemons" value="Flying">Flying</option>
       <option class="typePokemons" value="Psychic">Psychic</option>
       <option class="typePokemons" value="Eletric">Eletric</option>
       <option class="typePokemons" value="Water">Water</option>
@@ -26,6 +26,13 @@
       <option class="typePokemons" value="Rock">Rock</option>
       <option class="typePokemons" value="Bug">Bug</option>
       <option class="typePokemons" value="Normal">Normal</option>
+    </select>
+    <label for="Raridade">Selecione a raridade </label>
+    <select name="raridade" id="allRarity" class="allRaritys">
+      <option selected class="TodosRarity">Todos</option>
+      <option class="typeRarity" value="Normal">Normal</option>
+      <option class="typeRarity" value="Mythic">Mythic</option>
+      <option class="typeRarity" value="Legendary">Legendary</option>
     </select>
     <div id="divBusca">
       <input type="text" id="txtBusca" placeholder="Buscar..." />

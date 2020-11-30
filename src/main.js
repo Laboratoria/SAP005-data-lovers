@@ -1,10 +1,10 @@
-import { filterFunction } from './data.js';
 
-
+import * as filtros from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 const pokemons = data.pokemon;
 const container = document.getElementById('container-card-poke');
+
 
 addEventListener('load', () => {
     carregar(pokemons);
@@ -12,9 +12,8 @@ addEventListener('load', () => {
 //evento para trazer os dados. 
 //Load é executado depois que o carregamento da página tenha sido concluído e o usuário possa visualizar todo o documento, ou seja, para carregar scripts com muitos dados.
 
-function carregar(p) {
-    const data = p;
-    return getPoke(data);
+function carregar(arrayDePokemons) {
+    return getPoke(arrayDePokemons);
 }
 //função que servirá para trazer as funções do for 
 
@@ -36,7 +35,6 @@ const getPoke = (data) => {
             for (let evolutionPokes of arrayEvolution) {
                 evolution += evolutionPokes.name + ",";
             }
-            console.log(evolution);
 
         } else {
             evolution = "Já alcançou evolução máxima";
@@ -67,11 +65,28 @@ const cardInfo = (img, num, name, type, weaknesses, evolution, rarity, cp, hp) =
                           </div>
                           
 `}
-/* const filterType = (condition) => {
-    let resultFilterType = [];
-    let selectedCondition = condition.target.value;
-    resultFilterType.push(filterBy(pokemons, "type", selectedType));
-    if (selectedCondition == document.getElementById('selecao.value'))
-     */
 
-/* console.log(filterFunction(pokemons, "fire", select.target.value)); */
+function printFilteredType() {
+    let typeValue = document.getElementById('allType').value;
+    let filteredPokemonsByType = filtros.filterByType(pokemons, typeValue);
+    console.log(filteredPokemonsByType);
+    carregar(filteredPokemonsByType);
+}
+const selectPokemon = document.querySelector('.allTypes');
+
+selectPokemon.addEventListener('change', (event) => {
+    printFilteredType()
+});
+
+
+function printFilteredRarity() {
+    let rarityValue = document.getElementById('allRarity').value;
+    let filteredPokemonsByRarity = filtros.filterByRarity(pokemons, rarityValue);
+    return carregar(filteredPokemonsByRarity);
+}
+const selectPokemonRarity = document.querySelector('.allRaritys');
+
+selectPokemonRarity.addEventListener('change', (event) => {
+    printFilteredRarity()
+});
+
