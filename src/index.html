@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <title>Rick & Morty Dashboard</title>
@@ -8,22 +7,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="./img/icon-tab.png/" />
 </head>
-
 <body>
   <header>
     <section id="logo">
       <img src="./img/logo.png" width="80px" height="80px">
       <img src="./img/logo-name.png" width="270px" height="115px">
     </section>
-    <!--  <nav>
+    <nav>
       <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Characters</a></li>
-        colocar as imagens da logo
+        <li>
+          <a href="/#">Portal</a>
+        </li>
+        <li>
+          <a href="/#">About</a>
+        </li>
+        <li>
+          <a href="/#">Characters</a>
+        </li>
       </ul>
-    </nav> -->
+    </nav>
   </header>
-  <main>
+  <main id="root">
     <section class="filters">
       <select class="select" id="order" label="Order">
         <option value="az">A-Z</option>
@@ -59,8 +63,6 @@
       @beatrizpenalva</a> | <a href="https://github.com/Fernandapy" target="blank" title="GITHUB PROFILE">
       @fernandapy </a>
   </footer>
-  <div id="root"></div>
   <script src="main.js" type="module"></script>
 </body>
-
 </html>
