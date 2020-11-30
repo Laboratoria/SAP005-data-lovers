@@ -12,34 +12,33 @@
 
 <body>
   <div class="container" id="root">
-    <div class="hamburguer" id="menu-hamburguer">
-      <div class="line" id="line1"></div>
-      <div class="line" id="line2"></div>
-      <div class="line" id="line3"></div>
-      <span>Fechar</span>
-    </div>
-    <aside class="sidebar">
-      <nav>
+    <anside>
+      <div class="hamburguer" id="menu-hamburguer">
+        <div class="line" id="line1"></div>
+        <div class="line" id="line2"></div>
+        <div class="line" id="line3"></div>
+        <span>Fechar</span>
+      </div>
+      <nav class="sidebar">
         <ul class="menu">
           <li class="menu-item"><a href="#title1" class="menulink">Saiba mais</a></li>
           <li class="menu-item"><a href="#title2" class="menulink">Pokémons</a></li>
           <li class="menu-item"><a href="#title3" class="menulink">Comparação</a></li>
-          <li class="menu-item"><a href="#" class="menulink">Cadastro</a></li>
         </ul>
       </nav>
-    </aside>
+    </anside>
     <header>
       <div class="img-wrapper">
         <img src="images/sky6.jpg" alt="">
       </div>
       <div class="pokeball-body">
         <div class="pokeball-motion">
-        <div class="pokeball-top"></div>
-        <div class="inside-content">
-          <h1>Pokélovers</h1>
+          <div class="pokeball-top"></div>
+          <div class="inside-content">
+            <h1>Pokélovers</h1>
+          </div>
+          <div class="pokeball-bottom"></div>
         </div>
-        <div class="pokeball-bottom"></div>
-      </div>
       </div>
     </header>
     <main>
@@ -47,7 +46,7 @@
         <ul>
           <li>
             <input type="radio" id="tabAbout" name="inputTabs" class="radio-tab" checked>
-            <label for="tabAbout" class="tab-label">Sobre</label>
+            <label for="tabAbout" class="tab-label"><b>Sobre</b></label>
             <div class="about">
               <article>
                 Pokémons são criaturas de todas as formas e tamanhos que convivem
@@ -64,16 +63,16 @@
           </li>
           <li>
             <input type="radio" id="tabAnimation" name="inputTabs" class="radio-tab" checked>
-            <label for="tabAnimation" class="tab-label">Animação</label>
+            <label for="tabAnimation" class="tab-label"><b>Animação</b></label>
             <div class="about">
               <article>
                 A série animada do Pokémon é quase tão antiga quanto o surgimento de seu videogame
                 . A série acompanha as aventuras de um jovem audacioso treinador
                 chamado Ash Ketchum e seu companheiro Pokémon Pikachu em suas viagens pelo mundo
                 dos pokémons, onde visitam destinos exóticos, participam de inúmeras aventuras empolgantes,
-                conhecem diversas pessoas e pokémons interessantes. <br> 
+                conhecem diversas pessoas e pokémons interessantes. <br>
                 No caminho, eles aprendem sobre trabalho em equipe, compaixão, amizade e honestidade
-                à medida que Ash esforça-se para se tornar um Mestre Pokémon.<br> Agora 
+                à medida que Ash esforça-se para se tornar um Mestre Pokémon.<br> Agora
                 em sua vigésima temporada, a série é um dos programas infantis mais populares
                 de todos os tempos e deu origem a uma sequência de 12 filmes animados que também
                 acompanham as aventuras de Ash Ketchum e seus amigos, mas envolvem interesses
@@ -85,7 +84,7 @@
           </li>
           <li>
             <input type="radio" id="tabGame" name="inputTabs" class="radio-tab" checked>
-            <label for="tabGame" class="tab-label">Videogame</label>
+            <label for="tabGame" class="tab-label"><b>Videogame</b></label>
             <div class="about">
               <article>
                 Os primeiros videogames do Pokémon foram lançados para o Nintendo Game Boy em 1998.
@@ -107,49 +106,65 @@
                 e ter espírito esportivo. Com os sistemas de videogame mais novos, como o Nintendo DS e o
                 console Wii, eles podem até mesmo jogar e trocar Pokémon via Nintendo Wi-Fi Contention®
                 com outros Treinadores em qualquer lugar do mundo.
+                E por fim, atualmente o que vem conquistando o publico é o Pokémon Go um game com os mesmos 
+                princípios dos anteriores, porém disponível para IOS e Android. 
               </article>
             </div>
           </li>
         </ul>
       </section>
-      <section class="carousel-pokemon" id="title3">
+      <section class="carousel-pokemon">
         <h2 id="title2">Pókemons</h2>
         <form class="box-filter">
-          <input type="text"  name="namePokemon" id="textInput" value="Nome do Pokemon"/>
-          <button type="send" class="box input" id="searchInput"> pesquisar </button>
-          <p>tipo</p>
-          <select id=typeInput>
-          <option value="todos">todos</option>
-          <option value="fire">fogo</option>
-          <option value="poison">poison</option>
-          <option value="water">água</option>
-         </select>
-         <p>ordenar</p>
-         <select id="orderInput">
-          <option value="0-251">0-251</option>
-          <option value="A-Z">A-Z</option>
-          <option value="Z-A">Z-A</option>
-         </select>
+          <input type="text" name="namePokemon" id="textInput" value="Nome do Pokemon"
+            class="input=filter  searchInput" />
+          <button type="send" id="searchInput" class="input-filter">procurar</button>
+          <select id="orderInput" class="input-filter select">
+            <option disabled selected value="">Ordenar:</option>
+            <option value="0-251">0-251</option>
+            <option value="A-Z">A-Z</option>
+            <option value="Z-A">Z-A</option>
+          </select>
+          <select id="typeInput" class="input-filter">
+            <option disabled selected value="">Tipo:</option>
+            <option value="todos">Todos</option>
+            <option value="normal">Normal</option>
+            <option value="steel">Steel</option>
+            <option value="water">Water</option>
+            <option value="dragon">Dragon</option>
+            <option value="electric">Electric</option>
+            <option value="fairy">Fairy</option>
+            <option value="ghost">Ghost</option>
+            <option value="fire">Fire</option>
+            <option value="ice">Ice</option>
+            <option value="grass">Grass</option>
+            <option value="bug">Bug</option>
+            <option value="fighting">Fighting</option>
+            <option value="dark">Dark</option>
+            <option value="rock">Rock</option>
+            <option value="psychic">Psychic</option>
+            <option value="ground">Ground</option>
+            <option value="poison">Poison</option>
+            <option value="flying">Flying</option>
+          </select>
         </form>
-        <div>
-          <p>porcentagem</p>
+        <div class="calculusFilter">
+          <p id="calculus"></p>
         </div>
-        <div class="box-pokemons"data-motion="right">
+        <div class="box-pokemons" data-motion="right">
           <ul id="pokedex" class="pokedex"></ul>
         </div>
-      </div>
       </section>
-      <!--<section>
-        <h2>Filtro</h2>
+      <!--<section class="comparation">
+        <h2 id="title3">Comparação</h2>
+        <form>
+          <input type="number" id="numberPokemon1" max="251" min="1" />
+          <input type="number" id="numberPokemon2" max="251" min="1" />
+          <button type="send">comparar</button>
+        </form>
       </section>-->
-      <section id="card-container">
-      </section>
     </main>
-    <!--<footer>
-      <h2>Cadastro</h2>
-    </footer>-->
   </div>
 </body>
 <script type="module" src="main.js"></script>
-
 </html>
