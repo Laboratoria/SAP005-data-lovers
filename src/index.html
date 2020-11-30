@@ -6,12 +6,66 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1> Seja bem vindx a seu guia da série Rick and Morty</h1>
-    <p>Se aventure grande viajante</p>
+    <head>
+      <p id="root">RICK E MORTY</p>
+      <p id="subtitle"><strong>TUDO QUE VOCÊ PRECISA SABER ESTÁ AQUI!</strong></p>
+    </head>
+    <form>
+      <label for="characters"></label>
+      <input
+      type="list"
+      id="characters"
+      name="characters"
+      placeholder="PERSONAGENS"
+      min="1"
+      max="493"
+      />
+      <datalist id="charactersList">
+        <option id="characters"></option>
+      </datalist>
+    </form>
+    <form>
+      <label for="episodes"></label>
+      <input
+      type="number"
+      min="1"
+      max="31"
+      id="episodes"
+      name="episodes"
+      placeholder="EPISÓDIOS"
+      />
+    </form>
+    <form>
+      <label for="species"></label>
+      <input
+      type="list"
+      id="species"
+      name="species"
+      placeholder="ESPÉCIES"
+      />
+    </form>
+    <form>
+      <label for="dimensions"></label>
+      <input
+      type="list"
+      id="dimensions"
+      name="dimensions"
+      placeholder="DIMENSÕES"
+      />
+    </form>
     <main>
-
+      <p class="card1">
+      </p>
     </main>
-    <div id="root"></div>
+    <footer class="footer">
+      <div id="sara"> <a href="https://github.com/silvassara">
+        SARA SILVA
+      </div>
+      E
+      <div id="juliane"> <a href="https://github.com/Juliane-C">
+        JULIANE CRISTINA
+      </div>
+    </footer>
     <script src="main.js" type="module"></script>
   </body>
 </html>
