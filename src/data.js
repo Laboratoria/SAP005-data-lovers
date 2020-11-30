@@ -2,9 +2,11 @@ import data from "./data/pokemon/pokemon.js"
 
 const pokemons = data.pokemon;
 
-export function filterRivalPokemon(pokemons, userInput) {
+export function filterRivalPokemon(pokemons) {
+  const searchInput = document.getElementById("search-input").value;
+
   for (const pokemon of pokemons) {
-    const lowercaseUserInput = String(userInput.value).toLowerCase();
+    const lowercaseUserInput = String(searchInput).toLowerCase();
     const acceptingUserInput = pokemon.name.includes(lowercaseUserInput);
 
     if (acceptingUserInput) {
@@ -13,7 +15,7 @@ export function filterRivalPokemon(pokemons, userInput) {
   }
 }
 
-export function filterPokemonByType(pokemons) {
+export function filterAllPokemonByType(pokemons) {
   let bugType = []; let dragonType = []; let fairyType = [];
   let fireType = []; let ghostType = []; let groundType = [];
   let normalType = []; let psychicType = []; let steelType = [];
@@ -83,8 +85,38 @@ export function filterPokemonByType(pokemons) {
     }
   }
   return {
-    bugType, dragonType, fairyType, fireType, ghostType, groundType, normalType, psychicType, steelType, darkType, electricType, fightingType, flyingType, grassType, iceType, poisonType, rockType, waterType
+    "bug": bugType,
+    "dragon": dragonType,
+    "fairy": fairyType,
+    "fire": fireType,
+    "ghost": ghostType,
+    "ground": groundType,
+    "normal": normalType,
+    "psychic": psychicType,
+    "steel": steelType,
+    "dark": darkType,
+    "electric": electricType,
+    "fighting": fightingType,
+    "flying": flyingType,
+    "grass": grassType,
+    "ice": iceType,
+    "poison": poisonType,
+    "rock": rockType,
+    "water": waterType
   }
 }
 
+export function filterPokemonByRivalWeakness() {
+  const rivalWeakness = filterRivalPokemon(pokemons).weaknesses;
+  const pokemonByType = filterAllPokemonByType(pokemons)
+  let bestChoices = [];
 
+  for (const weakness of rivalWeakness) {
+    for (const type in pokemonByType) {
+      if (weakness == type) {
+        bestChoices.push(...pokemonByType[type])
+      }
+    }
+  }
+  return bestChoices;
+}

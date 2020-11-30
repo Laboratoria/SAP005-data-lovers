@@ -1,18 +1,17 @@
 import data from './data/pokemon/pokemon.js';
-import { filterRivalPokemon, filterPokemonByType } from './data.js';
+import { filterRivalPokemon, filterAllPokemonByType, filterPokemonByRivalWeakness } from './data.js';
 
 // LEMBRETE: a variável 'pokemons' é um ARRAY!
 const pokemons = data.pokemon;
 // console.log(pokemons)
 const searchButton = document.getElementById("search-btn");
-const getSearchInput = document.getElementById("search-input");
 const pokemonTable = document.getElementById("pokemon-table");
 
 
 // BUSCA DO POKÉMON RIVAL
 searchButton.addEventListener("click", event => {
-  const rivalPokemon = filterRivalPokemon(pokemons, getSearchInput)
   event.preventDefault();
+  const rivalPokemon = filterRivalPokemon(pokemons)
 
   // CARD DO POKÉMON RIVAL
 
@@ -23,6 +22,5 @@ searchButton.addEventListener("click", event => {
     Fraqueza: ${rivalPokemon.weaknesses}
   `
 
-  const rivalWeaknesses = rivalPokemon.weaknesses;
-
+  console.log(filterPokemonByRivalWeakness())
 });
