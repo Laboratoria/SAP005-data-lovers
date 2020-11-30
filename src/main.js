@@ -128,11 +128,11 @@ const episodesList = [
   },
 ];
 function printData(data) {
-  document.getElementById("cardArea").innerHTML = "";
+  let printDataBase = "";
   for (let item of data) {
-    let beth = (item.episode[0]).substr(40, 39);
-    const episodeIndex = beth - 1;
-    document.getElementById("cardArea").innerHTML += `
+    let firstEpisode = (item.episode[0]).substr(40, 39);
+    const episodeIndex = firstEpisode - 1;
+    printDataBase += `
       <div class="testing">
         <div class="card">
           <div class="cardFront">  
@@ -162,6 +162,7 @@ function printData(data) {
         </div>
       </div>`
   }
+  document.getElementById("cardArea").innerHTML = printDataBase;
 }
 printData(characters);
 document.getElementById("order").addEventListener("change", alphabeticOrder);
@@ -207,6 +208,13 @@ function genderFilter() {
   statisticData(filterGender, getGender);
   printData(filterGender);
 };
+document.getElementById("enter").addEventListener("click", searchLocation);
+function searchLocation(){
+  const getLocation = document.getElementById("search").value.toUpperCase();
+  const filterLocation = characters.filter((item) => ((item.location.name).toUpperCase()).includes(`${getLocation}`));
+  console.log(filterLocation);
+  printData(filterLocation);
+};
 function statisticData(data, condition) {
   document.getElementById("results").innerHTML = "";
   const percentage = Math.round((data.length * 100) / characters.length);
@@ -215,9 +223,26 @@ function statisticData(data, condition) {
   results.appendChild(content);
   document.getElementById("results").appendChild(results);
 };
-document.getElementById("form").addEventListener("submit", searchLocation);
-function searchLocation(){
-  const getLocation = document.getElementById("search").value;
-  const filterLocation = characters.filter((item) => item.location.name[0] === getLocation);
-  printData(filterLocation).preventDefault();
-};
+
+// em, rem 
+
+// aparecer o nome enquando digita localização (verificar quanto de origem) .oninput
+// filtro temporada ou episódio
+// ordenar por relevância (maior número de aparição)
+
+/*
+Acummular filtro
+Se atende aos valores solicitados
+Gender && status && species
+
+function filter () {
+  if (genderFilter && statusFilter && speciesFilter)
+  os três valores do input tem que constar na array
+}
+
+o map() aplica uma função à todos os elementos de uma array:
+aplicar a função de mudar episódios
+
+criar uma função para verificar se o objeto personagem atende aos três filtros
+usar o map para o array results
+*/
