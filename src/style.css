@@ -4,6 +4,7 @@
 }
 html,body{
     height: 100%;
+    width: 100%;
 }
 
 
@@ -107,7 +108,7 @@ transform: translateX(203px);
 .search{
     display:flex;
     flex-direction: row;    
-    width:287px;
+    width:282px;
     margin-left: 70%; 
     margin-top:4%;
     border: 1px solid;
@@ -143,7 +144,7 @@ transform: translateX(203px);
     flex-wrap: wrap;
     margin-top:70px;
     margin-left: 16.5%;
-    justify-content: center; 
+   
     
 }
  .flip-card {
@@ -246,46 +247,71 @@ transform: translateX(203px);
     margin-left: 3%;
 } 
 
-  @media screen and (max-width: 600px){
-   
-    .cards{
-        display:flex;
-        justify-content: row;
-        flex-wrap: wrap;
+@media screen and (max-width: 950px){
+    * {
+        margin:0;
+        padding:0;
     }
-    .flip-card{
-        width: 200px;
-        height: 300px;
-        margin-left: 15%;
+    html,body, main{
+        height: 100%;
+        width: 100%;
+    
+    }
+
+     .cards {
+         margin-left: 29%;
+         
+         
+     }
+     .flip-card{
+        height: 330px;
+        width: 250px;
+     }
+
+     .logo {
+         margin-left: 28%;
         
-    }
-    .imgPokemon{
-        margin-top: 100px;
-        width: 300px;
-        height: 100px;
-        margin-left: 0;
-        max-width: 100%:
+     }
+
+     .search {
+         margin-bottom: 2%;
+     }
+
+     .flip-card-back p {
+        font-size: 24px;
+        margin-top: 15px;
+     }
+
+     .flip-card-inner img{
+        
+        height: 200px;
+        margin-left: 48px;
+       
     }
 
-    .barra-menu{
-        width: 120px;
-        background-color: red;
+
+
+     
+}
+   @media screen and (max-width: 652px){
+
+    * {
+        margin:0;
+        padding:0;
     }
-    select{
-        width: 120px;
-    }
-    .search{
-        margin-left: 0;
-        margin-left: 22%;
-        margin-bottom: 0;
-    }
-    .logo{
-        margin-left: 0;
-        margin-left: 20%;
+    html,body, main{
+        height: 100%;
+        width: 100%;
+    
     }
 
-    .imageNotFound{
-        width: 400px;
-        margin-left: 0;
+    .flip-card{
+
+        /* width:250px; */
+        /* height: 320px; */
     }
-} 
+        
+
+   }
+   
+   
