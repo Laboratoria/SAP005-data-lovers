@@ -1,4 +1,4 @@
-import { instantSearch, selectPokemonType, selectPokemonResistant, selectPokemonWeaknesses, orderPokemonName, orderPokeNumber } from './data.js'
+import {instantSearch, selectPokemonType, selectPokemonResistant, selectPokemonWeaknesses, orderPokemonName, orderPokeNumber } from './data.js'
 import data from './data/pokemon/pokemon.js'
 
 const inputSearch = document.querySelector('#input-search')
@@ -94,7 +94,7 @@ selectSort.addEventListener('change', () => {
     const orderName = selectSort.value;
     const orderPoke = orderPokemonName (orderName, data.pokemon);
       showingCards(orderPoke);
-    //   console.log(orderName)
+      console.log(orderName)
 });
 
 selectNumber.addEventListener('change', () => {
@@ -102,6 +102,5 @@ selectNumber.addEventListener('change', () => {
     const orderNumber = orderPokeNumber (orderNum, data.pokemon);
       showingCards(orderNumber);
       console.log(orderNumber);
-      //console.log(selectNumber)
 
 });
