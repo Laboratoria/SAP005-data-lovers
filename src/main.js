@@ -9,4 +9,3 @@ personagens.addEventListener("click", function(evt){
   document.getElementById("card1").innerHTML = resultado.species
 
 })
-
