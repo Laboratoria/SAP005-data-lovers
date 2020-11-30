@@ -223,4 +223,26 @@ function statisticData(data, condition) {
   results.appendChild(content);
   document.getElementById("results").appendChild(results);
 };
-// .oniput () // promise // fetch // em, rem // filtro por temporada
+
+// em, rem 
+
+// aparecer o nome enquando digita localização (verificar quanto de origem) .oninput
+// filtro temporada ou episódio
+// ordenar por relevância (maior número de aparição)
+
+/*
+Acummular filtro
+Se atende aos valores solicitados
+Gender && status && species
+
+function filter () {
+  if (genderFilter && statusFilter && speciesFilter)
+  os três valores do input tem que constar na array
+}
+
+o map() aplica uma função à todos os elementos de uma array:
+aplicar a função de mudar episódios
+
+criar uma função para verificar se o objeto personagem atende aos três filtros
+usar o map para o array results
+*/
