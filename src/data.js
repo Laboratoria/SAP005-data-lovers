@@ -6,8 +6,7 @@ export const bringRivalPokemon = (pokemons, namePokemonInput) => {
         "image": pokemon.img,
         "type": pokemon.type,
         "resistant": pokemon.resistant,
-        "weaknesses": pokemon.weaknesses
-
+        "weaknesses": pokemon.weaknesses      
       };
     }
   }

@@ -98,6 +98,23 @@ button {
   background-color: #073673;
 }
 
+/* SEARCH POKEMON */
+
+.pokemon-text-input {
+  font-weight: bold;
+  text-align: center;
+  font-size: large;
+}
+
+.input-name {
+  width: 50%;
+	margin: 0 auto;
+	padding: 10px;
+	margin-bottom: 10px;
+  border-radius: 50px;
+  border-color: blue;
+}
+
 #search-pokemon-btn {
   margin: 0.7rem 0;
   padding: 0.6rem 1.2rem;
@@ -114,13 +131,51 @@ button {
   background-color: #073673;
 }
 
-#container {
+/* CARD */
+
+.pokemon-bg-section {
+  background-image: url("img/poke.jpg");
+  width: 450px;
+  height: 1000px;
+}
+
+.flex-container {
   display: flex;
-  width: 100px;
-  height: 100px;
-  background-color: blue;
+  flex-direction: column;
+  width: 270px;
+  background-color: white;
+  position: absolute;
+	border-radius: 15px;
+  left: 50%;
+  top: 180%;
+  transform: translate(-50%, -50%);
+	text-align: center;
+	padding-top: 50px;
+	align-items: center;
+  line-height: 50px;
+  font-size: medium;
+  border: solid 3px red;
+  border-radius: 2rem;  
 }
 
-#content {
-
+.name-uppercase {
+  text-transform: capitalize;
 }
+
+.type-uppercase {
+  text-transform: capitalize;
+}
+
+.resistant-uppercase {
+  text-transform: capitalize;
+}
+
+.weaknesses-uppercase {
+  text-transform: capitalize;
+}
+
+
+
+
+
+

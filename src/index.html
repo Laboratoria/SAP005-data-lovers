@@ -30,27 +30,26 @@
 
     <!-- SEARCH POKÉMON -->
 
-    <section>
-      <img class="search-pokemon" src="">
-      <p>Escreva o nome do Pokémon desejado</p>
-      <input class="input" type="text" id="name-pokemon-input" placeholder="Nome do Pokémon">
-      <button id="search-pokemon-btn">Buscar Pokémon</button>
+    <section class="about-pokemon">
+      <div class="content">       
+        <p class="pokemon-text-input">Escreva o nome do Pokémon desejado</p>
+        <input class="input-name" type="text" id="pokemon-name-input" placeholder="Nome do Pokémon">
+        <button id="search-pokemon-btn">Buscar Pokémon</button>
+      </div>
     </section>
 
-    <section>
-      <div class="card" id="container">
-        <div class="son-card" id="content">
-          <p id="img-pokemon" src=""></p>   
-          <p id="name-poke"></p>
-          <p id="type-pokemon"></p>
-          <p id="resistant-pokemon"></p>
-          <p id="weaknesses-pokemon"></p>
-        </div>
-      </div> 
-    </section> 
+    <!-- CARD -->
 
+    <section class="pokemon-bg-section">
+      <div class="flex-container">
+        <p id="img-pokemon"></p>
+        <p id="name-poke"></p>
+        <p id="type-pokemon"></p>
+        <p id="resistant-pokemon"></p>
+        <p id="weaknesses-pokemon"></p>
+      </div>
+    </section>
 
-    
   </div>
   <script src="main.js" type="module"></script>
 </body>
