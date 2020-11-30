@@ -23,6 +23,7 @@ img{
     max-width: 100%;
 }
 
+
 /* ------------------------HEADER-------------------------------------------- */
 
 
@@ -62,14 +63,14 @@ img{
     text-decoration: none;
     color:#313131;
     display: block;
-    transition: all .3s ease-in-out;
-    -webkit-transition: all .3s ease-in-out;
+    transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
 }
 
 .item-menu-nav a:hover{
     color:#3168B0;
-    border-bottom: .5px dotted #3168B0;
-    padding: 10px 15px;
+    border-bottom: .6px dotted #3168B0;
+    padding: 12px 15px;
 }
 
 
@@ -77,7 +78,6 @@ img{
 
 .bg-top-container{
     background:blue;
-    background-attachment: fixed;
 } 
 
 
@@ -106,7 +106,7 @@ img{
 }
 
 .item-about-info{
-    flex:2 1 300px;
+    flex:1 1 300px;
     margin:0 10px;
     align-content: center;
     flex: 2 1 300px;
@@ -128,14 +128,11 @@ img{
     color:white;
 }
 
-.item-img-about{
-    flex: 2 1 160px;
-}
 
 /* ------------------------LOCALIZAR POKEMON------------------------------------------- */
 
 .middle-bg{
-    padding-bottom: 4em;
+    padding-bottom: 51px;
 }
 
 .search-pokemon{
@@ -153,9 +150,10 @@ img{
     background-image: url("../img/bg-top.jpg");
     max-width: 960px;
     margin: 0 auto;
-    padding-top: 4em;
-    padding-bottom: 1em;
-    border-radius: 1em;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-right: 13px;
+    border-radius: 13px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -164,9 +162,9 @@ img{
 
 .item-instruction-search{
     background:rgb(75, 75, 75);
-    margin: 0 10px;
+    margin-left: 10px;
+    padding:10px;
     align-content: center;
-    padding:1em;
     color:white;
     flex: 2 1 300px;
     flex-grow: 1;
@@ -179,10 +177,16 @@ img{
     margin-left: 0.5em;
 }
 
+::-webkit-input-placeholder {
+    color: rgb(36, 36, 36);
+    font-family: 'Exo', sans-serif;
+    
+}
+
 #btn-search-pokemon{
     flex:1;
-    margin-left: 1em;
-    margin-top: 1em;
+    margin-left: 10px;
+    margin-top: 10px;
     cursor: pointer;
     background-color: blue;
     border: none;
@@ -198,15 +202,18 @@ img{
 #btn-search-pokemon:hover{
     background-color: rgb(135, 135, 231);
     scale: .5px;
+    border:none;
 }
+
 
 #item-card-one{
     text-align: center;
     background-image: linear-gradient(#358AFA, white);
-    width: 17em;
-    height: 26em;
-    margin: 17px;
-    border: solid 6px  rgb(212, 212, 14);
+    width: 19em;
+    height: 29em;
+    margin-top: 15px;
+    margin-left: 26px;
+    border: solid 6px rgb(212, 212, 14);
 }
 
 #item-card1 h1{
@@ -231,6 +238,10 @@ img{
 #item-card1 img{
     align-self: center;
     display: inline;
+    background: #ffffff;
+    border-radius: 10em;
+    padding: 10px;
+    margin-top: 19px;
 }
 
 /* -----------    CONTAINER INSTRUÇÕES MOSTRAR TODOS OS POKEMONS ------------------ */
@@ -376,23 +387,23 @@ img{
     flex-wrap: wrap;
     background: gray;
     border-top:2px solid #b6b6b6;
-    max-width: 960px;
+    max-width: 1050px;
     margin: 0 auto;
     padding: 0 0;
-    height: 22em;
+    height: 71em;
     overflow-x: hidden; 
     overflow-y: scroll; 
 
 }
 
+
 .mostrar{
     text-align: center;
     background-image: linear-gradient(#358AFA, white);
-    width: 17em;
-    height: 26em;
-    margin: 17px;
+    width: 19em;
+    margin-left: 26px;
+    margin-top: 26px;
     border: solid 6px rgb(212, 212, 14);
-
 
 }
 
@@ -410,8 +421,6 @@ img{
     font-weight: 300;
     text-align: center;
     font-size: 11pt;
-    margin-left: 1em;
-    margin-right: 1em;
     color: rgb(34, 34, 34);
     margin-left: auto;
     margin-right: auto;
@@ -420,6 +429,10 @@ img{
 .mostrar img{
     align-self: center;
     display: inline;
+    background: rgb(255, 255, 255);
+    border-radius: 10em;
+    padding: 10px;
+    margin-top: 19px;
 }
 
 #item-all-cards{

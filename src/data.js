@@ -5,6 +5,7 @@ export const searchFind = (array, valueTxt) => {
   return retornoArray
 };
 
+
 export const crescent = (array) => {
   return array.sort(function(a, b) {
     return a.name > b.name ? 1 : -1;
