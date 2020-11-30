@@ -97,20 +97,13 @@ label span:nth-child(3) {
 
 
 .header-title {
-
-    padding: 0px;
-    float: center;
-    margin-bottom: 3%;
     margin-left: 33.3%;
-    margin-right: 33.3%;
-    height: 350px;
+    margin-right: 25%;
     background-repeat: no-repeat;
-    width: auto;
 }
 
 .logo {
-    padding: 10%;
-    width: 80%;
+    width: 70%;
     display: flex;
     justify-content: center;
 }
@@ -119,7 +112,6 @@ label span:nth-child(3) {
 /* Menu principal */
 
 .select-itens {
-    padding: 10px;
     display: flex;
     justify-content: space-around;
     overflow: hidden;
@@ -131,9 +123,9 @@ label span:nth-child(3) {
 
 .input-search {
     outline: transparent;
-    margin-left: 50px;
+    margin-left: 20%;
     border-radius: 10px;
-    width: 350px;
+    width: 70%;
     padding: .5em;
     background-color: rgba(224, 205, 128, 0.932);
     font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -142,7 +134,7 @@ label span:nth-child(3) {
 
 .select-filter {
     outline: transparent;
-    padding: 0.5em;
+    padding: .5em;
     border-radius: 10px;
     background-color: rgba(224, 205, 128, 0.932);
     font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -159,11 +151,12 @@ label span:nth-child(3) {
 }
 
 .select-number {
+    outline: transparent;
     padding: .5em;
     border-radius: 10px;
     background-color: rgba(224, 205, 128, 0.932);
-    border: rgb(247, 233, 178);
     font-family: 'M PLUS Rounded 1c', sans-serif;
+    border: 2px solid rgb(252, 204, 11);
 }
 
 .btn-clean {
@@ -261,6 +254,7 @@ label span:nth-child(3) {
     font-size: 15px;
     text-align: justify;
     font-family: 'M PLUS Rounded 1c', sans-serif;
+}
 
 /*Tratamento do history and curiosities*/
 
@@ -339,28 +333,41 @@ label span:nth-child(3) {
 
 /* Responsive */
   @media only screen and (max-device-width: 1024px) {
+
     .bgimg-1, .bgimg-2, .bgimg-3 {
       background-attachment: scroll;
     }
 
-    .main-cards {
-        width: 500px;
-    }
 
-    .card-front, .card-back, .frame, .left{
-        width: 190px;
-        height: 220px;
-        font-size: 11px;
-    }
+}
+
+@media (max-device-width: 900px){
 
     .select-itens {
-        padding: 0px;
-        margin: 0px;
+    width: 100%;
+    margin: auto;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    
     }
 
-    .input-search, .btn-search, .select-filter, .select-sort, .select-number, btn-clean{
-        width:  auto;
-        height: auto;
+    .input-search, .select-filter, .select-sort, .select-number, .btn-clean{
+    width: 150%;
+    font-size: 10%;
+    }
+    .input-search{
+    margin-left: -5%;
+    }
+
+    .main-cards{
+    margin-left: 12%;
+    font-size: 11px;
+    }
+
+    .card-back, .card-front, .frame, .main-cards{
+    width: 200px;
+    height: 235px;
+    font-size: 10px;
     }
 
 
