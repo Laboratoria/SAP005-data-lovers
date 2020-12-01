@@ -1,6 +1,7 @@
 export const searchFind = (array, valueTxt) => 
 array.find(item => item.num === valueTxt.toLowerCase());
 
+
 export const crescent = (array) => {
   array.sort(function (a, b) { return a.name > b.name ? 1 : -1; })
 }
