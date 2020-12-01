@@ -9,6 +9,7 @@ export const typePokemon = ((dataPokemon, filterType) => {
 export const calculusPokemon = ((dataPokemon, filterTypePokemon) => {
   return (filterTypePokemon.length * 100 / dataPokemon.length)
 });
+
 export const orderPokemon = ((dataPokemon, order) => {
   switch (order) {
     case "A-Z":
@@ -24,5 +25,4 @@ export const orderPokemon = ((dataPokemon, order) => {
         return (Number(a.num - b.num))
       })
   }
-
-})
+});

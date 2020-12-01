@@ -21,15 +21,15 @@
       </div>
       <nav class="sidebar">
         <ul class="menu">
-          <li class="menu-item"><a href="#title1" class="menulink">Saiba mais</a></li>
-          <li class="menu-item"><a href="#title2" class="menulink">Pokémons</a></li>
-          <li class="menu-item"><a href="#title3" class="menulink">Comparação</a></li>
+          <li class="menu-item"><a href="#title0" class="menulink">Início</a></li>
+          <li class="menu-item"><a href="#title1" class="menulink">Sobre</a></li>
+          <li class="menu-item"><a href="#title2" class="menulink">Pokemons</a></li>
         </ul>
       </nav>
     </anside>
-    <header>
+    <header id=title0>
       <div class="img-wrapper">
-        <img src="images/sky6.jpg" alt="">
+        <img src="images/sky6.jpg">
       </div>
       <div class="pokeball-body">
         <div class="pokeball-motion">
@@ -45,7 +45,7 @@
       <section class="tabs" id="title1">
         <ul>
           <li>
-            <input type="radio" id="tabAbout" name="inputTabs" class="radio-tab" checked>
+            <input type="radio" name="inputTabs" class="radio-tab" checked>
             <label for="tabAbout" class="tab-label"><b>Sobre</b></label>
             <div class="about">
               <article>
@@ -62,7 +62,7 @@
             </div>
           </li>
           <li>
-            <input type="radio" id="tabAnimation" name="inputTabs" class="radio-tab" checked>
+            <input type="radio" name="inputTabs" class="radio-tab" checked>
             <label for="tabAnimation" class="tab-label"><b>Animação</b></label>
             <div class="about">
               <article>
@@ -83,7 +83,7 @@
             </div>
           </li>
           <li>
-            <input type="radio" id="tabGame" name="inputTabs" class="radio-tab" checked>
+            <input type="radio" name="inputTabs" class="radio-tab" checked>
             <label for="tabGame" class="tab-label"><b>Videogame</b></label>
             <div class="about">
               <article>
@@ -106,8 +106,8 @@
                 e ter espírito esportivo. Com os sistemas de videogame mais novos, como o Nintendo DS e o
                 console Wii, eles podem até mesmo jogar e trocar Pokémon via Nintendo Wi-Fi Contention®
                 com outros Treinadores em qualquer lugar do mundo.
-                E por fim, atualmente o que vem conquistando o publico é o Pokémon Go um game com os mesmos 
-                princípios dos anteriores, porém disponível para IOS e Android. 
+                E por fim, atualmente o que vem conquistando o publico é o Pokémon Go um game com os mesmos
+                princípios dos anteriores, porém disponível para IOS e Android.
               </article>
             </div>
           </li>
@@ -116,8 +116,7 @@
       <section class="carousel-pokemon">
         <h2 id="title2">Pókemons</h2>
         <form class="box-filter">
-          <input type="text" name="namePokemon" id="textInput" value="Nome do Pokemon"
-            class="input=filter  searchInput" />
+          <input type="text" name="namePokemon" id="textInput" value="Nome do Pokemon" class="input-filter  searchInput" />
           <button type="send" id="searchInput" class="input-filter">procurar</button>
           <select id="orderInput" class="input-filter select">
             <option disabled selected value="">Ordenar:</option>
@@ -151,8 +150,8 @@
         <div class="calculusFilter">
           <p id="calculus"></p>
         </div>
-        <div class="box-pokemons" data-motion="right">
-          <ul id="pokedex" class="pokedex"></ul>
+        <div class="carousel" data-motion="right">
+          <div id="pokedex" class="pokedex"></div>
         </div>
       </section>
       <!--<section class="comparation">
