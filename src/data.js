@@ -1,13 +1,13 @@
 import data from "./data/pokemon/pokemon.js"
 
-const pokemons = data.pokemon;
+const pokemons = data.pokemon
 
 export function filterRivalPokemon(pokemons) {
-  const searchInput = document.getElementById("search-input").value;
+  const searchInput = document.getElementById("search-input").value
 
   for (const pokemon of pokemons) {
-    const lowercaseUserInput = String(searchInput).toLowerCase();
-    const acceptingUserInput = pokemon.name.includes(lowercaseUserInput);
+    const lowercaseUserInput = String(searchInput).toLowerCase()
+    const acceptingUserInput = pokemon.name.includes(lowercaseUserInput)
 
     if (acceptingUserInput) {
       return pokemon
@@ -107,16 +107,31 @@ export function filterAllPokemonByType(pokemons) {
 }
 
 export function filterPokemonByRivalWeakness() {
-  const rivalWeakness = filterRivalPokemon(pokemons).weaknesses;
+  const rivalWeakness = filterRivalPokemon(pokemons).weaknesses
   const pokemonByType = filterAllPokemonByType(pokemons)
-  let bestChoices = [];
+  let bestPokemon = []
 
   for (const weakness of rivalWeakness) {
     for (const type in pokemonByType) {
       if (weakness == type) {
-        bestChoices.push(...pokemonByType[type])
+        bestPokemon.push(...pokemonByType[type])
       }
     }
   }
-  return bestChoices;
+  return bestPokemon;
+}
+
+export function orderBestPokemonByCP() {
+  const bestPokemon = filterPokemonByRivalWeakness()
+
+  function compareBestPokemonByCP(pokemonA, pokemonB) {
+    const pokemonA_CP = pokemonA.stats["max-cp"]
+    const pokemonB_CP = pokemonB.stats["max-cp"]
+
+    return pokemonA_CP.localeCompare(pokemonB_CP, undefined, { numeric: true })
+  }
+  const sortedCrescent = bestPokemon.sort(compareBestPokemonByCP);
+  const sortedDecrescent = sortedCrescent.reverse();
+
+  return { sortedCrescent, sortedDecrescent }
 }

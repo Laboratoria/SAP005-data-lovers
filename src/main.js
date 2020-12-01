@@ -1,5 +1,5 @@
 import data from './data/pokemon/pokemon.js';
-import { filterRivalPokemon, filterAllPokemonByType, filterPokemonByRivalWeakness } from './data.js';
+import { filterRivalPokemon, orderBestPokemonByCP, filterPokemonByRivalWeakness } from './data.js';
 
 // LEMBRETE: a variável 'pokemons' é um ARRAY!
 const pokemons = data.pokemon;
@@ -22,5 +22,5 @@ searchButton.addEventListener("click", event => {
     Fraqueza: ${rivalPokemon.weaknesses}
   `
 
-  console.log(filterPokemonByRivalWeakness())
+  console.log(orderBestPokemonByCP())
 });
