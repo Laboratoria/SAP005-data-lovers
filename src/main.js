@@ -1,4 +1,4 @@
-import {instantSearch, selectPokemonType, selectPokemonResistant, selectPokemonWeaknesses, orderPokemonName, orderPokeNumber } from './data.js'
+import { instantSearch, selectPokemonType, selectPokemonResistant, selectPokemonWeaknesses, selectPokemonGeneration, sortPokemonCp } from './data.js'
 import data from './data/pokemon/pokemon.js'
 
 const inputSearch = document.querySelector('#input-search')
@@ -9,11 +9,9 @@ const selectFilterGeneration = document.querySelector('#select-filter-by-generat
 const selectSortCp = document.querySelector('#select-sort-cp')
 const selectSort = document.querySelector('#select-sort')
 const selectNumber = document.querySelector('#select-number')
-
-showingCards(data.pokemon);
+const buttonClear = document.querySelector('#btn-clean')
 
 showingCards(data.pokemon)
-    //showingCards(data.pokemon.sort((poke1, poke2) => poke1.name.localeCompare(poke2.name)))
 
 function showingCards(pokemonCards) {
     let showCards = document.querySelector('#main-cards')
@@ -27,15 +25,16 @@ function showingCards(pokemonCards) {
                 evolutions += `<span>${evolution.name}</span>`
             }
         } else {
-            evolutions = "Don't have";
+            evolutions = "Do not evolve"
         }
 
         cards +=
             `<div class="frame left">
                 <div class="left">
-                <h3 class = "card-front"><img src = ${pokemon.img} class = "img" alt = ${pokemon.name}</h3> 
-                    <p>N°: ${pokemon.num}</p>
-                    <p>Nome: ${pokemon.name}</p>
+                <h3 class = "card-front">
+                <p>${pokemon.num}</p>
+                <p>${pokemon.name}</p>
+                <img src = ${pokemon.img} class = "img" alt = ${pokemon.name}</h3> 
                     <p>Type: ${pokemon.type}</p>
                     <p>Rarity: ${pokemon["pokemon-rarity"]}</p>
                     <p>Evolution: ${evolutions}<p>                 
@@ -54,53 +53,69 @@ function showingCards(pokemonCards) {
             </div>`
 
     }
-    showCards.innerHTML = cards;
+    showCards.innerHTML = cards
 
 }
 
-inputSearch.addEventListener('keyup', () => {
+function showingCardsAllFilters() {
+    const selectGeneration = selectFilterGeneration.value
     const searchName = inputSearch.value
-    const pokemons = instantSearch(searchName, data.pokemon)
     const selectType = selectFilterType.value
+    const selectResistant = selectFilterResistant.value
+    const selectWeaknesses = selectFilterWeaknesses.value
+    const pokemonGeneration = selectPokemonGeneration(selectGeneration, data.pokemon)
+    const pokemons = instantSearch(searchName, pokemonGeneration)
     const pokemonType = selectPokemonType(selectType, pokemons)
-    showingCards(pokemonType)
-});
+    const pokemonResistant = selectPokemonResistant(selectResistant, pokemonType)
+    const pokemonWeaknesses = selectPokemonWeaknesses(selectWeaknesses, pokemonResistant)
+    showingCards(pokemonWeaknesses)
+}
+
+inputSearch.addEventListener('keyup', () => {
+    showingCardsAllFilters()
+})
 
 selectFilterType.addEventListener('change', () => {
-    const selectType = selectFilterType.value;
-    const pokemonType = selectPokemonType(selectType, data.pokemon);
-    showingCards(pokemonType);
-});
+    showingCardsAllFilters()
+})
 
 selectFilterResistant.addEventListener('change', () => {
-    const selectResistant = selectFilterResistant.value;
-    const pokemonResistant = selectPokemonResistant(selectResistant, data.pokemon);
-    showingCards(pokemonResistant);
-});
+    showingCardsAllFilters()
+})
 
 selectFilterWeaknesses.addEventListener('change', () => {
-    const selectWeaknesses = selectFilterWeaknesses.value
-    const pokemonWeaknesses = selectPokemonWeaknesses(selectWeaknesses, data.pokemon)
-    showingCards(pokemonWeaknesses)
+    showingCardsAllFilters()
 })
 
 selectFilterGeneration.addEventListener('change', () => {
-        const selectGeneration = selectFilterGeneration.value
-        const pokemonGeneration = selectPokemonGeneration(selectGeneration, data.pokemon)
-        showingCards(pokemonGeneration)
+    showingCardsAllFilters()
 })
 
-selectSort.addEventListener('change', () => {
-    const orderName = selectSort.value;
-    const orderPoke = orderPokemonName (orderName, data.pokemon);
-      showingCards(orderPoke);
-      console.log(orderName)
-});
+selectSortCp.addEventListener('change', () => {
+    const selectCp = selectSortCp.value
+    const pokemonCp = sortPokemonCp(selectCp, data.pokemon)
+    showingCards(pokemonCp)
+})
+
+buttonClear.addEventListener('click', () => {
+    inputSearch.value = ""
+    selectFilterType.value = ""
+    selectFilterResistant.value = ""
+    selectFilterWeaknesses.value = ""
+    selectFilterGeneration.value = ""
+    selectSortCp.value = ""
+    selectSort.value = ""
+    selectNumber.value = ""
+})
+
+/*selectSort.addEventListener('change', () => {
+    const sortName = selectSort.value
+    const pokemonAlphabetic = orderPokemonName(sortName, data.pokemon)
+    showingCards(pokemonAlphabetic)
+})
 
 selectNumber.addEventListener('change', () => {
-    const orderNum = selectNumber.value;
-    const orderNumber = orderPokeNumber (orderNum, data.pokemon);
-      showingCards(orderNumber);
-      console.log(orderNumber);
-
-});
+    const sortNumber = selectNumber.value
+    const pokemonNumber = sortPokemonNumber(sortNumber, data.pokemon)
+    showingCards(pokemonNumber)
+})*/
