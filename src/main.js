@@ -1,8 +1,6 @@
 import { crescent, decrescent, searchFilter, searchFind } from './data.js';
 import data from './data/pokemon/pokemon.js';
 const copyDB = data.pokemon;
-let txtSearch = document.getElementById('txtBusca').value;
-let filterTypeSelect = document.getElementById("filter-type").value;
 
 // Limpa a DIV que irá receber todos os CARDS (Todos, Filtrados ou Ordenados) 
 function clearCards() {
@@ -41,6 +39,7 @@ function templateAllCards(array) {
 /*                            Todas as funções ---> Na sequência > CardUnitário> TodosOsCards> OrdenaCrescent > OrdenaDecrescente > FiltraporTipo                          */
 function cardOne() {
     document.getElementById("item-card-one").innerHTML = "";
+    let txtSearch = document.getElementById('txtBusca').value;
     const resultSearch = searchFind(copyDB, txtSearch);
     return templateOneCard(resultSearch)
 }
@@ -85,6 +84,7 @@ document.getElementById('btn-decresc-pokemon').addEventListener("click", sortByZ
 //Responsável por Filtrar:
 function filterByType() {
     clearCards();
+    let filterTypeSelect = document.getElementById("filter-type").value;
     const callFilter = searchFilter(copyDB, filterTypeSelect);
     return ([templateAllCards(callFilter)],[aggregateCalculation(callFilter)])
 }
@@ -93,6 +93,7 @@ document.getElementById('btn-filter-type').addEventListener("click", filterByTyp
 
 //Responsável pelo Calculo Agregado:
 function aggregateCalculation (array) {
+let filterTypeSelect = document.getElementById("filter-type").value;
 const sizeArray = copyDB.length
 const sizeFilter = array.length
 const result = ((sizeFilter/sizeArray)*100).toFixed(0)+"%";
