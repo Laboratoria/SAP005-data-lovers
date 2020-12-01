@@ -52,7 +52,6 @@
     background-color: transparent;
     width: 200px;
     height: 280px;
-    border: 1px solid #f1f1f1;
     perspective: 1000px;
     display: inline-block;
 }
@@ -82,7 +81,7 @@
 
 .flip-card-front {
     background-color: black;
-    color: pink;
+    color: yellow;
 }
 
 .flip-card-back {

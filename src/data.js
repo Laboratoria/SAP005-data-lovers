@@ -7,6 +7,13 @@ export const filterByType = (pokemons, tipo) => {
     })
 };
 
+export const filterByName = (pokemons, input) => {
+
+    return pokemons.filter((pokemon) => {
+        return pokemon.name.includes(input.toLowerCase());
+    })
+};
+
 export const filterByRarity = (pokemons, rarity) => {
     if (rarity.toLowerCase() == "todos") {
         return pokemons;
@@ -19,15 +26,14 @@ export const filterByRarity = (pokemons, rarity) => {
 export const orderByName = (pokemons, order) => {
 
     let arraySorted = pokemons.sort((pokemon1, pokemon2) => {
-        var nameA = pokemon1.name.toUpperCase(); // ignore upper and lowercase
-        var nameB = pokemon2.name.toUpperCase(); // ignore upper and lowercase
+        var nameA = pokemon1.name.toUpperCase();
+        var nameB = pokemon2.name.toUpperCase();
         if (nameA < nameB) {
             return -1;
         }
         if (nameA > nameB) {
             return 1;
         }
-        // names must be equal
         return 0;
     })
 

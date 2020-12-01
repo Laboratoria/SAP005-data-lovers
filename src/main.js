@@ -78,6 +78,20 @@ selectPokemon.addEventListener('change', (event) => {
     printFilteredType()
 });
 
+const buttonb = document.getElementById("button")
+buttonb.addEventListener("click", searchName)
+
+function searchName() {
+    let nameValue = document.getElementById('input').value;
+    let filteredPokemonsByName = filtros.filterByName(pokemons, nameValue);
+    carregar(filteredPokemonsByName);
+}
+const selectPokemonName = document.querySelector('#input');
+
+selectPokemonName.addEventListener('change', (event) => {
+    searchName()
+});
+
 
 function printFilteredRarity() {
     let rarityValue = document.getElementById('allRarity').value;
