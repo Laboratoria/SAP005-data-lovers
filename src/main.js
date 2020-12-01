@@ -32,7 +32,7 @@ filterSelect.addEventListener('click', filterGender)
 function filterGender(){
     const filterGender = dataBase.filter(dataBase => dataBase.gender === filterSelect.value)
     printCharacters(filterGender)
-    document.getElementById("calculation").innerHTML = "Existe " + filterGender.length + " personagens deste gênero e representa " + parseFloat((filterGender.length*100)/(dataBase.length)).toFixed(2) + "% do total de personagens"
+    document.getElementById("calculation").innerHTML = "Existem " + filterGender.length + " personagens deste gênero e representa " + parseFloat((filterGender.length*100)/(dataBase.length)).toFixed(2) + "% do total de personagens"
 };
 
 const filterSelectStatus = document.querySelector('.filter-status');
@@ -41,7 +41,7 @@ filterSelectStatus.addEventListener('click', filterStatus)
 function filterStatus(){
     const filterStatus = dataBase.filter(dataBase => dataBase.status === filterSelectStatus.value)
     printCharacters(filterStatus)
-    document.getElementById("calculation").innerHTML = "Existe " + filterStatus.length + " personagens neste status e representa " + parseFloat((filterStatus.length*100)/(dataBase.length)).toFixed(2) + "% do total de personagens"
+    document.getElementById("calculation").innerHTML = "Existem " + filterStatus.length + " personagens neste status e representa " + parseFloat((filterStatus.length*100)/(dataBase.length)).toFixed(2) + "% do total de personagens"
     
 };
 
@@ -51,7 +51,7 @@ filterSelectSpecies.addEventListener('click', filterSpecies)
 function filterSpecies(){
     const filterSpecies = dataBase.filter(dataBase => dataBase.species === filterSelectSpecies.value)
     printCharacters(filterSpecies)
-    document.getElementById("calculation").innerHTML = "Existe " + filterSpecies.length + " personagens desta espécie e representa " + parseFloat((filterSpecies.length*100)/(dataBase.length)).toFixed(2) + "% do total de personagens"
+    document.getElementById("calculation").innerHTML = "Existem " + filterSpecies.length + " personagens desta espécie e representa " + parseFloat((filterSpecies.length*100)/(dataBase.length)).toFixed(2) + "% do total de personagens"
 };
 
 const filterSelectOrder = document.querySelector('.filter-order');

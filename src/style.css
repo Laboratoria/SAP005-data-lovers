@@ -15,10 +15,8 @@ ul{
     cursor: pointer;
     opacity: 0.9;
     color: white;
-    font-weight: bold;
+    font-weight: bolder;
     font-size: 25px;
-    margin-top: 0;
-    margin-left: 90%;
 
 }
 .menu{
@@ -26,16 +24,20 @@ ul{
     background-color:rgb(36, 139, 36);
     width: 100%;
     position: absolute;
-    top: 0;
     left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding:3% 4%;
+    padding:2% 4%;
     float: left;
-    height: 10%;
+    float: left;
     opacity: 80%;
     
+}
+
+@media(max-width:700px){
+    header {flex-direction: column;}
+    header img{margin-bottom:15px;}
 }
 
 .rodape{
@@ -76,36 +78,30 @@ ul{
     footer img{margin-bottom:15px;}
 }
 
-@media(max-width:700px){
-    header {flex-direction: column;}
-    header img{margin-bottom:15px;}
-}
-
 li{
     display: inline-block;
     margin: 0 15px;
     
 }
 .content{
-display:flex;
-background-image:url("img/home5.jpg");
-height: 100%;
-background-repeat: no-repeat;
-background-position:center;
-background-size: cover;
-background-attachment: fixed;
-min-height: 100vh;
-color: white;
-justify-content: space-evenly;
-justify-self: center;
-align-content: center;
-flex-direction: row;
-text-align: center;
-flex-wrap: wrap;
-padding-top: 100px;
-clear:right
+    display:flex;
+    background-image: url("img/home5.jpg");
+    height: 100%;
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 150vh;
+    color: white;
+    justify-content: space-evenly;
+    justify-self: center;
+    align-content: center;
+    flex-direction: row;
+    text-align: center;
+    flex-wrap: wrap;
+    padding-top: 100px;
 }
-
 
 .content{
     display: flex;
@@ -120,10 +116,10 @@ clear:right
 
 .video{    
    display:flex;
-    width: 350px;
+    width: 24em;
     float: right;
     padding: 15px;
-    margin-top: 18%;
+    margin-top: 10em;
     margin-right:1px ;
     align-items:flex-end;
     flex-direction: column;
@@ -135,10 +131,11 @@ aside#video{
     width: 100%;
 }
 
-@media(max-width:700px){
-    .video {flex-direction: column;}
-    .video{margin-bottom:15px;}
-}
+/*@media(max-width:380px){
+    .video{margin-bottom:6em;}
+    .video{margin-top:10em;}
+    .video{width:22em;}
+}*/
 
 .about{
     display: flex;
@@ -151,6 +148,12 @@ aside#video{
     position: absolute;
     color: white;
 }
+/*@media(max-width:380px){
+    .about{margin-bottom:6em;}
+    .about{width:20em;}
+    .about{margin-top:12em;}
+}
+*/
 
 .netflix{
     align-items: flex-end;
@@ -161,24 +164,77 @@ aside#video{
     font-size: 25px;
 }
 
+@media screen and (max-width:425px){
+    .netflix{
+        margin-top:32em;
+        width:80vw;
+        margin-left: 2em;
+        font-weight: bolder;
+        font-size:15px;
+    }
+    .video{
+        margin-top:5em;
+        width:20em;
+    }
+    .content img{
+        width:100vw;
+        height: 100vh;
+    }
+    .about{
+        margin-left:1em;
+        font-size:15px;
+        width:18em;
+    }
 
-@media(max-width:700px){
-    .netflix {flex-direction: column;}
-    .netflix img{margin-bottom:15px;}
 }
+@media (min-width: 426px) and (max-width: 670px){
+        .netflix{
+            margin-top:28em;
+            margin-left: 1em;
+        }
+        .video{
+            width: 95%;
+        }
+        .about{
+            font-size: 25px;
+            margin-left: 1em;
+        }
+}
+@media (min-width: 768px) and (max-width: 1100px){
+    .netflix{
+        margin-top:40em;
+        font-size: 30px;
+        width:90%;
+        margin-left: 1em;
+        font-weight: bolder;
+    }
+    .video{
+        width:100%;
+        height:80%;
+    }
+    .about{
+        width:90%;
+        font-size: 30px;
+        margin-left: 1em;
 
-.menu img{
-    display:flex;
-    /*width: 350px;*/
-    padding: 12px;
-    margin-top: 16px;
-    margin-right:100%;
-    align-items:flex-start;
-    flex-direction: column;
-    float: right;
-    width: 317px;
-    height: 35%;
-    
-    
-    
+    }
+
 }
+@media (min-width: 540px) and (max-width: 720px){
+    .video{
+        width: 100%;
+        height: 80%;
+    }
+    .about{
+        width:90%;
+        margin-left: 1em;
+        font-size: 30px;
+        font-style: cursive;
+    }
+    .netflix{
+        margin-top: 35em;
+        margin-left: 1em;
+    }
+  
+}   
+
