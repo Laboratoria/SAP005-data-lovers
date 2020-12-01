@@ -285,20 +285,17 @@ label span:nth-child(3) {
 }
 
 .text1{
-    position:relative;
-}
-
-.text1-1{
-    color:#ddd;
-    background-color:#282E34;
+    color: #777;
+    background-color:white;
     text-align:center;
     padding:50px 80px;
     text-align: justify;
 }
 
-.text1-2{
+.text1-1{
     text-align:center;
 }
+
 
 .text2{
     position:relative;
@@ -313,6 +310,22 @@ label span:nth-child(3) {
 }
 
 .text2-2{
+    text-align:center;
+}
+
+.text3{
+    position:relative;
+}
+
+.text3-1{
+    color:#ddd;
+    background-color:#282E34;
+    text-align:center;
+    padding:50px 80px;
+    text-align: justify;
+}
+
+.text3-2{
     text-align:center;
 }
   
