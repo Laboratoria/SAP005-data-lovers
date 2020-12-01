@@ -68,6 +68,7 @@ label span:nth-child(3) {
     left: -350px;
     position: absolute;
     transition: all .5s;
+    z-index: 99;
 }
 
 .head-menu-list {
@@ -273,6 +274,44 @@ label span:nth-child(3) {
     padding: 18px;
     font-size: 25px;
     letter-spacing: 10px;
+}
+
+.border{
+    color: #f7f7f7;
+    font-size:25px;
+    background-color:transparent;
+}
+
+.text1{
+    position:relative;
+}
+
+.text1-1{
+    color:#ddd;
+    background-color:#282E34;
+    text-align:center;
+    padding:50px 80px;
+    text-align: justify;
+}
+
+.text1-2{
+    text-align:center;
+}
+
+.text2{
+    position:relative;
+}
+
+.text2-1{
+    color:#ddd;
+    background-color:#282E34;
+    text-align:center;
+    padding:50px 80px;
+    text-align: justify;
+}
+
+.text2-2{
+    text-align:center;
 }
   
 .h3 {
