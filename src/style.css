@@ -1,0 +1,409 @@
+body{
+    background: url("./img/fundo-universe-purple.jpg");
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+
+}
+
+/* Menu e botões */
+
+#navigation-area {
+    background-color: rgba(57, 59, 75, 0.192);
+}
+
+#navigation-area ul{
+    display: flex;
+    justify-content: center;
+
+    list-style: none;
+}
+
+.buttons-config {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Anton', sans-serif;
+
+    text-overflow: clip;
+    overflow: hidden;
+
+    margin: 10px;
+    padding: 7px;
+    width: 26%;
+    border-radius: 10px;
+
+    background-color: rgba(48, 55, 75, 0.541);
+
+    cursor: pointer;
+}
+.buttons-config:hover {
+    background-color: rgba(69, 81, 114, 0.541);
+}
+
+/* Filtro */
+#choose-box {
+    display: flex;
+    justify-content: center;
+}
+form input[type=radio]:checked {
+    background-color: rgb(48, 3, 48);
+}
+
+.choose-options {
+    
+    color: white;
+}
+
+/* Card de Informações dos Personagens */
+
+.cards-container {
+    display: flex;
+}
+#get-cards {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-left: 1%;
+    width: 100%;
+}
+.all-cards {
+    margin: 2%;
+    width: 200px;
+    height: 200px;
+
+    perspective: 1000px; /* perspectiva 3D */
+}
+.all-cards:hover {
+    margin: 3%;
+    height: 570px;
+    width: 270px;
+}
+
+.card-info {
+    position: relative;
+    height: 100%;   /* 100% da altura do cartão */
+    transition: transform .4s;  /*Tempo de duração do giro*/
+    transform-style: preserve-3d; /* Garante que a transformação preserve o efeito 3D */
+}
+.all-cards:hover .card-info {
+    transform: rotateY(180deg); /* Passando o mouse sobre cartao, o filho dela (container) girará 180 graus no eixo y(eixo vertical) */
+}
+
+
+.card-front {
+    position: absolute;
+    width: 100%;
+    backface-visibility: hidden; /* Garante que a parte de trás não aparecerá */
+    z-index: 1;
+
+    font-size: 10px;
+    margin: 10px;
+
+    color: white;
+    background-color: rgba(25, 25, 26, 0.301);
+}
+.card-back {
+    position: absolute;
+    width: 100%;
+    backface-visibility: hidden; /* Garante que a parte de trás não aparecerá */
+    z-index: 100;
+    transform: rotateY(180deg);
+
+    font-size: 25px;
+    font-family: 'VT323', monospace;
+    
+    border-radius: 8%;
+    padding: 9%;
+    color: white;
+    background-color: rgb(35, 36, 36);
+}
+.card-back ul {
+    list-style: none;
+
+    border-radius: 6%;
+    border: 1px solid rgb(63, 63, 63);
+    padding: 3%;
+}
+
+.front-pic{
+    border-radius: 50%;
+    filter: drop-shadow(0 0 0.99rem rgba(12, 103, 116, 0.781));
+
+    width: 110px;
+    height: 110px;
+}
+
+.back-pic{
+    width: 100%;
+    border-radius: 10%;
+    border: 2px solid rgb(77, 211, 211);
+}
+.back-pic ul {
+    list-style: none;
+    padding: 2px;
+    border: 1px solid rgb(75, 74, 74);
+}
+
+
+/*** Teste ***/
+
+#questions-area {
+    display: none;
+    
+}
+#questions-area p {
+    font-size: 20px;
+}
+.question-box {
+
+    font-family: 'Thasadith', sans-serif;
+    background-color: rgb(255, 255, 255);
+    
+    border: 2px solid rgb(75, 207, 216);
+    border-radius: 7px;
+    text-align: center;
+    padding: 3px;
+} 
+.question-box label {
+    font-size: 20px;
+    text-align: justify;
+}
+
+#next-button {
+        float: right;
+        width: 6%;
+
+        border:none;
+        border-radius: 20px;
+        padding: 1px;
+
+        background-color: rgba(61, 24, 95, 0.644);
+
+        color: white;
+        font-size: 19px;
+
+        outline: rgba(10, 10, 36, 0.644);
+}
+
+#question10 {
+   background-color: rgb(63, 63, 63); 
+
+   border-radius: 10px;
+   padding: 10px;
+}
+
+#result-button {
+    background-color: rgb(63, 63, 63);
+    margin-left: 45%;
+
+    color: white;
+    font-family: 'VT323', monospace;
+    font-size: 25px;
+   
+    border: 1px solid #727171;
+    border-radius: 7px;
+    padding: 1%;
+
+    outline: yellowgreen;
+    transition: 1s;
+}
+#result-button:hover {
+    background-color: rgb(119, 118, 118);
+}
+
+#result-test {
+    display: none;
+    width: 65%;
+
+    background-color: rgb(63, 63, 63);
+
+    color: white;
+    font-size: 150%;
+    font-family: 'VT323', monospace;
+    
+    padding-left: 20px;
+    text-align: justify;
+    margin-bottom: 2%;
+}
+
+
+#pics-container { 
+    background-color: rgba(10, 10, 36, 0.644);
+    display: inline-block;
+
+    border-radius: 10px;
+    border: 3px solid #03a3d4;
+}
+
+/* Mobile desativado no desktop */
+
+#div-mother-mobile {
+    display: none;
+}
+#title-mobile {
+    display: none;
+}
+#navigation-area-mobile {
+    display: none;
+}  
+.cards-container-mobile {
+    display: none;
+}
+
+
+
+
+
+
+/* ----- Formatação Mobile --------- */
+
+@media only screen and (max-device-width: 400px){
+   
+    #div-mother-mobile {
+        display: inline;
+    }
+
+    #title-mobile{
+        display: flex;
+        justify-content: center;
+    }
+
+
+
+    /* Menu e botões Mobile */
+
+        #navigation-area-mobile {
+        display: flex;
+        justify-content: center;
+
+    }
+    #button-charac-mobile {
+        width: 70%;
+
+        border:none;
+        border-radius: 10%;
+        padding: 3%;
+
+        background-color: rgba(10, 10, 36, 0.644);
+
+        font-family: 'Anton', sans-serif;
+        color: white;
+        font-size: 30px;
+
+        outline: rgba(10, 10, 36, 0.644);
+        transition: 1s;
+    }
+    #button-charac-mobile:hover {
+        background-color:  rgba(56, 25, 88, 0.918);
+    }
+
+    /* Card de Informações dos Personagens */
+
+    .cards-container-mobile {
+        display: flex;
+    }
+
+    #get-cards-mobile {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-left: 1%;
+    width: 100%;
+     }
+
+    .all-cards-mobile {
+    margin: 12%;
+    width: 150px;
+    height: 150px;
+
+    perspective: 1000px; /* perspectiva 3D */
+     }
+    
+    .all-cards-mobile:hover {
+     height: 320px;
+    }
+    .card-info-mobile {
+    position: relative;
+    height: 100%;   /* 100% da altura do cartão */
+    transition: transform .4s;  /*Tempo de duração do giro*/
+    transform-style: preserve-3d; /* Garante que a transformação preserve o efeito 3D */
+     }
+
+    .all-cards-mobile:hover .card-info-mobile {
+    transform: rotateY(180deg); /* Passando o mouse sobre cartao, o filho dela (container) girará 180 graus no eixo y(eixo vertical) */
+      }
+
+    .card-front-mobile {
+    position: absolute;
+    width: 100%;
+    backface-visibility: hidden; /* Garante que a parte de trás não aparecerá */
+    z-index: 1;
+
+    font-size: 8px;
+    margin: 10px;
+
+    color: white;
+    background-color: rgba(25, 25, 26, 0.301);
+      }
+
+
+    .card-back-mobile {
+    position: absolute;
+    width: 100%;
+    backface-visibility: hidden; /* Garante que a parte de trás não aparecerá */
+    z-index: 1;
+    transform: rotateY(180deg);
+
+    font-size: 15px;
+    font-family: 'VT323', monospace;
+    
+    border-radius: 8%;
+    padding: 9%;
+    color: white;
+    background-color: rgb(35, 36, 36);
+     }
+
+
+    .card-back-mobile ul {
+    list-style: none;
+
+    border-radius: 6%;
+    border: 1px solid rgb(63, 63, 63);
+    padding: 3%;
+     }
+
+    .front-pic-mobile {
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    }
+    .back-pic-mobile {
+    width: 100%;
+    border-radius: 10%;
+    border: 2px solid rgb(77, 211, 211);
+     }
+    .back-pic-mobile ul {
+    list-style: none;
+    padding: 2px;
+    border: 1px solid rgb(75, 74, 74);
+    }
+
+  
+
+    /* Desktop desabilitado no Mobile */
+    #title{
+        display: none;
+    }
+
+    #navigation-area {
+        display: none;
+    }
+    #card-info {
+        display: none;
+    }
+
+}
+
