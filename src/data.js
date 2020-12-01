@@ -1,51 +1,37 @@
 export const instantSearch = (searchName, dataJson) => {
-    return dataJson.filter(object => object.name.startsWith(searchName))
+    return dataJson.filter(pokemon => (pokemon.name.startsWith(searchName) ||
+        searchName == null || searchName == undefined))
 }
 
 export const selectPokemonType = (selectType, dataJson) => {
-    return dataJson.filter(pokemon => pokemon.type.includes(selectType))
+    return dataJson.filter(pokemon => (pokemon.type.includes(selectType) ||
+        selectType == null || selectType == undefined || selectType == ""))
 }
 
 export const selectPokemonResistant = (selectResistant, dataJson) => {
-    return dataJson.filter(pokemon => pokemon.resistant.includes(selectResistant))
+    return dataJson.filter(pokemon => (pokemon.resistant.includes(selectResistant) ||
+        selectResistant == null || selectResistant == undefined || selectResistant == ""))
 }
 
 export const selectPokemonWeaknesses = (selectWeaknesses, dataJson) => {
-    return dataJson.filter(pokemon => pokemon.weaknesses.includes(selectWeaknesses))
+    return dataJson.filter(pokemon => (pokemon.weaknesses.includes(selectWeaknesses) ||
+        selectWeaknesses == null || selectWeaknesses == undefined || selectWeaknesses == ""))
 }
 
 export const selectPokemonGeneration = (selectGeneration, dataJson) => {
-    return dataJson.filter(pokemon => pokemon.generation.name === selectGeneration)
+    return dataJson.filter(pokemon => (pokemon.generation.name === selectGeneration ||
+        selectGeneration == null || selectGeneration == undefined || selectGeneration == ""))
 }
 
-export const orderPokemonName = (orderName, dataJson) =>{
-    return dataJson.sort(function(a, b) {
-         const keyA = a.name,
-               keyB = b.name
-         // Compare the 2 dates
-         if (orderName === "a_z"){
-             if (keyA < keyB) return -1
-             if (keyA > keyB) return 1
-         }else {
-             if (keyA < keyB) return 1
-             if (keyA > keyB) return -1
-         }
-
-    })
+export const sortPokemonCp = (selectCp, dataJson) => {
+    return dataJson.sort((poke1, poke2) => (Number(poke1.stats["max-cp"]) < Number(poke2.stats["max-cp"]) ?
+        1 : Number(poke1.stats["max-cp"]) > Number(poke2.stats["max-cp"]) ? -1 : 0) * selectCp)
 }
 
-export const orderPokeNumber = (orderNum, dataJson) =>{
-    return dataJson.sort(function(a1, b2) {
-         const keyA1 = a1.num,
-               keyB2 = b2.num
-         // Compare the 2 dates
-         if (orderNum === "1_251"){
-             if (keyA1 < keyB2) return -1
-             if (keyA1 > keyB2) return 1
-         }else {
-             if (keyA1 < keyB2) return 1
-             if (keyA1 > keyB2) return -1
-         }
-         return 0
-    })
-}
+/*export const orderPokemonName = (sortSignal, dataJson) => {
+        return dataJson.sort((poke1, poke2) => poke1.name.localeCompare(poke2.name) * sortSignal)
+    }*/
+
+/*export const orderPokeNumber = (sortNumber, dataJson) => {
+        return dataJson.sort((poke1, poke2) => (poke1.num < poke2.num ? 1 : poke1.num > poke2.num ? -1 : 0) * sortNumber)
+    }*/
