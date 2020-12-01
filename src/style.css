@@ -59,6 +59,9 @@ form input[type=radio]:checked {
 
 /* Card de Informações dos Personagens */
 
+.cards-container {
+    display: flex;
+}
 #get-cards {
     display: flex;
     flex-wrap: wrap;
@@ -127,9 +130,12 @@ form input[type=radio]:checked {
 
 .front-pic{
     border-radius: 50%;
+    filter: drop-shadow(0 0 0.99rem rgba(12, 103, 116, 0.781));
+
     width: 110px;
     height: 110px;
 }
+
 .back-pic{
     width: 100%;
     border-radius: 10%;
@@ -141,6 +147,96 @@ form input[type=radio]:checked {
     border: 1px solid rgb(75, 74, 74);
 }
 
+
+/*** Teste ***/
+
+#questions-area {
+    display: none;
+    
+}
+#questions-area p {
+    font-size: 20px;
+}
+.question-box {
+
+    font-family: 'Thasadith', sans-serif;
+    background-color: rgb(255, 255, 255);
+    
+    border: 2px solid rgb(75, 207, 216);
+    border-radius: 7px;
+    text-align: center;
+    padding: 3px;
+} 
+.question-box label {
+    font-size: 20px;
+    text-align: justify;
+}
+
+#next-button {
+        float: right;
+        width: 6%;
+
+        border:none;
+        border-radius: 20px;
+        padding: 1px;
+
+        background-color: rgba(61, 24, 95, 0.644);
+
+        color: white;
+        font-size: 19px;
+
+        outline: rgba(10, 10, 36, 0.644);
+}
+
+#question10 {
+   background-color: rgb(63, 63, 63); 
+
+   border-radius: 10px;
+   padding: 10px;
+}
+
+#result-button {
+    background-color: rgb(63, 63, 63);
+    margin-left: 45%;
+
+    color: white;
+    font-family: 'VT323', monospace;
+    font-size: 25px;
+   
+    border: 1px solid #727171;
+    border-radius: 7px;
+    padding: 1%;
+
+    outline: yellowgreen;
+    transition: 1s;
+}
+#result-button:hover {
+    background-color: rgb(119, 118, 118);
+}
+
+#result-test {
+    display: none;
+    width: 65%;
+
+    background-color: rgb(63, 63, 63);
+
+    color: white;
+    font-size: 150%;
+    font-family: 'VT323', monospace;
+    
+    padding-left: 20px;
+    text-align: justify;
+    margin-bottom: 2%;
+}
+
+
+#pics-container { 
+    background-color: rgba(10, 10, 36, 0.644);
+    display: inline-block;
+
+    border-radius: 10px;
+    border: 3px solid #03a3d4;
+}
 
 /* Mobile desativado no desktop */
 

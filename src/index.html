@@ -12,7 +12,10 @@
 
    <link rel="preconnect" href="https://fonts.gstatic.com">
    <link href="https://fonts.googleapis.com/css2?family=Quantico&family=VT323&display=swap" rel="stylesheet"> 
-</head>
+
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Thasadith&display=swap" rel="stylesheet"> 
+  </head>
 
 <body>
    <!-- DESKTOP VERSION -->
@@ -25,16 +28,143 @@
       <nav id="navigation-area">
          <ul>
             <a id="characters-button" class="buttons-config"> <li> Personagens </li> </a>
-            <!-- <a id="episodes-button" class="buttons-config"> <li> OPÇÃO BONUS </li> </a> AGUARDANDO-->
+            <a id="test-button" class="buttons-config"> <li> Quem você seria? </li> </a> 
          </ul>
       </nav>
-     
-         <!--  <form id="choose-box" action="">
-              <input id="choose-all" name="choose-box" type="radio">
-                  <label class="choose-options" for="all-choose">Todos</label>
-              <input id="choose-world" name="choose-box" type="radio">
-                  <label class="choose-options" for="world-choose">Por mundos</label>
-          </form>  -->
+                 
+
+        <div id="questions-area">
+
+            <input type="hidden" id="current-question" value="">
+                   <div id="question1" class="question-box">
+                          <h1>Qual personagem de Rick & Morty você seria?</h1>
+                        <p>Pergunta 1 - Você está em grupo, enrrascado na galáxia, logo: <br>
+                           <input id="form-option-1" name="choose-box1" value="1" type="radio">
+                               <label class="form-one" for="">Faço questão de executar um plano que eu sei que vai dar certo</label>
+                           <input id="form-option-2" name="choose-box1" value="2" type="radio">
+                               <label class="form-two" for="">Procuro resolver com a força de todos</label>
+                           <input id="form-option-3" name="choose-box1" value="3" type="radio">
+                               <label class="form-three" for="">Espero alguém que saiba o que fazer</label>
+                         </p>
+                     </div>
+
+
+                    <div id="question2" class="question-box"><h1>Qual personagem de Rick & Morty você seria?</h1>
+                       <p>Pergunta 2 - Vocês fogem e um de seus companheiros, que te ajudou a missão inteira, ficou para trás, logo: <br>
+                       
+                          <input id="form-option-1" name="choose-box2" value="4" type="radio">
+                              <label class="form-one" for="">Continuo correndo, é a vida...</label>
+                          <input id="form-option-2" name="choose-box2" value="5" type="radio">
+                              <label class="form-two" for="">Volto para salvá-lo, claro!</label>
+                          <input id="form-option-3" name="choose-box2" value="6" type="radio">
+                              <label class="form-three" for="">Provavelmente corro, mas em pânico</label>
+                       </p>
+                  </div>
+
+                     <div id="question3" class="question-box"><h1>Qual personagem de Rick & Morty você seria?</h1>
+                        <p>Pergunta 3 - Um rei de um planeta desconhecido te oferece ajuda: <br>
+                       
+                          <input id="form-option-1" name="choose-box3" value="7" type="radio">
+                              <label class="form-one" for="">Aproveito, mas com arma engatilhada!</label>
+                          <input id="form-option-2" name="choose-box3" value="8" type="radio">
+                              <label class="form-two" for="">Se for bonito, confio e ainda fico por lá</label>
+                          <input id="form-option-3" name="choose-box3" value="9" type="radio">
+                              <label class="form-three" for="">Aproveito e confio, não tenho outra escolha.</label>
+                        </p>
+                    </div>
+
+
+                    <div id="question4" class="question-box"><h1>Qual personagem de Rick & Morty você seria?</h1>
+                      <p>Pergunta 4 - No caminho o rei é morto, agora seu planeta não tem dono, logo: <br>
+                       
+                          <input id="form-option-1" name="choose-box4" value="10" type="radio">
+                              <label class="form-one" for="">Agora o planeta é meu!</label>
+                          <input id="form-option-2" name="choose-box4" value="11" type="radio">
+                              <label class="form-two" for="">Vou dar o fora, já tive problemas demais por aqui</label>
+                          <input id="form-option-3" name="choose-box4" value="12" type="radio">
+                              <label class="form-three" for="">Não vou ser mais rainha, então vou cair fora.</label>
+                       </p>
+                   </div>
+
+
+                   <div id="question5" class="question-box"><h1>Qual personagem de Rick & Morty você seria?</h1>
+                     <p>Pergunta 5 - Parece que tem um planeta em apuros, o que vai fazer? <br>
+                       
+                          <input id="form-option-1" name="choose-box5" value="13" type="radio">
+                              <label class="form-one" for="">Vou dominá-lo!</label>
+                          <input id="form-option-2" name="choose-box5" value="14" type="radio">
+                              <label class="form-two" for="">Vou salvá-lo!</label>
+                          <input id="form-option-3" name="choose-box5" value="15" type="radio">
+                              <label class="form-three" for="">Em apuros estou eu, vou vazar!</label>
+                       </p>
+                  </div>
+
+                  
+                     <div id="question6" class="question-box"><h1>Qual personagem de Rick & Morty você seria?</h1>
+                       <p>Pergunta 6 - Se você tentar voltar para casa você morre: <br>
+                       
+                          <input id="form-option-1" name="choose-box6" value="16" type="radio">
+                              <label class="form-one" for="">Quem disse que eu ia voltar?</label>
+                          <input id="form-option-2" name="choose-box6" value="17" type="radio">
+                              <label class="form-two" for="">Se cumpri meus objetivos, tô nem aí se eu morrer.</label>
+                          <input id="form-option-3" name="choose-box6" value="18" type="radio">
+                              <label class="form-three" for="">Eu até ia voltar, mas se a morte é certa eu fico.</label>
+                        </p>
+                     </div>
+
+
+                      <div id="question7" class="question-box"><h1>Qual personagem de Rick & Morty você seria?</h1>
+                        <p>Pergunta 7 - Acharam um planeta e parece que ele dá vida eterna: <br>
+                       
+                          <input id="form-option-1" name="choose-box7" value="19" type="radio">
+                              <label class="form-one" for="">Aff, que chato. Quero aventura!</label>
+                          <input id="form-option-2" name="choose-box7" value="20" type="radio">
+                              <label class="form-two" for="">NÃO! EXISTÊNCIA É SOFRIMENTO!</label>
+                          <input id="form-option-3" name="choose-box7" value="21" type="radio">
+                              <label class="form-three" for="">Gostei, vou ficar aqui mesmo.</label>
+                        </p>
+                     </div>
+
+
+                     <div id="question8" class="question-box"><h1>Qual personagem de Rick & Morty você seria?</h1>
+                        <p>Pergunta 8 - Neste planeta não acontece nada, mas você achou um óculos de realidade simulada: <br>
+                       
+                          <input id="form-option-1" name="choose-box8" value="22" type="radio">
+                              <label class="form-one" for="">Me poupe, quero viver de verdade!</label>
+                          <input id="form-option-2" name="choose-box8" value="23" type="radio">
+                              <label class="form-two" for="">Adorei! È o lugar perfeito!</label>
+                          <input id="form-option-3" name="choose-box8" value="24" type="radio">
+                              <label class="form-three" for="">O óculos é legal, vou embora com ele.</label>
+                        </p>
+                    </div>
+
+
+                      <div id="question9" class="question-box"><h1>Qual personagem de Rick & Morty você seria?</h1>
+                        <p>Pergunta 9 - Surgiu uma missão, o você que acha disso? <br>
+                       
+                          <input id="form-option-1" name="choose-box9" value="25" type="radio">
+                              <label class="form-one" for="">É tudo que preciso antes de morrer.</label>
+                          <input id="form-option-2" name="choose-box9" value="26" type="radio">
+                              <label class="form-two" for="">Só vou se tiver algo que me interesse por lá.</label>
+                          <input id="form-option-3" name="choose-box9" value="27" type="radio">
+                              <label class="form-three" for="">Sou eu quem defino minhas missões.</label>
+                        </p>
+                     </div>
+
+                      <div id="question10"class="question-box-result">
+                             <div id="pics-container">
+                                 <img id="pics-result" src="" alt="">
+                             </div>
+                             <div id="result-test">  </div>
+                            
+
+                            <button id="result-button">
+                                Resultado
+                            </button>
+                      </div>
+                        <button id="next-button"> > </button>
+              
+          </div>
       
       <main class="cards-container"> 
          <section id="get-cards"> 
