@@ -2,17 +2,24 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <title>Pokémon</title>
-  <!-- <img class="imagem-floresta" src="IMG/floresta.jpg" alt=”floresta”> -->
-  <div class="container">
-    <h1 class="Titulo">PokeLovers </h1>
-    <label for="tipos">Selecione o tipo</label>
-    <select name="tipos" id="allType" class="allTypes">
+    <title>Pokémon</title>
+    <!-- <img class="imagem-floresta" src="IMG/floresta.jpg" alt=”floresta”> -->
+    <div class="container">
+        <h1 class="Titulo">PokeLovers </h1>
+        <div class="main-options">
+            <label for="order-alphabet">Ordenar</label>
+            <select name="order-alphabet" class="order-alphabet" id="order-alphabet">
+            <option value="">Ordenar</option>
+            <option class = "az" value="az">A - Z</option>
+            <option class = "za" value="za">Z - A</option>
+          </select>
+            <label for="tipos">Tipo</label>
+            <select name="tipos" id="allType" class="allTypes">
       <option selected class="Todos">Todos</option>
       <option class="typePokemons" value="Grass">Grass</option>
       <option class="typePokemons" value="Poison">Poison</option>
@@ -27,21 +34,21 @@
       <option class="typePokemons" value="Bug">Bug</option>
       <option class="typePokemons" value="Normal">Normal</option>
     </select>
-    <label for="Raridade">Selecione a raridade </label>
-    <select name="raridade" id="allRarity" class="allRaritys">
+            <label for="raridade">Raridade</label>
+            <select name="raridade" id="allRarity" class="allRaritys">
       <option selected class="TodosRarity">Todos</option>
       <option class="typeRarity" value="Normal">Normal</option>
       <option class="typeRarity" value="Mythic">Mythic</option>
       <option class="typeRarity" value="Legendary">Legendary</option>
     </select>
-    <div id="divBusca">
-      <input type="text" id="txtBusca" placeholder="Buscar..." />
-      <img class="imagem-pokebola" src="IMG/pok.png" alt="Buscar..." id="btnBusca" />
-    </div>
-    <div class="card" id="container-card-poke">
-    </div>
-  </div>
-  <script src="main.js" type="module"></script>
+            <div id="divBusca">
+                <input type="text" id="txtBusca" placeholder="Buscar..." />
+                <img class="imagem-pokebola" src="IMG/pok.png" alt="Buscar..." id="btnBusca" />
+            </div>
+            <div class="card" id="container-card-poke">
+            </div>
+        </div>
+        <script src="main.js" type="module"></script>
 </body>
 
 </html>

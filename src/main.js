@@ -1,10 +1,9 @@
-
 import * as filtros from './data.js';
+import pokemon from './data/pokemon/pokemon.js';
 import data from './data/pokemon/pokemon.js';
 
 const pokemons = data.pokemon;
 const container = document.getElementById('container-card-poke');
-
 
 addEventListener('load', () => {
     carregar(pokemons);
@@ -30,7 +29,7 @@ const getPoke = (data) => {
             cp = poke.stats["max-cp"],
             hp = poke.stats["max-hp"];
 
-        if (typeof (poke.evolution["next-evolution"]) != "undefined") {
+        if (typeof(poke.evolution["next-evolution"]) != "undefined") {
             let arrayEvolution = poke.evolution["next-evolution"];
             for (let evolutionPokes of arrayEvolution) {
                 evolution += evolutionPokes.name + ",";
@@ -64,7 +63,8 @@ const cardInfo = (img, num, name, type, weaknesses, evolution, rarity, cp, hp) =
                           </div>
                           </div>
                           
-`}
+`
+}
 
 function printFilteredType() {
     let typeValue = document.getElementById('allType').value;
@@ -90,3 +90,13 @@ selectPokemonRarity.addEventListener('change', (event) => {
     printFilteredRarity()
 });
 
+function printOrder() {
+    let orderValue = document.getElementById('order-alphabet').value;
+    let pushOrder = filtros.orderByName(pokemons, orderValue);
+    return carregar(pushOrder);
+}
+
+var getAzElement = document.querySelector('.order-alphabet');
+getAzElement.addEventListener('change', (event) => {
+    printOrder();
+});
