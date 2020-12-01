@@ -247,6 +247,174 @@ transform: translateX(203px);
     margin-left: 3%;
 } 
 
+@media screen and (max-width: 425px){
+    * {
+        margin:0;
+        padding:0;
+    }
+    html,body, main{
+        height: 100%;
+        width: 100%;
+    
+    }
+
+    .search{
+       height:40px;
+       width: 300px;
+    }
+
+    .imgPokemon{
+        margin-left:50px;
+    }
+
+    .flip-card-inner{
+        margin-left: 80px;
+
+    } 
+
+    .cards{
+        width: 130%;
+    }
+
+}
+
+    @media screen and (max-width: 652px){
+
+        * {
+            margin:0;
+            padding:0;
+        }
+        html,body, main{
+            height: 100%;
+            width: 100%;
+        
+        }
+            
+        .barra-menu{
+    
+            display:flex;
+            justify-content: row; 
+            width: 920px;
+            height: 80px;
+            left: -920px;
+            justify-content: space-between;
+        }
+    
+        .search {
+            margin-left: 60%;
+        }
+    
+        .logo{
+            margin-left:35%;
+        }
+    
+        .flip-card-inner{
+            margin-left: 30%;
+            
+        }
+        .flip-card{
+            margin-bottom: 30px;
+        }
+    
+    
+        #check:checked ~.barra-menu{
+            transform: translateX(920px);
+        }
+    
+    
+       
+        select{
+            margin-left:10px;
+            width: 170px;
+        }
+    
+            
+        .imgMenu{
+           
+            margin-top:140px
+    }
+    
+        .typePokemon p{
+        margin-right: 1%;
+    }
+    
+        .messageType{
+            margin: 0;
+            margin-top: 100px;
+            margin-left: 45px;
+    
+        }
+    
+    
+       }
+    
+
+    
+
+    @media screen and (max-width: 782px){
+        * {
+            margin:0;
+            padding:0;
+        }
+        html,body, main{
+            height: 100%;
+            width: 100%;
+        
+        }
+    
+         .cards {
+             margin-left: 100%;
+               
+         }
+
+         .flip-card-inner{
+            margin-left: 60%;
+            
+        }
+        .flip-card{
+            margin-bottom: 30px;
+        }
+         .barra-menu{
+
+            display:flex;
+            justify-content: row; 
+            width: 920px;
+            height: 80px;
+            left: -920px;
+            justify-content: space-between;
+        }
+    
+        .search {
+            margin-left: 60%;
+        }
+
+         .imgMenu{
+       
+        margin-top:140px
+}
+
+.textNotFound{
+    margin-left: 0;
+}
+
+.imageNotFound {
+    margin: 0;
+}
+
+        select{
+            margin-left:10px;
+            width: 170px;
+        }
+
+        #check:checked ~.barra-menu{
+            transform: translateX(920px);
+        }
+
+        
+    
+           
+    }
+ 
 @media screen and (max-width: 950px){
     * {
         margin:0;
@@ -289,29 +457,52 @@ transform: translateX(203px);
        
     }
 
-
-
-     
 }
-   @media screen and (max-width: 652px){
 
-    * {
-        margin:0;
-        padding:0;
+@media screen and (max-width:1025px){
+
+    .logo {
+        margin-left: 23%;
     }
-    html,body, main{
-        height: 100%;
-        width: 100%;
+
+    .barra-menu{
+
+        display:flex;
+        justify-content: row; 
+        width: 1000px;
+        height: 80px;
+        left: -1000px;
+        justify-content: space-between;
+    }
+
+    .imgMenu{
+       
+        margin-top:140px
+    }
+
+    #check:checked ~.barra-menu{
+        transform: translateX(1000px);
+    }
+
+    .typePokemon p{
+        margin-left: 5%;
+    }
     
+        .messageType{
+            margin: 0;
+            margin-top: 100px;
+            margin-left: 50px;
+    
+        }
+
+    .imageNotFound{
+        margin-left: 10%;
     }
+    
 
-    .flip-card{
-
-        /* width:250px; */
-        /* height: 320px; */
-    }
-        
-
-   }
+}
+       
+      
+ 
    
    
