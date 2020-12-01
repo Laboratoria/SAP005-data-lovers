@@ -1,0 +1,21 @@
+body {
+    width: 95%;
+    max-width: 800px;
+    margin: auto;
+    background: url(img/Plain-Black-Wallpaper.png) center;
+    line-height: 1.5;
+    color: rgb(0, 0, 0)
+}
+
+main {}
+
+.elemento1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 1305px;
+    width: 1080px;
+    margin: auto;
+}
