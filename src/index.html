@@ -1,12 +1,65 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <title>PokéLovers</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
+</head>
+
+<body>
+
+    <h1 class="pokeTitle">
+        <a href="https://fontmeme.com/pt/fonte-de-pokemon-go/">
+            <img src="https://fontmeme.com/permalink/201118/1a3144d94df0c397f6a44826d614a3be.png" alt="fonte-de-pokemon-go" border="0"></a>
+    </h1>
+
+    <main>
+
+        <section class="filtro">
+            <div>
+                <label><input type="text-area" id="nome" placeholder="Filtrar por nome"></label>
+                <button id="btn">Filtrar</button>
+            </div>
+            <select id="ordem">
+        <option value="">Ordem alfabética</option>
+        <option value="a-z">A-Z</option>
+        <option value="z-a">Z-A</option>
+            </select>
+
+            <select name="search-type" id="tipo">
+        <option selected disabled>Selecione o tipo</option>
+        <option value="bug">Bug</option>
+        <option value="dragon">Dragon</option>
+        <option value="electric">Electric</option>
+        <option value="fighting">Fighting</option>
+        <option value="fire">Fire</option>
+        <option value="flying">Flying</option>
+        <option value="ghost">Ghost</option>
+        <option value="grass">Grass</option>
+        <option value="ground">Ground</option>
+        <option value="ice">Ice</option>
+        <option value="normal">Normal</option>
+        <option value="poison">Poison</option>
+        <option value="psychic">Psychic</option>
+        <option value="rock">Rock</option>
+        <option value="water">Water</option>
+            </select>
+        </section>
+
+
+        <div id="results" class="results"></div>
+        <div id="cards" class="flex-cards"> </div>
+
+    </main>
+
+    <hr>
+
+    <footer>By Camila Kikuchi e Elis Brasil 2020</footer>
+
     <script src="main.js" type="module"></script>
-  </body>
+
+</body>
+
 </html>

@@ -2,7 +2,7 @@
 
 ## Índice
 
-* [1. Preâmbulo](#1-preâmbulo)
+* [1. Introdução](#1-introdução)
 * [2. Resumo do projeto](#2-resumo-do-projeto)
 * [3. Objetivos de aprendizagem](#3-objetivos-de-aprendizagem)
 * [4. Considerações gerais](#4-considerações-gerais)
@@ -16,25 +16,23 @@
 
 ***
 
-## 1. Preâmbulo
+## 1. Introdução
 
-Segundo a
-[Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read)
-90% dos dados que existem hoje foram gerados durante os últimos dois anos. A
-cada dia geramos 2.5 milhões de terabytes de dados, uma cifra sem precedentes.
+Este projeto consiste na apresentação de um dashboard de Pokémons, com as funcionalidades
+de filtro, organização de cards e cálculo estatistico. Performado em dupla, e com outras opções, optamos pelo tema pokemon. Mas por que Pokémon?
 
-Apesar disso, os dados por si só são de pouca utilidade. Para que essas grandes
-quantidades de dados se convertam em **informação** compreensível para os
-usuários, precisamos entender e processar estes dados. Uma forma simples de
-fazer isso é criando _interfaces_ e _visualizações_.
+Esta franquia enorme nasceu no Japão, criação do Satoshi Tajihi, em meados de 1995. Este
+inicialmente foi desenvolvido para os games da nintendo, onde o treinador capturava, treinava e colocava em combate os pokémons(nome provido das palavras em japonês *Poketto monsutã*). Logo virou febre, pois afinal, quem consegue resistir ao pikachu né! 
 
-Na imagem seguinte, você pode ver como os dados que estão na parte esquerda
-podem ser usados para construir a interface amigável e compreensível que está na
-parte direita.
+Então optamos por esse tema para desenvolver nossa história de usuario, uma vez que provavelmente mais pessoas conheceriam esse tema.
 
-![json-interface](https://lh4.googleusercontent.com/Tn-RPXS26pVvOTdUzRT1KVaJ-_QbFs9SpcGLxSPE43fgbHaXtFgMUInuDt7kV41DkT1j8Tt29V0LxQW7SMtC6digOIhfTXSBKdwI08wUwhD3RAqlwy0hjfmhZ2BFe91mtmCSEqysfgk)
+## 2. Usuário
 
-## 2. Resumo do projeto
+Para a base desse projeto, decidimos iniciar com o usuário, persona, para termos uma ideia dos sites que eles visitavam, o que procuravam, por que se interessaram por esse tema.
+
+Então, desenvolvemos uma formulario para captar a visão de um montante amostral sobre o tema.
+
+
 
 Neste projeto você **construirá uma _página web_ para visualizar um _conjunto
 (set) de dados_** que se adeque às necessidades de seu usuário.
