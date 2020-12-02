@@ -3,6 +3,7 @@ export const bringRivalPokemon = (pokemons, namePokemonInput) => {
     if (pokemon.name == namePokemonInput.value) {
       return {        
         "name": pokemon.name,
+        "num": pokemon.num,
         "image": pokemon.img,
         "type": pokemon.type,
         "resistant": pokemon.resistant,
@@ -11,5 +12,8 @@ export const bringRivalPokemon = (pokemons, namePokemonInput) => {
     }
   }
 }
+
+// TESTE UNITÁRIO
+
 
 

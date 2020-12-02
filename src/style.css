@@ -107,7 +107,7 @@ button {
 }
 
 .input-name {
-  width: 50%;
+  width: 40%;
 	margin: 0 auto;
 	padding: 10px;
 	margin-bottom: 10px;
@@ -135,11 +135,16 @@ button {
 
 .pokemon-bg-section {
   background-image: url("img/poke.jpg");
-  width: 450px;
+  width: 100%;
   height: 1000px;
 }
 
-.flex-container {
+.hidden-card {
+  display: none;
+  visibility: hidden;
+}
+
+#flex-container {
   display: flex;
   flex-direction: column;
   width: 270px;
@@ -173,9 +178,3 @@ button {
 .weaknesses-uppercase {
   text-transform: capitalize;
 }
-
-
-
-
-
-
