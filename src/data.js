@@ -16,99 +16,40 @@ export function filterRivalPokemon(pokemons) {
 }
 
 export function filterAllPokemonByType(pokemons) {
-  let bugType = []; let dragonType = []; let fairyType = [];
-  let fireType = []; let ghostType = []; let groundType = [];
-  let normalType = []; let psychicType = []; let steelType = [];
-  let darkType = []; let electricType = []; let fightingType = [];
-  let flyingType = []; let grassType = []; let iceType = [];
-  let poisonType = []; let rockType = []; let waterType = [];
+  const types = {
+    bug: [],
+    dragon: [],
+    fairy: [],
+    fire: [],
+    ghost: [],
+    ground: [],
+    normal: [],
+    psychic: [],
+    steel: [],
+    dark: [],
+    electric: [],
+    fighting: [],
+    flying: [],
+    grass: [],
+    ice: [],
+    poison: [],
+    rock: [],
+    water: [],
+  }
 
   for (const pokemon of pokemons) {
-    const pokemonType = pokemon.type;
+    const pokemonType = pokemon.type
     for (const type of pokemonType) {
-      switch (type) {
-        case 'bug':
-          bugType.push(pokemon)
-          break;
-        case 'dragon':
-          dragonType.push(pokemon)
-          break;
-        case 'fairy':
-          fairyType.push(pokemon)
-          break;
-        case 'fire':
-          fireType.push(pokemon)
-          break;
-        case 'ghost':
-          ghostType.push(pokemon)
-          break;
-        case 'ground':
-          groundType.push(pokemon)
-          break;
-        case 'normal':
-          normalType.push(pokemon)
-          break;
-        case 'psychic':
-          psychicType.push(pokemon)
-          break;
-        case 'steel':
-          steelType.push(pokemon)
-          break;
-        case 'dark':
-          darkType.push(pokemon)
-          break;
-        case 'electric':
-          electricType.push(pokemon)
-          break;
-        case 'fighting':
-          fightingType.push(pokemon)
-          break;
-        case 'flying':
-          flyingType.push(pokemon)
-          break;
-        case 'grass':
-          grassType.push(pokemon)
-          break;
-        case 'ice':
-          iceType.push(pokemon)
-          break;
-        case 'poison':
-          poisonType.push(pokemon)
-          break;
-        case 'rock':
-          rockType.push(pokemon)
-          break;
-        case 'water':
-          waterType.push(pokemon)
-          break;
-      }
+      types[type].push(pokemon)
     }
   }
-  return {
-    "bug": bugType,
-    "dragon": dragonType,
-    "fairy": fairyType,
-    "fire": fireType,
-    "ghost": ghostType,
-    "ground": groundType,
-    "normal": normalType,
-    "psychic": psychicType,
-    "steel": steelType,
-    "dark": darkType,
-    "electric": electricType,
-    "fighting": fightingType,
-    "flying": flyingType,
-    "grass": grassType,
-    "ice": iceType,
-    "poison": poisonType,
-    "rock": rockType,
-    "water": waterType
-  }
+  return types
 }
 
 export function filterPokemonByRivalWeakness() {
   const rivalWeakness = filterRivalPokemon(pokemons).weaknesses
   const pokemonByType = filterAllPokemonByType(pokemons)
+
   let bestPokemon = []
 
   for (const weakness of rivalWeakness) {
@@ -122,7 +63,8 @@ export function filterPokemonByRivalWeakness() {
 }
 
 export function orderBestPokemonByCP() {
-  const bestPokemon = filterPokemonByRivalWeakness()
+  const bestPokemonCrescent = filterPokemonByRivalWeakness()
+  const bestPokemonDecrescent = filterPokemonByRivalWeakness()
 
   function compareBestPokemonByCP(pokemonA, pokemonB) {
     const pokemonA_CP = pokemonA.stats["max-cp"]
@@ -130,8 +72,8 @@ export function orderBestPokemonByCP() {
 
     return pokemonA_CP.localeCompare(pokemonB_CP, undefined, { numeric: true })
   }
-  const sortedCrescent = bestPokemon.sort(compareBestPokemonByCP);
-  const sortedDecrescent = sortedCrescent.reverse();
+  bestPokemonCrescent.sort(compareBestPokemonByCP)
+  bestPokemonDecrescent.sort(compareBestPokemonByCP).reverse();
 
-  return { sortedCrescent, sortedDecrescent }
+  return { bestPokemonCrescent, bestPokemonDecrescent }
 }
