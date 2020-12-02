@@ -7,5 +7,14 @@ const nomePersonagem = {
     return (busca) 
     
   }
-} 
-export default nomePersonagem
+}
+
+/*const listaPersonagens = {
+  listaPersonagens(data){
+    for(let lista of data){
+    document.getElementById("characters").innerHTML = results.name;
+     }
+  }
+}*/
+
+export default {nomePersonagem}
