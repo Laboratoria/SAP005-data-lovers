@@ -4,11 +4,16 @@ computeStats(data): essa função nos permite fazer cálculos estatísticos bás
 */
 /*const pokemon = {
   pesquisaPokemon(data, nomePokemon) {
-   let listaPokemon = data.pokemon
-   console.log(listaPokemon)
-   let busca = listaPokemon.find(p => p.name == nomePokemon)
-   return (busca)
- }
+    const listaPokemon = data.pokemon
+    let busca = listaPokemon.filter(p => p.name == nomePokemon)
+    return (busca)
+  },
+  filtrarLendarios(data) {
+    const listaPokemon = data.pokemon
+    const lendarios = listaPokemon.filter(p => p['pokemon-rarity'] === 'legendary')
+    console.log(lendarios)
+    return (lendarios)
+  }
 }
 
 export default pokemon*/
