@@ -4,9 +4,9 @@
 ## Índice
 
 * [1. Introdução](#1-introdução)
-* [2.Histórias do Usuário] (#2-Histórias do Usuário)
-* [3. Processo de Desenvolvimento](#2-resumo-do-projeto)
-
+* [2. Histórias do Usuário](#2-histórias-do-usuário)
+* [3. Processo de Desenvolvimento](#3-processo-de-desenvolvimento)
+* [4. Tutorial Pokelovers](#4-tutorial-pokelovers)
 
 ## 1. Introdução
 
@@ -32,6 +32,48 @@
 
 ## 3. Processo de Desenvolvimento
 
+Inicialmente, procuramos entender o funcionamento do jogo Pokemon Go por meio de pesquisas e leituras que nos possibilitou um maior entendimento da real necessidade dos jogadores.
+Nesse contexto, desenvolvemos um protótipo de baixa fidelidade (ou MPV) para testar a usabilidade do usuário, para que após essa etapa, desenvolvessemos a interface de alta fidelidade.
+
+
+
+### Protótipo:
+
+
+
+![MVP Funcionalidade](src/img/prototipo-site.jpg).
+ 	
+Com relação às etapas de desenvolvimento da Aplicação:
+   
+O projeto foi desenvolvido por meio da Metodologia Scrum. Sendo assim, tivemos três ciclos de entrega (Sprints) nos quais determinamos alguns objetivos:
+   
+ 	 Sprint 1:
+	- Planejamento utilizando Trello;
+	- Estrutura HTML da Página;
+	- Separação de arquivos por pastas;
+	- Estilo da Página;
+	- Teste de usabilidade com jogadores de Pokemon Go.
+	- Gerar lista completa completa de Pokemons (inner.Html);
+	- Reformulação do protótipo, com base nos testes realizados.
+
+	 Sprint 2:
+	- Definição do layout final (container onde estão sendo exibidos todos os cards);
+	- Finalização da Página Principal HTML/CSS (com responsividade aplicada);
+	- Função Ordenar por nome (crescente e decrescente);
+	- Filtro por tipo de Pokemon;
+ 	- Correção de problemas que surgiram no decorrer da Sprint (funções, css);
+
+	 Sprint 3:
+	 -Ajustes na semântica do HTML;
+	 -Ajustes de CSS;
+	 -Desenvolvimento do Cálculo Agregado, que permite saber a porcentagem de determinados tipos de Pokemons;
+	 -Desenvolvimento de Testes Unitários;
+	 -Deploy do Projeto.
+
+
+  ## 4. Tutorial Pokelovers
+
+  
 Inicialmente, procuramos entender o funcionamento do jogo Pokemon Go por meio de pesquisas e leituras que nos possibilitou um maior entendimento da real necessidade dos jogadores.
 Nesse contexto, desenvolvemos um protótipo de baixa fidelidade (ou MPV) para testar a usabilidade do usuário, para que após essa etapa, desenvolvessemos a interface de alta fidelidade.
  	
