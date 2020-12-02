@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li class="botao logo" id="logo">
+                    <a href="index.html">
+                        <img src="img/logo.jpg" alt="imagem-logo-pokémon">
+                    </a>
+                </li>
+                <li class="botao lendarios" id="lendarios">
+                    <a href="lendario.html">
+                        Pokémons lendários
+                    </a>
+                </li>
+                <li class="botao comuns" id="comuns">
+                    <a href="#pokemons-mais-encontrados">
+                        Pokémons mais encontrados
+                    </a>
+                </li>
+                <li class="botao pokedex" >
+                    <a id="pokedex" href="pokedex.html">
+                        Pokédex
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <br>
+        <hr>
+        <br>
+        <p class="descricao">Este é um Guia Ilustrado que vai te ajudar a se tornar um treinado Pokémon Go!</p>
+        <br>
+        <form>
+            <label for="pesquisa-pokemon">Procure aqui um Pokémon por nome</label>
+            <input type="text" id="pesquisa-pokemon" class="pesquisa-pokemon" name="pokemon">
+            <button id="pesquisar" name="pesquisar">Pesquisar</button>
+            <label for="filtrar-pokemon"></label>
+        </form>
+        <section id="tabela-resultado">
+        </section>
+        </main>
+    <script src="main.js" type="module"></script>
+</body>
+
+</html>

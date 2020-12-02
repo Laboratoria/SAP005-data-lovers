@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*Tags*/
+
+body {
+  font-family: "Noto Sans", Arial, sans-serif;
+  font-size: 14pt;
+}
+
+li {
+  display: inline-block;
+}
+
+a {
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  padding: 20px;
+  height: 30px;
+  vertical-align: center;
+}
+
+li:hover {
+  /*border:solid 1px #fff;*/
+  background-color: rgb(175, 169, 169) !important;
+  cursor:pointer;
+}
+
+@media (max-width:960px){
+  body{
+      display: flex;
+  }
+}
+
+nav {
+  width:100wh;
+  font-weight: bold;
+}
+
+article {
+  padding: 10px;
+  width: 20%;
+  text-align: center;
+  display: inline-block;
+  border: solid 1px
+}
+
+
+/*Classes*/
+
+.menu {
+  list-style: none;
+}
+
+.imagem-topo {
+  width:100%;
+}
+.descricao {
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  background-color: rgb(74, 179, 71);
+  color: #fff;
+}
+
+.lendarios{
+  background-color: #5CB8FF;  
+}
+
+.comuns {
+  background-color: #ff6600;
+}
+.pokedex {
+  background-color: #ffe00f;
+}
+
+
+/*IDs*/
+#ob-menu{
+  width:100%;
+  margin:0px;
+  padding:0px;
+}
