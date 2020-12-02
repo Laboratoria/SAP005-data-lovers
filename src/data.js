@@ -49,7 +49,6 @@ export function filterAllPokemonByType(pokemons) {
 export function filterPokemonByRivalWeakness() {
   const rivalWeakness = filterRivalPokemon(pokemons).weaknesses
   const pokemonByType = filterAllPokemonByType(pokemons)
-
   let bestPokemon = []
 
   for (const weakness of rivalWeakness) {
@@ -59,21 +58,21 @@ export function filterPokemonByRivalWeakness() {
       }
     }
   }
-  return bestPokemon;
+  return Array.from(new Set(bestPokemon));
 }
 
 export function orderBestPokemonByCP() {
-  const bestPokemonCrescent = filterPokemonByRivalWeakness()
-  const bestPokemonDecrescent = filterPokemonByRivalWeakness()
+  const crescentOrder = filterPokemonByRivalWeakness()
+  const decrescentOrder = filterPokemonByRivalWeakness()
 
-  function compareBestPokemonByCP(pokemonA, pokemonB) {
+  function comparisonByCP(pokemonA, pokemonB) {
     const pokemonA_CP = pokemonA.stats["max-cp"]
     const pokemonB_CP = pokemonB.stats["max-cp"]
 
     return pokemonA_CP.localeCompare(pokemonB_CP, undefined, { numeric: true })
   }
-  bestPokemonCrescent.sort(compareBestPokemonByCP)
-  bestPokemonDecrescent.sort(compareBestPokemonByCP).reverse();
+  crescentOrder.sort(comparisonByCP)
+  decrescentOrder.sort(comparisonByCP).reverse();
 
-  return { bestPokemonCrescent, bestPokemonDecrescent }
+  return { crescentOrder, decrescentOrder }
 }
