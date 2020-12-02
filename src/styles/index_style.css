@@ -245,7 +245,7 @@ img{
 
 /* -----------    CONTAINER INSTRUÇÕES MOSTRAR TODOS OS POKEMONS ------------------ */
 
-.container-instruction-for-view-cards{
+#container-instruction-for-view-cards{
     text-align: center;
     margin-top:37px;
 }
