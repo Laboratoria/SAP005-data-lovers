@@ -5,16 +5,19 @@
     <title>RICK AND MORTY</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <head>
       <p id="root">RICK E MORTY</p>
       <p id="subtitle"><strong>TUDO QUE VOCÊ PRECISA SABER ESTÁ AQUI!</strong></p>
+
     </head>
+    
     <form>
       <label for="characters"></label>
       <input
-      type="list"
-      id="characters"
+      type="select"
+      id="personagens"
       name="characters"
       placeholder="PERSONAGENS"
       min="1"
@@ -23,7 +26,10 @@
       <datalist id="charactersList">
         <option id="characters"></option>
       </datalist>
+
+      <button id="botaoPersonagem">pesquisar</button>
     </form>
+
     <form>
       <label for="episodes"></label>
       <input
@@ -35,15 +41,17 @@
       placeholder="EPISÓDIOS"
       />
     </form>
+
     <form>
       <label for="species"></label>
       <input
-      type="list"
+      type="select"
       id="species"
       name="species"
       placeholder="ESPÉCIES"
       />
     </form>
+
     <form>
       <label for="dimensions"></label>
       <input
@@ -53,11 +61,12 @@
       placeholder="DIMENSÕES"
       />
     </form>
-    <main>
-      <p class="card1">
-      </p>
-    </main>
-    <footer class="footer">
+
+    <section id="cards">
+      <!-- <button onclick="abrirNovaJanela">+ informações</button> -->
+     </section>
+
+       <footer class="footer">
       <div id="sara"> <a href="https://github.com/silvassara">
         SARA SILVA
       </div>
@@ -66,6 +75,8 @@
         JULIANE CRISTINA
       </div>
     </footer>
+    <script src="./data/rickandmorty/rickandmorty.js"></script>
     <script src="main.js" type="module"></script>
+
   </body>
 </html>
