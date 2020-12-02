@@ -2,7 +2,7 @@
 
 
 /*reset em todos os estilos já prontos por padrão*/
-body, h1, h2, p, ul, li, a{
+body, h1, h2, p, ul, li, a, figure{
     margin:0px;
     padding: 0px;
 }
@@ -98,7 +98,7 @@ img{
     border-bottom:2px solid #b6b6b6;
     max-width: 960px;
     margin: 0 auto;
-    padding: 60px 0;
+    padding: 40px 0;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -106,10 +106,8 @@ img{
 }
 
 .item-about-info{
-    margin:0 10px;
-    align-content: center;
     flex: 2 1 300px;
-    margin: 0 10px;
+    margin: 10px 10px;
     align-content: center;
     flex-grow: 1;
 }
@@ -130,9 +128,6 @@ img{
 
 /* ------------------------LOCALIZAR POKEMON------------------------------------------- */
 
-.middle-bg{
-    padding-bottom: 51px;
-}
 
 .search-pokemon{
     font-size:3em;
@@ -177,7 +172,7 @@ img{
 }
 
 ::-webkit-input-placeholder {
-    color: rgb(36, 36, 36);
+    color: rgb(100, 100, 100);
     font-family: 'Exo', sans-serif;
     
 }
@@ -247,7 +242,7 @@ img{
 
 #container-instruction-for-view-cards{
     text-align: center;
-    margin-top:37px;
+    margin-top: 65px;
 }
 
 .instruction-text-view{
