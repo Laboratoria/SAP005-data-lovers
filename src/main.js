@@ -149,7 +149,8 @@ selectElementPokedex.addEventListener('change', (event) => {
         });
     }else{  
         let newArray = filter.pokedexFilter()
-        newArray.reverse()newArray.forEach(pokemon => {
+        newArray.reverse()
+        newArray.forEach(pokemon => {
             dados.show(pokemon);  
         });
     }
