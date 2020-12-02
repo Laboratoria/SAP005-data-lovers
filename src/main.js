@@ -98,9 +98,6 @@ const sizeArray = copyDB.length
 const sizeFilter = array.length
 const result = ((sizeFilter/sizeArray)*100).toFixed(0)+"%";
 const aggregateCal = `<h3>O tipo ${filterTypeSelect} representa ${result} do total de Pokémons</h3>`
-// console.log( sizeArray,sizeFilter )
-// console.log(result)
-// console.log (aggregateCal)
-document.getElementById("item-aggregate-calc").innerHTML = aggregateCal;
+return document.getElementById("item-aggregate-calc").innerHTML = aggregateCal;
 
 }
