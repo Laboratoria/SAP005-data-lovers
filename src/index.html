@@ -18,10 +18,7 @@
 
   <input type="checkbox" id="btn-menu">
   <label for="btn-menu">&#9776;
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-  </label>
+
   </label>
 
   <nav class="links">
@@ -31,7 +28,8 @@
     <label for="rd_rickAndMorty">Inicio</label>
     <label for="rd_cards">Cards</label>
     <label for="rd_curiosidades">Curiosidades</label>
-    <label for="rd_desenvolvedoras">Desenvolvedoras</label>
+    <label for="rd_desenvolvedoras">desenvolvedoras</label>
+    <label for="rd_calculo">calculo</label>
   </nav>
 
 
@@ -40,12 +38,13 @@
     <input type="radio" name="grupo" id="rd_cards" />
     <input type="radio" name="grupo" id="rd_curiosidades" />
     <input type="radio" name="grupo" id="rd_desenvolvedoras" />
+    <input type="radio" name="grupo" id="rd_calculo" />
 
     <section class="sections">
 
       <section class="bloco" id="rickAndMorty">
         <div class="img-logo">
-          <img class="logos" src="./data/rickandmorty/images/logo trans.png" />
+          <img class="logos" src="./data/rickandmorty/images/morty.gif" />
         </div>
       </section>
 
@@ -54,18 +53,19 @@
           <form>
             <input id="texto" type="search" placeholder="Pesquise seu personagem favorito" />
             <button id="btn" type="submit">
-              <img src="./data/rickandmorty/images/search-512.webp" width="23px" padding="23px" />
+              <img src="./data/rickandmorty/images/pesquisa.png" width="23px" padding="23px" />
             </button>
             <button id="reset" type="Reset"><b>Reset</b></button>
             <button id="oBtn" type="submit">A-Z</button>
             <button id="aBtn" type="submit">Z-A</button>
 
+            
             <div class="tooltip">+ Infos!
               <span class="tooltiptext">click no card e segure</span>
             </div>
+
           </form>
           <br />
-
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link href="https://fonts.googleapis.com/css2?family=Lacquer&display=swap" rel="stylesheet" />
           <div class="container">
@@ -83,9 +83,91 @@
         </main>
       </section>
 
-      <section class="bloco" id="curiosidades"></section>
+      <section class="bloco" id="curiosidades">
 
-      <section class="bloco" id="desenvolvedoras"></section>
+        <h2 class="curiosidades">Curiosidades de Rick and Morty que vão fazer você amar esse desenho!</h2><br>
+
+        <ul class="li">
+          <li>Rick and Morty nasceu como uma paródia de Doc Brown e Marty McFly,
+            dos filmes De Volta Para o Futuro, lançados na década de 1980.
+          </li>
+          <li> O seriado foi criado, vendido e roteirizado em apenas um dia.
+          </li>
+          <li>Pickle Rick é uma homenagem a um episódio de Breaking Bad </li>
+          <li>Os bordões de Rick são sempre geniais e desbocados! O mais famoso, Wobba Lubba Dub Dub,
+            tem uma tradução não muito feliz na língua das Pessoas-Pássaro:
+            "Eu estou sofrendo muito, por favor me ajude".</li>
+          <li>Referência à Community, série da NBC também criada por Dan Harmon. Além da participação dos
+            atores Joel McHale, Gillian Daniels e Jim Rash (respectivamente o Jeff, a Britta e o reitor Dean
+            Pelton) como dubladores dos personagens, em um dos episódios Rick fica entediado tentando bolar
+            uma série de TV que é basicamente uma versão alien de Community.</li>
+          <li>Gearhead é inspirado em Roboto do He-Man </li>
+          <li>crossover discreto com Gravity Falls,
+            ainda que Gravity Falls seja de uma emissora e Rick and Morty, de outra.
+            No episódio "Close Rick-counters of the Rick Kind", o penúltimo da primeira temporada,
+            Rick abre vários portais para tentar encontrar um dos sósias acusados de assassinato.
+            Em um deles, surgem uma caneca, uma caneta e um bloco de notas — justamente os três itens
+            que desapareceram em "Society of the Blind Eye",de Gravity Falls, e que San disse ter perdido em um portal.
+          </li>
+        </ul>
+      </section>
+
+      <section class="bloco" id="desenvolvedoras">
+        <div class="dev">
+          <img src="./data/rickandmorty/images/i.jpg" >
+          <div class="box">
+            <h4><b>Priscila Silveira</b></h4> 
+            <p><a href="https://www.linkedin.com/in/priscilassilveira/" target="_blank"><img src="./data/rickandmorty/images/icons8-linkedin-50.png" ></a>
+              <a href="https://github.com/PriscilaSSilveira" target="_blank"><img src="./data/rickandmorty/images/git.webp" ></a></p> 
+          </div>
+        </div>
+        
+
+      </section>
+
+      <section class="bloco" id="calculo">
+
+        <div class="contagem">
+
+          <table border="2">
+            <tr class="top">
+              <td>Status</td>
+              <td>Quantidade</td>
+
+
+            </tr>
+            <tr>
+              <td>Vivo</td>
+              <td id=alive></td>
+
+
+            </tr>
+            <tr>
+              <td>Morto</td>
+              <td id="dead"></td>
+
+            </tr>
+            <tr>
+              <td>Desconhecido</td>
+              <td id="unknown"></td>
+
+            </tr >
+            <tr class="top">
+              <td>Total</td>
+              <td id="total"></td>
+
+            </tr>
+          </table>
+        </div>
+
+        <div id="grafico">
+          <div id="piechart"></div>
+
+          <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+          
+        </div>
+
+      </section>
   </div>
 
   <footer></footer>

@@ -1,58 +1,26 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;    
-  }
-  
-  
-  html {  
+    box-sizing: border-box;
+}
+
+html {
     font-size: 62.5%;
-  }
-  
-  
-  html,
-  body {
+}
+
+html, body {
     width: 100%;
     height: 100%;
-    
-  }
-  
-  label[for="btn-menu"] {
-    padding: 8px;
-    background-color: #000;
-    color: #fff;
-    font-family: 'Lacquer', sans-serif;
-    font-size: 30px;
-    text-align: center;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-   
-    display: none;
-  
-  }
-  
-  #btn-menu{
-    width: 3rem;
-    height: 3rem;
-    display: none;
-    background-color: #000000;
-    /*z-index: 9;*/
-    
-  }
-  
-  .links {
+}
+
+.links {
     width: 100%;
-    height: 10rem;
+    height: 10%;
     position: absolute;
     display: flex;
-    /*float:right;/
-    /margin-right: 25px;*/
-      
-   
-  }
+}
 
-  .links label {
+.links label {
     padding: 10px 0;
     flex-grow: 1;
     cursor: pointer;
@@ -61,48 +29,53 @@
     font-weight: bold;
     font-size: 3.8rem;
     color: beige;
-    /*margin:5rem;*/
-    position:relative;
-    
-  }
-  
-  .links label:hover {
+}
+
+.links label:hover {
     width: auto;
-   background-color: rgba(242, 4, 250, 0.959);
+    background-color: rgba(242, 4, 250, 0.438);
     height: auto;
     border-radius: 0.5rem;
-  }
-  
-  .scroll input {
+}
+
+.scroll input {
     display: none;
-  }
-  
-  .bloco {
+}
+
+.bloco {
     width: 100vw;
     height: 100vh;
     justify-content: center;
     align-items: center;
     display: flex;
-    /*background-color: #000;*/
-  }
-  
-  #rickAndMorty {
+}
+
+#rickAndMorty {
     background-image: url('./data/rickandmorty/images/stars.gif');
-  }
-  
-  #cards {
+}
+
+#cards {
     background-image: url('./data/rickandmorty/images/stars.gif');
-  }
-  
-  #curiosidades {
+}
+
+#curiosidades {
     background-image: url('./data/rickandmorty/images/stars.gif');
-  }
-  
-  #desenvolvedoras {
+    color: #fff;
+    text-align: left;
+    flex-wrap: wrap;
+    padding-left: 100px;
+    font-family: 'Lacquer', sans-serif;
+}
+
+#desenvolvedoras {
     background-image: url('./data/rickandmorty/images/stars.gif');
-  }
-  
-  #texto {
+}
+
+#calculo {
+    background-image: url('./data/rickandmorty/images/stars.gif');
+}
+
+#texto {
     background: #ffffff;
     padding: 1px 10px;
     color: #000000;
@@ -114,110 +87,153 @@
     font-size: 75%;
     border-width: 2px;
     border-radius: 6px 0px 0px 6px;
-    
-  }
-  
-  
-  input {
     text-align: center;
     float: left;
-   /* height: 40vh;
-    width: 18vw;
-    font-size: 2.3rem;
-    padding: 1rem;
-    border-width: 0.2rem;
-    border-radius: 6px 0px 0px 6px;*/
-  }
-  
-  #reset, #oBtn, #aBtn {
+}
+
+#reset, #oBtn, #aBtn {
     padding: 9px;
     font-size: 75%;
     border-radius: 6px 6px;
-    /*margin-top: 10px;*/
     background-color: rgba(0, 255, 76, 0.616);
     color: black;
     width: 9rem;
     font-weight: bold;
-  }
-  
-  #oBtn:hover, #reset:hover, #aBtn:hover{
+}
+
+#oBtn:hover, #reset:hover, #aBtn:hover {
     cursor: pointer;
     box-shadow: inset 0 0 2em rgb(168, 240, 168);
-  }
-  
-  #btn {
+}
+
+#btn {
     padding: 9px;
     font-size: 75%;
     border-radius: 6px 6px;
     background-color: rgba(0, 255, 76, 0.616);
     color: black;
     width: 6rem;
-  }
-  
-  #btn:hover {
+}
+
+#btn:hover {
     cursor: pointer;
     box-shadow: inset 0 0 2em rgb(168, 240, 168);
-  }
-  
-  .scroll {
+}
+
+.scroll {
     display: flex;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-  }
-  
-  .sections {
+}
+
+.sections {
     transition: all .4s;
-  }
-  
-  #rd_cards:checked~.sections {
+}
+
+#rd_cards:checked~.sections {
     margin-top: -100vh;
-  }
-  
-  #rd_curiosidades:checked~.sections {
+}
+
+#rd_curiosidades:checked~.sections {
     margin-top: -200vh;
-  }
-  
-  #rd_desenvolvedoras:checked~.sections {
+}
+
+#rd_desenvolvedoras:checked~.sections {
     margin-top: -300vh;
+}
+
+#rd_calculo:checked~.sections {
+    margin-top: -400vh;
+}
+
+#grafico {
+    padding-left: 400px;
+}
+
+table {
+    background-color: #ffffffb2;
+    text-align: center;
+    width: 400px;
+    height: 400px;
+}
+table .top {
+    background-color: rgb(255, 255, 255)
+}
+
+
+td {
+    font-weight: bold;
+}
+.dev {
+    box-shadow: 0 8px 8px 0 rgba(255, 255, 255, 0.952);
+    transition: 0.3s;
+   border-radius: 5px;
+   
+  }
+  .dev img{
+    width: 410px;
+    height: 420px;
+    border-radius: 10px ;
+   
+    
+}
+  
+  .dev:hover {
+    box-shadow: 0 16px 16px 0 rgba(251, 251, 251, 0.801);
   }
   
-  body {
-   font-size: 2.8rem;
+  .box {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    padding: 0px 16px;
+    background: #0000008e;
+    color: #ffffff;
+   
   }
-  
-  .img-logo {
-    width:100%;
+  .box img{
+      height: 50px;
+      width: 50px;
+  }
+  .box img:hover{
+
+    box-shadow: 0 16px 16px 0 rgba(255, 255, 255, 0.801);
+
+  }
+body {
+    font-size: 2.8rem;
+}
+
+.img-logo {
+    width: 100%;
     display: flex;
     justify-content: center;
-  
-  
-  }
-  
-  .img-logo :hover {
+}
+
+.img-logo :hover {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
-  }
-  
-  
-  .card {
+}
+
+.card {
     display: grid;
     overflow-x: auto;
     height: 500px;
     width: 1700px;
     perspective: 1000;
-  }
-  
-  .frontCard, .backCard {
+}
+
+.frontCard, .backCard {
     display: flex;
     justify-content: space-around;
     flex-wrap: nowrap;
     place-items: center;
-  }
-  
-  .frontContainer {
-    box-shadow: 8px 8px 8px 8px rgba(242, 4, 250, 0.959);
+}
+
+.frontContainer {
+    box-shadow: 8px 8px 8px 8px rgba(242, 4, 250, 0.438);
     border-radius: 10px;
     width: 300px;
     height: 410px;
@@ -227,10 +243,10 @@
     margin: 0.5em;
     font-weight: bold;
     text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbbbbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaaaaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
-    font-size:3rem;
-  }
-  
-  .backCard div {
+    font-size: 3rem;
+}
+
+.backCard div {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.959);
     border-radius: 10px;
     width: 300px;
@@ -241,43 +257,55 @@
     margin: 0.5em;
     font-weight: bold;
     font-size: 40px;
-  }
-  
-  .backCard h4 {
+}
+
+.backCard div:hover {
+    box-shadow: 0 8px 16px 0 rgb(0, 0, 0);
+}
+
+.backCard h4 {
     font-size: 25px;
     text-align: justify;
     margin-left: 10px;
-  }
-  
-  .backCard div:hover {
-    box-shadow: 0 8px 16px 0 rgb(0, 0, 0);
-  }
-  
-  .container {
+}
+
+.container {
     margin-top: 100px;
     display: flex;
     justify-content: center;
-  }
-  
-  .card .flip {
+}
+
+.card .flip {
     transition: transform 0.5s;
     transform-style: preserve-3d;
-  }
-  
-  .card:active .flip {
+}
+
+.card:active .flip {
     transform: rotateX(180deg);
-  }
-  
-  .front-card, .back-card {
+}
+
+.front-card, .back-card {
     position: absolute;
     backface-visibility: hidden;
-  }
-  .back-card {
+}
+
+.back-card {
     transform: rotateX(180deg);
-  }
-  
-  
-  .tooltip {
+}
+
+.curiosidades {
+    padding-top: 100px;
+    background-color: rgba(0, 0, 0, 0.705);
+}
+
+.li {
+    font-family: sans-serif;
+    padding: 100px;
+    margin-top: -50px;
+    background-color: rgba(0, 0, 0, 0.712);
+}
+
+.tooltip {
     position: relative;
     display: inline-block;
     border-bottom: 1px dotted black;
@@ -287,14 +315,14 @@
     border-radius: 6px 6px;
     width: 120px;
     font-weight: bold;
-  }
-  
-  .tooltip:hover {
+}
+
+.tooltip:hover {
     cursor: pointer;
     box-shadow: inset 0 0 2em rgb(168, 240, 168);
-  }
-  
-  .tooltip .tooltiptext {
+}
+
+.tooltip .tooltiptext {
     visibility: hidden;
     width: 120px;
     background-color: rgb(172, 2, 172);
@@ -309,9 +337,9 @@
     margin-left: -60px;
     opacity: 0;
     transition: opacity 0.3s;
-  }
-  
-  .tooltip .tooltiptext::after {
+}
+
+.tooltip .tooltiptext::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -319,14 +347,15 @@
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: rgba(197, 20, 20, 0.74) transparent transparent transparent;
-  }
-  
-  .tooltip:hover .tooltiptext {
+    border-color: transparent;
+}
+
+.tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
-  }
-  
+}
+
+/*
   @media (max-width: 1750px){
   
    
@@ -395,8 +424,8 @@
     }
     #btn-menu:checked ~ .links label .line:nth-child(2){
       opacity: 0;}*/
-   
-   /*.links label {
+
+/*.links label {
     float: none;
     position: fixed;
     z-index: 9;
@@ -413,8 +442,8 @@
     box-sizing: border-box;
     transition: all .5s ease-in-out;
   }*/
-  
-  .links {
+
+/* .links {
     width : 100%;
     float: none;
     
@@ -437,4 +466,54 @@
   
   
 
-  }
+  }*/
+
+/*
+#btn-menu {
+    position: absolute;
+    top: -100px;
+}
+
+nav .icon-burger {
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+nav .icon-burger .line {
+    width: 30px;
+    height: 5px;
+    background-color: aliceblue;
+    margin: 5px;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+    label .links {
+        float: none;
+        position: fixed;
+        z-index: 9;
+        left: 0;
+        right: 0;
+        top: 100px;
+        bottom: 100%;
+        width: auto;
+        height: auto;
+        flex-direction: column;
+        background-color: aqua;
+        overflow: hidden;
+        transition: all .5s ease-in-out;
+    }
+    label :checked~.links {
+        bottom: 0;
+    }
+    label .icon-burger {
+        display: block;
+    }
+    label :checked~.icon-burger .line:nth-child(1) {
+        transform: translateY(10px);
+    }
+}*/
