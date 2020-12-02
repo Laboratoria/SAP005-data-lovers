@@ -20,7 +20,7 @@ function printCharacters(dados) {
       `
     }
     document.getElementById("hero").innerHTML = cards
-};
+}
 printCharacters(dataBase);
 
 const filterSelect = document.querySelector('.filter-gender');
@@ -31,7 +31,7 @@ function filterGender() {
     printCharacters(selectedGender)
     let resultGender = calcGender(dataBase, selectedGender)
     document.getElementById("calculation").innerHTML = "Existem " + selectedGender.length + " personagens deste gênero e representa " + resultGender + "% do total de personagens"
-};
+}
 
 const filterSelectStatus = document.querySelector('.filter-status');
 filterSelectStatus.addEventListener('click', filterStatus)
@@ -42,7 +42,7 @@ function filterStatus() {
     let resultStatus = calcStatus(dataBase, selectedStatus)
     document.getElementById("calculation").innerHTML = "Existem " + selectedStatus.length + " personagens neste status e representa " + resultStatus + "% do total de personagens"
 
-};
+}
 
 const filterSelectSpecies = document.querySelector('.filter-species');
 filterSelectSpecies.addEventListener('click', filterSpecies)
@@ -52,7 +52,7 @@ function filterSpecies() {
     printCharacters(selectedSpecies)
     let resultSpecies = calcSpecies(dataBase, selectedSpecies)
     document.getElementById("calculation").innerHTML = "Existem " + selectedSpecies.length + " personagens desta espécie e representa " + resultSpecies + "% do total de personagens"
-};
+}
 
 const filterSelectOrder = document.querySelector('.filter-order');
 filterSelectOrder.addEventListener('click', filterOrder)
@@ -61,4 +61,4 @@ function filterOrder() {
     const valueOrderSelected = filterSelectOrder.value
     const selectedOrder = sortOrder(dataBase, valueOrderSelected)
     printCharacters(selectedOrder)
-};
+}
