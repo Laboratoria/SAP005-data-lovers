@@ -7,62 +7,26 @@
   </head>
 
   <body>
-<<<<<<< HEAD
 
     <head>
       <p id="root">RICK E MORTY</p>
       <p id="subtitle"><strong>TUDO QUE VOCÊ PRECISA SABER ESTÁ AQUI!</strong></p>
-
+      <p id="nav">FILTRAR PERSONAGENS POR:</p>
     </head>
 
-    <form>
-      <label for="characters"></label>
-      <input
-      type="select"
-      id="personagens"
-      name="characters"
-      placeholder="PERSONAGENS"
-      min="1"
-      max="493"
-      />
-      <datalist id="charactersList">
-        <option id="characters"></option>
-      </datalist>
-      <button id="botaoPersonagem">pesquisar</button>
-    </form>
+    <nav>
+      <select id="personagens" placeholder="Personagem"></select>
+      <!-- <button id="botaoPersonagens">PERSONAGENS</button> -->
 
-    <form>
-      <label for="episodes"></label>
-      <input
-      type="number"
-      min="1"
-      max="31"
-      id="episodes"
-      name="episodes"
-      placeholder="EPISÓDIOS"
-      />
-    </form>
+      <select id="episodios"></select>
+      <!-- <button id="botaoEpisodios">EPISÓDIOS</button> -->
 
-    <form>
-      <label for="species"></label>
-      <input
-      type="select"
-      id="species"
-      name="species"
-      placeholder="ESPÉCIES"
-      />
-    </form>
+      <select id="especies"></select>
+      <!-- <button id="botaoEspecies">ESPÉCIES</button> -->
 
-    <form>
-      <label for="dimensions"></label>
-      <input
-      type="list"
-      id="dimensions"
-      name="dimensions"
-      placeholder="DIMENSÕES"
-      />
-    </form>
-
+      <select id="dimensoes"></select>
+      <!-- <button id="botaoDimensoes">DIMENSÕES</button> -->
+    </nav>
 
 
 
@@ -81,10 +45,6 @@
       </div>
     </footer>
 
-=======
-    <p>Oi</p>
-    <div id="root"></div>
->>>>>>> a62c9ed58165abe1de87fe30af09c4b7328d0180
     <script src="main.js" type="module"></script>
   </body>
 </html>

@@ -19,8 +19,8 @@ html{
   padding: 20px 20px 0px;
 }
 
-#subtitle{
-  color: #f2f5f1;
+#subtitle, #nav{
+  color: #fbfcfd;
   text-shadow: #03eaac 0px 1px 10px;
   background-color: black;
   text-align: center;
@@ -28,42 +28,52 @@ html{
   font-family: Arial;
   letter-spacing: 10px;
   margin: 0px;
-  padding: 20px 20px;
+  padding:20px;
+  opacity: 0.9;
 }
 
-form{
+
+nav, button{
   display: flex;
+  flex-direction: row;
   justify-content: center;
 }
+/*
+#inputs{
+  width: 50%;
+} */
 
-input{
+input, select, button{
   background-color: black;
-  color: white;
+  color: rgb(250, 250, 250);
   border-style:groove;
   border-radius: 50px;
   font-family: arial;
   font-size: 15px;
   width: 20%;
-  padding: 10px 10px;
+  padding:10px 10px;
   text-align: center;
-
+  border: 2px solid #03f7ae;
+  box-shadow: 0 8px 16px 0 white, 0 6px 20px 0 green;
+  /* opacity: 0.6;
+  transition: 0.3s;
+  cursor: pointer; */
 
 }
 
-#card1{
+::placeholder{color:white;}
+
+datalist{display: none;}
+
+#card1, datalist{
   background-color: black;
   color: white;
 }
 
-
-
-
-#sara, #juliane{
-  display:inline;
-}
+#sara, #juliane{display:inline;}
 
 a{
-  color: #FFF;
+  color: rgb(0, 181, 247);
   text-decoration: none;
 }
 
