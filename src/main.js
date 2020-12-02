@@ -21,8 +21,11 @@ function pokebola(list) {
         <h4 class="card-type">Tipo:${card.type.toString().replace(",","|")}</h4>
     </li>
     <li class="back-card">
-    <h2 class="card-num">${card.num}</h4>
-    <p class="card-rarity">Raridade:${card["pokemon-rarity"]}</p>
+      <h2 class="card-num">${card.num}</h4>
+      <p class="height">Altura: ${card.size.height}</p>
+      <p class="weight">Peso: ${card.size.weight}</p>
+      <p class="card-weaknesses">Fraquezas: ${card.weaknesses.join("|")}</p>
+      <p class="card-evolution">Evoluções:${card}</p>
     </li>
     </ul>
     </article>`
