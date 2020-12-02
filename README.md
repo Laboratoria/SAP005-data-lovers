@@ -4,16 +4,33 @@
 ## Índice
 
 * [1. Introdução](#1-introdução)
-* [2. Processo de Desenvolvimento](#2-resumo-do-projeto)
+* [2.Histórias do Usuário] (#2-Histórias do Usuário)
+* [3. Processo de Desenvolvimento](#2-resumo-do-projeto)
 
 
 ## 1. Introdução
 
-  O PokeLovers foi desenvolvido pensando em usuários com experiência no [App Pokemon Go](https://pt.wikipedia.org/wiki/Pok%C3%A9mon_GO#:~:text=Niantic%2C%20Inc.,-Compositor(es)&text=Pok%C3%A9mon%20GO%20%C3%A9%20um%20jogo,realidade%20aumentada%20voltado%20para%20smartphones.&text=Foi%2Dlhe%20creditada%20a%20populariza%C3%A7%C3%A3o,e%20movimentando%20os%20neg%C3%B3cios%20locais.)
+  O PokeLovers foi desenvolvido para jogadores com experiência no [App Pokemon Go](https://pt.wikipedia.org/wiki/Pok%C3%A9mon_GO#:~:text=Niantic%2C%20Inc.,-Compositor(es)&text=Pok%C3%A9mon%20GO%20%C3%A9%20um%20jogo,realidade%20aumentada%20voltado%20para%20smartphones.&text=Foi%2Dlhe%20creditada%20a%20populariza%C3%A7%C3%A3o,e%20movimentando%20os%20neg%C3%B3cios%20locais.)
 
-  A WebPage inicial do PokeLovers dispõe de um Campo para busca individual de PokeCard com informações básicas (Imagem, Nome, Número do Pokémon, Tipo e Resistência), um Painel com informações sobre o PokeLovers a qual é substituído por PokeCards de todos os Pokemons.
+  Na aplicação, é possível que o usuário localize informações sobre Pokemons, filtre e ordene os dados apresentados, de acordo com suas necessidades. 
+  
+  
+## 2. Histórias do Usuário
+  
+  De acordo com as pesquisas levantadas, foi possível constatar as seguintes necessidades dos Usuários de Pokemon GO:
+  
+  -Realizar buscas de Pokemons específicos (Pokecard), no qual é possível visualizar as informações dos Pokemons;
+  -Filtrar Pokemons por tipo.
+  
+  Nesse sentido, são histórias de usuário da aplicação:
+  
+  "Eu, como jogador de Pokemon Go, gostaria de poder localizar um Pokemon e ter acesso à um resumo de suas características"
+  
+  e
+  
+  "Eu, como jogador de Pokemon Go, gostaria de uma aplicação que me permitisse filtrar Pokemons por tipo"
 
-## 2. Processo de Desenvolvimento
+## 3. Processo de Desenvolvimento
 
 Inicialmente, procuramos entender o funcionamento do jogo Pokemon Go por meio de pesquisas e leituras que nos possibilitou um maior entendimento da real necessidade dos jogadores.
 Nesse contexto, desenvolvemos um protótipo de baixa fidelidade (ou MPV) para testar a usabilidade do usuário, para que após essa etapa, desenvolvessemos a interface de alta fidelidade.
@@ -38,6 +55,7 @@ O projeto foi desenvolvido por meio da Metodologia Scrum. Nesse sentido, tivemos
 	- Filtro por tipo de Pokemon;
   	- Inicio escopo HTML/CSS da segunda página, onde constará o cálculo agregado.
  	- Correção de problemas que surgiram no decorrer da Sprint (funções, css);
+  
 
   
 	
