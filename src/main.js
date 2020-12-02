@@ -2,7 +2,12 @@ import pokemon from './data.js';
 
 import data from './data/pokemon/pokemon.js';
 
-const pesquisa = document.getElementById("pesquisar")
+const pesquisaLendario = document.getElementById("tabela-lendario")
+const rarity = pokemon.data.pokemon-rarity
+const resultado = pokemon.pesquisaPokemon(data,rarity)
+//const pokemonRaridade = resultado.pokemon-rarity
+console.log(resposta)
+/*const pesquisa = document.getElementById("pesquisar")
 pesquisa.addEventListener("click", function (evt) {
     evt.preventDefault()
     const textoPesquisa = document.getElementById("pesquisa-pokemon").value
@@ -26,7 +31,7 @@ pesquisa.addEventListener("click", function (evt) {
     document.getElementById("fraqueza").innerHTML = "Weaknesses:"
     const fraquezaPokemon = document.getElementById("fraqueza-pokemon")
     fraquezaPokemon.innerHTML = resultado.weaknesses
-})
+})*/
 
 
 /*const localTabela = document.getElementById("tabela-resultado")
