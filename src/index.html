@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+  <!--<a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>-->
   <link rel="stylesheet" href="style.css">
   <title>Pokelovers</title>
 </head>
@@ -42,6 +43,9 @@
       </div>
     </header>
     <main>
+      <section class="overlay">
+        <div class="cloudOne"></div>
+      </section>
       <section class="tabs" id="title1">
         <ul>
           <li>
@@ -113,18 +117,25 @@
           </li>
         </ul>
       </section>
+      <section class="overlay-carousel">
+        <div class="cloudTwo"></div>
+      </section>
       <section class="carousel-pokemon">
         <h2 id="title2">Pókemons</h2>
         <form class="box-filter">
+          <div class="container-input">
+            <a class="search-btn" id="searchInput" href="#">
+              <img class="search-img" src="images/loupe.png">
+            </a>
           <input type="text" name="namePokemon" id="textInput" value="Nome do Pokemon" class="input-filter  searchInput" />
-          <button type="send" id="searchInput" class="input-filter">procurar</button>
-          <select id="orderInput" class="input-filter select">
+          <!--<button type="send" id="searchInput" class="input-filter">procurar</button>-->
+          <select id="orderInput" class="order-filter">
             <option disabled selected value="">Ordenar:</option>
             <option value="0-251">0-251</option>
             <option value="A-Z">A-Z</option>
             <option value="Z-A">Z-A</option>
           </select>
-          <select id="typeInput" class="input-filter">
+          <select id="typeInput" class="type-filter">
             <option disabled selected value="">Tipo:</option>
             <option value="todos">Todos</option>
             <option value="normal">Normal</option>
@@ -146,6 +157,7 @@
             <option value="poison">Poison</option>
             <option value="flying">Flying</option>
           </select>
+          </div>
         </form>
         <div class="calculusFilter">
           <p id="calculus"></p>
