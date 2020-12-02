@@ -106,7 +106,6 @@ img{
 }
 
 .item-about-info{
-    flex:1 1 300px;
     margin:0 10px;
     align-content: center;
     flex: 2 1 300px;
@@ -246,36 +245,45 @@ img{
 
 /* -----------    CONTAINER INSTRUÇÕES MOSTRAR TODOS OS POKEMONS ------------------ */
 
+.container-instruction-for-view-cards{
+    text-align: center;
+    margin-top:37px;
+}
+
+.instruction-text-view{
+    color:blue;
+    font-size:20pt;
+    line-height: 1;
+    max-width: 960px;
+    margin: 0 auto;
+    text-shadow: 0em 0em 0.4em rgb(158, 158, 158);
+}
+
+
+/* -------------------CONTAINER BOTÕES------------------------- */
 
 .container-filter{
-    border-top: 2px solid #b6b6b6;
     max-width: 960px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     align-items:center;
-    padding: 60px 0px 36px 0px;
+    padding: 30px 0px 36px 0px;
 }
 
-
-
 .item-filter h1{
-    font-size: 1em;
+    font-size: 20px;
     max-width: 960px;
-    padding-left: 45px;
+    margin-top: 30px;
+    padding-left: 101px;
     margin-right: 10px;
     margin-bottom: 21px;
 }
 
-#item-btn-generation-pokemon{
-    flex:3;
-}
 
 #btn-generation-pokemon{
     cursor: pointer;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
-    margin-top: 0.3em;
+    margin-left: 30px;
     box-sizing: border-box;
     background-color: blue;
     border: none;
@@ -288,56 +296,15 @@ img{
     transition: all 0.3s ease-in-out 0s;
 }
 
-#btn-filter-type{
-    cursor: pointer;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
-    margin-top: 0.3em;
-    box-sizing: border-box;
-    background-color: blue;
-    border: none;
-    border-radius: 16px;
-    color: white;
-    padding: 12px;
-    font-family: Exo, sans-serif;
-    font-size: 13pt;
-    font-weight: 700;
-    transition: all 0.3s ease-in-out 0s;
-}
-#btn-filter-type:hover{
+#btn-generation-pokemon:hover{
     background-color: rgb(135, 135, 231);
     scale: .5px;
 }
 
-/* ----------------------------CONTAINER DE ORDENAR------------------------------- */
-
-
-.container-sort{
-    
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 60px 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    align-items: flex-end;
-}
-
-.item-sort h1{
-    font-size: 2em;
-    line-height: 1;
-    max-width: 960px;
-    margin: 0 auto;
-    padding-left: 10px;
-    margin-right: 10px;
-}
-
 #btn-cresc-pokemon{
     cursor: pointer;
-    margin-left: 19px;
-    margin-right: 0;
-    margin-top: 0.3em;
+    margin-left: 37px;
+    margin-top: 10;
     box-sizing: border-box;
     background-color: blue;
     border: none;
@@ -345,7 +312,7 @@ img{
     color: white;
     padding: 9px;
     font-family: Exo, sans-serif;
-    font-size: 9pt;
+    font-size: 12pt;
     font-weight: 700;
     transition: all 0.3s ease-in-out 0s;
 }
@@ -368,7 +335,7 @@ img{
     color: white;
     padding: 9px;
     font-family: Exo, sans-serif;
-    font-size: 9pt;
+    font-size: 12pt;
     font-weight: 700;
     transition: all 0.3s ease-in-out 0s;
 }
@@ -379,6 +346,39 @@ img{
 }
 
 
+#filter-text{
+    margin-left: -46px;
+}
+
+#filter-type-select{
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 102px;
+    font-family: Exo, sans-serif;
+    font-size:12pt;
+
+}
+
+#btn-filter-type{
+    cursor: pointer;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-top: 0.3em;
+    box-sizing: border-box;
+    background-color: blue;
+    border: none;
+    border-radius: 16px;
+    color: white;
+    padding: 12px;
+    font-family: Exo, sans-serif;
+    font-size: 13pt;
+    font-weight: 700;
+    transition: all 0.3s ease-in-out 0s;
+}
+#btn-filter-type:hover{
+    background-color: rgb(135, 135, 231);
+    scale: .5px;
+}
 /* --------------------------------CONTAINER ONDE SÃO MOSTRADOS TODOS OS CARDS------------ */
 
 .container-show-all-cards{
@@ -386,15 +386,28 @@ img{
     flex-direction: row;
     flex-wrap: wrap;
     background: gray;
-    border-top:2px solid #b6b6b6;
+    border-top: 2px solid #b6b6b6;
     max-width: 1050px;
     margin: 0 auto;
     padding: 0 0;
-    height: 71em;
-    overflow-x: hidden; 
-    overflow-y: scroll; 
+    height: 480px;
+    overflow-x: hidden;
+    overflow-y: scroll;
 
 }
+
+#item-aggregate-calc{
+    flex: 2 1 300px;
+    text-align:center;
+    margin-top: 16px;
+}
+
+#item-aggregate-calc h3{
+    color:white;
+    font-size:15pt;
+}
+
+
 
 
 .mostrar{
