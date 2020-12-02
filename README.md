@@ -74,31 +74,3 @@ O projeto foi desenvolvido por meio da Metodologia Scrum. Sendo assim, tivemos t
   ## 4. Tutorial Pokelovers
 
   
-Inicialmente, procuramos entender o funcionamento do jogo Pokemon Go por meio de pesquisas e leituras que nos possibilitou um maior entendimento da real necessidade dos jogadores.
-Nesse contexto, desenvolvemos um protótipo de baixa fidelidade (ou MPV) para testar a usabilidade do usuário, para que após essa etapa, desenvolvessemos a interface de alta fidelidade.
- 	
-Com relação às etapas de desenvolvimento da Aplicação:
-   
-O projeto foi desenvolvido por meio da Metodologia Scrum. Nesse sentido, tivemos três ciclos de entrega (Sprints) nos quais determinamos alguns objetivos:
-   
- 	 Sprint 1:
-	- Planejamento utilizando Trello;
-	- Estrutura HTML da Página;
-	- Separação de arquivos por pastas;
-	- Estilo da Página;
-	- Teste de usabilidade com jogadores de Pokemon Go.
-	- Gerar lista completa completa de Pokemons (inner.Html);
-	- Reformulação do protótipo, com base nos testes realizados.
-
-	 Sprint 2:
-	- Definição do layout final (container onde estão sendo exibidos todos os cards);
-	- Finalização da Página Principal HTML/CSS (com responsividade aplicada);
-	- Função Ordenar por nome (crescente e decrescente);
-	- Filtro por tipo de Pokemon;
-  	- Inicio escopo HTML/CSS da segunda página, onde constará o cálculo agregado.
- 	- Correção de problemas que surgiram no decorrer da Sprint (funções, css);
-  
-
-  
-	
-
