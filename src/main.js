@@ -78,7 +78,7 @@ selectPokemon.addEventListener('change', (event) => {
     printFilteredType()
 });
 
-const buttonb = document.getElementById("button")
+const buttonb = document.getElementById("buttonPoke")
 buttonb.addEventListener("click", searchName)
 
 function searchName() {
