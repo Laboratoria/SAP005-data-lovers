@@ -1,0 +1,341 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.body {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    width: auto;
+}
+
+
+/* Animação icone menu lateral */
+
+.chk {
+    display: none;
+}
+
+.chk:checked~nav {
+    transform: translateX(349px);
+}
+
+label span {
+    position: absolute;
+    display: block;
+    height: 5px;
+    width: 100%;
+    border-radius: 30px;
+    background: #003A70;
+    transition: 0.25s ease-in-out;
+}
+
+label span:nth-child(1) {
+    top: 8px;
+}
+
+label span:nth-child(2) {
+    top: 16px;
+}
+
+label span:nth-child(3) {
+    top: 24px;
+}
+
+.chk:checked+label span:nth-child(1) {
+    transform: rotate(-45deg);
+    top: 16px;
+}
+
+.chk:checked+label span:nth-child(2) {
+    opacity: 0;
+}
+
+.chk:checked+label span:nth-child(3) {
+    transform: rotate(45deg);
+    top: 16px;
+}
+
+.label-aside-menu {
+    padding: 15px;
+    position: absolute;
+    z-index: 1;
+}
+
+.aside-menu {
+    background-color: #92b4bec5;
+    width: 200px;
+    height: 100%;
+    left: -350px;
+    position: absolute;
+    transition: all .5s;
+}
+
+.head-menu-list {
+    display: block;
+    padding: 20px 5px;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    top: 35px;
+    width: 95%;
+    font-size: 15px;
+}
+
+.menu-list:hover {
+    background-color: #89c2d3;
+    color: black;
+}
+
+.menu-list-link {
+    display: block;
+    padding: 20px 5px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header-title {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(247, 234, 208);
+}
+
+.logo {
+    width: 300px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+
+/* Menu principal */
+
+.select-itens {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    padding: .7em;
+    background-color: rgb(247, 234, 208);
+}
+
+.input-search {
+    margin: 5px;
+    width: 280px;
+    outline: transparent;
+    padding: .5em;
+    border-radius: 4px;
+    font-size: 15px;
+    background-color: rgb(247, 234, 208);
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    border: 2px solid rgb(49, 49, 49);
+}
+
+.select-filter {
+    margin: 5px;
+    width: 140px;
+    outline: transparent;
+    padding: .5em;
+    border-radius: 4px;
+    font-size: 15px;
+    background-color: rgb(247, 234, 208);
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    border: 2px solid rgb(49, 49, 49);
+}
+
+.select-sort {
+    margin: 5px;
+    width: 140px;
+    outline: transparent;
+    padding: .5em;
+    border-radius: 4px;
+    font-size: 15px;
+    background-color: rgb(247, 234, 208);
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    border: 2px solid rgb(49, 49, 49);
+}
+
+.btn-clean {
+    margin: 5px;
+    outline: transparent;
+    background-color: rgba(255, 204, 0, 0.932);
+    color: black;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 80px;
+    padding: .5em;
+    border: 2px solid rgb(49, 49, 49);
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.btn-clean:hover {
+    background-color: rgba(255, 204, 0, 0.384);
+}
+
+
+/* Tratamento dos cards*/
+
+.img {
+    filter: drop-shadow(0 0 0.15rem gray);
+}
+
+.space {
+    max-width: 100%;
+    height: 50px;
+}
+
+.main-cards {
+    margin-left: 13%;
+    display: inline-block;
+    justify-content: space-between;
+    width: 80%;
+    font-size: 15px;
+    background-color: transparent;
+}
+
+.left {
+    float: left;
+    margin-left: 0 auto;
+}
+
+.frame {
+    position: relative;
+    width: 260px;
+    height: 295px;
+    transition: transform 0.6s;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.frame:hover {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    text-transform: capitalize;
+    position: relative;
+    width: 260px;
+    height: 295px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.card-front {
+    position: absolute;
+    background-color: #faefbd3a;
+    width: 260px;
+    height: 295px;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.card-back {
+    position: absolute;
+    width: 260px;
+    height: 295px;
+    background-color: #6198db;
+    color: black;
+    transform: rotateY(180deg);
+    font-size: 15px;
+    text-align: justify;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.card-front {
+    letter-spacing: 1px;
+    color: #111;
+}
+
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(105, 109, 109);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(248, 197, 102);
+    border-radius: 7px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(253, 165, 1);
+}
+
+
+/* Responsive */
+
+
+/*@media only screen and (max-device-width: 1024px) {
+/*    .bgimg-1,
+/*    .bgimg-2,
+/*    .bgimg-3 {
+/*        background-attachment: scroll;
+/*    }
+/*}
+/*
+/*@media (max-device-width: 900px) {
+/*    .select-itens {
+/*        width: 100%;
+/*        margin: auto;
+/*        flex-flow: row wrap;
+/*        justify-content: space-around;
+/*    }
+/*    .input-search,
+/*    .select-filter,
+/*    .select-sort,
+/*    .select-number,
+/*    .btn-clean {
+/*        width: 150%;
+/*        font-size: 10%;
+/*    }
+/*    .input-search {
+/*        margin-left: -5%;
+/*    }
+/*    .main-cards {
+/*        margin-left: 12%;
+/*        font-size: 11px;
+/*    }
+/*    .card-back,
+/*    .card-front,
+/*    .frame,
+/*    .main-cards {
+/*        width: 200px;
+/*        height: 235px;
+/*        font-size: 10px;
+/*    }
+/*}
+
+
+/* tratamento do footer */
+
+
+/*.footer {
+/*    background-color: rgb(39, 126, 167);
+/*    color: white;
+/*    bottom: 0;
+/*    position: relative;
+/*    width: 100%;
+/*    padding: 20px;
+/*    text-align: center;
+/*    font-size: 17px;
+/*}
+/*
+/*.link-footer {
+/*    color: white;
+/*}
+/*
+/*.footer .container {
+/*    flex-flow: column;
+/*}
