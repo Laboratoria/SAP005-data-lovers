@@ -18,17 +18,17 @@ const dados = {
         const flipCardBack = document.createElement('div')
         flipCardBack.classList.add("flip-card-back")
 
-        const text = document.createElement('p');
-        text.classList.add('namePokemon')
-        const textNum = document.createElement('p');
-        textNum.classList.add('pokedexNum')
+        const text = document.createElement("p");
+        text.classList.add("namePokemon")
+        const textNum = document.createElement("p");
+        textNum.classList.add("pokedexNum")
         const image = document.createElement("img");
-        const type = document.createElement('p');
-        const ovos = document.createElement('p');
+        const type = document.createElement("p");
+        const ovos = document.createElement("p");
         const altura = document.createElement("p");
         const peso = document.createElement ("p");
         const fraqueza = document.createElement ("p");
-        type.classList.add('tipoPokemon')
+        type.classList.add("tipoPokemon'")
         image.src = pokemon.img
         text.innerHTML = pokemon.name.toUpperCase();
         textNum.innerHTML = pokemon.num
@@ -89,14 +89,12 @@ button.addEventListener('click', (e)=>{
             dados.show(pokemon); 
         }else{
             const textNotFound = document.createElement('p');
-            const imageNotFound = document.createElement("img");
-            const btn = document.createElement("button");
+            const imageNotFound = document.createElement("img");            
             imageNotFound.src = "./img/nao-encontrado.png"           
             textNotFound.innerHTML = "Ops... Esse pokémon não foi encontrado!"  
             document.getElementById('cards').appendChild(textNotFound);
             textNotFound.appendChild(imageNotFound);
-            textNotFound.appendChild(btn);
-
+          
             imageNotFound.classList.add('imageNotFound');
             textNotFound.classList.add('textNotFound');
         }    
@@ -151,8 +149,7 @@ selectElementPokedex.addEventListener('change', (event) => {
         });
     }else{  
         let newArray = filter.pokedexFilter()
-        newArray.reverse()
-        newArray.forEach(pokemon => {
+        newArray.reverse()newArray.forEach(pokemon => {
             dados.show(pokemon);  
         });
     }
@@ -179,7 +176,7 @@ selectType.addEventListener('change', (event) => {
 
             typeList.forEach(pokemonType => {
                 if (pokemonType === choiseType) {
-                    sum += pokemon.stats
+                    sum += Number(pokemon.stats)
                     counter += 1
                     average = Math.floor(sum / counter)       
                     

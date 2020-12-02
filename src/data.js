@@ -35,13 +35,13 @@ const filter = {
 
     const order = orderName.sort(function (pokemon1, pokemon2){
       if (pokemon1.name > pokemon2.name) {
-            return 1;
-          }
-          if (pokemon1.name < pokemon2.name) {
-            return -1;
-          }
-         
-          return 0;
+        return 1;
+      }
+      else if(pokemon1.name < pokemon2.name){
+        return -1;
+      }else{
+        return 0;
+      }
     });    
     return order;
   },
@@ -54,10 +54,9 @@ const filter = {
         num:typeElement.num,
         height: typeElement.size.height,
         weight: typeElement.size.weight,
-        type:typeElement.type,
         weaknesses: typeElement.weaknesses,
         egg: typeElement.egg,
-        stats:parseInt(typeElement.stats['base-attack'])
+        stats:typeElement.stats['base-attack']
       }
     })
         return element
@@ -72,8 +71,7 @@ const filter = {
             num:pokemon.num,
             height: pokemon.size.height,
             weight: pokemon.size.weight,
-            type:pokemon.type,
-            weaknesses: pokemon.weaknesses,
+            type:pokemon.type,            
             egg: pokemon.egg
             
         }
