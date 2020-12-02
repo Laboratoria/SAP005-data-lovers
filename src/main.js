@@ -84,7 +84,7 @@ document.getElementById('btn-decresc-pokemon').addEventListener("click", sortByZ
 //Responsável por Filtrar:
 function filterByType() {
     clearCards();
-    let filterTypeSelect = document.getElementById("filter-type").value;
+    let filterTypeSelect = document.getElementById("filter-type-select").value;
     const callFilter = searchFilter(copyDB, filterTypeSelect);
     return ([templateAllCards(callFilter)],[aggregateCalculation(callFilter)])
 }
@@ -93,13 +93,14 @@ document.getElementById('btn-filter-type').addEventListener("click", filterByTyp
 
 //Responsável pelo Calculo Agregado:
 function aggregateCalculation (array) {
-let filterTypeSelect = document.getElementById("filter-type").value;
+let filterTypeSelect = document.getElementById("filter-type-select").value;
 const sizeArray = copyDB.length
 const sizeFilter = array.length
 const result = ((sizeFilter/sizeArray)*100).toFixed(0)+"%";
-const aggregateCal = `O tipo ${filterTypeSelect} representa ${result} do total de Pokeémons`
+const aggregateCal = `<h3>O tipo ${filterTypeSelect} representa ${result} do total de Pokémons</h3>`
 // console.log( sizeArray,sizeFilter )
 // console.log(result)
 // console.log (aggregateCal)
-return aggregateCal
+document.getElementById("item-aggregate-calc").innerHTML = aggregateCal;
+
 }

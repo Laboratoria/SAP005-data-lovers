@@ -53,21 +53,22 @@
                 <div id="item-card-one"> </div>
             </section>
         </section>
-
+        
+        <section class="container-instruction-for-view-cards">
+            <h2 class="instruction-text-view"> Escolha a opção nos botões e visualize as informações dos Pokemons abaixo!</h1>
+        </section>
         <section class="container-filter">
-            <div class="item-filter" id="item-btn-generation-pokemon">
+            <div class="item-filter">
                 <button id="btn-generation-pokemon">Gerar lista completa de Pokemons</button>
             </div>
-            <div class="item-filter" id="block">
+            <div class="item-filter">
                 <h1>Ordenar Pokemons:</h1>
                 <button id="btn-cresc-pokemon">Crescente A-Z</button>
                 <button id="btn-decresc-pokemon">Decrescente Z-A</button>
             </div>
             <div class="item-filter">
-                <h1>Filtrar Pokemons por tipo:</h1>
-            </div>
-            <div class="item-filter">
-                <select id="filter-type">
+                <h1 id="filter-text">Filtrar Pokemons por tipo:</h1>
+                <select id="filter-type-select">
                     <option value="-">-----</option>
                     <option value="bug">Bug</option>
                     <option value="dark">Dark</option>
@@ -88,8 +89,6 @@
                     <option value="steel">Steel</option>
                     <option value="water">Water</option>
                 </select>
-            </div>
-            <div class="item-filter">
                 <button id="btn-filter-type">OK</button>
             </div>
 
@@ -97,6 +96,7 @@
 
 
         <section class="container-show-all-cards">
+            <div id="item-aggregate-calc"></div>
             <div id="item-all-cards"> </div>
         </section>
 
