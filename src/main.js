@@ -1,15 +1,12 @@
-import { example } from './data.js';
-//import data from './data/lol/lol.js';
-//import data from './data/pokemon/pokemon.js';
+import { filterGenderSelected, filterStatusSelected, filterSpeciesSelected, sortOrder, calcGender, calcStatus, calcSpecies } from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 
 const dataBase = data.results;
-
 function printCharacters(dados) {
     let cards = "";
-    for ( let item of dados) {
-    cards +=
-      ` 
+    for (let item of dados) {
+        cards +=
+            ` 
      <article id="teste" class="personagem">
       <div class="frente">
         <p class="card-name">${item.name.toUpperCase()}</p>
@@ -21,62 +18,47 @@ function printCharacters(dados) {
     </div>
     </article>
       `
-  }
-  document.getElementById("hero").innerHTML = cards
-}; 
-printCharacters(dataBase); 
+    }
+    document.getElementById("hero").innerHTML = cards
+};
+printCharacters(dataBase);
 
 const filterSelect = document.querySelector('.filter-gender');
 filterSelect.addEventListener('click', filterGender)
-
-function filterGender(){
-    const filterGender = dataBase.filter(dataBase => dataBase.gender === filterSelect.value)
-    printCharacters(filterGender)
-    document.getElementById("calculation").innerHTML = "Existem " + filterGender.length + " personagens deste gênero e representa " + parseFloat((filterGender.length*100)/(dataBase.length)).toFixed(2) + "% do total de personagens"
+function filterGender() {
+    const valueGenderSelected = filterSelect.value
+    const selectedGender = filterGenderSelected(dataBase, valueGenderSelected)
+    printCharacters(selectedGender)
+    let resultGender = calcGender(dataBase, selectedGender)
+    document.getElementById("calculation").innerHTML = "Existem " + selectedGender.length + " personagens deste gênero e representa " + resultGender + "% do total de personagens"
 };
 
 const filterSelectStatus = document.querySelector('.filter-status');
 filterSelectStatus.addEventListener('click', filterStatus)
+function filterStatus() {
+    const valueStatusSelected = filterSelectStatus.value
+    const selectedStatus = filterStatusSelected(dataBase, valueStatusSelected)
+    printCharacters(selectedStatus)
+    let resultStatus = calcStatus(dataBase, selectedStatus)
+    document.getElementById("calculation").innerHTML = "Existem " + selectedStatus.length + " personagens neste status e representa " + resultStatus + "% do total de personagens"
 
-function filterStatus(){
-    const filterStatus = dataBase.filter(dataBase => dataBase.status === filterSelectStatus.value)
-    printCharacters(filterStatus)
-    document.getElementById("calculation").innerHTML = "Existem " + filterStatus.length + " personagens neste status e representa " + parseFloat((filterStatus.length*100)/(dataBase.length)).toFixed(2) + "% do total de personagens"
-    
 };
 
 const filterSelectSpecies = document.querySelector('.filter-species');
 filterSelectSpecies.addEventListener('click', filterSpecies)
-
-function filterSpecies(){
-    const filterSpecies = dataBase.filter(dataBase => dataBase.species === filterSelectSpecies.value)
-    printCharacters(filterSpecies)
-    document.getElementById("calculation").innerHTML = "Existem " + filterSpecies.length + " personagens desta espécie e representa " + parseFloat((filterSpecies.length*100)/(dataBase.length)).toFixed(2) + "% do total de personagens"
+function filterSpecies() {
+    const valueSpeciesSelected = filterSelectSpecies.value
+    const selectedSpecies = filterSpeciesSelected(dataBase, valueSpeciesSelected)
+    printCharacters(selectedSpecies)
+    let resultSpecies = calcSpecies(dataBase, selectedSpecies)
+    document.getElementById("calculation").innerHTML = "Existem " + selectedSpecies.length + " personagens desta espécie e representa " + resultSpecies + "% do total de personagens"
 };
 
 const filterSelectOrder = document.querySelector('.filter-order');
 filterSelectOrder.addEventListener('click', filterOrder)
-
-function filterOrder(){
+function filterOrder() {
     document.getElementById("calculation").innerHTML = ""
-    if(filterSelectOrder.value === "az") {
-        const orderAz = dataBase.sort(function(a,b) {
-            return a.name < b.name ? -1 : a.name > b.name ? 1 : 0;
-        });
-        printCharacters(orderAz)
-    }else if(filterSelectOrder.value === "za"){
-        const orderZa = dataBase.reverse(function(a,b) {
-            return b.name > a.name ? 1 : b.name < a.name ?  1 : 0;
-          });
-        printCharacters(orderZa)
-    }else if(filterSelectOrder.value === "relevance"){
-        const orderRelevence = dataBase.sort(function(a,b) {
-            return a.id < b.id ? -1 : a.id > b.id ? 1 : 0;
-        });
-        printCharacters(orderRelevence )
-    }else{
-        printCharacters(dataBase)
-    }
+    const valueOrderSelected = filterSelectOrder.value
+    const selectedOrder = sortOrder(dataBase, valueOrderSelected)
+    printCharacters(selectedOrder)
 };
-
-console.log(example, data);
