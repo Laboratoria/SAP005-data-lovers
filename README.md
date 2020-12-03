@@ -20,12 +20,21 @@
   De acordo com as pesquisas levantadas, foi possível constatar as seguintes necessidades dos Usuários de Pokemon GO:
   
   -Realizar buscas de Pokemons específicos (Pokecard), no qual é possível visualizar as informações dos Pokemons;
-  -Filtrar Pokemons por tipo.
+  
+  - Gerar uma lista completa dos Pokemons, na qual seja possível ordená-la;
+  
+  -Filtrar Pokemons por tipo e saber a porcentagem desse tipo com relação ao total de Pokemons.
   
   Nesse sentido, são histórias de usuário da aplicação:
   
   
-  "Eu, como jogador de Pokemon Go, gostaria de poder localizar um Pokemon e ter acesso à um resumo de suas características" ;
+  ### "Eu, como jogador de Pokemon Go, gostaria de poder localizar um Pokemon e ter acesso à um resumo de suas características" ;
+  
+  #### Solução:
+  
+  ![História de usuário 1](https://github.com/cbalieiro/SAP005-data-lovers/blob/master/src/img/Design%20sem%20nome.jpg).
+  
+  
   
   "Eu, como jogador de Pokemon Go, gostaria de ter acesso a uma lista completa de Pokemons e poder ordená-la em ordem crescente (A-Z) e descrecente (Z-A)" ;
   
