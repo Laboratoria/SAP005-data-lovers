@@ -193,7 +193,7 @@ label span:nth-child(3) {
 
 .main-cards {
     margin-left: 13%;
-    display: inline-block;
+    display: flex;
     justify-content: space-between;
     width: 80%;
     font-size: 15px;
@@ -395,13 +395,16 @@ label span:nth-child(3) {
 }
 
 @media (max-device-width: 480px) {
+    .logo{
+        width: 50%;
+    }
     .select-itens {
         width: 100%;
-        max-width: 480px;
-        /* flex-flow: row wrap; */
+        /* max-width: 480px; */
+        flex-flow: row wrap;
         justify-content: space-around;
-        /* display: grid; */
-        grid: 60px/ auto auto;
+        display: grid;
+        grid: 50px/ auto auto;
     }
     .input-search,
     .select-filter,
@@ -434,7 +437,7 @@ label span:nth-child(3) {
 
 }
 
- @media (max-device-width: 640px) {
+ /* @media (max-device-width: 640px) {
     .select-itens {
         width: 100%;
         margin: auto;
@@ -493,7 +496,8 @@ label span:nth-child(3) {
         height: 80%;
     }
 
-} 
+}  */
+
 
 
 /* tratamento do footer */
