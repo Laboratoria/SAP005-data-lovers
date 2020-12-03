@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,12 +22,12 @@
                         Pokémons lendários
                     </a>
                 </li>
-                <li class="botao comuns" id="comuns">
-                    <a href="#pokemons-mais-encontrados">
-                        Pokémons mais encontrados
+                <li class="botao calculo" id="calculo">
+                    <a href="calculo">
+                        Cálculo agregado
                     </a>
                 </li>
-                <li class="botao pokedex" >
+                <li class="botao pokedex">
                     <a id="pokedex" href="pokedex.html">
                         Pokédex
                     </a>
@@ -42,13 +43,22 @@
         <br>
         <form>
             <label for="pesquisa-pokemon">Procure aqui um Pokémon por nome</label>
-            <input type="text" id="pesquisa-pokemon" class="pesquisa-pokemon" name="pokemon">
+            <input type="text" id="pesquisa-pokemon" class="pesquisa-pokemon" name="nome-pokemon">
             <button id="pesquisar" name="pesquisar">Pesquisar</button>
-            <label for="filtrar-pokemon"></label>
+
+            <label for="ordenar-por">Ordenar por</label>
+            <select id="ordenar" name="select-ordem">
+                <option value="az" selected> A - Z </option>
+                <option value="za"> Z - A </option>
+            </select>
+
         </form>
+        <br>
+
+        <br>
         <section id="tabela-resultado">
         </section>
-        </main>
+    </main>
     <script src="main.js" type="module"></script>
 </body>
 

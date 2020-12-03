@@ -26,28 +26,19 @@ a {
 li:hover {
   /*border:solid 1px #fff;*/
   background-color: rgb(175, 169, 169) !important;
-  cursor:pointer;
+  cursor: pointer;
 }
 
-@media (max-width:960px){
-  body{
-      display: flex;
+@media (max-width:960px) {
+  body {
+    display: flex;
   }
 }
 
 nav {
-  width:100wh;
+  width: 100wh;
   font-weight: bold;
 }
-
-article {
-  padding: 10px;
-  width: 20%;
-  text-align: center;
-  display: inline-block;
-  border: solid 1px
-}
-
 
 /*Classes*/
 
@@ -56,8 +47,9 @@ article {
 }
 
 .imagem-topo {
-  width:100%;
+  width: 100%;
 }
+
 .descricao {
   text-align: center;
   padding: 10px;
@@ -66,21 +58,41 @@ article {
   color: #fff;
 }
 
-.lendarios{
-  background-color: #5CB8FF;  
+.lendarios {
+  background-color: #5CB8FF;
 }
 
-.comuns {
+.calculo {
   background-color: #ff6600;
 }
+
 .pokedex {
   background-color: #ffe00f;
 }
 
+.divcard {
+  padding: 10px;
+  width: 30%;
+  text-align: center;
+  display: inline-block;
+  border: solid 1px
+}
+
+.divcardlendario {
+  text-align: center;
+  padding: 10px;
+  width: 30%;
+}
 
 /*IDs*/
-#ob-menu{
-  width:100%;
-  margin:0px;
-  padding:0px;
+
+#ob-menu {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+#tabresult-lendario {
+  justify-content: center;
+  align-items: center;
 }
