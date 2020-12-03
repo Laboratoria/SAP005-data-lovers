@@ -8,15 +8,13 @@ const pokemonTableRow = document.querySelector(".pokemon-table-row");
 searchButton.addEventListener("click", event => {
   event.preventDefault();
   // const rivalPokemon = filterRivalPokemon(pokemons)
-  const best60PokemonByDecrescentCP = orderBestPokemonByCP().decrescentOrder.slice(0, 60)
+  const bestPokemonByDecrescentCP = orderBestPokemonByCP().decrescentOrder
 
   // CARD DO POKÉMON RIVAL
 
 
 
   // TABELA DE POKÉMONS VANTAJOSOS
-
-  // dentro do LOOP
   function showTable(pokemonArray) {
     let row = ""
     for (let pokemon of pokemonArray) {
@@ -39,7 +37,7 @@ searchButton.addEventListener("click", event => {
   }
 
 
-  pokemonTableRow.innerHTML = showTable(best60PokemonByDecrescentCP)
+  pokemonTableRow.innerHTML = showTable(bestPokemonByDecrescentCP)
 
   // console.log(orderBestPokemonByCP())
 })
