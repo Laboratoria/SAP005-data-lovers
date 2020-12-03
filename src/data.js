@@ -15,19 +15,6 @@ export const bringRivalPokemon = (pokemons) => {
   }
 };
 
-// export function filterRivalPokemon(pokemons) {
-//   const searchInput = document.getElementById("search-input").value
-
-//   for (const pokemon of pokemons) {
-//     const lowercaseUserInput = String(searchInput).toLowerCase()
-//     const acceptingUserInput = pokemon.name.includes(lowercaseUserInput)
-
-//     if (acceptingUserInput) {
-//       return pokemon
-//     }
-//   }
-// }
-
 function filterAllPokemonByType(pokemons) {
   const types = {
     bug: [],

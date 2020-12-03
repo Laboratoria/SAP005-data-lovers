@@ -1,9 +1,7 @@
 import { bringRivalPokemon, orderBestPokemonByCP } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
-
 const pokemons = data.pokemon;
-// const pokemonNameInput = document.getElementById("pokemon-name-input");
 const pokemonImg = document.getElementById("img-pokemon");
 const pokemonName = document.getElementById("name-poke");
 const pokemonType = document.getElementById("type-pokemon");
