@@ -1,14 +1,14 @@
 import filter from './data.js';
-function clear(){
-    document.getElementById('cards').innerHTML= ""; 
-    document.getElementById('calculation').innerHTML= "";
+function clear() {
+    document.getElementById('cards').innerHTML = "";
+    document.getElementById('calculation').innerHTML = "";
 
     return
 }
 const dados = {
-    show(pokemon){
+    show(pokemon) {
         const flipCard = document.createElement('div')
-        flipCard.classList.add("flip-card") 
+        flipCard.classList.add("flip-card")
         const flipCardInner = document.createElement('div')
         flipCardInner.classList.add("flip-card-inner")
 
@@ -26,7 +26,7 @@ const dados = {
         const type = document.createElement("p");
         const ovos = document.createElement("p");
         const altura = document.createElement("p");
-        const peso = document.createElement ("p");
+        const peso = document.createElement("p");
         type.classList.add("tipoPokemon'")
         image.src = pokemon.img
         text.innerHTML = pokemon.name.toUpperCase();
@@ -35,14 +35,14 @@ const dados = {
         peso.innerHTML = `Peso: ${pokemon.weight}`
         ovos.innerHTML = `Ovo: ${pokemon.egg}`
         type.innerHTML = `Tipo: ${pokemon.type}`
-        
-        
-        textNum.innerHTML = pokemon.num        
-         
+
+
+        textNum.innerHTML = pokemon.num
+
         document.getElementById("cards").appendChild(flipCard);
-        flipCard.appendChild(flipCardInner);       
+        flipCard.appendChild(flipCardInner);
         flipCardInner.appendChild(flipCardFront);
-        flipCardInner.appendChild(flipCardBack);     
+        flipCardInner.appendChild(flipCardBack);
         flipCardFront.appendChild(text);
         text.appendChild(textNum);
         text.appendChild(image);
@@ -50,14 +50,14 @@ const dados = {
         flipCardBack.appendChild(type);
         flipCardBack.appendChild(altura);
         flipCardBack.appendChild(peso);
-        flipCardBack.appendChild (ovos);
-      
-    } 
+        flipCardBack.appendChild(ovos);
+
+    }
 }
 
 const img = filter.photo()
 
-function showAllPokemons() { 
+function showAllPokemons() {
     img.forEach(pokemon => {
         dados.show(pokemon);
     });
@@ -67,9 +67,9 @@ function showAllPokemons() {
 
 const allPokemon = document.getElementById('btnAll')
 
-allPokemon.addEventListener("click", ()=>{
+allPokemon.addEventListener("click", () => {
     document.getElementById('txtSearch').value = ""
-    clear(); 
+    clear();
     return showAllPokemons();
 })
 
@@ -78,23 +78,23 @@ const name = filter.filter()
 const button = document.querySelector('#btn')
 
 
-button.addEventListener('click', (e)=>{
+button.addEventListener('click', (e) => {
     e.preventDefault()
     const search = document.querySelector('#txtSearch')
-    let searchOption =  search.value.toLowerCase()
+    let searchOption = search.value.toLowerCase()
     clear();
-    if("" !== searchOption){
-    const pokemon = name.find(item => item.name == searchOption)
-    if(pokemon !== undefined){
-            dados.show(pokemon); 
-        }else{
-            const textNotFound = document.createElement('p');          
-            textNotFound.innerHTML = "Ops... Esse pokémon não foi encontrado!"  
+    if ("" !== searchOption) {
+        const pokemon = name.find(item => item.name == searchOption)
+        if (pokemon !== undefined) {
+            dados.show(pokemon);
+        } else {
+            const textNotFound = document.createElement('p');
+            textNotFound.innerHTML = "Ops... Esse pokémon não foi encontrado!"
             document.getElementById('cards').appendChild(textNotFound);
-          
+
             textNotFound.classList.add('textNotFound');
-        }    
-    }else{
+        }
+    } else {
         showAllPokemons()
     }
 });
@@ -106,25 +106,25 @@ const nameOrder = filter.filter()
 const nameFilter = document.querySelector('.orderName');
 let select = "";
 
-nameFilter.addEventListener('change',(event)=>{
+nameFilter.addEventListener('change', (event) => {
     select = event.target.value;
     clear();
     if ("" === event.target.value) {
         showAllPokemons()
-    } else if(select === 'az'){
+    } else if (select === 'az') {
         nameOrder.forEach(pokemon => {
-            dados.show(pokemon);    
+            dados.show(pokemon);
         });
 
-    }else{
+    } else {
         let newArray = filter.filter()
         newArray.reverse()
         newArray.forEach(pokemon => {
-            dados.show(pokemon);  
-    
+            dados.show(pokemon);
+
         });
 
-    }    
+    }
 })
 
 
@@ -138,16 +138,16 @@ selectElementPokedex.addEventListener('change', (event) => {
     if (elementoSelecionadoPokedex === "") {
         showAllPokemons()
 
-    } else if(elementoSelecionadoPokedex === '1a251'){
+    } else if (elementoSelecionadoPokedex === '1a251') {
         pokedex.forEach(pokemon => {
-            dados.show(pokemon); 
-    
+            dados.show(pokemon);
+
         });
-    }else{  
+    } else {
         let newArray = filter.pokedexFilter()
         newArray.reverse()
         newArray.forEach(pokemon => {
-            dados.show(pokemon);  
+            dados.show(pokemon);
         });
     }
 })
@@ -162,21 +162,21 @@ selectType.addEventListener('change', (event) => {
     let sum = 0;
     let counter = 0
     let average = 0
-     choiseType = event.target.value;
-     clear();
+    choiseType = event.target.value;
+    clear();
 
     if ("" === choiseType) {
         showAllPokemons()
-    }else{
-        typeElement.forEach( pokemon => {
+    } else {
+        typeElement.forEach(pokemon => {
             let typeList = pokemon.type;
 
             typeList.forEach(pokemonType => {
                 if (pokemonType === choiseType) {
                     sum += Number(pokemon.stats)
                     counter += 1
-                    average = Math.floor(sum / counter)       
-                    
+                    average = Math.floor(sum / counter)
+
                     dados.show(pokemon);
                 }
             });
@@ -196,18 +196,18 @@ const selectElementWeaknesses = document.querySelector('.weaknesses');
 let elementoSelecionado = "";
 
 selectElementWeaknesses.addEventListener('change', (event) => {
-     elementoSelecionado = event.target.value;
-     clear();
+    elementoSelecionado = event.target.value;
+    clear();
 
     if ("" === elementoSelecionado) {
         showAllPokemons()
-    }else{
+    } else {
         weaknesses.forEach(pokemon => {
             let weaknessesList = pokemon.weaknesses;
 
             weaknessesList.forEach(weaknessesItem => {
                 if (weaknessesItem === elementoSelecionado) {
-                    dados.show(pokemon);  
+                    dados.show(pokemon);
                 }
             });
         });
@@ -230,7 +230,7 @@ selectElementResistant.addEventListener('change', (event) => {
 
             resistantList.forEach(resistantItem => {
                 if (resistantItem === elementoSelecionadoResistant) {
-                    dados.show(pokemon);  
+                    dados.show(pokemon);
                 }
             });
         });
