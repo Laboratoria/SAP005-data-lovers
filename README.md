@@ -12,7 +12,7 @@
 
   Desenvolvido em 2020, durante o Bootcamp de Front-End (promovido pela Laboratória-BR),  PokeLovers é um site para jogadores com experiência no [App Pokemon Go](https://pt.wikipedia.org/wiki/Pok%C3%A9mon_GO#:~:text=Niantic%2C%20Inc.,-Compositor(es)&text=Pok%C3%A9mon%20GO%20%C3%A9%20um%20jogo,realidade%20aumentada%20voltado%20para%20smartphones.&text=Foi%2Dlhe%20creditada%20a%20populariza%C3%A7%C3%A3o,e%20movimentando%20os%20neg%C3%B3cios%20locais.).
 
-  Com uma interface intuitiva e projetada tanto para desktop e dispositivos móveis, na aplicação é possível que o usuário localize informações sobre Pokemons, filtre e ordene os dados apresentados, de acordo com suas necessidades.
+  Com uma interface intuitiva e projetada tanto para desktop quanto para dispositivos móveis, na aplicação é possível que o usuário localize informações sobre Pokemons, filtre e ordene os dados apresentados, de acordo com suas necessidades.
   
   
 ## 2. Histórias do Usuário
