@@ -27,7 +27,6 @@ function showingCards(pokemonCards) {
         } else {
             evolutions = "Do not evolve"
         }
-
         cards +=
             `<div class="frame left">
                 <div class="left">

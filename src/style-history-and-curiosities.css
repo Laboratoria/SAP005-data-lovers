@@ -1,0 +1,133 @@
+/*Tratamento do history and curiosities*/
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+}
+
+.caption span.border {
+    background-color: rgba(0, 0, 0, 0.637);
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+}
+
+.border {
+    color: #f7f7f7;
+    font-size: 25px;
+    background-color: transparent;
+}
+
+.text1 {
+    color: #777;
+    background-color: white;
+    text-align: center;
+    padding: 50px 80px;
+    text-align: justify;
+}
+
+.text1-1 {
+    text-align: center;
+}
+
+.text2 {
+    position: relative;
+}
+
+.text2-1 {
+    color: #ddd;
+    background-color: #282E34;
+    text-align: center;
+    padding: 50px 80px;
+    text-align: justify;
+}
+
+.text2-2 {
+    text-align: center;
+}
+
+.text3 {
+    position: relative;
+}
+
+.text3-1 {
+    color: #ddd;
+    background-color: #282E34;
+    text-align: center;
+    padding: 50px 80px;
+    text-align: justify;
+}
+
+.text3-2 {
+    text-align: center;
+}
+
+.bgimg-1,
+.bgimg-2,
+.bgimg-3 {
+    position: relative;
+    opacity: 0.65;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bgimg-1 {
+    background-image: url("assets/first.jpg");
+    /* min-height: 100%; */
+    height: 450px;
+}
+
+.bgimg-2 {
+    background-image: url("assets/second.jpg");
+    min-height: 400px;
+}
+
+.bgimg-3 {
+    background-image: url("assets/third.jpg");
+    min-height: 400px;
+}
+
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(105, 109, 109);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(248, 197, 102);
+    border-radius: 7px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(253, 165, 1);
+}
+
+
+/* tratamento do footer */
+
+.footer {
+    background-color: rgb(39, 126, 167);
+    color: white;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    font-size: 17px;
+}
+
+.link-footer {
+    color: white;
+}
