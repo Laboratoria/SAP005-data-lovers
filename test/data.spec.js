@@ -120,7 +120,7 @@ describe('Filtrar Genero Feminino', () => {
 
   it('retornar personagens femininos', () => {
     const gender = "Female"
-    expect(filterGenderSelected(dataBaseTeste, gender)).toBe('Summer Smith');
+    expect(filterGenderSelected(dataBaseTeste,gender)).toBe("Female");
   });
 });
 
