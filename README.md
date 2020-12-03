@@ -32,13 +32,22 @@
   
   #### Solução:
   
-  ![História de usuário 1](https://github.com/cbalieiro/SAP005-data-lovers/blob/master/src/img/Design%20sem%20nome.jpg).
+ ![Historia_de_usuario1](https://github.com/cbalieiro/SAP005-data-lovers/blob/master/src/img/hist%C3%B3ria%20de%20usu%C3%A1rio%201.jpg)
   
   
   
-  "Eu, como jogador de Pokemon Go, gostaria de ter acesso a uma lista completa de Pokemons e poder ordená-la em ordem crescente (A-Z) e descrecente (Z-A)" ;
+  ### "Eu, como jogador de Pokemon Go, gostaria de ter acesso a uma lista completa de Pokemons e poder ordená-la em ordem crescente (A-Z) e descrecente (Z-A)" ;
   
-  "Eu, como jogador de Pokemon Go, gostaria de uma aplicação que me permitisse filtrar Pokemons por tipo e saber qual a porcentagem desse tipo com relação ao número total de Pokemons".
+   #### Solução:
+   
+   ![Historia_de_usuario2](https://github.com/cbalieiro/SAP005-data-lovers/blob/master/src/img/historia%20de%20usu%C3%A1rio2.jpg).
+   
+  
+  ### "Eu, como jogador de Pokemon Go, gostaria de uma aplicação que me permitisse filtrar Pokemons por tipo e saber qual a porcentagem desse tipo com relação ao número total de Pokemons".
+  
+  #### Solução:
+  
+  ![Historia_de_usuário3](https://github.com/cbalieiro/SAP005-data-lovers/blob/master/src/img/historia%20de%20usu%C3%A1rio3.jpg)
   
 
 ## 3. Processo de Desenvolvimento
