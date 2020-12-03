@@ -199,6 +199,7 @@ img{
     font-size: 1em;
     font-weight: 700;
     transition: all 0.3s ease-in-out 0s;
+    outline:none;
 }
 
 #btn-search-pokemon:hover{
@@ -358,6 +359,7 @@ img{
     font-size: 13pt;
     font-weight: 700;
     transition: all 0.3s ease-in-out 0s;
+    outline:none;
 }
 
 #btn-generation-pokemon:hover{
@@ -379,6 +381,7 @@ img{
     font-size: 12pt;
     font-weight: 700;
     transition: all 0.3s ease-in-out 0s;
+    outline:none;
 }
 
 
@@ -402,6 +405,7 @@ img{
     font-size: 12pt;
     font-weight: 700;
     transition: all 0.3s ease-in-out 0s;
+    outline:none;
 }
 
 #btn-decresc-pokemon:hover{
@@ -438,6 +442,7 @@ img{
     font-size: 13pt;
     font-weight: 700;
     transition: all 0.3s ease-in-out 0s;
+    outline:none;
 }
 #btn-filter-type:hover{
     background-color: rgb(135, 135, 231);
