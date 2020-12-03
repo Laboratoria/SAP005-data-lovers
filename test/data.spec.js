@@ -1,4 +1,4 @@
-import { example, anotherExample } from '../src/data.js';
+import { instantSearch, selectPokemonType, selectPokemonResistant, selectPokemonWeaknesses, selectPokemonGeneration, sortPokemonCp} from '../src/data.js';
 
 
 describe('example', () => {

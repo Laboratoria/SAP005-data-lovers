@@ -394,37 +394,106 @@ label span:nth-child(3) {
     }
 }
 
-@media (max-device-width: 900px) {
+@media (max-device-width: 480px) {
     .select-itens {
         width: 100%;
-        margin: auto;
-        flex-flow: row wrap;
+        max-width: 480px;
+        /* flex-flow: row wrap; */
         justify-content: space-around;
+        /* display: grid; */
+        grid: 60px/ auto auto;
     }
     .input-search,
     .select-filter,
     .select-sort,
     .select-number,
     .btn-clean {
-        width: 150%;
-        font-size: 10%;
+        width: 90%;
+        height: 90%;
+        font-size: 12%;
     }
     .input-search {
-        margin-left: -5%;
+        width: 75%;
+        height: 75%;
     }
     .main-cards {
         margin-left: 12%;
-        font-size: 11px;
+        font-size: 7px;
+        float: left;
+        
     }
     .card-back,
     .card-front,
     .frame,
     .main-cards {
-        width: 200px;
-        height: 235px;
-        font-size: 10px;
+        width: 160px;
+        height: 190px;
+        font-size: 8px;        
     }
+
+
 }
+
+ @media (max-device-width: 640px) {
+    .select-itens {
+        width: 100%;
+        margin: auto;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    .input-search,
+    .select-filter,
+    .select-sort,
+    .select-number,
+    .btn-clean {
+        
+        width: 90%;
+        height: 90%;
+        font-size: 40%;
+    }
+    .input-search {
+        width: 80%;
+        height: 80%;
+    }
+    .main-cards {
+        margin-left: 12%;
+        
+    }
+    .card-back,
+    .card-front,
+    .frame,
+    .main-cards {
+        font-size: 11px;
+        width: 180px;
+        height: 210px;
+              
+    }
+
+
+}
+
+@media (max-device-width: 900px) {
+    .select-itens {
+        width: 100%;
+        margin: auto;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    .input-search,
+    .select-filter,
+    .select-sort,
+    .select-number,
+    .btn-clean {
+        width: 100%;
+        height: 100%;
+        font-size: 80%;
+    }
+    .input-search {
+        width: 80%;
+        height: 80%;
+    }
+
+} 
 
 
 /* tratamento do footer */
