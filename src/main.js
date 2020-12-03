@@ -1,17 +1,32 @@
-import { filterRivalPokemon, orderBestPokemonByCP } from './data.js';
+import { bringRivalPokemon, orderBestPokemonByCP } from './data.js';
+import data from './data/pokemon/pokemon.js';
 
-const searchButton = document.getElementById("search-btn");
+const pokemons = data.pokemon;
+const pokemonImg = document.getElementById("img-pokemon");
+const pokemonName = document.getElementById("name-poke");
+const pokemonType = document.getElementById("type-pokemon");
+const pokemonResistant = document.getElementById("resistant-pokemon");
+const pokemonWeaknesses = document.getElementById("weaknesses-pokemon");
+const searchPokemon = document.getElementById("search-pokemon-btn");
+const pokemonNum = document.getElementById("num-pokemon");
 const pokemonTableRow = document.querySelector(".pokemon-table-row");
 
+searchPokemon.addEventListener("click", searchRival)
 
-// BUSCA DO POKÉMON RIVAL
-searchButton.addEventListener("click", event => {
+function searchRival(event) {
   event.preventDefault();
-  // const rivalPokemon = filterRivalPokemon(pokemons)
+  const bringPokemon = bringRivalPokemon(pokemons);
+  document.getElementById("flex-container").className = "";
   const bestPokemonByDecrescentCP = orderBestPokemonByCP().decrescentOrder
 
-  // CARD DO POKÉMON RIVAL
 
+  // CARD
+  pokemonImg.innerHTML = `<img src="${bringPokemon.img}"></img>`
+  pokemonNum.innerHTML = `Número: ${bringPokemon.num}`
+  pokemonName.innerHTML = `Nome: <span class="name-uppercase">${bringPokemon.name}</span>`
+  pokemonType.innerHTML = `Tipo(s): <span class="type-uppercase"> ${bringPokemon.type.join(", ")}</span>`
+  pokemonResistant.innerHTML = `Resistência(s): <span class="resistant-uppercase"> ${bringPokemon.resistant.join(", ")}</span>`
+  pokemonWeaknesses.innerHTML = `Fraqueza(s): <span class="weaknesses-uppercase"> ${bringPokemon.weaknesses.join(", ")}</span>`
 
 
   // TABELA DE POKÉMONS VANTAJOSOS
@@ -36,8 +51,5 @@ searchButton.addEventListener("click", event => {
     return row
   }
 
-
   pokemonTableRow.innerHTML = showTable(bestPokemonByDecrescentCP)
-
-  // console.log(orderBestPokemonByCP())
-})
+}
