@@ -1,9 +1,10 @@
+
+
 import rickAndMorty from './data/rickandmorty/rickandmorty.js';
 
 const allData = rickAndMorty.results;
 
-
-//console.log(ordena)
+//função filtrar
 let arrayFiltrada = allData;
 
 function getName(event) {
@@ -23,19 +24,8 @@ document.getElementById("btn").addEventListener("click", getName)
 
 
 
+//função cards 
 
-
-
-//let arrayFiltrada = allData.find(personagens => personagens.starsWith('Rick'))
-//console.log(arrayFiltrada)
-//const arrayFiltrada = allData.map(personagem => personagem.name('Rick'))
-//const arrayFiltrada = allData.filter(personagem => personagem.name===buscar);
-
-
-// const resultado = allData.filter(rm=> rm.nome.toLowerCase() === 'Rick');
-//console.log(resultado);
-//let oi = allData.find(perso => perso.name('Rick')) ;
-//console.log(oi)
 function templateCard(allData) {
 
 
@@ -81,7 +71,8 @@ function ordD(event) {
 
 }
 
-//  arrayFiltrada = allData.filter(personagem => personagem.status.startsWith(nome))
+//calculo
+
 const statusData = allData.map(i => i.status)
 
 let alive = 0
@@ -109,12 +100,12 @@ document.getElementById('total').innerHTML = total
 
 
 
+//grafico
 
-// Load google charts
 google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawChart);
 
-// Draw the chart and set the chart values
+
 function drawChart() {
   let graphic = google.visualization.arrayToDataTable([
   ['STATUS', 'QUANTIDADE'],
@@ -125,28 +116,15 @@ function drawChart() {
 
 ]);
 
-  // Optional; add a title and set the width and height of the chart
-  let options = {'title':'STATUS', 'width':600, 'height':400 
+  let options = {'title':'STATUS', 'width':600, 'height':400 ,
+
+colors:['#BA55D3','#008080','#7B68EE']
 };
 
-  // Display the chart inside the <div> element with id="piechart"
+
+
   let chart = new google.visualization.PieChart(document.getElementById('piechart'));
   chart.draw(graphic, options);
 }
 
-
-
-
-//console.log(unknown)
-
-
-
-
-//  const contaStatus = statusData.map(i => i )
-
-
-
-
-
-//    console.log(statusData)
 

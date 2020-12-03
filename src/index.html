@@ -15,7 +15,7 @@
 
 <body>
 
-
+<div id="backgroundPage">
   <input type="checkbox" id="btn-menu">
   <label for="btn-menu">&#9776;
 
@@ -28,8 +28,9 @@
     <label for="rd_rickAndMorty">Inicio</label>
     <label for="rd_cards">Cards</label>
     <label for="rd_curiosidades">Curiosidades</label>
+    <label for="rd_status">Status</label>
     <label for="rd_desenvolvedoras">desenvolvedoras</label>
-    <label for="rd_calculo">calculo</label>
+
   </nav>
 
 
@@ -37,8 +38,9 @@
     <input type="radio" name="grupo" id="rd_rickAndMorty" checked="true" />
     <input type="radio" name="grupo" id="rd_cards" />
     <input type="radio" name="grupo" id="rd_curiosidades" />
+    <input type="radio" name="grupo" id="rd_status" />
     <input type="radio" name="grupo" id="rd_desenvolvedoras" />
-    <input type="radio" name="grupo" id="rd_calculo" />
+    
 
     <section class="sections">
 
@@ -50,19 +52,15 @@
 
       <section class="bloco" id="cards">
         <main>
-          <form>
+          <form id="teste">
             <input id="texto" type="search" placeholder="Pesquise seu personagem favorito" />
             <button id="btn" type="submit">
               <img src="./data/rickandmorty/images/pesquisa.png" width="23px" padding="23px" />
             </button>
             <button id="reset" type="Reset"><b>Reset</b></button>
-            <button id="oBtn" type="submit">A-Z</button>
-            <button id="aBtn" type="submit">Z-A</button>
-
-            
-            <div class="tooltip">+ Infos!
-              <span class="tooltiptext">click no card e segure</span>
-            </div>
+            <button id="oBtn" type="submit">a - z</button>
+            <button id="aBtn" type="submit">z - a</button>
+            <p id="info">clique e precione o card!</p>
 
           </form>
           <br />
@@ -112,20 +110,9 @@
         </ul>
       </section>
 
-      <section class="bloco" id="desenvolvedoras">
-        <div class="dev">
-          <img src="./data/rickandmorty/images/i.jpg" >
-          <div class="box">
-            <h4><b>Priscila Silveira</b></h4> 
-            <p><a href="https://www.linkedin.com/in/priscilassilveira/" target="_blank"><img src="./data/rickandmorty/images/icons8-linkedin-50.png" ></a>
-              <a href="https://github.com/PriscilaSSilveira" target="_blank"><img src="./data/rickandmorty/images/git.webp" ></a></p> 
-          </div>
-        </div>
-        
 
-      </section>
 
-      <section class="bloco" id="calculo">
+      <section class="bloco" id="status">
 
         <div class="contagem">
 
@@ -168,11 +155,34 @@
         </div>
 
       </section>
-  </div>
 
-  <footer></footer>
+      <section class="bloco" id="desenvolvedoras">
+        <div class="pri">
+          <img src="./data/rickandmorty/images/pri.jpeg" >
+          <div class="box">
+            <h4><b>Priscila Silveira</b></h4> 
+            <p><a href="https://www.linkedin.com/in/priscilassilveira/" target="_blank"><img src="./data/rickandmorty/images/icons8-linkedin-50.png" ></a>
+              <a href="https://github.com/PriscilaSSilveira" target="_blank"><img src="./data/rickandmorty/images/git.webp" ></a></p> 
+          </div>
+        </div>
+        
+        <div class="ana">
+          <img src="./data/rickandmorty/images/ana.jpeg" >
+          <div class="box">
+            <h4><b>Ana Freitas</b></h4> 
+            <p><a href="https://www.linkedin.com/in/ana-freitas-a3b60676/" target="_blank"><img src="./data/rickandmorty/images/icons8-linkedin-50.png" ></a>
+              <a href="https://github.com/anafreitas-br " target="_blank"><img src="./data/rickandmorty/images/git.webp" ></a></p> 
+          </div>
+        </div>
+        
+        
+
+      </section>
+
+  </div>
+</div>
   <script src="main.js" type="module"></script>
-  </header>
+
 </body>
 
 </html>
