@@ -321,3 +321,24 @@ td:last-child {
 .pokemon-resistance {
   min-height: 1.2rem;
 }
+
+
+/* FOOTER */
+#footer {
+  background-color: #038C73;
+  text-align: center;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 0.7rem 1rem;
+}
+
+#footer a {
+  color: #000;
+  text-shadow: #fff 1px 1px 1px;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+
+#footer a:hover {
+  color: #D92534
+}
