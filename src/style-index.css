@@ -7,7 +7,6 @@ body {
     font-family: 'M PLUS Rounded 1c', sans-serif;
     width: auto;
     background-color: rgb(247, 234, 208);
-    overflow: hidden;
 }
 
 
@@ -232,7 +231,6 @@ body {
 @media (max-width: 480px) {
     body{
         width: 100vw;
-        overflow: hidden;
     }
     .logo{
         margin-left: 30%;
@@ -247,36 +245,21 @@ body {
         justify-content: center;
     }
     .aside-menu{
-        width: 100vw;
-        padding: 0;
         width: 100%;
+        
     }
      .head-menu-list{
         width: 100vw;
         display: flex;
-        font-size: 8px;
+        font-size: 12px;
     }
     .select-itens {
         width: 100%;
         justify-content: center;
         display: flex;
         flex-wrap: wrap;
-        /* justify-content: space-around; */
         
     }
-    /* .input-search,
-    .select-filter,
-    .select-sort,
-    .select-number,
-    .btn-clean {
-        width: 90%;
-        height: 90%;
-        font-size: 12%;
-    } 
-    .input-search {
-        width: 70%;
-        height: 68%;
-    }  */
     .img{
         width: 70%;
         height: 50%;
@@ -286,9 +269,9 @@ body {
     .card-front,
     .frame,
     .main-cards {
-        width: 140px;
-        height: 160px;
-        font-size: 7px;        
+        width: 190px;
+        height: 210px;
+        font-size: 10px;
     }
 
     .footer{
