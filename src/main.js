@@ -1,14 +1,14 @@
-import { calculusPokemon, namePokemon, typePokemon, orderPokemon} from './data.js';
+import { calculusPokemon, namePokemon, typePokemon, orderPokemon } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
-const dataPokemon = data.pokemon;
+export const dataPokemon = data.pokemon;
 
 const menuHamburguer = document.getElementById("menu-hamburguer");
 menuHamburguer.addEventListener("click", () => {
   document.getElementById("root").classList.toggle("show-menu");
 });
 
-function pokebola(list) {
+export function pokebola(list) {
   let auxPoke = "";
   for (let card of list) {
     auxPoke += `
@@ -22,21 +22,21 @@ function pokebola(list) {
     </li>
     <li class="back-card">
       <h2 class="card-num">${card.num}</h4>
-      <p class="height">Altura: ${card.size.height}</p>
-      <p class="weight">Peso: ${card.size.weight}</p>
-      <p class="card-weaknesses">Fraquezas: ${card.weaknesses.join("|")}</p>
-      <p class="card-evolution">Evoluções:${card}</p>
+      <p class="cardText">Altura: ${card.size.height}</p>
+      <p class="cardText">Peso: ${card.size.weight}</p>
+      <p class="cardText card-weaknesses">Fraquezas: ${card.weaknesses.join("|")}</p>
+      <p class="cardText">Evoluções:${card.evolution}</p>
     </li>
     </ul>
     </article>`
   }
-  document.getElementById("pokedex").innerHTML = auxPoke
+  document.getElementById("pokedex").innerHTML = auxPoke;
 }
 pokebola(dataPokemon);
 
-const inputFilterSearch = document.getElementById("searchInput");
-inputFilterSearch.addEventListener("click", formFilterName);
-function formFilterName(event) {
+const inputFilterSearch = document.getElementById("textInput");
+inputFilterSearch.addEventListener("keyup", formFilterName);
+export function formFilterName(event) {
   event.preventDefault();
 
   const searchName = document.getElementById("textInput").value;
@@ -46,17 +46,17 @@ function formFilterName(event) {
 
 const inputFilterOrder = document.getElementById("orderInput");
 inputFilterOrder.addEventListener("click", formFilterOrder);
-function formFilterOrder(event) {
+export function formFilterOrder(event) {
   event.preventDefault();
 
   const order = document.getElementById("orderInput").value;
   const filterOrder = orderPokemon(dataPokemon, order);
-  pokebola(filterOrder)
+  pokebola(filterOrder);
 }
 
 const inputFilterType = document.getElementById("typeInput");
 inputFilterType.addEventListener("click", formFilterType);
-function formFilterType(event) {
+export function formFilterType(event) {
   event.preventDefault();
 
   const filterType = document.getElementById("typeInput").value;
