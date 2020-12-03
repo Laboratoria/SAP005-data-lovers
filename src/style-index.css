@@ -3,10 +3,11 @@
     margin: 0px;
 }
 
-.body {
+body {
     font-family: 'M PLUS Rounded 1c', sans-serif;
     width: auto;
     background-color: rgb(247, 234, 208);
+    overflow: hidden;
 }
 
 
@@ -231,6 +232,7 @@
 @media (max-width: 480px) {
     body{
         width: 100vw;
+        overflow: hidden;
     }
     .logo{
         margin-left: 30%;
@@ -256,8 +258,10 @@
         font-size: 8px;
     }
     .select-itens {
+        width: 100%;
+        justify-content: center;
         display: flex;
-        flex-flow: row wrap;
+        flex-wrap: wrap;
         /* justify-content: space-around;  */
         
     }
@@ -266,8 +270,8 @@
     .select-sort,
     .select-number,
     .btn-clean {
-        width: 80%;
-        height: 80%;
+        width: 90%;
+        height: 90%;
         font-size: 12%;
     }
     .input-search {
@@ -277,9 +281,6 @@
     .img{
         width: 50%;
         height: 50%;
-    }
-    .main-cards {
-        margin-left: auto;
     }
 
     .card-back,
