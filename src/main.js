@@ -1,161 +1,130 @@
-// import { example } from './data.js';
-// // import data from './data/lol/lol.js';
-// import data from './data/pokemon/pokemon.js';
-//
+
+
 import rickAndMorty from './data/rickandmorty/rickandmorty.js';
 
-//const { default: rickAndMorty } = require("./data/rickandmorty/rickandmorty");
-
-   // let nomes = ["Diego", "Gabriel", "Lucas"];const allData = rickAndMorty.results;
-   // let lista = document.querySelector('#lista');
-  //const allData = rickAndMorty.results; 
-  //const data = allData[1];
-   
-  // Objeto de objetos
-
- 
 const allData = rickAndMorty.results;
-//const data = allData.results
 
-//const data = allData[1];
-//
-//const allData = rickAndMorty.results;
+//função filtrar
+let arrayFiltrada = allData;
 
-//for(let data of allData){
+function getName(event) {
+    event.preventDefault()
+    let nome = document.getElementById("texto").value;
+    nome = nome[0].toUpperCase() + nome.slice(1).toLowerCase();
+    arrayFiltrada = allData.filter(personagem => personagem.name.startsWith(nome))
 
- //   console.log('specie: '+ data.specie);
-//  console.log('status: '+ data.status);
-  //  console.log('genero: '+ data.gender);
-   // console.log('image: '+ data.image);
-   // console.log("-------------------------");
-   //document.querySelector('#print').innerHTML = allData;
- //  // document.getElementById("root").appendChild(data.name);
-    
-
-
-
-//function teste (){
-//const allData = document.querySelector ('#root').value;
-//document.querySelector('#print').innerHTML = allData;
-
-//}
-//
-//const allData = rickAndMorty.results;
-
-//for(let data of allData){
-
-// console.log('specie: '+ data.specie);
-// console.log('status: '+ data.status);
-// console.log('genero: '+ data.gender);
-// console.log('image: '+ data.image); 
-// console.log("-------------------------");
-// document.getElementById("root").appendChild(data.name);
-
-//}
-
-
-//var citricos = allData.slice(1, 3);
-//document.getElementById("root").innerHTML = citricos;
-
-
-
-
-//document.getElementById("root").innerHTML = data;
-//for(var i = 0; i < 16; i++){  
-//var img = document.createElement("img"); //criar elemento img
-//var img.src = "dados.img" + i + ".jpg"; //atribuindo a propriedade source da imagem    
-//document.getElementById("root").appendChild(img); //adicionando imagem como filha de demo
-//}
-
-
-//const data = allData.results
-
-//const data = allData[1];
-//data = document.getElementById("root").value;
-
-// let nomes = ["Diego", "Gabriel", "Lucas"];const allData = rickAndMorty.results;
-// let lista = document.querySelector('#lista');
-// const allData = rickAndMorty.results; 
-//const data = allData[1];
-
-
-
-//const allData = rickAndMorty.results;
-//const data = allData.results
-
-//const data = allData[1];
-//data = document.getElementById("root").value;
-
-
-// content.innerHTML = data;
-// teste.appendChild(content);
-// //const teste = document.getElementByIdsa
-//console.log(data)
-
-//document.getElementById("root").innerHTML = 
-//document.write(data);
-
-//const data = allData.map(item =>'' item.name  + item.status  + item.species  + item.gender + `<img src="${item.image}" />`)
-//MAP
-
-// para pegar os dados do rickandmorty.js
-// <b>Genus:</b> ${item.gender} <br><b> Status:</b> ${item.status} <br> <b>Species:</b> ${item.species}
-//let data = allData.map(item =>  `<div id="card"><p><img src="${item.image}" /><h4> Name: ${item.name} <br> Genus: ${item.gender} <br> Status: ${item.status} <br> Species: ${item.species}</h4></p></div>`)
-
-//front-card
-let data = allData.map(item => `<div class="fcard"><img src=${item.image} alt="Avatar" class="img-card" />  <b class="name">${item.name}  </b></div>`)
-document.getElementById("fcard").innerHTML = data;
-//back-card
-let bData = allData.map(item => `<div class="bcard">  <h4><p> <br> Name: ${item.name} Genus: ${item.gender} <br> Status: ${item.status} <br> Species: ${item.species}</h4></p></div>`)
-document.getElementById("bcard").innerHTML = bData;
-
-
-//console.log(vetor)
-//const splitar =
-    //function splitString(stringToSplit, separator) {
-       // var arrayOfStrings = stringToSplit.split(separator);
-
-
-
-        //document.getElementById("root").innerHTML = vetor;
-
-
-//const {name,status,species} = (".src/data/rickandmorty/rickandmorty.json")
-
-//console.log(`name: ${name}, o status é ${status}, ele é da espécie ${species}`)
-//rickAndMorty.forEach(function(allData){
-  //  console.log(dados);
-//});
-
-//document.getElementById("root").innerHTML = 
-//document.write(data);
-
-
-//document.getElementById("root").innerHTML = 
-//document.write(data);
-
-
-//MAP
-//const vetor = allData.map(item => item.name  + item.status  + item.species  + item.gender)
- //document.getElementById("root").innerHTML = vetor;
+    secao.innerHTML = templateCard(arrayFiltrada);
+}
 
 
 
 
 
-//console.log(vetor)
-//const splitar =
-    //function splitString(stringToSplit, separator) {
-       // var arrayOfStrings = stringToSplit.split(separator);
+document.getElementById("btn").addEventListener("click", getName)
 
 
 
-        //document.getElementById("root").innerHTML = vetor;
+//função cards 
+
+function templateCard(allData) {
 
 
-//const {name,status,species} = (".src/data/rickandmorty/rickandmorty.json")
+    let data = allData.map(personagem => `<div class="frontContainer"><img src=${personagem.image} alt="Avatar" class="img-card" /> 
+<br> <b class="name">${personagem.name}  
+</b></div>`)
+    // document.getElementById("frontCard").innerHTML = data;
 
-//console.log(`name: ${name}, o status é ${status}, ele é da espécie ${species}`)
-//rickAndMorty.forEach(function(allData){
-  //  console.log(dados);
-//});
+
+    let bData = allData.map(personagem => `<div class="backCard">  <h4><p> Name:  ${personagem.name} <br> Genus: 
+   ${personagem.gender} <br> Status: ${personagem.status} <br> Species: ${personagem.species} <br> 
+   Origin:${personagem.origin.name}<br> Location:${personagem.location.name}</h4></p></div>`)
+    document.getElementById("backCard").innerHTML = bData;
+
+
+
+    return data
+}
+const secao = document.getElementById("frontCard")
+secao.innerHTML = templateCard(arrayFiltrada);
+
+
+
+
+//função de ordenar
+
+document.getElementById("oBtn").addEventListener("click", ordC)
+function ordC(event) {
+    event.preventDefault()
+    const ordenaAZ = allData.sort((a, b) => {
+        return (a.name < b.name) ? - 1 : 1
+    })
+    secao.innerHTML = templateCard(ordenaAZ);
+
+}
+
+
+document.getElementById("aBtn").addEventListener("click", ordD)
+function ordD(event) {
+    event.preventDefault()
+    const ordenaZA = allData.sort((a, b) => (a.name > b.name) ? - 1 : 1)
+    secao.innerHTML = templateCard(ordenaZA);
+
+}
+
+//calculo
+
+const statusData = allData.map(i => i.status)
+
+let alive = 0
+let dead = 0
+let unknown = 0
+
+
+for (let j = 0; j < statusData.length; j++) {
+
+    if (statusData[j] === 'Alive') {
+        alive += 1
+    }
+    else if (statusData[j] === 'Dead') {
+        dead += 1
+    }
+    else  {
+        unknown += 1
+    }
+}
+const total = alive + dead + unknown;
+document.getElementById('alive').innerHTML = alive
+document.getElementById('dead').innerHTML = dead
+document.getElementById('unknown').innerHTML = unknown
+document.getElementById('total').innerHTML = total
+
+
+
+//grafico
+
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+
+function drawChart() {
+  let graphic = google.visualization.arrayToDataTable([
+  ['STATUS', 'QUANTIDADE'],
+  ['vivo', alive],
+  ['morto', dead],
+   ['desconhecido', unknown]
+  
+
+]);
+
+  let options = {'title':'STATUS', 'width':600, 'height':400 ,
+
+colors:['#BA55D3','#008080','#7B68EE']
+};
+
+
+
+  let chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(graphic, options);
+}
+
+
