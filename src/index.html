@@ -8,18 +8,28 @@
   </head>
   
   <body>
-    <div class="container">
-      <h1 class="Titulo">PokeLovers </h1>
+    <header id="backgroundMenu" class="navMenu">
+        <img class="img-poke-lovers" src="IMG/logo.jpeg">
+        <h1 class="name-app">P.O.K.E L.O.V.E.R.S</h1>
+        <nav class = "buttonMenu">
+          <ul>
+            <li><a href="index.html"> Home </a></li>
+            <li><a href="resumo.html">Resumo do jogo</a></li>
+            <li><a href="mapa.html">Veja o mapa</a></li>
+            <li><a href="#">Evolução</a></li>
+          </ul>
+        </nav>
+    </header>
+
+    <main class="container">
       <nav class="main-options">
-        <ul class="menu">
-          <li>
+        <div class="menu">
             <select name="order-alphabet" class="order-alphabet" id="order-alphabet">
               <option selected value="">Ordenar</option>
               <option class = "az" value="az">A - Z</option>
               <option class = "za" value="za">Z - A</option>
             </select>
-          </li>
-          <li>
+
             <select name="tipos" id="allType" class="allTypes">
               <option selected class="Todos">Tipos</option>
               <option class="typePokemons" value="Grass">Grass</option>
@@ -35,24 +45,23 @@
               <option class="typePokemons" value="Bug">Bug</option>
               <option class="typePokemons" value="Normal">Normal</option>
             </select>
-          </li>
-          <li>
+
             <select name="raridade" id="allRarity" class="allRaritys">
               <option selected class="TodosRarity">Raridade</option>
               <option class="typeRarity" value="Normal">Normal</option>
               <option class="typeRarity" value="Mythic">Mythic</option>
               <option class="typeRarity" value="Legendary">Legendary</option>
             </select>
-          </li>
-          <li id="divBusca">
-            <input type="text" id="input" class="input" placeholder="Buscar..." />
-            <button class="button" id="buttonPoke"><img class = imgPoke src="IMG/pok.png"></button>
-          </li>
-        </ul>
+
+            <div class="inputPokemon">
+              <input type="text" id="input"  placeholder="Buscar..." />
+              <button class="buttonPoke" id="buttonPoke"><img class = imgPoke src="IMG/pok.png"></button>
+            </div>
+        </div>
       </nav>
-      <div class="card" id="container-card-poke">
+      <div id="container-card-poke">
       </div>  
-    </div>
+    </main>
     <script src="main.js" type="module"></script>
   </body>
 </html>

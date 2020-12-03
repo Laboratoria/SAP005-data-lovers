@@ -1,5 +1,4 @@
 import * as filtros from './data.js';
-import pokemon from './data/pokemon/pokemon.js';
 import data from './data/pokemon/pokemon.js';
 
 const pokemons = data.pokemon;
@@ -32,7 +31,7 @@ const getPoke = (data) => {
         if (typeof(poke.evolution["next-evolution"]) != "undefined") {
             let arrayEvolution = poke.evolution["next-evolution"];
             for (let evolutionPokes of arrayEvolution) {
-                evolution += evolutionPokes.name + ",";
+                evolution += evolutionPokes.name + ", ";
             }
 
         } else {
@@ -45,24 +44,23 @@ const getPoke = (data) => {
 const cardInfo = (img, num, name, type, weaknesses, evolution, rarity, cp, hp) => {
     container.innerHTML += `
                          
-                          <div class="flip-card">
-                          <div class="card1">
-                          <div class="flip-card-front">
-                          <p class="card-info-poke"><img class="img" src=${img} alt="${name}"/></p>
-                          <p class="card-info-poke"> ${num}</p> 
-                          <p class="card-info-poke">${name}</p>
-                          <p class="card-info-poke">${type}</p>
-                          </div>
-                          <div class="flip-card-back">
-                          <p class="card-info-poke">${weaknesses}</p>
-                          <p class="card-info-poke">${evolution}</p>
-                          <p class="card-info-poke">${rarity}</p>
-                          <p class="card-info-poke">${cp}</p>
-                          <p class="card-info-poke">${hp}</p>
-                          </div>
-                          </div>
-                          </div>
-                          
+<div class="flip-card">
+    <div class="card1">
+        <div class="flip-card-front">
+            <p class="card-info-poke"><img class="img" src=${img} alt="${name}"/></p>
+            <p class="card-info-poke">${num}</p> 
+            <p class="card-info-poke">${name}</p>
+            <p class="card-info-poke">${type}</p>
+        </div>
+        <div class="flip-card-back">
+            <p class="card-info-poke">${weaknesses}</p>
+            <p class="card-info-poke">${evolution}</p>
+            <p class="card-info-poke">${rarity}</p>
+            <p class="card-info-poke">${cp}</p>
+            <p class="card-info-poke">${hp}</p>
+        </div>
+    </div>
+</div>
 `
 }
 
