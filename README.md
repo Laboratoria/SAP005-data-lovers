@@ -24,11 +24,13 @@
   
   Nesse sentido, são histórias de usuário da aplicação:
   
-  "Eu, como jogador de Pokemon Go, gostaria de poder localizar um Pokemon e ter acesso à um resumo de suas características"
   
-  e
+  "Eu, como jogador de Pokemon Go, gostaria de poder localizar um Pokemon e ter acesso à um resumo de suas características" ;
   
-  "Eu, como jogador de Pokemon Go, gostaria de uma aplicação que me permitisse filtrar Pokemons por tipo"
+  "Eu, como jogador de Pokemon Go, gostaria de ter acesso a uma lista completa de Pokemons e poder ordená-la em ordem crescente (A-Z) e descrecente (Z-A)" ;
+  
+  "Eu, como jogador de Pokemon Go, gostaria de uma aplicação que me permitisse filtrar Pokemons por tipo e saber qual a porcentagem desse tipo com relação ao número total de Pokemons".
+  
 
 ## 3. Processo de Desenvolvimento
 
