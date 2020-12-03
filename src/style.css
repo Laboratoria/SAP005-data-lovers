@@ -7,8 +7,6 @@ body {
     color: rgb(0, 0, 0)
 }
 
-main {}
-
 .elemento1 {
     position: absolute;
     top: 0;
@@ -18,4 +16,8 @@ main {}
     height: 1305px;
     width: 1080px;
     margin: auto;
+}
+
+.pokemonsDiv {
+    color: yellow;
 }

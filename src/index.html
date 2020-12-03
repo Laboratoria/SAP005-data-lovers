@@ -4,20 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POKÉDEX</title>
+    <title>POKELOVERS</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <main>
-        <div class="elemento1">
-            <img src="img/pokémon_1.png" alt="elemento1">
-        </div>
+        <header>
+            <div class="elemento1">
+                <img src="img/pokémon_1.png" alt="elemento1" text-align: center;>
+            </div>
+        </header>
+
+        <nav>
+
+            <ul class="menu">
+                <li> <button id="tipo"> Tipo</button> </li>
+                <li> <button id="nome"> Nome</button></li>
+                <li> <button id="evolucao"> Evolução</button></li>
+            </ul>
+        </nav>
         <section>
-            <div class="cards" id=mostrar-cards></div>
+            <div class="cards" id=pokemons-cards></div>
         </section>
 
-        <button id="types-menu"> oi </button>
     </main>
     <script type="module" src="main.js"></script>
 

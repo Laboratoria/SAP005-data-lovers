@@ -1,42 +1,76 @@
-import pokemons from '../data/pokemon/pokemon.js';
+import data from '../data/pokemon/pokemon.js';
 import { getType, getName, getEvolution } from './data.js';
 
-// function cadaitem
+// Printar Cards
+// function geraCards(arrayPokemons){
+//     let card = ""
+//     for (pokemon of arrayPokemons) {
+//       card += `
+//       <article class="divcard">
+//       <p class="texto-titulo">Nome: ${pokemon.name}</p>
+//       <img src="${pokemon.img}">
+//       <p class="texto-card">Tipo: ${pokemon.type}</p>
+//       </article>`
+//     }
+//     console.log(card)
+//     return card
+//   }
+//   const secaoCards = document.getElementById("principal")
+//   secaoCards.innerHTML = geraCards(pokemonsFiltrados)
+
+///??? socorro
+
+//Mostrar todos os pokémons//
+
+// document.getElementById("tipo").addEventListener('click', (e) => x(e.target.value))
+document.getElementById("nome").addEventListener('click', (e) => x(e.target.value))
+document.getElementById("evolucao").addEventListener('click', evolution)
+
+function todosPokemons(anyArray) {
+    let pokemonsDiv = document.getElementById("pokemons-cards");
+    pokemonsDiv.className = "pokemonsDiv";
+    pokemonsDiv.innerHTML = `
+     ${anyArray.map((pokemon) => `
+     <div class="cards">
+         <img src="${pokemon["img"]}" class="pokemon-img" id="img-poke" />
+         <p>${pokemon["name"]}</p>
+         <p>${pokemon["num"]}</p>
+         <p>${pokemon["type"]}</p>
+         <p>${pokemon["resistant"]}</p>
+     </div>
+   `).join("")}
+      `
+  } 
+todosPokemons(data.pokemon);
+
+// Buscar por tipo //
+const filtrarTipo = (event) => {
+    let typeArray = getType(data, event);
+    todosPokemons(typeArray)
+}
 
 
 
-console.log(pokemons)
-    //Mostrar todos os pokémons//
+document.getElementById("tipo").addEventListener('click', (e) => filtrarTipo(e.target.value))
 
-// document.getElementById("types-menu").addEventListener('click', (e) => x(e.target.value, console.log(e)))
-document.getElementById("types-menu").addEventListener('click', (e) => window.prompt("funcionou"))
-    // document.getElementsByName("pokemon-name")[0].addEventListener('change', (e) => buscarPorNome(e.target.value))
+//Buscar por nome//
+const buscarPorNome = (event) => {
+    let typeArray = getName(data, event);
+    renderPokemon(typeArray)
+}
+console.log(buscarPorNome)
 
-// document.getElementById("evolucao").addEventListener('click', evolution)
+document.getElementById("nome").addEventListener('click', (e) => buscarPorNome(e.target.value))
 
+//Buscar por evolucao//
 
-// const filtrarTipo = (event) => {
-//     let typeArray = getType(pokemons, event);
-//     renderPokemon(typeArray)
-// }
+function evolution() {
+    let name = document.getElementById("nome").value;
+    let pokemonEvolution = getEvolution(data, name);
+    renderPokemon(pokemonEvolution)
 
-// document.getElementById("types-menu").addEventListener('change', (e) => filtrarTipo(e.target.value))
+}
 
-// //Buscar por nome//
-// const buscarPorNome = (event) => {
-//     let typeArray = getName(pokemons, event);
-//     renderPokemon(typeArray)
-// }
-
-// document.getElementsByName("pokemon-name")[0].addEventListener('change', (e) => buscarPorNome(e.target.value))
-
-// //Evolucao//
-
-// function evolution() {
-//     let name = document.getElementById("poke-name").value;
-//     let pokemonEvolution = getEvolution(pokemons, name);
-//     renderPokemon(pokemonEvolution)
-
-// }
-
-// document.getElementById("evolucao").addEventListener('click', evolution)
+document.getElementById("tipo").onclick = ()  => {
+    console.log("passeieAqui")
+}
