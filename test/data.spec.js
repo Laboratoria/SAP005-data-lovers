@@ -1,5 +1,5 @@
-import { example, anotherExample, bringRivalPokemon } from '../src/data.js';
-const pokemons = {
+import { bringRivalPokemon, filterAllPokemonByType, orderBestPokemonByCP } from '../src/data.js';
+/*const pokemons = {
   "num": "001",
   "name": "bulbasaur",
   "type": [
@@ -27,6 +27,7 @@ const pokemons = {
     "psychic"
   ],
 }
+*/
 
 
 describe('bringRivalPokemon é uma função?', () => {
@@ -34,28 +35,37 @@ describe('bringRivalPokemon é uma função?', () => {
     expect(typeof bringRivalPokemon).toBe('function');
   });
 
-  it('returns `["name", "num", "image", "type", "resistant", "weaknesses"]`', () => {
-    expect(bringRivalPokemon()).toBe('["name", "num", "image", "type", "resistant", "weaknesses"]');
+  test('onPress gets called with the right thing', () => {
+    const bringRivalPokemon = jest.fn();
+    simulatePresses(bringRivalPokemon);
+    expect(bringRivalPokemon).toBeCalledWith(
+      expect.objectContaining({
+        "name": pokemon.name,
+        "num": pokemon.num,
+        "image": pokemon.img,
+        "type": pokemon.type,
+        "resistant": pokemon.resistant,
+        "weaknesses": pokemon.weaknesses  
+      }),
+    );
+  });
+
+describe('filterAllPokemonByType é uma função?', () => {
+  it('is a function', () => {
+    expect(typeof filterAllPokemonByType).toBe('function');
+  });
+
+  it('returns `types`', () => {
+    expect(filterAllPokemonByType()).toBe('types');
   });
 });
 
-describe('example', () => {
+describe('orderBestPokemonByCP é uma função?', () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof orderBestPokemonByCP).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
-});
-
-
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
-
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+  it('returns `types`', () => {
+    expect(orderBestPokemonByCP()).toBe('types');
   });
 });
