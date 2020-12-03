@@ -27,7 +27,6 @@ const dados = {
         const ovos = document.createElement("p");
         const altura = document.createElement("p");
         const peso = document.createElement ("p");
-        const fraqueza = document.createElement ("p");
         type.classList.add("tipoPokemon'")
         image.src = pokemon.img
         text.innerHTML = pokemon.name.toUpperCase();
@@ -36,7 +35,7 @@ const dados = {
         peso.innerHTML = `Peso: ${pokemon.weight}`
         ovos.innerHTML = `Ovo: ${pokemon.egg}`
         type.innerHTML = `Tipo: ${pokemon.type}`
-        fraqueza.innerHTML = `Fraqueza: ${pokemon.weaknesses}`
+        
         
         textNum.innerHTML = pokemon.num        
          
@@ -51,7 +50,6 @@ const dados = {
         flipCardBack.appendChild(type);
         flipCardBack.appendChild(altura);
         flipCardBack.appendChild(peso);
-        flipCardBack.appendChild(fraqueza);
         flipCardBack.appendChild (ovos);
       
     } 
@@ -70,6 +68,7 @@ function showAllPokemons() {
 const allPokemon = document.getElementById('btnAll')
 
 allPokemon.addEventListener("click", ()=>{
+    document.getElementById('txtSearch').value = ""
     clear(); 
     return showAllPokemons();
 })
@@ -78,11 +77,12 @@ allPokemon.addEventListener("click", ()=>{
 const name = filter.filter()
 const button = document.querySelector('#btn')
 
+
 button.addEventListener('click', (e)=>{
     e.preventDefault()
     const search = document.querySelector('#txtSearch')
-    let searchOption =  search.value
-    clear(); 
+    let searchOption =  search.value.toLowerCase()
+    clear();
     if("" !== searchOption){
     const pokemon = name.find(item => item.name == searchOption)
     if(pokemon !== undefined){

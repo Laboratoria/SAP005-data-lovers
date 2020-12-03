@@ -256,6 +256,20 @@ html,body{
     border-radius:6px;
     font-weight: bold;
 }
+
+.footer{
+    height: 50px;
+    background-color: #82B8D9;
+    text-align: center;
+    margin-bottom: 1px;
+}
+
+.footer a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 @media(min-width:320px) and (max-width:500px){
     .barra-menu{ 
         display:flex;
