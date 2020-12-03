@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
-  <!--<a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>-->
   <link rel="stylesheet" href="style.css">
   <title>Pokelovers</title>
 </head>
@@ -26,13 +25,17 @@
           <li class="menu-item"><a href="#title1" class="menulink">Sobre</a></li>
           <li class="menu-item"><a href="#title2" class="menulink">Pokemons</a></li>
         </ul>
+        <div class="social-media">
+          <a href="https://github.com/carinarocha" target="_blank">Carina<img src="images/github.png"></a>
+          <a href="https://github.com/JulianaAmoriN" target="_blank">Juliana<img src="images/github.png"></a>
+        </div>
       </nav>
     </anside>
-    <header id=title0>
-      <div class="img-wrapper">
+    <header id="title0">
+      <figure class="img-wrapper">
         <img src="images/sky6.jpg">
-      </div>
-      <div class="pokeball-body">
+      </figure>
+      <figure class="pokeball-body">
         <div class="pokeball-motion">
           <div class="pokeball-top"></div>
           <div class="inside-content">
@@ -40,7 +43,7 @@
           </div>
           <div class="pokeball-bottom"></div>
         </div>
-      </div>
+      </figure>
     </header>
     <main>
       <section class="overlay">
@@ -49,7 +52,7 @@
       <section class="tabs" id="title1">
         <ul>
           <li>
-            <input type="radio" name="inputTabs" class="radio-tab" checked>
+            <input type="radio" id="tabAbout" name="inputTabs" class="radio-tab" checked>
             <label for="tabAbout" class="tab-label"><b>Sobre</b></label>
             <div class="about">
               <article>
@@ -66,7 +69,7 @@
             </div>
           </li>
           <li>
-            <input type="radio" name="inputTabs" class="radio-tab" checked>
+            <input type="radio" id="tabAnimation" name="inputTabs" class="radio-tab" checked>
             <label for="tabAnimation" class="tab-label"><b>Animação</b></label>
             <div class="about">
               <article>
@@ -87,7 +90,7 @@
             </div>
           </li>
           <li>
-            <input type="radio" name="inputTabs" class="radio-tab" checked>
+            <input type="radio" id="tabGame" name="inputTabs" class="radio-tab" checked>
             <label for="tabGame" class="tab-label"><b>Videogame</b></label>
             <div class="about">
               <article>
@@ -117,48 +120,45 @@
           </li>
         </ul>
       </section>
-      <section class="overlay-carousel">
-        <div class="cloudTwo"></div>
-      </section>
       <section class="carousel-pokemon">
-        <h2 id="title2">Pókemons</h2>
-        <form class="box-filter">
+        <h2 id="title2" class="overlay-carousel cloudTwo">Pókemons</h2>
+        <div class="box-filter">
           <div class="container-input">
-            <a class="search-btn" id="searchInput" href="#">
+            <figure class="search-btn">
               <img class="search-img" src="images/loupe.png">
-            </a>
-          <input type="text" name="namePokemon" id="textInput" value="Nome do Pokemon" class="input-filter  searchInput" />
-          <!--<button type="send" id="searchInput" class="input-filter">procurar</button>-->
-          <select id="orderInput" class="order-filter">
-            <option disabled selected value="">Ordenar:</option>
-            <option value="0-251">0-251</option>
-            <option value="A-Z">A-Z</option>
-            <option value="Z-A">Z-A</option>
-          </select>
-          <select id="typeInput" class="type-filter">
-            <option disabled selected value="">Tipo:</option>
-            <option value="todos">Todos</option>
-            <option value="normal">Normal</option>
-            <option value="steel">Steel</option>
-            <option value="water">Water</option>
-            <option value="dragon">Dragon</option>
-            <option value="electric">Electric</option>
-            <option value="fairy">Fairy</option>
-            <option value="ghost">Ghost</option>
-            <option value="fire">Fire</option>
-            <option value="ice">Ice</option>
-            <option value="grass">Grass</option>
-            <option value="bug">Bug</option>
-            <option value="fighting">Fighting</option>
-            <option value="dark">Dark</option>
-            <option value="rock">Rock</option>
-            <option value="psychic">Psychic</option>
-            <option value="ground">Ground</option>
-            <option value="poison">Poison</option>
-            <option value="flying">Flying</option>
-          </select>
+            </figure>
+            <input type="text" name="namePokemon" id="textInput" value="Nome do Pokemon"
+              class="input-filter  searchInput animationInput" />
+            <select id="orderInput" class="order-filter animationInput">
+              <option disabled selected value="">Ordenar:</option>
+              <option value="0-251">0-251</option>
+              <option value="A-Z">A-Z</option>
+              <option value="Z-A">Z-A</option>
+            </select>
+            <select id="typeInput" class="type-filter animationInput">
+              <option disabled selected value="">Tipo:</option>
+              <option value="todos">Todos</option>
+              <option value="normal">Normal</option>
+              <option value="steel">Steel</option>
+              <option value="water">Water</option>
+              <option value="dragon">Dragon</option>
+              <option value="electric">Electric</option>
+              <option value="fairy">Fairy</option>
+              <option value="ghost">Ghost</option>
+              <option value="fire">Fire</option>
+              <option value="ice">Ice</option>
+              <option value="grass">Grass</option>
+              <option value="bug">Bug</option>
+              <option value="fighting">Fighting</option>
+              <option value="dark">Dark</option>
+              <option value="rock">Rock</option>
+              <option value="psychic">Psychic</option>
+              <option value="ground">Ground</option>
+              <option value="poison">Poison</option>
+              <option value="flying">Flying</option>
+            </select>
           </div>
-        </form>
+        </div>
         <div class="calculusFilter">
           <p id="calculus"></p>
         </div>
@@ -166,14 +166,6 @@
           <div id="pokedex" class="pokedex"></div>
         </div>
       </section>
-      <!--<section class="comparation">
-        <h2 id="title3">Comparação</h2>
-        <form>
-          <input type="number" id="numberPokemon1" max="251" min="1" />
-          <input type="number" id="numberPokemon2" max="251" min="1" />
-          <button type="send">comparar</button>
-        </form>
-      </section>-->
     </main>
   </div>
 </body>

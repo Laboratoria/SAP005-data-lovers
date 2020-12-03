@@ -15,14 +15,14 @@ export const orderPokemon = ((dataPokemon, order) => {
     case "A-Z":
       return dataPokemon.sort((a, b) => {
         return (a.name < b.name) ? -1 : 1
-      })
+      });
     case "Z-A":
       return dataPokemon.sort((a, b) => {
         return (a.name > b.name) ? -1 : 1
-      })
+      });
     case "0-251":
       return dataPokemon.sort((a, b) => {
         return (Number(a.num - b.num))
-      })
+      });
   }
 });
