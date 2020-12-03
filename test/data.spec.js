@@ -35,7 +35,7 @@ describe('bringRivalPokemon é uma função?', () => {
     expect(typeof bringRivalPokemon).toBe('function');
   });
 
-  test('onPress gets called with the right thing', () => {
+ /* test('onPress gets called with the right thing', () => {
     const bringRivalPokemon = jest.fn();
     simulatePresses(bringRivalPokemon);
     expect(bringRivalPokemon).toBeCalledWith(
@@ -49,6 +49,7 @@ describe('bringRivalPokemon é uma função?', () => {
       }),
     );
   });
+}); */
 
 describe('filterAllPokemonByType é uma função?', () => {
   it('is a function', () => {
@@ -56,7 +57,7 @@ describe('filterAllPokemonByType é uma função?', () => {
   });
 
   it('returns `types`', () => {
-    expect(filterAllPokemonByType()).toBe('types');
+    expect(filterAllPokemonByType(pokemons)).toBe('types');
   });
 });
 
