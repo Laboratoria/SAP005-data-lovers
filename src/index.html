@@ -9,32 +9,74 @@
 </head>
 
 <body>
-  <div id="root">
-
-    <!-- LANDING PAGE -->
+  <!-- LANDING PAGE -->
+  <section id="landing-page">
     <header>
       <div class="header-bar"></div>
       <h1 class="title">Battle Win</h1>
     </header>
 
-    <section>
-      <img class="landing-page-img" src="img/battle.png"
-        alt="Uma ilustração mostrando vários pokémons no meio de uma batalha.">
-      <div class="parallelogram">
-        <p class="introduction-text">Aumente suas chances de ganhar as batalhas!</p>
-        <a href="#">
-          <button id="call-to-action-btn">Clique aqui</button>
-        </a>
-      </div>
+    <div class="parallelogram">
+      <p class="introduction-text">Aumente suas chances de ganhar as batalhas!</p>
+      <a href="#pokemon-text">
+        <button id="call-to-action-btn">Clique aqui</button>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- BUSCAR POKÉMON -->
+  <main>
+    <div class="pixel-bg">
+      <section class="about-pokemon">
+        <div id="pokemon-text">
+          <p>Digite abaixo o nome do <span class="highlighted-text">pokémon contra o qual você vai lutar</span> e
+            mostraremos para você os <span class="highlighted-text">melhores pokémons que você pode escolher</span>
+            para aumentar suas chances de vencer.</p>
+        </div>
+        <input class="input-name" type="text" id="pokemon-name-input" placeholder="Nome do Pokémon">
+        <button id="search-pokemon-btn">Buscar Pokémon</button>
+      </section>
+
+
+      <!-- CARD POKÉMON RIVAL  -->
+      <section>
+        <div class="hidden-card" id="flex-container">
+          <p id="img-pokemon"></p>
+          <p id="num-pokemon"></p>
+          <p id="name-poke"></p>
+          <p id="type-pokemon"></p>
+          <p id="resistant-pokemon"></p>
+          <p id="weaknesses-pokemon"></p>
+        </div>
+      </section>
+    </div>
+
+    <!-- TABELA  -->
+    <section id="table-section" class="hidden-card">
+      <table>
+        <thead>
+          <tr>
+            <th>Pokémon</th>
+            <th>Nº</th>
+            <th>Tipo</th>
+            <th>Forte Contra</th>
+            <th>Combat Power</th>
+            <th>Ataque</th>
+            <th>Defesa</th>
+          </tr>
+        </thead>
+        <tbody class="pokemon-table-row"></tbody>
+      </table>
     </section>
+  </main>
 
-    <!-- SEARCH POKÉMON -->
+  <!-- FOOTER -->
+  <footer id="footer">
+    <p>Projeto feito com 💛 na <a target="_blank" href="https://www.laboratoria.la/">Laboratoria</a> por
+    <a target="_blank" href="https://github.com/KarinaFS">Karina Santos</a> e <a target="_blank" href="https://github.com/akemimeka">Akemi Mitsueda</a></p>
+  </footer>
 
-
-
-
-    
-  </div>
   <script src="main.js" type="module"></script>
 </body>
 
