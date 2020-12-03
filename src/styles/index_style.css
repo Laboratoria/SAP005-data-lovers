@@ -145,8 +145,8 @@ img{
     max-width: 960px;
     margin: 0 auto;
     padding-top: 13px;
-    padding-bottom: 13px;
-    padding-right: 13px;
+    padding-bottom: 72px;
+    padding-right: 32px;
     border-radius: 13px;
     display: flex;
     flex-wrap: wrap;
@@ -155,13 +155,15 @@ img{
 }
 
 .item-instruction-search{
-    background:rgb(75, 75, 75);
-    margin-left: 10px;
-    padding:10px;
+    background: rgb(75, 75, 75);
+    margin-left: 47px;
+    margin-right: 25px;
+    padding:19px;
     align-content: center;
-    color:white;
+    color: white;
     flex: 2 1 300px;
     flex-grow: 1;
+
 }
 
 #txtBusca{
@@ -169,6 +171,7 @@ img{
     border: 1px solid;
     border-radius: 5px;
     margin-left: 0.5em;
+    margin-top: 15px;
 }
 
 ::-webkit-input-placeholder {
@@ -199,15 +202,61 @@ img{
     border:none;
 }
 
+.flip-container{
+    perspective: 1000;
+}
 
-#item-card-one{
+.flip-container:hover .flipper, .flip-container.hover .flipper {  		
+    transform: rotateY(180deg);  	
+} 
+  
+.flip-container, #item-card-one-front, #item-card-one-back {  	
+    width: 320px;  	
+    height: 480px;  
+}
+  
+  /* define a velocidade da transição */
+.flipper {  	
+    transition: 0.5s;  	
+    transform-style: preserve-3d;    	
+    position: relative;  
+}
+      
+  /* esconde o verso durante a animação */
+#item-card-one-front, #item-card-one-back{  	
+    backface-visibility: hidden;    	
+    position: absolute;  	
+    top: 0;  	
+    left: 0;  
+}
+      
+
+#item-card-one-front{
+    z-index: 2; 
+    text-align: center;
+    background-image: linear-gradient(#358AFA, white);
+    width: 19em;
+    height: 29em;
+    margin-left: 27px;
+    margin-top: 15px;
+    border: solid 6px rgb(212, 212, 14);
+}
+
+#item-card-one-back{
+    transform: rotateY(180deg); 
     text-align: center;
     background-image: linear-gradient(#358AFA, white);
     width: 19em;
     height: 29em;
     margin-top: 15px;
-    margin-left: 26px;
+    margin-left: -9px;
     border: solid 6px rgb(212, 212, 14);
+    padding: 7px;
+
+}
+
+#item-card-one-back p{
+    padding-top: 39px;
 }
 
 #item-card1 h1{
