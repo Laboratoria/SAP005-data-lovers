@@ -214,7 +214,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(253, 165, 1);
+    background: #FFA601;
 }
 
 
@@ -304,7 +304,6 @@ body {
 
 footer {
     background-color: rgb(243, 215, 160);
-    ;
     color: black;
     bottom: 0;
     position: relative;
