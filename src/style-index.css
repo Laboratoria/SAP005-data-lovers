@@ -6,93 +6,37 @@
 .body {
     font-family: 'M PLUS Rounded 1c', sans-serif;
     width: auto;
+    background-color: rgb(247, 234, 208);
 }
 
 
-/* Animação icone menu lateral */
-
-.chk {
-    display: none;
-}
-
-.chk:checked~nav {
-    transform: translateX(349px);
-}
-
-label span {
-    position: absolute;
-    display: block;
-    height: 5px;
-    width: 100%;
-    border-radius: 30px;
-    background: #003A70;
-    transition: 0.25s ease-in-out;
-}
-
-label span:nth-child(1) {
-    top: 8px;
-}
-
-label span:nth-child(2) {
-    top: 16px;
-}
-
-label span:nth-child(3) {
-    top: 24px;
-}
-
-.chk:checked+label span:nth-child(1) {
-    transform: rotate(-45deg);
-    top: 16px;
-}
-
-.chk:checked+label span:nth-child(2) {
-    opacity: 0;
-}
-
-.chk:checked+label span:nth-child(3) {
-    transform: rotate(45deg);
-    top: 16px;
-}
-
-.label-aside-menu {
-    padding: 15px;
-    position: absolute;
-    z-index: 1;
-}
+/* Menu navegação*/
 
 .aside-menu {
-    background-color: #92b4bec5;
-    width: 200px;
-    height: 100%;
-    left: -350px;
-    position: absolute;
-    transition: all .5s;
+    background-color: rgb(243, 215, 160);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
 }
 
 .head-menu-list {
-    display: block;
-    padding: 20px 5px;
+    display: flex;
+    justify-content: center;
     list-style: none;
-    text-decoration: none;
-    color: white;
-    position: absolute;
-    top: 35px;
-    width: 95%;
-    font-size: 15px;
-}
-
-.menu-list:hover {
-    background-color: #89c2d3;
-    color: black;
 }
 
 .menu-list-link {
-    display: block;
-    padding: 20px 5px;
-    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: black;
     text-decoration: none;
+    list-style: none;
     font-weight: bold;
+}
+
+.menu-list-link:hover {
+    color: white;
 }
 
 .header-title {
@@ -108,7 +52,7 @@ label span:nth-child(3) {
 }
 
 
-/* Menu principal */
+/* Menu seletores */
 
 .select-itens {
     display: flex;
@@ -120,7 +64,7 @@ label span:nth-child(3) {
 
 .input-search {
     margin: 5px;
-    width: 280px;
+    width: 320px;
     outline: transparent;
     padding: .5em;
     border-radius: 4px;
@@ -132,7 +76,7 @@ label span:nth-child(3) {
 
 .select-filter {
     margin: 5px;
-    width: 140px;
+    width: 160px;
     outline: transparent;
     padding: .5em;
     border-radius: 4px;
@@ -144,7 +88,7 @@ label span:nth-child(3) {
 
 .select-sort {
     margin: 5px;
-    width: 140px;
+    width: 160px;
     outline: transparent;
     padding: .5em;
     border-radius: 4px;
@@ -176,7 +120,7 @@ label span:nth-child(3) {
 /* Tratamento dos cards*/
 
 .img {
-    filter: drop-shadow(0 0 0.15rem gray);
+    filter: drop-shadow(0 0 0.30rem gray);
 }
 
 .space {
@@ -216,6 +160,7 @@ label span:nth-child(3) {
 
 .card-front,
 .card-back {
+    background-color: rgb(250, 247, 238);
     text-transform: capitalize;
     position: relative;
     width: 260px;
@@ -227,7 +172,6 @@ label span:nth-child(3) {
 
 .card-front {
     position: absolute;
-    background-color: #faefbd3a;
     width: 260px;
     height: 295px;
     text-align: center;
@@ -239,7 +183,6 @@ label span:nth-child(3) {
     position: absolute;
     width: 260px;
     height: 295px;
-    background-color: #6198db;
     color: black;
     transform: rotateY(180deg);
     font-size: 15px;
@@ -320,22 +263,21 @@ label span:nth-child(3) {
 
 /* tratamento do footer */
 
+footer {
+    background-color: rgb(243, 215, 160);
+    ;
+    color: black;
+    bottom: 0;
+    position: relative;
+    padding: 15px;
+    text-align: center;
+    font-size: 17px;
+}
 
-/*.footer {
-/*    background-color: rgb(39, 126, 167);
-/*    color: white;
-/*    bottom: 0;
-/*    position: relative;
-/*    width: 100%;
-/*    padding: 20px;
-/*    text-align: center;
-/*    font-size: 17px;
-/*}
-/*
-/*.link-footer {
-/*    color: white;
-/*}
-/*
-/*.footer .container {
-/*    flex-flow: column;
-/*}
+.link-footer {
+    color: black;
+}
+
+.footer .container {
+    flex-flow: column;
+}

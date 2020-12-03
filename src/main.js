@@ -97,6 +97,7 @@ selectSortCp.addEventListener('change', () => {
 })
 
 buttonClear.addEventListener('click', () => {
+    showingCards(data.pokemon)
     inputSearch.value = ""
     selectFilterType.value = ""
     selectFilterResistant.value = ""
