@@ -88,14 +88,10 @@ button.addEventListener('click', (e)=>{
     if(pokemon !== undefined){
             dados.show(pokemon); 
         }else{
-            const textNotFound = document.createElement('p');
-            const imageNotFound = document.createElement("img");            
-            imageNotFound.src = "./img/nao-encontrado.png"           
+            const textNotFound = document.createElement('p');          
             textNotFound.innerHTML = "Ops... Esse pokémon não foi encontrado!"  
             document.getElementById('cards').appendChild(textNotFound);
-            textNotFound.appendChild(imageNotFound);
           
-            imageNotFound.classList.add('imageNotFound');
             textNotFound.classList.add('textNotFound');
         }    
     }else{
