@@ -101,3 +101,104 @@ button {
 .first-uppercase {
   text-transform: capitalize;
 }
+
+/* TABELA */
+#table-section {
+  margin: 2rem 0;
+}
+
+table,
+thead,
+tbody,
+th,
+td,
+tr {
+  display: block;
+}
+
+table {
+  /* text-align: center; */
+  border-collapse: collapse;
+  width: 100vw;
+}
+
+thead {
+  display: none;
+}
+
+tr {
+  border-top: 1px dotted #038C73;
+  border-bottom: 1px dotted #038C73;
+  margin-bottom: 2rem;
+  background: #eee;
+}
+
+/* tr:nth-of-type(odd) {
+  background: #eee;
+}
+
+tr:nth-of-type(even) {
+  background: #e2e2e2
+} */
+
+/* tr:hover {
+  background-color: #fffdbd;
+} */
+
+td {
+  position: relative;
+  padding: 0.3rem;
+  padding-left: 54%;
+  padding-right: 0.7rem;
+  border: none;
+  border-bottom: 2px solid #fff;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+
+td:before {
+  position: absolute;
+  left: 0.5rem;
+  width: 45%;
+  white-space: nowrap;
+  font-family: "Inter";
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: right;
+  color: #038C73;
+}
+
+td:nth-of-type(2):before { content: "Nº"; }
+td:nth-of-type(3):before { content: "Tipo"; }
+td:nth-of-type(4):before { content: "Forte Contra"; }
+td:nth-of-type(5):before { content: "Combat Power"; }
+td:nth-of-type(6):before { content: "Ataque"; }
+td:nth-of-type(7):before { content: "Defesa"; }
+
+td:first-child {
+  width: 100%;
+  padding: 0.3rem 0;
+  text-align: center;
+}
+
+td:last-child {
+  border-bottom: none;
+}
+
+.pokemon-name {
+  display: block;
+  margin: 0.4rem 0;
+  line-height: 0.8rem;
+  font-family: "Bungee";
+  font-size: 0.8rem
+}
+
+.pokemon-img {
+  width: 4rem;
+  height: auto;
+}
+
+.pokemon-resistance {
+  min-height: 1.2rem;
+}

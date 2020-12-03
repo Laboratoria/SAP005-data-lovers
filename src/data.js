@@ -1,6 +1,6 @@
 import data from "./data/pokemon/pokemon.js"
 
-const pokemons = data.pokemon
+const pokemons = data.pokemon;
 
 export function filterRivalPokemon(pokemons) {
   const searchInput = document.getElementById("search-input").value
@@ -15,7 +15,7 @@ export function filterRivalPokemon(pokemons) {
   }
 }
 
-export function filterAllPokemonByType(pokemons) {
+function filterAllPokemonByType(pokemons) {
   const types = {
     bug: [],
     dragon: [],
@@ -46,7 +46,7 @@ export function filterAllPokemonByType(pokemons) {
   return types
 }
 
-export function filterPokemonByRivalWeakness() {
+function filterPokemonByRivalWeakness() {
   const rivalWeakness = filterRivalPokemon(pokemons).weaknesses
   const pokemonByType = filterAllPokemonByType(pokemons)
   let bestPokemon = []

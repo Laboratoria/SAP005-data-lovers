@@ -1,7 +1,5 @@
-import data from './data/pokemon/pokemon.js';
 import { filterRivalPokemon, orderBestPokemonByCP } from './data.js';
 
-const pokemons = data.pokemon;
 const searchButton = document.getElementById("search-btn");
 const pokemonTableRow = document.querySelector(".pokemon-table-row");
 
@@ -10,7 +8,7 @@ const pokemonTableRow = document.querySelector(".pokemon-table-row");
 searchButton.addEventListener("click", event => {
   event.preventDefault();
   // const rivalPokemon = filterRivalPokemon(pokemons)
-  const best30PokemonByDecrescentCP = orderBestPokemonByCP().decrescentOrder.slice(0, 40)
+  const best60PokemonByDecrescentCP = orderBestPokemonByCP().decrescentOrder.slice(0, 60)
 
   // CARD DO POKÉMON RIVAL
 
@@ -19,17 +17,18 @@ searchButton.addEventListener("click", event => {
   // TABELA DE POKÉMONS VANTAJOSOS
 
   // dentro do LOOP
-  function showTable(best30PokemonByDecrescentCP) {
+  function showTable(pokemonArray) {
     let row = ""
-    for (let pokemon of best30PokemonByDecrescentCP) {
+    for (let pokemon of pokemonArray) {
       row += `
         <tr>
-          <td>${pokemon.num}</td>
-          <td>${pokemon.name}
+          <td>
+            <span class="pokemon-name">${pokemon.name}</span>
             <img class="pokemon-img" src="${pokemon.img}">
           </td>
-          <td>${pokemon.type}</td>
-          <td>${pokemon.resistant}</td>
+          <td>${pokemon.num}</td>
+          <td>${pokemon.type.join(", ")}</td>
+          <td class="pokemon-resistance">${pokemon.resistant.join(", ")}</td>
           <td>${pokemon.stats["max-cp"]}</td>
           <td>${pokemon.stats["base-attack"]}</td>
           <td>${pokemon.stats["base-defense"]}</td>
@@ -40,7 +39,7 @@ searchButton.addEventListener("click", event => {
   }
 
 
-  pokemonTableRow.innerHTML = showTable(best30PokemonByDecrescentCP)
+  pokemonTableRow.innerHTML = showTable(best60PokemonByDecrescentCP)
 
   // console.log(orderBestPokemonByCP())
 })
