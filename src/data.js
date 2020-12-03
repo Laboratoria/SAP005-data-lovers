@@ -11,7 +11,6 @@ export const sortOrder = (dataBase, valueSpeciesSelected) => {
   const orderAz = (a, b) => a.name < b.name ? -1 : a.name > b.name ? 1 : 0;
   const orderZa = (b, a) => b.name > a.name ? 1 : b.name < a.name ? 1 : 0;
   const orderRelevence = (a, b) => a.id < b.id ? -1 : a.id > b.id ? 1 : 0;
-
   switch (valueSpeciesSelected) {
     case "az":
       return dataBase.sort((a, b) => orderAz(a, b))
