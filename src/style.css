@@ -292,9 +292,9 @@ html,body{
         width: 100px;
     }
     .imgPokemon{
-        margin:0 0 0 -55% !important;
+        margin:0 0 0 -52% !important;
         width: 230px;
-        height: 100px;
+        height: 90px;
     }  
     .search{        
         margin: 20px 1% 4% 5%;     
@@ -427,7 +427,21 @@ html,body{
         margin-bottom: 6% !important;
       }
 
+
 }
+@media(min-width:1000px) and (max-width:1300px){
+
+    .search{
+        margin-left: 70%;
+    }
+
+    .imgPokemon{
+        margin-left: -20%;
+    }
+
+
+}
+
  
     
 
