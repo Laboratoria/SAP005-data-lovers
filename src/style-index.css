@@ -214,7 +214,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(253, 165, 1);
+    background: #FFA601;
 }
 
 

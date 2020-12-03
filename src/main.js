@@ -20,13 +20,14 @@ function showingCards(pokemonCards) {
 
     for (let pokemon of pokemonCards) {
         let evolutions = ""
-        if (!!pokemon.evolution["next-evolution"]) {
+        if (pokemon.evolution["next-evolution"] != undefined && pokemon.evolution["next-evolution"] != null) {
             for (let evolution of pokemon.evolution["next-evolution"]) {
                 evolutions += `<span>${evolution.name}</span>`
             }
         } else {
             evolutions = "Do not evolve"
         }
+
         cards +=
             `<div class="frame left">
                 <div class="left">
