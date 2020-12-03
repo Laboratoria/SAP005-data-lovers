@@ -10,8 +10,8 @@
 }
 
 .caption span.border {
-    background-color: rgba(0, 0, 0, 0.637);
-    color: #fff;
+    background-color: rgba(243, 215, 160, 0.651);
+    color: black;
     padding: 18px;
     font-size: 25px;
     letter-spacing: 10px;
@@ -113,21 +113,4 @@
 
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(253, 165, 1);
-}
-
-
-/* tratamento do footer */
-
-.footer {
-    background-color: rgb(39, 126, 167);
-    color: white;
-    bottom: 0;
-    position: fixed;
-    width: 100%;
-    text-align: center;
-    font-size: 17px;
-}
-
-.link-footer {
-    color: white;
 }
