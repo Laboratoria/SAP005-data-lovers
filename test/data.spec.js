@@ -56,8 +56,8 @@ describe('filterAllPokemonByType é uma função?', () => {
     expect(typeof filterAllPokemonByType).toBe('function');
   });
 
-  it('returns `types`', () => {
-    expect(filterAllPokemonByType(pokemons)).toBe('types');
+  it('retuns tipos de pokemons', () => {
+    expect(filterAllPokemonByType(pokemons)).toBe(types);
   });
 });
 
