@@ -297,8 +297,9 @@ html,body{
         height: 90px;
     }  
     .search{        
-        margin: 20px 1% 4% 5%;     
+         margin: 5% 5% 2% 5% !important;      
     }
+
     .textNotFound{
         font-size: 17px;    
     }
