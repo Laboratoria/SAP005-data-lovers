@@ -166,6 +166,11 @@ img{
 
 }
 
+.instruction-text{
+    margin-bottom:10px;
+}
+
+
 #txtBusca{
     padding: 8px;
     border: 1px solid;
@@ -286,7 +291,22 @@ img{
     padding: 10px;
     margin-top: 19px;
 }
+/* 
+--------------------FAIXA DE DIVISÃO MEIO DA PÁGINA ----------------------- */
 
+.division{
+    display: block;
+    margin-top: 63px;
+    padding: 33px;
+    text-align: center;
+    background-color:rgb(75, 75, 75);
+}
+
+.division h2{
+   color:white;
+   letter-spacing: 20px;
+   font-size: 12pt;
+}
 /* -----------    CONTAINER INSTRUÇÕES MOSTRAR TODOS OS POKEMONS ------------------ */
 
 #container-instruction-for-view-cards{
