@@ -1,269 +1,431 @@
 * {
   margin: 0;
-  padding: 0; /* CSS Reset */
-}
-
-.img-teste img {
-  width: 700px; /* largura da imagem */
-  height: 350px; /*  altura da imagem  */
-  margin-top: 10px; /* margem do topo */
-  /** height: 25%;**/
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-body {
-  margin: 10px 10px;
-  font-size: 28px;
-  background-image: url("g.gif");
-  background-position: center;
-  background-size: cover;
-}
-
-/*
-.container ul {
-list-style-type: none;
-margin: 0;
-padding: 0;
-overflow: hidden;
-border-radius: 5px;
-background-color: #000000;
-/**box-shadow: 10px 15px 15px 15px rgba(12, 163, 32, 0.2);
-box-shadow: inset 0 0 1em green, 0 0 1em palevioletred;
-position: -webkit-sticky; /* Safari 
-position: sticky;
-top: 0;
-}
-
-/**  ul:hover{
-/*box-shadow: 0px 8px 0px #4CAF50;*/
-/**box-shadow: 2px 2px 2px 1px rgba(12, 163, 32, 0.2);
-
-
-.container li {
-float: right;
-}
-
-.container li a {
-display: block;
-color: rgb(223, 20, 179);
-text-align: center;
-padding: 14px 16px;
-text-decoration: none;
-}
-
-.container li a:hover {
-box-shadow: inset 0 0 2em green;
-color: rgb(247, 159, 228);
-
-}
-
-/**.active {
-background-color: #11e218;
-}**/
-
-.cont {
-  width: 100%;
-  height: 100px;
-  padding-top: 2%;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
   padding: 0;
-  overflow: hidden;
-  border-radius: 5px;
-  background-color: #000000;
-  /*box-shadow: 10px 15px 15px 15px rgba(12, 163, 32, 0.2);*/
-  box-shadow: inset 0 0 1em green, 0 0 1em palevioletred;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
+  box-sizing: border-box;
 }
 
-/**  ul:hover{
-/*box-shadow: 0px 8px 0px #4CAF50;*/
-/*box-shadow: 2px 2px 2px 1px rgba(12, 163, 32, 0.2);*/
 
-li {
-  float: right;
+html {  
+  font-size: 62.5%;
 }
 
-li a {
-  display: block;
-  color: rgb(223, 20, 179);
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
 
-li a:hover {
-  box-shadow: inset 0 0 2em green;
-  color: rgb(247, 159, 228);
-}
-
-/**.active {
-background-color: #11e218;
-}**/
-
-/**#sombrarredondada{
-background-color: #090;
-color: #fff;
-width: 40px;
-padding: 40px;
--moz-border-radius: 7px;
--webkit-border-radius: 7px;
-
-box-shadow: 15px -10px 3px #000;
--webkit-box-shadow: 15px -10px 3px #000;
--moz-box-shadow: 15px -10px 3px #000;
-}height: 700px;
-**/
 html,
 body {
+  width: 100%;
   height: 100%;
+  
 }
 
-/**label {display: block;}**/
-form {
-  margin: 60px;
-  margin-top: 10px;
-  justify-content: space-between;
+label[for="btn-menu"] {
+  padding:10px;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Lacquer', sans-serif;
+  font-size: 40px;
+  text-align: center;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+ 
+  display: none;
+
 }
 
-button {
+#backgroundPage{
+  background-color: black;
+
+}
+
+#btn-menu{
+  width: 3rem;
+  height: 3rem;
+  display: none;
+  background-color: #000000;
+  /*z-index: 9;*/
+  
+}
+
+.links {
+  width: 100%;
+  height: 10%;
+  position: fixed;
+  display: flex;
+  /*float:right;*/
+  /*margin-right: 25px;*/
+    
+ 
+}
+
+
+.links label {
+  padding: 10px 0;
+  flex-grow: 1;
+  cursor: pointer;
+  text-align: center;
+  font-family: 'Lacquer', sans-serif;
+  font-weight: bold;
+  font-size: 3.8rem;
+  color: beige;
+  /*margin:5rem;*/
+  position:relative;
+  
+}
+
+.links label:hover {
+  width: auto;
+ /* height: 3rem;*/
+  background-color: rgba(242, 4, 250, 0.959);
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.scroll input {
+  display: none;
+}
+
+.bloco {
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  /*background-color: #000;*/
+}
+
+#rickAndMorty {
+  background-image: url('./data/rickandmorty/images/stars.gif');
+}
+
+#cards {
+  background-image: url('./data/rickandmorty/images/stars.gif');
+}
+
+#curiosidades {
+  background-image: url('./data/rickandmorty/images/stars.gif');
+}
+
+#desenvolvedoras {
+  background-image: url('./data/rickandmorty/images/stars.gif');
+}
+
+
+
+#texto {
+  background: #ffffff;
+  padding: 1px 10px;
+  color: #000000;
+  cursor: pointer;
+  margin: 5px 0;
+  display: flex;
+  height: 40px;
+  width: 25%;
+  font-size: 75%;
+  border-width: 2px;
+  border-radius: 6px 0px 0px 6px;
+  float: left;
+  text-align: center;
+  
+}
+
+
+#reset, #oBtn, #aBtn {
   padding: 9px;
   font-size: 75%;
-  border-width: 0px;
-  border-radius: 0px 6px 6px 0px;
-  margin-left: -1px;
-  /**margin-top: 10px;**/
+  border-radius: 6px 6px;
+  /*margin-top: 10px;*/
   background-color: rgba(0, 255, 76, 0.616);
   color: black;
-  width: 60px;
-  
+  width: 9rem;
+  font-weight: bold;
 }
 
-button:hover {
+#oBtn:hover, #reset:hover, #aBtn:hover{
   cursor: pointer;
   box-shadow: inset 0 0 2em rgb(168, 240, 168);
-  
-
 }
 
-input {
-  width: 20%;
-  /**margin: 10px;**/
-  float: left;
+#btn {
+  padding: 9px;
   font-size: 75%;
-  padding: 10px;
-  border-width: 0px;
-  border-radius: 6px 0px 0px 6px;
+  border-radius: 6px 6px;
+  background-color: rgba(0, 255, 76, 0.616);
+  color: black;
+  width: 6rem;
 }
 
-.container div {
-  width: 100%;
-  height: 700px;
-  position: relative;
+#btn:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 2em rgb(168, 240, 168);
+}
+
+.scroll {
   display: flex;
-  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sections {
+  transition: all .4s;
+}
+
+#rd_cards:checked~.sections {
+  margin-top: -100vh;
+}
+
+#rd_curiosidades:checked~.sections {
+  margin-top: -200vh;
+}
+
+#rd_desenvolvedoras:checked~.sections {
+  margin-top: -300vh;
+}
+
+body {
+ font-size: 2.8rem;
+}
+
+.img-logo {
+  width:100%;
+  display: flex;
   justify-content: center;
-}
-.fcard {
-  text-align: center;
-  background-color: rgb(0, 0, 0);
-  width: 50px;
-  height: 00px;
-  box-shadow: 0 4px 4px 0 rgb(255, 26, 236);
-  transition: 0.4s;
-  position: relative;
-  border-radius: 5px;
+
+
 }
 
-.fcard:hover {
-  box-shadow: 0 8px 16px 0 rgba(33, 253, 13, 0.938);
-  border-radius: 5px;
-}
-.img-fcard {
-  width: 100%;
-}
-.name {
-  color: rgba(136, 255, 0, 0.76);
+.img-logo :hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
-.bcard {
-  text-align: center;
-  background-color: rgb(255, 0, 0);
-  width: 250px;
-  height: 300px;
-  box-shadow: 0 4px 4px 0 rgb(255, 26, 236);
-  transition: 0.4s;
-  position: relative;
-  border-radius: 5px;
-}
 
-.bcard:hover {
-  box-shadow: 0 8px 16px 0 rgba(33, 253, 13, 0.938);
-  border-radius: 5px;
-}
-
-.species {
-  color: rgba(136, 255, 0, 0.76);
-}
 .card {
-  position: relative;
-  height: 348px;
-  width: 250px;
-  margin: 5px;
+  display: grid;
+  overflow-x: auto;
+  height: 500px;
+  width: 1700px;
   perspective: 1000;
 }
+
+.frontCard, .backCard {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  place-items: center;
+}
+
+.frontContainer {
+  box-shadow: 8px 8px 8px 8px rgba(120, 76, 161, 0.959);
+  border-radius: 10px;
+  width: 300px;
+  height: 410px;
+  text-align: center;
+  background: white;
+  color: rgb(0, 0, 0);
+  margin: 0.5em;
+  font-weight: bold;
+  text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbbbbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaaaaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+  font-size:3rem;
+}
+
+.backCard div {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.959);
+  border-radius: 10px;
+  width: 300px;
+  height: 390px;
+  text-align: left;
+  background: linear-gradient(rgba(72, 255, 0, 0.925), rgba(247, 0, 255, 0.945));
+  color: rgb(0, 0, 0);
+  margin: 0.5em;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.backCard h4 {
+  font-size: 25px;
+  text-align: justify;
+  margin-left: 10px;
+}
+
+.backCard div:hover {
+  box-shadow: 0 8px 16px 0 rgb(0, 0, 0);
+}
+
+.container {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
 .card .flip {
   transition: transform 0.5s;
   transform-style: preserve-3d;
 }
 
-.card:hover .flip {
-  transform: rotateY(180deg);
+.card:active .flip {
+  transform: rotateX(180deg);
 }
 
-.front-card,
-.back-card {
+.front-card, .back-card {
   position: absolute;
   backface-visibility: hidden;
 }
-
 .back-card {
-  transform: rotateY(180deg);
-}
-.bcard,
-.fcard {
-  border-radius: 12px;
-  box-shadow: 0 0 8px 0 #ffffff;
+  transform: rotateX(180deg);
 }
 
-/**#sombrarredondada{
-    background-color: #090;
-    color: #fff;
-    width: 40px;
-    padding: 40px;
-    -moz-border-radius: 7px;
-    -webkit-border-radius: 7px;
-     
-    box-shadow: 15px -10px 3px #000;
-    -webkit-box-shadow: 15px -10px 3px #000;
-    -moz-box-shadow: 15px -10px 3px #000;
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  background-color: rgba(0, 255, 76, 0.616);
+  padding: 9px;
+  font-size: 75%;
+  border-radius: 6px 6px;
+  width: 120px;
+  font-weight: bold;
+}
+
+.tooltip:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 2em rgb(168, 240, 168);
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(172, 2, 172);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*@media (max-width: 1750px){
+
+  
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+}
+form #texto {
+  margin-top: 10px;
+  display: block;
+  justify-content: center;
+}
+form #btn {
+  float: right;
+}
+
+
+@media (max-width: 960px){
+ 
+  html{
+
+  font-size:50%;
+}
+
+}*/
+
+@media all and (max-width: 768px){
+  
+  #backgroundPage label[for="btn-menu"] {
+    display: block;
+  }
+  .links label:hover{
+   
+    background-color: rgb(50, 9, 92);
+  }
+
+#btn-menu:checked~.links label{
+   display: flex;
+   font-size: 2.8rem;
+   flex-direction: column;
+   align-items: stretch; ;
+   text-align: center;
+  
+  
  }
- **/
 
-.card {
-  box-shadow: 0 4px 4px 0 rgb(255, 22, 236);
-  transition: 0.4s;
-  width: 30%;
-  border-radius: 5px;
+  .links label{
+  float: None;
+  flex-direction: column;
+  background-color: rgba(120, 76, 161, 0.959);
+  width: auto;
+  margin: 15px;
+  padding: 50px;
+  left: 0;
+  right:0;
+  bottom: 0;
+  display: none; 
+  text-align: center;
+  overflow: hidden;
+  font-size: 10rem;
+
+ 
+ }
+ 
+ #cards {
+  
+   width: 100%;
+   display: flex;
+ }
+.container {
+  width: 100%;
 }
 
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(255, 23, 224, 0.938);
-  border-radius: 5px;
+.links {
+  width : 100%;
+  /*float: flex;*/
+  flex-direction: column;
+  
+}
+form #texto{
+  min-width: 80px;
+}
+
+form {
+  flex-wrap: wrap;
+  width: 100%;
+  display: block;
+/* flex-direction: column;*/
+ align-items: center;
+ /* text-align: center;*/
+}
+ 
+
+.links label{
+  margin: 0;
+  line-height: 10px;
+}
+
 }
