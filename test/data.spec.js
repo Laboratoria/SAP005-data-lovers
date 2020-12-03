@@ -1,3 +1,4 @@
+
 import { instantSearch, selectPokemonType, selectPokemonResistant, selectPokemonWeaknesses, selectPokemonGeneration, sortPokemonCp } from '../src/data.js'
 import data from './mock.js';
 

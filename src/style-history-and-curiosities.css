@@ -80,7 +80,6 @@
 
 .bgimg-1 {
     background-image: url("assets/first.jpg");
-    /* min-height: 100%; */
     height: 450px;
 }
 
@@ -92,7 +91,7 @@
 .bgimg-3 {
     background-image: url("assets/third.jpg");
     min-height: 400px;
-}
+} */
 
 
 /* scrollbar */
