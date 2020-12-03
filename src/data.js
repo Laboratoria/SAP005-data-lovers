@@ -43,7 +43,7 @@ export function filterRivalPokemon(pokemons) {
   }
 }
 
-function filterAllPokemonByType(pokemons) {
+export function filterAllPokemonByType(pokemons) {
   const types = {
     bug: [],
     dragon: [],
@@ -74,7 +74,7 @@ function filterAllPokemonByType(pokemons) {
   return types
 }
 
-function filterPokemonByRivalWeakness() {
+export function filterPokemonByRivalWeakness() {
   const rivalWeakness = filterRivalPokemon(pokemons).weaknesses
   const pokemonByType = filterAllPokemonByType(pokemons)
   let bestPokemon = []
@@ -86,20 +86,20 @@ function filterPokemonByRivalWeakness() {
       }
     }
   }
-  return Array.from(new Set(bestPokemon));
+  //return Array.from(new Set(bestPokemon)); // evita trazer pokemon repitido
 }
 
 export function orderBestPokemonByCP() {
   const crescentOrder = filterPokemonByRivalWeakness()
   const decrescentOrder = filterPokemonByRivalWeakness()
 
-  function comparisonByCP(pokemonA, pokemonB) {
+  function comparisonByCP(pokemonA, pokemonB) {  // compara os pokemons a, b
     const pokemonA_CP = pokemonA.stats["max-cp"]
     const pokemonB_CP = pokemonB.stats["max-cp"]
 
     return pokemonA_CP.localeCompare(pokemonB_CP, undefined, { numeric: true })
   }
-  crescentOrder.sort(comparisonByCP)
+  crescentOrder.sort(comparisonByCP) // sort coloca em ordem crescente
   decrescentOrder.sort(comparisonByCP).reverse();
 
   return { crescentOrder, decrescentOrder }

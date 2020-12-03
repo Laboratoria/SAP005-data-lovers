@@ -29,7 +29,8 @@ pokemonType.innerHTML = `Tipo(s): <span class="type-uppercase"> ${bringPokemon.t
 pokemonResistant.innerHTML = `Resistência(s): <span class="resistant-uppercase"> ${bringPokemon.resistant}</span>`
 pokemonWeaknesses.innerHTML = `Fraqueza(s): <span class="weaknesses-uppercase"> ${bringPokemon.weaknesses}</span>`
 }
-import { filterRivalPokemon, orderBestPokemonByCP } from './data.js';
+
+import { orderBestPokemonByCP, /*filterRivalPokemon*/ } from './data.js';
 
 const searchButton = document.getElementById("search-btn");
 const pokemonTableRow = document.querySelector(".pokemon-table-row");
