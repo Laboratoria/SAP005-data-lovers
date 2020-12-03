@@ -8,12 +8,21 @@ export const bringRivalPokemon = (pokemons, namePokemonInput) => {
         "type": pokemon.type,
         "resistant": pokemon.resistant,
         "weaknesses": pokemon.weaknesses      
-      };
+      }
     }
   }
-}
+};
 
-// TESTE UNITÁRIO
+
+
+/* export const example = () => {
+  return 'example';
+};
+
+export const anotherExample = () => {
+  return 'OMG';
+}; */
+
 
 
 

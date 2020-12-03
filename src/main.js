@@ -28,4 +28,4 @@ pokemonName.innerHTML = `Nome: <span class="name-uppercase">${bringPokemon.name}
 pokemonType.innerHTML = `Tipo(s): <span class="type-uppercase"> ${bringPokemon.type}</span>`
 pokemonResistant.innerHTML = `Resistência(s): <span class="resistant-uppercase"> ${bringPokemon.resistant}</span>`
 pokemonWeaknesses.innerHTML = `Fraqueza(s): <span class="weaknesses-uppercase"> ${bringPokemon.weaknesses}</span>`
-};
+}
