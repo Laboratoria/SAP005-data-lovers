@@ -2,6 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700;800&display=swap');
 
+/* MEDIA QUERIES VARIABLES */
+:root {
+  --phone-min: 270px;
+  --phone-max: 480px;
+  --tablet-port: 640px;
+  --tablet-land: 900px;
+  --desktop: 1200px; 
+}
+
 /* CSS RESET */
 * {
   margin: 0;
@@ -55,6 +64,7 @@ a {
   background-image: url(img/battle.png);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   width: 100vw;
   height: 100vh;
 }
