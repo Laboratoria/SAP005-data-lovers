@@ -68,6 +68,7 @@ body {
     background-image: url('./data/rickandmorty/images/stars.gif');
     color: #fff;
     text-align: left;
+    display: flex;
     flex-wrap: wrap;
     padding-left: 100px;
     font-family: 'Lacquer', sans-serif;
@@ -81,7 +82,15 @@ body {
     background-image: url('./data/rickandmorty/images/stars.gif');
 }
 
-
+#info {
+    background-color: #ffffffcb;
+    width:400px ;
+    text-align: center;
+    font-family: 'Lacquer', sans-serif;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbbbbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaaaaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
 
 #texto {
     background: #ffffff;
@@ -109,7 +118,7 @@ body {
     color: black;
     width: 9rem;
     font-weight: bold;
-    font-family: 'Lacquer', sans-serif;
+    font-family: sans-serif;
 }
 
 #oBtn:hover, #reset:hover, #aBtn:hover {
@@ -162,6 +171,7 @@ body {
     padding-left: 200px;
 }
 
+
 table {
     background-color: #ffffffb2;
     text-align: center;
@@ -190,7 +200,7 @@ td {
     border-radius: 10px;
 }
 
-.ana:hover {
+.pri:hover {
     box-shadow: 0 16px 16px 0 rgba(251, 251, 251, 0.801);
 }
 
@@ -206,7 +216,7 @@ td {
     border-radius: 10px;
 }
 
-.pri:hover {
+.ana:hover {
     box-shadow: 0 16px 16px 0 rgba(251, 251, 251, 0.801);
 }
 
@@ -269,6 +279,10 @@ td {
     text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbbbbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaaaaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
 }
 
+#backgroundPage {
+    background: black;
+}
+
 .name {
     font-size: 35px;
 }
@@ -326,17 +340,6 @@ td {
     display: flex;
 }
 
-#info {
-    display: flex;
-    background-color: #ffffffcb;
-    width: 350px;
-    text-align: center;
-    font-family: 'Lacquer', sans-serif;
-    font-weight: bold;
-    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbbbbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaaaaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
-    border-radius: 10px;
-}
-
 .li {
     font-family: sans-serif;
     padding: 100px;
@@ -365,7 +368,77 @@ label[for="btn-menu"] {
     z-index: 9;
 }
 
+@media (min-width: 800px) and (max-width: 1000px) {
+    .links {
+        display: flex;
+        margin: 2% 10% 0% 0%;
+    }
+    .links label {
+        width: 100px;
+        font-size: 20px;
+    }
+    .logos {
+        margin-top: 0px;
+        height: 400px;
+        width: 600px;
+    }
+    #texto {
+        width: 400px;
+        margin: 0 0px 0 0px;
+    }
+    #btn, #reset, #oBtn, #aBtn {
+        padding: 6px;
+        font-size: 55%;
+        border-radius: 6px 6px;
+        background-color: rgba(0, 255, 76, 0.616);
+        color: black;
+        width: 8rem;
+        font-weight: bold;
+        font-family: 'Lacquer', sans-serif;
+    }
+    .container {
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .card {
+        display: grid;
+        overflow-x: auto;
+        height: 500px;
+        width: 650px;
+        perspective: 1000;
+    }
+    #info {
+        display: flex;
+        width: 400px;
+    }
+    .li {
+        padding: 0px;
+        margin-top: 0px;
+        margin-top: 10px;
+        font-size: 20px;
+    }
+    #grafico {
+        padding-left: 10px;
+    }
+    table {
+        background-color: #ffffffb2;
+        text-align: center;
+        width: 200px;
+        height: 200px;
+    }
+    .pri {
+        box-shadow: 0 8px 8px 0 rgba(255, 255, 255, 0.952);
+        transition: 0.3s;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+    
+  
+}
 
+/*
 
 @media screen and (max-width: 768px) {
     label[for="btn-menu"] {
@@ -393,7 +466,8 @@ label[for="btn-menu"] {
         text-align: center;
         overflow: hidden;
         /* max-height: 50px;*/
-    }
+
+/* }
     #cards {
         width: 100%;
         display: flex;
@@ -419,7 +493,12 @@ label[for="btn-menu"] {
         line-height: 10px;
 
     }
+    .logos {
+        height: 100%;
+        width: 100%;
+    }
 
 
 
-}
+
+}*/

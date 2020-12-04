@@ -1,26 +1,23 @@
-
-
 import rickAndMorty from './data/rickandmorty/rickandmorty.js';
-
+import { getName} from './data.js';
 const allData = rickAndMorty.results;
 
 //função filtrar
 let arrayFiltrada = allData;
 
-function getName(event) {
+
+
+
+
+
+
+document.getElementById("btn").addEventListener("click", (event)=> { 
     event.preventDefault()
     let nome = document.getElementById("texto").value;
-    nome = nome[0].toUpperCase() + nome.slice(1).toLowerCase();
-    arrayFiltrada = allData.filter(personagem => personagem.name.startsWith(nome))
-
-    secao.innerHTML = templateCard(arrayFiltrada);
-}
-
-
-
-
-
-document.getElementById("btn").addEventListener("click", getName)
+    const result = getName( allData, nome)
+    const secao = document.getElementById("frontCard")
+    secao.innerHTML = templateCard(result);
+})
 
 
 
@@ -55,9 +52,7 @@ secao.innerHTML = templateCard(arrayFiltrada);
 document.getElementById("oBtn").addEventListener("click", ordC)
 function ordC(event) {
     event.preventDefault()
-    const ordenaAZ = allData.sort((a, b) => {
-        return (a.name < b.name) ? - 1 : 1
-    })
+    const ordenaAZ = allData.sort((a, b) => (a.name < b.name) ? - 1 : 1)
     secao.innerHTML = templateCard(ordenaAZ);
 
 }
@@ -80,12 +75,12 @@ let dead = 0
 let unknown = 0
 
 
-for (let j = 0; j < statusData.length; j++) {
+for (let i = 0; i < statusData.length; i++) {
 
-    if (statusData[j] === 'Alive') {
+    if (statusData[i] === 'Alive') {
         alive += 1
     }
-    else if (statusData[j] === 'Dead') {
+    else if (statusData[i] === 'Dead') {
         dead += 1
     }
     else  {
@@ -113,11 +108,9 @@ function drawChart() {
   ['morto', dead],
    ['desconhecido', unknown]
   
-
 ]);
 
-  let options = {'title':'STATUS', 'width':600, 'height':400 ,
-
+  let options = {'title':'STATUS', 'width':500, 'height':400 ,
 colors:['#BA55D3','#008080','#7B68EE']
 };
 
