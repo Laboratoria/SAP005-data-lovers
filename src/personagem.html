@@ -1,77 +1,86 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Personagens</title>
-  <link rel="stylesheet" href="style-personagens.css" />
-  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
-</head>
-<body>
-  <nav class="menu">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a id="personagem" href="personagem.html">Personagens</a></li>
-    </ul>
-  </nav>
-  <section>
-    <label for="filter-species">
-      <select id="species" class="filter-species">
-        <optgroup label="Espécies"></optgroup>
-        <option class="filter-species" value="Animal">Animal</option>
-        <option class="filter-species" value="Human">Humano</option>
-        <option class="filter-species" value="Humanoid">Humanoid</option>
-        <option class="filter-species" value="Robot">Robo</option>
-        <option class="filter-species" value="Alien">Alien</option>
-        <option class="filter-species" value="Poopybutthole">Bunda Cagada</option>
-        <option class="filter-species" value="Mytholog">Mitológico</option>
-        <option class="filter-species" value="Vampire">Vampiro</option>
-        <option class="filter-species" value="Cronenberg">Cronenberg</option>
-        <option class="filter-species" value="Disease">Doença</option>
-        <option class="filter-species" value="Parasite">Parasita</option>
-        <option class="filter-species" value="unknown">Desconhecido</option>
-      </select>
-    </label>
-  </section>
-  <section>
-    <label for="filter-status">
-      <select id="status" class="filter-status">
-        <optgroup label="Status"></optgroup>
-        <option class="filter-status" value="Alive">Vivo</option>
-        <option class="filter-status" value="Dead">Morto</option>
-        <option class="filter-status" value="unknown">Desconhecido</option>
-      </select>
-    </label>
-  </section>
-  <section>
-    <label for="filter-gender">
-      <select id="Gênero" class="filter-gender">
-        <optgroup label="Ordem"></optgroup>
-        <option class="filter-gender" value="Male">Masculino</option>
-        <option class="filter-gender" value="Female">Feminino</option>
-        <option class="filter-gender" value="unknown">Desconhecido</option>
-      </select>
-    </label>
-  </section>
-  <section>
-    <label for="filter-order">
-      <select id="order" class="filter-order">
-        <optgroup label="Ordem"></optgroup>
-        <option class="filter-order" value="relevance">Relevância</option>
-        <option class="filter-order" value="az">A - Z</option>
-        <option class="filter-order" value="za">Z - A</option>
-      </select>
-    </label>
-    <p id="calculation" class="calculation"></p>
-    <main class="hero" id="hero"></main>
-  </section>
-  <footer class="rodape">
-    <ul>
-      <img src="img/github.png" alt="Logo Github">
-      <li><a href="https://github.com/BiancaSherika" target="_blank">Bianca Sherika</a></li>
-      <li><a href="https://github.com/julianaads" target="_blank">Juliana Souza</a></li>
-    </ul>
-  </footer>
-  <script src="main.js" type="module"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Personagens</title>
+    <link rel="stylesheet" href="style-personagens.css" />
+    <link rel="stylesheet" href="responsivo-personagens.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png" />
+  </head>
+  <body>
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a id="personagem" href="personagem.html">Personagens</a></li>
+      </ul>
+    </nav>
+    <section>
+      <label for="filter-species">
+        <select id="species" class="filter-species">
+          <optgroup label="Espécies"></optgroup>
+          <option class="filter-species" value="Animal">Animal</option>
+          <option class="filter-species" value="Human">Humano</option>
+          <option class="filter-species" value="Humanoid">Humanoid</option>
+          <option class="filter-species" value="Robot">Robo</option>
+          <option class="filter-species" value="Alien">Alien</option>
+          <option class="filter-species" value="Poopybutthole">
+            Bunda Cagada
+          </option>
+          <option class="filter-species" value="Mytholog">Mitológico</option>
+          <option class="filter-species" value="Vampire">Vampiro</option>
+          <option class="filter-species" value="Cronenberg">Cronenberg</option>
+          <option class="filter-species" value="Disease">Doença</option>
+          <option class="filter-species" value="Parasite">Parasita</option>
+          <option class="filter-species" value="unknown">Desconhecido</option>
+        </select>
+      </label>
+    </section>
+    <section>
+      <label for="filter-status">
+        <select id="status" class="filter-status">
+          <optgroup label="Status"></optgroup>
+          <option class="filter-status" value="Alive">Vivo</option>
+          <option class="filter-status" value="Dead">Morto</option>
+          <option class="filter-status" value="unknown">Desconhecido</option>
+        </select>
+      </label>
+    </section>
+    <section>
+      <label for="filter-gender">
+        <select id="Gênero" class="filter-gender">
+          <optgroup label="Ordem"></optgroup>
+          <option class="filter-gender" value="Male">Masculino</option>
+          <option class="filter-gender" value="Female">Feminino</option>
+          <option class="filter-gender" value="unknown">Desconhecido</option>
+        </select>
+      </label>
+    </section>
+    <section>
+      <label for="filter-order">
+        <select id="order" class="filter-order">
+          <optgroup label="Ordem"></optgroup>
+          <option class="filter-order" value="relevance">Relevância</option>
+          <option class="filter-order" value="az">A - Z</option>
+          <option class="filter-order" value="za">Z - A</option>
+        </select>
+      </label>
+      <p id="calculation" class="calculation"></p>
+      <main class="hero" id="hero"></main>
+    </section>
+    <footer class="rodape">
+      <ul>
+        <img src="img/github.png" alt="Logo Github" />
+        <li>
+          <a href="https://github.com/BiancaSherika" target="_blank"
+            >Bianca Sherika</a>
+        </li>
+        <li>
+          <a href="https://github.com/julianaads" target="_blank"
+            >Juliana Souza</a>
+        </li>
+      </ul>
+    </footer>
+    <script src="main.js" type="module"></script>
+  </body>
 </html>
