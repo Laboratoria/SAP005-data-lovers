@@ -42,7 +42,7 @@ mais de 50% dos usuarios utilizariam uma aplicação web com objetivo de relembr
 
 Após o resultado da pesquisa, identificamos e validamos uma persona, ela se caracteriza como fã da série, que já assistiu todas as temporadas e consome este conteúdo periodicamente, dentro do nosso público alvo. Abaixo informações detalhadas:
 
-![](img/person.jpeg)
+![](img/persona.jpeg)
 
 ### História de Usuário
 
