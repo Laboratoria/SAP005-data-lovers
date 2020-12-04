@@ -16,14 +16,12 @@ showingCards(data.pokemon)
 function showingCards(pokemonCards) {
     let showCards = document.querySelector('#main-cards')
     let cards = ""
-    showCards.innerHTML = ""
+    showCards.innerHTML = "";
 
     for (let pokemon of pokemonCards) {
         let evolutions = ""
         if (pokemon.evolution["next-evolution"] != undefined && pokemon.evolution["next-evolution"] != null) {
-            for (let evolution of pokemon.evolution["next-evolution"]) {
-                evolutions += `<span>${evolution.name}</span>`
-            }
+            evolutions += `<span>${pokemon.evolution["next-evolution"].map(evolution => evolution.name).join(", ")}</span>`
         } else {
             evolutions = "Do not evolve"
         }
@@ -31,24 +29,24 @@ function showingCards(pokemonCards) {
         cards +=
             `<div class="frame left">
                 <div class="left">
-                <h3 class = "card-front">
-                <p>${pokemon.num}</p>
-                <p>${pokemon.name}</p>
+                <h3 class = "card-front"><br>
+                <p class="pokemon-number">${pokemon.num}</p>
+                <p class="pokemon-name">${pokemon.name}</p>
                 <img src = ${pokemon.img} class = "img" alt = ${pokemon.name}</h3> 
-                    <p>Type: ${pokemon.type}</p>
-                    <p>Rarity: ${pokemon["pokemon-rarity"]}</p>
-                    <p>Evolution: ${evolutions}<p>                 
+                    <p><span class="strong">Type:</span> ${pokemon.type.join(", ")}</p>
+                    <p><span class="strong">Rarity:</span> ${pokemon["pokemon-rarity"]}</p>
+                    <p><span class="strong">Evolution:</span> ${evolutions}<p>                 
                 </div>
-                <div class="card-back">
-                    <p>Height: ${pokemon.size.height}</p>
-                    <p>Weight: ${pokemon.size.weight}</p>
-                    <p>Resistant: ${pokemon.resistant}</p>
-                    <p>Weaknesses: ${pokemon.weaknesses}</p>
-                    <p>Base Attack: ${pokemon.stats["base-attack"]}</p>
-                    <p>Base Defense: ${pokemon.stats["base-defense"]}</p>
-                    <p>Base Stamina: ${pokemon.stats["base-stamina"]}</p>
-                    <p>Max Cp: ${pokemon.stats["max-cp"]}</p>
-                    <p>Max Hp: ${pokemon.stats["max-hp"]}</p>
+                <div class="card-back"><br>
+                    <p><span class="strong">Height:</span> ${pokemon.size.height}</p>
+                    <p><span class="strong">Weight:</span> ${pokemon.size.weight}</p>
+                    <p><span class="strong">Resistant:</span> ${pokemon.resistant.join(", ")}</p>
+                    <p><span class="strong">Weaknesses:</span> ${pokemon.weaknesses.join(", ")}</p>
+                    <p><span class="strong">Base Attack:</span> ${pokemon.stats["base-attack"]}</p>
+                    <p><span class="strong">Base Defense:</span> ${pokemon.stats["base-defense"]}</p>
+                    <p><span class="strong">Base Stamina:</span> ${pokemon.stats["base-stamina"]}</p>
+                    <p><span class="strong">Max Cp:</span> ${pokemon.stats["max-cp"]}</p>
+                    <p><span class="strong">Max Hp:</span> ${pokemon.stats["max-hp"]}</p>
                 </div>
             </div>`
 

@@ -1,6 +1,6 @@
 # POKÉGUIDE
 
-✨ Para acessar a aplicação [Clique aqui!](https://carolinescosta.github.io/SAP005-cipher/index.html) ✨
+✨ Para acessar a aplicação [Clique aqui!](https://carolinescosta.github.io/SAP005-data-lovers/index.html) ✨
 
 ## Índice
 
@@ -10,8 +10,8 @@
 * [4. Histórias de usuários](#4-histórias-de-usuários)
 * [5. Processo de criação](#5-processo-de-criação)
 * [6. Testes de usabilidade](#6-testes-de-usabilidade)
-* [7. Setup](#7-setup)
-* [8. Desenvolvimento](#8-desenvolvimento)
+* [7. Desenvolvimento](#7-desenvolvimento)
+* [8. Desenvolvedoras](#8-desenvolvedoras)
 
 
 ***
@@ -20,6 +20,10 @@
 
  O objetivo desse projeto era desenvolver uma aplicação que permita visualizar e manipular dados, e a partir de histórias de usuário fornecer funcionalidades que estivessem de acordo com a necessidade.
  O projeto proposto pela Laboratória foi realizado em duplas, e tralhamos com o banco de dados do Pokémon.
+
+ <p align="center">
+ <iframe src="https://gifer.com/embed/7rCc" width=480 height=326.809 frameBorder="0" allowFullScreen></iframe>
+ </p>
 
 ## 2. Sobre a aplicação
 
@@ -30,59 +34,94 @@ O nome PokéGuide foi escolhido por fazer referência ao Pokémon e a intenção
 
  Para definir e conhecer quem seriam os usuários da plataforma, elaboramos uma pesquisa utilizando o [Google Forms](https://www.google.com/forms/about/) e enviamos para algumas pessoas. Com base nos dados da pesquisa definimos as histórias de usuários.
 
+ ![Pesquisa com usuários](src/assets/assets-readme/pesquisa-usuários.png)
+
 ## 4. Histórias de usuários
 
+ 🔎 Com base nas necessidades dos usuários chegamos a cinco histórias de usuários:
 
+ 1. Eu como usuário, quero visualizar facilmente as informações de todos os pokemons, e conseguir filtrar por tipo.
+
+ 2. Eu como usuário, gostaria de filtrar pokémons por força e fraquezas.
+
+ 3. Eu como usuário, gostaria de separar pokemons por gerações.
+
+ 4. Eu como usuário, quero uma busca genérica de pokémons exibindo os resultados aproximados ao nome digitado.
+
+ 5. Eu como usuário, quero ordenar pokémons por força.
 
 ## 5. Processo de criação
 
- 📌 Organização 
+ 💡 Organização 
 
- Toda a organização das tarefas e processos foram realizadas utilizando o modelo de Kanban.
+ Ao receber o projeto toda a organização das tarefas e processos foram realizadas utilizando o modelo de Kanban. Depois de toda a organização feita, definimos o tempo de cada tarefa e o que seria entregue em cada sprint.Além disso tiramos um tempo para definir os critérios de aceitação e a definição de pronto.
 
- Ao iniciar o projeto comecei estruturando o HTML, inseri todos os elementos e atribui ID/Class. Feito isso comecei a desenvolver o JavaScript para dar comportamento e funcionalidade. Apesar de definir no início como seria a interface, optei por deixar o CSS para o final quando tudo já estivesse funcionando.
+ ![Print da tela do Notion](src/assets/assets-readme/notion.png)
 
- ![Print da tela do Notion](src/files/notion.png)
+ 💡 Interface
 
- 📌 Fluxograma
+ O principal objetivo foi desenvolver uma interface em que fossem exibidas apenas as funcionalidades necessárias de forma simples e amigável ao usuário. Optamos por apresentar as informações em formato de cards e deixar as informações o mais visual possível. 
 
- Foi feito um fluxograma pensando na experiência do usuário e para melhor entendimento dos processos da aplicação.
+ 💻 Wireframe inicial desktop
 
- ![Fluxograma](src/files/fluxograma.png)
+![Wireframe inicial desktop](src/assets/assets-readme/wireframe-desktop.png)
 
- 📌 Interface
+ 📱 Wireframe inicial mobile
 
- O principal objetivo foi desenvolver uma interface em que fossem exibidas apenas as funcionalidades necessárias de forma simples e amigável ao usuário.
+![Wireframe inicial mobile](src/assets/assets-readme/wireframe-mobile.png)
 
- * Wireframe inicial
+ 💻 Interface final desktop
 
-![Wireframe inicial](src/files/wireframe.png)
+![Interface final desktop](src/assets/assets-readme/notion.png)
 
-* Interface final
+ 📱 Interface final mobile
 
-![Interface final](src/files/interface-confundus.png)
+![Interface final mobile](src/assets/assets-readme/notion.png)
 
-📌 Logo
+ 💡 Logo
 
- Depois de selecionar o background que estivesse de acordo com o tema, foi desenvolvida uma paleta de cores para criar uma harmonia visual.
- ![Paleta de cores](src/files/paleta-de-cores.png)
+ Criamos uma logo que estivesse de acordo com o tema e que representasse a marca. Respeitamos a cor amarela que é utilizada pela marca e inserimos o Pikachu que é um dos Pokémons mais amados da franquia.
 
+ ![Logo](src/assets/assets-readme/pokeguide-logo.png)
  
- 📌 Paleta de cores
+ 💡 Paleta de cores
+ 
+ A paleta de cores foi desenvolvida a partir do tom de amarelo utilizado na logo, porém para não sobrecarregar o olhar do usuário, foram utilizados tons pasteis criando harmonia visual.
 
- Depois de selecionar o background que estivesse de acordo com o tema, foi desenvolvida uma paleta de cores para criar uma harmonia visual.
- ![Paleta de cores](src/files/paleta-de-cores.png)
+ ![Paleta de cores](src/assets/assets-readme/data-lovers-palett.png)
 
 
- ## 6. Testes de usabilidade
+ ## 6. Testes
 
- ## 7. Setup
+ 🔎 Usabilidade
 
- ## 8. Desenvolvimento
+ Realizamos testes com algumas das pessoas que se dispuseram testar a usabilidade durante o processo de desenvolvimento. Com isso, identificamos que: 
 
- 📌 Para esse projeto foram usados:
+ ⚠️ Os usuários não estavam satisfeitos com o menu hambúrguer que foi proposto por ser mais uma etapa de click.
+ ✔️ Como solução criamos um menu fixo acima da logo.
+
+ ⚠️ Os usuários acharam a quantidade de filtros exagerada, apontaram que não viam necessidade de filtrar pokémons por ordem alfabética ou numérica.
+ ✔️ Como solução removemos os filtros citados.
+
+ 🔎 Técnico
+
+ Foram desenvolvidos testes unitários com jest para identificar possíveis falhas nas funções utilizadas, possibilitando a correção caso necessário antes de definir o produto como pronto.
+
+ ## 7. Desenvolvimento
+
+ 🔧 Para esse projeto foram usados:
 
 * HTML5
 * CSS3
 * Vanilla JavaScript
 * Jest
+
+ ## 8. Desenvolvedoras
+
+ 👩 [Caroline Costa](https://github.com/CarolineSCosta)
+ 👩 [Stefany Martins](https://github.com/martinstfn)
+
+ <p align="center">
+ <img src="https://gifer.com/embed/8BPC" width=480 height=240.000 frameBorder="0" allowFullScreen></img>
+ </p>
+

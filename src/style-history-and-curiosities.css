@@ -1,4 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400&display=swap');
+
 /*Tratamento do history and curiosities*/
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
 
 .caption {
     position: absolute;
@@ -15,12 +22,14 @@
     padding: 18px;
     font-size: 25px;
     letter-spacing: 10px;
+    font-family: 'Dosis', sans-serif;
 }
 
 .border {
     color: #f7f7f7;
     font-size: 25px;
     background-color: transparent;
+    font-family: 'Dosis', sans-serif;
 }
 
 .text1 {
@@ -29,6 +38,9 @@
     text-align: center;
     padding: 50px 80px;
     text-align: justify;
+    font-size: 18px;
+    letter-spacing: 3px;
+    font-family: 'Dosis', sans-serif;
 }
 
 .text1-1 {
@@ -45,14 +57,23 @@
     text-align: center;
     padding: 50px 80px;
     text-align: justify;
+    font-size: 18px;
+    letter-spacing: 3px;
+    font-family: 'Dosis', sans-serif;
 }
 
 .text2-2 {
     text-align: center;
+    font-size: 18px;
+    letter-spacing: 3px;
+    font-family: 'Dosis', sans-serif;
 }
 
 .text3 {
     position: relative;
+    font-size: 18px;
+    letter-spacing: 3px;
+    font-family: 'Dosis', sans-serif;
 }
 
 .text3-1 {
@@ -61,6 +82,7 @@
     text-align: center;
     padding: 50px 80px;
     text-align: justify;
+    font-family: 'Dosis', sans-serif;
 }
 
 .text3-2 {
@@ -91,7 +113,7 @@
 .bgimg-3 {
     background-image: url("assets/third.jpg");
     min-height: 400px;
-} */
+}
 
 
 /* scrollbar */
@@ -112,4 +134,70 @@
 
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(253, 165, 1);
+}
+
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 812px) {
+    .caption span.border {
+        padding: 10px;
+        font-size: 20px;
+        letter-spacing: 1px;
+        font-family: 'Dosis', sans-serif;
+    }
+    .text1 {
+        color: #777;
+        background-color: white;
+        text-align: center;
+        padding: 20px 40px;
+        text-align: justify;
+        font-size: 16px;
+        letter-spacing: 1px;
+        font-family: 'Dosis', sans-serif;
+    }
+    .text1-1 {
+        text-align: center;
+    }
+    .text2 {
+        position: relative;
+    }
+    .text2-1 {
+        color: #ddd;
+        background-color: #282E34;
+        padding: 20px 40px;
+        text-align: justify;
+        font-size: 16px;
+        letter-spacing: 1px;
+        font-family: 'Dosis', sans-serif;
+    }
+    .text2-2 {
+        text-align: center;
+        font-size: 16px;
+        letter-spacing: 1px;
+        font-family: 'Dosis', sans-serif;
+    }
+    .text3 {
+        position: relative;
+        font-size: 16px;
+        letter-spacing: 1px;
+        font-family: 'Dosis', sans-serif;
+    }
+    .text3-1 {
+        color: #ddd;
+        background-color: #282E34;
+        padding: 20px 40px;
+        text-align: justify;
+        font-size: 16px;
+        letter-spacing: 1px;
+        font-family: 'Dosis', sans-serif;
+    }
+    .text3-2 {
+        text-align: center;
+    }
 }
