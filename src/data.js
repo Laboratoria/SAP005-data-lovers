@@ -14,10 +14,10 @@ export const searchFilter = (array, valueTxt) => {
   return array.filter((item) => item.type.includes(valueTxt))
 }
 
-export const example = () => {
-  return 'example';
-};
+// export const example = () => {
+//   return 'example';
+// };
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+// export const anotherExample = () => {
+//   return 'OMG';
+// };
