@@ -10,16 +10,16 @@ const pokemonWeaknesses = document.getElementById("weaknesses-pokemon");
 const searchPokemon = document.getElementById("search-pokemon-btn");
 const pokemonNum = document.getElementById("num-pokemon");
 const pokemonTableRow = document.querySelector(".pokemon-table-row");
-const tableSection = document.getElementById("table-section");
 
 searchPokemon.addEventListener("click", searchRival)
 
 function searchRival(event) {
   event.preventDefault();
+  document.getElementById("flex-container").className = "";
+  document.getElementById("ordering-options").classList.remove("hidden")
+  document.getElementById("table-section").classList.remove("hidden")
   const bringPokemon = bringRivalPokemon(pokemons);
   const bestPokemonByDecrescentCP = orderBestPokemonByCP().decrescentOrder
-  document.getElementById("flex-container").className = "";
-  tableSection.classList.remove("hidden-card")
 
   // CARD
   pokemonImg.innerHTML = `<img src="${bringPokemon.img}"></img>`
