@@ -1,12 +1,10 @@
-import data from "./data/pokemon/pokemon.js"
+import { namePokemonInput } from './main.js'
 
 const pokemons = data.pokemon;
 
-export const bringRivalPokemon = (pokemons) => {
-  const namePokemonInput = document.getElementById("pokemon-name-input").value
-
+export const bringRivalPokemon = (pokemons, namePokemonInput) => {
   for (const pokemon of pokemons) {
-    const lowercaseUserInput = String(namePokemonInput).toLowerCase()
+    const lowercaseUserInput = String(namePokemonInput.value).toLowerCase()
     const acceptingUserInput = pokemon.name.includes(lowercaseUserInput)
 
     if (acceptingUserInput) {
@@ -47,7 +45,7 @@ export function filterAllPokemonByType(pokemons) {
 }
 
 export function filterPokemonByRivalWeakness() {
-  const rivalWeakness = bringRivalPokemon(pokemons).weaknesses
+  const rivalWeakness = bringRivalPokemon(pokemons, namePokemonInput).weaknesses
   const pokemonByType = filterAllPokemonByType(pokemons)
   let bestPokemon = []
 
@@ -58,7 +56,7 @@ export function filterPokemonByRivalWeakness() {
       }
     }
   }
-  //return Array.from(new Set(bestPokemon));
+  return Array.from(new Set (bestPokemon));
 }
 
 export const orderBestPokemonByCP = () => {
