@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pokémon</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  
+  <body>
+    <header id="backgroundMenu" class="navMenu">
+        <img class="img-poke-lovers" src="IMG/logo.jpeg">
+        <h1 class="name-app">P.O.K.E L.O.V.E.R.S</h1>
+        <nav class = "buttonMenu">
+          <ul>
+            <li><a href="index.html"> Home </a></li>
+            <li><a href="resumo.html">Resumo do jogo</a></li>
+            <li><a href="mapa.html">Veja o mapa</a></li>
+            <li><a href="#">Evolução</a></li>
+          </ul>
+        </nav>
+    </header>
+
+    <main class = "container-calculadora">
+        <form class = "titulo-calculadora">
+            <p class = "texto-introducao">
+                Digite quantos pokemons de cada região você possui e saiba quanto falta para completar a pokeDex da região! 
+            </p>
+            <label class = "tituloRegiao">Escolha uma região
+            </label>
+            <p class = "titulos"> Kanto Johto</p>
+            <div>
+              <p id = "inserirKanto" type="text" class="input-calculadora"></p>
+              <p id = "inserirJohto" type="text" class="input-calculadora"></p>
+            </div>
+
+            <div class = "inputsPokemonAtual">
+              <input type="number" id="inserirKantoQuantidade"></input>
+              <input type="number" id="inserirJohtoQuantidade"></input>
+            </div>
+
+            <div class = botao-calcular>
+              <button id = botaoKanto> Calcular Kanto </button>
+              <button id = botaoJohto> Calcular Johto </button>
+            </div>
+
+            <div class="inputsResultado">
+                <textarea rows="6" id="resultado-calculadora" class="mensagem"></textarea>
+            </div>
+
+            <div class="inputsReset">
+                <button type="reset" id="botão-reset"> Fazer novo calculo </button>
+            </div>
+
+        </form>
+    </main>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>

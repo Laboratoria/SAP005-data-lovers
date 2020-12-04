@@ -43,3 +43,11 @@ export const orderByName = (pokemons, order) => {
 
     return arraySorted;
 }
+
+export const filterByRegiao = (arrayPokemon, regiao) => {
+    return arrayPokemon.filter((pokemon) => {return pokemon.generation.name == regiao});
+}
+
+export const subtracao = (quantidade1, quantidade2) => {
+    return quantidade1 - quantidade2;
+}

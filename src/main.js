@@ -26,7 +26,7 @@ const getPoke = (data) => {
             weaknesses = poke.weaknesses,
             evolution = "",
             cp = poke.stats["max-cp"],
-            hp = poke.stats["max-hp"];
+            hp = poke.stats["max-hp"];            
 
         if (typeof(poke.evolution["next-evolution"]) != "undefined") {
             let arrayEvolution = poke.evolution["next-evolution"];
@@ -37,7 +37,7 @@ const getPoke = (data) => {
         } else {
             evolution = "Já alcançou evolução máxima";
         }
-        cardInfo(img, num, name, type, weaknesses, evolution, rarity, cp, hp);
+        cardInfo(img, num, name, type, weaknesses, evolution, rarity, cp, hp) ;
     } // loop para trazer os elementos
 };
 
@@ -53,10 +53,10 @@ const cardInfo = (img, num, name, type, weaknesses, evolution, rarity, cp, hp) =
             <p class="card-info-poke">${type}</p>
         </div>
         <div class="flip-card-back">
-            <p class="card-info-poke">${weaknesses}</p>
-            <p class="card-info-poke">${evolution}</p>
-            <p class="card-info-poke">${rarity}</p>
-            <p class="card-info-poke">${cp}</p>
+            <p class="card-info-poke">Fraqueza: ${weaknesses}</p>
+            <p class="card-info-poke">Próxima Evolução: ${evolution}</p>
+            <p class="card-info-poke">Raridade: ${rarity}</p>
+            <p class="card-info-poke"> Força : ${cp}</p>
             <p class="card-info-poke">${hp}</p>
         </div>
     </div>
@@ -90,7 +90,6 @@ selectPokemonName.addEventListener('change', (event) => {
     searchName()
 });
 
-
 function printFilteredRarity() {
     let rarityValue = document.getElementById('allRarity').value;
     let filteredPokemonsByRarity = filtros.filterByRarity(pokemons, rarityValue);
@@ -112,3 +111,36 @@ var getAzElement = document.querySelector('.order-alphabet');
 getAzElement.addEventListener('change', (event) => {
     printOrder();
 });
+
+var filtroKanto = filtros.filterByRegiao(pokemons, "kanto");
+const filtroKanto2 = filtroKanto.length;
+
+var filtroJohto = filtros.filterByRegiao(pokemons, "johto");
+const filtroJohto2 = filtroJohto.length;
+
+
+
+function kanto (input) {
+    let getKanto = document.getElementById('inserirKanto').value;
+    input = document.getElementById('quantidadeAtual').value;
+    if(getKanto){
+        return filtros.subtracao(filtroKanto2-input)
+    }
+}
+const respostaKanto = document.querySelector('resultado-calculadora')
+respostaKanto.addEventListener('change', (event) => { 
+    kanto();
+    
+function johto (input){
+    let getjohto = document.getElementById("inserirJohto").value;
+    input = document.getElementById("quantidadeAtual").value;
+    if(getjohto){
+        return filtros.subtracao(filtroJohto2, input);
+    }
+}
+const respostaJohto = document.querySelector('resultado-calculadora');
+var botao = document.getElementById("botao-calculadora").value;
+botao.addEventListener("click", kanto());
+respostaJohto.addEventListener('change', (event) => { 
+    johto(), kanto();
+})})
