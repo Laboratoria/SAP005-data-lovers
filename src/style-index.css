@@ -155,7 +155,7 @@ body {
 }
 
 .main-cards {
-    margin-left: 4%;
+    margin-left: 2%;
 }
 
 .left {
@@ -165,8 +165,8 @@ body {
 
 .frame {
     position: relative;
-    width: 260px;
-    height: 295px;
+    width: 270px;
+    height: 305px;
     transition: transform 0.6s;
     cursor: pointer;
     transform-style: preserve-3d;
@@ -179,13 +179,17 @@ body {
     transform: rotateY(180deg);
 }
 
+.result-aggregate-calculation {
+    text-transform: lowercase;
+}
+
 .card-front,
 .card-back {
     background-color: rgb(250, 247, 238);
     text-transform: capitalize;
     position: relative;
-    width: 260px;
-    height: 295px;
+    width: 270px;
+    height: 305px;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 10px;
@@ -194,8 +198,8 @@ body {
 .card-front {
     position: absolute;
     color: black;
-    width: 260px;
-    height: 295px;
+    width: 270px;
+    height: 305px;
     text-align: center;
     font-size: 18px;
     letter-spacing: 1px;
@@ -205,8 +209,8 @@ body {
 .card-back {
     background-color: rgb(243, 215, 160);
     position: absolute;
-    width: 260px;
-    height: 295px;
+    width: 270px;
+    height: 305px;
     color: black;
     transform: rotateY(180deg);
     text-align: center;
@@ -267,7 +271,7 @@ body {
         flex-wrap: wrap;
     }
     .main-cards {
-        margin-left: 6%;
+        margin-left: 8%;
     }
     .card-back,
     .card-front,

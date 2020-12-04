@@ -1,15 +1,15 @@
 # POKÉGUIDE
 
-✨ Para acessar a aplicação [Clique aqui!](https://carolinescosta.github.io/SAP005-data-lovers/index.html) ✨
+✨ Para acessar a aplicação [Clique aqui!]() ✨
 
 ## Índice
 
 * [1. Introdução](#1-introdução)
-* [2. Sobre a aplicação](#2-sobre)
+* [2. Sobre a aplicação](#2-sobre-a-aplicação)
 * [3. Identificação dos usuários](#3-identificação-dos-usuários)
 * [4. Histórias de usuários](#4-histórias-de-usuários)
 * [5. Processo de criação](#5-processo-de-criação)
-* [6. Testes de usabilidade](#6-testes-de-usabilidade)
+* [6. Testes](#6-testes)
 * [7. Desenvolvimento](#7-desenvolvimento)
 * [8. Desenvolvedoras](#8-desenvolvedoras)
 
@@ -20,19 +20,19 @@
 
  O objetivo desse projeto era desenvolver uma aplicação que permita visualizar e manipular dados, e a partir de histórias de usuário fornecer funcionalidades que estivessem de acordo com a necessidade.
  O projeto proposto pela Laboratória foi realizado em duplas, e tralhamos com o banco de dados do Pokémon.
-
+ 
  <p align="center">
- <iframe src="https://gifer.com/embed/7rCc" width=480 height=326.809 frameBorder="0" allowFullScreen></iframe>
+ <img src="https://media1.giphy.com/media/13G7hmmFr9yuxG/giphy.gif" width=340 height=220 frameBorder="0"></img>
  </p>
+
 
 ## 2. Sobre a aplicação
 
-O nome PokéGuide foi escolhido por fazer referência ao Pokémon e a intenção é que seja um guia para fãs ou pessoas com interesse no tema. A ideia principal é que a plataforma ofereça um experiência agradável aos usuários, onde as informações podem ser acessadas de forma clara e objetiva, e ser acessada de qualquer dispositivo móvel.
-
+A intenção da aplicação é fornecer um guia estruturado para os fãs da franquia, com uma experiência de usuário clara e objetiva de realizar buscas pelo nome e efetuar a filtragem por forças, fraquezas, resistências, gerações ainda podendo o usuário ordenar por CP, além disso foi disponibilizado uma pesquisa sobre a história e curiosidades sobre a geografia deste mundo e convivência entre pokemons e humanos, para melhor compreensão e imersão sobre o assunto.
 
 ## 3. Identificação dos usuários
 
- Para definir e conhecer quem seriam os usuários da plataforma, elaboramos uma pesquisa utilizando o [Google Forms](https://www.google.com/forms/about/) e enviamos para algumas pessoas. Com base nos dados da pesquisa definimos as histórias de usuários.
+Para identificar quem seriam os usuários da plataforma, realizamos pesquisas utilizando o [Google Forms](https://www.google.com/forms/about/), no qual foi possível identificar as reais necessidades de cada usuário e com base nesses dados definimos as histórias de usuários.
 
  ![Pesquisa com usuários](src/assets/assets-readme/pesquisa-usuários.png)
 
@@ -72,17 +72,17 @@ O nome PokéGuide foi escolhido por fazer referência ao Pokémon e a intenção
 
  💻 Interface final desktop
 
-![Interface final desktop](src/assets/assets-readme/notion.png)
+![Interface final desktop](src/assets/assets-readme/interface-desktop-pokeguide.png)
 
  📱 Interface final mobile
 
-![Interface final mobile](src/assets/assets-readme/notion.png)
+![Interface final mobile](src/assets/assets-readme/interface-mobile-pokeguide.png)
 
  💡 Logo
 
  Criamos uma logo que estivesse de acordo com o tema e que representasse a marca. Respeitamos a cor amarela que é utilizada pela marca e inserimos o Pikachu que é um dos Pokémons mais amados da franquia.
 
- ![Logo](src/assets/assets-readme/pokeguide-logo.png)
+ ![Logo](src/assets/pokeguide-logo.png)
  
  💡 Paleta de cores
  
@@ -119,9 +119,9 @@ O nome PokéGuide foi escolhido por fazer referência ao Pokémon e a intenção
  ## 8. Desenvolvedoras
 
  👩 [Caroline Costa](https://github.com/CarolineSCosta)
+
  👩 [Stefany Martins](https://github.com/martinstfn)
 
  <p align="center">
- <img src="https://gifer.com/embed/8BPC" width=480 height=240.000 frameBorder="0" allowFullScreen></img>
+ <img src="https://media2.giphy.com/media/10LKovKon8DENq/giphy.gif" width=340 height=220 frameBorder="0"></img>
  </p>
-

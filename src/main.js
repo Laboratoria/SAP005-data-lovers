@@ -1,4 +1,4 @@
-import { instantSearch, selectPokemonType, selectPokemonResistant, selectPokemonWeaknesses, selectPokemonGeneration, sortPokemonCp } from './data.js'
+import { instantSearch, selectPokemonType, selectPokemonResistant, selectPokemonWeaknesses, selectPokemonGeneration, sortPokemonCp, getWeightPercentage } from './data.js'
 import data from './data/pokemon/pokemon.js'
 
 const inputSearch = document.querySelector('#input-search')
@@ -26,6 +26,9 @@ function showingCards(pokemonCards) {
             evolutions = "Do not evolve"
         }
 
+
+        const result = getWeightPercentage(pokemon, data.pokemon)
+
         cards +=
             `<div class="frame left">
                 <div class="left">
@@ -38,6 +41,7 @@ function showingCards(pokemonCards) {
                     <p><span class="strong">Evolution:</span> ${evolutions}<p>                 
                 </div>
                 <div class="card-back"><br>
+                    <p>${pokemon.name} <span class="result-aggregate-calculation">é</span> ${result}% <span class="result-aggregate-calculation">mais pesado!</span></p>
                     <p><span class="strong">Height:</span> ${pokemon.size.height}</p>
                     <p><span class="strong">Weight:</span> ${pokemon.size.weight}</p>
                     <p><span class="strong">Resistant:</span> ${pokemon.resistant.join(", ")}</p>

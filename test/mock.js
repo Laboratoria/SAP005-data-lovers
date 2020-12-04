@@ -4,6 +4,9 @@ export default {
             "generation": {
                 "name": "kanto"
             },
+            "size": {
+                "weight": "6.9 kg"
+            },
             "type": [
                 "grass",
                 "poison"
@@ -30,6 +33,9 @@ export default {
             "generation": {
                 "name": "kanto"
             },
+            "size": {
+                "weight": "8.5 kg"
+            },
             "type": [
                 "fire"
             ],
@@ -53,6 +59,10 @@ export default {
             "name": "charizard",
             "generation": {
                 "name": "kanto"
+            },
+            "size": {
+                "height": "1.70 m",
+                "weight": "90.5 kg"
             },
             "type": [
                 "fire",
@@ -79,6 +89,10 @@ export default {
             "generation": {
                 "name": "kanto"
             },
+            "size": {
+                "height": "0.41 m",
+                "weight": "6.0 kg"
+            },
             "type": [
                 "electric"
             ],
@@ -99,6 +113,10 @@ export default {
             "generation": {
                 "name": "johto"
             },
+            "size": {
+                "height": "0.30 m",
+                "weight": "2.0 kg"
+            },
             "type": [
                 "electric"
             ],
@@ -118,6 +136,10 @@ export default {
             "name": "octillery",
             "generation": {
                 "name": "johto"
+            },
+            "size": {
+                "height": "0.89 m",
+                "weight": "28.5 kg"
             },
             "type": [
                 "water"

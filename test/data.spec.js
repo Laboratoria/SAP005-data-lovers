@@ -1,5 +1,5 @@
-import { instantSearch, selectPokemonType, selectPokemonResistant, selectPokemonWeaknesses, selectPokemonGeneration, sortPokemonCp } from '../src/data.js'
-import data from './mock.js';
+import { instantSearch, selectPokemonType, selectPokemonResistant, selectPokemonWeaknesses, selectPokemonGeneration, sortPokemonCp, getWeightPercentage } from '../src/data.js'
+import data from './mock.js'
 
 describe('instantSearch', () => {
     it('should be an function', () => {
@@ -8,53 +8,62 @@ describe('instantSearch', () => {
 
     it('should return pokémons that starts with "cha" ', () => {
         expect(instantSearch("cha", data.pokemon)).toStrictEqual([{
-            "name": "charmander",
-            "generation": {
-                "name": "kanto"
+                "name": "charmander",
+                "generation": {
+                    "name": "kanto"
+                },
+                "size": {
+                    "weight": "8.5 kg"
+                },
+                "type": [
+                    "fire"
+                ],
+                "stats": {
+                    "max-cp": "980"
+                },
+                "resistant": [
+                    "fire",
+                    "grass",
+                    "ice",
+                    "bug",
+                    "steel"
+                ],
+                "weaknesses": [
+                    "water",
+                    "ground",
+                    "rock"
+                ],
             },
-            "type": [
-                "fire"
-            ],
-            "stats": {
-                "max-cp": "980"
-            },
-            "resistant": [
-                "fire",
-                "grass",
-                "ice",
-                "bug",
-                "steel"
-            ],
-            "weaknesses": [
-                "water",
-                "ground",
-                "rock"
-            ],
-        }, {
-            "name": "charizard",
-            "generation": {
-                "name": "kanto"
-            },
-            "type": [
-                "fire",
-                "flying"
-            ],
-            "stats": {
-                "max-cp": "2889"
-            },
-            "resistant": [
-                "fire",
-                "grass",
-                "fighting",
-                "bug",
-                "steel"
-            ],
-            "weaknesses": [
-                "water",
-                "electric",
-                "rock"
-            ],
-        }])
+            {
+                "name": "charizard",
+                "generation": {
+                    "name": "kanto"
+                },
+                "size": {
+                    "height": "1.70 m",
+                    "weight": "90.5 kg"
+                },
+                "type": [
+                    "fire",
+                    "flying"
+                ],
+                "stats": {
+                    "max-cp": "2889"
+                },
+                "resistant": [
+                    "fire",
+                    "grass",
+                    "fighting",
+                    "bug",
+                    "steel"
+                ],
+                "weaknesses": [
+                    "water",
+                    "electric",
+                    "rock"
+                ],
+            }
+        ])
     });
 
     it('should return pokémons that starts with "pichu" ', () => {
@@ -62,6 +71,10 @@ describe('instantSearch', () => {
             "name": "pichu",
             "generation": {
                 "name": "johto"
+            },
+            "size": {
+                "height": "0.30 m",
+                "weight": "2.0 kg"
             },
             "type": [
                 "electric"
@@ -85,6 +98,9 @@ describe('instantSearch', () => {
             "generation": {
                 "name": "kanto"
             },
+            "size": {
+                "weight": "6.9 kg"
+            },
             "type": [
                 "grass",
                 "poison"
@@ -105,7 +121,6 @@ describe('instantSearch', () => {
                 "flying",
                 "psychic"
             ],
-
         }]);
     });
 
@@ -119,6 +134,10 @@ describe('instantSearch', () => {
                     "name": "pikachu",
                     "generation": {
                         "name": "kanto"
+                    },
+                    "size": {
+                        "height": "0.41 m",
+                        "weight": "6.0 kg"
                     },
                     "type": [
                         "electric"
@@ -139,6 +158,10 @@ describe('instantSearch', () => {
                     "name": "pichu",
                     "generation": {
                         "name": "johto"
+                    },
+                    "size": {
+                        "height": "0.30 m",
+                        "weight": "2.0 kg"
                     },
                     "type": [
                         "electric"
@@ -164,16 +187,15 @@ describe('instantSearch', () => {
             it('should be an function', () => {
                 expect(typeof selectPokemonResistant).toBe('function');
             });
-            // it('should throw TypeError when invoked with wrong argument types', () => {
-            //     expect(() => selectPokemonResistant()).toThrow(TypeError);
-            //     expect(() => selectPokemonResistant(0)).toThrow(TypeError);
-            //     expect(() => selectPokemonResistant(null)).toThrow(TypeError);
-            // });
+
             it('should return pokémons that are resistant to the "fairy" type', () => {
                 expect(selectPokemonResistant("fairy", data.pokemon)).toStrictEqual([{
                     "name": "bulbasaur",
                     "generation": {
                         "name": "kanto"
+                    },
+                    "size": {
+                        "weight": "6.9 kg"
                     },
                     "type": [
                         "grass",
@@ -206,17 +228,14 @@ describe('instantSearch', () => {
                     expect(typeof selectPokemonWeaknesses).toBe('function');
                 });
 
-                // it('should throw TypeError when invoked with wrong argument types', () => {
-                //     expect(() => selectPokemonWeaknesses()).toThrow(TypeError);
-                //     expect(() => selectPokemonWeaknesses(0)).toThrow(TypeError);
-                //     expect(() => selectPokemonWeaknesses(null)).toThrow(TypeError);
-                // });
-
                 it('should return pokémons that are weak to the "ground" type', () => {
                     expect(selectPokemonWeaknesses("ground", data.pokemon)).toStrictEqual([{
                             "name": "charmander",
                             "generation": {
                                 "name": "kanto"
+                            },
+                            "size": {
+                                "weight": "8.5 kg"
                             },
                             "type": [
                                 "fire"
@@ -242,6 +261,10 @@ describe('instantSearch', () => {
                             "generation": {
                                 "name": "kanto"
                             },
+                            "size": {
+                                "height": "0.41 m",
+                                "weight": "6.0 kg"
+                            },
                             "type": [
                                 "electric"
                             ],
@@ -261,6 +284,10 @@ describe('instantSearch', () => {
                             "name": "pichu",
                             "generation": {
                                 "name": "johto"
+                            },
+                            "size": {
+                                "height": "0.30 m",
+                                "weight": "2.0 kg"
                             },
                             "type": [
                                 "electric"
@@ -290,16 +317,15 @@ describe('instantSearch', () => {
                     expect(typeof selectPokemonGeneration).toBe('function');
                 });
 
-                // it('should throw TypeError when invoked with wrong argument types', () => {
-                //     expect(() => selectPokemonGeneration()).toThrow(TypeError);
-                //     expect(() => selectPokemonGeneration(0)).toThrow(TypeError);
-                //     expect(() => selectPokemonGeneration(null)).toThrow(TypeError);
-                // });
                 it('should return pokémons that are from generation "johto"', () => {
                     expect(selectPokemonGeneration("johto", data.pokemon)).toStrictEqual([{
                             "name": "pichu",
                             "generation": {
                                 "name": "johto"
+                            },
+                            "size": {
+                                "height": "0.30 m",
+                                "weight": "2.0 kg"
                             },
                             "type": [
                                 "electric"
@@ -320,6 +346,10 @@ describe('instantSearch', () => {
                             "name": "octillery",
                             "generation": {
                                 "name": "johto"
+                            },
+                            "size": {
+                                "height": "0.89 m",
+                                "weight": "28.5 kg"
                             },
                             "type": [
                                 "water"
@@ -347,6 +377,9 @@ describe('instantSearch', () => {
                             "generation": {
                                 "name": "kanto"
                             },
+                            "size": {
+                                "weight": "6.9 kg"
+                            },
                             "type": [
                                 "grass",
                                 "poison"
@@ -373,6 +406,9 @@ describe('instantSearch', () => {
                             "generation": {
                                 "name": "kanto"
                             },
+                            "size": {
+                                "weight": "8.5 kg"
+                            },
                             "type": [
                                 "fire"
                             ],
@@ -396,6 +432,10 @@ describe('instantSearch', () => {
                             "name": "charizard",
                             "generation": {
                                 "name": "kanto"
+                            },
+                            "size": {
+                                "height": "1.70 m",
+                                "weight": "90.5 kg"
                             },
                             "type": [
                                 "fire",
@@ -421,6 +461,10 @@ describe('instantSearch', () => {
                             "name": "pikachu",
                             "generation": {
                                 "name": "kanto"
+                            },
+                            "size": {
+                                "height": "0.41 m",
+                                "weight": "6.0 kg"
                             },
                             "type": [
                                 "electric"
@@ -450,17 +494,15 @@ describe('instantSearch', () => {
                     expect(typeof sortPokemonCp).toBe('function');
                 });
 
-                // it('should throw TypeError when invoked with wrong argument types', () => {
-                //     expect(() => sortPokemonCp()).toThrow(TypeError);
-                //     expect(() => sortPokemonCp(0)).toThrow(TypeError);
-                //     expect(() => sortPokemonCp(null)).toThrow(TypeError);
-                // });
-
                 it('should return pokémons ordered by highest to lowest cp value when select "1"', () => {
                     expect(sortPokemonCp("1", data.pokemon)).toStrictEqual([{
                             "name": "charizard",
                             "generation": {
                                 "name": "kanto"
+                            },
+                            "size": {
+                                "height": "1.70 m",
+                                "weight": "90.5 kg"
                             },
                             "type": [
                                 "fire",
@@ -487,6 +529,10 @@ describe('instantSearch', () => {
                             "generation": {
                                 "name": "johto"
                             },
+                            "size": {
+                                "height": "0.89 m",
+                                "weight": "28.5 kg"
+                            },
                             "type": [
                                 "water"
                             ],
@@ -507,6 +553,9 @@ describe('instantSearch', () => {
                             "name": "bulbasaur",
                             "generation": {
                                 "name": "kanto"
+                            },
+                            "size": {
+                                "weight": "6.9 kg"
                             },
                             "type": [
                                 "grass",
@@ -533,6 +582,9 @@ describe('instantSearch', () => {
                             "generation": {
                                 "name": "kanto"
                             },
+                            "size": {
+                                "weight": "8.5 kg"
+                            },
                             "type": [
                                 "fire"
                             ],
@@ -556,6 +608,10 @@ describe('instantSearch', () => {
                             "generation": {
                                 "name": "kanto"
                             },
+                            "size": {
+                                "height": "0.41 m",
+                                "weight": "6.0 kg"
+                            },
                             "type": [
                                 "electric"
                             ],
@@ -575,6 +631,10 @@ describe('instantSearch', () => {
                             "name": "pichu",
                             "generation": {
                                 "name": "johto"
+                            },
+                            "size": {
+                                "height": "0.30 m",
+                                "weight": "2.0 kg"
                             },
                             "type": [
                                 "electric"
@@ -599,6 +659,10 @@ describe('instantSearch', () => {
                         "generation": {
                             "name": "johto"
                         },
+                        "size": {
+                            "height": "0.30 m",
+                            "weight": "2.0 kg"
+                        },
                         "type": [
                             "electric"
                         ],
@@ -618,6 +682,10 @@ describe('instantSearch', () => {
                         "generation": {
                             "name": "kanto"
                         },
+                        "size": {
+                            "height": "0.41 m",
+                            "weight": "6.0 kg"
+                        },
                         "type": [
                             "electric"
                         ],
@@ -636,6 +704,9 @@ describe('instantSearch', () => {
                         "name": "charmander",
                         "generation": {
                             "name": "kanto"
+                        },
+                        "size": {
+                            "weight": "8.5 kg"
                         },
                         "type": [
                             "fire"
@@ -659,6 +730,9 @@ describe('instantSearch', () => {
                         "name": "bulbasaur",
                         "generation": {
                             "name": "kanto"
+                        },
+                        "size": {
+                            "weight": "6.9 kg"
                         },
                         "type": [
                             "grass",
@@ -685,6 +759,10 @@ describe('instantSearch', () => {
                         "generation": {
                             "name": "johto"
                         },
+                        "size": {
+                            "height": "0.89 m",
+                            "weight": "28.5 kg"
+                        },
                         "type": [
                             "water"
                         ],
@@ -705,6 +783,10 @@ describe('instantSearch', () => {
                         "name": "charizard",
                         "generation": {
                             "name": "kanto"
+                        },
+                        "size": {
+                            "height": "1.70 m",
+                            "weight": "90.5 kg"
                         },
                         "type": [
                             "fire",
@@ -727,7 +809,18 @@ describe('instantSearch', () => {
                         ],
                     }])
                 });
-            });
+                //describe('getWeightPercentage', () => {
+                //    it('should be an function', () => {
+                //        expect(typeof getWeightPercentage).toBe('function');
+                //    });
+                //    it('should return "87.2" for "90.5 kg"', () => {
+                //        expect(getWeightPercentage([pokemon.size.weight], [pokemon.name], data.pokemon)).toBe("87.2")
+                //    });
+                //    it('should return "14.4" for "6.0 kg"', () => {
+                //        expect(getWeightPercentage({ weight: "6.0 kg" }, data.pokemon)).toBe("14.4")
+                //    });
+                //})
+            })
         })
     })
 })
