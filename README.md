@@ -88,7 +88,7 @@ Para identificar quem seriam os usuários da plataforma, realizamos pesquisas ut
  
  A paleta de cores foi desenvolvida a partir do tom de amarelo utilizado na logo, porém para não sobrecarregar o olhar do usuário, foram utilizados tons pasteis criando harmonia visual.
 
- ![Paleta de cores](src/assets/assets-readme/data-lovers-palett.png)
+ ![Paleta de cores](src/assets/assets-readme/data-lovers-palett.jpeg)
 
 
  ## 6. Testes
