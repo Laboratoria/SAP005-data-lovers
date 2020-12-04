@@ -1,5 +1,5 @@
 import { bringRivalPokemon, filterAllPokemonByType, orderBestPokemonByCP } from '../src/data.js';
-const pokemons = {
+const pokemonsTest = {
   "pokemon": [
     {
       "name": "bulbasaur",
@@ -43,28 +43,17 @@ const pokemons = {
 
 
 
-/*describe('bringRivalPokemon é uma função?', () => {
-  it('is a function', () => {
+describe('Search a pokemon by name', () => {
+  it('should be a function', () => {
     expect(typeof bringRivalPokemon).toBe('function');
   });
-
-  test('onPress gets called with the right thing', () => {
-    const bringRivalPokemon = jest.fn();
-    simulatePresses(bringRivalPokemon);
-    expect(bringRivalPokemon).toBeCalledWith(
-      expect.objectContaining({
-        "name": pokemon.name,
-        "num": pokemon.num,
-        "image": pokemon.img,
-        "type": pokemon.type,
-        "resistant": pokemon.resistant,
-        "weaknesses": pokemon.weaknesses  
-      }),
-    );
+  it('should return "Bulbasaur" when search the pokemon by name "bul"', () => {
+    const result = bringRivalPokemon(pokemonsTest.pokemon, "bul")
+    expect(result[0].name).toEqual("Bulbasaur")
   });
-}); */
+});
 
-describe('filterAllPokemonByType é uma função?', () => {
+/*describe('filterAllPokemonByType é uma função?', () => {
   it('is a function', () => {
     expect(typeof filterAllPokemonByType).toBe('function');
   });

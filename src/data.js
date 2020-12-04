@@ -1,6 +1,6 @@
-export const bringRivalPokemon = (pokemons, namePokemonInput) => {
+export const bringRivalPokemon = (pokemons, pokemonNameInput) => {
   for (const pokemon of pokemons) {
-    if (pokemon.name == namePokemonInput.value) {
+    if (pokemon.name == pokemonNameInput.value) {
       return {        
         "name": pokemon.name,
         "num": pokemon.num,
@@ -43,7 +43,7 @@ export function filterRivalPokemon(pokemons) {
   }
 }
 
-function filterAllPokemonByType(pokemons) {
+export function filterAllPokemonByType(pokemons) {
   const types = {
     bug: [],
     dragon: [],
@@ -74,8 +74,8 @@ function filterAllPokemonByType(pokemons) {
   return types
 }
 
-function filterPokemonByRivalWeakness() {
-  const rivalWeakness = filterRivalPokemon(pokemons).weaknesses
+export function filterPokemonByRivalWeakness() {
+  const rivalWeakness = bringRivalPokemon(pokemons).weaknesses
   const pokemonByType = filterAllPokemonByType(pokemons)
   let bestPokemon = []
 
@@ -89,7 +89,7 @@ function filterPokemonByRivalWeakness() {
   return Array.from(new Set(bestPokemon)); // evita trazer pokemon repitido
 }
 
-export function orderBestPokemonByCP() {
+export const orderBestPokemonByCP = () => {
   const crescentOrder = filterPokemonByRivalWeakness()
   const decrescentOrder = filterPokemonByRivalWeakness()
 
@@ -103,4 +103,20 @@ export function orderBestPokemonByCP() {
   decrescentOrder.sort(comparisonByCP).reverse();
 
   return { crescentOrder, decrescentOrder }
+}
+
+export const orderBestPokemonByName = () => {
+  const A_Z = filterPokemonByRivalWeakness()
+  const Z_A = filterPokemonByRivalWeakness()
+
+  function comparisonByName(pokemon1, pokemon2) {
+    const pokemon1Name = pokemon1.name;
+    const pokemon2Name = pokemon2.name;
+
+    return pokemon1Name.localeCompare(pokemon2Name)
+  }
+  A_Z.sort(comparisonByName)
+  Z_A.sort(comparisonByName).reverse();
+
+  return { A_Z, Z_A }
 }
