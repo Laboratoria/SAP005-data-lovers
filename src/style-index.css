@@ -129,13 +129,14 @@ body {
 }
 
 .main-cards {
-    margin-left: 13%;
+    margin-left: 9%;
     display: inline-block;
     justify-content: space-between;
-    width: 80%;
+    /* width: 80%; */
     font-size: 15px;
     background-color: transparent;
 }
+
 
 .left {
     float: left;
@@ -228,53 +229,56 @@ body {
     }
 }
 
-@media (max-width: 480px) {
-    body{
+@media (min-width: 360px) and (max-width: 812px)  {
+    body {
         width: 100vw;
     }
-    .logo{
+
+    .logo {
         margin-left: 30%;
         width: 50%;
         display: flex; 
         justify-content: center;
         align-items: center;
     }
-    .header-title{  
+
+    .header-title {  
         width: 100vw;
         display: flex;
         justify-content: center;
     }
-    .aside-menu{
-        width: 100%;
-        
+
+    .aside-menu {
+        width: 100%;  
     }
-     .head-menu-list{
+
+    .head-menu-list {
         width: 100vw;
         display: flex;
         font-size: 12px;
     }
+
     .select-itens {
         width: 100%;
         justify-content: center;
         display: flex;
-        flex-wrap: wrap;
-        
+        flex-wrap: wrap;   
     }
-    .img{
-        width: 70%;
-        height: 50%;
+
+    .main-cards {
+        margin-left: 20%;
     }
 
     .card-back,
     .card-front,
     .frame,
     .main-cards {
-        width: 190px;
-        height: 210px;
-        font-size: 10px;
+        width: 215px;
+        height: 250px;
+        font-size: 12px;
     }
 
-    .footer{
+    .footer {
         display: none;
     }
 
@@ -282,7 +286,7 @@ body {
 
 
 
-/* tratamento do footer */
+/* Tratamento do footer */
 
 footer {
     background-color: rgb(243, 215, 160);
