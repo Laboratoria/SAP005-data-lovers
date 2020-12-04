@@ -6,6 +6,7 @@
 * [1. Introdução](#1-introdução)
 * [2. Histórias do Usuário](#2-histórias-do-usuário)
 * [3. Processo de Desenvolvimento](#3-processo-de-desenvolvimento)
+* [4. Equipe de Desenvolvimento](#equipe-de-desenvolvimento)
 
 ## 1. Introdução
 
@@ -105,5 +106,10 @@ O projeto foi desenvolvido por meio da Metodologia Scrum. Sendo assim, tivemos t
 	 -Desenvolvimento de Testes Unitários;
 	 -Deploy do Projeto.
 
+## 4. Equipe de Desenvolvimento
+
+- [Camila Oliveira](https://github.com/cbalieiro)
+
+- [Thaís Alencar](https://github.com/alencartha)
 
   
