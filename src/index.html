@@ -2,216 +2,232 @@
 <html class="no-js " lang="pt-br">
 
 <head>
-	<meta charset="utf-8" />
-	<meta name="description" content="Pokemons">
-	<meta name="language" content="pt-br" />
-	<link rel="shortcut icon" href="img/favicon.ico" />
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="style.css" />
-  
+  <meta charset="utf-8" />
+  <meta name="description" content="Cards de Pokemons">
+  <meta name="language" content="pt-br" />
+  <link rel="shortcut icon" href="img/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+
   <title>PokeInfos</title>
 </head>
 
 <body>
   <header>
-    <div class="container">
-      <a ref=""><img class="logo-tipo" src="img/logo.png" alt="logo" /></a>
-      <nav>
-        <div class="menu">
+    <nav>
+      <div class="container">
+        <a href="#"><img class="logo-tipo" src="img/logo.png" alt="logo" /></a>
+
+        <div id="menu" class="menu">
           <a href="#" class="ativo">Início</a>
-          <a href="#">Estatísticas</a>
-          <a href="#">Sobre</a>
+          <a href="#estatísticas">Estatísticas</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#Pokedéx">Pesquisa</a>
+          <a href="#card">Pokedéx</a>
         </div>
-      </nav>
-    </div>
+    </nav>
   </header>
   <main>
-    <div class="tela-principal">
-      <div class="container">
-        <h2 class="titulo">PokeInfos </h2>
+    <nav>
+      <div class="tela-principal" id="sobre">
+        <div class="container">
+          <h2 class="titulo">PokeInfos </h2>
           <p class="descricao">
-            Bem vindo ao PokeInfo, sua central de informações Pokémon! 
+            Bem vindo ao PokeInfo, sua central de informações Pokémon.
           </p>
+        </div>
       </div>
-    </div>
-    <div class="pokemons-recomendados container">
+    </nav>
+    <nav>
+      <div class="pokemons-recomendados container">
+        <div class="container-title-control">
+          <h3 class="titulo-carrossel" id="estatísticas">Estatísticas</h3>
+          <div class="indicadores">
+          </div>
+        </div>
+      
 
-      <div>
-        <div class="container-title-control">
-          <h3 class="titulo-carrossel">Pokemóns de Kanto </h3>
-          <div class="indicadores"></div>
-        </div>
         <div class="container-principal">
-        <button role="button" id="flecha-esquerda" class="flecha-esquerda"><i class="fas fa-chevron-left"></i></button>
-          
-        <div class="container-carrossel">
-          <div class="carrossel">
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/001.png" alt="bulbasaur"></a>
+          <button role="button" id="flecha-esquerda" class="flecha-esquerda"><i
+              class="fas fa-chevron-left"></i></button>
+
+          <div class="container-carrossel">
+            <div id="" class="carrossel">
+              <div class="pokemon">
+                <a href="#"><img
+                    src="https://cdn.ome.lt/32mlL-S2cNECoVabw-3VThlWiiY=/770x0/smart/uploads/conteudo/fotos/Pokemon_GO_9pfXpla.jpg"
+                    alt="bulbasaur"></a>
+              </div>
+              <div class="pokemon">
+                <a href="#"><img
+                    src="https://cdn.ome.lt/32mlL-S2cNECoVabw-3VThlWiiY=/770x0/smart/uploads/conteudo/fotos/Pokemon_GO_9pfXpla.jpg"
+                    alt="bulbasaur"></a>
+              </div>
+              <div class="pokemon">
+                <a href="#"><img
+                    src="https://cdn.ome.lt/32mlL-S2cNECoVabw-3VThlWiiY=/770x0/smart/uploads/conteudo/fotos/Pokemon_GO_9pfXpla.jpg"
+                    alt="bulbasaur"></a>
+              </div>
             </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/002.png" alt="ivysaur"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/003.png" alt="venusaur"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/004.png" alt="charmander"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/005.png" alt="charmeleon"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/006.png" alt="charizard"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/007.png" alt="squirtle"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/001.png" alt="bulbasaur"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/002.png" alt="ivysaur"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/003.png" alt="venusaur"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/004.png" alt="charmander"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/005.png" alt="charmeleon"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/006.png" alt="charizard"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/007.png" alt="squirtle"></a>
-            </div>
-        </div>
-          
-        <button role="button" id="flecha-direita" class="flecha-direita"><i class="fas fa-chevron-right"></i></button>
-        </div>
-      <!-- </div>
-      <div>
-        <div class="container-title-control">
-          <h3 class="titulo-carrossel">Pokemóns de Johto</h3>
-          <div class="indicadores"></div>
-        </div>
-        <div class="container-principal">
-        <button role="button" id="flecha-esquerda" class="flecha-esquerda"><i class="fas fa-chevron-left"></i></button>
-          
-        <div class="container-carrossel">
-          <div class="carrossel">
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/001.png" alt="bulbasaur"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/002.png" alt="ivysaur"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/003.png" alt="venusaur"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/004.png" alt="charmander"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/005.png" alt="charmeleon"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/006.png" alt="charizard"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/007.png" alt="squirtle"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/001.png" alt="bulbasaur"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/002.png" alt="ivysaur"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/003.png" alt="venusaur"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/004.png" alt="charmander"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/005.png" alt="charmeleon"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/006.png" alt="charizard"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/007.png" alt="squirtle"></a>
-            </div>
-        </div>
-          
-        <button role="button" id="flecha-direita" class="flecha-direita"><i class="fas fa-chevron-right"></i></button>
+            <button role="button" id="flecha-direita" class="flecha-direita"><i
+                class="fas fa-chevron-right"></i></button>
+          </div>
         </div>
       </div>
-      <div>
-        <div class="container-title-control">
-          <h3 class="titulo-carrossel">Pokemóns de Kanto </h3>
-          <div class="indicadores"></div>
-        </div>
-        <div class="container-principal">
-        <button role="button" id="flecha-esquerda" class="flecha-esquerda"><i class="fas fa-chevron-left"></i></button>
-          
-        <div class="container-carrossel">
-          <div class="carrossel">
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/001.png" alt="bulbasaur"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/002.png" alt="ivysaur"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/003.png" alt="venusaur"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/004.png" alt="charmander"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/005.png" alt="charmeleon"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/006.png" alt="charizard"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/007.png" alt="squirtle"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/001.png" alt="bulbasaur"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/002.png" alt="ivysaur"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/003.png" alt="venusaur"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/004.png" alt="charmander"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/005.png" alt="charmeleon"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/006.png" alt="charizard"></a>
-            </div>
-            <div class="pokemon">
-            <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/007.png" alt="squirtle"></a>
-            </div>
-        </div>
-          
-        <button role="button" id="flecha-direita" class="flecha-direita"><i class="fas fa-chevron-right"></i></button>
-        </div> -->
+    </nav>
+
+  </nav>
+
+  <nav class="menu font-std">
+    <form action="" id="search-form" class="search-form font-std">
+
+
+
+      <section id="Pokedéx" class="pesquisa">
+
+
+        <input type="search" placeholder="Buscar um Pokémon, p.ex. Drowzee" value="" autocomplete="off">
+
+      </section>
+      <div id="tipos">
+        <select id="filter-type" class="filter-typeselect" onChange="functionType">
+        <option value="" disabled="" selected=""> Tipos</option>
+        <option value="Water">Água</option>
+        <option value="Dragon">Dragão</option>
+        <option value="Electric">Elétrico</option>
+        <option value="Ghost">Fantasma</option>
+        <option value="Fire">Fogo</option>
+        <option value="Ice">Gelo</option>
+        <option value="Grass">Grama</option>
+        <option value="Bug">Inseto</option>
+        <option value="Fighting">Lutador</option>
+        <option value="Normal">Normal</option>
+        <option value="Rock">Pedra</option>
+        <option value="Psychic">Psíquico</option>
+        <option value="Ground">Terrestre</option>
+        <option value="Poison">Venenoso</option>
+        <option value="Flying">Voador</option>
+        </select>
       </div>
+      <!--<input type="submit">-->
+
+
+      <select id="order-search" class="order-search select">
+        <option id="teste" value="" disabled="" selected=""> Ordenar por</option>
+        <option value="order-az"> Crescente</option>
+        <option value="order-za"> Decrescente</option>
+      </select>
+
+    </form>
+  </nav>
+
+  <nav>
+    <div class="container-pokedex ">
+      <h1 class="titulo-pokedex">Pokedex</h1>
+      <div id="card" class="pokedex"></div>
     </div>
+
+  </nav>
+      <!--Primeira tentativa
+        <section class="campo-pesquisa">
+        <article class="searchUm">
+          <input type="text" id=nome name="q" placeholder="Buscar um Pokémon, p.ex. Drowzee" value="" autocomplete="off">
+        </div>
+        <div class="buttonName">
+          <button id="btName" type="button">Pesquisar</button>
+        </div>
+        </article>
+      </section>
+      <section class="campo-pesquisa">
+        <article class="searchDois">
+          <select id="pokeTipos" onChange="functionType">
+            <option value=""></option>
+            <option value="">Water</option>
+            <option value="">Fire</option>
+            <option value="">Grass</option>
+        </select>
+        <input type="button" id="tipos" value="Pesquisar" />
+        </article>
+      </section>
+      <section class="campo-pesquisa">
+        <article class="searchTres">
+          <input type="search" name="q" placeholder="Buscar um Pokémon, p.ex. Drowzee" value="" autocomplete="off">
+        </article>
+      </section>
+
+    </nav>
+    <nav id="Pokedéx">
+      <div class="container-pokedex ">
+        <h1 class="titulo-pokedex">Pokedex</h1>
+        <ul id="card-pokemon" class="pokedex"></ul>
+      </div>
+
+    </nav>-->
   </main>
+
+
+
+  <!----Painel Social / Créditos--->
+  <div class="social-panel-container">
+    <div class="social-panel">
+      <p>Criado com <i class="fa fa-heart"></i> por <br />
+        <a target="_blank" href="https://github.com/SaraOhara">Sara Viana</a> e
+        <a target="_blank" href="https://github.com/JuliaTerin">Julia Terin</a></p>
+      <button class="close-btn"><i class="fas fa-times"></i></button>
+      <h4>Entre em Contato Sara </h4>
+      <ul>
+        <li>
+          <a href="https://www.linkedin.com/in/saraohara" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/szkohara" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/sz.ohara" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+      </ul>
+
+      <h4>Entre em Contato Julia </h4>
+      <ul>
+        <li>
+          <a href="https://www.linkedin.com/in/julia-terin-a155a653" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/juterin" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/juliaterin" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <button class="floating-btn">
+    Entrar em Contato
+  </button>
+
+  <div class="floating-text">
+    Projeto<a
+      href="https://selecao.laboratoria.la/?fbclid=IwAR2QWpZCLRBDaovVAwYHcQLnDJKn6cjBGBbWUDLgiQPmEalCANY10YLkH0I"
+      target="_blank"> Laboratória</a>
+  </div>
+
   <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-  <script src="carrossel.js" type="module"></script>
   <script src="main.js" type="module"></script>
+  <script src="carrossel.js" type="module"></script>
   </body>
 </html>

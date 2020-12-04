@@ -7,7 +7,7 @@ const flechaDireita = document.getElementById('flecha-direita');
 flechaDireita.addEventListener('click', () => {
     fila.scrollLeft += fila.offsetWidth;
     const indicadorActivo = document.querySelector('.indicadores .activo');
-    if(indicadorActivo.nextSibling){
+    if (indicadorActivo.nextSibling) {
         indicadorActivo.nextSibling.classList.add('activo');
         indicadorActivo.classList.remove('activo');
     }
@@ -17,7 +17,7 @@ flechaDireita.addEventListener('click', () => {
 flechaEsquerda.addEventListener('click', () => {
     fila.scrollLeft -= fila.offsetWidth;
     const indicadorActivo = document.querySelector('.indicadores .activo');
-    if(indicadorActivo.previousSibling){
+    if (indicadorActivo.previousSibling) {
         indicadorActivo.previousSibling.classList.add('activo');
         indicadorActivo.classList.remove('activo');
     }
@@ -25,10 +25,10 @@ flechaEsquerda.addEventListener('click', () => {
 
 //paginação
 const numeroPaginas = Math.ceil(pokemons.length / 5);
-for(let i = 0; i < numeroPaginas; i++){
+for (let i = 0; i < numeroPaginas; i++) {
     const indicador = document.createElement('button');
 
-    if(i === 0){
+    if (i === 0) {
         indicador.classList.add('activo');
     }
 
@@ -56,3 +56,19 @@ pokemons.forEach((pokemon) => {
 fila.addEventListener('mouseleave', () => {
     pokemons.forEach(pokemon => pokemon.classList.remove('hover'));
 });
+
+
+
+//Créditos Finais
+const floating_btn = document.querySelector('.floating-btn');
+const close_btn = document.querySelector('.close-btn');
+const social_panel_container = document.querySelector('.social-panel-container');
+
+floating_btn.addEventListener('click', () => {
+    social_panel_container.classList.toggle('visible')
+});
+
+close_btn.addEventListener('click', () => {
+    social_panel_container.classList.remove('visible')
+});
+
