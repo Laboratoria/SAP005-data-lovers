@@ -43,10 +43,7 @@ mais de 50% dos usuarios utilizariam uma aplicação web com objetivo de relembr
 
 Após o resultado da pesquisa, identificamos e validamos uma persona, ela se caracteriza como fã da série, que já assistiu todas as temporadas e consome este conteúdo periodicamente, dentro do nosso público alvo. Abaixo informações detalhadas:
 
-readme-img
-![](img/persona.jpeg)
 ![](/src/img/persona.jpeg)
-master
 
 ### História de Usuário
 
@@ -89,14 +86,6 @@ Nosso protótipo foi desenvolvido pelo paint, segue imagem
 Os testes realizados com os usuários trouxeram os seguintes problemas:
 - Dificuldade em visualizar os botões do menu
 Resolução: trocamos as cores dos botões e de fundo, para melhor contraste
-
-
-
-
-
-
-
-
 
 
 
