@@ -1,4 +1,4 @@
-//import example from './data.js';
+import {sortByAlphabeticOrder, searchByLocation, filterByGender, filterByStatus, filterBySpecies} from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 const characters = data.results;
 const episodesList = [
@@ -127,13 +127,13 @@ const episodesList = [
     "episode": "S03E10",
   },
 ];
-function printData(data) {
-  let printDataBase = "";
+function createCards(data) {
+  let printCards = "";
   for (let item of data) {
     let firstEpisode = (item.episode[0]).substr(40, 39);
     const episodeIndex = firstEpisode - 1;
-    printDataBase += `
-      <div class="testing">
+    printCards += `
+      <div class="flip">
         <div class="card">
           <div class="cardFront">  
             <div class="image" style="background-image: url(${item.image})"></div>
@@ -162,87 +162,41 @@ function printData(data) {
         </div>
       </div>`
   }
-  document.getElementById("cardArea").innerHTML = printDataBase;
-}
-printData(characters);
-document.getElementById("order").addEventListener("change", alphabeticOrder);
-function alphabeticOrder() {
-  const selectOrder = document.getElementById("order").value;
-  /*for (let item of characters) {
-    let charactersRelevance = [];
-    charactersRelevance = (item.episode.length);
-    };*/
-  if (selectOrder === "az") {
-    characters.sort(function (a, b) {
-      if (a.name.toUpperCase() < b.name.toUpperCase()) return -1;
-      if (a.name.toUpperCase() > b.name.toUpperCase()) return 1;
-      return 0;
-    })
-  } else {
-    characters.sort(function (a, b) {
-      if (a.name.toUpperCase() > b.name.toUpperCase()) return -1;
-      if (a.name.toUpperCase() < b.name.toUpperCase()) return 1;
-      return 0;
-    })
-  };
-  printData(characters);
+  document.getElementById("cardArea").innerHTML = printCards;
 };
-document.getElementById("status").addEventListener("change", statusFilter);
-function statusFilter() {
-  const getStatus = document.getElementById("status").value;
-  const filterStatus = characters.filter((item) => item.status === getStatus);
-  statisticData(filterStatus, getStatus);
-  printData(filterStatus);
+createCards(characters);
+document.getElementById("order").addEventListener("change", getSort);
+document.getElementById("enter").addEventListener("click", getSearch);
+document.getElementById("gender").addEventListener("change", getGender);
+document.getElementById("status").addEventListener("change", getStatus);
+document.getElementById("species").addEventListener("change", getSpecies);
+function getSort() {
+  const orderOption = document.getElementById("order").value;
+  const resultOrder = sortByAlphabeticOrder(characters, orderOption);
+  createCards(resultOrder);
 };
-document.getElementById("species").addEventListener("change", speciesFilter);
-function speciesFilter() {
-  const getSpecies = document.getElementById("species").value;
-  const filterSpecies = characters.filter((item) => item.species === getSpecies);
-  statisticData(filterSpecies, getSpecies);
-  printData(filterSpecies);
+function getSearch() {
+  const searchOption = document.getElementById("search").value.toUpperCase();
+  const resultSearch = searchByLocation(characters, searchOption);
+  createCards(resultSearch);
 };
-document.getElementById("gender").addEventListener("change", genderFilter);
-function genderFilter() {
-  const getGender = document.getElementById("gender").value;
-  const filterGender = characters.filter((item) => item.gender === getGender);
-  statisticData(filterGender, getGender);
-  printData(filterGender);
+function getGender() {
+  const gender = document.getElementById("gender").value;
+  const resultFilter = filterByGender(characters, gender);
+  createCards (resultFilter);
 };
-document.getElementById("enter").addEventListener("click", searchLocation);
-function searchLocation(){
-  const getLocation = document.getElementById("search").value.toUpperCase();
-  const filterLocation = characters.filter((item) => ((item.location.name).toUpperCase()).includes(`${getLocation}`));
-  console.log(filterLocation);
-  printData(filterLocation);
+function getStatus() {
+  const status = document.getElementById("status").value;
+  filterByStatus(status);
 };
-function statisticData(data, condition) {
+function getSpecies() {
+  const species = document.getElementById("species").value;
+  filterBySpecies(species);
+};
+export const printStatistic = (result, filter) => {
   document.getElementById("results").innerHTML = "";
-  const percentage = Math.round((data.length * 100) / characters.length);
   const results = document.createElement("p");
-  const content = document.createTextNode(`${percentage}% of the characters are ${condition.toLowerCase()}`);
+  const content = document.createTextNode(`${result}% of the characters are ${filter.toLowerCase()}`);
   results.appendChild(content);
   document.getElementById("results").appendChild(results);
 };
-
-// em, rem 
-
-// aparecer o nome enquando digita localização (verificar quanto de origem) .oninput
-// filtro temporada ou episódio
-// ordenar por relevância (maior número de aparição)
-
-/*
-Acummular filtro
-Se atende aos valores solicitados
-Gender && status && species
-
-function filter () {
-  if (genderFilter && statusFilter && speciesFilter)
-  os três valores do input tem que constar na array
-}
-
-o map() aplica uma função à todos os elementos de uma array:
-aplicar a função de mudar episódios
-
-criar uma função para verificar se o objeto personagem atende aos três filtros
-usar o map para o array results
-*/

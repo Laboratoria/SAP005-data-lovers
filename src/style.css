@@ -95,7 +95,7 @@ input{
     transition: transform 0.8s;
     transform-style: preserve-3d
 }
-.testing:hover .card{
+.flip:hover .card{
     transform: rotateY(180deg);
 }
 .cardFront, .cardBack {
