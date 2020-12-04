@@ -387,3 +387,48 @@ p#inserirJohtoQuantidade{
         flex-wrap: wrap;
     }
 }
+@media(max-width:1020px){
+    .imagemJohto{
+        width: 400px;
+        height: 400px;
+    }
+    
+    .imagemKanto{
+        width: 400px;
+        height: 400px;    
+    }
+}
+@media(max-width:801px){
+    .imagemJohto{
+        width: 350px;
+        height: 400px;
+    }
+    
+    .imagemKanto{
+        width: 350px;
+        height: 400px;    
+    }
+}
+@media(max-width:732px){
+    .imagemJohto{
+        width: 350px;
+        height: 400px;
+        padding-right: 20px;
+    }
+    
+    .imagemKanto{
+        width: 350px;
+        height: 400px;    
+    }
+}
+@media(max-width:667px){
+    .imagemJohto{
+        width: 190px;
+        height: 400px;
+        padding-right: 50px;
+    }
+    .imagemKanto{
+        width: 200px;
+        height: 400px;    
+    }
+}
