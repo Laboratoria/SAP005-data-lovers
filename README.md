@@ -18,7 +18,7 @@
 
 ## 1. Apresentação
 
-  Projeto desenvolvido durante o Bootcamp da Laboratória com o objetivo de construir uma interface Web capaz de visualisar e manipular dados de acordo com as necessidades do usuário.
+  Projeto desenvolvido em dupla durante o Bootcamp da Laboratória com o objetivo de construir uma interface Web capaz de visualisar e manipular dados de acordo com as necessidades do usuário.
   A temática escolhida para representar o projeto foi Rick and Morty, a animação é uma série adulta norte-americana de comédia e ficção científica estreada em 2013, que conta a história do cientista bebado Rick e se neto pré adolescente Morty, que se envolvem em diversas aventuras perigosas.
 
 ## 2. Pesquisa
@@ -83,6 +83,9 @@ Nosso protótipo foi desenvolvido pelo paint, segue imagem
 
 ### Testes de Usuabilidade
 
+Os testes realizados com os usuários trouxeram os seguintes problemas:
+- Dificuldade em visualizar os botões do menu
+Resolução: trocamos as cores dos botões e de fundo, para melhor contraste
 
 
 
