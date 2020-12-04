@@ -2,20 +2,25 @@ import { bringRivalPokemon, orderBestPokemonByCP, orderBestPokemonByName } from 
 import data from './data/pokemon/pokemon.js';
 
 const pokemons = data.pokemon;
+export const namePokemonInput = document.getElementById("pokemon-name-input");
+const searchPokemon = document.getElementById("search-pokemon-btn");
+
 const pokemonImg = document.getElementById("img-pokemon");
 const pokemonName = document.getElementById("name-poke");
 const pokemonType = document.getElementById("type-pokemon");
 const pokemonResistant = document.getElementById("resistant-pokemon");
 const pokemonWeaknesses = document.getElementById("weaknesses-pokemon");
-const searchPokemon = document.getElementById("search-pokemon-btn");
 const pokemonNum = document.getElementById("num-pokemon");
+
 const orderByCPCresc = document.getElementById("btn-cp-crescent");
 const orderByCPDecresc = document.getElementById("btn-cp-decrescent");
 const orderByNameA_Z = document.getElementById("btn-a-z");
 const orderByNameZ_A = document.getElementById("btn-z-a");
+
 const pokemonTableRow = document.querySelector(".pokemon-table-row");
 
-// TABELA DE POkÉMONS VANTAJOSOS
+
+// FUNÇÃO PARA EXIBIR TABELA
 function showTable(pokemonArray) {
   let row = ""
   for (let pokemon of pokemonArray) {
@@ -37,14 +42,16 @@ function showTable(pokemonArray) {
   return row
 }
 
+
 // CLICAR PARA BUSCAR POKÉMON
-searchPokemon.addEventListener("click", searchRival)
-function searchRival(event) {
+searchPokemon.addEventListener("click", event => {
   event.preventDefault();
   document.getElementById("flex-container").className = "";
   document.getElementById("ordering-options").classList.remove("hidden")
   document.getElementById("table-section").classList.remove("hidden")
-  const bringPokemon = bringRivalPokemon(pokemons);
+  // const userInput = namePokemonInput.value
+  const bringPokemon = bringRivalPokemon(pokemons, namePokemonInput);
+
 
   // EXIBIR CARD
   pokemonImg.innerHTML = `<img src="${bringPokemon.img}"></img>`
@@ -54,9 +61,11 @@ function searchRival(event) {
   pokemonResistant.innerHTML = `Resistência(s): <span class="resistant-uppercase"> ${bringPokemon.resistant.join(", ")}</span>`
   pokemonWeaknesses.innerHTML = `Fraqueza(s): <span class="weaknesses-uppercase"> ${bringPokemon.weaknesses.join(", ")}</span>`
 
+
   // EXIBIR TABELA PADRÃO
   pokemonTableRow.innerHTML = showTable(orderBestPokemonByCP().decrescentOrder);
-}
+})
+
 
 // EVENTOS DE ORDENAÇÃO DE CP
 // CRESCENTE
@@ -70,6 +79,7 @@ orderByCPDecresc.addEventListener("click", event => {
   event.preventDefault();
   pokemonTableRow.innerHTML = showTable(orderBestPokemonByCP().decrescentOrder);
 })
+
 
 // EVENTOS DE ORDENAÇÃO DE NOME
 // A-Z
