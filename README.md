@@ -25,15 +25,15 @@
 
 Pensando no público alvo fizemos uma pesquisa atraves do Google forms para identificar quais informações os usuários gostariam de encontrar em nossa WebAplicação. A pesquisa obteve 160 respostas dentre os resultados obtivemos os seguintes dados:
 
-![](img/plataforma.jpeg)
+![](/src/img/plataforma.jpeg)
 
 70,4% dos respondentes utilizam a Netflix como principal plataforma de consumo de séries e animações; 
 
-![](img/webApp.jpeg)
+![](/src/img/webApp.jpeg)
 
 mais de 50% dos usuarios utilizariam uma aplicação web com objetivo de relembrar o que aconteceu com os personagens quando uma nova temporada for lançada 
 
-![](img/card.jpeg)
+![](/src/img/card.jpeg)
 
  32,1% responderam que usariam a aplicação web para ter dados do panorama geral dos personagens da série. E por fim, 67,9% dos usuarios disseram que gostariam de visualizar as informações em formato de card.
 
@@ -42,7 +42,7 @@ mais de 50% dos usuarios utilizariam uma aplicação web com objetivo de relembr
 
 Após o resultado da pesquisa, identificamos e validamos uma persona, ela se caracteriza como fã da série, que já assistiu todas as temporadas e consome este conteúdo periodicamente, dentro do nosso público alvo. Abaixo informações detalhadas:
 
-![](img/person.jpeg)
+![](/src/img/person.jpeg)
 
 ### História de Usuário
 
