@@ -56,8 +56,8 @@ const cardInfo = (img, num, name, type, weaknesses, evolution, rarity, cp, hp) =
             <p class="card-info-poke">Fraqueza: ${weaknesses}</p>
             <p class="card-info-poke">Próxima Evolução: ${evolution}</p>
             <p class="card-info-poke">Raridade: ${rarity}</p>
-            <p class="card-info-poke"> Força : ${cp}</p>
-            <p class="card-info-poke">${hp}</p>
+            <p class="card-info-poke"> CP : ${cp}</p>
+            <p class="card-info-poke"> HP: ${hp}</p>
         </div>
     </div>
 </div>

@@ -40,16 +40,27 @@ body{
 }
 
 .buttonMenu li {
-    margin-right: 3.5%;
-    padding-right: 3.5%;
-    font-size: 20px;
-    width: auto;
-    font-weight: bold;
-    border-right: rgb(0, 255, 55) solid 2px;
+margin-right: 3.5%;
+padding-right: 1.5%;
+font-size: 20px;
+width: auto;
+font-weight: bold;
+border-right: rgb(0, 255, 55) solid 2px;
 }
+
+.card-
 
 a{ text-decoration:none;
     color: black;
+}
+.imagemJohto{
+    width: 500px;
+    height: 550px;
+}
+
+.imagemKanto{
+    width: 500px;
+    height: 550px;    
 }
 
 .name-app{
@@ -149,6 +160,15 @@ li {
     list-style-type: none;
 }
 
+.card-info-poke{
+    margin-top: 9%;
+}
+.resumo-texto{
+    margin-top: 9%;
+    font-family: sans-serif;
+    font-size: 15px;
+    line-height:200%;
+}
 .flip-car {
     background-color: transparent;
     /* perspective: 1000px; */ 
@@ -331,6 +351,19 @@ p#inserirJohtoQuantidade{
         width: 370px;
         padding-left: 0px;
         padding-top:30px;
+    }
+}
+@media(max-width:371px){
+    .container-calculadora{
+        margin:auto;
+        width: 260px;
+        padding-left: 0px;
+        padding-top:30px;
+        padding-left: 51px;
+    }
+    .inputsPokemonAtual{
+       padding-left:-1px;;
+        margin-left: -20px;
     }
 }
 @media(max-width:644px) {
