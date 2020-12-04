@@ -2,8 +2,8 @@
 
 ## Índice
 
-* [1. Preâmbulo](#1-preâmbulo)
-* [2. Resumo do projeto](#2-resumo-do-projeto)
+* [1. Apresentação](#1-apresentacao)
+* [2. Pesquisa](#2-rick-and-morty)
 * [3. Objetivos de aprendizagem](#3-objetivos-de-aprendizagem)
 * [4. Considerações gerais](#4-considerações-gerais)
 * [5. Critérios mínimos de aceitação do
@@ -16,76 +16,40 @@
 
 ***
 
-## 1. Preâmbulo
+## 1. Apresentação
 
-Segundo a
-[Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read)
-90% dos dados que existem hoje foram gerados durante os últimos dois anos. A
-cada dia geramos 2.5 milhões de terabytes de dados, uma cifra sem precedentes.
+  Projeto desenvolvido durante o Bootcamp da Laboratória com o objetivo de construir uma interface Web capaz de visualisar e manipular dados de acordo com as necessidades do usuário.
+  A temática escolhida para representar o projeto foi Rick and Morty, a animação é uma série adulta norte-americana de comédia e ficção científica, estreada em 2013. Que conta a história do cientista bebado Rick e se neto pré adolescente Morty, que se envolvem em diversas aventuras perigosas.
 
-Apesar disso, os dados por si só são de pouca utilidade. Para que essas grandes
-quantidades de dados se convertam em **informação** compreensível para os
-usuários, precisamos entender e processar estes dados. Uma forma simples de
-fazer isso é criando _interfaces_ e _visualizações_.
+## 2. Pesquisa
 
-Na imagem seguinte, você pode ver como os dados que estão na parte esquerda
-podem ser usados para construir a interface amigável e compreensível que está na
-parte direita.
+Pensando no público alvo fizemos uma pesquisa atraves do Google forms para identificar quais informações os usuários gostariam de encontrar em nossa WebAplicação. A pesquisa obteve 160 respostas dentre os resultados obtivemos os seguintes dados:
 
-![json-interface](https://lh4.googleusercontent.com/Tn-RPXS26pVvOTdUzRT1KVaJ-_QbFs9SpcGLxSPE43fgbHaXtFgMUInuDt7kV41DkT1j8Tt29V0LxQW7SMtC6digOIhfTXSBKdwI08wUwhD3RAqlwy0hjfmhZ2BFe91mtmCSEqysfgk)
+<img src="img/plataforma.jpeg" alt="grafico" />
 
-## 2. Resumo do projeto
+70,4% dos respondentes utilizam a Netflix como principal plataforma de consumo de séries e animações; 
 
-Neste projeto você **construirá uma _página web_ para visualizar um _conjunto
-(set) de dados_** que se adeque às necessidades de seu usuário.
+<img src="img/webApp.jpeg" alt="grafico" />
 
-Como entregável final terá uma página web que permita **visualizar dados,
-filtrá-los, ordená-los e fazer algum cálculo agregado**. Por cálculo agregado
-nos referimos aos diversos cálculos que podem ser feitos com os dados para
-mostrar a informação mais relevante para os usuários (médias, valores máximos e
-mínimos, etc).
+mais de 50% dos usuarios utilizariam uma aplicação web com objetivo de relembrar o que aconteceu com os personagens quando uma nova temporada for lançada 
 
-Para este projeto trazemos uma série de dados de _temáticas diferentes_ para que
-você explore e decida com qual delas deseja trabalhar. Escolhemos
-especificamente estes conjuntos de dados porque cremos que se adequem bem a esta
-etapa de sua aprendizagem.
+<img src="img/card.jpeg" alt="grafico" />
 
-Uma vez que você defina sua área de interesse, busque entender quem é seu
-usuário e o que exatamente ele necessita saber ou ver, para que assim possa
-construir a interface que o ajude a interagir e entender melhor os dados.
+ 32,1% responderam que usariam a aplicação web para ter dados do panorama geral dos personagens da série. E por fim, 67,9% dos usuarios disseram que gostariam de visualizar as informações em formato de card.
 
-Este são os dados que propomos:
 
-* [Pokémon](src/data/pokemon/pokemon.json): Neste conjunto você encontrará uma
-  lista com os 151 Pokémon da região de Kanto, com suas respectivas estatísticas
-  utilizadas no jogo [Pokémon GO](http://pokemongolive.com).
-  - [Pesquisa com jogadores de Pokémon Go](src/data/pokemon/README.pt-BR.md)
+## 3. Persona
 
-* [League of Legends - Challenger leaderboard](src/data/lol/lol.json): Este
-  conjunto mostra a lista de jogadores de uma liga do jogo League of Legends
-  (LoL).
-  - [Pesquisa com jogadores de LoL](src/data/lol/README.pt-BR.md)
+Após o resultado da pesquisa, identificamos e validamos uma persona, ela se caracteriza como fã da série, que já assistiu todas as temporadas e consome este conteúdo periodicamente, dentro do nosso público alvo. Abaixo informações detalhadas:
 
-* [Rick and Morty](src/data/rickandmorty/rickandmorty.json). Lista de
-  personagens da série Rick & Morty. Você pode revisar a documentação da API
-  neste [link](https://rickandmortyapi.com).
-  - [Pesquisa com seguidores de Rick and
-    Morty](src/data/rickandmorty/README.pt-BR.md)
+<img src="img/person.jpeg" />
 
-## 3. Objetivos de aprendizagem
+### História de Usuário
 
-O objetivo principal deste projeto é que aprenda a desenhar e construir uma
-interface web onde se possa visualizar e manipular dados, entendendo o que o
-usuário necessita.
+História 1
 
-Em outras palavras, você aprenderá a:
 
-### HTML e CSS
 
-* [ ] [Uso de HTML semântico.](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
-* [ ] Uso de seletores de CSS.
-* [ ] Construir sua aplicação respeitando o desenho realizado (protótipo).
-* [ ] [Uso de flexbox em CSS.](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 ### DOM e Web APIs
 
