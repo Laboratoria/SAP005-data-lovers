@@ -1,33 +1,46 @@
 import { bringRivalPokemon, filterAllPokemonByType, orderBestPokemonByCP } from '../src/data.js';
-/*const pokemons = {
-  "num": "001",
-  "name": "bulbasaur",
-  "type": [
-    "grass",
-    "poison"
-  ],
-  "stats": {
-    "base-attack": "118",
-    "base-defense": "111",
-    "base-stamina": "128",
-    "max-cp": "1115",
-    "max-hp": "113"
-  },
-  "resistant": [
-    "water",
-    "electric",
-    "grass",
-    "fighting",
-    "fairy"
-  ],
-  "weaknesses": [
-    "fire",
-    "ice",
-    "flying",
-    "psychic"
-  ],
-}
-*/
+const pokemons = {
+  "pokemon": [
+    {
+      "name": "bulbasaur",
+      "type": [
+        "grass",
+        "poison"
+      ],
+      "stats": {
+        "base-attack": "118",
+        "base-defense": "111",
+        "max-cp": "1115",
+      },
+      "name": "charizard",
+      "type": [
+        "fire",
+        "flying"
+      ],
+      "stats": {
+        "base-attack": "223",
+        "base-defense": "173",
+        "base-stamina": "186",
+        "max-cp": "2889",
+        "max-hp": "158"
+      },
+      "resistant": [
+        "fire",
+        "grass",
+        "fighting",
+        "bug",
+        "steel"
+      ],
+      "weaknesses": [
+        "water",
+        "electric",
+        "rock"
+      ],
+    }
+  ]
+};
+
+
 
 
 /*describe('bringRivalPokemon é uma função?', () => {
@@ -60,6 +73,7 @@ describe('filterAllPokemonByType é uma função?', () => {
     expect(() => filterAllPokemonByType())
   })
   
+
   it('retuns tipos de pokemons', () => {
     expect(filterAllPokemonByType()).toBe(types);
   });

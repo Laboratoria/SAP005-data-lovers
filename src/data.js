@@ -31,19 +31,19 @@ import data from "./data/pokemon/pokemon.js"
 const pokemons = data.pokemon;
 
 export function filterRivalPokemon(pokemons) {
-  const searchInput = document.getElementById("search-input").value
+  const searchInput = document.getElementById("pokemon-name-input").value
 
   for (const pokemon of pokemons) {
     const lowercaseUserInput = String(searchInput).toLowerCase()
     const acceptingUserInput = pokemon.name.includes(lowercaseUserInput)
 
-    if (typeof acceptingUserInput) 
-  
-    return pokemon
+    if (acceptingUserInput) {
+      return pokemon
+    }
   }
 }
 
-export function filterAllPokemonByType(pokemons) {
+function filterAllPokemonByType(pokemons) {
   const types = {
     bug: [],
     dragon: [],
@@ -74,7 +74,7 @@ export function filterAllPokemonByType(pokemons) {
   return types
 }
 
-export function filterPokemonByRivalWeakness() {
+function filterPokemonByRivalWeakness() {
   const rivalWeakness = filterRivalPokemon(pokemons).weaknesses
   const pokemonByType = filterAllPokemonByType(pokemons)
   let bestPokemon = []
@@ -86,20 +86,20 @@ export function filterPokemonByRivalWeakness() {
       }
     }
   }
-  //return Array.from(new Set(bestPokemon)); // evita trazer pokemon repitido
+  return Array.from(new Set(bestPokemon)); // evita trazer pokemon repitido
 }
 
 export function orderBestPokemonByCP() {
   const crescentOrder = filterPokemonByRivalWeakness()
   const decrescentOrder = filterPokemonByRivalWeakness()
 
-  function comparisonByCP(pokemonA, pokemonB) {  // compara os pokemons a, b
+  function comparisonByCP(pokemonA, pokemonB) {  // compara os pokemons
     const pokemonA_CP = pokemonA.stats["max-cp"]
     const pokemonB_CP = pokemonB.stats["max-cp"]
 
     return pokemonA_CP.localeCompare(pokemonB_CP, undefined, { numeric: true })
   }
-  crescentOrder.sort(comparisonByCP) // sort coloca em ordem crescente
+  crescentOrder.sort(comparisonByCP)
   decrescentOrder.sort(comparisonByCP).reverse();
 
   return { crescentOrder, decrescentOrder }

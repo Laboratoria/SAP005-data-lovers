@@ -1,49 +1,36 @@
-import { bringRivalPokemon } from './data.js';
+import { bringRivalPokemon, orderBestPokemonByCP, /*filterRivalPokemon*/  } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
-// SEARCH POKEMON RIVAL
-
 const pokemons = data.pokemon;
-const pokemonNameInput = document.getElementById("pokemon-name-input");
 const pokemonImg = document.getElementById("img-pokemon");
 const pokemonName = document.getElementById("name-poke");
 const pokemonType = document.getElementById("type-pokemon");
 const pokemonResistant = document.getElementById("resistant-pokemon");
 const pokemonWeaknesses = document.getElementById("weaknesses-pokemon");
+const pokemonNameInput = document.getElementById("pokemon-name-input");
 const searchPokemon = document.getElementById("search-pokemon-btn");
 const pokemonNum = document.getElementById("num-pokemon");
+const pokemonTableRow = document.querySelector(".pokemon-table-row");
+const tableSection = document.getElementById("table-section");
 
 searchPokemon.addEventListener("click", searchRival)
 
 function searchRival(event) {
   event.preventDefault();
-  const bringPokemon = bringRivalPokemon(pokemons, pokemonNameInput);
-  document.getElementById("flex-container").className = "";
-
-// CARD
-
-pokemonImg.innerHTML = `<img src="${bringPokemon.image}"></img>`
-pokemonNum.innerHTML = `Número: ${bringPokemon.num}`
-pokemonName.innerHTML = `Nome: <span class="name-uppercase">${bringPokemon.name}</span>`
-pokemonType.innerHTML = `Tipo(s): <span class="type-uppercase"> ${bringPokemon.type}</span>`
-pokemonResistant.innerHTML = `Resistência(s): <span class="resistant-uppercase"> ${bringPokemon.resistant}</span>`
-pokemonWeaknesses.innerHTML = `Fraqueza(s): <span class="weaknesses-uppercase"> ${bringPokemon.weaknesses}</span>`
-}
-
-import { orderBestPokemonByCP, /*filterRivalPokemon*/ } from './data.js';
-
-const searchButton = document.getElementById("search-btn");
-const pokemonTableRow = document.querySelector(".pokemon-table-row");
-
-
-// BUSCA DO POKÉMON RIVAL
-searchButton.addEventListener("click", event => {
-  event.preventDefault();
+  
   // const rivalPokemon = filterRivalPokemon(pokemons)
+  const bringPokemon = bringRivalPokemon(pokemons);
   const bestPokemonByDecrescentCP = orderBestPokemonByCP().decrescentOrder
-
-  // CARD DO POKÉMON RIVAL
-
+  document.getElementById("flex-container").className = "";
+  tableSection.classList.remove("hidden-card")
+}
+  // CARD
+  pokemonImg.innerHTML = `<img src="${bringPokemon.img}"></img>`
+  pokemonNum.innerHTML = `Número: ${bringPokemon.num}`
+  pokemonName.innerHTML = `Nome: <span class="name-uppercase">${bringPokemon.name}</span>`
+  pokemonType.innerHTML = `Tipo(s): <span class="type-uppercase"> ${bringPokemon.type.join(", ")}</span>`
+  pokemonResistant.innerHTML = `Resistência(s): <span class="resistant-uppercase"> ${bringPokemon.resistant.join(", ")}</span>`
+  pokemonWeaknesses.innerHTML = `Fraqueza(s): <span class="weaknesses-uppercase"> ${bringPokemon.weaknesses.join(", ")}</span>`
 
 
   // TABELA DE POKÉMONS VANTAJOSOS
@@ -68,8 +55,8 @@ searchButton.addEventListener("click", event => {
     return row
   }
 
-
   pokemonTableRow.innerHTML = showTable(bestPokemonByDecrescentCP)
 
   // console.log(orderBestPokemonByCP())
-})
+
+

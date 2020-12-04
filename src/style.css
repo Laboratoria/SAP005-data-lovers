@@ -29,7 +29,16 @@ button {
   border: 0;
 }
 
+
 /* LANDING-PAGE */
+#landing-page {
+  background-image: url(img/battle.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
 .header-bar {
   position: absolute;
   top: 0;
@@ -37,14 +46,14 @@ button {
   width: 100%;
   background-color: #038C73;
   clip-path: polygon(0 0, 100% 0, 100% 23%, 0 100%);
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 .title {
   position: absolute;
   top: 1.5rem;
   left: 1rem;
-  z-index: 1;
+  /* z-index: 1; */
   font-family: 'Bungee', cursive;
   font-size: 16vw;
   line-height: 16vw;
@@ -53,18 +62,11 @@ button {
   text-shadow: rgba(255, 255, 255, 0.1) -1px -1px 1px, rgba(0, 0, 0, 0.5) 1px 1px 1px;
 }
 
-.landing-page-img {
-  width: 100%;
-  max-width: 200%;
-  height: auto;
-  transform: scaleX(-1);
-}
-
 .parallelogram {
   padding: 1.2rem 1rem;
-  position: relative;
-  bottom: 6.3rem;
-  height: 10rem;
+  position: absolute;
+  bottom: -3.2rem;
+  height: 11rem;
   width: 100%;
   transform: skew(0, -14deg);
   background-color: #038C73;
@@ -100,23 +102,51 @@ button {
 
 /* SEARCH POKEMON */
 
+/* BUSCAR POKÉMON */
+.pixel-bg {
+  background-image: url("img/poke.jpg");
+  background-repeat: no-repeat;
+  background-size: 200vh;
+  position: relative;
+  z-index: -1;
+  width: 100vw;
+  height: 125vh;
+}
+
 .about-pokemon {
+  position: relative;
+  top: 4rem;
   text-align: center;
 }
 
-.pokemon-text-input {
-  font-weight: bold;
+#pokemon-text {
   text-align: center;
-  font-size: large;
+  font-size: 1rem;
+  padding: 0 2rem;
+  padding-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+#pokemon-text p {
+  margin-bottom: 1rem;
+}
+
+.highlighted-text {
+  font-weight: bold;
+  text-shadow: #fff 1px 1px 1px;
+
 }
 
 .input-name {
-  width: 40%;
-	margin: 0 auto;
-	padding: 10px;
-	margin-bottom: 10px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  margin-bottom: 10px;
   border-radius: 50px;
   border-color: blue;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  text-align: center;
 }
 
 #search-pokemon-btn {
@@ -135,36 +165,24 @@ button {
   background-color: #073673;
 }
 
-/* CARD */
 
-.pokemon-bg-section {
-  background-image: url("img/poke.jpg");
-  width: 100%;
-  height: 1000px;
-}
-
+/* CARD POKÉMON RIVAL */
 .hidden-card {
   display: none;
   visibility: hidden;
 }
 
 #flex-container {
-  display: flex;
-  flex-direction: column;
-  width: 270px;
+  width: 80vw;
   background-color: white;
-  position: absolute;
-	border-radius: 15px;
-  left: 50%;
-  top: 180%;
-  transform: translate(-50%, -50%);
-	text-align: center;
-	padding-top: 50px;
-	align-items: center;
-  line-height: 50px;
-  font-size: medium;
-  border: solid 3px red;
-  border-radius: 2rem;  
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 1rem;
+  border: solid 3px #D92534;
+  border-radius: 2rem;
+  margin: 2rem auto;
+  position: relative;
+  top: 4rem;
 }
 
 .name-uppercase {
@@ -181,9 +199,12 @@ button {
 
 .weaknesses-uppercase {
   text-transform: capitalize;
+}
+
 .first-uppercase {
   text-transform: capitalize;
 }
+
 
 /* TABELA */
 #table-section {
@@ -200,7 +221,6 @@ tr {
 }
 
 table {
-  /* text-align: center; */
   border-collapse: collapse;
   width: 100vw;
 }
@@ -232,11 +252,11 @@ td {
   position: relative;
   padding: 0.3rem;
   padding-left: 54%;
-  padding-right: 0.7rem;
+  padding-right: 1.2rem;
   border: none;
   border-bottom: 2px solid #fff;
   text-transform: uppercase;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 
 td:before {
@@ -245,19 +265,36 @@ td:before {
   width: 45%;
   white-space: nowrap;
   font-family: "Inter";
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: bold;
   text-transform: uppercase;
   text-align: right;
   color: #038C73;
 }
 
-td:nth-of-type(2):before { content: "Nº"; }
-td:nth-of-type(3):before { content: "Tipo"; }
-td:nth-of-type(4):before { content: "Forte Contra"; }
-td:nth-of-type(5):before { content: "Combat Power"; }
-td:nth-of-type(6):before { content: "Ataque"; }
-td:nth-of-type(7):before { content: "Defesa"; }
+td:nth-of-type(2):before {
+  content: "Nº";
+}
+
+td:nth-of-type(3):before {
+  content: "Tipo";
+}
+
+td:nth-of-type(4):before {
+  content: "Forte Contra";
+}
+
+td:nth-of-type(5):before {
+  content: "Combat Power";
+}
+
+td:nth-of-type(6):before {
+  content: "Ataque";
+}
+
+td:nth-of-type(7):before {
+  content: "Defesa";
+}
 
 td:first-child {
   width: 100%;
@@ -271,17 +308,37 @@ td:last-child {
 
 .pokemon-name {
   display: block;
-  margin: 0.4rem 0;
-  line-height: 0.8rem;
+  margin: 1rem 0 0.5rem 0;
+  line-height: 0.9rem;
   font-family: "Bungee";
-  font-size: 0.8rem
+  font-size: 1rem
 }
 
 .pokemon-img {
-  width: 4rem;
+  width: 6rem;
   height: auto;
 }
 
 .pokemon-resistance {
   min-height: 1.2rem;
+}
+
+/* FOOTER */
+#footer {
+  background-color: #038C73;
+  text-align: center;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 0.7rem 1rem;
+}
+
+#footer a {
+  color: #000;
+  text-shadow: #fff 1px 1px 1px;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+
+#footer a:hover {
+  color: #D92534
 }
