@@ -92,7 +92,8 @@ O projeto foi desenvolvido por meio da Metodologia Scrum. Sendo assim, tivemos t
 
 ## 4. Equipe de Desenvolvimento
 
-[Camila Oliveira](https://github.com/cbalieiro)
-[Thaís Alencar](https://github.com/alencartha)
+- [Camila Oliveira](https://github.com/cbalieiro)
+
+- [Thaís Alencar](https://github.com/alencartha)
 
   
