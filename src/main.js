@@ -7,7 +7,6 @@ const pokemonName = document.getElementById("name-poke");
 const pokemonType = document.getElementById("type-pokemon");
 const pokemonResistant = document.getElementById("resistant-pokemon");
 const pokemonWeaknesses = document.getElementById("weaknesses-pokemon");
-const pokemonNameInput = document.getElementById("pokemon-name-input");
 const searchPokemon = document.getElementById("search-pokemon-btn");
 const pokemonNum = document.getElementById("num-pokemon");
 const orderByCPCresc = document.getElementById("btn-cp-crescent");
@@ -47,7 +46,7 @@ function searchRival(event) {
   const bringPokemon = bringRivalPokemon(pokemons);
 
   // EXIBIR CARD
-  pokemonImg.innerHTML = `<img src="${bringPokemon.image}"></img>`
+  pokemonImg.innerHTML = `<img src="${bringPokemon.img}"></img>`
   pokemonNum.innerHTML = `Número: ${bringPokemon.num}`
   pokemonName.innerHTML = `Nome: <span class="name-uppercase">${bringPokemon.name}</span>`
   pokemonType.innerHTML = `Tipo(s): <span class="type-uppercase"> ${bringPokemon.type.join(", ")}</span>`
@@ -65,6 +64,13 @@ orderByCPCresc.addEventListener("click", event => {
   pokemonTableRow.innerHTML = showTable(orderBestPokemonByCP().crescentOrder);
 })
 
+// DECRESCENTE
+orderByCPDecresc.addEventListener("click", event => {
+  event.preventDefault();
+  pokemonTableRow.innerHTML = showTable(orderBestPokemonByCP().decrescentOrder);
+})
+
+// TABELA COM ORDENAÇÃO DE NOME
 // A-Z
 orderByNameA_Z.addEventListener("click", event => {
   event.preventDefault();

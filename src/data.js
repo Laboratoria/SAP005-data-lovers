@@ -1,47 +1,19 @@
-export const bringRivalPokemon = (pokemons, pokemonNameInput) => {
-  for (const pokemon of pokemons) {
-    if (pokemon.name == pokemonNameInput.value) {
-      return {        
-        "name": pokemon.name,
-        "num": pokemon.num,
-        "image": pokemon.img,
-        "type": pokemon.type,
-        "resistant": pokemon.resistant,
-        "weaknesses": pokemon.weaknesses      
-      }
-    }
-  }
-};
-
-
-
-/* export const example = () => {
-  return 'example';
-};
-
-export const anotherExample = () => {
-  return 'OMG';
-}; */
-
-
-
-
 import data from "./data/pokemon/pokemon.js"
 
 const pokemons = data.pokemon;
 
-export function filterRivalPokemon(pokemons) {
-  const searchInput = document.getElementById("pokemon-name-input").value
+export const bringRivalPokemon = (pokemons) => {
+  const namePokemonInput = document.getElementById("pokemon-name-input").value
 
   for (const pokemon of pokemons) {
-    const lowercaseUserInput = String(searchInput).toLowerCase()
+    const lowercaseUserInput = String(namePokemonInput).toLowerCase()
     const acceptingUserInput = pokemon.name.includes(lowercaseUserInput)
 
     if (acceptingUserInput) {
       return pokemon
     }
   }
-}
+};
 
 export function filterAllPokemonByType(pokemons) {
   const types = {
@@ -86,14 +58,14 @@ export function filterPokemonByRivalWeakness() {
       }
     }
   }
-  return Array.from(new Set(bestPokemon)); // evita trazer pokemon repitido
+  //return Array.from(new Set(bestPokemon));
 }
 
 export const orderBestPokemonByCP = () => {
   const crescentOrder = filterPokemonByRivalWeakness()
   const decrescentOrder = filterPokemonByRivalWeakness()
 
-  function comparisonByCP(pokemonA, pokemonB) {  // compara os pokemons
+  function comparisonByCP(pokemonA, pokemonB) {
     const pokemonA_CP = pokemonA.stats["max-cp"]
     const pokemonB_CP = pokemonB.stats["max-cp"]
 

@@ -1,4 +1,4 @@
-import { bringRivalPokemon, filterAllPokemonByType, orderBestPokemonByCP } from '../src/data.js';
+import { bringRivalPokemon } from '../src/data.js';
 const pokemonsTest = {
   "pokemon": [
     {
@@ -12,38 +12,26 @@ const pokemonsTest = {
         "base-defense": "111",
         "max-cp": "1115",
       },
-      "name": "charizard",
-      "type": [
-        "fire",
-        "flying"
-      ],
-      "stats": {
-        "base-attack": "223",
-        "base-defense": "173",
-        "base-stamina": "186",
-        "max-cp": "2889",
-        "max-hp": "158"
-      },
-      "resistant": [
-        "fire",
-        "grass",
-        "fighting",
-        "bug",
-        "steel"
-      ],
-      "weaknesses": [
-        "water",
-        "electric",
-        "rock"
-      ],
+      
+        "name": "Ivysaur",
+        "type": [
+          "Grass",
+          "Poison"
+        ],
+        "height": "0.99 m",
+        "spawn_chance": 0.042,
+        "weaknesses": [
+          "Fire",
+          "Ice",
+          "Flying",
+          "Psychic"
+        ]
+      
     }
   ]
 };
 
-
-
-
-describe('Search a pokemon by name', () => {
+/*describe('Search pokemon by name', () => {
   it('should be a function', () => {
     expect(typeof bringRivalPokemon).toBe('function');
   });
@@ -51,24 +39,22 @@ describe('Search a pokemon by name', () => {
     const result = bringRivalPokemon(pokemonsTest.pokemon, "bul")
     expect(result[0].name).toEqual("Bulbasaur")
   });
-});
+});*/
 
-/*describe('filterAllPokemonByType é uma função?', () => {
-  it('is a function', () => {
-    expect(typeof filterAllPokemonByType).toBe('function');
+describe('Selecting pokemon by order', () => {
+  it('should be a function', () => {
+    expect(typeof orderBestPokemonByName).toBe('function');
+  });
+  it('should return "Bulbasaur" and "Ivysaur" by "A-Z" order', () => {
+    const result = orderBestPokemonByName(pokemonsTest.pokemon, "A_Z")
+    expect(result).toEqual(pokemonsTest.pokemon)
+  });
+  it('should return "Bulbasaur" and "Ivysaur" by "Z-A" order', () => {
+    const result = orderBestPokemonByName(pokemonsTest.pokemon, "Z_A")
+    expect(result).toEqual(pokemonsTest.pokemon)
   });
 
-  it('Mensagem de erro para número', () => {
-    expect(() => filterAllPokemonByType())
-  })
-  
-
-  it('retuns tipos de pokemons', () => {
-    expect(filterAllPokemonByType()).toBe(types);
-  });
-});
-
-describe('orderBestPokemonByCP é uma função?', () => {
+/*describe('orderBestPokemonByCP é uma função?', () => {
   it('is a function', () => {
     expect(typeof orderBestPokemonByCP).toBe('function');
   });
@@ -76,4 +62,4 @@ describe('orderBestPokemonByCP é uma função?', () => {
   it('returns `types`', () => {
     expect(orderBestPokemonByCP()).toBe('types');
   });
-});
+});*/
