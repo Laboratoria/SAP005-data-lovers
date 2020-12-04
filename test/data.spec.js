@@ -139,7 +139,7 @@ describe('Realizar testes no campo de ordenação (com uso de metodo sort)', () 
   });
 
   it('Quando o usuário acionar a função, devolve ordenado por nome', () => {
-    expect(decrescent(arrayTest)).toBe(arrayTest);
+        expect(decrescent(arrayTest)).toBe(arrayTest);
   });
 })
 

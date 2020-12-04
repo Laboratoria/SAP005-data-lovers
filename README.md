@@ -18,9 +18,9 @@
   
   De acordo com as pesquisas levantadas, foi possível constatar as seguintes necessidades dos Usuários de Pokemon GO:
   
-  -Realizar buscas de Pokemons específicos (Pokecard), no qual é possível visualizar as informações dos Pokemons;
+  -Realizar buscas de Pokemons específicos (Pokecard) através do número, no qual é possível visualizar as informações dos Pokemons;
   
-  - Gerar uma lista completa dos Pokemons, na qual seja possível ordená-la;
+  -Gerar uma lista completa dos Pokemons, na qual seja possível ordená-la;
   
   -Filtrar Pokemons por tipo e saber a porcentagem desse tipo com relação ao total de Pokemons.
   
@@ -52,7 +52,23 @@
 ## 3. Processo de Desenvolvimento
 
 Inicialmente, procuramos entender o funcionamento do jogo Pokemon Go por meio de pesquisas e leituras que nos possibilitou um maior entendimento da real necessidade dos jogadores.
-Nesse contexto, desenvolvemos um protótipo de baixa fidelidade (ou MPV) para testar a usabilidade do usuário, para que após essa etapa, desenvolvessemos a interface de alta fidelidade.
+Nesse contexto, desenvolvemos um protótipo de baixa fidelidade (ou MPV) para testar a usabilidade do usuário, para que após essa etapa, desenvolvêssemos a interface de alta fidelidade.
+
+Além disso, durante o processo de desenvolvimento, a equipe Dev utilizou dois navegadores (Firefox e Chrome). Com isso, foram identificados problemas na estruturação do código, pois ambos os navegadores têm comportamentos diferentes.
+As evidências sobre incompatibilidade apareceram, principalmente, durante a ordenação (método sort), na estilização, na responsividade do site e performance no carregamento de funções.
+
+A ordenação foi estruturada com o método sort. 
+Características identificadas:
+-Esse método tem comportamentos distintos em ambos os navegadores, sendo que o Chrome entende a seguinte sintaxe e o Firefox não; (a,b) { a.name - b.name } para o caso de ordenação por nome.
+-O Firefox por sua vez entende (a,b) {a.name < b.name}, porém o Chrome reporta erro de timeout, como se a sintaxe do desenvolvimento do código estivesse demorando muito a responder!
+Solução:
+Apontamos a estrutura da função, um retorno caso o resulta fosse positivo. Dando então, uma direção mais clara ao navegador do que deveria ser feito.
+(a, b) { return a.name < b.name ? 1 : -1;
+
+O filtro foi feito com o método filter e integrado com o include para que pudesse explandir a busca no array de tipo.
+
+Optamos por criar diversas funções para seguimentar e individualizar repetições continuas. Mesmo assim, entendemos que muitas se repetem e podem sofrer melhorias futuras.
+
 
 
 
