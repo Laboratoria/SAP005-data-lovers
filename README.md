@@ -71,8 +71,6 @@ O filtro foi feito com o método filter e integrado com o include para que pudes
 Optamos por criar diversas funções para seguimentar e individualizar repetições continuas. Mesmo assim, entendemos que muitas se repetem e podem sofrer melhorias futuras.
 
 
-
-
 ### Protótipo:
 
 

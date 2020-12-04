@@ -2,129 +2,142 @@
 
 <html lang="pt-br">
 
-    <head>
-        <title>Pokelovers</title>
-        <meta charset="utf-8">
-        <link rel="shortcut icon" href="img/favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" type="text/css" href="styles/index_style.css">
-    </head>
+<head>
+    <title>Pokelovers</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="styles/index_style.css">
+</head>
 
-    <body>
+<body>
 
-        <header class="header-bg">
-            <div class="container-header">
-                <div class="item-logo">
-                    <a href="index.html" id="logo-link">
-                        <figure>
-                            <img src="img/pokemon-logo.png" alt="logo do site" id="logo">
-                        </figure>
-                    </a>
-                </div>
-                <nav class="item-menu-nav">
-                    <ul>
-                        <li><a href="#about">Sobre</a></li>
-                        <li><a href="#search">Localizar Pokemons</a></li>
-                        <li><a href="#container-instruction-for-view-cards">Ver todos os Pokemons</a></li>
-                    </ul>
-                </nav>
+    <header class="header-bg">
+        <div class="container-header">
+            <div class="item-logo">
+                <a href="index.html" id="logo-link">
+                    <figure>
+                        <img src="img/pokemon-logo.png" alt="logo do site" id="logo">
+                    </figure>
+                </a>
             </div>
-        </header>
+            <nav class="item-menu-nav">
+                <ul>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#search">Localizar Pokemons</a></li>
+                    <li><a href="#container-instruction-for-view-cards">Ver todos os Pokemons</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-        <main>   
+    <main>
 
-            <section class="bg-top-container" id="about">
-                <h1 class="site-name">Pokelovers</h1>
-                <section class="container-about">
-                    <div class="item-about-info">
-                        <h1>Sobre o Pokelovers</h1>
-                        <p>Lorem ipsum per ad etiam taciti dictumst bibendum non cubilia dapibus, primis tincidunt leo consequat ultrices nec a viverra imperdiet felis pharetra, tristique non nulla etiam nisi hac habitasse consectetur enim. egestas quisque aenean sem nam ultricies euismod class vivamus hac, auctor quis porttitor lacinia dapibus mattis at et curae, pulvinar enim aliquam venenatis per auctor fringilla consectetur. id senectus condimentum ultrices pharetra ultricies mi ornare litora interdum, sem magna etiam interdum egestas interdum sed lacus curabitur suspendisse, taciti et nisi sociosqu sed amet sem nisi. arcu mattis lobortis enim magna litora dui imperdiet malesuada nisl, eget ultrices urna auctor per curabitur aenean inceptos tincidunt, commodo gravida ut lobortis risus id placerat eros.  </p>
-                    </div>
-                    <div class="item-about-info">
-                        <figure>
-                            <img src="img/pokemon.png">
-                        </figure>
-                    </div>
-                </section>
-            </section>
-
-            <section class="middle-bg">
-                <h1 class="search-pokemon"> Procurar Pokemon!</h1>
-                <section class="container-search" id="search">
-                    <div class="item-instruction-search">
-                        <h1 class="instruction-text"> Digite o número do Pokemon e visualize suas principais características!</h1>
-                        <p>Passe o mouse ou toque sobre o card para ver mais!</p>
-                        <input type="text" id="txtBusca" placeholder="Ex: 001 para Pokemon 1"/>
-                        <button id="btn-search-pokemon">Buscar</button>
-                    </div>
-                    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                        <div class="flipper">
-                            <div id="item-card-one-front"> </div>
-                            <div id="item-card-one-back"> </div>
-                        </div>
-                    </div>  
-                </section>
-            </section>
-
-            <section class="division">
-                <h2>POKEDEX</h2>
-            </section>
-
-            <section id="container-instruction-for-view-cards">
-                <h2 class="instruction-text-view"> Escolha a opção nos botões e visualize as informações dos Pokemons abaixo!</h2>
-            </section>
-
-            <section class="container-filter">
-                <div class="item-filter">
-                    <button id="btn-generation-pokemon">Gerar lista completa de Pokemons</button>
+        <section class="bg-top-container" id="about">
+            <h1 class="site-name">Pokelovers</h1>
+            <section class="container-about">
+                <div class="item-about-info">
+                    <h1>Sobre o Pokelovers</h1>
+                    <p>Apaixonados por Pokemons e amantes assumidos tanto pela história quanto pelo jogo Pokemon Go
+                        (Desenvolvido por: Niantic, Inc.), criamos esse espaço para conhecermos melhor cada Pokémon.<br/>
+                        Nosso objetivo é dar vida a sua experiência com nosso site, mas entendemos que ainda há muito a
+                        se construir nessa história!<br/>
+                        Além disso, essa pagina web foi desenvolvida através de um desafio imenso proposto durante o
+                        Bootcamp de Front-End (promovido pela Laboratória-BR). Esperamos que vocês possam desfrutar
+                        dessa paixão conosco e seja uma experiência super agradável e divertida.<br/>
+                        Abaixo vocês encontrarão recursos para busco através do número do Pokémon, poderão acessar todos
+                        os Pokémons que estão na nossa base, ordenando por nome (crescente e decrescente) e ainda
+                        poderão filtrar pelo tipo.</p>
                 </div>
-                <div class="item-filter">
-                    <h1>Ordenar Pokemons:</h1>
-                    <button id="btn-cresc-pokemon">Crescente A-Z</button>
-                    <button id="btn-decresc-pokemon">Decrescente Z-A</button>
-                </div>
-                <div class="item-filter">
-                    <h1 id="filter-text">Filtrar Pokemons por tipo:</h1>
-                    <select id="filter-type-select">
-                        <option value="-">-----</option>
-                        <option value="bug">Bug</option>
-                        <option value="dark">Dark</option>
-                        <option value="dragon">Dragon</option>
-                        <option value="electric">Electric</option>
-                        <option value="fairy">Fairy</option>
-                        <option value="fighting">Fighting</option>
-                        <option value="fire">Fire</option>
-                        <option value="flying">Flying</option>
-                        <option value="ghost">Ghost</option>
-                        <option value="grass">Grass</option>
-                        <option value="ground">Ground</option>
-                        <option value="ice">Ice</option>
-                        <option value="normal">Normal</option>
-                        <option value="poison">Poison</option>
-                        <option value="psychic">Psychic</option>
-                        <option value="rock">Rock</option>
-                        <option value="steel">Steel</option>
-                        <option value="water">Water</option>
-                    </select>
-                    <button id="btn-filter-type">OK</button>
+                <div class="item-about-info">
+                    <figure>
+                        <img src="img/pokemon.png">
+                    </figure>
                 </div>
             </section>
+        </section>
 
-            <section class="container-show-all-cards">
-                <div id="item-aggregate-calc"></div>
-                <div id="item-all-cards"> </div>
+        <section class="middle-bg">
+            <h1 class="search-pokemon"> Procurar Pokemon!</h1>
+            <section class="container-search" id="search">
+                <div class="item-instruction-search">
+                    <h1 class="instruction-text"> Digite o número do Pokemon e visualize suas principais
+                        características!</h1>
+                    <p>Passe o mouse ou toque sobre o card para ver mais!</p>
+                    <input type="text" id="txtBusca" placeholder="Ex: 001 para Pokemon 1" />
+                    <button id="btn-search-pokemon">Buscar</button>
+                </div>
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div id="item-card-one-front"> </div>
+                        <div id="item-card-one-back"> </div>
+                    </div>
+                </div>
             </section>
+        </section>
 
-        </main> 
+        <section class="division">
+            <h2>POKEDEX</h2>
+        </section>
 
-        <footer class="footer">
-            <div>
-                <p>Copyright 2020 | Alencartha e Camila</p>
-            </div>    
-        </footer>
+        <section id="container-instruction-for-view-cards">
+            <h2 class="instruction-text-view"> Escolha a opção nos botões e visualize as informações dos Pokemons
+                abaixo!</h2>
+        </section>
 
-        <script src="main.js" type="module" ></script>
+        <section class="container-filter">
+            <div class="item-filter">
+                <button id="btn-generation-pokemon">Gerar lista completa de Pokemons</button>
+            </div>
+            <div class="item-filter">
+                <h1>Ordenar Pokemons:</h1>
+                <button id="btn-cresc-pokemon">Crescente A-Z</button>
+                <button id="btn-decresc-pokemon">Decrescente Z-A</button>
+            </div>
+            <div class="item-filter">
+                <h1 id="filter-text">Filtrar Pokemons por tipo:</h1>
+                <select id="filter-type-select">
+                    <option value="-">-----</option>
+                    <option value="bug">Bug</option>
+                    <option value="dark">Dark</option>
+                    <option value="dragon">Dragon</option>
+                    <option value="electric">Electric</option>
+                    <option value="fairy">Fairy</option>
+                    <option value="fighting">Fighting</option>
+                    <option value="fire">Fire</option>
+                    <option value="flying">Flying</option>
+                    <option value="ghost">Ghost</option>
+                    <option value="grass">Grass</option>
+                    <option value="ground">Ground</option>
+                    <option value="ice">Ice</option>
+                    <option value="normal">Normal</option>
+                    <option value="poison">Poison</option>
+                    <option value="psychic">Psychic</option>
+                    <option value="rock">Rock</option>
+                    <option value="steel">Steel</option>
+                    <option value="water">Water</option>
+                </select>
+                <button id="btn-filter-type">OK</button>
+            </div>
+        </section>
 
-    </body>
+        <section class="container-show-all-cards">
+            <div id="item-aggregate-calc"></div>
+            <div id="item-all-cards"> </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div>
+            <p>Copyright 2020 | Alencartha e Camila</p>
+            <a href="https://github.com/alencartha" target="_blank">Alencartha</a>
+            <a href="https://github.com/cbalieiro" target="_blank">Camila</a>
+        </div>
+    </footer>
+
+    <script src="main.js" type="module"></script>
+
+</body>
+
 </html>
-
