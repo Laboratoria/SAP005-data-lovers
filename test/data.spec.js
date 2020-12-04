@@ -107,6 +107,7 @@ const dataBaseTeste = [
     "gender": "Female",
   },
 ]
+
 describe('Testar se é uma função', () => {
   it('retornar se gênero é uma função', () => {
     expect(typeof filterGenderSelected).toBe('function');
