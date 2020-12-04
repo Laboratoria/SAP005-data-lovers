@@ -140,7 +140,6 @@ body {
 .left {
     float: left;
     margin-left: 0 auto;
-    
 }
 
 .frame {
@@ -194,7 +193,8 @@ body {
 .card-front {
     letter-spacing: 1px;
     color: #111;
-} 
+}
+
 
 /* scrollbar */
 
@@ -219,36 +219,34 @@ body {
 
 /* Responsive */
 
-
 @media only screen and (max-device-width: 1024px) {
     .bgimg-1,
     .bgimg-2,
     .bgimg-3 {
-       background-attachment: scroll;
+        background-attachment: scroll;
     }
 }
 
 @media (max-width: 480px) {
-    body{
+    body {
         width: 100vw;
     }
-    .logo{
+    .logo {
         margin-left: 30%;
         width: 50%;
-        display: flex; 
+        display: flex;
         justify-content: center;
         align-items: center;
     }
-    .header-title{  
+    .header-title {
         width: 100vw;
         display: flex;
         justify-content: center;
     }
-    .aside-menu{
+    .aside-menu {
         width: 100%;
-        
     }
-     .head-menu-list{
+    .head-menu-list {
         width: 100vw;
         display: flex;
         font-size: 12px;
@@ -258,13 +256,11 @@ body {
         justify-content: center;
         display: flex;
         flex-wrap: wrap;
-        
     }
-    .img{
+    .img {
         width: 70%;
         height: 50%;
     }
-
     .card-back,
     .card-front,
     .frame,
@@ -273,13 +269,10 @@ body {
         height: 210px;
         font-size: 10px;
     }
-
-    .footer{
+    .footer {
         display: none;
     }
-
 }
-
 
 
 /* tratamento do footer */

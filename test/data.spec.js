@@ -1,4 +1,3 @@
-
 import { instantSearch, selectPokemonType, selectPokemonResistant, selectPokemonWeaknesses, selectPokemonGeneration, sortPokemonCp } from '../src/data.js'
 import data from './mock.js';
 
@@ -6,12 +5,6 @@ describe('instantSearch', () => {
     it('should be an function', () => {
         expect(typeof instantSearch).toBe('function');
     });
-
-    //    it('should throw TypeError when invoked with wrong argument types', () => {
-    //        expect(() => instantSearch()).toThrow(TypeError);
-    //        expect(() => instantSearch(0)).toThrow(TypeError);
-    //        expect(() => instantSearch(null)).toThrow(TypeError);
-    //    });
 
     it('should return pokémons that starts with "cha" ', () => {
         expect(instantSearch("cha", data.pokemon)).toStrictEqual([{
@@ -120,12 +113,6 @@ describe('instantSearch', () => {
         it('should be an function', () => {
             expect(typeof selectPokemonType).toBe('function');
         });
-
-        //it('should throw TypeError when invoked with wrong argument types', () => {
-        //    expect(() => selectPokemonType()).toThrow(TypeError);
-        //    expect(() => selectPokemonType(0)).toThrow(TypeError);
-        //    expect(() => selectPokemonType(null)).toThrow(TypeError);
-        //});
 
         it('should return pokémons that are "electric" type ', () => {
             expect(selectPokemonType("electric", data.pokemon)).toStrictEqual([{
