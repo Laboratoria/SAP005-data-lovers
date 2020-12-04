@@ -1,5 +1,7 @@
 # Data Lovers
 
+Quer navegar por esse mundo cheio de aventuras? Acesse agora nossa aplicação e visualizae seus personagens preferidos!
+
 ## Índice
 
 * [1. Apresentação](#1-apresentacao)
@@ -59,13 +61,14 @@ Eu Ivan, fã da série, desejo visualizar os personagens e informações deles, 
 Definição de pronto: Todos os personagens e suas informações devem aparecer em forma de cards na pagina personagens
 
 #### História 3
-Eu Luan, fã da série e estudioso a crítica pública, desejo reordenar ou filtrar os personagens, para visualizar somente aqueles que satisfaçam a condição que escolhi.
+Eu Luan, fã da série e estudioso a crítica pública, desejo reordenar ou filtrar os personagens, para visualizar somente aqueles que satisfaçam a condição que escolhi e também qual o percentual que eles representam entre os personagens da série
 
 Definição de pronto: A página personagens deve conter quatro filtros sendo eles: 
-Espécies para filtrar as espécies dos personagens que aparecem ao longo da série;
+Espécies para filtrar as espécies dos personagens que aparecem ao longo da série e também quanstos % ele representa;
 Status para filtrar personagens vivos, mortos ou desconhecidos,
 Gênero para filtrar os personagens masculinos, femininos e desconhecidos,
 Ordem para listar os personagens em ordem crescente, decrescente e de relevância (mais importante na série)
+
 
 
 ## Interface de usuário
@@ -79,18 +82,21 @@ Nosso protótipo foi desenvolvido pelo paint, segue imagem
 
 
 
-
-
 ### Testes de Usuabilidade
 
 Os testes realizados com os usuários trouxeram os seguintes problemas:
+
 - Dificuldade em visualizar os botões do menu
 Resolução: trocamos as cores dos botões e de fundo, para melhor contraste
 
+- Dificuldade em entender do que se trata o site e o objetivo dele
+Resolução: inserimos texto de apresentação e trailer da série
 
 
+## Projeto
 
-HIstória 3
+### HomePage
+N
 
 
 
