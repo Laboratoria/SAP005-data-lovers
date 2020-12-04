@@ -33,7 +33,7 @@ Pensando no público alvo fizemos uma pesquisa atraves do Google forms para iden
 
 mais de 50% dos usuarios utilizariam uma aplicação web com objetivo de relembrar o que aconteceu com os personagens quando uma nova temporada for lançada 
 
-![](/src/img/card.jpeg)
+![](/src/img/cards.jpeg)
 
  32,1% responderam que usariam a aplicação web para ter dados do panorama geral dos personagens da série. E por fim, 67,9% dos usuarios disseram que gostariam de visualizar as informações em formato de card.
 
