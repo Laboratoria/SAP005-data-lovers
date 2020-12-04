@@ -45,11 +45,11 @@
         </div>
       </figure>
     </header>
-    <main>
+    <div class="pokemons">
       <section class="overlay">
         <div class="cloudOne"></div>
       </section>
-      <section class="tabs" id="title1">
+      <main class="tabs" id="title1">
         <ul>
           <li>
             <input type="radio" id="tabAbout" name="inputTabs" class="radio-tab" checked>
@@ -119,44 +119,48 @@
             </div>
           </li>
         </ul>
-      </section>
-      <section class="carousel-pokemon">
-        <h2 id="title2" class="overlay-carousel cloudTwo">Pókemons</h2>
-        <div class="box-filter">
-          <div class="container-input">
-            <figure class="search-btn">
-              <img class="search-img" src="images/loupe.png">
-            </figure>
-            <input type="text" name="namePokemon" id="textInput" value="Nome do Pokemon"
-              class="input-filter  searchInput animationInput" />
-            <select id="orderInput" class="order-filter animationInput">
-              <option disabled selected value="">Ordenar:</option>
-              <option value="0-251">0-251</option>
-              <option value="A-Z">A-Z</option>
-              <option value="Z-A">Z-A</option>
-            </select>
-            <select id="typeInput" class="type-filter animationInput">
-              <option disabled selected value="">Tipo:</option>
-              <option value="todos">Todos</option>
-              <option value="normal">Normal</option>
-              <option value="steel">Steel</option>
-              <option value="water">Water</option>
-              <option value="dragon">Dragon</option>
-              <option value="electric">Electric</option>
-              <option value="fairy">Fairy</option>
-              <option value="ghost">Ghost</option>
-              <option value="fire">Fire</option>
-              <option value="ice">Ice</option>
-              <option value="grass">Grass</option>
-              <option value="bug">Bug</option>
-              <option value="fighting">Fighting</option>
-              <option value="dark">Dark</option>
-              <option value="rock">Rock</option>
-              <option value="psychic">Psychic</option>
-              <option value="ground">Ground</option>
-              <option value="poison">Poison</option>
-              <option value="flying">Flying</option>
-            </select>
+      </main>
+      <footer class="carousel-pokemon">
+        <div class="headerFilter">
+          <h2 id="title2" class="overlay-carousel cloudTwo">Pókemons</h2>
+          <div class="box-filter">
+            <div class="container-input">
+              <div>
+                <figure class="search-btn">
+                  <img class="search-img" src="images/loupe.png">
+                </figure>
+              </div>
+              <input type="text" name="namePokemon" id="textInput" value="Nome do Pokemon"
+                class="input-filter  searchInput animationInput" />
+              <select id="orderInput" class="order-filter animationInput">
+                <option disabled selected value="">Ordenar:</option>
+                <option value="0-251">0-251</option>
+                <option value="A-Z">A-Z</option>
+                <option value="Z-A">Z-A</option>
+              </select>
+              <select id="typeInput" class="type-filter animationInput">
+                <option disabled selected value="">Tipo:</option>
+                <option value="todos">Todos</option>
+                <option value="normal">Normal</option>
+                <option value="steel">Steel</option>
+                <option value="water">Water</option>
+                <option value="dragon">Dragon</option>
+                <option value="electric">Electric</option>
+                <option value="fairy">Fairy</option>
+                <option value="ghost">Ghost</option>
+                <option value="fire">Fire</option>
+                <option value="ice">Ice</option>
+                <option value="grass">Grass</option>
+                <option value="bug">Bug</option>
+                <option value="fighting">Fighting</option>
+                <option value="dark">Dark</option>
+                <option value="rock">Rock</option>
+                <option value="psychic">Psychic</option>
+                <option value="ground">Ground</option>
+                <option value="poison">Poison</option>
+                <option value="flying">Flying</option>
+              </select>
+            </div>
           </div>
         </div>
         <div class="calculusFilter">
@@ -165,9 +169,10 @@
         <div class="carousel" data-motion="right">
           <div id="pokedex" class="pokedex"></div>
         </div>
-      </section>
-    </main>
+      </footer>
+    </div>
   </div>
 </body>
 <script type="module" src="main.js"></script>
+
 </html>

@@ -282,7 +282,7 @@ header {
   bottom: 101px;
 }
 
-main {
+.pokemons{
   background: linear-gradient(to bottom ,#40B5FA,#3EB5F9,#63C7FB,#59C0F9,#39B9F8);
   background-size: cover;
   position: absolute;
@@ -359,7 +359,7 @@ main {
   margin-top: 2rem;
   display: none;
   position: absolute;
-  height: 80%;
+  height: 70%;
   width: 100%;
   left: 0;
   overflow: auto;
@@ -386,11 +386,13 @@ main {
   width: 100%;
   height: 100%;
 }
+.headerFilter{
+  height: 30%;
 
+}
 .carousel-pokemon h2 {
   display: flex;
   justify-content: center;
-  margin: 0 auto 1% auto;
   text-transform: uppercase;
   font-size: 2rem;
 }
@@ -424,25 +426,31 @@ main {
   align-items: center;
   margin: 0 auto 0 auto;
   z-index: 100;
+  word-wrap: wrap;
 }
 
 .container-input{
-  height: 60px;
+  height: 5%;
   width: 60px;
   border-radius: 40px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  background-color: transparent;
   z-index: 100;
-  margin-top: 10%;
+  margin-top: 12%;
 }
 
 .search-btn{
-  display: flex;
+  display: block;
   align-items: center;
   width: 40px;
   filter: drop-shadow( 1px 1px 3px #000);
   z-index: 100;
+}
+.search-btn input,
+select {
+  margin-right: 5%;
+  margin-left: 5%;
 }
 
 .search-img{
@@ -450,12 +458,12 @@ main {
 }
 
 .box-filter, .container-input:hover{
-  width: 400px;
+  width: 70%;
   padding: 0;
   transition: 3s ease;
 }
 
-.input-filter, .order-filter, .type-filter{
+.animationInput{
   background-color: rgba(0,0,0,0.19);
   border-radius: 20px;
   height: 30px;
@@ -466,17 +474,7 @@ main {
   text-transform: uppercase;
 }
 
-.container-input:hover >.input-filter{
-  opacity: 1;
-  transition: 4s ease;
-}
-
-.container-input:hover > .order-filter{
-  opacity: 1;
-  transition: 4s ease;
-}
-
-.container-input:hover > .type-filter{
+.container-input:hover >.animationInput{
   opacity: 1;
   transition: 4s ease;
 }
@@ -484,11 +482,13 @@ main {
 .calculusFilter {
   display: flex;
   justify-content: center;
-  margin: 5% auto 0 auto;
-  width: 50%;
+  align-items: center;
+  width: 100%;
 }
 
 .calculusFilter p{
+  text-align: center;
+  width: 80%;
   font-family: Bungee, sans-serif;
   text-transform: uppercase;
   font-size: 1rem;

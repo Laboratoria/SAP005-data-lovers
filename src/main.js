@@ -1,7 +1,7 @@
 import { calculusPokemon, namePokemon, typePokemon, orderPokemon } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
-export const dataPokemon = data.pokemon;
+const dataPokemon = data.pokemon;
 
 const menuHamburguer = document.getElementById("menu-hamburguer");
 menuHamburguer.addEventListener("click", () => {
@@ -25,10 +25,12 @@ export function pokebola(list) {
       <p class="cardText">Altura: ${card.size.height}</p>
       <p class="cardText">Peso: ${card.size.weight}</p>
       <p class="cardText card-weaknesses">Fraquezas: ${card.weaknesses.join("|")}</p>
-      <p class="cardText">Evoluções:${card.evolution}</p>
+      <p class="cardText">Evoluções:${card.evolution["next-evolution"] ? card.evolution["next-evolution"][0].name : "nenhuma"} 
+      ${card.evolution["next-evolution"] && card.evolution["next-evolution"][0]["next-evolution"] ? "| " + card.evolution["next-evolution"][0]["next-evolution"][0].name : " "}</p>
     </li>
     </ul>
     </article>`
+    console.log
   }
   document.getElementById("pokedex").innerHTML = auxPoke;
 }
@@ -36,7 +38,7 @@ pokebola(dataPokemon);
 
 const inputFilterSearch = document.getElementById("textInput");
 inputFilterSearch.addEventListener("keyup", formFilterName);
-export function formFilterName(event) {
+function formFilterName(event) {
   event.preventDefault();
 
   const searchName = document.getElementById("textInput").value;
@@ -46,7 +48,7 @@ export function formFilterName(event) {
 
 const inputFilterOrder = document.getElementById("orderInput");
 inputFilterOrder.addEventListener("click", formFilterOrder);
-export function formFilterOrder(event) {
+function formFilterOrder(event) {
   event.preventDefault();
 
   const order = document.getElementById("orderInput").value;
@@ -56,7 +58,7 @@ export function formFilterOrder(event) {
 
 const inputFilterType = document.getElementById("typeInput");
 inputFilterType.addEventListener("click", formFilterType);
-export function formFilterType(event) {
+function formFilterType(event) {
   event.preventDefault();
 
   const filterType = document.getElementById("typeInput").value;
