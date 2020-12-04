@@ -4,20 +4,6 @@ import {selectType, searchByName, orderBy} from './data.js'
 const pokemons = data.pokemon;
 const cardPokemon = document.getElementById("card");
 
-function debounce(func, wait, immediate) {
-	var timeout;
-	return function() {
-		var context = this, args = arguments;
-		var later = function() {
-			timeout = null;
-			if (!immediate) func.apply(context, args);
-		};
-		var callNow = immediate && !timeout;
-		clearTimeout(timeout);
-		timeout = setTimeout(later, wait);
-		if (callNow) func.apply(context, args);
-	};
-};
 
 function cardsPokemon(pokemonArray) {
     let cards = "";
@@ -42,7 +28,7 @@ cardsPokemon(pokemons);
 
 const filterSelectType = document.querySelector("#filter-type");
 
-filterSelectType.addEventListener("change", (event) => {
+filterSelectType.addEventListener("change", () => {
     const filterType = filterSelectType.value;
     const arrayFiltered = selectType(filterType, data.pokemon);
     cardsPokemon(arrayFiltered);
@@ -62,7 +48,7 @@ filterSelectOrder.addEventListener("change", (event) => {
 
 const filterInputType = document.querySelector("#search-input");
 
-filterInputType.addEventListener("change", (event) => {
+filterInputType.addEventListener("change", () => {
     const filterName = filterInputType.value;
     const arrayFiltered = searchByName(filterName, data.pokemon);
     cardsPokemon(arrayFiltered);
