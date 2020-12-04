@@ -17,9 +17,9 @@
     </header>
 
     <div class="parallelogram">
-      <p class="introduction-text">Aumente suas chances de ganhar as batalhas!</p>
+      <p class="introduction-text special-title">Aumente suas chances de ganhar as batalhas!</p>
       <a href="#pokemon-text">
-        <button id="call-to-action-btn">Clique aqui</button>
+        <button id="call-to-action-btn" class="btn-style">Clique aqui</button>
       </a>
     </div>
   </section>
@@ -32,28 +32,50 @@
         <div id="pokemon-text">
           <p>Digite abaixo o nome do <span class="highlighted-text">pokémon contra o qual você vai lutar</span> e
             mostraremos para você os <span class="highlighted-text">melhores pokémons que você pode escolher</span>
-            para aumentar suas chances de vencer.</p>
+            para aumentar suas chances de vencer!</p>
         </div>
         <input class="input-name" type="text" id="pokemon-name-input" placeholder="Nome do Pokémon">
-        <button id="search-pokemon-btn">Buscar Pokémon</button>
+        <button id="search-pokemon-btn" class="btn-style">Buscar Pokémon</button>
       </section>
 
 
       <!-- CARD POKÉMON RIVAL  -->
-      <section>
-        <div class="hidden-card" id="flex-container">
-          <p id="img-pokemon"></p>
-          <p id="num-pokemon"></p>
-          <p id="name-poke"></p>
-          <p id="type-pokemon"></p>
-          <p id="resistant-pokemon"></p>
-          <p id="weaknesses-pokemon"></p>
+      <section id="rival-card">
+        <div class="hidden" id="flex-container">
+          <h3 class="special-title">Você vai lutar contra...</h3>
+          <div class="info-card-container">
+            <p id="img-pokemon"></p>
+            <p id="num-pokemon"></p>
+            <p id="name-poke"></p>
+            <p id="type-pokemon"></p>
+            <p id="resistant-pokemon"></p>
+            <p id="weaknesses-pokemon"></p>
+          </div>
         </div>
       </section>
     </div>
 
+    <!-- ORDENAÇÃO -->
+    <section id="ordering-options" class="hidden">
+      <h3 class="special-title">Ordene os pokémons por...</h3>
+      <div class="flex-container">
+        <div class="ordering-container">
+          <h4>Combat Power</h4>
+          <button class="btn-style" id="btn-cp-crescent">Crescente</button>
+          <button class="btn-style" id="btn-cp-decrescent">Decrescente</button>
+        </div>
+        <div class="ordering-container">
+          <h4>Nome</h4>
+          <button class="btn-style" id="btn-a-z">A - Z</button>
+          <button class="btn-style" id="btn-z-a">Z - A</button>
+        </div>
+      </div>
+    </section>
+
+
     <!-- TABELA  -->
-    <section id="table-section" class="hidden-card">
+    <section id="table-section" class="hidden">
+      <h3 class="special-title">Você pode escolher...</h3>
       <table>
         <thead>
           <tr>
@@ -73,8 +95,10 @@
 
   <!-- FOOTER -->
   <footer id="footer">
-    <p>Projeto feito com 💛 na <a target="_blank" href="https://www.laboratoria.la/">Laboratoria</a> por
-    <a target="_blank" href="https://github.com/KarinaFS">Karina Santos</a> e <a target="_blank" href="https://github.com/akemimeka">Akemi Mitsueda</a></p>
+    <p>Projeto feito com 💛 na <a target="_blank" href="https://www.laboratoria.la/br">Laboratoria</a> por <br
+        class="one-line">
+      <a target="_blank" href="https://github.com/KarinaFS">Karina Santos</a> e <a target="_blank"
+        href="https://github.com/akemimeka">Akemi Mitsueda</a></p>
   </footer>
 
   <script src="main.js" type="module"></script>
