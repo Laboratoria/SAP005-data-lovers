@@ -13,6 +13,7 @@ html {
   scroll-behavior: smooth;
 }
 
+
 /* STYLING GERAL */
 body {
   font-family: 'Inter', sans-serif;
@@ -52,9 +53,10 @@ a {
 
 /* LANDING-PAGE */
 #landing-page {
-  background-image: url(img/battle.png);
+  background-image: url("img/battle.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   width: 100vw;
   height: 100vh;
 }
@@ -92,11 +94,23 @@ a {
   z-index: 1;
 }
 
+@media (max-width: 270px) {
+  .parallelogram {
+    bottom: -2.5rem;
+  }
+}
+
 .introduction-text {
   margin-bottom: 1rem;
   margin-right: 0;
   text-align: right;
   font-style: normal;
+}
+
+@media (max-width: 270px) {
+  .introduction-text {
+    font-size: 0.9rem;
+  }
 }
 
 #call-to-action-btn {
@@ -117,6 +131,13 @@ a {
   height: 125vh;
 }
 
+@media (max-width: 270px) {
+  .pixel-bg {
+    background-size: cover;
+    height: 200vh;
+  }
+}
+
 .about-pokemon {
   position: relative;
   top: 4rem;
@@ -131,8 +152,10 @@ a {
   margin-bottom: 2rem;
 }
 
-#pokemon-text p {
-  margin-bottom: 1rem;
+@media (max-width: 270px) {
+  #pokemon-text {
+    padding: 3rem 1rem 1rem 1rem;
+  }
 }
 
 .highlighted-text {
@@ -185,14 +208,34 @@ a {
   top: 4rem;
 }
 
+@media (max-width: 270px) {
+  #flex-container {
+    width: 90vw;
+    padding: 1rem 0 0.5rem 0;
+    border-radius: 1.5rem;
+  }
+}
+
 #rival-card .special-title {
   margin-bottom: 0.7rem;
   padding: 0.5rem;
   background-color: #038C73;
 }
 
+@media (max-width: 270px) {
+  #rival-card .special-title {
+    margin-bottom: 0;
+  }
+}
+
 .info-card-container {
   padding: 0.5rem 1.5rem;
+}
+
+@media (max-width: 270px) {
+  .info-card-container {
+    padding: 0.5rem;
+  }
 }
 
 .name-uppercase {

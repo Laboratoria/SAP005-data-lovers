@@ -1,3 +1,4 @@
+import data from "./data/pokemon/pokemon.js"
 import { namePokemonInput } from './main.js'
 
 const pokemons = data.pokemon;
@@ -11,7 +12,7 @@ export const bringRivalPokemon = (pokemons, namePokemonInput) => {
       return pokemon
     }
   }
-};
+}
 
 export function filterAllPokemonByType(pokemons) {
   const types = {
@@ -43,6 +44,7 @@ export function filterAllPokemonByType(pokemons) {
   }
   return types
 }
+
 
 export function filterPokemonByRivalWeakness() {
   const rivalWeakness = bringRivalPokemon(pokemons, namePokemonInput).weaknesses

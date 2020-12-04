@@ -47,7 +47,9 @@ searchPokemon.addEventListener("click", event => {
   document.getElementById("flex-container").className = "";
   document.getElementById("ordering-options").classList.remove("hidden")
   document.getElementById("table-section").classList.remove("hidden")
+  // const userInput = namePokemonInput.value
   const bringPokemon = bringRivalPokemon(pokemons, namePokemonInput);
+
 
   // EXIBIR CARD
   pokemonImg.innerHTML = `<img src="${bringPokemon.img}"></img>`
@@ -57,9 +59,11 @@ searchPokemon.addEventListener("click", event => {
   pokemonResistant.innerHTML = `Resistência(s): <span class="resistant-uppercase"> ${bringPokemon.resistant.join(", ")}</span>`
   pokemonWeaknesses.innerHTML = `Fraqueza(s): <span class="weaknesses-uppercase"> ${bringPokemon.weaknesses.join(", ")}</span>`
 
+
   // EXIBIR TABELA PADRÃO
   pokemonTableRow.innerHTML = showTable(orderBestPokemonByCP().decrescentOrder);
-}
+})
+
 
 // EVENTOS DE ORDENAÇÃO DE CP
 // CRESCENTE
