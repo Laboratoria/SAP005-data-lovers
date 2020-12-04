@@ -37,6 +37,7 @@ function showTable(pokemonArray) {
   return row
 }
 
+// CLICAR PARA BUSCAR POKÉMON
 searchPokemon.addEventListener("click", searchRival)
 function searchRival(event) {
   event.preventDefault();
@@ -57,7 +58,7 @@ function searchRival(event) {
   pokemonTableRow.innerHTML = showTable(orderBestPokemonByCP().decrescentOrder);
 }
 
-// TABELA COM ORDENAÇÃO DE CP
+// EVENTOS DE ORDENAÇÃO DE CP
 // CRESCENTE
 orderByCPCresc.addEventListener("click", event => {
   event.preventDefault();
@@ -70,7 +71,7 @@ orderByCPDecresc.addEventListener("click", event => {
   pokemonTableRow.innerHTML = showTable(orderBestPokemonByCP().decrescentOrder);
 })
 
-// TABELA COM ORDENAÇÃO DE NOME
+// EVENTOS DE ORDENAÇÃO DE NOME
 // A-Z
 orderByNameA_Z.addEventListener("click", event => {
   event.preventDefault();
