@@ -30,7 +30,6 @@ export function pokebola(list) {
     </li>
     </ul>
     </article>`
-    console.log
   }
   document.getElementById("pokedex").innerHTML = auxPoke;
 }
