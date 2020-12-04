@@ -50,24 +50,18 @@ Após o resultado da pesquisa, identificamos e validamos uma persona, ela se car
 #### História 1
 Eu Carina, potencial fã da série, quero ler a respeito da série e/ou assistir o trailer, para conhecer a animação.
 
-#### Definição de Pronto
-
-A Homepage deve apresentar trailer da 1º temporada da série com sinopse e link para página da série na Netflix
+Definição de Pronto: A Homepage deve apresentar trailer da 1º temporada da série com sinopse e link para página da série na Netflix
 
 
 #### HIstória 2
 Eu Ivan, fã da série, desejo visualizar os personagens e informações deles, para relembrar a conjuntura dos personagens
 
-#### Definição de pronto 
-
-Todos os personagens e suas informações devem aparecer em forma de cards na pagina personagens
+Definição de pronto: Todos os personagens e suas informações devem aparecer em forma de cards na pagina personagens
 
 #### História 3
 Eu Luan, fã da série e estudioso a crítica pública, desejo reordenar ou filtrar os personagens, para visualizar somente aqueles que satisfaçam a condição que escolhi.
 
-#### Definição de pronto
-
-A página personagens deve conter quatro filtros sendo eles: 
+Definição de pronto: A página personagens deve conter quatro filtros sendo eles: 
 Espécies para filtrar as espécies dos personagens que aparecem ao longo da série;
 Status para filtrar personagens vivos, mortos ou desconhecidos,
 Gênero para filtrar os personagens masculinos, femininos e desconhecidos,
