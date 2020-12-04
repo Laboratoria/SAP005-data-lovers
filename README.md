@@ -1,45 +1,48 @@
-# Data Lovers
+# :sparkling_heart: Data Lovers
 
 Quer navegar por esse mundo cheio de aventuras? Acesse agora nossa aplicação e visualizae seus personagens preferidos!
+
+https://julianaads.github.io/SAP005-data-lovers/src/
 
 ## Índice
 
 * [1. Apresentação](#1-apresentacao)
 * [2. Pesquisa](#2-rick-and-morty)
-* [3. Persona](#3-persona)
-* [4. Histórias de Usuários](#4-historia-de-usuario)
-* [5. Critérios mínimos de aceitação do
-  projeto](#5-critérios-mínimos-de-aceitação-do-projeto)
-* [6. Hacker edition](#6-hacker-edition)
-* [7. Considerações técnicas](#7-considerações-técnicas)
-* [8. Pistas, dicas e leituras
-  complementares](#8-pistas-dicas-e-leituras-complementares)
-* [9. Checklist](#9-checklist)
+* [3. Usuários](#3-usuarios)
+* [4. Interface do Usuário](#4-interface-do-usuario)
+* [5. Testes de Usuabilidade](#5-testes-de-usuabilidade)
+* [6. O Projeto](#6-hacker-edition)
+* [7. Pontos de Melhoria](#7-considerações-técnicas)
+
 
 ***
 
-## 1. Apresentação
+## :receipt: 1. Apresentação
 
-  Projeto desenvolvido em dupla durante o Bootcamp da Laboratória com o objetivo de construir uma interface Web capaz de visualisar e manipular dados de acordo com as necessidades do usuário.
-  A temática escolhida para representar o projeto foi Rick and Morty, a animação é uma série adulta norte-americana de comédia e ficção científica estreada em 2013, que conta a história do cientista bebado Rick e se neto pré adolescente Morty, que se envolvem em diversas aventuras perigosas.
+  Projeto desenvolvido em dupla durante o Bootcamp da Laboratória com o objetivo de construir uma aplicação Web capaz de visualisar e manipular dados de acordo com as necessidades do usuário.
+  A temática escolhida para representar o projeto foi Rick and Morty, a animação é uma série adulta norte-americana de comédia e ficção científica estreada em 2013, que conta a história do cientista bebado Rick e seu neto pré adolescente Morty, que se envolvem em diversas aventuras perigosas.
 
-## 2. Pesquisa
+## :bar_chart: 2. Pesquisa
 
-Pensando no público alvo fizemos uma pesquisa atraves do Google forms para identificar quais informações os usuários gostariam de encontrar em nossa WebAplicação. A pesquisa obteve 160 respostas dentre os resultados obtivemos os seguintes dados:
+Fizemos uma pesquisa atraves do Google forms para identificar qual nosso :dart: público alvo e quais informações os usuários gostariam de encontrar em nossa aplicação. A pesquisa obteve 160 respostas dentre os resultados obtivemos os seguintes dados:
 
 ![](/src/img/plataforma.jpeg)
 
-70,4% dos respondentes utilizam a Netflix como principal plataforma de consumo de séries e animações; 
+:heavy_check_mark: 70,4% dos respondentes utilizam a Netflix como principal plataforma de consumo de séries e animações; 
 
 ![](/src/img/webApp.jpeg)
 
-mais de 50% dos usuarios utilizariam uma aplicação web com objetivo de relembrar o que aconteceu com os personagens quando uma nova temporada for lançada 
+:heavy_check_mark: mais de 50% dos usuários utilizariam uma aplicação web com objetivo de relembrar o que aconteceu com os personagens quando uma nova temporada for lançada 
 
-![](/src/img/cards.jpeg)
+![](/src/img/panoramaGeral.png)
 
- 32,1% responderam que usariam a aplicação web para ter dados do panorama geral dos personagens da série. E por fim, 67,9% dos usuarios disseram que gostariam de visualizar as informações em formato de card.
+ :heavy_check_mark: 32,1% responderam que usariam a aplicação web para ter dados do panorama geral dos personagens da série. 
+ 
+ ![](/src/img/cards.jpeg)
+ 
+ :heavy_check_mark: E por fim, 67,9% dos usuarios disseram que gostariam de visualizar as informações em formato de card.
 
-## Usuário
+## :technologist: Usuário
 
 ### 3. Persona
 
@@ -47,7 +50,7 @@ Após o resultado da pesquisa, identificamos e validamos uma persona, ela se car
 
 ![](/src/img/persona.jpeg)
 
-### História de Usuário
+###  História de Usuário
 
 #### História 1
 Eu Carina, potencial fã da série, quero ler a respeito da série e/ou assistir o trailer, para conhecer a animação.
@@ -71,18 +74,20 @@ Ordem para listar os personagens em ordem crescente, decrescente e de relevânci
 
 
 
-## Interface de usuário
+## :paintbrush: Interface de usuário
 
 ### Protótipo de baixa qualidade
 
-Nosso protótipo foi desenvolvido pelo paint, segue imagem
+Após o resultados da pesquisa desenvolvemos um protótipo de baixa qualidade que acreditamos ser o que os usuários esperam encontrar ao acessar a aplicação. Como ferramenta de desenvolvimento de Layout utilizamos o paint e criamos uma homePage que a principio teriam três sub-páginas.
+
+Abaixo o resultado:
 
 ![](/src/img/prototipo.jpeg)
 
 
 
 
-### Testes de Usuabilidade
+### Testes de Usuabilidade e feedback
 
 Os testes realizados com os usuários trouxeram os seguintes problemas:
 
@@ -92,11 +97,53 @@ Resolução: trocamos as cores dos botões e de fundo, para melhor contraste
 - Dificuldade em entender do que se trata o site e o objetivo dele
 Resolução: inserimos texto de apresentação e trailer da série
 
+Resultado do layout finalizado:
 
-## Projeto
+Home
 
-### HomePage
-N
-
+![](/src/img/homeReadme.png)
 
 
+
+Personagens
+
+![](/src/img/personagensReadme.png)
+
+
+
+### Responsividade
+
+Sabendo que celular é o principal meio de acesso à internet deixamos nossa aplicação responsiva.
+
+O resultado foi esse:
+
+Home
+
+![](/src/img/homeResponsiva.jpeg)
+
+
+
+Personagens
+
+![](/src/img/personagemResponsiva.jpeg)
+
+
+
+## :rocket: Desenvolvimento do Projeto
+
+Utilizamos a ferramenta Trello para organizar todas as atividades que deveriam ser entregues até a data final do projeto, utilizamos a metodologia ágile entregando partes funcionais do projeto em cada uma das três sprints que tivemos.
+Abaixo nosso quadro de organização:
+
+![](/src/img/trelo.jpeg)
+
+### Aprendizado
+
+:heavy_check_mark: Neste projeto aprendemos a manipular dados através de arquivo json.
+:heavy_check_mark: Desenvolver testes unitários garantindo a funcionalidade da aplicação mesmo após realizar alterações na mesma.
+:heavy_check_mark: Deixar a aplicação responsiva para todos os tamanhos de telas
+:heavy_check_mark: Manipulação de Arrays e Objetos
+
+
+## Devas 
+
+Este belissímo projeto foi desenvolvido com muito carinho :smiling_face_with_three_hearts: pela dupla Bianca e Juliana 
