@@ -37,9 +37,9 @@ export function filterRivalPokemon(pokemons) {
     const lowercaseUserInput = String(searchInput).toLowerCase()
     const acceptingUserInput = pokemon.name.includes(lowercaseUserInput)
 
-    if (acceptingUserInput) {
-      return pokemon
-    }
+    if (typeof acceptingUserInput) 
+  
+    return pokemon
   }
 }
 

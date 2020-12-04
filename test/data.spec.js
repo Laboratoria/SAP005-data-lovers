@@ -30,12 +30,12 @@ import { bringRivalPokemon, filterAllPokemonByType, orderBestPokemonByCP } from 
 */
 
 
-describe('bringRivalPokemon é uma função?', () => {
+/*describe('bringRivalPokemon é uma função?', () => {
   it('is a function', () => {
     expect(typeof bringRivalPokemon).toBe('function');
   });
 
- /* test('onPress gets called with the right thing', () => {
+  test('onPress gets called with the right thing', () => {
     const bringRivalPokemon = jest.fn();
     simulatePresses(bringRivalPokemon);
     expect(bringRivalPokemon).toBeCalledWith(
@@ -56,8 +56,12 @@ describe('filterAllPokemonByType é uma função?', () => {
     expect(typeof filterAllPokemonByType).toBe('function');
   });
 
+  it('Mensagem de erro para número', () => {
+    expect(() => filterAllPokemonByType())
+  })
+  
   it('retuns tipos de pokemons', () => {
-    expect(filterAllPokemonByType(pokemons)).toBe(types);
+    expect(filterAllPokemonByType()).toBe(types);
   });
 });
 
