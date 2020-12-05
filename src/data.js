@@ -1,12 +1,7 @@
-import data from "./data/pokemon/pokemon.js"
 
-const pokemons = data.pokemon;
-
-export const bringRivalPokemon = (pokemons) => {
-  const namePokemonInput = document.getElementById("pokemon-name-input").value
-
+export const bringRivalPokemon = (pokemons, userInput) => {
   for (const pokemon of pokemons) {
-    const lowercaseUserInput = String(namePokemonInput).toLowerCase()
+    const lowercaseUserInput = String(userInput).toLowerCase()
     const acceptingUserInput = pokemon.name.includes(lowercaseUserInput)
 
     if (acceptingUserInput) {
@@ -15,7 +10,7 @@ export const bringRivalPokemon = (pokemons) => {
   }
 };
 
-export function filterAllPokemonByType(pokemons) {
+export const filterAllPokemonByType = pokemons => {
   const types = {
     bug: [],
     dragon: [],
@@ -46,8 +41,8 @@ export function filterAllPokemonByType(pokemons) {
   return types
 }
 
-export function filterPokemonByRivalWeakness() {
-  const rivalWeakness = bringRivalPokemon(pokemons).weaknesses
+export const filterPokemonByRivalWeakness = (pokemons, userInput) => {
+  const rivalWeakness = bringRivalPokemon(pokemons, userInput).weaknesses
   const pokemonByType = filterAllPokemonByType(pokemons)
   let bestPokemon = []
 
@@ -61,9 +56,9 @@ export function filterPokemonByRivalWeakness() {
   return Array.from(new Set(bestPokemon));
 }
 
-export const orderBestPokemonByCP = () => {
-  const crescentOrder = filterPokemonByRivalWeakness()
-  const decrescentOrder = filterPokemonByRivalWeakness()
+export const orderBestPokemonByCP = (pokemons, userInput) => {
+  const crescentOrder = filterPokemonByRivalWeakness(pokemons, userInput)
+  const decrescentOrder = filterPokemonByRivalWeakness(pokemons, userInput)
 
   function comparisonByCP(pokemonA, pokemonB) {
     const pokemonA_CP = pokemonA.stats["max-cp"]
@@ -77,9 +72,9 @@ export const orderBestPokemonByCP = () => {
   return { crescentOrder, decrescentOrder }
 }
 
-export const orderBestPokemonByName = () => {
-  const A_Z = filterPokemonByRivalWeakness()
-  const Z_A = filterPokemonByRivalWeakness()
+export const orderBestPokemonByName = (pokemons, userInput) => {
+  const A_Z = filterPokemonByRivalWeakness(pokemons, userInput)
+  const Z_A = filterPokemonByRivalWeakness(pokemons, userInput)
 
   function comparisonByName(pokemon1, pokemon2) {
     const pokemon1Name = pokemon1.name;
