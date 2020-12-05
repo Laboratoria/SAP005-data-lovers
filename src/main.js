@@ -1,4 +1,4 @@
-import { bringRivalPokemon, filterAllPokemonByType, orderBestPokemonByCP, orderBestPokemonByName } from './data.js';
+import { bringRivalPokemon, orderBestPokemonByCP, orderBestPokemonByName } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 const pokemonNum = document.getElementById("num-pokemon");

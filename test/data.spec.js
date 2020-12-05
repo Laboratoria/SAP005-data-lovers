@@ -1,61 +1,11 @@
-import { example, anotherExample, bringRivalPokemon } from '../src/data.js';
-const pokemons = {
-  "num": "001",
-  "name": "bulbasaur",
-  "type": [
-    "grass",
-    "poison"
-  ],
-  "stats": {
-    "base-attack": "118",
-    "base-defense": "111",
-    "base-stamina": "128",
-    "max-cp": "1115",
-    "max-hp": "113"
-  },
-  "resistant": [
-    "water",
-    "electric",
-    "grass",
-    "fighting",
-    "fairy"
-  ],
-  "weaknesses": [
-    "fire",
-    "ice",
-    "flying",
-    "psychic"
-  ],
-}
+import { bringRivalPokemon } from '../src/data.js';
+import { data } from './mock.js';
 
-
-describe('bringRivalPokemon é uma função?', () => {
-  it('is a function', () => {
+describe('bringRivalPokemon', () => {
+  it('should be a function', () => {
     expect(typeof bringRivalPokemon).toBe('function');
   });
-
-  it('returns `["name", "num", "image", "type", "resistant", "weaknesses"]`', () => {
-    expect(bringRivalPokemon()).toBe('["name", "num", "image", "type", "resistant", "weaknesses"]');
+  it('should return the object of the pokémon Bulbasaur if the input is "bulb"', () => {
+    expect(bringRivalPokemon(data.pokemon, "bulb")).toStrictEqual(data.pokemon[0]);
   });
-});
-
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
-  });
-
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
-});
-
-
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
-
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});
+})
