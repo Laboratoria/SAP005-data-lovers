@@ -62,8 +62,8 @@ O produto foi criteriosamente pensado para atender a usuários iniciantes do jog
 ### Participantes: 
 |Nome|Github|Curso|
 | -------- | -------- | -------- |-------- | -------- |
-|Roberta Sapia|chaiana_hermes@yahoo.com.br|Bootcamp Laboratória|
-|Chaiana Hermes|chaiana_hermes@yahoo.com.br|Bootcamp Laboratória|
+|Roberta Vieira Sapia|Github.com/Rosapia|Bootcamp Laboratória|
+|Lucila Xavier|Github.com/Lucilaxavier|Bootcamp Laboratória|
 
 
 
