@@ -54,7 +54,7 @@ searchPokemon.addEventListener("click", event => {
 
 
   // EXIBIR CARD
-  pokemonImg.innerHTML = `<img src="${bringPokemon.img}"></img>`
+  pokemonImg.innerHTML = `<img class="card-img" src="${bringPokemon.img}"></img>`
   pokemonNum.innerHTML = `Número: ${bringPokemon.num}`
   pokemonName.innerHTML = `Nome: <span class="name-uppercase">${bringPokemon.name}</span>`
   pokemonType.innerHTML = `Tipo(s): <span class="type-uppercase"> ${bringPokemon.type.join(", ")}</span>`
