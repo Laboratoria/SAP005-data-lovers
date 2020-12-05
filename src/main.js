@@ -84,4 +84,3 @@ function selecionarPersonagem(result, name){
   //return result.filter(card => card.name.toLowerCase().includes(name.toLowerCase()))
   return result.filter(card => card.name.includes(name))
 }
-
