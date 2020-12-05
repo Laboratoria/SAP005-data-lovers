@@ -1,18 +1,18 @@
-import { example, anotherExample } from '../src/data.js';
+import { imprimeCards } from '../src/data.js';
+import rickandmorty from '../src/data/rickandmorty/rickandmorty.js';
 
 
-describe('example', () => {
+describe(imprimeCards, () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof imprimeCards).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  it('returns `card`', () => {
+    expect(imprimeCards()).toBe('card');
   });
 });
 
-
-describe('anotherExample', () => {
+/*describe('anotherExample', () => {
   it('is a function', () => {
     expect(typeof anotherExample).toBe('function');
   });
@@ -20,4 +20,4 @@ describe('anotherExample', () => {
   it('returns `anotherExample`', () => {
     expect(anotherExample()).toBe('OMG');
   });
-});
+});*/
