@@ -8,9 +8,9 @@ https://julianaads.github.io/SAP005-data-lovers/src/
 
 * [1. Apresentação](#1-apresentacao)
 * [2. Pesquisa](#2-rick-and-morty)
-* [3. Usuários](#3-usuarios)
+* [3. Usuário](#3-usuario)
 * [4. Interface do Usuário](#4-interface-do-usuario)
-* [5. Testes de Usuabilidade](#5-testes-de-usuabilidade)
+* [5. Responsividade](#5-responsividade)
 * [6. O Projeto](#6-hacker-edition)
 * [7. Pontos de Melhoria](#7-considerações-técnicas)
 
@@ -42,9 +42,9 @@ Fizemos uma pesquisa atraves do Google forms para identificar qual nosso :dart: 
  
  :heavy_check_mark: E por fim, 67,9% dos usuarios disseram que gostariam de visualizar as informações em formato de card.
 
-## :technologist: Usuário
+## :technologist: 3. Usuário
 
-### 3. Persona
+### Persona
 
 Após o resultado da pesquisa, identificamos e validamos uma persona, ela se caracteriza como fã da série, que já assistiu todas as temporadas e consome este conteúdo periodicamente, dentro do nosso público alvo. Abaixo informações detalhadas:
 
@@ -74,7 +74,7 @@ Ordem para listar os personagens em ordem crescente, decrescente e de relevânci
 
 
 
-## :paintbrush: Interface de usuário
+## :paintbrush: 4. Interface de usuário
 
 ### Protótipo de baixa qualidade
 
@@ -111,7 +111,7 @@ Personagens
 
 
 
-### Responsividade
+### 5. Responsividade
 
 Sabendo que celular é o principal meio de acesso à internet deixamos nossa aplicação responsiva.
 
