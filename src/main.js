@@ -21,7 +21,7 @@ function printCharacters(dados) {
     document.getElementById("hero").innerHTML = cards
 } printCharacters(dataBase);
 const filterSelect = document.querySelector('.filter-gender');
-filterSelect.addEventListener('click', filterGender)
+filterSelect.addEventListener('change', filterGender)
 function filterGender() {
     const valueGenderSelected = filterSelect.value
     const selectedGender = filterGenderSelected(dataBase, valueGenderSelected)
@@ -30,7 +30,7 @@ function filterGender() {
     document.getElementById("calculation").innerHTML = "Existem " + selectedGender.length + " personagens deste gênero e representa " + resultGender + "% do total de personagens"
 }
 const filterSelectStatus = document.querySelector('.filter-status');
-filterSelectStatus.addEventListener('click', filterStatus)
+filterSelectStatus.addEventListener('change', filterStatus)
 function filterStatus() {
     const valueStatusSelected = filterSelectStatus.value
     const selectedStatus = filterStatusSelected(dataBase, valueStatusSelected)
@@ -39,7 +39,7 @@ function filterStatus() {
     document.getElementById("calculation").innerHTML = "Existem " + selectedStatus.length + " personagens neste status e representa " + resultStatus + "% do total de personagens"
 }
 const filterSelectSpecies = document.querySelector('.filter-species');
-filterSelectSpecies.addEventListener('click', filterSpecies)
+filterSelectSpecies.addEventListener('change', filterSpecies)
 function filterSpecies() {
     const valueSpeciesSelected = filterSelectSpecies.value
     const selectedSpecies = filterSpeciesSelected(dataBase, valueSpeciesSelected)
@@ -48,7 +48,7 @@ function filterSpecies() {
     document.getElementById("calculation").innerHTML = "Existem " + selectedSpecies.length + " personagens desta espécie e representa " + resultSpecies + "% do total de personagens"
 }
 const filterSelectOrder = document.querySelector('.filter-order');
-filterSelectOrder.addEventListener('click', filterOrder)
+filterSelectOrder.addEventListener('change', filterOrder)
 function filterOrder() {
     document.getElementById("calculation").innerHTML = ""
     const valueOrderSelected = filterSelectOrder.value
