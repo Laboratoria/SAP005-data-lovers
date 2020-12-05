@@ -30,7 +30,8 @@ Tendo como referência as necessidades dos usuários, elaboramos o seguinte épi
     Conhecer a aparência, nome, gênero, status, localização de todos os personagens da série. Poder filtrar, ordenar ou buscar os personagens presentes na série.
 
 
-![ ](./data/rickandmorty/images/usuarios.jpg)
+![ ](./src/data/rickandmorty/images/usuarios.jpg)
+
 
 ## 3. Interface
 
