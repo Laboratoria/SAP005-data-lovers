@@ -1,425 +1,577 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 html, body {
-    width: 100%;
-    height: 100vh;
+  width: 100%;
+  height: 100vh;
 }
 
 body {
-    font-size: 2.8rem;
-    background-size: cover;
-}
-
-.links {
-    width: 100%;
-    height: 8%;
-    position: absolute;
-    display: flex;
-}
-
-.links label {
-    padding: 10px 0;
-    flex-grow: 1;
-    cursor: pointer;
-    text-align: center;
-    font-family: 'Lacquer', sans-serif;
-    font-weight: bold;
-    font-size: 3.8rem;
-    color: beige;
-}
-
-.links label:hover {
-    width: auto;
-    background-color: rgba(242, 4, 250, 0.438);
-    height: auto;
-    border-radius: 0.5rem;
-}
-
-.scroll input {
-    display: none;
-}
-
-.bloco {
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-
-#rickAndMorty {
-    background-image: url('./data/rickandmorty/images/stars.gif');
-}
-
-#cards {
-    background-image: url('./data/rickandmorty/images/stars.gif');
-}
-
-#curiosidades {
-    background-image: url('./data/rickandmorty/images/stars.gif');
-    color: #fff;
-    text-align: left;
-    flex-wrap: wrap;
-    padding-left: 100px;
-    font-family: 'Lacquer', sans-serif;
-}
-
-#status {
-    background-image: url('./data/rickandmorty/images/stars.gif');
-}
-
-#desenvolvedoras {
-    background-image: url('./data/rickandmorty/images/stars.gif');
-}
-
-
-
-#texto {
-    background: #ffffff;
-    padding: 1px 10px;
-    color: #000000;
-    cursor: pointer;
-    margin: 5px 0;
-    display: inline-block;
-    height: 40px;
-    width: 25%;
-    font-size: 75%;
-    border-width: 2px;
-    border-radius: 6px 0px 0px 6px;
-    text-align: center;
-    float: left;
-    font-family: 'Lacquer', sans-serif;
-    font-weight: bold;
-}
-
-#reset, #oBtn, #aBtn {
-    padding: 9px;
-    font-size: 75%;
-    border-radius: 6px 6px;
-    background-color: rgba(0, 255, 76, 0.616);
-    color: black;
-    width: 9rem;
-    font-weight: bold;
-    font-family: 'Lacquer', sans-serif;
-}
-
-#oBtn:hover, #reset:hover, #aBtn:hover {
-    cursor: pointer;
-    box-shadow: inset 0 0 2em rgb(168, 240, 168);
-}
-
-#btn {
-    padding: 9px;
-    font-size: 75%;
-    border-radius: 6px 6px;
-    background-color: rgba(0, 255, 76, 0.616);
-    color: black;
-    width: 6rem;
-}
-
-#btn:hover {
-    cursor: pointer;
-    box-shadow: inset 0 0 2em rgb(168, 240, 168);
-}
-
-.scroll {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.sections {
-    transition: all .4s;
-}
-
-#rd_cards:checked~.sections {
-    margin-top: -100vh;
-}
-
-#rd_curiosidades:checked~.sections {
-    margin-top: -200vh;
-}
-
-#rd_status:checked~.sections {
-    margin-top: -300vh;
-}
-
-#rd_desenvolvedoras:checked~.sections {
-    margin-top: -400vh;
-}
-
-#grafico {
-    padding-left: 200px;
-}
-
-table {
-    background-color: #ffffffb2;
-    text-align: center;
-    width: 400px;
-    height: 400px;
-}
-
-table .top {
-    background-color: rgb(255, 255, 255)
-}
-
-td {
-    font-weight: bold;
-}
-
-.pri {
-    box-shadow: 0 8px 8px 0 rgba(255, 255, 255, 0.952);
-    transition: 0.3s;
-    border-radius: 5px;
-    margin-right: 200px;
-}
-
-.pri img {
-    width: 410px;
-    height: 420px;
-    border-radius: 10px;
-}
-
-.ana:hover {
-    box-shadow: 0 16px 16px 0 rgba(251, 251, 251, 0.801);
-}
-
-.ana {
-    box-shadow: 0 8px 8px 0 rgba(255, 255, 255, 0.952);
-    transition: 0.3s;
-    border-radius: 5px;
-}
-
-.ana img {
-    width: 410px;
-    height: 420px;
-    border-radius: 10px;
-}
-
-.pri:hover {
-    box-shadow: 0 16px 16px 0 rgba(251, 251, 251, 0.801);
-}
-
-.box {
-    font-size: 40px;
-    font-weight: bold;
-    text-align: center;
-    padding: 0px 16px;
-    background: #0000008e;
-    color: #ffffff;
-}
-
-.box img {
-    height: 50px;
-    width: 50px;
-}
-
-.box img:hover {
-    box-shadow: 0 16px 16px 0 rgba(255, 255, 255, 0.801);
-}
-
-.img-logo {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.img-logo :hover {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
-}
-
-.card {
-    display: grid;
-    overflow-x: auto;
-    height: 500px;
-    width: 1700px;
-    perspective: 1000;
-}
-
-.frontCard, .backCard {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-    place-items: center;
-}
-
-.frontContainer {
-    box-shadow: 8px 8px 8px 8px rgba(242, 4, 250, 0.438);
-    border-radius: 10px;
-    width: 300px;
-    height: 410px;
-    text-align: center;
-    background: white;
-    color: rgb(0, 0, 0);
-    margin: 0.5em;
-    font-family: 'Lacquer', sans-serif;
-    font-weight: bold;
-    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbbbbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaaaaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
-}
-
-.name {
-    font-size: 35px;
-}
-
-.backCard div {
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.959);
-    border-radius: 10px;
-    width: 300px;
-    height: 390px;
-    text-align: left;
-    background: linear-gradient(rgba(72, 255, 0, 0.925), rgba(247, 0, 255, 0.945));
-    color: rgb(0, 0, 0);
-    margin: 0.5em;
-    font-weight: bold;
-    font-size: 40px;
-}
-
-.backCard div:hover {
-    box-shadow: 0 8px 16px 0 rgb(0, 0, 0);
-}
-
-.backCard h4 {
-    font-size: 25px;
-    text-align: justify;
-    margin-left: 10px;
-}
-
-.container {
-    margin-top: 100px;
-    display: flex;
-    justify-content: center;
-}
-
-.card .flip {
-    transition: transform 0.5s;
-    transform-style: preserve-3d;
-}
-
-.card:active .flip {
-    transform: rotateX(180deg);
-}
-
-.front-card, .back-card {
-    position: absolute;
-    backface-visibility: hidden;
-}
-
-.back-card {
-    transform: rotateX(180deg);
-}
-
-.curiosidades {
-    padding-top: 100px;
-    background-color: rgba(0, 0, 0, 0.705);
-    display: flex;
-}
-
-#info {
-    display: flex;
-    background-color: #ffffffcb;
-    width: 350px;
-    text-align: center;
-    font-family: 'Lacquer', sans-serif;
-    font-weight: bold;
-    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbbbbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaaaaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
-    border-radius: 10px;
-}
-
-.li {
-    font-family: sans-serif;
-    padding: 100px;
-    margin-top: -50px;
-    background-color: rgba(0, 0, 0, 0.712);
-}
-
-label[for="btn-menu"] {
-    padding: 8px;
-    background-color: #000;
-    color: #fff;
-    font-family: 'Lacquer', sans-serif;
-    font-size: 30px;
-    text-align: center;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    display: none;
+  font-size: 2.8rem;
+  background-size: cover;
 }
 
 #btn-menu {
-    width: 3rem;
-    height: 3rem;
+  width: 3rem;
+  height: 3rem;
+  display: none;
+  background-color: #000000;
+  z-index: 9;
+}
+
+label[for="btn-menu"] {
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+  font-family: "Lacquer", sans-serif;
+  font-size: 40px;
+  text-align: center;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: none;
+}
+
+#backgroundPage {
+  background-color: #000;
+}
+
+.links {
+  width: 100%;
+  height: 8%;
+  position: absolute;
+  display: flex;
+}
+
+.links label {
+  padding: 10px 0;
+  flex-grow: 1;
+  cursor: pointer;
+  text-align: center;
+  font-family: "Lacquer", sans-serif;
+  font-weight: bold;
+  font-size: 3.8rem;
+  color: beige;
+}
+
+.links label:hover {
+  width: auto;
+  background-color: rgba(242, 4, 250, 0.438);
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.scroll input {
+  display: none;
+}
+
+.bloco {
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#rickAndMorty {
+  background-image: url("./data/rickandmorty/images/stars.gif");
+}
+
+#cards {
+  background-image: url("./data/rickandmorty/images/stars.gif");
+}
+
+#curiosity {
+  background-image: url("./data/rickandmorty/images/stars.gif");
+  color: #fff;
+  text-align: center;
+  flex-wrap: wrap;
+  padding-left: 100px;
+  font-family: "Lacquer", sans-serif;
+}
+
+#status {
+  background-image: url("./data/rickandmorty/images/stars.gif");
+}
+
+#desenvolvedoras {
+  background-image: url("./data/rickandmorty/images/stars.gif");
+}
+
+form #teste {
+  display: flex;
+  flex-direction: row;
+}
+
+.inputBtn {
+  width: 25vw;
+}
+
+#texto {
+  background: #ffffff;
+  padding: 1px 10px;
+  color: #000000;
+  cursor: pointer;
+  margin: 5px 0;
+  display: inline-block;
+  height: 40px;
+  width: 20vw;
+  font-size: 75%;
+  border-width: 2px;
+  border-radius: 6px 0px 0px 6px;
+  text-align: center;
+  float: left;
+  font-family: "Lacquer", sans-serif;
+  font-weight: bold;
+}
+
+.threeBtn {
+  width: 30rem;
+}
+
+#reset, #oBtn, #aBtn {
+  padding: 9px;
+  font-size: 75%;
+  border-radius: 6px 6px;
+  background-color: rgba(0, 255, 76, 0.616);
+  color: black;
+  width: 9rem;
+  font-weight: bold;
+  font-family: "Lacquer", sans-serif;
+}
+
+#oBtn:hover, #reset:hover, #aBtn:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 2em rgb(168, 240, 168);
+}
+
+#btn {
+  padding: 9px;
+  font-size: 75%;
+  border-radius: 6px 6px;
+  background-color: rgba(0, 255, 76, 0.616);
+  color: black;
+  width: 3vw;
+}
+
+#btn:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 2em rgb(168, 240, 168);
+}
+
+.scroll {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sections {
+  transition: all 0.4s;
+}
+
+#rd_cards:checked~.sections {
+  margin-top: -100vh;
+}
+
+#rd_curiosity:checked~.sections {
+  margin-top: -200vh;
+}
+
+#rd_status:checked~.sections {
+  margin-top: -300vh;
+}
+
+#rd_desenvolvedoras:checked~.sections {
+  margin-top: -400vh;
+}
+
+#status {
+  overflow-y: hidden;
+}
+
+#grafico {
+  margin-top: 50px;
+}
+
+table {
+  background-color: #ffffffb2;
+  text-align: center;
+  width: 400px;
+  height: 400px;
+}
+
+table .top {
+  background-color: rgb(255, 255, 255);
+}
+
+td {
+  font-weight: bold;
+}
+
+.pri {
+  box-shadow: 0 8px 8px 0 rgba(255, 255, 255, 0.952);
+  transition: 0.3s;
+  border-radius: 5px;
+  margin-right: 200px;
+}
+
+.pri img {
+  width: 410px;
+  height: 420px;
+  border-radius: 10px;
+}
+
+.ana:hover {
+  box-shadow: 0 16px 16px 0 rgba(251, 251, 251, 0.801);
+}
+
+.ana {
+  box-shadow: 0 8px 8px 0 rgba(255, 255, 255, 0.952);
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.ana img {
+  width: 410px;
+  height: 420px;
+  border-radius: 10px;
+}
+
+.pri:hover {
+  box-shadow: 0 16px 16px 0 rgba(251, 251, 251, 0.801);
+}
+
+.box {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  padding: 0px 16px;
+  background: #0000008e;
+  color: #ffffff;
+}
+
+.box img {
+  height: 50px;
+  width: 50px;
+}
+
+.box img:hover {
+  box-shadow: 0 16px 16px 0 rgba(255, 255, 255, 0.801);
+}
+
+.img-logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.img-logo :hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.card {
+  display: grid;
+  overflow-x: auto;
+  height: 500px;
+  width: 1700px;
+  perspective: 1000;
+}
+
+.frontCard, .backCard {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  place-items: center;
+}
+
+.frontContainer {
+  box-shadow: 8px 8px 8px 8px rgba(242, 4, 250, 0.438);
+  border-radius: 10px;
+  width: 300px;
+  height: 410px;
+  text-align: center;
+  background: white;
+  color: rgb(0, 0, 0);
+  margin: 0.5em;
+  font-family: "Lacquer", sans-serif;
+  font-weight: bold;
+  text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbbbbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaaaaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+.name {
+  font-size: 35px;
+}
+
+.backCard div {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.959);
+  border-radius: 10px;
+  width: 300px;
+  height: 390px;
+  text-align: left;
+  background: linear-gradient( rgba(72, 255, 0, 0.925), rgba(247, 0, 255, 0.945));
+  color: rgb(0, 0, 0);
+  margin: 0.5em;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.backCard div:hover {
+  box-shadow: 0 8px 16px 0 rgb(0, 0, 0);
+}
+
+.backCard h4 {
+  font-size: 25px;
+  text-align: justify;
+  margin-left: 10px;
+}
+
+.container {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.card .flip {
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.card:active .flip {
+  transform: rotateX(180deg);
+}
+
+.front-card, .back-card {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.back-card {
+  transform: rotateX(180deg);
+}
+
+.curiosity {
+  font-size: 6rem;
+  background-color: rgba(0, 0, 0, 0.705);
+  padding: 40px;
+}
+
+#curiosity {
+  padding: 150px;
+  overflow-y: scroll;
+}
+
+.li {
+  font-size: 3.8rem;
+  font-family: "Luckiest Guy", cursive;
+}
+
+#info {
+  margin-bottom: 5px;
+  background-color: #ffffffcb;
+  width: 20vw;
+  text-align: center;
+  font-family: "Lacquer", sans-serif;
+  font-weight: bold;
+  text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbbbbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaaaaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+.li {
+  font-family: sans-serif;
+  padding: 100px;
+  margin-top: -50px;
+  background-color: rgba(0, 0, 0, 0.712);
+}
+
+#imageCuri {
+  width: 40vw;
+}
+
+.contagem {
+  margin-top: 100px;
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    max-width: 1000px;
+  }
+  .links {
+    display: flex;
+  }
+  .backgroundPage {
+    background-color: #000;
+  }
+  label[for="btn-menu"] {
+    display: block;
+  }
+  #btn-menu:checked~.links label {
+    z-index: 1;
+    display: flex;
+    font-size: 1em;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+  .links label {
+    float: None;
+    flex-direction: column;
+    background-color: rgb(201, 54, 201);
+    width: auto;
+    margin: 15px;
+    padding: 105px;
+    left: 0;
+    right: 0;
+    bottom: 0;
     display: none;
-    background-color: #000000;
-    z-index: 9;
+    text-align: center;
+    overflow: hidden;
+  }
+  #cards {
+    width: 100%;
+    display: flex;
+  }
+  .card {
+    display: flex;
+  }
+  .container {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .links {
+    width: 100%;
+    flex-direction: column;
+  }
+  #texto {
+    Width: 40vw;
+  }
+  #btn {
+    width: 9vw;
+  }
+  .inputBtn {
+    width: 60vw;
+  }
+  form #teste {
+    flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+  }
+  .links label {
+    margin: 0px 0;
+    line-height: 10px;
+  }
+  #curiosity {
+    overflow-y: auto;
+  }
+  .curiosity {
+    width: 100%;
+    font-size: 4rem;
+    margin-top: -30px;
+    display: flex;
+  }
+  .li {
+    margin-top: 10px;
+    font-size: 2.8rem;
+    background-color: rgba(17, 16, 17, 0.438);
+  }
+  #imageCuri {
+    margin-top: 20px;
+    width: 50vw;
+  }
+  #status {
+    width: 100%;
+    display: flex;
+  }
+  .contagem {
+    margin-top: 20px;
+    margin-right: 180px;
+  }
 }
 
+@media screen and (min-width: 420px max-width:600px) {
+  main {
+    max-width: 1000px;
+  }
+  main {
+    max-width: 1000px;
+  }
+  #cards {
+    width: 100%;
+    display: flex;
+  }
+  .card {
+    display: flex;
+  }
+  .container {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .links {
+    width: 100%;
+    flex-direction: column;
+  }
+  #texto {
+    Width: 100vw;
+  }
+  #btn {
+    width: 9vw;
+  }
+  .inputBtn {
+    width: 80vw;
+  }
+  form #teste {
+    flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+  }
+  .links label {
+    margin: 0px 0;
+    line-height: 10px;
+  }
+  #curiosity {
+    overflow-y: auto;
+  }
+  .curiosity {
+    width: 100%;
+    font-size: 4rem;
+    margin-top: -30px;
+    display: flex;
+    margin-left: -150px;
+  }
+  .li {
+    margin-top: 10px;
+    font-size: 2.8rem;
+    background-color: rgba(17, 16, 17, 0.438);
+  }
+  #imageCuri {
+    margin-top: 20px;
+    width: 100vw;
+  }
+  #status {
+    width: 100%;
+    display: flex;
+  }
+  .contagem {
+    margin-top: 20px;
+    margin-right: 0px;
+  }
+  .contagem {
+    
+    margin-left: -310px;  
+  }
 
-
-@media screen and (max-width: 768px) {
-    label[for="btn-menu"] {
-        display: block;
-    }
-    #btn-menu:checked~.links label {
-        z-index: 1;
-        display: flex;
-        font-size: 1em;
-        flex-direction: column;
-        align-items: stretch;
-        text-align: center;
-    }
-    .links label {
-        float: None;
-        flex-direction: column;
-        background-color: rgb(201, 54, 201);
-        width: auto;
-        margin: 15px;
-        padding: 50px;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        display: none;
-        text-align: center;
-        overflow: hidden;
-        /* max-height: 50px;*/
-    }
-    #cards {
-        width: 100%;
-        display: flex;
-    }
-    .container {
-        width: 100%;
-    }
-    .links {
-        width: 100%;
-        flex-direction: column;
-    }
-
-    form {
-        flex-wrap: wrap;
-        width: 100%;
-        display: flex;
-   
-    }
-
-
-    .links label {
-        margin: 0px 0;
-        line-height: 10px;
-
-    }
-
-
-
-}
+  #grafico {
+    margin-top: 20px;
+    margin-left: -310px;
+  }
+} 
