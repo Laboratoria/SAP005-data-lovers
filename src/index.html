@@ -9,7 +9,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media.css" />
 
   <title>PokeInfos</title>
 </head>
@@ -22,9 +23,9 @@
 
         <div id="menu" class="menu">
           <a href="#" class="ativo">Início</a>
-          <a href="#estatísticas">Estatísticas</a>
           <a href="#sobre">Sobre</a>
-          <a href="#Pokedéx">Pesquisa</a>
+          <a href="#search-form">Pesquisa</a>
+          <a href="#">Estatísticas</a>
           <a href="#card">Pokedéx</a>
         </div>
     </nav>
@@ -56,19 +57,26 @@
           <div class="container-carrossel">
             <div id="" class="carrossel">
               <div class="pokemon">
-                <a href="#"><img
-                    src="https://cdn.ome.lt/32mlL-S2cNECoVabw-3VThlWiiY=/770x0/smart/uploads/conteudo/fotos/Pokemon_GO_9pfXpla.jpg"
-                    alt="bulbasaur"></a>
+              <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/001.png" alt="bulbasaur"></a>
               </div>
               <div class="pokemon">
-                <a href="#"><img
-                    src="https://cdn.ome.lt/32mlL-S2cNECoVabw-3VThlWiiY=/770x0/smart/uploads/conteudo/fotos/Pokemon_GO_9pfXpla.jpg"
-                    alt="bulbasaur"></a>
+              <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/002.png" alt="ivysaur"></a>
               </div>
               <div class="pokemon">
-                <a href="#"><img
-                    src="https://cdn.ome.lt/32mlL-S2cNECoVabw-3VThlWiiY=/770x0/smart/uploads/conteudo/fotos/Pokemon_GO_9pfXpla.jpg"
-                    alt="bulbasaur"></a>
+              <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/003.png" alt="venusaur"></a>
+              </div>
+              <div class="pokemon">
+              <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/004.png" alt="charmander"></a>
+              </div>
+              <div class="pokemon">
+              <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/005.png" alt="charmeleon"></a>
+              </div>
+              <div class="pokemon">
+              <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/006.png" alt="charizard"></a>
+              </div>
+              <!--<div id="card-Pokemon" class="carrossel"></div>-->
+
+              
               </div>
             </div>
             <button role="button" id="flecha-direita" class="flecha-direita"><i
@@ -77,19 +85,12 @@
         </div>
       </div>
     </nav>
+  
 
-  </nav>
-
-  <nav class="menu font-std">
+    <nav class="menu font-std">
     <form action="" id="search-form" class="search-form font-std">
-
-
-
       <section id="Pokedéx" class="pesquisa">
-
-
-        <input type="search" placeholder="Buscar um Pokémon, p.ex. Drowzee" value="" autocomplete="off" id="search-input">
-
+        <input type="search" placeholder="Buscar Pokémon pelo nome" value="" autocomplete="off" id="search-input">
       </section>
       <div id="tipos">
         <select id="filter-type" class="filter-typeselect">
@@ -97,6 +98,7 @@
         <option value="water">Água</option>
         <option value="dragon">Dragão</option>
         <option value="electric">Elétrico</option>
+        <option value="fairy">Fada</option>
         <option value="ghost">Fantasma</option>
         <option value="fire">Fogo</option>
         <option value="ice">Gelo</option>
@@ -111,26 +113,21 @@
         <option value="flying">Voador</option>
         </select>
       </div>
-      <!--<input type="submit">-->
-
-
       <select id="order-search" class="order-search select">
         <option id="teste" value="" disabled="" selected=""> Ordenar por</option>
         <option value="order-az"> Crescente</option>
         <option value="order-za"> Decrescente</option>
       </select>
-
     </form>
-  </nav>
+    </nav>
 
-  <nav>
+    <nav>
     <div class="container-pokedex ">
       <h1 class="titulo-pokedex">Pokedex</h1>
       <!-- Lista de pokemons -->
       <div id="card" class="pokedex"></div>
     </div>
-
-  </nav>
+    </nav>
   </main>
 
 
@@ -160,7 +157,6 @@
           </a>
         </li>
       </ul>
-
       <h4>Entre em Contato Julia </h4>
       <ul>
         <li>

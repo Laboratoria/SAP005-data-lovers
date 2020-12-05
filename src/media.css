@@ -1,0 +1,78 @@
+/*---------MEDICA CARDS---------*/
+@media screen and (max-width: 480px) {
+
+	.social-panel-container.visible {
+		transform: translateX(0px);
+	}
+	
+	.floating-btn {
+		right: 10px;
+	}
+	.card {
+        height: 50vh;
+    }
+
+    .pokemon-img {
+        width: 5,5em;
+    }
+
+
+}
+
+/*---------MEDIA PAGINA---------*/
+@media screen and (max-width: 980px){
+
+    .menu.active {
+    right: 0;
+    }
+
+    header .logo-tipo {
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tela-principal {
+        font-size: 14px;
+    }
+
+    .tela-principal .descricões {
+        max-width: 100%;
+    } 
+
+    .container-carrossel {
+        overflow: visible;
+    }
+
+    .carrossel {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+
+    .indicadores, 
+    .flecha-esquerda,
+    .flecha-direita {
+        display: none;
+    }
+}
+
+@keyframes bounce {
+	20% {
+			transform: translateY(-6px);
+	}
+	40% {
+			transform: translateY(0px);
+	}
+
+	80% {
+			transform: translateY(-2px);
+	}
+	100% {
+			transform: translateY(0);
+	}
+}

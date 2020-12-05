@@ -3,6 +3,7 @@ import {selectType, searchByName, orderBy} from './data.js'
 
 const pokemons = data.pokemon;
 const cardPokemon = document.getElementById("card");
+//const cardPokemon2 = document.getElementById("card-Pokemon");
 
 
 function cardsPokemon(pokemonArray) {
@@ -10,16 +11,18 @@ function cardsPokemon(pokemonArray) {
     pokemonArray.forEach(pokemonAtual => {
         const types = pokemonAtual.type;
         cards +=
-            `<li class="card ${types[0]}">
+            `<div class="card ${types[0]}">
             <img class="card-image " alt="${pokemonAtual.name}" src="https://www.serebii.net/pokemongo/pokemon/${pokemonAtual.num}.png" />
             <h2 class="card-title"> ${pokemonAtual.num}. ${pokemonAtual.name} </h2>
             <p class="card-subtitle" id="card-subtitle">${pokemonAtual.size.height} | ${pokemonAtual.size.weight} </p>
             <p class="card-subtitle2" id="card-subtitle2">${types.join(' | ')} </p>
-            <p class="card-subtitle" id="card-subtitle">${pokemonAtual.generation.name} </p>
-            </li>`;
+            <p class="card-subtitle3" id="card-subtitle">${pokemonAtual.generation.name} </p>
+            </div>`;
 
     });
+    //cardPokemon2.innerHTML = cards;
     cardPokemon.innerHTML = cards;
+    
 }
 
 cardsPokemon(pokemons);
