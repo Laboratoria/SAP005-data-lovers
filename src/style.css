@@ -365,6 +365,12 @@ header {
   overflow: auto;
 }
 
+.about::-webkit-scrollbar{
+  background: linear-gradient( #fae8e3f3,#50b2ebc2,#63c6fbbd,rgba(253, 252, 252, 0.452),rgba(255, 255, 255, 0.432));
+  border-radius: 10px;
+
+}
+
 .about article {
   margin-top: 1%;
   text-align: center;
@@ -410,14 +416,6 @@ header {
   position: absolute;
   height: 100%;
   width: 100%;
-}
-@keyframes motion{
-  0%,100%{
-    transform: translateX(25px);
-  }
-  50%{
-    transform: translateX(50px);
-  }
 }
 
 .box-filter {
@@ -570,7 +568,7 @@ select {
   color: white;
   display: flex;
   flex-direction: column;
-  word-break: break-all;
+  white-space: pre-line;
 }
 
 .bc .card-image {
@@ -582,9 +580,5 @@ select {
   border-bottom: #ff0000;
   border-bottom-style: dotted;
   border-bottom-width: thin;
-  margin-top: 5%;
-}
-
-.card-weaknesses{
-  margin-top: 10%;
+  margin-top: 3%;
 }
