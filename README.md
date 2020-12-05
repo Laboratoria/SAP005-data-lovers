@@ -28,10 +28,14 @@ A pesquisa foi realizada em duas etapas, a primeira com a criação de um formul
 
 O formulário foi desenvolvido com perguntas que possibilitassem uma análise das necessidades de potenciais usuários, ou seja de pessoas que já consomem o comteúdo da franquia Pokémon. de persona e das necessidades destes usuários.
 
+<<<<<<< HEAD
 ![Imagem](img_readme/pesq-genero.png)      
 ![Imagem](img_readme/pesq-conheceu.png)
 ![Imagem](img_readme/pesq-interessesite.png)     
 ![Imagem](img_readme/pesq-sabersobre.png)
+=======
+![Imagem](https://github.com/JuliaTerin/PokeInfos-SAP005-data-lovers/blob/master/img_readme/pesq-genero.png?raw=true)![Imagem](https://github.com/JuliaTerin/PokeInfos-SAP005-data-lovers/blob/master/img_readme/pesq-conheceu.png?raw=true)![Imagem](https://github.com/JuliaTerin/PokeInfos-SAP005-data-lovers/blob/master/img_readme/pesq-interessesite.png?raw=true)![Imagem](https://github.com/JuliaTerin/PokeInfos-SAP005-data-lovers/blob/master/img_readme/pesq-sabersobre.png?raw=true)  
+>>>>>>> ff9e80e00e0e8b8997ad46b8ac0495fa6aebf561
 
 Também houve uma conversa/entrevista com duas pessoas, usuárias do jogo Pokémon Go, a mais de três anos. Usamos a oportunidade para confirmar dados que já havíamos observado através da pesquisa de formulário, para assim então, entendermos se nossas premissas seriam validadas para a criação de uma persona. 
 
@@ -39,11 +43,11 @@ Também houve uma conversa/entrevista com duas pessoas, usuárias do jogo Pokém
 
 A análise dos dados da pesquisa nos permitiram criar uma persona, para nos guiar nas histórias de usuários. Utilizamos o [Hubspot](https://www.hubspot.com/make-my-persona) como ferramenta para visualizar melhor nossa persona.
 
-![Imagem](img_readme/personana.png]
+![Imagem](https://github.com/JuliaTerin/PokeInfos-SAP005-data-lovers/blob/master/img_readme/personana.png?raw=true)
 
 Após criarmos Ana, partimos para as histórias de usuários. Geramos três histórias, cada uma contemplando necessidades conhecidas através das pesquisas, e assim, gerando etapas de trabalho com  definições de pronto claras.
 
-![Imagem](img_readme/HUum.png]
+![Imagem](https://github.com/JuliaTerin/PokeInfos-SAP005-data-lovers/blob/master/img_readme/HUum.png?raw=true)
 
 Percebemos com a pesquisa que a maior procura de informações sobre Pokémon é diretamente ligada a consulta de dúvidas sobre os detalhes dos mesmos, o que influência no jogo ou na nostalgia de rever algo apreciado principalmente na infância. 
 
@@ -53,16 +57,16 @@ Você pode acessar nossas histórias de usuario [1](https://trello.com/c/O2YLY0p
 
 O design do projeto começou com um protótipo de baixa fidelidade desenvolvido em papel:
 
-![Imagem](img_readme/prot-menu.jpeg)
+![Imagem](https://github.com/JuliaTerin/PokeInfos-SAP005-data-lovers/blob/master/img_readme/prot-menu.jpeg?raw=true)
 
-![Imagem](img_readme/prot-card.jpeg)
+![Imagem](https://github.com/JuliaTerin/PokeInfos-SAP005-data-lovers/blob/master/img_readme/prot-card.jpeg?raw=true)
 
 Ele foi base para as mudanças futuras de adequação do site durante o processo de desenvolvimento.
 
 Em seguida fizemos uma breve pesquisa de cores e referências, também estabelecendo imagens possíveis para integrar o layout do projeto.
 Referência no estudo de cores:
 
-![Imagem](img_readme/cores.png)
+![Imagem](https://github.com/JuliaTerin/PokeInfos-SAP005-data-lovers/blob/master/img_readme/cores.png?raw=true)
 
 Escolhemos cores mais leves para trabalhar no layout, pois além da pesquisa demonstrar que nossa persona é feminina, nas pesquisas de produtos oficiais e lojas da franquia a base sempre é branco.
 
@@ -93,7 +97,7 @@ Há um carrossel de imagens com links adicionais sobre o universo Pokémon, logo
 
 
 
-## Acesse o site aqui: [PokeInfos]()
+## Acesse o site aqui: [PokeInfos](https://saraohara.github.io/PokeInfos-SAP005-data-lovers/#Poked%C3%A9x)
 
 ### Desenvolvido por Julia Terin e Sara Viana através do Projeto da [Laboratoria](https://www.laboratoria.la/) 💛
 
