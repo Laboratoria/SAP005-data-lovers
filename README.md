@@ -28,7 +28,7 @@ A pesquisa foi realizada em duas etapas, a primeira com a criação de um formul
 
 O formulário foi desenvolvido com perguntas que possibilitassem uma análise das necessidades de potenciais usuários, ou seja de pessoas que já consomem o comteúdo da franquia Pokémon. de persona e das necessidades destes usuários.
 
-![Imagem](img_readme/pesq-genero.png]      
+![Imagem](https://github.com/JuliaTerin/PokeInfos-SAP005-data-lovers/blob/master/img_readme/pesq-genero.png?raw=true)  
 ![Imagem](img_readme/pesq-conheceu.png]
 ![Imagem](img_readme/pesq-interessesite.png]      
 ![Imagem](img_readme/pesq-sabersobre.png]
