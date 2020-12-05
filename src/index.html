@@ -1,93 +1,218 @@
 <!DOCTYPE html>
 <html lang="pt_BR">
 
-  <head>
+<head>
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="./data/rickandmorty/images/Goodstuff-No-Nonsense-Free-Space-Rick.ico" />
-    <title>Ricky and Morty</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="#" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="./data/rickandmorty/images/Goodstuff-No-Nonsense-Free-Space-Rick.ico" />
+  <title>Ricky and Morty</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="#" />
 
-  </head>
+</head>
 
-  <body>
-      <div id= "backgroundPage">
-       <input type="checkbox" id="btn-menu">
-       <label for="btn-menu">&#9776; </label>
-      
+<body>
 
-      <nav class="links">
-      <link rel="preconnect" href="https://fonts.gstatic.com" />
-      <link href="https://fonts.googleapis.com/css2?family=Lacquer&display=swap"rel="stylesheet"/>
-      <label for="rd_rickAndMorty">Inicio</label>
-      <label for="rd_cards">Cards</label>
-      <label for="rd_curiosidades">Curiosidades</label>
-      <label for="rd_desenvolvedoras">Desenvolvedoras</label>
-    </nav>
+<div id="backgroundPage">
+  <input type="checkbox" id="btn-menu">
+  <label for="btn-menu">&#9776;
 
-      
-    <div class="scroll">
-      <input type="radio" name="grupo" id="rd_rickAndMorty" checked="true" />
-      <input type="radio" name="grupo" id="rd_cards" />
-      <input type="radio" name="grupo" id="rd_curiosidades" />
-      <input type="radio" name="grupo" id="rd_desenvolvedoras" />
+  </label>
 
-      <section class="sections">
+  <nav class="links">
 
-        <section class="bloco" id="rickAndMorty">
-          <div class="img-logo">
-            <img class="logos"src="./data/rickandmorty/images/logo trans.png"/>
-          </div>
-      
-        </section>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Lacquer&display=swap" rel="stylesheet" />
+    <label for="rd_rickAndMorty">Inicio</label>
+    <label for="rd_cards">Cards</label>
+    <label for="rd_curiosity">Curiosidades</label>
+    <label for="rd_status">Status</label>
+    <label for="rd_desenvolvedoras">desenvolvedoras</label>
 
-        <section class="bloco" id="cards">
-          <main>
-            <form >
-              
-              <input id="texto" type="search" placeholder="Pesquise seu personagem favorito"/>
-              <button id="btn" type="submit">
-                <img src="./data/rickandmorty/images/search-512.webp" width="23px" padding="23px" />
-              </button>
-              <button id="reset" type="Reset"><b>Reset</b></button>
-              <button id="oBtn" type="submit">A-Z</button>
-              <button id="aBtn" type="submit">Z-A</button>
-              
-              <div class="tooltip">+ Infos!
-                <span class="tooltiptext">click no card e segure</span>
-              </div>
-            </form>
-            <br/>           
-        
-              <link rel="preconnect" href="https://fonts.gstatic.com" />
-              <link href="https://fonts.googleapis.com/css2?family=Lacquer&display=swap" rel="stylesheet" />
-            <div class="container">
-              <article class="card">
-                <div class="flip">
-                  <section class="front-card">
-                    <div class="frontCard" id="frontCard"></div>
-                  </section>
-                  <section class="back-card">
-                    <div class="backCard" id="backCard"></div>
-                  </section>
-                </div>
-              </article>
+  </nav>
+
+
+  <div class="scroll">
+    <input type="radio" name="grupo" id="rd_rickAndMorty" checked="true" />
+    <input type="radio" name="grupo" id="rd_cards" />
+    <input type="radio" name="grupo" id="rd_curiosity" />
+    <input type="radio" name="grupo" id="rd_status" />
+    <input type="radio" name="grupo" id="rd_desenvolvedoras" />
+    
+
+    <section class="sections">
+
+      <section class="bloco" id="rickAndMorty">
+        <div class="img-logo">
+          <img class="logos" src="./data/rickandmorty/images/morty.gif" />
+        </div>
+      </section>
+
+      <section class="bloco" id="cards">
+        <main>
+          <form id="teste">
+            <div class="inputBtn">
+            <input id="texto" type="search" placeholder="Pesquise seu personagem favorito" />
+            <button id="btn" type="submit">
+              <img src="./data/rickandmorty/images/lupa.svg" width="23px" padding="23px" />
+            </button>
             </div>
-         
-          </main>
-        </section>
+          
+            <div class="threeBtn">
+              <p id="info">clique no card e pressione!</p>
+            <button id="reset" type="Reset"><b>Reset</b></button>
+            <button id="oBtn" type="submit">a - z</button>
+            <button id="aBtn" type="submit">z - a</button>
+          </div>
+            
 
-        <section class="bloco" id="curiosidades"></section>
+          </form>
+          <br />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link href="https://fonts.googleapis.com/css2?family=Lacquer&display=swap" rel="stylesheet" />
+          <div class="container">
+            <article class="card">
+              <div class="flip">
+                <section class="front-card">
+                  <div class="frontCard" id="frontCard"></div>
+                </section>
+                <section class="back-card">
+                  <div class="backCard" id="backCard"></div>
+                </section>
+              </div>
+            </article>
+          </div>
+        </main>
+      </section>
 
-        <section class="bloco" id="desenvolvedoras"></section>
-    </div>
+      <section class="bloco" id="curiosity">
 
-    <footer></footer>
-    <script src="main.js" type="module"></script>
-  </header>
+        <h2 class="curiosity">Curiosidades de Rick and Morty que vão fazer você amar esse desenho!</h2><br>
+        <img id="imageCuri"src="data/rickandmorty/images/morty2 trans.png" width="20%"/>
+        <ul class="li">
+          <link rel="preconnect" href="https://fonts.gstatic.com">
+          <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet"> 
+        
+        <li>Rick and Morty nasceu como uma paródia de Doc Brown e Marty McFly,
+            dos filmes De Volta Para o Futuro, lançados na década de 1980.
+          </li>
+          </br>
+          <li> O seriado foi criado, vendido e roteirizado em apenas um dia!
+          </li>
+          </br>
+          <li>Pickle Rick é uma homenagem a um episódio de Breaking Bad </li>
+          
+          </br>
+        </br>
+          <li>Os bordões de Rick são sempre geniais e desbocados! O mais famoso, Wobba Lubba Dub Dub,
+            tem uma tradução não muito feliz na língua das Pessoas-Pássaro:
+            "Eu estou sofrendo muito, por favor me ajude".</li>
+           
+          </br>
+          </br>
+          <li>Referência à Community, série da NBC também criada por Dan Harmon. Além da participação dos
+            atores Joel McHale, Gillian Daniels e Jim Rash (respectivamente o Jeff, a Britta e o reitor Dean
+            Pelton) como dubladores dos personagens, em um dos episódios Rick fica entediado tentando bolar
+            uma série de TV que é basicamente uma versão alien de Community.</li>
+             
+            </br>
+            </br>
+ 
+          <li>Gearhead é inspirado em Roboto do He-Man. </li>
+          
+          </br>
+          <li>Crossover discreto com Gravity Falls,
+            ainda que Gravity Falls seja de uma emissora e Rick and Morty, de outra.
+            No episódio "Close Rick-counters of the Rick Kind", o penúltimo da primeira temporada,
+            Rick abre vários portais para tentar encontrar um dos sósias acusados de assassinato.
+            Em um deles, surgem uma caneca, uma caneta e um bloco de notas — justamente os três itens
+            que desapareceram em "Society of the Blind Eye",de Gravity Falls, e que San disse ter perdido em um portal.
+          </li>
+          
+          
+        
+        </ul>
+      </section>
+
+
+
+
+      <section class="bloco" id="status">
+
+        <div class="calcule">
+
+        <div class="contagem">
+
+          <table border="2">
+            <tr class="top">
+              <td>Status</td>
+              <td>Quantidade</td>
+
+
+            </tr>
+            <tr>
+              <td>Vivo</td>
+              <td id=alive></td>
+
+
+            </tr>
+            <tr>
+              <td>Morto</td>
+              <td id="dead"></td>
+
+            </tr>
+            <tr>
+              <td>Desconhecido</td>
+              <td id="unknown"></td>
+
+            </tr >
+            <tr class="top">
+              <td>Total</td>
+              <td id="accountResult"></td>
+
+            </tr>
+          </table>
+        </div>
+
+        <div id="grafico">
+          <div id="piechart"></div>
+        
+          
+        </div>
+      </div>
+      </section>
+
+      <section class="bloco" id="desenvolvedoras">
+        <div class="pri">
+          <img src="./data/rickandmorty/images/pri.jpeg" >
+          <div class="box">
+            <h4><b>Priscila Silveira</b></h4> 
+            <p><a href="https://www.linkedin.com/in/priscilassilveira/" target="_blank"><img src="./data/rickandmorty/images/icons8-linkedin-50.png" ></a>
+              <a href="https://github.com/PriscilaSSilveira" target="_blank"><img src="./data/rickandmorty/images/git.webp" ></a></p> 
+          </div>
+        </div>
+        
+        <div class="ana">
+          <img src="./data/rickandmorty/images/ana.jpeg" >
+          <div class="box">
+            <h4><b>Ana Freitas</b></h4> 
+            <p><a href="https://www.linkedin.com/in/ana-freitas-a3b60676/" target="_blank"><img src="./data/rickandmorty/images/icons8-linkedin-50.png" ></a>
+              <a href="https://github.com/anafreitas-br " target="_blank"><img src="./data/rickandmorty/images/git.webp" ></a></p> 
+          </div>
+        </div>
+        
+        
+
+      </section>
+
+  </div>
 </div>
-  </body>
+
+  <script src="main.js" type="module"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+</body>
+
 </html>
