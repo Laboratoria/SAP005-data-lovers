@@ -75,7 +75,6 @@ A responsividade do site foi feita em conjunto com a execução do layout da pá
 Algumas funcionalidades desejadas não foram implantadas ainda ao site até momento da entrega. Porém é um próximo paço trazer mais informações dos Pokémon através de um flip no card, ou link no card para outra página com informações mais detalhadas.
 
 ### Tecnológias
-
 Neste projeto foram usados:
 
 <ul>
@@ -87,9 +86,8 @@ Neste projeto foram usados:
 
 ## 5. Funcionamento
 
-O site permite que o usuário acesse informações sobre Pokémons das duas primeiras gerações, ou seja, Kanto e Jotoh. Ele apresenta uma barra de menu fixa, onde fica o logo do site, feito a partir do mesmo modelo de fonte do logo oficial da franquia, e que possibilita a navegação pela página ao clicar nas opções do menu. O background contém uma *fan art* nas cores principais do site, trazendo originalidade e maior harmonia ao layout.
+O site permite que o usuário acesse informações sobre Pokémons das duas primeiras gerações, ou seja, Kanto e Jotoh. Ele apresenta uma barra de menu fixa, onde fica o logo do site, feito a partir do mesmo modelo de fonte do logo oficial da franquia, e que possibilita a navegação pela página ao clicar nas opções do menu. O background contém uma fan art nas cores principais do site, trazendo originalidade e maior harmonia ao layout.
 Há um carrossel de imagens com links adicionais sobre o universo Pokémon, logo a baixo o campo de pesquisa por nome, o campo de filtragem por "tipo de Pokémon" e a ordenação alfabética crescente e decrescente. já que é uma das informações mais requisitada por usuários durante a pesquisa. Eles estão ordenados naturalmente por ordem de evolução.
-
 
 
 ## Acesse o site aqui: [PokeInfos]()
