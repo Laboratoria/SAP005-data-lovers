@@ -7,4 +7,3 @@ export const sortAZ =(allData) => allData.sort((a, b) => (a.name < b.name) ? - 1
 
 export const sortZA =(allData) => allData.sort((a, b) => (a.name > b.name) ? - 1 : 1)
 
- 

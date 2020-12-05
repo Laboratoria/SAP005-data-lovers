@@ -8,7 +8,6 @@
 * [5. Considerações gerais](#3-Considerações-gerais)
 * [5. Critérios mínimos de aceitação do projeto](#3-Critérios-mínimos-de-aceitação-do-projeto)
 
-
 *
 
 
@@ -31,6 +30,8 @@ Tendo como referência as necessidades dos usuários, elaboramos o seguinte épi
 
 
 ![ ](./data/rickandmorty/images/usuarios.jpg)
+
+
 
 ## 3. Interface
 
@@ -91,8 +92,6 @@ Durante o trabalho foi feito um protótipo de como o projeto ia ficar, para aces
 protótipo click
 * [aqui](https://drive.google.com/file/d/1GWEvpNgV7Otc401Aqnql4umOmer1RPDQ/view?ts=5faec699)
 
-*
-
 ##  Checklist
 
 * [✔️] Usar VanillaJS.
@@ -105,3 +104,4 @@ protótipo click
 * [✔️] UI: Mostra lista/tabela/etc com dados e/ou indicadores.
 * ✔️ ] UI: Permite ordenar dados por um ou mais campos (asc e desc).
 * [✔️] UI: Permite filtrar dados com base em uma condição.
+

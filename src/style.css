@@ -499,6 +499,7 @@ td {
 }
 
 @media screen and (min-width: 420px)and(max-width: 600px) {
+
   main {
     max-width: 1000px;
   }
@@ -562,7 +563,7 @@ td {
     display: flex;
   }
   .contagem {
-    
+  
     margin-left: -310px;  
   }
 
@@ -572,3 +573,4 @@ td {
   }
 
 }
+
