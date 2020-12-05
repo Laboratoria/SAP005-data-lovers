@@ -21,13 +21,21 @@ export function pokebola(list) {
         <h4 class="card-type">Tipo:${card.type.toString().replace(",","|")}</h4>
     </li>
     <li class="back-card">
-      <h2 class="card-num">${card.num}</h4>
-      <p class="cardText">Altura: ${card.size.height}</p>
-      <p class="cardText">Peso: ${card.size.weight}</p>
-      <p class="cardText card-weaknesses">Fraquezas: ${card.weaknesses.join("|")}</p>
-      <p class="cardText">Evoluções:${card.evolution["next-evolution"] ? card.evolution["next-evolution"][0].name : "nenhuma"} 
-      ${card.evolution["next-evolution"] && card.evolution["next-evolution"][0]["next-evolution"] ? "| " + card.evolution["next-evolution"][0]["next-evolution"][0].name : " "}</p>
-    </li>
+        <h2 class="card-num">${card.num}</h4>
+        <p class="cardText">Altura: ${card.size.height}</p>
+        <p class="cardText">Peso: ${card.size.weight}</p>
+        <p class="cardText card-weaknesses">Fraquezas: ${card.weaknesses.join("|")}</p>
+      </li>
+      <li class="back-card">
+        <h2 class="card-num">${card.num}</h2>
+        <p class="cardText">Altura: ${card.size.height}</p>
+        <p class="cardText">Peso: ${card.size.weight}</p>
+        <p class="cardText">Fraquezas: ${card.weaknesses.join("|")}</p>
+        <p class="cardText">Evolução anterior:${card.evolution["prev-evolution"] ? card.evolution["prev-evolution"][0].name : "não possui"} 
+        ${card.evolution["prev-evolution"] && card.evolution["prev-evolution"][0]["prev-evolution"] ? "|" + card.evolution["prev-evolution"][0]["prev-evolution"][0].name : " "}</p>
+        <p class="cardText">Evoluções subsequentes:${card.evolution["next-evolution"] ? card.evolution["next-evolution"][0].name : "não possui"} 
+        ${card.evolution["next-evolution"] && card.evolution["next-evolution"][0]["next-evolution"] ? "|" + card.evolution["next-evolution"][0]["next-evolution"][0].name : " "}</p>
+      </li>
     </ul>
     </article>`
   }
