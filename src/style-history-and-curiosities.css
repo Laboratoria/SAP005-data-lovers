@@ -200,4 +200,16 @@
     .text3-2 {
         text-align: center;
     }
+    .bgimg-1 {
+        background-image: url("assets/first.jpg");
+        height: 300px;
+    }
+    .bgimg-2 {
+        background-image: url("assets/second.jpg");
+        min-height: 300px;
+    }
+    .bgimg-3 {
+        background-image: url("assets/third.jpg");
+        min-height: 300px;
+    }
 }

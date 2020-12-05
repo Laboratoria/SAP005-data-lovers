@@ -98,9 +98,11 @@ Para identificar quem seriam os usuários da plataforma, realizamos pesquisas ut
  Realizamos testes com algumas das pessoas que se dispuseram testar a usabilidade durante o processo de desenvolvimento. Com isso, identificamos que: 
 
  ⚠️ Os usuários não estavam satisfeitos com o menu hambúrguer que foi proposto por ser mais uma etapa de click.
+ 
  ✔️ Como solução criamos um menu fixo acima da logo.
 
  ⚠️ Os usuários acharam a quantidade de filtros exagerada, apontaram que não viam necessidade de filtrar pokémons por ordem alfabética ou numérica.
+
  ✔️ Como solução removemos os filtros citados.
 
  🔎 Técnico

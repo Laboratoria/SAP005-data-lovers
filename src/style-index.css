@@ -5,7 +5,6 @@
 }
 
 body {
-    width: 100vw;
     background-color: rgb(247, 234, 208);
     font-size: 18px;
     letter-spacing: 3px;
@@ -17,6 +16,7 @@ body {
 
 .menu {
     background-color: rgb(243, 215, 160);
+    width: auto;
     padding: 15px;
     display: flex;
     justify-content: center;
@@ -46,6 +46,7 @@ body {
 }
 
 .header-title {
+    width: auto;
     display: flex;
     justify-content: center;
     background-color: rgb(247, 234, 208);
@@ -223,17 +224,17 @@ body {
 /* scrollbar */
 
 ::-webkit-scrollbar {
-    width: 20px;
+    width: 16px;
 }
 
 ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px rgb(105, 109, 109);
-    border-radius: 3px;
+    border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb {
     background: rgb(248, 197, 102);
-    border-radius: 7px;
+    border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {

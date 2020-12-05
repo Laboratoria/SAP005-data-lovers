@@ -29,16 +29,14 @@ export const sortPokemonCp = (selectCp, dataJson) => {
 }
 
 export const getWeightPercentage = (pokemon, dataJson) => {
-    const pokemonsWeight = (Number(pokemon.size.weight.replaceAll('kg', '').trim()))
+    const pokemonsWeight = (Number(pokemon.size.weight.replace('kg', '').trim()))
     const numberOfPokemonsLessHeavy = dataJson
         .filter((poke) => poke.name != pokemon.name)
-        .map(poke => Number(poke.size.weight.replaceAll('kg', '').trim()))
+        .map(poke => Number(poke.size.weight.replace('kg', '').trim()))
         .reduce((count, weight) => pokemonsWeight > weight ? count + 1 : count, 0)
 
     return (numberOfPokemonsLessHeavy * 100) / (dataJson.length - 1)
 }
-
-
 
 /*export const orderPokemonName = (sortSignal, dataJson) => {
         return dataJson.sort((poke1, poke2) => poke1.name.localeCompare(poke2.name) * sortSignal)

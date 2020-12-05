@@ -16,14 +16,13 @@ showingCards(data.pokemon)
 function showingCards(pokemonCards) {
     let showCards = document.querySelector('#main-cards')
     let cards = ""
-    showCards.innerHTML = "";
 
     for (let pokemon of pokemonCards) {
         let evolutions = ""
         if (pokemon.evolution["next-evolution"] != undefined && pokemon.evolution["next-evolution"] != null) {
             evolutions += `<span>${pokemon.evolution["next-evolution"].map(evolution => evolution.name).join(", ")}</span>`
         } else {
-            evolutions = "Do not evolve"
+            evolutions = "Don't evolve"
         }
 
 
