@@ -46,7 +46,7 @@ Como dizia a sábia Atendente Natália,
 * Filtragem por ordenação Alfabética decrescente;
 * Filtragem por ordem numérica;
 * Cálculo agregado do percentual de tipos de  pokémons;
-* Pokémons em um catálogo de fácil vizualização;
+* Pokémons em um catálogo de fácil visualização;
 * Cards interativos com informações de cada pokémon;
 * Aplicação Responsiva
 
@@ -64,6 +64,11 @@ Durante 3 semanas trabalhamos no projeto proposto pela Lab, que consistia em:
 Permita visualizar dados, filtrá-los, ordená-los e fazer algum cálculo agregado.
 
 Foi proposto três temas: [League of Legends](https://br.leagueoflegends.com/pt-br/), [Rick and Morty](https://pt.wikipedia.org/wiki/Rick_and_Morty) e [Pokémon](https://pt.wikipedia.org/wiki/Pok%C3%A9mon_(s%C3%A9rie_de_jogos_eletr%C3%B4nicos)).
+
+
+***Pokémon, o escolhido foi você!!!***
+
+![](https://media.giphy.com/media/e5xL4bU0ETgLm/giphy.gif)
 
 
 ## 📁 Organização:
@@ -123,7 +128,7 @@ _O catálogo - Conta com informações na frente dos cards e após o seu flip, �
 
 ---
 ## 💥 Testes de usabilidade:
-Durante os testes de usabilidade nos deparamos com alguns pontos de melhoria, foram eles:
+Durante os testes de usabilidade nos deparamos com alguns pontos de melhorias, foram eles:
 
 * Ajustes na responsividade;
 * O catálogo apresentava problemas no flip
