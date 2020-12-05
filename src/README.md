@@ -3,7 +3,6 @@
     <img src="https://ik.imagekit.io/kskmeelzwed/Pok_lovers_RYHTeCo7D.png">
 </h1>
 
-<MESSAGE>&blue=<COLOR>
 
 Você deve estar se perguntando: 
 **Mas, afinal, o que é Pokélovers??**
