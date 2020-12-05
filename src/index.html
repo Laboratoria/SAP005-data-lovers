@@ -17,19 +17,19 @@
 
 <body>
   <header>
+<!-- Menu--->
     <nav>
       <div class="container">
         <a href="#"><img class="logo-tipo" src="img/logo.png" alt="logo" /></a>
-
         <div id="menu" class="menu">
           <a href="#" class="ativo">Início</a>
           <a href="#sobre">Sobre</a>
-          <a href="#search-form">Pesquisa</a>
-          <a href="#">Estatísticas</a>
-          <a href="#card">Pokedéx</a>
+          <a href="#flecha-direita">Pesquisas</a>
+          <a href="#Pokedéx">Pokedéx</a>
         </div>
     </nav>
   </header>
+<!-- Sub Menu--->
   <main>
     <nav>
       <div class="tela-principal" id="sobre">
@@ -41,6 +41,7 @@
         </div>
       </div>
     </nav>
+<!-- Carrossel--->
     <nav>
       <div class="pokemons-recomendados container">
         <div class="container-title-control">
@@ -49,7 +50,6 @@
           </div>
         </div>
       
-
         <div class="container-principal">
           <button role="button" id="flecha-esquerda" class="flecha-esquerda"><i
               class="fas fa-chevron-left"></i></button>
@@ -57,26 +57,24 @@
           <div class="container-carrossel">
             <div id="" class="carrossel">
               <div class="pokemon">
-              <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/001.png" alt="bulbasaur"></a>
+                <a target="_blank" href="https://www.pokemon.com/br">
+                  <img src="img/sitePokemon.png" alt="Acessar site Pokemon" />
+                </a>
               </div>
               <div class="pokemon">
-              <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/002.png" alt="ivysaur"></a>
+                <a target="_blank" href="https://pokemongolive.com/pt_br/">
+                  <img src="img/sitePokeGO.png" alt="Acessar site Pokemon GO" />
+                </a>
               </div>
               <div class="pokemon">
-              <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/003.png" alt="venusaur"></a>
+                <a target="_blank" href="https://web.facebook.com/Pokemon/?_rdc=1&_rdr">
+                  <img src="img/Facebook.png" alt="Acessar Site do Facebook" />
+                </a>
               </div>
               <div class="pokemon">
-              <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/004.png" alt="charmander"></a>
-              </div>
-              <div class="pokemon">
-              <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/005.png" alt="charmeleon"></a>
-              </div>
-              <div class="pokemon">
-              <a href="#"><img src="https://www.serebii.net/pokemongo/pokemon/006.png" alt="charizard"></a>
-              </div>
-              <!--<div id="card-Pokemon" class="carrossel"></div>-->
-
-              
+                <a target="_blank" href="https://www.instagram.com/pokemon/">
+                  <img src="img/Instagram.jpg" alt="Acessar Site do Instagram" />
+                </a>
               </div>
             </div>
             <button role="button" id="flecha-direita" class="flecha-direita"><i
@@ -86,14 +84,20 @@
       </div>
     </nav>
   
+<!-- Pesquisa Nome --->
+    <fieldset id="Pesquisas" class="menu font-std">
+      <form action="" id="search-form" class="search-form font-std">
 
-    <nav class="menu font-std">
-    <form action="" id="search-form" class="search-form font-std">
-      <section id="Pokedéx" class="pesquisa">
+        <section class="pesquisa">
         <input type="search" placeholder="Buscar Pokémon pelo nome" value="" autocomplete="off" id="search-input">
       </section>
+
+<!-- Pesquisa / Tipo--->  
+      <section class="section-buttons">
+
       <div id="tipos">
         <select id="filter-type" class="filter-typeselect">
+
         <option value="" disabled="" selected=""> Tipos</option>
         <option value="water">Água</option>
         <option value="dragon">Dragão</option>
@@ -112,28 +116,36 @@
         <option value="poison">Venenoso</option>
         <option value="flying">Voador</option>
         </select>
+      
       </div>
-      <select id="order-search" class="order-search select">
+<!-- Pesquisa / Ordenado--->
+        <select id="order-search" class="order-search select">
         <option id="teste" value="" disabled="" selected=""> Ordenar por</option>
         <option value="order-az"> Crescente</option>
         <option value="order-za"> Decrescente</option>
       </select>
+      <section>
     </form>
-    </nav>
+    
+    </fieldset> 
 
+<!-- Porcentagem--->
+<section>
+  <div class="aggregate-calculation" id="aggregate-calculation"></div>
+    </section>
+
+<!-- Cards--->
     <nav>
-    <div class="container-pokedex ">
-      <h1 class="titulo-pokedex">Pokedex</h1>
+      <div class="container-pokedex ">
+      <h1 id="Pokedéx" class="titulo-pokedex">Pokedéx</h1>
       <!-- Lista de pokemons -->
       <div id="card" class="pokedex"></div>
-    </div>
+      </div>
     </nav>
   </main>
 
-
-
-  <!----Painel Social / Créditos--->
-  <div class="social-panel-container">
+<!----Painel Social / Créditos--->
+<footer class="social-panel-container">
     <div class="social-panel">
       <p>Criado com <i class="fa fa-heart"></i> por <br />
         <a target="_blank" href="https://github.com/SaraOhara">Sara Viana</a> e
@@ -176,8 +188,8 @@
         </li>
       </ul>
     </div>
-  </div>
-
+  </footer>
+  <footer>
   <button class="floating-btn">
     Entrar em Contato
   </button>
@@ -187,6 +199,7 @@
       href="https://selecao.laboratoria.la/?fbclid=IwAR2QWpZCLRBDaovVAwYHcQLnDJKn6cjBGBbWUDLgiQPmEalCANY10YLkH0I"
       target="_blank"> Laboratória</a>
   </div>
+</footer>
 
   <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
   <script src="main.js" type="module"></script>

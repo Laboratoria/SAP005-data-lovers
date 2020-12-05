@@ -1,14 +1,18 @@
-export const searchByName = (name, data) => {
-  return data.filter((select) => select.name.includes(name.toLowerCase()));
+export const searchByName = (name, pokemons) => {
+  return pokemons.filter((select) => select.name.includes(name.toLowerCase()));
 };
 
-export const selectType = (selectByType, data) => {
-  return data.filter((select) => select.type.includes(selectByType));
-};
+export const selectType = (selectByType, pokemons) =>
+    pokemons.filter((select) => select.type.includes(selectByType));
 
-export const orderBy = (orderBy, data) => {
+    export const calcType = (pokemons, selectByType) => {
+      const type = pokemons.filter(search => search.type.includes(selectByType));
+      return Math.round(((type.length * 100) / pokemons.length) * 100) / 100;
+  };
+  
+export const orderBy = (orderBy, pokemons) => {
   if (orderBy === 'order-az') {
-    data.sort(function(a, b) {
+    pokemons.sort(function(a, b) {
       var textA = a.name.toLowerCase();
       var textB = b.name.toLowerCase();
       return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
@@ -16,11 +20,11 @@ export const orderBy = (orderBy, data) => {
   }
 
   if (orderBy === 'order-za') {
-    data.sort(function(a, b) {
+    pokemons.sort(function(a, b) {
       var textA = a.name.toLowerCase();
       var textB = b.name.toLowerCase();
       return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
     })
   }
-  return data;
+  return pokemons;
 };
