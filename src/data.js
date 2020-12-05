@@ -19,7 +19,6 @@ const pokemon = {
     const listaPokemon = data.pokemon
     const quantPokemons = listaPokemon.length
     const porcPesquisado = (quantPesquisado * 100) / quantPokemons
-    console.log(porcPesquisado.toFixed(1))
     return (porcPesquisado.toFixed(1))
   },
   ordenarPokemon(pokemons, valorOpcao) {
@@ -32,8 +31,6 @@ const pokemon = {
         return b.name.localeCompare(a.name)
       })
     }
-    console.log(JSON.stringify(pokemons, null, 4));
-
     return pokemons
   }
 }
