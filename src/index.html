@@ -1,12 +1,33 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POKELOVERS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="elemento1">
+            <img src="img/pokémon_1.png" alt="elemento1" text-align: center;>
+        </div>
+        <div class="logo"></div>
+        <nav class="menu">
+            <input class="button-menu" id="search-name" placeholder="Buscar por nome">
+            <input class="button-menu" id="search-number" placeholder="Buscar por número">
+            <input class="button-menu" id="search-type" placeholder="Buscar por tipo">
+        </nav>
+    </header>
+    <main class="main-box" id="main-box">
+        <section>
+            <div class="cards" id="pokemons-cards"></div>
+        </section>
+    </main>
+
+    <script type="module" src="main.js"></script>
+
+</body>
+
 </html>

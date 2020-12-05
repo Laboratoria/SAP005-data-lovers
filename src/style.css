@@ -1,0 +1,37 @@
+* {
+    margin: auto;
+}
+
+html {
+    /* background-image: url(img/Plain-Black-Wallpaper.png); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.elemento1 {
+    height: 100px;
+    background: url(src\img\pokémon_1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0px 4%;
+    width: auto;
+    height: auto;
+}
+
+.button-menu::placeholder {
+    color: #ddda21;
+}
+
+.pokemonsDiv {
+    color: yellow;
+}
