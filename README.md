@@ -14,7 +14,7 @@
 
 ## 1. PRODUTO
 
-Desenvolvemos uma pagina web, para os fãs da série "Rick and Morty". Nela o usuário pode acessar e pesquisar maiores informações sobre os personagens.
+Desenvolvemos uma pagina web, para os fãs da série "Rick and Morty". Nela o usuário pode acessar e pesquisar maiores informações sobre os personagens...
 
 
 ## 2. História de usuário
@@ -30,7 +30,8 @@ Tendo como referência as necessidades dos usuários, elaboramos o seguinte épi
     Conhecer a aparência, nome, gênero, status, localização de todos os personagens da série. Poder filtrar, ordenar ou buscar os personagens presentes na série.
 
 
-![ ](./data/rickandmorty/images/usuarios.jpg)
+![ ](./src/data/rickandmorty/images/usuarios.jpg)
+
 
 ## 3. Interface
 
