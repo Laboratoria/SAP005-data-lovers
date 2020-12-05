@@ -245,6 +245,9 @@ aside#video {
         margin-top: 10em;
       }
     .about{
+        width:90%;
+        margin-left: 1em;
+        font-size: 30px;
         width:85vw;
         margin-top: 2em;
     }
