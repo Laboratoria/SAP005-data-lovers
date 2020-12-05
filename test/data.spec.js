@@ -143,7 +143,7 @@ describe('Selecting pokemon by order A-Z and Z-A', () => {
   });
 })*/
 
-// TESTE DO CALCULO
+// TESTE DO CALCULO (FAZER O CALCULO AINDA)
 
 describe('show the quantity by type', () => {
   it('should return a function', () => {
