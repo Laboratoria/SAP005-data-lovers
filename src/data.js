@@ -46,7 +46,7 @@ export function filterAllPokemonByType(pokemons) {
 }
 
 
-export function filterPokemonByRivalWeakness() {
+export function filterPokemonByRivalWeakness() { //função que tras a tabela
   const rivalWeakness = bringRivalPokemon(pokemons, namePokemonInput).weaknesses
   const pokemonByType = filterAllPokemonByType(pokemons)
   let bestPokemon = []
@@ -60,6 +60,8 @@ export function filterPokemonByRivalWeakness() {
   }
   return Array.from(new Set (bestPokemon));
 }
+
+
 
 export const orderBestPokemonByCP = () => {
   const crescentOrder = filterPokemonByRivalWeakness()

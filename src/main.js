@@ -1,4 +1,4 @@
-import { bringRivalPokemon, orderBestPokemonByCP, orderBestPokemonByName } from './data.js';
+import { bringRivalPokemon, orderBestPokemonByCP, orderBestPokemonByName, } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 const pokemons = data.pokemon;
@@ -42,12 +42,13 @@ function showTable(pokemonArray) {
 }
 
 // CLICAR PARA BUSCAR POKÉMON
+
 searchPokemon.addEventListener("click", event => {
   event.preventDefault();
   document.getElementById("flex-container").className = "";
   document.getElementById("ordering-options").classList.remove("hidden")
   document.getElementById("table-section").classList.remove("hidden")
-  // const userInput = namePokemonInput.value
+  //const userInput = namePokemonInput.value
   const bringPokemon = bringRivalPokemon(pokemons, namePokemonInput);
 
 
@@ -67,6 +68,7 @@ searchPokemon.addEventListener("click", event => {
 
 // EVENTOS DE ORDENAÇÃO DE CP
 // CRESCENTE
+
 orderByCPCresc.addEventListener("click", event => {
   event.preventDefault();
   pokemonTableRow.innerHTML = showTable(orderBestPokemonByCP().crescentOrder);

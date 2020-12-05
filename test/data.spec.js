@@ -1,11 +1,11 @@
-import { bringRivalPokemon, orderBestPokemonByCP, orderBestPokemonByName } from '../src/data.js';
+import { bringRivalPokemon, filterPokemonByRivalWeakness, orderBestPokemonByCP, orderBestPokemonByName, calculation } from '../src/data.js';
 
 const pokemonsTest = {
   pokemon: [{
     "name": "bulbasaur",
     "type": [
-      "Grass",
-      "Poison"
+      "grass",
+      "poison"
     ],
     "stats": {
       "max-cp": "1115"
@@ -50,8 +50,10 @@ const pokemonsTest = {
 ] 
 };
 
-describe('Search pokemon by name', () => {
-  it('should be a function', () => {
+// TESTE DA FUNÇÃO PELO NOME DO POKÉMON
+
+describe('search pokemon by name', () => {
+  it('should return a function', () => {
     expect(typeof bringRivalPokemon).toBe('function');
   });
   it('should return "bulbasaur" when search the pokemon by name "saur"', () => {
@@ -59,6 +61,39 @@ describe('Search pokemon by name', () => {
     expect(result[0].name).toEqual("bulbasaur")
   });
 });
+
+// TESTE DA FUNÇÃO DE FRAQUEZAS
+
+describe('filter pokemons by rival weakness', () => {
+  it('should return a function', () => {
+    expect(typeof filterPokemonByRivalWeakness).toBe('function');
+  });
+  it('should return "bulbasaur", "charmander" and "weedle" weaknesses', () => {
+    expect(filterPokemonByRivalWeakness(pokemonsTest)).toEqual([{
+      "weaknesses": [
+        "fire",
+        "flying",
+        "psychic",
+        "rock"
+      ]
+    }, {
+      "weaknesses": [
+        "water",
+        "ground",
+        "rock"
+      ]
+    }, {
+      "weaknesses": [
+        "fire",
+        "flying",
+        "psychic",
+        "rock"
+      ],
+    }]);
+  });  
+}); 
+
+// TESTE DA ORDENAÇÃO CRESCENTE E DECRESCENTE DE CP
 
 describe('Selecting pokemon by order growing and decreasing', () => {
   it('should return "bulbasaur", "charmander" and "weedle" by "crescentOrder" order', () => {
@@ -70,6 +105,8 @@ describe('Selecting pokemon by order growing and decreasing', () => {
     expect(result).toEqual(pokemonsTest.pokemon)
   });
 })
+
+// TESTE DA FUNÇÃO DE ORDENÇÃO DE A-Z E Z-A
 
 describe('Selecting pokemon by order A-Z and Z-A', () => {
   it('should be a function', () => {
@@ -85,12 +122,46 @@ describe('Selecting pokemon by order A-Z and Z-A', () => {
   });
 })
 
-/*describe('orderBestPokemonByCP é uma função?', () => {
-  it('is a function', () => {
-    expect(typeof orderBestPokemonByCP).toBe('function');
-  });
+// um segundo teste pelo nome caso o primeiro não dê certo
 
-  it('returns `types`', () => {
-    expect(orderBestPokemonByCP()).toBe('types');
+/*describe('Selecting pokemon by order A-Z and Z-A', () => {
+  it('should be a function', () => {
+    expect(typeof orderBestPokemonByName).toBe('function');
   });
-});*/
+  it('should return "bulbasaur", "charmander" and "weedle" by "A-Z" order', () => {
+    expect(orderBestPokemonByName(pokemonsTest)).toEqual([{
+      name: 'bulbasaur'
+    }, {
+      name: 'charmander'
+    }, {
+      name: 'weedle'
+    }]);
+  });  
+  it('should return "bulbasaur", "charmander" "weedle" by "Z-A" order', () => {
+    const result = orderBestPokemonByName(pokemonsTest.pokemon, "Z_A")
+    expect(result).toEqual(pokemonsTest.pokemon)
+  });
+})*/
+
+// TESTE DO CALCULO
+
+describe('show the quantity by type', () => {
+  it('should return a function', () => {
+    expect(typeof calculation).toBe('function');
+  });
+  it('shold return 2 for type "poison"', () => {
+    const result = calculation(pokemonsTest.pokemon, "poison", "type")
+    expect(result).toEqual([{
+      "type": [
+        "grass",
+        "poison"
+      ]
+    }, {
+      "type": [
+        "bug",
+        "poison"
+      ]
+    }, 
+  ]);
+  });
+});
