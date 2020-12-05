@@ -65,10 +65,47 @@ input, select, button{
 
 datalist{display: none;}
 
-#card1, datalist{
-  background-color: black;
-  color: white;
+section{
+  display:flex;
+  justify-content:center;
+  padding: 35px 120px;
+
 }
+
+.titulo{
+  font-family: arial;
+  font-size: 20px;
+  color: #03eaac;
+}
+
+.texto-card{
+  font-family: arial;
+  font-size: 18px;
+  padding: 2px 3px;
+  margin: 3px;
+}
+
+
+article{
+  background-color:#1919189e;
+  color: #fff2f2;
+  text-align: center;
+  border-style:groove;
+  font-family: arial;
+  font-size: 12px;
+  width: 35%;
+  height: 20%;
+  padding: 0;
+  margin: 0;
+  display:flex;
+  justify-content: center;
+  flex-direction:column;
+  box-shadow: 0 8px 16px 0 white, 0 6px 20px 0 #00ff1ef2;
+  cursor: pointer;
+
+}
+
+
 
 #sara, #juliane{display:inline;}
 

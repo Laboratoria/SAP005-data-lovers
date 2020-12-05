@@ -1,17 +1,26 @@
-const nomePersonagem = {
+const dadosRickemorty = {
   pesquisaPersonagem(data, personagem){
     const pegarDados = data.results
     const pegarNome = personagem.pegarDados.name
 
-    console.log(pegarNome)
+  },
 
+  pesquisaEpisodio(data, episodio){
+    const pegarDados = data.results
+    const pegarEpisodio = episodio.pegarDados.episode
 
-    // const dadosPersonagem = data.results
-    // console.log(dadosPersonagem)
-    // let busca = dadosPersonagem.find(p => p.name == personagem)
-    // console.log(busca)
-    // return (busca)
+  },
+
+  pesquisaEspecie(data, especie){
+    const pegarDados = data.results
+    const pegarEspecie = especie.pegarDados.specie
+
+  },
+
+  pesquisaDimensao(data, dimensao){
+    const pegarDados = data.results
+    const pegarDimensao = dimensao.pegarDados.location.name
 
   }
-}
-export default nomePersonagem
+};
+export default dadosRickemorty
