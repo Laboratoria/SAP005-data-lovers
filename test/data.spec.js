@@ -122,7 +122,6 @@ describe('Testar se é uma função', () => {
     expect(typeof sortOrder).toBe('function');
   });
 });
-
 describe('Testar filtro Genero', () => {
   it('retornar personagens femininos', () => {
     expect(filterGenderSelected(dataBaseTeste, "Female")).toMatchObject([{ "gender": "Female", "id": 3, "name": "Summer Smith", "species": "Human", "status": "Alive", "type": "" }, { "gender": "Female", "id": 26, "name": "Arthricia", "species": "Alien", "status": "Alive", "type": "Cat-Person" }, { "gender": "Female", "id": 381, "name": "Woman Rick", "species": "Alien", "status": "Alive", "type": "Chair" }, { "gender": "Female", "id": 249, "name": "Mrs. Sanchez", "species": "Human", "status": "unknown", "type": "" }]);
