@@ -1,28 +1,6 @@
 import data from '../data/pokemon/pokemon.js';
 import { getType, getName, getEvolution } from './data.js';
 
-// Printar Cards
-// function geraCards(arrayPokemons){
-//     let card = ""
-//     for (pokemon of arrayPokemons) {
-//       card += `
-//       <article class="divcard">
-//       <p class="texto-titulo">Nome: ${pokemon.name}</p>
-//       <img src="${pokemon.img}">
-//       <p class="texto-card">Tipo: ${pokemon.type}</p>
-//       </article>`
-//     }
-//     console.log(card)
-//     return card
-//   }
-//   const secaoCards = document.getElementById("principal")
-//   secaoCards.innerHTML = geraCards(pokemonsFiltrados)
-
-///??? socorro
-
-//Mostrar todos os pokémons//
-
-// document.getElementById("tipo").addEventListener('click', (e) => x(e.target.value))
 document.getElementById("nome").addEventListener('click', (e) => x(e.target.value))
 document.getElementById("evolucao").addEventListener('click', evolution)
 
@@ -31,7 +9,7 @@ function todosPokemons(anyArray) {
     pokemonsDiv.className = "pokemonsDiv";
     pokemonsDiv.innerHTML = `
      ${anyArray.map((pokemon) => `
-     <div class="cards">
+     <div class="cards" id="pokemons-cards">
          <img src="${pokemon["img"]}" class="pokemon-img" id="img-poke" />
          <p>${pokemon["name"]}</p>
          <p>${pokemon["num"]}</p>

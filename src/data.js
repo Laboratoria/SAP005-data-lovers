@@ -8,9 +8,6 @@ export function getType(sel, evento) {
     })
     return pokemonType
 }
-
-
-
 export function getName(pokemons, event) {
     let pokemon = pokemons.filter(element => {
         return element.name.includes(event);
@@ -33,5 +30,4 @@ export function getEvolution(pokemons, name) {
         pokemon_evolutions.push(pokemon_evolution);
     });
     return pokemon_evolutions;
-
 }

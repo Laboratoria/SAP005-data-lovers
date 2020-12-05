@@ -1,21 +1,35 @@
-body {
-    width: 95%;
-    max-width: 800px;
+* {
     margin: auto;
-    background: url(img/Plain-Black-Wallpaper.png) center;
-    line-height: 1.5;
-    color: rgb(0, 0, 0)
+}
+
+html {
+    /* background-image: url(img/Plain-Black-Wallpaper.png); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .elemento1 {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: 1305px;
-    width: 1080px;
-    margin: auto;
+    height: 100px;
+    background: url(src\img\pokémon_1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0px 4%;
+    width: auto;
+    height: auto;
+}
+
+.button-menu::placeholder {
+    color: #ddda21;
 }
 
 .pokemonsDiv {
