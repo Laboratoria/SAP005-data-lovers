@@ -14,7 +14,7 @@
 
 ## 1. PRODUTO
 
-Desenvolvemos uma pagina web, para os fãs da série "Rick and Morty". Nela o usuário pode acessar e pesquisar maiores informações sobre os personagens.
+Desenvolvemos uma pagina web, para os fãs da série "Rick and Morty". Nela o usuário pode acessar e pesquisar maiores informações sobre os personagens...
 
 
 ## 2. História de usuário
