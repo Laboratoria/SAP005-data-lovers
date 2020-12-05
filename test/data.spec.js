@@ -1,7 +1,20 @@
-import { example, anotherExample } from '../src/data.js';
+import pokemon from '../src/data.js';
 
+const 
 
-describe('example', () => {
+describe('Função pesquisaPokemon', () => {
+  it('É uma função', () => {
+    expect(typeof pokemon.pesquisaPokemon).toBe('function');
+  });
+  it('Da erro para entrada do tipo number', () =>{
+    expect(() => pokemon.pesquisaPokemon(5)).toThrow(TypeError);
+  });
+   it('Se escrever Pikachu deve retornar um array', () => { 
+     expect(typeof pokemon.pesquisaPokemon('string')).toBe('array')
+   }); 
+ 
+
+/*describe('example', () => {
   it('is a function', () => {
     expect(typeof example).toBe('function');
   });
@@ -19,5 +32,5 @@ describe('anotherExample', () => {
 
   it('returns `anotherExample`', () => {
     expect(anotherExample()).toBe('OMG');
-  });
+  });*/
 });
