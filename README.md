@@ -1,10 +1,6 @@
 # PokeInfos
 
-<<<<<<< HEAD
-Página web de visualização de dados sobre Pokémon criada por [Julia Terin] e [Sara Viana](https://github.com/SaraOhara) durante o Bootcamp Laboratória - SAP005.
-=======
 Página web de visualização de dados sobre Pokémon criada por [Julia Terin](https://github.com/JuliaTerin) e [Sara Viana](https://github.com/SaraOhara) durante o Bootcamp Laboratória - SAP005.
->>>>>>> 4bb79178896a33fcfbf1f90c70b04510cb4da190
 
 ## Índice
 
@@ -32,9 +28,10 @@ A pesquisa foi realizada em duas etapas, a primeira com a criação de um formul
 
 O formulário foi desenvolvido com perguntas que possibilitassem uma análise das necessidades de potenciais usuários, ou seja de pessoas que já consomem o comteúdo da franquia Pokémon. de persona e das necessidades destes usuários.
 
-![Imagem](img_readme/pesq-genero.png]      ![Imagem](img_readme/pesq-conheceu.png]
-
-![Imagem](img_readme/pesq-interessesite.png]      ![Imagem](img_readme/pesq-sabersobre.png]
+![Imagem](img_readme/pesq-genero.png]      
+![Imagem](img_readme/pesq-conheceu.png]
+![Imagem](img_readme/pesq-interessesite.png]      
+![Imagem](img_readme/pesq-sabersobre.png]
 
 Também houve uma conversa/entrevista com duas pessoas, usuárias do jogo Pokémon Go, a mais de três anos. Usamos a oportunidade para confirmar dados que já havíamos observado através da pesquisa de formulário, para assim então, entendermos se nossas premissas seriam validadas para a criação de uma persona. 
 
@@ -91,21 +88,12 @@ Neste projeto foram usados:
 
 ## 5. Funcionamento
 
-<<<<<<< HEAD
-O site permite que o usuário acesse informações sobre Pokémons das duas primeiras gerações, ou seja, Kanto e Jotoh. Ele apresenta uma barra de menu fixa, onde fica o logo do site, feito a partir do mesmo modelo de fonte do logo oficial da franquia, e que possibilita a navegação pela página ao clicar nas opções do menu. O background contém uma fan art nas cores principais do site, trazendo originalidade e maior harmonia ao layout.
-=======
 O site permite que o usuário acesse informações sobre Pokémons das duas primeiras gerações, ou seja, Kanto e Jotoh. Ele apresenta uma barra de menu fixa, onde fica o logo do site, feito a partir do mesmo modelo de fonte do logo oficial da franquia, e que possibilita a navegação pela página ao clicar nas opções do menu. O background contém uma *fan art* nas cores principais do site, trazendo originalidade e maior harmonia ao layout.
->>>>>>> 4bb79178896a33fcfbf1f90c70b04510cb4da190
 Há um carrossel de imagens com links adicionais sobre o universo Pokémon, logo a baixo o campo de pesquisa por nome, o campo de filtragem por "tipo de Pokémon" e a ordenação alfabética crescente e decrescente. já que é uma das informações mais requisitada por usuários durante a pesquisa. Eles estão ordenados naturalmente por ordem de evolução.
 
 
 
 ## Acesse o site aqui: [PokeInfos]()
-<<<<<<< HEAD
-
-### Desenvolvido por Julia Terin e Sara Viana através do Projeto da [Laboratoria](https://www.laboratoria.la/) 💛
-=======
 
 ### Desenvolvido por Julia Terin e Sara Viana através do Projeto da [Laboratoria](https://www.laboratoria.la/) 💛
 
->>>>>>> 4bb79178896a33fcfbf1f90c70b04510cb4da190
