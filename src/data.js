@@ -15,39 +15,39 @@ export const imprimeCards = function imprimeCards(rickandMorty){
   return card
 }
 
+//export const arrayEpisodios = (episodios) =>{ return episodios.map(obj => obj.episode)}
+
+//export const testeFilter = results.filter(genero => genero.gender ==="Male") 
+
+//export const ordemDimensoes = data.sort((a, z)=> a.origin.name.localeCompare(z.origin.name))
+
+//const ordenar = ordenarDimensoes.innerHTML = (data.results.sort((a, z)=> a.location.name.localeCompare(z.location.name)))
+
+//const filtro = rickandMorty.filter(obj => obj.name ==="Rick Sanchez"
+//console.log(rickandMorty.filter(obj => obj.name ==="Rick Sanchez"))  
+
 export const dadosRickemorty = {
   pesquisaPersonagem(data, personagem){
     const pegarDados = data.results
     const pegarNome = personagem.pegarDados.name
+
   },
+
   pesquisaEpisodio(data, episodio){
     const pegarDados = data.results
     const pegarEpisodio = episodio.pegarDados.episode
+
   },
+
   pesquisaEspecie(data, especie){
     const pegarDados = data.results
     const pegarEspecie = especie.pegarDados.specie
+
   },
+
   pesquisaDimensao(data, dimensao){
     const pegarDados = data.results
     const pegarDimensao = dimensao.pegarDados.location.name
+
   }
 };
-
-export const arrayEpisodios = (episodios) =>{ return episodios.map(obj => obj.episode)}
-
-//export const testeFilter = results.filter(genero => genero.gender ==="Male") 
-
-
-//export const ordemDimensoes = data.sort((a, z)=> a.origin.name.localeCompare(z.origin.name))
-
-//ordenarDimensoes.innerHTML = (data.results.sort((a, z)=> a.location.name.localeCompare(z.location.name)))
-
-//console.log(rickandMorty.filter(obj => obj.name ==="Rick Sanchez"))  
-//console.log(rickandMorty.map(obj => obj.name)) 
-
-//const filtro = rickandMorty.filter(obj => obj.name ==="Rick Sanchez"
-
-//export const nomes = rickandMorty.map(obj => obj.name)
-//export const ordemCrescente = rickandMorty.sort((primeiro, segundo)=> primeiro.name.localeCompare(segundo.name))
-// export const ordemDecrescente = rickandMorty.sort((primeiro, segundo)=> segundo.name.localeCompare(primeiro.name))

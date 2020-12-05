@@ -1,5 +1,5 @@
 import { imprimeCards } from '../src/data.js';
-import rickandmorty from '../src/data/rickandmorty/rickandmorty.js';
+//import rickandmorty from '../src/data/rickandmorty/rickandmorty.js';
 
 
 describe(imprimeCards, () => {
