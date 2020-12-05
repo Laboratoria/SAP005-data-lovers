@@ -1,33 +1,80 @@
-# Pokémon
+![](src\data\pokemon\IMG.PokemonGo.Readme.jpg)
 
-​Pokémon GO é uma experiência de jogo internacional que tem mais de um bilhão de
-downloads e foi nomeado "o melhor jogo para celular" pelo Game Developers Choice
-Awards e "a melhor aplicação do ano" pelo TechCrunch (extraído do Google Play).
-Os usuários do jogo se tornam "Mestres/ treinadores Pokémons" e podem:
+# Projeto Guia Ilustrado_Pokemon_GO-(Data_Lovers_Laboratória)
 
-- **Descobrir o mundo Pokémon:** explorar e descobrir novos Pokémon onde quer
-  que estejam.
-- **Pegar** diferentes Pokémon para completar seu Pokédex.
-- **Lutar** contra Pokémon de outros treinadores e conquiste ginásios.
-- **Competir** em batalhas épicas contra outros treinadores.
-- **Juntar-se** a outros treinadores para capturar Pokémon poderosos durante os
-  ataques.
+### Descrição 
 
-## Constatações
+A revista forbes publicou um estudo onde mostra que 90% dos dados que existem hoje foram gerados durante os últimos dois anos, sendo 2.5 milhões de terabytes de dados gerados por dia, uma infinidade.
+O fato é que esses dados em grandes quantidades, por si só, são de pouca utilidade.    Mas ao entende-los e processá-los, é possível tranforma-los em informações compreensíveis e relevantes, para os usuários de páginas Web, por exemplo.
+Nesse projeto, proposto pelo Bootcamp da @Laboratória, o desafio é escolher um tema, dentre três opções disponibilizadas, e assim tratarmos os dados de um API WEB, desenvolvendo uma página WEB, onde serão mostrados os dados que mais se adequam as necessidades do nosso usuário.
+_______________________________________________________________________________________________________________
 
-​Para entender melhor as necessidades complementares dos usuários do aplicativo,
-fizemos uma investigação rápida (pesquisa) e estas são algumas das descobertas.
+## *Índice
+=================
+<!--ts-->
+* [Definição do produto](##Definição-do-produto)
+* [U/X](##U/X)
+* [Protótipos](Protótipos)
+ * [Ferramentas](##Ferramentas)
+ * [U/I](##U/I)
+ 
+<!--te-->
 
-- Os Pokémons têm características únicas que determinam as decisões tomadas pelo
-  usuário (tipo, fraqueza, peso, multiplicador, etc.).
-- Um mestre Pokémon antes de sair para caçar os Pokémons tem que conhecer os 10
-  principais Pokémons que aparecem com mais frequência.
-- Os Pokémons têm diferentes tipos e fraquezas em combate. Estas características
-  são importantes na escolha do Pokémon mais adequado para sua batalha. Às
-  vezes, você tem que escolher aqueles com menos fraquezas e saber de que tipo
-  eles são. Portanto, é importante que um mestre de Pokémon seja capaz de
-  ordená-los por essas 2 características.
-- Os Pokémons evoluem e é importante para um mestre Pokémon saber quantas e
-  quais evoluções eles têm antes e depois.
-- Pokémon comem _candies_ e um mestre Pokémon precisa saber quantos _candies_ um
-  Pokémon precisa para evoluir.
+> Status do Projeto:  Concluído
+
+## Definição do produto
+
+O produto foi criteriosamente pensado para atender a usuários iniciantes do jogo Pokemon GO, onde os mesmos, poderão acessar as informações e buscar ter uma familiaridade com todos os Pokemons da região de Kanto, poderão vizualizar os cards com suas respectivas descrições e ainda saber um pouco mais sobre alguns tipos específicos de Pokemons (Lendário).
+
+## U/X
+
+ + Proto-persona
+
+   Criada com base em dados de jovens adultos, que trabalha, tem interação com a tecnologia e busca sobre suas dúvidas na internet, usa como meio de comunicação redes sociais populares;
+
+ + Protótipos 
+
+   <blockquote class="trello-card"><a href="https://trello.com/c/ZljeonX2/28-prot%C3%B3tipos-de-baixa-fidelidade1">Protótipos de baixa fidelidade_1</a></blockquote><script src="https://p.trellocdn.com/embed.min.js"></script>
+
+   <blockquote class="trello-card"><a href="https://trello.com/c/zt6RGMsq/15-prot%C3%B3tipos-de-baixa-fidelidade2">Protótipos de baixa fidelidade_2</a></blockquote><script src="https://p.trellocdn.com/embed.min.js"></script>
+
+    Protótipo de Média qualidade - 
+    ![](C:\Users\Lucila Xavier\Desktop\SAP005-data-lovers\src\data\pokemon\Protótipo de Média Qualidade_Data_Lovers_PokemonGO.jpg)
+
+## Ferramentas
+
+- Git
+- GitHub
+- GitHub Pages
+- Node.js
+- Jest
+
+## U/I
+
+- Testes de usabilidade:
+
+    |   |   |   |   |   |
+    |---|---|---|---|---|
+    |1. Problemas com a interface da página no uso em aparelhos mobile - Resolvido alterando a responsividade;   |   |   |   |   |
+    |2. Problemas na vizualização do layout - Resolvido centralizando as imgs.   |   |   |   |   |
+    |   |   |   |   |   |
+
+### Participantes: 
+|Nome|Github|Curso|
+| -------- | -------- | -------- |-------- | -------- |
+|Roberta Sapia|chaiana_hermes@yahoo.com.br|Bootcamp Laboratória|
+|Chaiana Hermes|chaiana_hermes@yahoo.com.br|Bootcamp Laboratória|
+
+
+
+
+
+    
+ 
+   
+    
+
+
+
+
+
