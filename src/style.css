@@ -199,6 +199,72 @@ header .menu a {
   max-width: 1100px;
   width: calc(100% - 40px);
   position: relative;
+margin: 0 auto 20px;
+}
+
+.pesquisa input {
+  padding: 0 18px;
+  line-height: 56px;
+  height: 56px;
+  font-size: 22px;
+  color: #444;
+  text-align: center;
+width: 100%;
+background: 0 0;
+  border: none;
+border-radius: 28px;
+background-color: #ffffff;
+outline-style: none;
+}
+
+.filter-typeselect, 
+.order-search {
+appearance: none; /* Remove estilo padrão do FireFox*/   
+padding: 0 18px;
+font-size: 22px;
+color: #444;
+background: url("img/seta.png") no-repeat #eeeeee;
+background-position: 218px center;  /*Posição da imagem do background*/  
+max-width: 250px;
+width: calc(100% - 40px);
+width: 250px;; /* Tamanho do select, maior que o tamanho da div "div-select" */   
+position: relative;
+height:56px; /* Altura do select, importante para que tenha a mesma altura em todo os navegadores */   
+border: none;
+border-radius: 28px;
+background-color: #ffffff;
+outline-style: none;
+text-align: center;
+}
+
+fieldset{
+border: none;
+}	
+
+.section-buttons {
+display: flex;
+justify-content: space-evenly;
+flex-wrap: nowrap;
+}
+
+.aggregate-calculation {
+text-align: center;
+color: #666;
+margin-top: 20px;
+padding: 0 18px;
+  line-height: 56px;
+  height: 56px;
+  font-size: 22px;
+  width: 100%;
+  background: 0 0;
+  border: none;
+  border-radius: 28px;
+  outline-style: none;
+}
+/*.pesquisa {
+  max-width: 1100px;
+  width: calc(100% - 40px);
+  position: relative;
   margin: 0 auto 20px;
 
 }
@@ -220,14 +286,15 @@ header .menu a {
 
 .filter-typeselect,
 .order-search {
-  appearance: none; /* Remove estilo padrão do FireFox*/   
+  appearance: none; 
 	padding: 0 18px;
 	font-size: 22px;
 	color: #444;
-  background-position: 218px center;
+  
+  background-position: 218px center; 
 	max-width: 250px;
 	width: calc(100% - 40px);
-	width: 250px;  
+	width: 250px;;   
 	position: relative;
 	height:56px; 
 	border: none;
@@ -247,6 +314,7 @@ fieldset{
 	justify-content: space-evenly;
 	flex-wrap: nowrap;
 }
+
 
 /*---------Card---------*/
 

@@ -9,51 +9,52 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
     rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="media.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="media.css" />
 
   <title>PokeInfos</title>
 </head>
 
 <body>
   <header>
-<!-- Menu--->
+    <!-- Menu--->
     <nav>
       <div class="container">
         <a href="#"><img class="logo-tipo" src="img/logo.png" alt="logo" /></a>
         <div id="menu" class="menu">
           <a href="#" class="ativo">Início</a>
-          <a href="#sobre">Sobre</a>
+          <a href="#Acessar">Acessar</a>
           <a href="#flecha-direita">Pesquisas</a>
           <a href="#Pokedéx">Pokedéx</a>
         </div>
     </nav>
   </header>
-<!-- Sub Menu--->
+  <!-- Sub Menu--->
   <main>
     <nav>
-      <div class="tela-principal" id="sobre">
+      <div class="tela-principal">
         <div class="container">
           <h2 class="titulo">PokeInfos </h2>
-          <p class="descricao">
+          <p id="Acessar" class="descricao">
             Bem vindo ao PokeInfo, sua central de informações Pokémon.
           </p>
         </div>
       </div>
     </nav>
-<!-- Carrossel--->
+
+    <!-- Carrossel--->
     <nav>
       <div class="pokemons-recomendados container">
         <div class="container-title-control">
-          <h3 class="titulo-carrossel" id="estatísticas">Estatísticas</h3>
+          <h3 id="Acessar" class="titulo-carrossel">Acessar</h3>
           <div class="indicadores">
           </div>
         </div>
-      
-        <div class="container-principal">
-          <button role="button" id="flecha-esquerda" class="flecha-esquerda"><i
-              class="fas fa-chevron-left"></i></button>
 
+        <div class="container-principal">
+          <button role="button" id="flecha-esquerda" class="flecha-esquerda">
+            <i class="fas fa-chevron-left"></i>
+          </button>
           <div class="container-carrossel">
             <div id="" class="carrossel">
               <div class="pokemon">
@@ -77,81 +78,92 @@
                 </a>
               </div>
             </div>
-            <button role="button" id="flecha-direita" class="flecha-direita"><i
-                class="fas fa-chevron-right"></i></button>
+            <button role="button" id="flecha-direita" class="flecha-direita">
+              <i class="fas fa-chevron-right"></i>
+            </button>
           </div>
         </div>
       </div>
-    </nav>
-  
-<!-- Pesquisa Nome --->
-    <fieldset id="Pesquisas" class="menu font-std">
-      <form action="" id="search-form" class="search-form font-std">
 
-        <section class="pesquisa">
-        <input type="search" placeholder="Buscar Pokémon pelo nome" value="" autocomplete="off" id="search-input">
+      <!-- Pesquisa Nome --->
+      <fieldset id="Pesquisas" class="menu font-std">
+        <form action="" id="search-form" class="search-form font-std">
+
+          <section class="pesquisa">
+            <input class="pesquisa" type="search" placeholder="Buscar um Pokémon, p.ex. Drowzee" value=""
+              autocomplete="off" id="search-input">
+          </section>
+
+          <!-- Pesquisa / Tipo--->
+          <section class="section-buttons">
+
+            <div id="tipos">
+              <select id="filter-type" class="filter-typeselect">
+
+                <option value="" disabled="" selected=""> Tipos</option>
+                <option value="water">Água</option>
+				        <option value="dragon">Dragão</option>
+                <option value="electric">Elétrico</option>
+                <option value="fairy">Fada</option>
+                <option value="ghost">Fantasma</option>
+                <option value="fire">Fogo</option>
+                <option value="ice">Gelo</option>
+                <option value="grass">Grama</option>
+                <option value="bug">Inseto</option>
+                <option value="fighting">Lutador</option>
+                <option value="normal">Normal</option>
+                <option value="rock">Pedra</option>
+                <option value="psychic">Psíquico</option>
+                <option value="ground">Terrestre</option>
+                <option value="poison">Venenoso</option>
+                <option value="flying">Voador</option>
+
+              </select>
+            </div>
+
+            <!-- Pesquisa / Ordenado--->
+            <select id="order-search" class="order-search">
+
+              <option id="teste" value="" disabled="" selected=""> Ordenar por</option>
+              <option value="order-az">Crescente</option>
+              <option value="order-za">Decrescente</option>
+
+            </select>
+
+        </form>
+
+      </fieldset>
+
+      <!-- Porcentagem--->
+      <section>
+
+        <div class="aggregate-calculation" id="aggregate-calculation">
+          <!-- Calculo--->
+        </div>
+
       </section>
 
-<!-- Pesquisa / Tipo--->  
-      <section class="section-buttons">
+      <!-- Cards--->
+      <nav>
 
-      <div id="tipos">
-        <select id="filter-type" class="filter-typeselect">
+        <div class="container-pokedex ">
+          <h1 id="Pokedéx" class="titulo-pokedex">Pokedéx</h1>
+          <!-- Lista de pokemons -->
+          <div id="card" class="pokedex"></div>
+        </div>
 
-        <option value="" disabled="" selected=""> Tipos</option>
-        <option value="water">Água</option>
-        <option value="dragon">Dragão</option>
-        <option value="electric">Elétrico</option>
-        <option value="fairy">Fada</option>
-        <option value="ghost">Fantasma</option>
-        <option value="fire">Fogo</option>
-        <option value="ice">Gelo</option>
-        <option value="grass">Grama</option>
-        <option value="bug">Inseto</option>
-        <option value="fighting">Lutador</option>
-        <option value="normal">Normal</option>
-        <option value="rock">Pedra</option>
-        <option value="psychic">Psíquico</option>
-        <option value="ground">Terrestre</option>
-        <option value="poison">Venenoso</option>
-        <option value="flying">Voador</option>
-        </select>
-      
-      </div>
-<!-- Pesquisa / Ordenado--->
-        <select id="order-search" class="order-search select">
-        <option id="teste" value="" disabled="" selected=""> Ordenar por</option>
-        <option value="order-az"> Crescente</option>
-        <option value="order-za"> Decrescente</option>
-      </select>
-      <section>
-    </form>
-    
-    </fieldset> 
-
-<!-- Porcentagem--->
-<section>
-  <div class="aggregate-calculation" id="aggregate-calculation"></div>
-    </section>
-
-<!-- Cards--->
-    <nav>
-      <div class="container-pokedex ">
-      <h1 id="Pokedéx" class="titulo-pokedex">Pokedéx</h1>
-      <!-- Lista de pokemons -->
-      <div id="card" class="pokedex"></div>
-      </div>
-    </nav>
+      </nav>
   </main>
 
-<!----Painel Social / Créditos--->
-<footer class="social-panel-container">
+  <!----Painel Social / Créditos--->
+  <footer class="social-panel-container">
+
     <div class="social-panel">
       <p>Criado com <i class="fa fa-heart"></i> por <br />
         <a target="_blank" href="https://github.com/SaraOhara">Sara Viana</a> e
         <a target="_blank" href="https://github.com/JuliaTerin">Julia Terin</a></p>
       <button class="close-btn"><i class="fas fa-times"></i></button>
-      <h4>Entre em Contato Sara </h4>
+      <h4>Entre em Contato Sara</h4>
       <ul>
         <li>
           <a href="https://www.linkedin.com/in/saraohara" target="_blank">
@@ -189,20 +201,24 @@
       </ul>
     </div>
   </footer>
-  <footer>
-  <button class="floating-btn">
-    Entrar em Contato
-  </button>
 
-  <div class="floating-text">
-    Projeto<a
-      href="https://selecao.laboratoria.la/?fbclid=IwAR2QWpZCLRBDaovVAwYHcQLnDJKn6cjBGBbWUDLgiQPmEalCANY10YLkH0I"
-      target="_blank"> Laboratória</a>
-  </div>
-</footer>
+  <footer>
+
+    <button class="floating-btn">
+      Entrar em Contato
+    </button>
+    <div class="floating-text">
+      Projeto<a
+        href="https://selecao.laboratoria.la/?fbclid=IwAR2QWpZCLRBDaovVAwYHcQLnDJKn6cjBGBbWUDLgiQPmEalCANY10YLkH0I"
+        target="_blank"> Laboratória</a>
+    </div>
+
+  </footer>
 
   <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
   <script src="main.js" type="module"></script>
   <script src="carrossel.js" type="module"></script>
-  </body>
+
+</body>
+
 </html>
