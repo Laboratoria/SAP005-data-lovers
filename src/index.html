@@ -1,12 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt_BR">
+
   <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="./data/rickandmorty/images/Goodstuff-No-Nonsense-Free-Space-Rick.ico" />
+    <title>Ricky and Morty</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="#" />
+
   </head>
+
   <body>
-    <div id="root"></div>
+      <div id= "backgroundPage">
+       <input type="checkbox" id="btn-menu">
+       <label for="btn-menu">&#9776; </label>
+      
+
+      <nav class="links">
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link href="https://fonts.googleapis.com/css2?family=Lacquer&display=swap"rel="stylesheet"/>
+      <label for="rd_rickAndMorty">Inicio</label>
+      <label for="rd_cards">Cards</label>
+      <label for="rd_curiosidades">Curiosidades</label>
+      <label for="rd_desenvolvedoras">Desenvolvedoras</label>
+    </nav>
+
+      
+    <div class="scroll">
+      <input type="radio" name="grupo" id="rd_rickAndMorty" checked="true" />
+      <input type="radio" name="grupo" id="rd_cards" />
+      <input type="radio" name="grupo" id="rd_curiosidades" />
+      <input type="radio" name="grupo" id="rd_desenvolvedoras" />
+
+      <section class="sections">
+
+        <section class="bloco" id="rickAndMorty">
+          <div class="img-logo">
+            <img class="logos"src="./data/rickandmorty/images/logo trans.png"/>
+          </div>
+      
+        </section>
+
+        <section class="bloco" id="cards">
+          <main>
+            <form >
+              
+              <input id="texto" type="search" placeholder="Pesquise seu personagem favorito"/>
+              <button id="btn" type="submit">
+                <img src="./data/rickandmorty/images/search-512.webp" width="23px" padding="23px" />
+              </button>
+              <button id="reset" type="Reset"><b>Reset</b></button>
+              <button id="oBtn" type="submit">A-Z</button>
+              <button id="aBtn" type="submit">Z-A</button>
+              
+              <div class="tooltip">+ Infos!
+                <span class="tooltiptext">click no card e segure</span>
+              </div>
+            </form>
+            <br/>           
+        
+              <link rel="preconnect" href="https://fonts.gstatic.com" />
+              <link href="https://fonts.googleapis.com/css2?family=Lacquer&display=swap" rel="stylesheet" />
+            <div class="container">
+              <article class="card">
+                <div class="flip">
+                  <section class="front-card">
+                    <div class="frontCard" id="frontCard"></div>
+                  </section>
+                  <section class="back-card">
+                    <div class="backCard" id="backCard"></div>
+                  </section>
+                </div>
+              </article>
+            </div>
+         
+          </main>
+        </section>
+
+        <section class="bloco" id="curiosidades"></section>
+
+        <section class="bloco" id="desenvolvedoras"></section>
+    </div>
+
+    <footer></footer>
     <script src="main.js" type="module"></script>
+  </header>
+</div>
   </body>
 </html>
