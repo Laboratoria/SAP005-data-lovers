@@ -28,10 +28,7 @@ A pesquisa foi realizada em duas etapas, a primeira com a criação de um formul
 
 O formulário foi desenvolvido com perguntas que possibilitassem uma análise das necessidades de potenciais usuários, ou seja de pessoas que já consomem o comteúdo da franquia Pokémon. de persona e das necessidades destes usuários.
 
-![Imagem](https://github.com/JuliaTerin/PokeInfos-SAP005-data-lovers/blob/master/img_readme/pesq-genero.png?raw=true)
-![Imagem](https://github.com/JuliaTerin/PokeInfos-SAP005-data-lovers/blob/master/img_readme/pesq-conheceu.png?raw=true)  
-![Imagem](https://github.com/JuliaTerin/PokeInfos-SAP005-data-lovers/blob/master/img_readme/pesq-interessesite.png?raw=true)  
-![Imagem](https://github.com/JuliaTerin/PokeInfos-SAP005-data-lovers/blob/master/img_readme/pesq-sabersobre.png?raw=true)  
+![Imagem](https://github.com/JuliaTerin/PokeInfos-SAP005-data-lovers/blob/master/img_readme/pesq-genero.png?raw=true)![Imagem](https://github.com/JuliaTerin/PokeInfos-SAP005-data-lovers/blob/master/img_readme/pesq-conheceu.png?raw=true)![Imagem](https://github.com/JuliaTerin/PokeInfos-SAP005-data-lovers/blob/master/img_readme/pesq-interessesite.png?raw=true)![Imagem](https://github.com/JuliaTerin/PokeInfos-SAP005-data-lovers/blob/master/img_readme/pesq-sabersobre.png?raw=true)  
 
 Também houve uma conversa/entrevista com duas pessoas, usuárias do jogo Pokémon Go, a mais de três anos. Usamos a oportunidade para confirmar dados que já havíamos observado através da pesquisa de formulário, para assim então, entendermos se nossas premissas seriam validadas para a criação de uma persona. 
 
