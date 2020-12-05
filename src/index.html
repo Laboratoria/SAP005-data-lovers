@@ -5,16 +5,45 @@
     <title>RICK AND MORTY</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <h1> Seja bem vindx a seu guia da série Rick and Morty</h1>
-    <p>Se aventure grande viajante</p>
-    <section class="conjunto">
-      <main>
 
-      </main>
-    </section>
+  <body>
     
-    <div id="root"></div>
+    <head>
+      <p id="root">RICK E MORTY</p>
+      <p id="subtitle"><strong>TUDO QUE VOCÊ PRECISA SABER ESTÁ AQUI!</strong></p>
+      <p id="nav">FILTRAR PERSONAGENS POR:</p>
+    </head>
+
+    <nav>
+      <select id="personagens" onclick placeholder="PERSONAGENS"></select>
+       <!-- <button id="botaoPersonagens">PERSONAGENS</button> -->
+
+      <select id="episodios" placeholder="EPISÓDIOS"></select>
+      <!-- <button id="botaoEpisodios">EPISÓDIOS</button> -->
+
+      <select id="especies" placeholder="ESPÉCIES"></select>
+      <!-- <button id="botaoEspecies">ESPÉCIES</button> -->
+
+      <select id="dimensoes" placeholder="DIMENSÕES"></select>
+      <!-- <button id="botaoDimensoes">DIMENSÕES</button> -->
+    </nav>
+
+    <section id="cards"></section>
+
+    <section id="cardEscolhido"></section>
+
+
+    <footer class="footer">
+      <div id="sara"> <a href="https://github.com/silvassara">
+        SARA SILVA
+      </div>
+      E
+      <div id="juliane"> <a href="https://github.com/Juliane-C">
+        JULIANE CRISTINA
+      </div>
+    </footer>
+
     <script src="main.js" type="module"></script>
+
   </body>
 </html>
