@@ -1,91 +1,3 @@
-* {
-    padding:0;
-    margin:0;
-    vertical-align:baseline;
-    list-style:none;
-}
-
-body{
-    background-image: url(img/floresta.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    position: inherit;
-    overflow: auto;
-    font-family: arial, helvetica, sans-serif;
-    /*! font-size: 20px; */
-}
-
-.container {
-    color: black;
-    padding: 2%;
-}
-
-.navMenu {
-    background-color: rgba(203, 228, 231, 0.616);
-    border-radius: 9px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-} 
-
-.buttonMenu{
-    margin:auto;
-    width: 50%;
-}
-
-.buttonMenu ul {
-    display: flex;
-    list-style: none;
-}
-
-.buttonMenu li {
-    margin-right: 3.5%;
-    padding-right: 1.5%;
-    font-size: 20px;
-    width: auto;
-    font-weight: bold;
-    border-right:yellow solid 2px;
-}
-
-a{ text-decoration:none;
-    color: black;
-}
-.imagemJohto{
-    width: 500px;
-    height: 550px;
-}
-
-.imagemKanto{
-    width: 500px;
-    height: 550px;    
-}
-
-.name-app{
-    font-family: inherit 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-shadow: 0.1em 0.1em 0.2em yellow;
-    font-size: 25px;
-    margin-left: 3%;
-}
-.img-poke-lovers{
-    background-image: transparent;
-    width: 70px;
-    height: 70px;
-    border-radius: 100px;
-}
-
-.menu {
-    list-style: none;
-    background-color: rgba(203, 228, 231, 0.616);
-    padding: 13px;
-    display:flex;
-    justify-content: space-around;
-    width: 70%;
-    margin:auto;
-    align-items: center;
-    border-radius: 9px;
-}
-
 .inputPokemon {
     display: flex;
     align-items: center;
@@ -105,26 +17,13 @@ a{ text-decoration:none;
     width: 20px;
 }
 
-.flip-card {
+.card-pokemon {
     background-color: transparent;
     border: transparent;
     width: 200px;
     height: 280px;
     perspective: 1000px;
     display: inline-block;
-}
-
-.flip-card:hover .card {
-    transform: rotateY(180deg);
-}
-
-.card {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
 }
 
 .flip-card-front,
@@ -137,25 +36,10 @@ a{ text-decoration:none;
     backface-visibility: hidden;
 }
 
-.flip-card-front {
-    background-color: black;
-    color: yellow;
-}
-
-.flip-card-back {
-    background-color: yellow;
-    color: black;
-    transform: rotateY(180deg);
-}
-
 #container-card-poke {
     text-align: center;
     margin: 2% 3%;
     opacity: 0, 8;
-}
-
-li {
-    list-style-type: none;
 }
 
 .card-info-poke{

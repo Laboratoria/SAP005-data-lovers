@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Pokémon</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    
-    <body>
+<head>
+    <title>Pokémon</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
     <header id="backgroundMenu" class="navMenu">
-        <img class="img-poke-lovers" src="IMG/logo.jpeg">
+        <img class="img-poke-lovers" src="img/logo.jpeg">
         <h1 class="name-app">P.O.K.E L.O.V.E.R.S</h1>
         <nav class = "buttonMenu">
             <ul>
-            <li><a href="index.html"> Home </a></li>
-            <li><a href="resumo.html">Resumo do jogo</a></li>
-            <li><a href="mapa.html">Veja o mapa</a></li>
-            <li><a href="calculo.html">Evolução</a></li>
+                <li><a href="index.html"> Home </a></li>
+                <li><a href="resumo.html">Resumo do jogo</a></li>
+                <li><a href="mapa.html">Veja o mapa</a></li>
+                <li><a href="calculo.html">Calculo Pokédex</a></li>
             </ul>
         </nav>
     </header>
-            <div class="flip-car">
-                <div class="flip-card2">
-                    <div class="flip-card-fron">
-                        <p>Mapa Kanto</p>
-                    </div>
-                    <div class="flip-card-bac">
-                        <img class= "imagemKanto" src="IMG/kantoMap.jpg" alt="Avatar" > 
-                    </div>
+    
+    <main class="container-maps">
+        <div class="flip-carr mapaCard">
+            <div class="flip-card2">
+                <div class="flip-card-front">
+                    <p class="resumo-texto">Mapa Kanto</p>
                 </div>
-                <div class="flip-card2">
-                    <div class="flip-card-fron">
-                        <p>Mapa Johto</p>
-                    </div>
-                    <div class="flip-card-bac">
-                        <img class = "imagemJohto" src="IMG/jhotoMap.png" alt="Avatar">
-                        
-                    </div>
+                <div class="flip-card-back">
+                    <img class= "imagemKanto" src="img/kantoMap.jpg" alt="Avatar" > 
                 </div>
             </div>
         </div>
-        <script src="main.js" type="module"></script>
-    </body>
+        <div class="flip-carr mapaCard">
+            <div class="flip-card2 mapaCard">
+                <div class="flip-card-front">
+                    <p class="resumo-texto">Mapa Johto</p>
+                </div>
+                <div class="flip-card-back">
+                    <img class = "imagemJohto" src="img/jhotoMap.png" alt="Avatar">
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/main.js" type="module"></script>
+</body>
 </html>
