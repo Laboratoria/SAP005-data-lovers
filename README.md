@@ -1,6 +1,10 @@
 # PokeInfos
 
+<<<<<<< HEAD
 Página web de visualização de dados sobre Pokémon criada por [Julia Terin] e [Sara Viana](https://github.com/SaraOhara) durante o Bootcamp Laboratória - SAP005.
+=======
+Página web de visualização de dados sobre Pokémon criada por [Julia Terin](https://github.com/JuliaTerin) e [Sara Viana](https://github.com/SaraOhara) durante o Bootcamp Laboratória - SAP005.
+>>>>>>> 4bb79178896a33fcfbf1f90c70b04510cb4da190
 
 ## Índice
 
@@ -87,11 +91,21 @@ Neste projeto foram usados:
 
 ## 5. Funcionamento
 
+<<<<<<< HEAD
 O site permite que o usuário acesse informações sobre Pokémons das duas primeiras gerações, ou seja, Kanto e Jotoh. Ele apresenta uma barra de menu fixa, onde fica o logo do site, feito a partir do mesmo modelo de fonte do logo oficial da franquia, e que possibilita a navegação pela página ao clicar nas opções do menu. O background contém uma fan art nas cores principais do site, trazendo originalidade e maior harmonia ao layout.
+=======
+O site permite que o usuário acesse informações sobre Pokémons das duas primeiras gerações, ou seja, Kanto e Jotoh. Ele apresenta uma barra de menu fixa, onde fica o logo do site, feito a partir do mesmo modelo de fonte do logo oficial da franquia, e que possibilita a navegação pela página ao clicar nas opções do menu. O background contém uma *fan art* nas cores principais do site, trazendo originalidade e maior harmonia ao layout.
+>>>>>>> 4bb79178896a33fcfbf1f90c70b04510cb4da190
 Há um carrossel de imagens com links adicionais sobre o universo Pokémon, logo a baixo o campo de pesquisa por nome, o campo de filtragem por "tipo de Pokémon" e a ordenação alfabética crescente e decrescente. já que é uma das informações mais requisitada por usuários durante a pesquisa. Eles estão ordenados naturalmente por ordem de evolução.
 
 
 
 ## Acesse o site aqui: [PokeInfos]()
+<<<<<<< HEAD
 
 ### Desenvolvido por Julia Terin e Sara Viana através do Projeto da [Laboratoria](https://www.laboratoria.la/) 💛
+=======
+
+### Desenvolvido por Julia Terin e Sara Viana através do Projeto da [Laboratoria](https://www.laboratoria.la/) 💛
+
+>>>>>>> 4bb79178896a33fcfbf1f90c70b04510cb4da190
