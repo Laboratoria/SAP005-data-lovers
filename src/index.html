@@ -1,12 +1,67 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
+    <title>Pokémon</title>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <header id="backgroundMenu" class="navMenu">
+        <img class="img-poke-lovers" src="img/logo.jpeg">
+        <h1 class="name-app">P.O.K.E L.O.V.E.R.S</h1>
+        <nav class = "buttonMenu">
+            <ul>
+                <li><a href="index.html"> Home </a></li>
+                <li><a href="resumo.html">Resumo do jogo</a></li>
+                <li><a href="mapa.html">Veja o mapa</a></li>
+                <li><a href="calculo.html">Calculo Pokédex</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="container">
+        <nav class="main-options">
+            <div class="menu">
+                <select name="order-alphabet" class="order-alphabet" id="order-alphabet">
+                    <option selected>Ordenar</option>
+                    <option class = "order-alphabet" value="az">A - Z</option>
+                    <option class = "order-alphabet" value="za">Z - A</option>
+                </select>
+                
+                <select name="tipos" id="allType" class="allTypes">
+                    <option selected class="typePokemons" value="Todos">Tipos</option>
+                    <option class="typePokemons" value="Grass">Grass</option>
+                    <option class="typePokemons" value="Poison">Poison</option>
+                    <option class="typePokemons" value="Fire">Fire</option>
+                    <option class="typePokemons" value="Ice">Ice</option>
+                    <option class="typePokemons" value="Flying">Flying</option>
+                    <option class="typePokemons" value="Psychic">Psychic</option>
+                    <option class="typePokemons" value="Electric">Electric</option>
+                    <option class="typePokemons" value="Water">Water</option>
+                    <option class="typePokemons" value="Ground">Ground</option>
+                    <option class="typePokemons" value="Rock">Rock</option>
+                    <option class="typePokemons" value="Bug">Bug</option>
+                    <option class="typePokemons" value="Normal">Normal</option>
+                </select>
+                
+                <select name="raridade" id="allRarity" class="allRaritys">
+                    <option selected class="typeRarity" value="Todos">Raridade</option>
+                    <option class="typeRarity" value="Normal">Normal</option>
+                    <option class="typeRarity" value="Mythic">Mythic</option>
+                    <option class="typeRarity" value="Legendary">Legendary</option>
+                </select>
+                
+                <div class="inputPokemon">
+                    <input type="text" id="input"  placeholder="Buscar..." />
+                    <button class="buttonPoke" id="buttonPoke"><img class = "imgPoke" src="img/pok.png"></button>
+                </div>
+            </div>
+        </nav>
+        <div id="container-card-poke">
+        </div>  
+    </main>
+    <script src="js/main.js" type="module"></script>
+</body>
 </html>
