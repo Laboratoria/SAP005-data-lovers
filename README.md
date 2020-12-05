@@ -10,7 +10,7 @@ https://julianaads.github.io/SAP005-data-lovers/src/
 * [2. Pesquisa](#2-rick-and-morty)
 * [3. Usuário](#3-usuario)
 * [4. Interface do Usuário](#4-interface-do-usuario)
-* [5. Responsividade](#5-responsividade)
+* [5. Desenvolvimento do Projeto](#5-desenvolvimento-do-Projeto)
 * [6. O Projeto](#6-hacker-edition)
 * [7. Pontos de Melhoria](#7-considerações-técnicas)
 
@@ -101,17 +101,17 @@ Resultado do layout finalizado:
 
 Home
 
-![](/src/img/homeReadme.png)
+![](/src/img/homedesktop.png)
 
 
 
 Personagens
 
-![](/src/img/personagensReadme.png)
+![](/src/img/personadesk.png)
 
 
 
-### 5. Responsividade
+### Responsividade
 
 Sabendo que celular é o principal meio de acesso à internet deixamos nossa aplicação responsiva.
 
@@ -129,12 +129,12 @@ Personagens
 
 
 
-## :rocket: Desenvolvimento do Projeto
+## :rocket: 5. Desenvolvimento do Projeto
 
 Utilizamos a ferramenta Trello para organizar todas as atividades que deveriam ser entregues até a data final do projeto, utilizamos a metodologia ágile entregando partes funcionais do projeto em cada uma das três sprints que tivemos.
 Abaixo nosso quadro de organização:
 
-![](/src/img/trelo.jpeg)
+![](/src/img/trello.jpeg)
 
 ### Aprendizado
 
