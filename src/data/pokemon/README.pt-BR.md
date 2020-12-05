@@ -65,16 +65,5 @@ O produto foi criteriosamente pensado para atender a usuários iniciantes do jog
 |Roberta Vieira Sapia|Github.com/Rosapia|Bootcamp Laboratória|
 |Lucila Xavier|Github.com/Lucilaxavier|Bootcamp Laboratória|
 
-
-
-
-
-    
+*
  
-   
-    
-
-
-
-
-

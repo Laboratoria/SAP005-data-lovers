@@ -3,8 +3,10 @@ import pokemon from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 
-
 const lendarios = pokemon.filtrarLendarios(data)
+const calculo = pokemon.calculoAgregado(data,lendarios)
+document.getElementById("calculo").innerHTML = calculo
+
 function geraCards(arrayPokemons) {
   let card = ""
   for (let pokemon of arrayPokemons) {
@@ -31,5 +33,6 @@ function exibeCards(arrayPokemon) {
   cardsPokemon.innerHTML = ""
   cardsPokemon.innerHTML = geraCards(arrayPokemon)
 }
+//calculoAgregado(calculo)
 exibeCards(lendarios)
 

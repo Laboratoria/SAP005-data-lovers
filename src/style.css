@@ -29,25 +29,30 @@ li:hover {
   cursor: pointer;
 }
 
-@media (max-width:960px) {
-  body {
-    display: flex;
-  }
-}
 
 nav {
   width: 100wh;
   font-weight: bold;
+}
+label {
+  text-align: center;
+}
+
+footer {
+  background-color:rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
 
 /*Classes*/
 
 .menu {
   list-style: none;
+  text-align: center;
+  
 }
 
-.imagem-topo {
-  width: 100%;
+.imagem-principal {
+  width: 100vw;
 }
 
 .descricao {
@@ -56,6 +61,10 @@ nav {
   font-weight: bold;
   background-color: rgb(74, 179, 71);
   color: #fff;
+}
+
+.titulo{
+  font-weight: bold;
 }
 
 .lendarios {
@@ -81,7 +90,6 @@ nav {
 .divcardlendario {
   text-align: center;
   padding: 10px;
-  width: 30%;
 }
 
 /*IDs*/
@@ -95,4 +103,13 @@ nav {
 #tabresult-lendario {
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width:360px) {
+  body {
+    display: inline-block;
+  }
+  .divcard {
+    width: 100%
+  }
 }

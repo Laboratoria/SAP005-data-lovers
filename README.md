@@ -1,4 +1,4 @@
- ![](src\data\pokemon\IMG.PokemonGo.Readme.jpg)
+![](src\data\pokemon\IMG.PokemonGo.Readme.jpg)
 
 # Projeto Guia Ilustrado_Pokemon_GO-(Data_Lovers_Laboratória)
 
@@ -66,4 +66,4 @@ O produto foi criteriosamente pensado para atender a usuários iniciantes do jog
 |Lucila Xavier|Github.com/Lucilaxavier|Bootcamp Laboratória|
 
 *
- 
+
