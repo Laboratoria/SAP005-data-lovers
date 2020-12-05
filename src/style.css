@@ -595,7 +595,7 @@ a {
 
   table {
     border-collapse: collapse;
-    width: 100vw;
+    max-width: 100vw;
   }
 
   thead {
