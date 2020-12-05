@@ -2,6 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700;800&display=swap');
 
+
+/* REFERÊNCIAS PARA MEDIA QUERIES */
+/*
+Mobile menor -- max-width: 270px
+Mobile maior -- min-width: 410px
+Tablet retrato -- min-width: 640px
+Tablet paisagem -- min-width: 900px
+Desktop -- min-width: 1200px
+*/
+
+
 /* CSS RESET */
 * {
   margin: 0;
@@ -17,6 +28,12 @@ html {
 @media (min-width: 410px) {
   html {
     font-size: 17px;
+  }
+}
+
+@media (min-width: 640px) {
+  html {
+    font-size: 18.5px;
   }
 }
 
@@ -56,13 +73,35 @@ a {
   background-color: #073673;
 }
 
+@media (min-width: 410px) {
+  .special-title {
+    text-shadow: rgba(255, 255, 255, 0.5) 0 0 2px, rgba(0, 0, 0, 0.7) 2px 2px 1px;
+  }
+
+  .btn-style {
+    box-shadow: rgba(255, 255, 255, 0.5) 0 0 2px, rgba(0, 0, 0, 0.7) 2px 2px 1px;
+  }
+}
+
+@media (min-width: 640px) {
+  .special-title {
+    font-size: 1.3rem;
+  }
+
+  .btn-style {
+    font-size: 1.2rem;
+    padding: 0.9rem 1.8rem;
+    border: #fff solid 3px;
+  }
+}
+
 
 /* LANDING-PAGE */
 #landing-page {
   background-image: url("img/battle.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   width: 100vw;
   height: 100vh;
 }
@@ -88,6 +127,13 @@ a {
   text-shadow: rgba(255, 255, 255, 0.1) -1px -1px 1px, rgba(0, 0, 0, 0.5) 1px 1px 1px;
 }
 
+@media (min-width: 410px) {
+  .title {
+    left: 1.5rem;
+    text-shadow: rgba(255, 255, 255, 0.5) 0 0 2px, rgba(0, 0, 0, 0.7) 2px 2px 2px;
+  }
+}
+
 .parallelogram {
   padding: 1.2rem 1rem;
   position: absolute;
@@ -100,9 +146,29 @@ a {
   z-index: 1;
 }
 
+.introduction-text {
+  margin-bottom: 1rem;
+  margin-right: 0;
+  text-align: right;
+  font-style: normal;
+}
+
+.break-line {
+  display: none;
+}
+
+#call-to-action-btn {
+  transform: skew(0, 14deg);
+  margin: 0.7rem 0;
+}
+
 @media (max-width: 270px) {
   .parallelogram {
     bottom: -2.5rem;
+  }
+
+  .introduction-text {
+    font-size: 0.9rem;
   }
 }
 
@@ -111,30 +177,32 @@ a {
     height: 13rem;
     bottom: -5rem;
   }
-}
 
-.introduction-text {
-  margin-bottom: 1rem;
-  margin-right: 0;
-  text-align: right;
-  font-style: normal;
-}
-
-@media (max-width: 270px) {
-  .introduction-text {
-    font-size: 0.9rem;
-  }
-}
-
-@media (min-width: 410px) {
   .introduction-text {
     font-size: 1.2rem;
   }
 }
 
-#call-to-action-btn {
-  transform: skew(0, 14deg);
-  margin: 0.7rem 0;
+@media (min-width: 640px) {
+  .header-bar {
+    height: 9.5rem;
+  }
+
+  .parallelogram {
+    height: 17rem;
+    bottom: -6rem;
+  }
+
+  .introduction-text {
+    margin: 0.5rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .break-line {
+    display: inline;
+  }
+
 }
 
 
@@ -149,18 +217,6 @@ a {
   height: 125vh;
 }
 
-@media (max-width: 270px) {
-  .pixel-bg {
-    height: 200vh;
-  }
-}
-
-@media (min-width: 410px) {
-  .pixel-bg {
-    height: 140vh;
-  }
-}
-
 .about-pokemon {
   position: relative;
   top: 4rem;
@@ -173,19 +229,6 @@ a {
   padding: 0 2rem;
   padding-top: 3rem;
   margin-bottom: 2rem;
-}
-
-@media (max-width: 270px) {
-  #pokemon-text {
-    padding: 3rem 1rem 1rem 1rem;
-  }
-}
-
-@media (min-width: 410px) {
-  #pokemon-text {
-    padding: 6.5rem 4rem 0 4rem;
-    line-height: 1.4rem;
-  }
 }
 
 .highlighted-text {
@@ -211,6 +254,52 @@ a {
   margin: 0.7rem 0;
 }
 
+@media (max-width: 270px) {
+  .pixel-bg {
+    height: 200vh;
+  }
+
+  #pokemon-text {
+    padding: 3rem 1rem 1rem 1rem;
+  }
+}
+
+@media (min-width: 410px) {
+  .pixel-bg {
+    height: 140vh;
+  }
+
+  #pokemon-text {
+    padding: 6.5rem 4rem 0 4rem;
+    line-height: 1.4rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .pixel-bg {
+    height: 160vh;
+  }
+
+  #pokemon-text {
+    padding: 11rem 6rem 1rem 6rem;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+  }
+
+  .highlighted-text {
+    text-shadow: #fff 2px 2px 1px;
+  }
+
+  .input-name {
+    display: block;
+    max-width: 70vw;
+    border: 3px solid blue;
+    padding: 0.7rem;
+    font-size: 1.5rem;
+    box-shadow: rgba(255, 255, 255, 0.1) 0 0 2px, rgba(0, 0, 0, 0.5) 2px 2px 2px;
+  }
+}
+
 
 /* CARD POKÉMON RIVAL */
 .hidden {
@@ -232,11 +321,37 @@ a {
   box-shadow: rgba(255, 255, 255, 0.1) -1px -1px 1px, rgba(0, 0, 0, 0.5) 1px 1px 1px;
 }
 
+#rival-card .special-title {
+  margin-bottom: 0.7rem;
+  padding: 0.5rem;
+  background-color: #038C73;
+}
+
+.info-card-container {
+  padding: 0.5rem 1.5rem;
+}
+
+.name-uppercase,
+.type-uppercase,
+.resistant-uppercase,
+.weaknesses-uppercase,
+.first-uppercase {
+  text-transform: capitalize;
+}
+
 @media (max-width: 270px) {
   #flex-container {
     width: 90vw;
     padding: 1rem 0 0.5rem 0;
     border-radius: 1.5rem;
+  }
+
+  #rival-card .special-title {
+    margin-bottom: 0;
+  }
+
+  .info-card-container {
+    padding: 0.5rem;
   }
 }
 
@@ -245,55 +360,30 @@ a {
     max-width: 70vw;
     margin-top: 3.5rem;
     padding: 2rem 0;
+    font-size: 1.3rem;
+    line-height: 2rem;
   }
-}
 
-#rival-card .special-title {
-  margin-bottom: 0.7rem;
-  padding: 0.5rem;
-  background-color: #038C73;
-}
-
-@media (max-width: 270px) {
-  #rival-card .special-title {
-    margin-bottom: 0;
-  }
-}
-
-.info-card-container {
-  padding: 0.5rem 1.5rem;
-}
-
-@media (max-width: 270px) {
-  .info-card-container {
-    padding: 0.5rem;
-  }
-}
-
-@media (min-width: 410px) {
   .card-img {
     margin-bottom: 1rem;
   }
 }
 
-.name-uppercase {
-  text-transform: capitalize;
-}
+@media (min-width: 640px) {
+  #flex-container {
+    max-width: 30rem;
+    border: 4px solid #D92534;
+  }
 
-.type-uppercase {
-  text-transform: capitalize;
-}
+  #rival-card .special-title {
+    margin: 1rem 0;
+    padding: 0.8rem 0;
+  }
 
-.resistant-uppercase {
-  text-transform: capitalize;
-}
-
-.weaknesses-uppercase {
-  text-transform: capitalize;
-}
-
-.first-uppercase {
-  text-transform: capitalize;
+  .card-img {
+    width: 9rem;
+    height: auto;
+  }
 }
 
 
@@ -318,7 +408,7 @@ a {
 }
 
 #ordering-options h4 {
-  margin-top: 1.3rem;
+  margin-top: 1.4rem;
   margin-bottom: 0.7rem;
 }
 
@@ -327,6 +417,23 @@ a {
   margin: 0.5rem auto;
 }
 
+@media (min-width: 640px) {
+  .flex-container {
+    margin: 1rem 0;
+  }
+
+  #ordering-options .special-title {
+    padding: 1rem 0;
+  }
+
+  #ordering-options h4 {
+    font-size: 1.3rem;
+  }
+
+  #ordering-options button {
+    margin-bottom: 0.7rem;
+  }
+}
 
 
 /* TABELA */
@@ -340,116 +447,174 @@ a {
   text-align: center;
 }
 
-table,
-thead,
-tbody,
-th,
-td,
-tr {
-  display: block;
+@media (max-width: 899px) {
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100vw;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    border-top: 1px dotted #038C73;
+    border-bottom: 1px dotted #038C73;
+    margin-bottom: 2rem;
+    background: #eee;
+  }
+
+  td {
+    position: relative;
+    padding: 0.3rem;
+    padding-left: 54%;
+    padding-right: 1.2rem;
+    border: none;
+    border-bottom: 2px solid #fff;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+  }
+
+  td:before {
+    position: absolute;
+    left: 0.5rem;
+    width: 45%;
+    white-space: nowrap;
+    font-family: "Inter";
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: right;
+    color: #038C73;
+  }
+
+  td:nth-of-type(2):before {
+    content: "Nº";
+  }
+
+  td:nth-of-type(3):before {
+    content: "Tipo";
+  }
+
+  td:nth-of-type(4):before {
+    content: "Forte Contra";
+  }
+
+  td:nth-of-type(5):before {
+    content: "Combat Power";
+  }
+
+  td:nth-of-type(6):before {
+    content: "Ataque";
+  }
+
+  td:nth-of-type(7):before {
+    content: "Defesa";
+  }
+
+  td:first-child {
+    width: 100%;
+    padding: 0.3rem 0;
+    text-align: center;
+  }
+
+  td:last-child {
+    border-bottom: none;
+  }
+
+  .pokemon-name {
+    display: block;
+    margin: 1rem 0 0.5rem 0;
+    line-height: 0.9rem;
+    font-family: "Bungee";
+    font-size: 1rem
+  }
+
+  .pokemon-img {
+    width: 6rem;
+    height: auto;
+  }
+
+  .pokemon-resistance {
+    min-height: 1.2rem;
+  }
 }
 
-table {
-  border-collapse: collapse;
-  width: 100vw;
+@media (min-width: 640px) {
+  #table-section {
+    margin: 0;
+  }
+
+  tr {
+    border-top: 3px dotted #038C73;
+    border-bottom: 3px dotted #038C73;
+  }
+
+  #table-section .special-title {
+    margin-top: 4rem;
+    padding: 1rem 0;
+  }
 }
 
-thead {
-  display: none;
-}
+@media (min-width: 900px) {
+  table {
+    border-collapse: collapse;
+    max-width: 100vw;
+    text-align: center;
+  }
 
-tr {
-  border-top: 1px dotted #038C73;
-  border-bottom: 1px dotted #038C73;
-  margin-bottom: 2rem;
-  background: #eee;
-}
+  tr:nth-of-type(even) {
+    background: #eee;
+  }
 
-/* tr:nth-of-type(odd) {
-  background: #eee;
-}
+  thead {
+    background-color: #5d5d5d;
+  }
 
-tr:nth-of-type(even) {
-  background: #e2e2e2
-} */
+  tr {
+    border-top: 2px dotted #038C73;
+    border-bottom: 2px dotted #038C73;
+  }
 
-/* tr:hover {
-  background-color: #fffdbd;
-} */
+  th {
+    padding: 0.6rem;
+    border: 2px dotted #fff;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+  }
 
-td {
-  position: relative;
-  padding: 0.3rem;
-  padding-left: 54%;
-  padding-right: 1.2rem;
-  border: none;
-  border-bottom: 2px solid #fff;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-}
+  td {
+    padding: 0.8rem;
+    border: 2px dotted #038C73;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+  }
 
-td:before {
-  position: absolute;
-  left: 0.5rem;
-  width: 45%;
-  white-space: nowrap;
-  font-family: "Inter";
-  font-size: 0.8rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: right;
-  color: #038C73;
-}
+  .pokemon-name {
+    display: block;
+    margin: 0.5rem;
+    line-height: 0.9rem;
+    font-family: "Bungee";
+    font-size: 1rem;
+    text-align: center;
+  }
 
-td:nth-of-type(2):before {
-  content: "Nº";
-}
-
-td:nth-of-type(3):before {
-  content: "Tipo";
-}
-
-td:nth-of-type(4):before {
-  content: "Forte Contra";
-}
-
-td:nth-of-type(5):before {
-  content: "Combat Power";
-}
-
-td:nth-of-type(6):before {
-  content: "Ataque";
-}
-
-td:nth-of-type(7):before {
-  content: "Defesa";
-}
-
-td:first-child {
-  width: 100%;
-  padding: 0.3rem 0;
-  text-align: center;
-}
-
-td:last-child {
-  border-bottom: none;
-}
-
-.pokemon-name {
-  display: block;
-  margin: 1rem 0 0.5rem 0;
-  line-height: 0.9rem;
-  font-family: "Bungee";
-  font-size: 1rem
-}
-
-.pokemon-img {
-  width: 6rem;
-  height: auto;
-}
-
-.pokemon-resistance {
-  min-height: 1.2rem;
+  .pokemon-img {
+    width: 5rem;
+    height: auto;
+  }
 }
 
 
@@ -463,12 +628,6 @@ td:last-child {
   letter-spacing: 1px;
 }
 
-@media (min-width: 410px) {
-  .one-line {
-    display: none;
-  }
-}
-
 #footer a {
   color: #fff;
   text-shadow: #000 1px 1px 1px;
@@ -477,11 +636,31 @@ td:last-child {
 }
 
 #footer a:hover {
-  color: #D92534;
+  color: #073673;
   text-shadow: #fff 1px 1px 0.5px;
 }
 
-.footer-year {  
+.footer-year {
   margin-top: 0.3rem;
   font-weight: bold;
+}
+
+@media (min-width: 410px) {
+  .one-line {
+    display: none;
+  }
+}
+
+@media (min-width: 640px) {
+  #footer {
+    font-size: 0.9rem;
+  }
+
+  #footer a {
+    text-shadow: #000 2px 2px 1px;
+  }
+
+  #footer a:hover {
+    text-shadow: #fff 2px 2px 1px;
+  }
 }
