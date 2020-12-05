@@ -7,12 +7,11 @@ https://julianaads.github.io/SAP005-data-lovers/src/
 ## Índice
 
 * [1. Apresentação](#1-apresentacao)
-* [2. Pesquisa](#2-rick-and-morty)
+* [2. Pesquisa](#2-pesquisa)
 * [3. Usuário](#3-usuario)
 * [4. Interface do Usuário](#4-interface-do-usuario)
 * [5. Desenvolvimento do Projeto](#5-desenvolvimento-do-Projeto)
-* [6. O Projeto](#6-hacker-edition)
-* [7. Pontos de Melhoria](#7-considerações-técnicas)
+* [6. Pontos de Melhoria](#7-pontos-de-melhoria)
 
 
 ***
@@ -101,13 +100,13 @@ Resultado do layout finalizado:
 
 Home
 
-![](/src/img/homedesktop.png)
+![](/src/img/homedesktop.jpeg)
 
 
 
 Personagens
 
-![](/src/img/personadesk.png)
+![](/src/img/personadesktop.jpeg)
 
 
 
@@ -119,13 +118,13 @@ O resultado foi esse:
 
 Home
 
-![](/src/img/homeResponsiva.jpeg)
+![](/src/img/homemobile.jpeg)
 
 
 
 Personagens
 
-![](/src/img/personagemResponsiva.jpeg)
+![](/src/img/personamobile.jpeg)
 
 
 
@@ -143,7 +142,14 @@ Abaixo nosso quadro de organização:
 :heavy_check_mark: Deixar a aplicação responsiva para todos os tamanhos de telas
 :heavy_check_mark: Manipulação de Arrays e Objetos
 
+## 6. Pontos de Melhoria
+
+
+Definimos que para os próximos passos sejam feitos os seguintes aprimoramentos:
+- Titulo neutro nos filtros, adicionar opção neutro nos filtros para que a página inicie com esta titulação e não um filtro específico, e tambem para que o usuario clique nele e o resultado da filtragem volte ao zero em relação aquele filtro.
+- Acumulação de diferentes filtros, em que o usuario possa silecionar quantos e quaisquer filtros ele desejar e o resultado da filtragem seja os personagens que possuem uma somatória dos filtros selecionados.
+- Animação pop-up aos cards, onde o usuário poderia clicar e aparecer um card maior com as informações do personagem em tamanho maior e mais próximo do usuário e lista de eposodios em que o poersonagem aparece.
 
 ## Devas 
 
-Este belissímo projeto foi desenvolvido com muito carinho :smiling_face_with_three_hearts: pela dupla Bianca e Juliana 
+Este belissímo projeto foi desenvolvido com muito carinho :smiling_face_with_three_hearts: pela dupla Bianca Sherika e Juliana Almeida
