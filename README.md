@@ -1,4 +1,4 @@
-# Batlle Win
+# Battle Win
 
 ## Índice
 
@@ -25,7 +25,7 @@ Criamos essa aplicação pensando nos novos usuários do jogo Pokémon Go. Nosso
 
 O planejamento do projeto foi realizado através do Trello.
 
-![trello](trello.png)
+![paginaweb](trello.png)
 
 ### ➡️ Tema
 
