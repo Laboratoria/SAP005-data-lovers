@@ -1,36 +1,33 @@
 import pokemon from '../src/data.js';
+import data from '../src/data/pokemon/pokemon.js';
+import { bulbasaurResult, lendarios, ordemCrescente, ordemDecrescente } from './tests_const.js'
 
-const 
+describe('função pesquisaPokemon', () => {
+  test('retorna pokemon encontrado', () => {
+    expect(pokemon.pesquisaPokemon(data, 'bulbasaur')).toEqual(bulbasaurResult)
+  })
+  test('retorna pokemon não encontrado', () => {
+    expect(() => pokemon.pesquisaPokemon(data, 'maria')).toThrowError(Error)
+  })
+})
 
-describe('Função pesquisaPokemon', () => {
-  it('É uma função', () => {
-    expect(typeof pokemon.pesquisaPokemon).toBe('function');
-  });
-  it('Da erro para entrada do tipo number', () =>{
-    expect(() => pokemon.pesquisaPokemon(5)).toThrow(TypeError);
-  });
-   it('Se escrever Pikachu deve retornar um array', () => { 
-     expect(typeof pokemon.pesquisaPokemon('string')).toBe('array')
-   }); 
- 
+describe('função filtrarLendarios', () => {
+  test('retorna pokemons lendarios', () => {
+    expect(pokemon.filtrarLendarios(data)).toEqual(lendarios)
+  })
+})
 
-/*describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
-  });
+describe('função calculoAgregado', () => {
+  test('retorna % de um numero', () => {
+    expect(pokemon.calculoAgregado(data, lendarios)).toBe("3.6")
+  })
+})
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
-});
-
-
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
-
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });*/
-});
+describe('função ordenarPokemon', () => {
+  test('retorna lista de pokemons em ordem crescente', () => {
+    expect(pokemon.ordenarPokemon(data.pokemon, 'az')).toEqual(ordemCrescente)
+  })
+  test('retorna lista de pokemons em ordem decrescente', () => {
+    expect(pokemon.ordenarPokemon(data.pokemon, 'za')).toEqual(ordemDecrescente)
+  })
+})

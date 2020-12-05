@@ -1,12 +1,12 @@
 const pokemon = {
   pesquisaPokemon(data, nomePokemon) {
     const listaPokemon = data.pokemon
-    const tipoParametro = typeof nomePokemon
-    if (typeof  tipoParametro === 'number'|| typeof  tipoParametro === 'undefined') {
-      throw new TypeError('Coloque o nome do Pokémon')
-    } else if (typeof nomePokemon === 'string') {
-      let busca = listaPokemon.filter(p => p.name == nomePokemon)
+    let busca = listaPokemon.filter(p => p.name == nomePokemon)
+
+    if (busca.length) {
       return (busca)
+    } else {
+      throw new Error('Pokemon não encontrado')
     }
   },
   filtrarLendarios(data) {
@@ -31,7 +31,6 @@ const pokemon = {
         return b.name.localeCompare(a.name)
       })
     }
-
     return pokemons
   }
 }
