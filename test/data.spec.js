@@ -131,6 +131,7 @@ describe('Testar filtro Genero', () => {
     expect(filterGenderSelected(dataBaseTeste, "Male")).toMatchObject([{ "gender": "Male", "id": 69, "name": "Commander Rick", "species": "Human", "status": "Dead", "type": "" }, { "gender": "Male", "id": 252, "name": "Noob-Noob", "species": "Poopybutthole", "status": "Alive", "type": "" }, { "gender": "Male", "id": 475, "name": "Dancer Morty", "species": "Human", "status": "Alive", "type": "" }, { "gender": "Male", "id": 105, "name": "Dr. Glip-Glop", "species": "Alien", "status": "Dead", "type": "" }, { "gender": "Male", "id": 19, "name": "Antenna Rick", "species": "Human", "status": "unknown", "type": "Human with antennae" }, { "gender": "Male", "id": 369, "name": "Tusked Assassin", "species": "Alien", "status": "unknown", "type": "Tuskfish" }]);
   });
 });
+
 describe('Testar Filtro de Espécie', () => {
   it('retornar personagens humanos', () => {
     expect(filterSpeciesSelected(dataBaseTeste, "Human")).toMatchObject([{ "gender": "Female", "id": 3, "name": "Summer Smith", "species": "Human", "status": "Alive", "type": "" }, { "gender": "Male", "id": 69, "name": "Commander Rick", "species": "Human", "status": "Dead", "type": "" }, { "gender": "Male", "id": 475, "name": "Dancer Morty", "species": "Human", "status": "Alive", "type": "" }, { "gender": "Male", "id": 19, "name": "Antenna Rick", "species": "Human", "status": "unknown", "type": "Human with antennae" }, { "gender": "Female", "id": 249, "name": "Mrs. Sanchez", "species": "Human", "status": "unknown", "type": "" }]);
