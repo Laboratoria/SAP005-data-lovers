@@ -95,6 +95,19 @@ a {
   }
 }
 
+@media (min-width: 900px) {
+  .special-title {
+    font-size: 1.1rem;
+  }
+
+  .btn-style {
+    font-size: 0.8rem;
+    border: solid 3px #fff;
+    padding: 0.6rem 1.4rem;
+    box-shadow: rgba(255, 255, 255, 0.1) 1px 1px 1px, rgba(0, 0, 0, 0.5) 2px 2px 1px;
+  }
+}
+
 
 /* LANDING-PAGE */
 #landing-page {
@@ -102,7 +115,7 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
-  width: 100vw;
+  max-width: 100vw;
   height: 100vh;
 }
 
@@ -125,13 +138,6 @@ a {
   text-align: left;
   color: #fff;
   text-shadow: rgba(255, 255, 255, 0.1) -1px -1px 1px, rgba(0, 0, 0, 0.5) 1px 1px 1px;
-}
-
-@media (min-width: 410px) {
-  .title {
-    left: 1.5rem;
-    text-shadow: rgba(255, 255, 255, 0.5) 0 0 2px, rgba(0, 0, 0, 0.7) 2px 2px 2px;
-  }
 }
 
 .parallelogram {
@@ -173,6 +179,11 @@ a {
 }
 
 @media (min-width: 410px) {
+  .title {
+    left: 1.5rem;
+    text-shadow: rgba(255, 255, 255, 0.5) 0 0 2px, rgba(0, 0, 0, 0.7) 2px 2px 2px;
+  }
+
   .parallelogram {
     height: 13rem;
     bottom: -5rem;
@@ -202,7 +213,39 @@ a {
   .break-line {
     display: inline;
   }
+}
 
+@media (min-width: 900px) {
+  #landing-page {
+    background-position: top 18% center;
+    height: 101vh;
+  }
+
+  .header-bar {
+    clip-path: polygon(0 0, 0 90%, 60% 0);
+  }
+
+  .title {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+
+  .parallelogram {
+    padding: 1.5rem;
+    bottom: -6.5rem;
+    height: 12rem;
+    transform: skew(0, -10deg);
+  }
+
+  .introduction-text {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+
+  #call-to-action-btn {
+    margin-top: 1.4rem;
+    transform: skew(0, 10deg);
+  }
 }
 
 
@@ -213,7 +256,7 @@ a {
   background-size: cover;
   position: relative;
   z-index: 0;
-  width: 100vw;
+  max-width: 100vw;
   height: 125vh;
 }
 
@@ -234,7 +277,6 @@ a {
 .highlighted-text {
   font-weight: bold;
   text-shadow: #fff 1px 1px 1px;
-
 }
 
 .input-name {
@@ -297,6 +339,34 @@ a {
     padding: 0.7rem;
     font-size: 1.5rem;
     box-shadow: rgba(255, 255, 255, 0.1) 0 0 2px, rgba(0, 0, 0, 0.5) 2px 2px 2px;
+  }
+}
+
+@media (min-width: 900px) {
+  .pixel-bg {
+    height: 185vh;
+  }
+
+  .about-pokemon {
+    top: 7rem;
+  }
+
+  #pokemon-text {
+    font-size: 1.15rem;
+    line-height: 1.7rem;
+    margin: 0 7rem 2rem 7rem;
+    padding: 0 2rem;
+    padding-top: 4.5rem;
+  }
+
+  .input-name {
+    width: 35%;
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  #search-pokemon-btn {
+    margin: 1.2rem 0;
   }
 }
 
@@ -386,6 +456,16 @@ a {
   }
 }
 
+@media (min-width: 900px) {
+  #flex-container {
+    width: 23rem;
+    padding: 1.5rem 0;
+    margin-top: 3.5rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
 
 /* OPÇÕES DE ORDENAÇÃO */
 #ordering-options {
@@ -435,10 +515,23 @@ a {
   }
 }
 
+@media (min-width: 900px) {
+  .flex-container {
+    margin: 1rem 11rem;
+  }
+
+  #ordering-options h4 {
+    font-size: 1.1rem;
+  }
+}
+
 
 /* TABELA */
 #table-section {
   margin: 2rem 0;
+  width: 100vw;
+  max-width: 100vw;
+  height: auto;
 }
 
 #table-section .special-title {
@@ -569,8 +662,9 @@ a {
 @media (min-width: 900px) {
   table {
     border-collapse: collapse;
-    max-width: 100vw;
     text-align: center;
+    margin: 0 auto;
+    margin-bottom: 3rem;
   }
 
   tr:nth-of-type(even) {
@@ -662,5 +756,19 @@ a {
 
   #footer a:hover {
     text-shadow: #fff 2px 2px 1px;
+  }
+}
+
+@media (min-width: 900px) {
+  #footer {
+    font-size: 0.7rem;
+  }
+
+  #footer a {
+    text-shadow: #000 1px 1px 1px;
+  }
+
+  #footer a:hover {
+    text-shadow: #fff 1px 1px 1px;
   }
 }
