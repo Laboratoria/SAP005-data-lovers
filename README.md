@@ -58,14 +58,41 @@ Em seguida fizemos uma breve pesquisa de cores e referências, também estabelec
 ### Ferramentas
 Neste projeto foram usados:
 
--CSS
--HTML
--Vanilla JavaScript
--Visual Studio Code com extenção Node-js
+* CSS
+* HTML
+* Vanilla JavaScript
+* Visual Studio Code com extenção Node-js
 
 
 ## 5. Funcionamento
 ...Como funciona á pag, web...
+
+
+## 6. Instalação e Execução
+• Use o Fork para criar um repositório em seu GitHub;
+• Clone o repositório em sua máquina, no terminal digite 
+"git clone + link copiado" e dê enter;
+• Verifique se tem o nodejs instalado, se não tiver faça 
+a instalação;  
+• Pelo terminal acesse a pasta do seu projeto, e está pronto 
+para ser utilizado ou alterado.
+5.1 Comandos npm
+Os comandos necessários para executar o programa em sua máquina são:
+
+• npm install: este irá auxiliar na instalação do projeto, 
+no gerenciamento da versões e no 
+gerenciamento de dependências necessárias para executa-lo.
+• npm run test: procura pelo script test dentro do package.json, 
+executar o que estiver dentro dele 
+irá testar seu código e verificar se está cumprindo com o desejado; 
+• npm run start: executa os scripts que estiverem localizados no 
+arquivo package.json, no caso o 
+"start"
+fornecerá um link de acesso e o projeto poderá ser aberto no browser;
+• npm run deploy: publica uma versão do seu projeto no GitHub Pages.
+Importante: Sempre que possível realizar o comando: git commit -m “”
+Certifique-se através do comando git log se o commit foi realizado com sucesso.
+
 
 ## Acesse o site aqui: [PokeInfos]()
 
