@@ -1,4 +1,4 @@
-import { filterGenderSelected, filterStatusSelected, filterSpeciesSelected, sortOrder, calcGender, calcStatus, calcSpecies } from '../src/data.js';
+import { filterGenderSelected, filterStatusSelected, filterSpeciesSelected, sortOrder, calcFilter } from '../src/data.js';
 const dataBaseTeste = [
   {
     "id": 3,
@@ -108,21 +108,10 @@ const dataBaseTeste = [
   },
 ]
 
-describe('Testar se é uma função', () => {
-  it('retornar se gênero é uma função', () => {
+describe('Testar filtro Genero', () => {
+  it('retornar se é uma função', () => {
     expect(typeof filterGenderSelected).toBe('function');
   });
-  it('retornar se status é uma função', () => {
-    expect(typeof filterStatusSelected).toBe('function');
-  });
-  it('retornar se espécie é uma função', () => {
-    expect(typeof filterSpeciesSelected).toBe('function');
-  });
-  it('retornar se ordem é uma função', () => {
-    expect(typeof sortOrder).toBe('function');
-  });
-});
-describe('Testar filtro Genero', () => {
   it('retornar personagens femininos', () => {
     expect(filterGenderSelected(dataBaseTeste, "Female")).toMatchObject([{ "gender": "Female", "id": 3, "name": "Summer Smith", "species": "Human", "status": "Alive", "type": "" }, { "gender": "Female", "id": 26, "name": "Arthricia", "species": "Alien", "status": "Alive", "type": "Cat-Person" }, { "gender": "Female", "id": 381, "name": "Woman Rick", "species": "Alien", "status": "Alive", "type": "Chair" }, { "gender": "Female", "id": 249, "name": "Mrs. Sanchez", "species": "Human", "status": "unknown", "type": "" }]);
   });
@@ -131,7 +120,22 @@ describe('Testar filtro Genero', () => {
   });
 });
 
+describe('Testar Filtro de Status', () => {
+  it('retornar se é uma função', () => {
+    expect(typeof filterStatusSelected).toBe('function');
+  });
+  it('retornar personagens unknown', () => {
+    expect(filterStatusSelected(dataBaseTeste, "unknown")).toMatchObject([{ "gender": "Male", "id": 19, "name": "Antenna Rick", "species": "Human", "status": "unknown", "type": "Human with antennae" }, { "gender": "Male", "id": 369, "name": "Tusked Assassin", "species": "Alien", "status": "unknown", "type": "Tuskfish" }, { "gender": "Female", "id": 249, "name": "Mrs. Sanchez", "species": "Human", "status": "unknown", "type": "" }]);
+  });
+  it('retornar personagens mortos', () => {
+    expect(filterStatusSelected(dataBaseTeste, "Dead")).toMatchObject([{ "gender": "Male", "id": 69, "name": "Commander Rick", "species": "Human", "status": "Dead", "type": "" }, { "gender": "unknown", "id": 104, "name": "Doom-Nomitron", "species": "Alien", "status": "Dead", "type": "Shapeshifter" }, { "gender": "Male", "id": 105, "name": "Dr. Glip-Glop", "species": "Alien", "status": "Dead", "type": "" }]);
+  });
+});
+
 describe('Testar Filtro de Espécie', () => {
+  it('retornar se é uma função', () => {
+    expect(typeof filterSpeciesSelected).toBe('function');
+  });
   it('retornar personagens humanos', () => {
     expect(filterSpeciesSelected(dataBaseTeste, "Human")).toMatchObject([{ "gender": "Female", "id": 3, "name": "Summer Smith", "species": "Human", "status": "Alive", "type": "" }, { "gender": "Male", "id": 69, "name": "Commander Rick", "species": "Human", "status": "Dead", "type": "" }, { "gender": "Male", "id": 475, "name": "Dancer Morty", "species": "Human", "status": "Alive", "type": "" }, { "gender": "Male", "id": 19, "name": "Antenna Rick", "species": "Human", "status": "unknown", "type": "Human with antennae" }, { "gender": "Female", "id": 249, "name": "Mrs. Sanchez", "species": "Human", "status": "unknown", "type": "" }]);
   });
@@ -139,7 +143,11 @@ describe('Testar Filtro de Espécie', () => {
     expect(filterSpeciesSelected(dataBaseTeste, "Poopybutthole")).toMatchObject([{ "gender": "Male", "id": 252, "name": "Noob-Noob", "status": "Alive", "species": "Poopybutthole", "type": "" }]);
   });
 });
+
 describe('Testar filtro de Ordenação', () => {
+  it('retornar se é uma função', () => {
+    expect(typeof sortOrder).toBe('function');
+  });
   it('retornar ordenamento a - z', () => {
     expect(sortOrder(dataBaseTeste, "az")).toMatchObject([{ "gender": "Male", "id": 19, "name": "Antenna Rick", "species": "Human", "status": "unknown", "type": "Human with antennae" }, { "gender": "Female", "id": 26, "name": "Arthricia", "species": "Alien", "status": "Alive", "type": "Cat-Person" }, { "gender": "unknown", "id": 35, "name": "Bepisian", "species": "Alien", "status": "Alive", "type": "Bepisian" }, { "gender": "Male", "id": 69, "name": "Commander Rick", "species": "Human", "status": "Dead", "type": "" }, { "gender": "Male", "id": 475, "name": "Dancer Morty", "species": "Human", "status": "Alive", "type": "" },
     { "gender": "unknown", "id": 104, "name": "Doom-Nomitron", "species": "Alien", "status": "Dead", "type": "Shapeshifter" }, { "gender": "Male", "id": 105, "name": "Dr. Glip-Glop", "species": "Alien", "status": "Dead", "type": "" }, { "gender": "Female", "id": 249, "name": "Mrs. Sanchez", "species": "Human", "status": "unknown", "type": "" }, { "gender": "Male", "id": 252, "name": "Noob-Noob", "species": "Poopybutthole", "status": "Alive", "type": "" }, { "gender": "Female", "id": 3, "name": "Summer Smith", "species": "Human", "status": "Alive", "type": "" },
@@ -156,29 +164,30 @@ describe('Testar filtro de Ordenação', () => {
     { "gender": "Female", "id": 381, "name": "Woman Rick", "species": "Alien", "status": "Alive", "type": "Chair" }, { "gender": "Male", "id": 475, "name": "Dancer Morty", "species": "Human", "status": "Alive", "type": "" }, { "gender": "unknown", "id": 492, "name": "Varrix", "species": "Alien", "status": "Alive", "type": "" }]);
   });
 });
+
 describe('Testar cálculo agregado', () => {
   it('retornar porcentagem de personagens femininos', () => {
     const selectedGender = filterGenderSelected(dataBaseTeste, "Female")
-    expect(calcGender(dataBaseTeste, selectedGender)).toBe("30.77");
+    expect(calcFilter(dataBaseTeste, selectedGender)).toBe("30.77");
   });
   it('retornar porcentagem de personagens masculinos', () => {
     const selectedGender = filterGenderSelected(dataBaseTeste, "Male")
-    expect(calcGender(dataBaseTeste, selectedGender)).toBe("46.15");
+    expect(calcFilter(dataBaseTeste, selectedGender)).toBe("46.15");
   });
   it('retornar porcentagem de personagens vivos', () => {
     const selectedStatus = filterStatusSelected(dataBaseTeste, "Alive")
-    expect(calcStatus(dataBaseTeste, selectedStatus)).toBe("53.85");
+    expect(calcFilter(dataBaseTeste, selectedStatus)).toBe("53.85");
   });
   it('retornar porcentagem de personagens mortos', () => {
     const selectedStatus = filterStatusSelected(dataBaseTeste, "Dead")
-    expect(calcStatus(dataBaseTeste, selectedStatus)).toBe("23.08");
+    expect(calcFilter(dataBaseTeste, selectedStatus)).toBe("23.08");
   });
   it('retornar porcentagem de personagens Bunda Cagada', () => {
     const selectedSpecies = filterSpeciesSelected(dataBaseTeste, "Poopybutthole")
-    expect(calcSpecies(dataBaseTeste, selectedSpecies)).toBe("7.69");
+    expect(calcFilter(dataBaseTeste, selectedSpecies)).toBe("7.69");
   });
   it('retornar porcentagem de personagens Humano', () => {
     const selectedSpecies = filterSpeciesSelected(dataBaseTeste, "Human")
-    expect(calcSpecies(dataBaseTeste, selectedSpecies)).toBe("38.46");
+    expect(calcFilter(dataBaseTeste, selectedSpecies)).toBe("38.46");
   });
 });

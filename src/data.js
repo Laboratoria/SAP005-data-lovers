@@ -9,7 +9,6 @@ export const filterSpeciesSelected = (dataBase, valueSpeciesSelected) =>
 
 export const sortOrder = (dataBase, valueSpeciesSelected) => {
   const order = dataBase.sort((a, b) => (a.name < b.name ? -1 : a.name > b.name ? 1 : 0));
-  
   switch (valueSpeciesSelected) {
     case "az":
       return order
