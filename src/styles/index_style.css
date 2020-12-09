@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo&display=swap');
+
+
+/*reset em todos os estilos já prontos por padrão*/
+body, h1, h2, p, ul, li, a, figure{
+    margin:0px;
+    padding: 0px;
+}
+
+/* fonte da página */
+body{
+    font-family: 'Exo', sans-serif;
+}
+
+/* border box para que os conteudos fiquem dentro de um box, ex, p, h1, etc */
+*{
+    box-sizing: border-box;
+}
+
+/* display block (descer junto com o browser) e max widht, diminui de acordo com o display */
+img{
+    display: block;
+    max-width: 100%;
+}
+
+
+/* ------------------------HEADER-------------------------------------------- */
+
+
+/* background do topo */
+
+
+.header-bg{
+    background:#F5F5F5;
+}
+
+.container-header{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#logo{
+    max-width: 137px;
+    margin: 17px 2px;
+}
+
+/* remover o estiulo de lista, com pontos na frente */
+.item-menu-nav ul{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.item-menu-nav a{
+    padding: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color:#313131;
+    display: block;
+    transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+}
+
+.item-menu-nav a:hover{
+    color:#3168B0;
+    border-bottom: .6px dotted #3168B0;
+    padding: 12px 15px;
+}
+
+
+/* ------------------------INTRO DO SITE-------------------------------------------- */
+
+.bg-top-container{
+    background:blue;
+} 
+
+
+/* nome-site */
+.site-name{
+    color:white;
+    font-size:35pt;
+    line-height: 1;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 60px 10px;
+}
+
+/* sobre */
+
+.container-about{
+    border-top:2px solid #b6b6b6;
+    border-bottom:2px solid #b6b6b6;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;    
+}
+
+.item-about-info{
+    flex: 2 1 300px;
+    margin: 10px 10px;
+    align-content: center;
+    flex-grow: 1;
+}
+
+.item-about-info h1{
+    font-size:30pt;
+    line-height: 1;
+    color: white;
+    padding-bottom: 8px;
+}
+
+.item-about-info p{
+    margin-top: 25px;
+    font-size:12pt;
+    line-height: 1.5;
+    color:white;
+}
+
+
+/* ------------------------LOCALIZAR POKEMON------------------------------------------- */
+
+
+.search-pokemon{
+    font-size:30pt;
+    line-height: 1;
+    max-width: 960px;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 28px;
+    padding-left: 10px;
+
+}
+
+.container-search{
+    background-image: url("../img/bg-top.jpg");
+    max-width: 960px;
+    margin: 0 auto;
+    padding-top: 13px;
+    padding-bottom: 24px;
+    padding-right: 32px;
+    border-radius: 13px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+.item-instruction-search{
+    background: rgb(75, 75, 75);
+    margin-left: 47px;
+    margin-right: 25px;
+    padding:19px;
+    align-content: center;
+    color: white;
+    flex: 2 1 300px;
+    flex-grow: 1;
+
+}
+
+.instruction-text{
+    margin-bottom:10px;
+}
+
+
+#txtBusca{
+    padding: 8px;
+    border: 1px solid;
+    border-radius: 5px;
+    margin-left: 8px;
+    margin-top: 15px;
+}
+
+::-webkit-input-placeholder {
+    color: rgb(100, 100, 100);
+    font-family: 'Exo', sans-serif;
+    
+}
+
+#btn-search-pokemon{
+    flex:1;
+    margin-left: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: blue;
+    border: none;
+    border-radius: 16px;
+    color: white;
+    padding: 16px;
+    font-family: Exo, sans-serif;
+    font-size:  11pt;
+    font-weight: 700;
+    transition: all 0.3s ease-in-out 0s;
+    outline:none;
+}
+
+#btn-search-pokemon:hover{
+    background-color: rgb(135, 135, 231);
+    border:none;
+}
+
+.flip-container{
+    perspective: 1000;
+}
+
+.flip-container:hover .flipper, .flip-container.hover .flipper {  		
+    transform: rotateY(180deg);  	
+} 
+  
+.flip-container, #item-card-one-front, #item-card-one-back {  	
+    width: 320px;  	
+    height: 480px;  
+}
+  
+  /* define a velocidade da transição */
+.flipper {  	
+    transition: 0.5s;  	
+    transform-style: preserve-3d;    	
+    position: relative;  
+}
+      
+  /* esconde o verso durante a animação */
+#item-card-one-front, #item-card-one-back{  	
+    backface-visibility: hidden;    	
+    position: absolute;  	
+    top: 0;  	
+    left: 0;  
+}
+      
+
+#item-card-one-front{
+    z-index: 2; 
+    text-align: center;
+    background-image: linear-gradient(#358AFA, white);
+    width: 304px;
+    height: 464px;
+    margin-left: 27px;
+    margin-top: 15px;
+    border: solid 6px rgb(212, 212, 14);
+}
+
+#item-card-one-back{
+    transform: rotateY(180deg); 
+    text-align: center;
+    background-image: linear-gradient(#358AFA, white);
+    width: 304px;
+    height: 464px;
+    margin-top: 15px;
+    margin-left: -9px;
+    border: solid 6px rgb(212, 212, 14);
+    padding: 7px;
+
+}
+
+#item-card-one-back p{
+    padding-top: 39px;
+}
+
+#item-card1 h1{
+    color: rgb(34, 34, 34);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#item-card1 p{
+    text-align: center;
+    font-weight: 300;
+    font-size: 11pt;
+    margin-left: 16px;
+    margin-right: 16px;
+    color: rgb(34, 34, 34);
+    padding: 7px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#item-card1 img{
+    align-self: center;
+    display: inline;
+    background: #ffffff;
+    border-radius: 160px;
+    padding: 10px;
+    margin-top: 19px;
+}
+/* 
+--------------------FAIXA DE DIVISÃO MEIO DA PÁGINA ----------------------- */
+
+.division{
+    display: block;
+    margin-top: 63px;
+    padding: 33px;
+    text-align: center;
+    background-color:rgb(75, 75, 75);
+}
+
+.division h2{
+   color:white;
+   letter-spacing: 20px;
+   font-size: 12pt;
+}
+/* -----------    CONTAINER INSTRUÇÕES MOSTRAR TODOS OS POKEMONS ------------------ */
+
+#container-instruction-for-view-cards{
+    text-align: center;
+    margin-top: 65px;
+}
+
+.instruction-text-view{
+    color:blue;
+    font-size:20pt;
+    line-height: 1;
+    max-width: 960px;
+    margin: 0 auto;
+    text-shadow: 0px 0px 6.4px rgb(158, 158, 158);
+}
+
+
+/* -------------------CONTAINER BOTÕES------------------------- */
+
+.container-filter{
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center;
+    padding: 30px 0px 36px 0px;
+}
+
+.item-filter h1{
+    font-size: 15pt;
+    max-width: 960px;
+    margin-top: 30px;
+    padding-left: 101px;
+    margin-right: 10px;
+    margin-bottom: 21px;
+}
+
+
+#btn-generation-pokemon{
+    cursor: pointer;
+    margin-left: 30px;
+    box-sizing: border-box;
+    background-color: blue;
+    border: none;
+    border-radius: 16px;
+    color: white;
+    padding: 12px;
+    font-family: Exo, sans-serif;
+    font-size: 13pt;
+    font-weight: 700;
+    transition: all 0.3s ease-in-out 0s;
+    outline:none;
+}
+
+#btn-generation-pokemon:hover{
+    background-color: rgb(135, 135, 231);
+}
+
+#btn-cresc-pokemon{
+    cursor: pointer;
+    margin-left: 37px;
+    margin-top: 10;
+    box-sizing: border-box;
+    background-color: blue;
+    border: none;
+    border-radius: 16px;
+    color: white;
+    padding: 9px;
+    font-family: Exo, sans-serif;
+    font-size: 12pt;
+    font-weight: 700;
+    transition: all 0.3s ease-in-out 0s;
+    outline:none;
+}
+
+
+#btn-cresc-pokemon:hover{
+    background-color: rgb(135, 135, 231);
+}
+
+#btn-decresc-pokemon{
+    cursor: pointer;
+    margin-left: 19px;
+    margin-right: 0;
+    margin-top:  6.4px;
+    box-sizing: border-box;
+    background-color: blue;
+    border: none;
+    border-radius: 16px;
+    color: white;
+    padding: 9px;
+    font-family: Exo, sans-serif;
+    font-size: 12pt;
+    font-weight: 700;
+    transition: all 0.3s ease-in-out 0s;
+    outline:none;
+}
+
+#btn-decresc-pokemon:hover{
+    background-color: rgb(135, 135, 231);
+}
+
+
+#filter-text{
+    margin-left: -46px;
+}
+
+#filter-type-select{
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 102px;
+    font-family: Exo, sans-serif;
+    font-size:12pt;
+
+}
+
+#btn-filter-type{
+    cursor: pointer;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 4.8px;
+    box-sizing: border-box;
+    background-color: blue;
+    border: none;
+    border-radius: 16px;
+    color: white;
+    padding: 12px;
+    font-family: Exo, sans-serif;
+    font-size: 13pt;
+    font-weight: 700;
+    transition: all 0.3s ease-in-out 0s;
+    outline:none;
+}
+#btn-filter-type:hover{
+    background-color: rgb(135, 135, 231);
+}
+/* --------------------------------CONTAINER ONDE SÃO MOSTRADOS TODOS OS CARDS------------ */
+
+.container-show-all-cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: gray;
+    border-top: 2px solid #b6b6b6;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 0 0;
+    height: 480px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+}
+
+#item-aggregate-calc{
+    flex: 2 1 300px;
+    text-align:center;
+    margin-top: 16px;
+}
+
+#item-aggregate-calc h3{
+    color:white;
+    font-size:15pt;
+}
+
+
+
+
+.mostrar{
+    text-align: center;
+    background-image: linear-gradient(#358AFA, white);
+    width: 304px;
+    margin-left: 26px;
+    margin-top: 26px;
+    border: solid 6px rgb(212, 212, 14);
+
+}
+
+.mostrar h1{
+    color: rgb(34, 34, 34);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mostrar p {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom:10px;
+    font-weight: 300;
+    text-align: center;
+    font-size: 11pt;
+    color: rgb(34, 34, 34);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mostrar img{
+    align-self: center;
+    display: inline;
+    background: rgb(255, 255, 255);
+    border-radius: 160px;
+    padding: 10px;
+    margin-top: 19px;
+}
+
+#item-all-cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+/* -------------------------------------FOOTER---------------------------------------------------- */
+
+footer{
+    margin-top: 64px;
+    padding: 33px;
+    text-align: center;
+    background: #2e2e2e;
+}
+
+
+footer p{
+    color:white;
+}
+
+footer a{
+    color:white;
+   text-decoration: none;
+   }

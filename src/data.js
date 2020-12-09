@@ -1,9 +1,7 @@
-// estas funciones son de ejemplo
+export const searchFind = (array, valueTxt) => array.find(item => item.num === valueTxt.toLowerCase())
 
-export const example = () => {
-  return 'example';
-};
+export const crescent = (array) => array.sort(function (a, b) { return a.name > b.name ? 1 : -1; })
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+export const decrescent = (array) => array.sort(function (a, b) { return a.name < b.name ? 1 : -1; })
+
+export const searchFilter = (array, valueTxt) => array.filter((item) => item.type.includes(valueTxt))
