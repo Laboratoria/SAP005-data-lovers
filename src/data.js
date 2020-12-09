@@ -8,16 +8,15 @@ export const filterSpeciesSelected = (dataBase, valueSpeciesSelected) =>
   dataBase.filter((dataBase) => dataBase.species === valueSpeciesSelected);
 
 export const sortOrder = (dataBase, valueSpeciesSelected) => {
-  const orderAz = (a, b) => (a.name < b.name ? -1 : a.name > b.name ? 1 : 0);
-  const orderZa = (b, a) => (b.name > a.name ? 1 : b.name < a.name ? 1 : 0);
-  const orderRelevence = (a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0);
+  const order = dataBase.sort((a, b) => (a.name < b.name ? -1 : a.name > b.name ? 1 : 0));
+  
   switch (valueSpeciesSelected) {
     case "az":
-      return dataBase.sort((a, b) => orderAz(a, b));
+      return order
     case "za":
-      return dataBase.reverse((b, a) => orderZa(b, a));
+      return order.reverse()
     case "relevance":
-      return dataBase.sort((a, b) => orderRelevence(a, b));
+      return dataBase.sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
   }
 };
 
