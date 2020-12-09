@@ -20,11 +20,6 @@ export const sortOrder = (dataBase, valueSpeciesSelected) => {
   }
 };
 
-export const calcGender = (dataBase, selectedGender) =>
-  parseFloat((selectedGender.length * 100) / dataBase.length).toFixed(2);
+export const calcFilter = (dataBase, selectedFilter) =>
+  parseFloat((selectedFilter.length * 100) / dataBase.length).toFixed(2);
 
-export const calcStatus = (dataBase, selectedStatus) =>
-  parseFloat((selectedStatus.length * 100) / dataBase.length).toFixed(2);
-
-export const calcSpecies = (dataBase, selectedSpecies) =>
-  parseFloat((selectedSpecies.length * 100) / dataBase.length).toFixed(2);
