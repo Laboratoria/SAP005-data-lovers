@@ -77,7 +77,7 @@ Foi proposto três temas: [League of Legends](https://br.leagueoflegends.com/pt-
 O método de organização adotado foi o [Kanbam](https://rockcontent.com/br/blog/kanban/), no qual utilizamos da ferramenta [Trello](https://trello.com/pt-BR) para organizar todo o processo de desenvolvimeto do projeto. 
 
 ## 💁 Histórias de usuários:
-A interação entre Desenvolvedoras e usuários foi feita atráves de pesquisas, no qual utilizamos o [Google Docs](https://docs.google.com/forms/d/1XoVlkF_Ic8EA88-wzxYUdb8H8JXN7m-EOCCJlZXnxsE/viewform?edit_requested=true#responses) para saber mais sobre as necessidades do publico alvo. Feito isso, pudemos mapear e adicionar ao Trello para vizualizar com mais facilidade durante todo o período de desenvolvimento.
+A interação entre Desenvolvedoras e usuários foi feita atráves de pesquisas, no qual utilizamos o [Google Docs](https://docs.google.com/forms/d/1XoVlkF_Ic8EA88-wzxYUdb8H8JXN7m-EOCCJlZXnxsE/viewform?edit_requested=true#responses) para saber mais sobre as necessidades do publico alvo. Feito isso, pudemos mapear e adicionar ao Trello para visualizar com mais facilidade durante todo o período de desenvolvimento.
 
 
 ## ✏️ Prototipação:
