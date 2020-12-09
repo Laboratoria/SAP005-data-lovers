@@ -1,4 +1,5 @@
 import filter from './data.js';
+
 function clear() {
     document.getElementById('cards').innerHTML = "";
     document.getElementById('calculation').innerHTML = "";
@@ -61,7 +62,8 @@ function showAllPokemons() {
     img.forEach(pokemon => {
         dados.show(pokemon);
     });
-} showAllPokemons();
+}
+showAllPokemons();
 
 
 
@@ -128,7 +130,7 @@ nameFilter.addEventListener('change', (event) => {
 })
 
 
-const pokedex = filter.pokedexFilter()
+const pokedex = filter.filter()
 const selectElementPokedex = document.querySelector('.order');
 let elementoSelecionadoPokedex = "";
 
@@ -144,7 +146,7 @@ selectElementPokedex.addEventListener('change', (event) => {
 
         });
     } else {
-        let newArray = filter.pokedexFilter()
+        let newArray = filter.filter()
         newArray.reverse()
         newArray.forEach(pokemon => {
             dados.show(pokemon);
@@ -153,7 +155,7 @@ selectElementPokedex.addEventListener('change', (event) => {
 })
 
 
-const typeElement = filter.type()
+const typeElement = filter.photo()
 const selectType = document.querySelector('.filterType');
 let choiseType = "";
 
@@ -191,7 +193,7 @@ selectType.addEventListener('change', (event) => {
 
 
 
-const weaknesses = filter.weaknesses()
+const weaknesses = filter.photo()
 const selectElementWeaknesses = document.querySelector('.weaknesses');
 let elementoSelecionado = "";
 
@@ -214,7 +216,7 @@ selectElementWeaknesses.addEventListener('change', (event) => {
     }
 });
 
-const resistant = filter.resistant()
+const resistant = filter.photo()
 const selectElementResistant = document.querySelector('.resistant');
 let elementoSelecionadoResistant = "";
 

@@ -1,17 +1,21 @@
 import data from "./data/pokemon/pokemon.js"
 
+
+
 const filter = {
     photo() {
         const image = data.pokemon.map(img => {
             return {
                 name: img.name,
                 img: img.img,
+                resistant: img.resistant,
                 num: img.num,
                 height: img.size.height,
                 weight: img.size.weight,
                 type: img.type,
                 weaknesses: img.weaknesses,
-                egg: img.egg
+                egg: img.egg,
+                stats: img.stats['base-attack']
             }
         })
         return image
@@ -44,56 +48,7 @@ const filter = {
         });
         return order;
     },
-    type() {
-        const element = data.pokemon.map(typeElement => {
-            return {
-                name: typeElement.name,
-                img: typeElement.img,
-                type: typeElement.type,
-                num: typeElement.num,
-                height: typeElement.size.height,
-                weight: typeElement.size.weight,
-                weaknesses: typeElement.weaknesses,
-                egg: typeElement.egg,
-                stats: typeElement.stats['base-attack']
-            }
-        })
-        return element
-    },
 
-    weaknesses() {
-        const weaknesses = data.pokemon.map(pokemon => {
-            return {
-                name: pokemon.name,
-                img: pokemon.img,
-                weaknesses: pokemon.weaknesses,
-                num: pokemon.num,
-                height: pokemon.size.height,
-                weight: pokemon.size.weight,
-                type: pokemon.type,
-                egg: pokemon.egg
-
-            }
-        })
-        return weaknesses
-    },
-
-    resistant() {
-        const resistant = data.pokemon.map(pokemon => {
-            return {
-                name: pokemon.name,
-                img: pokemon.img,
-                resistant: pokemon.resistant,
-                num: pokemon.num,
-                height: pokemon.size.height,
-                weight: pokemon.size.weight,
-                type: pokemon.type,
-                weaknesses: pokemon.weaknesses,
-                egg: pokemon.egg
-            }
-        })
-        return resistant
-    },
 
     pokedexFilter() {
         const pokedex = data.pokemon.map(pokemon => {
