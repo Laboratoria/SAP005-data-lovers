@@ -1,12 +1,178 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Pokelovers</title>
+</head>
+
+<body>
+  <div class="container" id="root">
+    <anside>
+      <div class="hamburguer" id="menu-hamburguer">
+        <div class="line" id="line1"></div>
+        <div class="line" id="line2"></div>
+        <div class="line" id="line3"></div>
+        <span>Fechar</span>
+      </div>
+      <nav class="sidebar">
+        <ul class="menu">
+          <li class="menu-item"><a href="#title0" class="menulink">Início</a></li>
+          <li class="menu-item"><a href="#title1" class="menulink">Sobre</a></li>
+          <li class="menu-item"><a href="#title2" class="menulink">Pokemons</a></li>
+        </ul>
+        <div class="social-media">
+          <a href="https://github.com/carinarocha" target="_blank">Carina<img src="images/github.png"></a>
+          <a href="https://github.com/JulianaAmoriN" target="_blank">Juliana<img src="images/github.png"></a>
+        </div>
+      </nav>
+    </anside>
+    <header id="title0">
+      <figure class="img-wrapper">
+        <img src="images/sky6.jpg">
+      </figure>
+      <figure class="pokeball-body">
+        <div class="pokeball-motion">
+          <div class="pokeball-top"></div>
+          <div class="inside-content">
+            <h1>Pokélovers</h1>
+          </div>
+          <div class="pokeball-bottom"></div>
+        </div>
+      </figure>
+    </header>
+    <div class="pokemons">
+      <section class="overlay">
+        <div class="cloudOne"></div>
+      </section>
+      <main class="tabs" id="title1">
+        <ul>
+          <li>
+            <input type="radio" id="tabAbout" name="inputTabs" class="radio-tab" checked>
+            <label for="tabAbout" class="tab-label"><b>Sobre</b></label>
+            <div class="about">
+              <article>
+                Pokémons são criaturas de todas as formas e tamanhos que convivem
+                com os humanos na natureza.<br> Na grande maioria, os pokémons não falam,
+                exceto para proferir seus nomes. Os pokémons são criados e comandados
+                por seus donos (os chamados "Treinadores").<br> No decorrer das aventuras,
+                os pokémons crescem e ganham experiência, podendo até mesmo evoluir
+                para pokémons mais fortes.<br> Alguns pokémons, como Pikachu, Piplup e Charizard,
+                possuem papéis de destaque na série de videogames, no jogo Estampas Ilustradas
+                e nos programas de TV, mas eles são apenas algumas das quase 500 criaturas
+                que habitam o universo Pokémon.
+              </article>
+            </div>
+          </li>
+          <li>
+            <input type="radio" id="tabAnimation" name="inputTabs" class="radio-tab" checked>
+            <label for="tabAnimation" class="tab-label"><b>Animação</b></label>
+            <div class="about">
+              <article>
+                A série animada do Pokémon é quase tão antiga quanto o surgimento de seu videogame
+                . A série acompanha as aventuras de um jovem audacioso treinador
+                chamado Ash Ketchum e seu companheiro Pokémon Pikachu em suas viagens pelo mundo
+                dos pokémons, onde visitam destinos exóticos, participam de inúmeras aventuras empolgantes,
+                conhecem diversas pessoas e pokémons interessantes. <br>
+                No caminho, eles aprendem sobre trabalho em equipe, compaixão, amizade e honestidade
+                à medida que Ash esforça-se para se tornar um Mestre Pokémon.<br> Agora
+                em sua vigésima temporada, a série é um dos programas infantis mais populares
+                de todos os tempos e deu origem a uma sequência de 12 filmes animados que também
+                acompanham as aventuras de Ash Ketchum e seus amigos, mas envolvem interesses
+                muito maiores – muitas vezes lidando com as lendas do mundo dos pokémons.<br> Cada filme
+                apresenta grandes mistérios e enredos cativantes, e enfrentar o desafio é com seus
+                jovens heróis!
+              </article>
+            </div>
+          </li>
+          <li>
+            <input type="radio" id="tabGame" name="inputTabs" class="radio-tab" checked>
+            <label for="tabGame" class="tab-label"><b>Videogame</b></label>
+            <div class="about">
+              <article>
+                Os primeiros videogames do Pokémon foram lançados para o Nintendo Game Boy em 1998.
+                Desde então, a popularidade dos pokémons não para de crescer. <br> Os jogos do Pokémon
+                foram lançados até então exclusivamente para os sistemas Nintendo, inclusive o
+                Nintendo DS™, o Nintendo GameCube™ e o console Wii™. Na maioria dos jogos, o
+                participante assume o papel de um jovem Treinador cuja jornada envolve viajar de
+                cidade em cidade capturando e treinando Pokémon e combatendo as equipes de pokémons de
+                outros Treinadores em uma disputa para se tornar o Campeão da Liga de pokémons. <br> Outro
+                objetivo é capturar e catalogar todos os pokémons no mundo do jogo. Todos os Pokémon
+                possuem um ou dois tipos de elementos intrínsecos que refletem suas forças ou fraquezas.
+                Por exemplo, os Pokémon do tipo Água possuem uma vantagem natural sobre os Pokémon do
+                tipo Fogo que, por sua vez, possuem vantagem sobre os Pokémon do tipo Grama, e assim por
+                diante. <br> Apesar do aspecto de batalhas dos jogos, eles evitam violência explícita.
+                Um Pokémon jamais morre durante um jogo. Os Treinadores são convidados a participar de
+                muitas atividades secundárias durante o jogo, incluindo concursos de talentos e beleza,
+                torneios e pescaria (para Pokémon, é claro!).Os jogadores podem combater e trocar pokémons
+                com outros jogadores, o que faz com que as crianças aprendam os méritos de compartilhar
+                e ter espírito esportivo. Com os sistemas de videogame mais novos, como o Nintendo DS e o
+                console Wii, eles podem até mesmo jogar e trocar Pokémon via Nintendo Wi-Fi Contention®
+                com outros Treinadores em qualquer lugar do mundo.
+                E por fim, atualmente o que vem conquistando o publico é o Pokémon Go um game com os mesmos
+                princípios dos anteriores, porém disponível para IOS e Android.
+              </article>
+            </div>
+          </li>
+        </ul>
+      </main>
+      <footer class="carousel-pokemon">
+        <div class="headerFilter">
+          <h2 id="title2" class="overlay-carousel cloudTwo">Pókemons</h2>
+          <div class="box-filter">
+            <div class="container-input">
+              <div>
+                <figure class="search-btn">
+                  <img class="search-img" src="images/loupe.png">
+                </figure>
+              </div>
+              <input type="text" name="namePokemon" id="textInput" value="Nome do Pokemon"
+                class="input-filter  searchInput animationInput" />
+              <select id="orderInput" class="order-filter animationInput">
+                <option disabled selected value="">Ordenar:</option>
+                <option value="0-251">0-251</option>
+                <option value="A-Z">A-Z</option>
+                <option value="Z-A">Z-A</option>
+              </select>
+              <select id="typeInput" class="type-filter animationInput">
+                <option disabled selected value="">Tipo:</option>
+                <option value="todos">Todos</option>
+                <option value="normal">Normal</option>
+                <option value="steel">Steel</option>
+                <option value="water">Water</option>
+                <option value="dragon">Dragon</option>
+                <option value="electric">Electric</option>
+                <option value="fairy">Fairy</option>
+                <option value="ghost">Ghost</option>
+                <option value="fire">Fire</option>
+                <option value="ice">Ice</option>
+                <option value="grass">Grass</option>
+                <option value="bug">Bug</option>
+                <option value="fighting">Fighting</option>
+                <option value="dark">Dark</option>
+                <option value="rock">Rock</option>
+                <option value="psychic">Psychic</option>
+                <option value="ground">Ground</option>
+                <option value="poison">Poison</option>
+                <option value="flying">Flying</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="calculusFilter">
+          <p id="calculus"></p>
+        </div>
+        <div class="carousel" data-motion="right">
+          <div id="pokedex" class="pokedex"></div>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+<script type="module" src="main.js"></script>
+
 </html>
