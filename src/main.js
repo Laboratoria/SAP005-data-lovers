@@ -19,13 +19,13 @@ function printCharacters(dados) {
             ` 
             <article id="teste" class="personagem">
                 <div class="frente">
-                <p class="card-name">${item.name.toUpperCase()}</p>
-                <img src="${item.image}" class="card-img">
-                <p class="card-tras">Status: ${item.status.toUpperCase()}</p>
-                <p class="card-tras">Espécie: ${item.species.toUpperCase()}</p>
-                <p class="card-tras">Gênero: ${item.gender.toUpperCase()}</p>
-                <p class="card-tras">${item.location.name.toUpperCase()}</p>
-            </div>
+                    <p class="card-name">${item.name.toUpperCase()}</p>
+                    <img src="${item.image}" class="card-img">
+                    <p class="card-tras">Status: ${item.status.toUpperCase()}</p>
+                    <p class="card-tras">Espécie: ${item.species.toUpperCase()}</p>
+                    <p class="card-tras">Gênero: ${item.gender.toUpperCase()}</p>
+                    <p class="card-tras">${item.location.name.toUpperCase()}</p>
+                </div>
             </article>
             `
     }
