@@ -1,53 +1,19 @@
-export const imprimeCards = function imprimeCards(rickandMorty){
-  let card =""
-  for(let cardInfos of rickandMorty){
-    card += `
-    <article class="divcard">
-     <p class="titilo"> Nome: ${cardInfos.name}</p> 
-     <img src="${cardInfos.image}">
-     <p class="texto-card>"> Status: ${cardInfos.status}</p>
-     <p class="texto-card"> Espécie: ${cardInfos.species}</p>
-     <p class="texto-card"> Gênero: ${cardInfos.gender}</p>
-     <p class="texto-card"> Local de Origem: ${cardInfos.origin.name}</p>
-     <p class="texto-card"> Episódio(s) em que aparece: ${cardInfos.episode}</p>
-    </article> `
-  } 
+export const imprimeCards = function cards(rickandMorty){
+    let card = ""
+
+    for(let cardInfos of rickandMorty){
+      card += `
+      <article class="divcard">
+        <p class="titulo"><strong>${cardInfos.name}</strong></p> 
+        <img class="imagem" src="${cardInfos.image}">
+        <p class="texto-card"><strong> Status: </strong>${cardInfos.status}</p>
+        <p class="texto-card"><strong> Espécie: </strong>${cardInfos.species}</p>
+        <p class="texto-card"><strong> Gênero: </strong>${cardInfos.gender}</p>
+        <p class="texto-card"><strong> Origem: </strong>${cardInfos.origin.name}</p>
+        <p class="texto-card"><strong> Número de episódio(s) em que aparece: </strong>${cardInfos.episode.length}</p>
+      </article> `
+    } 
   return card
 }
 
-//export const arrayEpisodios = (episodios) =>{ return episodios.map(obj => obj.episode)}
-
-//export const testeFilter = results.filter(genero => genero.gender ==="Male") 
-
-//export const ordemDimensoes = data.sort((a, z)=> a.origin.name.localeCompare(z.origin.name))
-
-//const ordenar = ordenarDimensoes.innerHTML = (data.results.sort((a, z)=> a.location.name.localeCompare(z.location.name)))
-
-//const filtro = rickandMorty.filter(obj => obj.name ==="Rick Sanchez"
-//console.log(rickandMorty.filter(obj => obj.name ==="Rick Sanchez"))  
-
-export const dadosRickemorty = {
-  pesquisaPersonagem(data, personagem){
-    const pegarDados = data.results
-    const pegarNome = personagem.pegarDados.name
-
-  },
-
-  pesquisaEpisodio(data, episodio){
-    const pegarDados = data.results
-    const pegarEpisodio = episodio.pegarDados.episode
-
-  },
-
-  pesquisaEspecie(data, especie){
-    const pegarDados = data.results
-    const pegarEspecie = especie.pegarDados.specie
-
-  },
-
-  pesquisaDimensao(data, dimensao){
-    const pegarDados = data.results
-    const pegarDimensao = dimensao.pegarDados.location.name
-
-  }
-};
+//export const arrayEpisodios = (episodios) =>{ return episodios.map(obj => obj.origin.name)}

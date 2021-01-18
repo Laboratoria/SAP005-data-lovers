@@ -1,15 +1,11 @@
-import {imprimeCards} from './data.js';
+import { imprimeCards } from './data.js';
 //arrayEpisodios, dadosRickemorty, testeFilter
 import data from './data/rickandmorty/rickandmorty.js';
 //DOM, nós, registro de manejadores de eventos (event listeners ou event handlers)
 
-  const listagemCards = document.getElementById("cards")
-  listagemCards.innerHTML = imprimeCards(data.results)
-
-  //console.log(arrayEpisodios(data.results))
-  //console.log(testeFilter)
-  //console.log(Object.values(data.results))
-
+  const listagemCards = document.getElementById("cards");
+  listagemCards.innerHTML = imprimeCards(data.results);
+  
 function listarPersonagens (listaPersonagem){
   let option = ""
   for (let personagem of listaPersonagem){
@@ -17,18 +13,18 @@ function listarPersonagens (listaPersonagem){
   }
   return option
 }
-(data.results.sort((a, z)=> a.name.localeCompare(z.name)))
 const opcoesPersonagens = document.getElementById("personagens")
-opcoesPersonagens.innerHTML = listarPersonagens(data.results)
+opcoesPersonagens.innerHTML = listarPersonagens(data.results);
+
+
 
 function listarEpisodios (listaEpisodios){
   let option = ""
   for (let episodio of listaEpisodios){
-    option += `<option>${episodio.episode}</option>`
+    option += `<option>${episodio.episode.length}</option>`
   }
   return option
 }
-//(data.results.sort((a, z)=> a.episode.localeCompare(z.episode)))
 const opcoesEpisodios = document.getElementById("episodios")
 opcoesEpisodios.innerHTML = listarEpisodios(data.results)
 
@@ -39,7 +35,6 @@ function listarEspecies (listaEspecies){
   }
   return option
 }
-(data.results.sort((a, z)=> a.species.localeCompare(z.species)))
 const opcoesEspecies = document.getElementById("especies")
 opcoesEspecies.innerHTML = listarEspecies(data.results)
 
@@ -50,22 +45,20 @@ function listarDimensoes (listaDimensoes){
   }
   return option
 }
-(data.results.sort((a, z)=> a.location.name.localeCompare(z.location.name)))
-const opcoesDimensoes = document.getElementById("dimensoes")
-opcoesDimensoes.innerHTML = listarDimensoes(data.results)
+const opcoesDimensoes = document.getElementById("dimensoes");
+opcoesDimensoes.innerHTML = listarDimensoes(data.results);
 
+document.getElementById("ordenar-a-z").addEventListener('click', () => {
+  const ordemPersonagensAz = (data.results.sort((a, z)=> a.name.localeCompare(z.name)));
+  console.log(ordemPersonagensAz);
+});
 
-const result = data.results
-console.log(selecionarPersonagem(result, name))
+document.getElementById("ordenar-z-a").addEventListener('click', () => {
+  const ordemPersonagensZa = (data.results.sort((a, z) => z.name.localeCompare(a.nome)));
+  console.log(ordemPersonagensZa);
+  imprimeCards(data.results);
+});
 
-const pegarEscolha = document.getElementById("personagens")
-pegarEscolha.addEventListener("click", (event)=> {
- // console.log(event.target.value) //textcontent
-console.log(selecionarPersonagem(result,event.target.textContent))})
-// const mostrarPersonagem = document.getElementById("cards")
-// mostrarPersonagem.innerHTML = selecionarPersonagem(result, name)
+//const ordemLocaldeOrigemAz = (data.results.sort((a, z)=> a.origin.name.localeCompare(z.origin.name)));
 
-function selecionarPersonagem(result, name){
-  //return result.filter(card => card.name.toLowerCase().includes(name.toLowerCase()))
-  return result.filter(card => card.name.includes(name))
-}
+//const ordenarPorEspecieAz = (data.results.sort((a, z)=> a.species.localeCompare(z.species)));

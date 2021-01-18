@@ -8,31 +8,37 @@
 
   <body>
     <head>
-      <p id="root">RICK E MORTY</p>
+      <p id="title">RICK E MORTY</p>
       <p id="subtitle"><strong>TUDO QUE VOCÊ PRECISA SABER ESTÁ AQUI!</strong></p>
-      <p id="nav">FILTRAR PERSONAGENS POR:</p>
     </head>
-
+    <div id="navegacao">
+      <label for="options" id="navigate">FILTRAR PERSONAGENS POR</label>
+    </div>
+    
+    <div id="opcoes-filtragem">
+      <p id="filtrar-personagem">Personagem:</p>
+      <p id="filtrar-episodio">Episódio:</p>
+      <p id="filtrar-especie">Espécie:</p>
+      <p id="filtrar-origem">Origem:</p>
+      <p id="filtrar-ordem">Ordem:</p>
+    </div>
+    
     <nav>
-      <select id="personagens" onclick placeholder="PERSONAGENS"></select>
-       <!-- <button id="botaoPersonagens">PERSONAGENS</button> -->
-
-      <select id="episodios" placeholder="EPISÓDIOS"></select>
-      <!-- <button id="botaoEpisodios">EPISÓDIOS</button> -->
-
-      <select id="especies" placeholder="ESPÉCIES"></select>
-      <!-- <button id="botaoEspecies">ESPÉCIES</button> -->
-
-      <select id="dimensoes" placeholder="DIMENSÕES"></select>
-      <!-- <button id="botaoDimensoes">DIMENSÕES</button> -->
+      <select name="options" id="personagens"></select>
+      <select name="options" id="episodios"></select>
+      <select name="options" id="especies"></select>
+      <select name="options" id="dimensoes"></select>
+      <select name="options" id="ordenar"> 
+        <option value="ordenar-az" id="ordenar-a-z">Ordenar A-Z</option>
+        <option value="ordenar-za" id="ordenar-z-a">Ordenar Z-A</option>
+      </select>
     </nav>
-
+    
     <section id="cards"></section>
-
-    <section id="cardEscolhido"></section>
-
-
-
+  
+    <!-- <section id="cardEscolhido"></section> -->
+      <script src="main.js" type="module"></script>
+    
     <footer class="footer">
       <div id="sara"> <a href="https://github.com/silvassara">
         SARA SILVA
@@ -42,7 +48,5 @@
         JULIANE CRISTINA
       </div>
     </footer>
-    <script src="main.js" type="module"></script>
-
   </body>
 </html>
