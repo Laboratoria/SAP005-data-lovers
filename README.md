@@ -1,14 +1,14 @@
-# Data Lovers - Rick and Morty 
+# Data Lovers - Rick and Morty
 
 ## Índice
 
-* [1. Introdução](#1-introdução)
-* [2. Histórias do usuário](#2-histórias-do-usuário)
-* [3. Desenho de interface (protótipo)](#3-desenho-de-interface-(protótipo))
-* [4. Planejamento](#4-planejamento)
-* [5. Status do projeto](#5-status-do-projeto)
+- [1. Introdução](#1-introdução)
+- [2. Histórias do usuário](#2-histórias-do-usuário)
+- [3. Desenho de interface (protótipo)](<#3-desenho-de-interface-(protótipo)>>)
+- [4. Planejamento](#4-planejamento)
+- [5. Status do projeto](#5-status-do-projeto)
 
-***
+---
 
 ## 1. Introdução
 
@@ -25,13 +25,13 @@ Para guiar o projeto, foram criadas uma protopersona e três histórias de usuá
 ### Histórias de usuário
 
 **Primeira:**
-*"Como fã de Rick and Morty, eu quero um site para ver a listagem completa dos personagens."*
+_"Como fã de Rick and Morty, eu quero um site para ver a listagem completa dos personagens."_
 
 **Segunda**
-*“Como fã da série Rick and Morty, eu quero saber em quais episódios a personagem Boglin aparece, para ver se eu assisti todos.”*
+_“Como fã da série Rick and Morty, eu quero saber em quais episódios a personagem Boglin aparece, para ver se eu assisti todos.”_
 
 **Terceira**
-*“Como fã de Rick and Morty, eu quero aber a espécie do Ideal Jerry para argumentar num fórum de discussão da série.”*
+_“Como fã de Rick and Morty, eu quero aber a espécie do Ideal Jerry para argumentar num fórum de discussão da série.”_
 
 O projeto contempla até o momento a **primeira história**. As outras ainda serão desenvolvidas.
 
@@ -39,14 +39,14 @@ O projeto contempla até o momento a **primeira história**. As outras ainda ser
 
 Foi definida para a primeira história como:
 
-* Listagem em cards dos personagens;
-* Em cada card estará impresso as 3 informações principais das personagens.
+- Listagem em cards dos personagens;
+- Em cada card estará impresso as 3 informações principais das personagens.
 
 ## 3. Dessenho de interface (protótipo)
 
 No link a seguir está disposto o protótipo em baixa fidelidade (esboço) do projeto (sujeito a alterações).
 
-[Protótipo da solução](prototipo.jpg)
+[Protótipo da solução](/src/img/prototipo.jpg)
 
 ## 4. Planejamento
 
