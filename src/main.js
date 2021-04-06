@@ -16,8 +16,6 @@ function listarPersonagens (listaPersonagem){
 const opcoesPersonagens = document.getElementById("personagens")
 opcoesPersonagens.innerHTML = listarPersonagens(data.results);
 
-
-
 function listarEpisodios (listaEpisodios){
   let option = ""
   for (let episodio of listaEpisodios){
